@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Practice with Killian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Concepto: un cuaderno-juego de cielo azul con nubes, un búho graduado como guía y botones amarillos grandes. */
+:root{
+  --sky:#dff2ff;      /* celeste de fondo */
+  --sky-2:#bfe3fb;    /* celeste medio */
+  --blue:#1d6fd8;     /* azul principal */
+  --blue-d:#0f4aa3;   /* azul profundo */
+  --ink:#12306b;      /* texto */
+  --sun:#ffc928;      /* amarillo botón */
+  --sun-d:#e0a400;
+  --white:#ffffff;
+  --ok:#17894b; --ok-bg:#e5f7ec;
+  --bad:#c8432b; --bad-bg:#fff0ec;
+  --skip:#6b7a99; --skip-bg:#eef2f9;
+  --font-display:"Baloo 2","Nunito","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; font-family:var(--font-body); font-weight:700; font-size:1.125rem; line-height:1.5;
+  color:var(--ink); background-color:var(--sky);
+  background-image:
+    radial-gradient(ellipse 160px 60px at 12% 9%, rgba(255,255,255,.9) 60%, transparent 62%),
+    radial-gradient(ellipse 220px 70px at 86% 14%, rgba(255,255,255,.85) 60%, transparent 62%),
+    radial-gradient(ellipse 180px 60px at 70% 62%, rgba(255,255,255,.55) 60%, transparent 62%),
+    linear-gradient(180deg,#c4e7ff 0%,#e9f6ff 60%,#ffffff 100%);
+  background-attachment:fixed;
+  padding-inline:16px; padding-block:12px 40px;
+  -webkit-tap-highlight-color:transparent;
+}
+h1,h2,h3{font-family:var(--font-display); line-height:1.15; margin:0; text-wrap:balance}
+p{margin:0}
+button{font:inherit; color:inherit; cursor:pointer}
+:focus-visible{outline:4px solid var(--sun); outline-offset:3px; border-radius:12px}
+.app{max-width:760px; margin-inline:auto; display:flex; flex-direction:column; gap:16px}
+
+/* barra superior */
+.top{display:flex; align-items:center; gap:10px; justify-content:space-between; min-width:0}
+.brand{display:flex; align-items:center; gap:10px; min-width:0}
+.brand svg{width:44px; height:44px; flex:none}
+.brand b{font-family:var(--font-display); font-size:1.15rem; font-weight:800; color:var(--blue-d); line-height:1.1}
+.link-btn{background:transparent; border:2px solid var(--sky-2); border-radius:999px; padding:8px 14px; font-size:.9rem; font-weight:800; color:var(--blue-d); min-height:44px; background-color:rgba(255,255,255,.7)}
+.link-btn:hover{border-color:var(--blue)}
+
+/* tarjetas */
+.card{background:var(--white); border-radius:28px; padding:22px; box-shadow:0 6px 0 var(--sky-2), 0 18px 30px rgba(18,48,107,.10); min-width:0}
+.hero{text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px}
+.hero .owl{width:150px; height:150px}
+.hero h1{font-size:2.3rem; color:var(--blue-d)}
+.hero .eng{font-family:var(--font-display); font-weight:800; font-size:1.05rem; letter-spacing:.06em; text-transform:uppercase; color:var(--blue)}
+.lead{font-size:1.25rem}
+.note{background:#fff8dc; border:3px dashed var(--sun); border-radius:18px; padding:12px 16px}
+.deco{display:flex; gap:18px; justify-content:center; align-items:flex-end}
+.deco svg{width:56px; height:56px}
+.how{text-align:left; width:100%; background:var(--sky); border-radius:20px; padding:16px 18px}
+.how h2{font-size:1.35rem; margin-bottom:6px; color:var(--blue-d)}
+.how ul{margin:0; padding-left:1.2em; display:flex; flex-direction:column; gap:4px}
+
+/* botones */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:60px; padding:12px 26px; border:0; border-radius:20px;
+  font-family:var(--font-display); font-weight:800; font-size:1.3rem; letter-spacing:.02em; text-align:center; line-height:1.15;
+  transition:transform .12s ease, box-shadow .12s ease}
+.btn-sun{background:var(--sun); color:var(--ink); box-shadow:0 6px 0 var(--sun-d)}
+.btn-blue{background:var(--blue); color:#fff; box-shadow:0 6px 0 var(--blue-d)}
+.btn-ghost{background:#fff; color:var(--blue-d); box-shadow:0 0 0 3px var(--sky-2) inset}
+.btn:active{transform:translateY(4px)}
+.btn-sun:active{box-shadow:0 2px 0 var(--sun-d)}
+.btn-blue:active{box-shadow:0 2px 0 var(--blue-d)}
+.btn[disabled]{opacity:.45; cursor:not-allowed; transform:none}
+.btn-big{width:100%; font-size:1.5rem; min-height:68px}
+.stack{display:flex; flex-direction:column; gap:12px; width:100%}
+
+/* progreso */
+.prog{display:flex; flex-direction:column; gap:8px}
+.prog-row{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-family:var(--font-display); font-weight:800; color:var(--blue-d); font-size:1.15rem}
+.bar{height:22px; background:#fff; border-radius:999px; box-shadow:0 0 0 3px var(--sky-2) inset; overflow:hidden}
+.bar i{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--sun),#ffdf6b); border-radius:999px; transition:width .35s ease}
+.dots{display:flex; flex-wrap:wrap; gap:6px}
+.dot{width:40px; height:40px; border-radius:12px; border:2px solid var(--sky-2); background:#fff; font-weight:800; font-size:.9rem; color:var(--blue-d); padding:0}
+.dot.done{background:var(--blue); border-color:var(--blue); color:#fff}
+.dot.now{outline:4px solid var(--sun); outline-offset:1px}
+
+/* pregunta */
+.chip{display:inline-flex; align-self:flex-start; background:var(--blue); color:#fff; font-family:var(--font-display); font-weight:800; font-size:.95rem; letter-spacing:.07em; padding:4px 14px; border-radius:999px; text-transform:uppercase}
+.sec-es{font-size:1.1rem; color:var(--blue-d)}
+.qcard{display:flex; flex-direction:column; gap:16px}
+.qtext{font-size:1.6rem; font-weight:800; line-height:1.35}
+.blank{display:inline-block; min-width:5ch; border-bottom:5px solid var(--sun); color:transparent; margin-inline:2px; user-select:none}
+.base{display:inline-flex; align-self:flex-start; gap:8px; align-items:center; background:#fff8dc; border:3px solid var(--sun); padding:4px 14px; border-radius:14px; font-weight:800}
+.opts{display:flex; flex-direction:column; gap:12px}
+.opt{display:flex; align-items:center; gap:14px; width:100%; min-height:64px; text-align:left; background:#fff; border:3px solid var(--sky-2); border-radius:20px; padding:10px 16px; font-size:1.35rem; font-weight:800;
+  box-shadow:0 4px 0 var(--sky-2); transition:transform .1s ease}
+.opt .let{flex:none; width:40px; height:40px; border-radius:50%; background:var(--sky); color:var(--blue-d); display:grid; place-items:center; font-family:var(--font-display)}
+.opt:active{transform:translateY(3px); box-shadow:0 1px 0 var(--sky-2)}
+.opt[aria-pressed="true"]{background:var(--blue); border-color:var(--blue-d); color:#fff; box-shadow:0 4px 0 var(--blue-d)}
+.opt[aria-pressed="true"] .let{background:var(--sun); color:var(--ink)}
+.write{width:100%; font:inherit; font-size:1.7rem; font-weight:800; padding:14px 18px; border:4px solid var(--sky-2); border-radius:20px; color:var(--ink); background:#fff; min-height:68px}
+.write:focus{outline:none; border-color:var(--blue); box-shadow:0 0 0 5px rgba(255,201,40,.7)}
+.hint{background:var(--sky); border-radius:14px; padding:8px 14px}
+
+/* relacionar */
+.match{display:flex; flex-direction:column; gap:16px}
+.match h3{font-size:1.1rem; color:var(--blue-d); margin-bottom:8px}
+.words{display:flex; flex-wrap:wrap; gap:10px}
+.w{display:flex; align-items:center; gap:8px; min-height:56px; padding:8px 14px; background:#fff; border:3px solid var(--sky-2); border-radius:18px; font-weight:800; font-size:1.15rem; box-shadow:0 4px 0 var(--sky-2)}
+.w small{font-family:var(--font-display); font-size:.95rem; color:var(--blue)}
+.w .tag{min-width:30px; height:30px; border-radius:50%; background:var(--sky); display:grid; place-items:center; font-family:var(--font-display); color:var(--blue-d)}
+.w.set{border-color:var(--blue)}
+.w.set .tag{background:var(--blue); color:#fff}
+.w.sel{background:var(--sun); border-color:var(--sun-d); box-shadow:0 4px 0 var(--sun-d)}
+.w.sel .tag{background:#fff}
+.means{display:flex; flex-direction:column; gap:10px}
+.m{display:flex; align-items:center; gap:12px; min-height:58px; width:100%; text-align:left; padding:8px 14px; background:#fff; border:3px solid var(--sky-2); border-radius:18px; font-weight:800; font-size:1.1rem}
+.m .let{flex:none; width:36px; height:36px; border-radius:50%; background:var(--sky); display:grid; place-items:center; font-family:var(--font-display); color:var(--blue-d)}
+.m .used{margin-left:auto; font-size:.85rem; font-family:var(--font-display); color:#fff; background:var(--blue); border-radius:999px; padding:2px 10px}
+.m.on{background:#fff8dc; border-color:var(--sun)}
+.step-msg{background:#fff8dc; border:3px dashed var(--sun); border-radius:16px; padding:10px 14px}
+
+/* navegación */
+.nav{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.finish-row{display:flex; justify-content:center}
+
+/* resultados */
+.res{display:flex; flex-direction:column; gap:14px; align-items:center; text-align:center}
+.res .owl{width:110px; height:110px}
+.score{font-family:var(--font-display); font-weight:800; font-size:4.2rem; line-height:1; color:var(--blue-d)}
+.score small{font-size:1.6rem; color:var(--blue)}
+.stars{display:flex; gap:6px}
+.stars svg{width:38px; height:38px}
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; width:100%}
+.stat{background:var(--sky); border-radius:18px; padding:10px 6px; min-width:0}
+.stat b{display:block; font-family:var(--font-display); font-size:1.9rem; line-height:1.1}
+.stat span{font-size:.95rem}
+.stat.g b{color:var(--ok)} .stat.r b{color:var(--bad)}
+.msg{font-family:var(--font-display); font-size:1.45rem; font-weight:700; background:#fff8dc; border:3px solid var(--sun); border-radius:20px; padding:14px 18px; width:100%}
+.tabs{display:flex; gap:10px; flex-wrap:wrap}
+.tab{min-height:48px; padding:8px 18px; border-radius:999px; border:3px solid var(--sky-2); background:#fff; font-weight:800; color:var(--blue-d)}
+.tab[aria-pressed="true"]{background:var(--blue); border-color:var(--blue); color:#fff}
+.review{display:flex; flex-direction:column; gap:14px}
+.rv{background:#fff; border-radius:22px; padding:18px; border-left:10px solid var(--skip); box-shadow:0 4px 0 var(--sky-2); display:flex; flex-direction:column; gap:8px; min-width:0}
+.rv.ok{border-left-color:var(--ok)} .rv.bad{border-left-color:var(--bad)}
+.rv-head{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.rv-n{font-family:var(--font-display); font-weight:800; color:var(--blue-d); font-size:1.15rem}
+.rv-sec{font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; background:var(--sky); border-radius:999px; padding:2px 10px}
+.rv-q{font-size:1.2rem; font-weight:800; overflow-wrap:anywhere}
+.rv-q mark{background:#fff3b0; color:inherit; border-radius:6px; padding:0 4px}
+.lbl{font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; color:var(--skip)}
+.rv .line{overflow-wrap:anywhere}
+.verdict{font-family:var(--font-display); font-weight:800; font-size:1.25rem}
+.rv.ok .verdict{color:var(--ok)} .rv.bad .verdict{color:var(--bad)} .rv.skip .verdict{color:var(--skip)}
+.correct-box{background:var(--ok-bg); border-radius:14px; padding:8px 12px}
+.learn{background:var(--sky); border-radius:14px; padding:10px 14px; display:flex; flex-direction:column; gap:6px}
+.exa{font-weight:700}
+.foot{text-align:center; font-size:.9rem; color:var(--blue-d); display:flex; flex-direction:column; gap:10px; align-items:center}
+
+/* ventana */
+.veil{position:fixed; inset:0; background:rgba(18,48,107,.55); display:grid; place-items:center; padding:16px; z-index:20}
+.modal{background:#fff; border-radius:28px; padding:24px; max-width:460px; width:100%; display:flex; flex-direction:column; gap:14px; box-shadow:0 10px 0 var(--sky-2)}
+.modal h2{font-size:1.6rem; color:var(--blue-d)}
+
+@media (max-width:480px){
+  body{font-size:1.05rem}
+  .hero h1{font-size:1.9rem}
+  .qtext{font-size:1.4rem}
+  .score{font-size:3.4rem}
+  .card{padding:18px; border-radius:24px}
+  .brand b{font-size:1rem}
+  .stat b{font-size:1.5rem}
+  .dot{width:36px; height:36px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+@media (prefers-reduced-motion:no-preference){.owl{animation:bob 3.2s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-6px)}}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="owl" viewBox="0 0 120 120">
+      <ellipse cx="60" cy="72" rx="38" ry="40" fill="#4aa3f0"/>
+      <ellipse cx="60" cy="82" rx="24" ry="26" fill="#fff"/>
+      <path d="M26 56 q-14 18 -2 40 q10 -10 14 -26z" fill="#1d6fd8"/>
+      <path d="M94 56 q14 18 2 40 q-10 -10 -14 -26z" fill="#1d6fd8"/>
+      <circle cx="45" cy="58" r="14" fill="#fff"/><circle cx="75" cy="58" r="14" fill="#fff"/>
+      <circle cx="47" cy="60" r="7" fill="#12306b"/><circle cx="73" cy="60" r="7" fill="#12306b"/>
+      <circle cx="49" cy="57" r="2.4" fill="#fff"/><circle cx="75" cy="57" r="2.4" fill="#fff"/>
+      <path d="M54 68 h12 l-6 11z" fill="#ffc928"/>
+      <path d="M42 108 h10 M68 108 h10" stroke="#ffc928" stroke-width="6" stroke-linecap="round"/>
+      <path d="M20 38 L60 20 L100 38 L60 54z" fill="#12306b"/>
+      <path d="M40 46 v10 q20 10 40 0 v-10 l-20 8z" fill="#0f2757"/>
+      <path d="M97 39 v18" stroke="#ffc928" stroke-width="3"/><circle cx="97" cy="60" r="4.5" fill="#ffc928"/>
+    </symbol>
+    <symbol id="book" viewBox="0 0 64 64">
+      <path d="M32 14 C22 8 10 8 4 11 V50 C10 47 22 47 32 53z" fill="#fff" stroke="#12306b" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M32 14 C42 8 54 8 60 11 V50 C54 47 42 47 32 53z" fill="#dff2ff" stroke="#12306b" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M11 20 h15 M11 28 h15 M38 20 h15 M38 28 h15" stroke="#1d6fd8" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="pencil" viewBox="0 0 64 64">
+      <g transform="rotate(40 32 32)">
+        <rect x="26" y="6" width="12" height="40" rx="2" fill="#ffc928" stroke="#12306b" stroke-width="3"/>
+        <rect x="26" y="6" width="12" height="9" rx="2" fill="#4aa3f0" stroke="#12306b" stroke-width="3"/>
+        <path d="M26 46 L32 60 L38 46z" fill="#fff" stroke="#12306b" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M30 56 L32 60 L34 56z" fill="#12306b"/>
+      </g>
+    </symbol>
+    <symbol id="pack" viewBox="0 0 64 64">
+      <path d="M22 14 q10 -12 20 0" fill="none" stroke="#12306b" stroke-width="4" stroke-linecap="round"/>
+      <rect x="10" y="14" width="44" height="44" rx="14" fill="#1d6fd8" stroke="#12306b" stroke-width="3"/>
+      <rect x="18" y="36" width="28" height="16" rx="6" fill="#ffc928" stroke="#12306b" stroke-width="3"/>
+      <path d="M26 44 h12" stroke="#12306b" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="star" viewBox="0 0 48 48">
+      <path d="M24 3 L30 17 L45 18.5 L34 28.5 L37.5 44 L24 36 L10.5 44 L14 28.5 L3 18.5 L18 17z" stroke="#e0a400" stroke-width="2.5" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="app" id="app"><noscript>Necesitas activar JavaScript para usar esta página.</noscript></div>
+
+<script>
+"use strict";
+(function(){
+
+/* ------------------------------------------------------------------ DATOS */
+var POINTS = 4;
+var STORE_KEY = "kx-over-under-v1";
+
+var SECTIONS = {
+  1:{name:"Complete the word",   es:"Completa cada palabra con OVER- o UNDER-."},
+  2:{name:"Choose the correct word", es:"Lee la oración y selecciona la palabra que tenga sentido."},
+  3:{name:"Complete the sentence", es:"Escribe la palabra completa en inglés que falta en cada oración."},
+  4:{name:"Match the word to its meaning", es:"Relaciona cada palabra en inglés con su significado en español."},
+  5:{name:"Challenge time", es:"Lee con atención. Algunas preguntas pueden ser un poco más difíciles."}
+};
+
+/* Conceptos: sirven para explicar y para armar la práctica de errores. */
+var C = {
+  overuse:{word:"OVERUSE", parts:"OVER + USE", es:"usar demasiado",
+    exp:"OVERUSE significa usar demasiado. OVER- aquí quiere decir «demasiado».",
+    ex:"Don't OVERUSE salt in your soup.", exEs:"No uses demasiada sal en tu sopa."},
+  overheat:{word:"OVERHEAT", parts:"OVER + HEAT", es:"calentarse demasiado",
+    exp:"OVERHEAT significa calentarse demasiado. Algo está tan caliente que puede fallar.",
+    ex:"Phones can OVERHEAT in the hot sun.", exEs:"Los teléfonos pueden calentarse demasiado bajo el sol."},
+  underwater:{word:"UNDERWATER", parts:"UNDER + WATER", es:"debajo del agua",
+    exp:"UNDERWATER significa debajo del agua. UNDER- quiere decir «debajo».",
+    ex:"The fish swim UNDERWATER.", exEs:"Los peces nadan debajo del agua."},
+  overflow:{word:"OVERFLOW", parts:"OVER + FLOW", es:"desbordarse",
+    exp:"OVERFLOW significa desbordarse: el agua se sale porque hay demasiada.",
+    ex:"The river can OVERFLOW after heavy rain.", exEs:"El río puede desbordarse después de mucha lluvia."},
+  overestimate:{word:"OVERESTIMATE", parts:"OVER + ESTIMATE", es:"calcular una cantidad mayor de la real",
+    exp:"OVERESTIMATE significa calcular una cantidad mayor de la real. Su opuesto es UNDERESTIMATE, que es calcular menos de lo real.",
+    ex:"I OVERESTIMATED the time. I finished early!", exEs:"Calculé más tiempo del necesario. ¡Terminé temprano!"},
+  undercooked:{word:"UNDERCOOKED", parts:"UNDER + COOKED", es:"no cocinado lo suficiente",
+    exp:"UNDERCOOKED significa que la comida no se ha cocinado lo suficiente. OVERCOOKED significa que se cocinó demasiado. ¡Son opuestos!",
+    ex:"The rice is UNDERCOOKED and hard.", exEs:"El arroz está poco cocinado y duro."},
+  undercover:{word:"UNDERCOVER", parts:"UNDER + COVER", es:"de incógnito",
+    exp:"UNDERCOVER significa de incógnito: trabajar en secreto para que nadie sepa quién eres en realidad.",
+    ex:"The agent went UNDERCOVER to find the thief.", exEs:"El agente fue de incógnito para encontrar al ladrón."},
+  oversee:{word:"OVERSEE", parts:"OVER + SEE", es:"supervisar",
+    exp:"OVERSEE significa supervisar o vigilar que todo se haga bien. No es lo mismo que OVERLOOK.",
+    ex:"The coach will OVERSEE the soccer practice.", exEs:"El entrenador supervisará la práctica de fútbol."},
+  undershirt:{word:"UNDERSHIRT", parts:"UNDER + SHIRT", es:"camiseta interior",
+    exp:"UNDERSHIRT significa camiseta interior: se usa debajo de otra prenda.",
+    ex:"It is cold, so I wear an UNDERSHIRT.", exEs:"Hace frío, así que me pongo una camiseta interior."},
+  overlook:{word:"OVERLOOK", parts:"OVER + LOOK", es:"pasar algo por alto",
+    exp:"OVERLOOK significa pasar algo por alto, es decir, no darte cuenta de algo.",
+    ex:"Don't OVERLOOK the last question on the page.", exEs:"No pases por alto la última pregunta de la hoja."},
+  overcook:{word:"OVERCOOK", parts:"OVER + COOK", es:"cocinar demasiado",
+    exp:"OVERCOOK significa cocinar demasiado. Su opuesto es UNDERCOOK, que es cocinar muy poco.",
+    ex:"If you OVERCOOK the pasta, it gets soft and mushy.", exEs:"Si cocinas demasiado la pasta, queda blanda y pastosa."},
+  prefix:{word:"OVER- / UNDER-", parts:"", es:"OVER- = demasiado; UNDER- = debajo o poco",
+    exp:"OVER- suele expresar exceso (demasiado). UNDER- suele significar debajo o «no suficiente».",
+    ex:"OVERWORK means to work too much. UNDERPAID means paid too little.",
+    exEs:"OVERWORK es trabajar demasiado. UNDERPAID es que te pagan muy poco."}
+};
+
+/* Significado de cada palabra que aparece como opción. */
+var D = {
+  "OVERUSE":"usar demasiado", "UNDERUSE":"usar muy poco",
+  "OVERHEAT":"calentarse demasiado", "UNDERWATER":"debajo del agua",
+  "OVERFLOW":"desbordarse", "OVERESTIMATE":"calcular una cantidad mayor de la real",
+  "UNDERESTIMATE":"calcular una cantidad menor de la real",
+  "OVERCOOKED":"cocinado demasiado", "UNDERCOOKED":"no cocinado lo suficiente",
+  "OVERCOOK":"cocinar demasiado", "UNDERCOOK":"cocinar muy poco",
+  "UNDERCOVER":"de incógnito (en secreto)", "OVERLOOK":"pasar algo por alto",
+  "OVERSEE":"supervisar", "UNDERSHIRT":"camiseta interior",
+  "OVER-":"demasiado", "UNDER-":"debajo o «no suficiente»"
+};
+
+var MEANINGS = {
+  A:"Camiseta interior.", B:"Calcular una cantidad mayor de la real.",
+  C:"No cocinar lo suficiente.", D:"Usar demasiado.", E:"Pasar algo por alto."
+};
+
+function mc(n, sec, concept, prompt, opts, ans, base, exp){
+  return {id:"q"+n, n:n, sec:sec, type:"mc", concept:concept, prompt:prompt, base:base||"", opts:opts, ans:ans, exp:exp||C[concept].exp};
+}
+function wr(n, concept, prompt, ans, exp){
+  return {id:"q"+n, n:n, sec:3, type:"write", concept:concept, prompt:prompt, ans:ans, exp:exp||C[concept].exp};
+}
+function mt(n, concept, word, letter){
+  return {id:"q"+n, n:n, sec:4, type:"match", concept:concept, prompt:word, word:word, ans:letter, exp:C[concept].exp};
+}
+
+var EXAM = [
+  mc(1,1,"overuse","You should not ______ your eyes by watching too much television.",["OVERUSE","UNDERUSE"],"OVERUSE","USE",
+     "OVERUSE significa usar demasiado. Ver demasiada televisión puede cansar tus ojos."),
+  mc(2,1,"overheat","The computer may ______ if it gets too hot.",["OVERHEAT","UNDERHEAT"],"OVERHEAT","HEAT",
+     "OVERHEAT significa calentarse demasiado. Una computadora puede sobrecalentarse si no puede liberar el calor. Está demasiado caliente, por eso usamos OVER-."),
+  mc(3,1,"underwater","A submarine travels ______.",["OVERWATER","UNDERWATER"],"UNDERWATER","WATER",
+     "UNDERWATER significa debajo del agua. Los submarinos viajan debajo de la superficie del mar."),
+  mc(4,1,"overflow","The bathtub will ______ if you leave the water running.",["OVERFLOW","UNDERFLOW"],"OVERFLOW","FLOW",
+     "OVERFLOW significa desbordarse. El agua se sale de la bañera cuando hay demasiada."),
+  mc(5,1,"overestimate","We should not ______ how much food we need.",["OVERESTIMATE","UNDERESTIMATE"],"OVERESTIMATE","ESTIMATE",
+     "OVERESTIMATE significa calcular una cantidad mayor de la real. Por ejemplo, pensar que necesitamos diez pizzas cuando solo necesitamos cinco."),
+  mc(6,2,"undercooked","The cookies need more time in the oven because they are not fully cooked.",["OVERCOOKED","UNDERCOOKED","UNDERWATER"],"UNDERCOOKED","",
+     "UNDERCOOKED significa que un alimento no se ha cocinado lo suficiente. Por eso las galletas necesitan más tiempo en el horno."),
+  mc(7,2,"undercover","The police officer wore ordinary clothes to hide his identity.",["UNDERCOVER","OVERHEAT","OVERFLOW"],"UNDERCOVER","",
+     "UNDERCOVER significa de incógnito. El policía intenta que las personas no sepan que es policía."),
+  mc(8,2,"oversee","The teacher asked the assistant to watch and supervise the class.",["OVERLOOK","OVERSEE","UNDERWATER"],"OVERSEE","",
+     "OVERSEE significa supervisar o vigilar. La asistente debe asegurarse de que la clase esté trabajando bien."),
+  mc(9,2,"undershirt","He wore a shirt beneath his school uniform.",["OVERSHIRT","UNDERSHIRT","UNDERCOOKED"],"UNDERSHIRT","",
+     "UNDERSHIRT significa camiseta interior. Es una camiseta que se lleva debajo de otra prenda."),
+  mc(10,2,"overlook","You did not notice a small mistake in your homework.",["OVERLOOK","OVERUSE","OVERHEAT"],"OVERLOOK","",
+     "OVERLOOK significa pasar algo por alto o no darse cuenta de algo. Si no ves un error pequeño, lo has pasado por alto."),
+  wr(11,"overflow","The sink will ______ if you leave the faucet running.","overflow",
+     "OVERFLOW significa desbordarse. Si el grifo sigue abierto, el agua se sale del fregadero. Se escribe OVER + FLOW."),
+  wr(12,"underwater","A submarine travels ______ to study marine wildlife.","underwater",
+     "UNDERWATER significa debajo del agua. Los submarinos viajan bajo la superficie del mar. Se escribe UNDER + WATER."),
+  wr(13,"overheat","The laptop may ______ if you block the vents.","overheat",
+     "OVERHEAT significa calentarse demasiado. Si tapas las salidas de aire, el calor no puede salir. Se escribe OVER + HEAT."),
+  wr(14,"undercover","The police officer worked ______ during the investigation.","undercover",
+     "UNDERCOVER significa de incógnito. El policía trabaja en secreto y nadie sabe que es policía. Se escribe UNDER + COVER."),
+  wr(15,"oversee","The teacher asked the assistant to ______ the class.","oversee",
+     "OVERSEE significa supervisar o vigilar. La asistente se asegura de que la clase trabaje bien. Se escribe OVER + SEE."),
+  mt(16,"overuse","OVERUSE","D"),
+  mt(17,"overlook","OVERLOOK","E"),
+  mt(18,"undershirt","UNDERSHIRT","A"),
+  mt(19,"undercooked","UNDERCOOKED","C"),
+  mt(20,"overestimate","OVERESTIMATE","B"),
+  mc(21,5,"overheat","Which word means “to become too hot”?",["OVERHEAT","UNDERWATER","OVERSEE"],"OVERHEAT","",
+     "OVERHEAT significa calentarse demasiado."),
+  mc(22,5,"overcook","Which word means “to cook something too much”?",["UNDERCOOK","OVERCOOK","OVERLOOK"],"OVERCOOK","",
+     "OVERCOOK significa cocinar demasiado. Por ejemplo, dejar un alimento en el horno durante demasiado tiempo."),
+  mc(23,5,"prefix","Which prefix usually means too much or excessive?",["UNDER-","OVER-"],"OVER-","",
+     "OVER- suele expresar exceso o algo que se hace demasiado."),
+  mc(24,5,"underwater","Which word means “below the surface of the water”?",["OVERWATER","UNDERWATER","OVERUSE"],"UNDERWATER","",
+     "UNDERWATER significa debajo del agua."),
+  mc(25,5,"overestimate","You think you need 20 sandwiches for a party, but you really need only 10. Which word describes your mistake?",["UNDERESTIMATE","OVERESTIMATE","OVERLOOK"],"OVERESTIMATE","",
+     "OVERESTIMATE significa calcular de más. Pensaste que necesitabas más comida de la que realmente necesitabas.")
+];
+
+/* Banco para la práctica de errores: preguntas con otra redacción. */
+function bm(prompt, opts, ans, base){ return {type:"mc", prompt:prompt, opts:opts, ans:ans, base:base||""}; }
+function bw(prompt, ans){ return {type:"write", prompt:prompt, ans:ans}; }
+var BANK = {
+  overuse:[ bm("Mia plays video games all day. She should not ______ them.",["OVERUSE","UNDERUSE"],"OVERUSE","USE"),
+            bw("If you ______ the glue, your paper will get too wet.","overuse") ],
+  overheat:[ bm("The car engine is very, very hot. It might ______.",["OVERHEAT","OVERSEE","UNDERWATER"],"OVERHEAT"),
+             bw("Do not leave your phone in the sun. It may ______.","overheat") ],
+  underwater:[ bm("Fish, turtles and sharks live ______.",["UNDERWATER","OVERUSE","OVERFLOW"],"UNDERWATER"),
+               bw("The divers swam ______ to see the coral.","underwater") ],
+  overflow:[ bm("If you pour too much juice into a small glass, it will ______.",["OVERFLOW","OVERLOOK","UNDERSHIRT"],"OVERFLOW"),
+             bw("The river will ______ after the big storm.","overflow") ],
+  overestimate:[ bm("Ana needs only 20 stickers, but she asks for 100. Which word describes her mistake?",["OVERESTIMATE","UNDERESTIMATE","OVERLOOK"],"OVERESTIMATE"),
+                 bw("If you say a small dog weighs 50 kilos, you ______ its weight.","overestimate") ],
+  undercooked:[ bm("The chicken is still pink inside. It is ______.",["UNDERCOOKED","OVERCOOKED","UNDERWATER"],"UNDERCOOKED"),
+                bw("The pasta is hard because it is ______.","undercooked") ],
+  undercover:[ bm("A detective dresses like a waiter to secretly watch a thief. She works ______.",["UNDERCOVER","OVERHEAT","OVERFLOW"],"UNDERCOVER"),
+               bw("The spy went ______ at the party, so nobody knew who she was.","undercover") ],
+  oversee:[ bm("The coach will ______ the game to make sure everyone plays fairly.",["OVERSEE","OVERLOOK","UNDERSHIRT"],"OVERSEE"),
+            bw("The principal will ______ the school fair.","oversee") ],
+  undershirt:[ bm("It is cold today, so Dad wears a ______ beneath his shirt.",["UNDERSHIRT","UNDERCOVER","UNDERWATER"],"UNDERSHIRT"),
+               bw("I wear a white ______ beneath my school shirt.","undershirt") ],
+  overlook:[ bm("It is easy to ______ a tiny word when you read too fast.",["OVERLOOK","OVERUSE","OVERHEAT"],"OVERLOOK"),
+             bw("If you read too fast, you may ______ a small mistake.","overlook") ],
+  overcook:[ bm("If you leave the pizza in the oven for two hours, you will ______ it.",["OVERCOOK","UNDERCOOK","OVERLOOK"],"OVERCOOK"),
+             bw("Don't ______ the eggs or they will get hard and dry.","overcook") ],
+  prefix:[ bm("In OVERWORK and OVEREAT, what does OVER- usually mean?",["too much","not enough"],"too much"),
+           bm("Which prefix can mean “below” or “not enough”, like in UNDERWATER or UNDERCOOKED?",["UNDER-","OVER-"],"UNDER-") ]
+};
+
+/* Pasos del examen: las preguntas 16 a 20 forman una sola actividad. */
+var EXAM_STEPS = (function(){
+  var steps = [], i;
+  for(i=0;i<15;i++) steps.push([EXAM[i]]);
+  steps.push(EXAM.slice(15,20));
+  for(i=20;i<25;i++) steps.push([EXAM[i]]);
+  return steps;
+})();
+
+/* --------------------------------------------------------------- ESTADO */
+function freshExam(){ return {idx:0, answers:{}, done:false}; }
+function fresh(){ return {screen:"welcome", mode:"exam", exam:freshExam(), practice:null, vc:{}}; }
+
+function load(){
+  try{
+    var raw = localStorage.getItem(STORE_KEY);
+    if(!raw) return fresh();
+    var s = JSON.parse(raw);
+    if(!s || typeof s !== "object" || !s.exam || typeof s.exam.answers !== "object") return fresh();
+    if(["welcome","quiz","results"].indexOf(s.screen) < 0) s.screen = "welcome";
+    s.exam.idx = Math.min(Math.max(+s.exam.idx || 0, 0), EXAM_STEPS.length-1);
+    s.vc = s.vc || {};
+    if(s.mode === "practice"){
+      var p = s.practice;
+      if(!p || !Array.isArray(p.qs) || !p.qs.length || typeof p.answers !== "object"){ s.mode = "exam"; s.practice = null; if(s.screen === "quiz" && s.exam.done) s.screen = "results"; }
+      else p.idx = Math.min(Math.max(+p.idx || 0, 0), p.qs.length-1);
+    } else s.mode = "exam";
+    if(s.screen === "results" && !store(s).done) s.screen = "quiz";
+    return s;
+  }catch(e){ return fresh(); }
+}
+var S = load();
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
+function clearSaved(){ try{ localStorage.removeItem(STORE_KEY); }catch(e){} }
+
+function store(s){ s = s || S; return s.mode === "practice" && s.practice ? s.practice : s.exam; }
+function qsOf(){ return S.mode === "practice" ? S.practice.qs : EXAM; }
+function stepsOf(){ return S.mode === "practice" ? S.practice.qs.map(function(q){ return [q]; }) : EXAM_STEPS; }
+
+/* ------------------------------------------------------------- CALIFICAR */
+function isAnswered(a){ return a != null && String(a).trim() !== ""; }
+function isCorrect(q, a){
+  if(!isAnswered(a)) return false;
+  if(q.type === "write") return String(a).trim().toLowerCase() === q.ans;
+  return a === q.ans;
+}
+function gradeAll(qs, answers){
+  return qs.map(function(q){
+    var a = answers[q.id];
+    return {q:q, a:a, answered:isAnswered(a), ok:isCorrect(q, a)};
+  });
+}
+function answeredCount(qs, answers){
+  return qs.filter(function(q){ return isAnswered(answers[q.id]); }).length;
+}
+function messageFor(score){
+  if(score >= 90) return "¡Excelente! 🌟 Dominas muy bien OVER- y UNDER-.";
+  if(score >= 80) return "¡Muy bien! 👏 Comprendes el tema. Repasa las palabras que te faltaron.";
+  if(score >= 70) return "¡Buen trabajo! 💪 Vas aprendiendo. Vamos a practicar un poquito más.";
+  if(score >= 60) return "¡Sigue adelante! 📚 Ya estás aprendiendo. Repasemos juntos las palabras difíciles.";
+  return "¡No te rindas! ❤️ Equivocarse es parte de aprender. Vamos a repasar y después puedes intentarlo otra vez.";
+}
+
+/* -------------------------------------------------------------- UTILES */
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function blankHtml(prompt){ return esc(prompt).replace(/_{3,}/g, '<span class="blank">______</span>'); }
+function filledHtml(prompt, word){ return esc(prompt).replace(/_{3,}/g, "<mark>"+esc(word.toUpperCase())+"</mark>"); }
+function shuffle(a){ a = a.slice(); for(var i=a.length-1;i>0;i--){ var j = Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+var LET = ["A","B","C","D","E"];
+
+var selWord = null, matchHint = "", modal = null, filter = "all";
+var app = document.getElementById("app");
+
+function header(){
+  return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div>' +
+    '<button class="link-btn" data-act="ask-reset" type="button">↺ Borrar progreso</button></header>';
+}
+function footer(){
+  return '<footer class="foot"><span>Tu progreso se guarda solo en este dispositivo.</span></footer>';
+}
+
+/* ------------------------------------------------------------ BIENVENIDA */
+function renderWelcome(){
+  var e = S.exam, n = answeredCount(EXAM, e.answers);
+  var main;
+  if(e.done) main = '<button class="btn btn-sun btn-big" data-act="see-results" type="button">VER MIS RESULTADOS</button>' +
+                    '<button class="btn btn-ghost" data-act="repeat" type="button">REPETIR TODO EL EXAMEN</button>';
+  else if(n > 0) main = '<button class="btn btn-sun btn-big" data-act="start" type="button">CONTINUAR MI EXAMEN ('+n+' de 25)</button>' +
+                    '<button class="btn btn-ghost" data-act="repeat" type="button">Empezar otra vez</button>';
+  else main = '<button class="btn btn-sun btn-big" data-act="start" type="button">¡COMENZAR EXAMEN!</button>';
+  return header() +
+  '<main class="card hero">' +
+    '<svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
+    '<span class="eng">English Word Study</span>' +
+    '<h1>¡Hola, Killian! 🎓</h1>' +
+    '<p class="lead">¡Bienvenido a tu examen de práctica de inglés!</p>' +
+    '<p class="lead">Hoy vamos a practicar los prefijos <b>OVER-</b> y <b>UNDER-</b>.</p>' +
+    '<p class="note">No te preocupes si te equivocas. Este examen te ayudará a aprender.</p>' +
+    '<div class="how"><h2>Instrucciones:</h2><ul>' +
+      '<li>Lee cada pregunta con atención.</li>' +
+      '<li>Selecciona o escribe tu respuesta.</li>' +
+      '<li>Si no sabes una respuesta, piensa en el significado de la oración.</li>' +
+      '<li>Cuando termines, pulsa el botón "TERMINAR EXAMEN".</li>' +
+      '<li>Después podrás revisar tus errores y aprender de ellos.</li></ul></div>' +
+    '<div class="deco" aria-hidden="true"><svg><use href="#book"/></svg><svg><use href="#pencil"/></svg><svg><use href="#pack"/></svg></div>' +
+    '<div class="stack">' + main + '</div>' +
+  '</main>' + footer();
+}
+
+/* ---------------------------------------------------------------- EXAMEN */
+function stepNumbers(step){ return step.length > 1 ? step[0].n + "–" + step[step.length-1].n : String(step[0].n); }
+
+function progressHtml(){
+  var st = store(), qs = qsOf(), steps = stepsOf(), step = steps[st.idx];
+  var total = qs.length, ans = answeredCount(qs, st.answers);
+  var label = S.mode === "practice"
+    ? "Pregunta " + (st.idx+1) + " de " + total
+    : (step.length > 1 ? "Preguntas " + stepNumbers(step) : "Pregunta " + stepNumbers(step)) + " de " + total;
+  var dots = qs.map(function(q, i){
+    var si = steps.findIndex(function(s){ return s.indexOf(q) >= 0; });
+    var cls = "dot" + (isAnswered(st.answers[q.id]) ? " done" : "") + (step.indexOf(q) >= 0 ? " now" : "");
+    return '<button type="button" class="'+cls+'" data-act="goto" data-i="'+si+'" aria-label="Ir a la pregunta '+(S.mode==="practice"?i+1:q.n)+'"' + (step.indexOf(q) >= 0 ? ' aria-current="step"' : '') + '>'+(S.mode==="practice"?i+1:q.n)+'</button>';
+  }).join("");
+  return '<div class="prog-row"><span id="plabel">'+label+'</span><span id="pcount">✏️ '+ans+' de '+total+' respondidas</span></div>' +
+    '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="'+total+'" aria-valuenow="'+ans+'" aria-label="Preguntas respondidas"><i id="pbar" style="width:'+Math.round(ans/total*100)+'%"></i></div>' +
+    '<div class="dots" id="dots">'+dots+'</div>';
+}
+
+function renderQuestion(q, st){
+  var a = st.answers[q.id], sec = SECTIONS[q.sec], h = "";
+  if(S.mode === "practice") h += '<span class="chip">Práctica</span><p class="sec-es">Elige o escribe la palabra que tenga sentido.</p>';
+  else h += '<span class="chip">Sección '+q.sec+' · '+esc(sec.name)+'</span><p class="sec-es">'+esc(sec.es)+'</p>';
+  h += '<p class="qtext" lang="en">'+blankHtml(q.prompt)+'</p>';
+  if(q.base) h += '<p class="base" lang="en">Base word: <b>'+esc(q.base)+'</b></p>';
+  if(q.type === "mc"){
+    h += '<div class="opts" role="group" aria-label="Opciones">' + q.opts.map(function(o, i){
+      return '<button type="button" class="opt" lang="en" data-act="pick" data-v="'+esc(o)+'" aria-pressed="'+(a === o)+'"><span class="let">'+LET[i]+'</span><span>'+esc(o)+'</span></button>';
+    }).join("") + '</div>';
+  } else {
+    if(S.mode === "practice") h += '<p class="hint">💡 Pista: significa «'+esc(C[q.concept].es)+'».</p>';
+    h += '<label for="ans" class="sec-es">Escribe la palabra completa en inglés:</label>' +
+      '<input id="ans" class="write" lang="en" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="30" value="'+esc(a||"")+'" placeholder="Escribe aquí…">';
+  }
+  return h;
+}
+
+function renderMatch(step, st){
+  var used = {};
+  step.forEach(function(q){ if(st.answers[q.id]) used[st.answers[q.id]] = q; });
+  if(selWord && !step.some(function(q){ return q.id === selWord; })) selWord = null;
+  var h = '<span class="chip">Sección 4 · '+esc(SECTIONS[4].name)+'</span><p class="sec-es">'+esc(SECTIONS[4].es)+'</p>';
+  var cur = step.find(function(q){ return q.id === selWord; });
+  var msg = matchHint || (cur ? "Paso 2: toca el significado de <b>"+esc(cur.word)+"</b>." : "Paso 1: toca una palabra en inglés.");
+  h += '<div class="match"><div><h3>1. Palabras</h3><div class="words">' + step.map(function(q){
+    var l = st.answers[q.id];
+    return '<button type="button" class="w'+(l?' set':'')+(q.id===selWord?' sel':'')+'" lang="en" data-act="mw" data-q="'+q.id+'" aria-pressed="'+(q.id===selWord)+'">' +
+      '<small>'+q.n+'.</small>'+esc(q.word)+'<span class="tag" aria-label="'+(l?'elegiste '+l:'sin elegir')+'">'+(l||'?')+'</span></button>';
+  }).join("") + '</div></div>' +
+  '<p class="step-msg" id="mmsg" role="status">'+msg+'</p>' +
+  '<div><h3>2. Significados</h3><div class="means">' + LET.map(function(L){
+    var u = used[L];
+    return '<button type="button" class="m'+(u?' on':'')+'" data-act="mm" data-l="'+L+'"><span class="let">'+L+'</span><span>'+esc(MEANINGS[L])+'</span>' + (u ? '<span class="used" lang="en">'+esc(u.word)+'</span>' : '') + '</button>';
+  }).join("") + '</div></div></div>';
+  return h;
+}
+
+function renderQuiz(){
+  var st = store(), steps = stepsOf(), step = steps[st.idx], last = st.idx === steps.length-1;
+  var exam = S.mode === "exam";
+  var body = step.length > 1 ? renderMatch(step, st) : renderQuestion(step[0], st);
+  return header() +
+    '<section class="prog" aria-label="Progreso">' + progressHtml() + '</section>' +
+    '<main class="card qcard" id="qcard">' + body + '</main>' +
+    '<nav class="nav" aria-label="Navegación">' +
+      '<button type="button" class="btn btn-ghost" data-act="prev"'+(st.idx===0?' disabled':'')+'>← Anterior</button>' +
+      (last ? '<button type="button" class="btn btn-sun" data-act="finish">'+(exam?'TERMINAR EXAMEN':'TERMINAR PRÁCTICA')+'</button>'
+            : '<button type="button" class="btn btn-blue" data-act="next">Siguiente →</button>') +
+    '</nav>' +
+    (last ? '' : '<div class="finish-row"><button type="button" class="btn btn-ghost" data-act="finish">'+(exam?'TERMINAR EXAMEN':'TERMINAR PRÁCTICA')+'</button></div>') +
+    footer();
+}
+
+/* ------------------------------------------------------------- RESULTADOS */
+function reviewItem(g){
+  var q = g.q, a = g.a, cls = g.ok ? "ok" : (g.answered ? "bad" : "skip");
+  var head = '<div class="rv-head"><span class="rv-n">Pregunta '+(S.mode==="practice" ? (qsOf().indexOf(q)+1) : q.n)+'</span>' +
+    (S.mode==="exam" ? '<span class="rv-sec">'+esc(SECTIONS[q.sec].name)+'</span>' : '') + '</div>';
+  var qline, mine, right;
+  if(q.type === "match"){
+    qline = 'Match: <mark lang="en">'+esc(q.word)+'</mark> = ?';
+    mine = g.answered ? a+". "+MEANINGS[a] : "(sin responder)";
+    right = q.ans+". "+MEANINGS[q.ans];
+  } else {
+    qline = '<span lang="en">'+blankHtml(q.prompt)+'</span>' + (q.base ? ' <span lang="en">(Base word: '+esc(q.base)+')</span>' : "");
+    mine = g.answered ? String(a).trim().toUpperCase() : "(sin responder)";
+    right = q.ans.toUpperCase();
+    if(q.type === "mc") right = q.ans;
+  }
+  var verdict;
+  if(g.ok) verdict = ["✅ ¡Muy bien, Killian!","✅ ¡Correcto! ¡Sigue así!","✅ ¡Excelente trabajo!"][(q.n||0) % 3];
+  else if(!g.answered) verdict = "⚪ Esta se quedó sin responder. ¡Vamos a aprenderla!";
+  else verdict = ["❌ ¡Casi lo logras!","❌ Vamos a aprenderlo juntos.","❌ ¡Buen intento! Mira esto."][(q.n||0) % 3];
+
+  var h = '<article class="rv '+cls+'">' + head + '<p class="rv-q">'+qline+'</p>' +
+    '<p class="line"><span class="lbl">Respuesta de Killian</span><br><b lang="en">'+esc(mine)+'</b></p>' +
+    '<p class="verdict">'+verdict+'</p>';
+  if(!g.ok){
+    h += '<p class="line correct-box"><span class="lbl">Respuesta correcta</span><br><b lang="en">'+esc(right)+'</b>' +
+      (q.type !== "match" && q.prompt.indexOf("______") >= 0 ? '<br><span lang="en">'+filledHtml(q.prompt, q.ans)+'</span>' : '') + '</p>';
+  }
+  h += '<div class="learn"><p class="line"><span class="lbl">Explicación</span><br>'+esc(q.exp)+'</p>';
+  if(!g.ok){
+    if(g.answered && q.type === "mc" && D[a] && a !== q.ans) h += '<p class="line">Tú elegiste <b lang="en">'+esc(a)+'</b>, que significa «'+esc(D[a])+'».</p>';
+    if(g.answered && q.type === "write") h += '<p class="line">Fíjate cómo se escribe: <b lang="en">'+esc(C[q.concept].parts || q.ans.toUpperCase())+'</b> = <b lang="en">'+esc(q.ans.toUpperCase())+'</b>.</p>';
+    h += '<p class="exa line"><span class="lbl">Otro ejemplo</span><br><span lang="en">'+esc(C[q.concept].ex)+'</span><br>'+esc(C[q.concept].exEs)+'</p>';
+  }
+  return h + '</div></article>';
+}
+
+function actionButtons(wrongCount){
+  var exam = S.mode === "exam", h = '<div class="stack">';
+  if(exam){
+    h += wrongCount > 0
+      ? '<button class="btn btn-sun btn-big" data-act="practice" type="button">VOLVER A PRACTICAR MIS ERRORES</button>'
+      : '<p class="note">🎉 ¡No tienes errores que practicar!</p>';
+    h += '<button class="btn btn-blue btn-big" data-act="repeat" type="button">REPETIR TODO EL EXAMEN</button>';
+  } else {
+    if(wrongCount > 0) h += '<button class="btn btn-sun btn-big" data-act="practice" type="button">PRACTICAR DE NUEVO LO QUE AÚN FALLO</button>';
+    h += '<button class="btn btn-blue btn-big" data-act="back-exam" type="button">VOLVER A MIS RESULTADOS DEL EXAMEN</button>' +
+         '<button class="btn btn-ghost" data-act="repeat" type="button">REPETIR TODO EL EXAMEN</button>';
+  }
+  return h + '</div>';
+}
+
+function renderResults(){
+  var st = store(), qs = qsOf(), grades = gradeAll(qs, st.answers);
+  var right = grades.filter(function(g){ return g.ok; }).length, wrong = qs.length - right;
+  var exam = S.mode === "exam";
+  var score = right * POINTS, pct = Math.round(right / qs.length * 100);
+  var stars = Math.round((exam ? score : pct) / 20), starHtml = "";
+  for(var i=0;i<5;i++) starHtml += '<svg aria-hidden="true" fill="'+(i<stars?'#ffc928':'#dff2ff')+'"><use href="#star"/></svg>';
+  var big = exam ? '<div class="score" aria-label="Puntuación final">'+score+' <small>/ 100</small></div>'
+                 : '<div class="score" aria-label="Respuestas correctas">'+right+' <small>de '+qs.length+'</small></div>';
+  var shown = filter === "bad" ? grades.filter(function(g){ return !g.ok; }) : grades;
+  return header() +
+  '<main class="card res">' +
+    '<svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
+    '<h1>'+(exam ? "Resultados de Killian" : "Práctica de mis errores — Killian")+'</h1>' +
+    big + '<div class="stars" role="img" aria-label="'+stars+' de 5 estrellas">'+starHtml+'</div>' +
+    '<div class="stats"><div class="stat g"><b>'+right+'</b><span>✅ correctas</span></div>' +
+      '<div class="stat r"><b>'+wrong+'</b><span>❌ incorrectas</span></div>' +
+      '<div class="stat"><b>'+pct+'%</b><span>de aciertos</span></div></div>' +
+    '<p class="msg">'+messageFor(exam ? score : pct)+'</p>' +
+    (exam ? '' : '') +
+    actionButtons(wrong) +
+  '</main>' +
+  '<section aria-label="Revisión de preguntas" class="review-wrap" style="display:flex;flex-direction:column;gap:14px">' +
+    '<h2 style="color:var(--blue-d)">Revisión de todas las preguntas</h2>' +
+    '<div class="tabs"><button type="button" class="tab" data-act="filter" data-f="all" aria-pressed="'+(filter==="all")+'">Ver todas ('+qs.length+')</button>' +
+    '<button type="button" class="tab" data-act="filter" data-f="bad" aria-pressed="'+(filter==="bad")+'">Solo las que fallé ('+wrong+')</button></div>' +
+    '<div class="review">' + (shown.length ? shown.map(reviewItem).join("") : '<p class="note">🎉 ¡Todas fueron correctas!</p>') + '</div>' +
+  '</section>' +
+  '<section class="card">' + actionButtons(wrong) + '</section>' + footer();
+}
+
+/* ------------------------------------------------------------------ VENTANAS */
+function renderModal(){
+  if(!modal) return "";
+  var h;
+  if(modal.type === "unanswered"){
+    var list = modal.list.join(", ");
+    h = '<h2>¡Espera un momento! ✋</h2><p>Te faltan <b>'+modal.list.length+'</b> '+(modal.list.length===1?'pregunta':'preguntas')+' sin responder ('+esc(list)+').</p>' +
+      '<p>Si terminas ahora, esas preguntas contarán como incorrectas.</p>' +
+      '<button type="button" class="btn btn-sun" data-act="modal-close" id="mfocus">Seguir respondiendo</button>' +
+      '<button type="button" class="btn btn-ghost" data-act="finish-now">Terminar de todos modos</button>';
+  } else {
+    h = '<h2>¿Borrar todo el progreso?</h2><p>Se borrarán tus respuestas y resultados de este dispositivo y empezarás desde cero.</p>' +
+      '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, mantener mi progreso</button>' +
+      '<button type="button" class="btn btn-sun" data-act="reset">Sí, borrar y empezar</button>';
+  }
+  return '<div class="veil" data-act="veil"><div class="modal" role="dialog" aria-modal="true">'+h+'</div></div>';
+}
+
+/* ------------------------------------------------------------------ RENDER */
+function render(opts){
+  opts = opts || {};
+  var y = window.scrollY;
+  var html = S.screen === "welcome" ? renderWelcome() : S.screen === "results" ? renderResults() : renderQuiz();
+  app.innerHTML = html + renderModal();
+  if(opts.top) window.scrollTo(0, 0); else window.scrollTo(0, y);
+  if(modal){ var f = document.getElementById("mfocus"); if(f) f.focus(); }
+}
+
+function updateChrome(){
+  var st = store(), qs = qsOf(), n = answeredCount(qs, st.answers);
+  var pc = document.getElementById("pcount"), pb = document.getElementById("pbar");
+  if(pc) pc.textContent = "✏️ " + n + " de " + qs.length + " respondidas";
+  if(pb){ pb.style.width = Math.round(n/qs.length*100) + "%"; if(pb.parentNode) pb.parentNode.setAttribute("aria-valuenow", n); }
+  var steps = stepsOf(), step = steps[st.idx];
+  var dots = document.querySelectorAll("#dots .dot");
+  qs.forEach(function(q, i){ if(dots[i]) dots[i].classList.toggle("done", isAnswered(st.answers[q.id])); });
+}
+
+/* ------------------------------------------------------------------ ACCIONES */
+function go(idx){
+  var st = store(); st.idx = Math.min(Math.max(idx, 0), stepsOf().length-1);
+  selWord = null; matchHint = "";
+  save(); render({top:true});
+}
+function finishNow(){
+  store().done = true; S.screen = "results"; modal = null; filter = "all";
+  save(); render({top:true});
+}
+function tryFinish(){
+  var st = store(), qs = qsOf();
+  var missing = qs.filter(function(q){ return !isAnswered(st.answers[q.id]); }).map(function(q){ return S.mode==="practice" ? qs.indexOf(q)+1 : q.n; });
+  if(missing.length){ modal = {type:"unanswered", list:missing}; render(); }
+  else finishNow();
+}
+function startPractice(){
+  var st = store(), qs = qsOf();
+  var wrongG = gradeAll(qs, st.answers).filter(function(g){ return !g.ok; });
+  var seen = {}, concepts = [];
+  wrongG.forEach(function(g){ if(!seen[g.q.concept]){ seen[g.q.concept] = 1; concepts.push(g.q.concept); } });
+  if(!concepts.length) return;
+  var list = concepts.map(function(c, i){
+    var variants = BANK[c], k = (S.vc[c] || 0) % variants.length;
+    S.vc[c] = (S.vc[c] || 0) + 1;
+    var v = variants[k];
+    return {id:"p"+(i+1)+"-"+c, n:i+1, sec:0, type:v.type, concept:c, prompt:v.prompt, base:v.base||"",
+      opts:v.opts ? shuffle(v.opts) : null, ans:v.ans, exp:C[c].exp};
+  });
+  S.practice = {qs:list, idx:0, answers:{}, done:false};
+  S.mode = "practice"; S.screen = "quiz"; selWord = null; matchHint = ""; filter = "all";
+  save(); render({top:true});
+}
+function repeatExam(){
+  S.exam = freshExam(); S.practice = null; S.mode = "exam"; S.screen = "quiz";
+  selWord = null; matchHint = ""; modal = null; filter = "all";
+  save(); render({top:true});
+}
+
+app.addEventListener("click", function(ev){
+  var el = ev.target.closest("[data-act]");
+  if(!el || !app.contains(el)) return;
+  var act = el.getAttribute("data-act"), st = store();
+  if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
+  switch(act){
+    case "start": S.screen = "quiz"; S.mode = "exam"; save(); render({top:true}); break;
+    case "see-results": S.screen = "results"; S.mode = "exam"; filter = "all"; save(); render({top:true}); break;
+    case "prev": go(st.idx-1); break;
+    case "next": go(st.idx+1); break;
+    case "goto": go(+el.getAttribute("data-i")); break;
+    case "pick":
+      var q = stepsOf()[st.idx][0];
+      st.answers[q.id] = el.getAttribute("data-v"); save(); render(); break;
+    case "mw":
+      selWord = el.getAttribute("data-q") === selWord ? null : el.getAttribute("data-q");
+      matchHint = ""; render(); break;
+    case "mm":
+      var step = stepsOf()[st.idx], L = el.getAttribute("data-l");
+      if(!selWord){ matchHint = "Primero toca una palabra en inglés 👆"; render(); break; }
+      matchHint = "";
+      if(st.answers[selWord] === L){ delete st.answers[selWord]; }
+      else {
+        step.forEach(function(x){ if(st.answers[x.id] === L) delete st.answers[x.id]; });
+        st.answers[selWord] = L;
+        var next = step.find(function(x){ return !st.answers[x.id]; });
+        selWord = next ? next.id : null;
+      }
+      save(); render(); break;
+    case "finish": tryFinish(); break;
+    case "finish-now": finishNow(); break;
+    case "modal-close": modal = null; render(); break;
+    case "ask-reset": modal = {type:"reset"}; render(); break;
+    case "reset":
+      clearSaved(); S = fresh(); modal = null; selWord = null; matchHint = ""; filter = "all"; render({top:true}); break;
+    case "practice": startPractice(); break;
+    case "repeat": repeatExam(); break;
+    case "back-exam": S.mode = "exam"; S.screen = S.exam.done ? "results" : "quiz"; filter = "all"; save(); render({top:true}); break;
+    case "filter": filter = el.getAttribute("data-f"); render(); break;
+  }
+});
+
+app.addEventListener("input", function(ev){
+  if(ev.target.id !== "ans") return;
+  var st = store(), q = stepsOf()[st.idx][0];
+  st.answers[q.id] = ev.target.value;
+  save(); updateChrome();
+});
+app.addEventListener("keydown", function(ev){
+  if(ev.key === "Enter" && ev.target.id === "ans"){
+    ev.preventDefault();
+    var st = store();
+    if(st.idx < stepsOf().length-1) go(st.idx+1);
+  }
+  if(ev.key === "Escape" && modal){ modal = null; render(); }
+});
+
+render();
+
+/* Utilidad de pruebas (no la usa el niño). */
+window.__kx = {EXAM:EXAM, BANK:BANK, C:C, isCorrect:isCorrect};
+})();
+</script>
+</body>
+</html>
