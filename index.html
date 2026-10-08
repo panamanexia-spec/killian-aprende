@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>English Practice with Killian</title>
+<meta name="theme-color" content="#1d6fd8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Killian">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -169,6 +176,18 @@ button{font:inherit; color:inherit; cursor:pointer}
 .modal{background:#fff; border-radius:28px; padding:24px; max-width:460px; width:100%; display:flex; flex-direction:column; gap:14px; box-shadow:0 10px 0 var(--sky-2)}
 .modal h2{font-size:1.6rem; color:var(--blue-d)}
 
+/* entrada y estado de la nube */
+.auth{display:flex; flex-direction:column; gap:12px; text-align:center; align-items:center}
+.auth .owl{width:120px; height:120px}
+.auth form{display:flex; flex-direction:column; gap:12px; width:100%; text-align:left}
+.auth label{font-weight:800; color:var(--blue-d)}
+.auth input{width:100%; font:inherit; font-size:1.2rem; font-weight:700; padding:12px 16px; border:4px solid var(--sky-2); border-radius:16px; min-height:56px; color:var(--ink); background:#fff}
+.auth input:focus{outline:none; border-color:var(--blue); box-shadow:0 0 0 5px rgba(255,201,40,.7)}
+.auth .err{background:var(--bad-bg); color:var(--bad); border-radius:14px; padding:10px 14px}
+.auth .good{background:var(--ok-bg); color:var(--ok); border-radius:14px; padding:10px 14px}
+.syncst{font-weight:800}
+.syncst.bad{color:var(--bad)}
+
 @media (max-width:480px){
   body{font-size:1.05rem}
   .hero h1{font-size:1.9rem}
@@ -196,9 +215,9 @@ button{font:inherit; color:inherit; cursor:pointer}
       <circle cx="49" cy="57" r="2.4" fill="#fff"/><circle cx="75" cy="57" r="2.4" fill="#fff"/>
       <path d="M54 68 h12 l-6 11z" fill="#ffc928"/>
       <path d="M42 108 h10 M68 108 h10" stroke="#ffc928" stroke-width="6" stroke-linecap="round"/>
-      <path d="M20 38 L60 20 L100 38 L60 54z" fill="#12306b"/>
-      <path d="M40 46 v10 q20 10 40 0 v-10 l-20 8z" fill="#0f2757"/>
-      <path d="M97 39 v18" stroke="#ffc928" stroke-width="3"/><circle cx="97" cy="60" r="4.5" fill="#ffc928"/>
+      <path d="M20 26 L60 8 L100 26 L60 42z" fill="#12306b"/>
+      <path d="M42 34 v9 q18 8 36 0 v-9 l-18 8z" fill="#0f2757"/>
+      <path d="M97 27 v16" stroke="#ffc928" stroke-width="3"/><circle cx="97" cy="46" r="4.5" fill="#ffc928"/>
     </symbol>
     <symbol id="book" viewBox="0 0 64 64">
       <path d="M32 14 C22 8 10 8 4 11 V50 C10 47 22 47 32 53z" fill="#fff" stroke="#12306b" stroke-width="3" stroke-linejoin="round"/>
@@ -227,6 +246,8 @@ button{font:inherit; color:inherit; cursor:pointer}
 
 <div class="app" id="app"><noscript>Necesitas activar JavaScript para usar esta página.</noscript></div>
 
+<script src="vendor/supabase.js"></script>
+<script src="sync.js"></script>
 <script>
 "use strict";
 (function(){
@@ -407,7 +428,12 @@ function load(){
   try{
     var raw = localStorage.getItem(STORE_KEY);
     if(!raw) return fresh();
-    var s = JSON.parse(raw);
+    return normalize(JSON.parse(raw));
+  }catch(e){ return fresh(); }
+}
+/* Revisa que lo guardado (en el aparato o en la nube) tenga la forma correcta. */
+function normalize(s){
+  try{
     if(!s || typeof s !== "object" || !s.exam || typeof s.exam.answers !== "object") return fresh();
     if(["welcome","quiz","results"].indexOf(s.screen) < 0) s.screen = "welcome";
     s.exam.idx = Math.min(Math.max(+s.exam.idx || 0, 0), EXAM_STEPS.length-1);
@@ -422,8 +448,36 @@ function load(){
   }catch(e){ return fresh(); }
 }
 var S = load();
-function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
+function cloudPayload(){ return {at:S.at, mode:S.mode, exam:S.exam, practice:S.practice, vc:S.vc}; }
+function writeLocal(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
+function save(){
+  S.at = Date.now();
+  writeLocal();
+  if(window.KXSync) KXSync.push(cloudPayload());
+}
 function clearSaved(){ try{ localStorage.removeItem(STORE_KEY); }catch(e){} }
+
+/* Trae de la nube lo más reciente (gana el cambio más nuevo). */
+function reconcile(){
+  if(!window.KXSync || !KXSync.hasSession() || KXSync.hasPending()) return Promise.resolve();
+  return KXSync.pull().then(function(r){
+    if(!r.ok) return;
+    var remote = r.value, mine = S.at || 0;
+    if(remote && (remote.at || 0) > mine){
+      if(document.activeElement && document.activeElement.id === "ans") return;
+      var screen = S.screen;
+      var n = normalize({screen:screen, mode:remote.mode, exam:remote.exam, practice:remote.practice, vc:remote.vc});
+      var wasEmpty = !n.exam.done && answeredCount(EXAM, n.exam.answers) === 0 && !n.practice;
+      if(wasEmpty && screen !== "quiz") n.screen = "welcome";
+      if(wasEmpty && screen === "results") n.screen = "welcome";
+      n.at = remote.at;
+      S = n; modal = null; selWord = null; matchHint = "";
+      writeLocal(); KXSync.markOk(); render();
+    } else if(mine > ((remote && remote.at) || 0)){
+      KXSync.push(cloudPayload());
+    } else KXSync.markOk();
+  });
+}
 
 function store(s){ s = s || S; return s.mode === "practice" && s.practice ? s.practice : s.exam; }
 function qsOf(){ return S.mode === "practice" ? S.practice.qs : EXAM; }
@@ -467,8 +521,69 @@ function header(){
   return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div>' +
     '<button class="link-btn" data-act="ask-reset" type="button">↺ Borrar progreso</button></header>';
 }
+var SYNC_TXT = {
+  ok:["☁️ Guardado en la nube", ""], syncing:["☁️ Guardando…", ""],
+  offline:["📴 Sin internet: tu progreso se guardará al volver", "bad"],
+  error:["⚠️ No se pudo guardar en la nube. Reintentando…", "bad"],
+  none:["Tu progreso se guarda en este aparato.", ""]
+};
+function syncText(s){ return (SYNC_TXT[s] || SYNC_TXT.none); }
 function footer(){
-  return '<footer class="foot"><span>Tu progreso se guarda solo en este dispositivo.</span></footer>';
+  var st = window.KXSync ? KXSync.status : "none", t = syncText(st);
+  return '<footer class="foot"><span id="syncst" class="syncst '+t[1]+'">'+t[0]+'</span>' +
+    (window.KXSync && KXSync.enabled ? '<button class="link-btn" data-act="ask-logout" type="button">Cerrar sesión en este aparato</button>' : '') +
+    '</footer>';
+}
+function setSyncStatus(s){
+  var el = document.getElementById("syncst");
+  if(!el) return;
+  var t = syncText(s);
+  el.textContent = t[0]; el.className = "syncst " + t[1];
+}
+
+/* ---------------------------------------------------------------- ENTRADA */
+var auth = {mode:"in", email:"", pass:"", msg:"", kind:"", busy:false};
+function authError(e){
+  var m = String((e && e.message) || e || "");
+  if(/invalid login/i.test(m)) return "El correo o la contraseña no coinciden.";
+  if(/not confirmed/i.test(m)) return "Falta confirmar tu correo. Abre el mensaje que te enviamos y pulsa el enlace.";
+  if(/already registered/i.test(m)) return "Ese correo ya tiene cuenta. Pulsa «Ya tengo cuenta» para entrar.";
+  if(/password/i.test(m) && /6|short|weak/i.test(m)) return "La contraseña debe tener al menos 6 caracteres.";
+  if(/valid email|invalid.*email/i.test(m)) return "Escribe un correo válido.";
+  if(/rate limit|too many/i.test(m)) return "Hubo muchos intentos. Espera unos minutos y vuelve a probar.";
+  if(!navigator.onLine || /fetch|network|failed/i.test(m)) return "No hay internet. Conéctate y vuelve a intentar.";
+  return "No se pudo entrar. Revisa tus datos e intenta otra vez.";
+}
+function renderAuth(){
+  var up = auth.mode === "up";
+  return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div></header>' +
+  '<main class="card auth">' +
+    '<svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
+    '<h1>'+(up ? "Crear la cuenta de mamá" : "Entrar")+'</h1>' +
+    '<p>Mamá, entra <b>una sola vez</b> en este aparato. Después Killian ya no tendrá que escribir nada y su progreso será el mismo en la tablet, el celular y la computadora.</p>' +
+    (auth.msg ? '<p class="'+(auth.kind==="ok"?"good":"err")+'" role="alert">'+esc(auth.msg)+'</p>' : '') +
+    '<form id="authform" novalidate>' +
+      '<label for="email">Correo</label><input id="email" type="email" inputmode="email" autocomplete="username" autocapitalize="none" value="'+esc(auth.email)+'">' +
+      '<label for="pass">Contraseña</label><input id="pass" type="password" autocomplete="'+(up?"new-password":"current-password")+'" value="'+esc(auth.pass)+'">' +
+      '<button class="btn btn-sun btn-big" type="submit" data-act="auth-go"'+(auth.busy?' disabled':'')+'>'+(auth.busy ? "Un momento…" : (up ? "CREAR CUENTA" : "ENTRAR"))+'</button>' +
+    '</form>' +
+    '<button class="link-btn" type="button" data-act="auth-toggle">'+(up ? "Ya tengo cuenta" : "Es la primera vez: crear cuenta")+'</button>' +
+  '</main>';
+}
+function doAuth(){
+  if(auth.busy) return;
+  var email = auth.email.trim(), pass = auth.pass;
+  if(!email || !pass){ auth.msg = "Escribe tu correo y tu contraseña."; auth.kind = "err"; render(); return; }
+  auth.busy = true; auth.msg = ""; render();
+  var up = auth.mode === "up";
+  (up ? KXSync.signUp(email, pass) : KXSync.signIn(email, pass)).then(function(r){
+    auth.busy = false;
+    if(r.error){ auth.msg = authError(r.error); auth.kind = "err"; render(); return; }
+    if(KXSync.hasSession()){ auth.pass = ""; auth.msg = ""; return reconcile().then(function(){ render({top:true}); }); }
+    auth.mode = "in"; auth.pass = ""; auth.kind = "ok";
+    auth.msg = "Te enviamos un correo para confirmar tu cuenta. Ábrelo, pulsa el enlace y regresa aquí a entrar.";
+    render();
+  }).catch(function(e){ auth.busy = false; auth.msg = authError(e); auth.kind = "err"; render(); });
 }
 
 /* ------------------------------------------------------------ BIENVENIDA */
@@ -665,6 +780,10 @@ function renderModal(){
       '<p>Si terminas ahora, esas preguntas contarán como incorrectas.</p>' +
       '<button type="button" class="btn btn-sun" data-act="modal-close" id="mfocus">Seguir respondiendo</button>' +
       '<button type="button" class="btn btn-ghost" data-act="finish-now">Terminar de todos modos</button>';
+  } else if(modal.type === "logout"){
+    h = '<h2>¿Cerrar sesión?</h2><p>Este aparato dejará de estar conectado. Tu progreso sigue guardado en la nube y volverá al entrar de nuevo.</p>' +
+      '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, quedarme</button>' +
+      '<button type="button" class="btn btn-sun" data-act="logout">Sí, cerrar sesión</button>';
   } else {
     h = '<h2>¿Borrar todo el progreso?</h2><p>Se borrarán tus respuestas y resultados de este dispositivo y empezarás desde cero.</p>' +
       '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, mantener mi progreso</button>' +
@@ -677,8 +796,9 @@ function renderModal(){
 function render(opts){
   opts = opts || {};
   var y = window.scrollY;
-  var html = S.screen === "welcome" ? renderWelcome() : S.screen === "results" ? renderResults() : renderQuiz();
-  app.innerHTML = html + renderModal();
+  var needLogin = window.KXSync && KXSync.enabled && !KXSync.hasSession();
+  var html = needLogin ? renderAuth() : S.screen === "welcome" ? renderWelcome() : S.screen === "results" ? renderResults() : renderQuiz();
+  app.innerHTML = html + (needLogin ? "" : renderModal());
   if(opts.top) window.scrollTo(0, 0); else window.scrollTo(0, y);
   if(modal){ var f = document.getElementById("mfocus"); if(f) f.focus(); }
 }
@@ -766,7 +886,17 @@ app.addEventListener("click", function(ev){
     case "modal-close": modal = null; render(); break;
     case "ask-reset": modal = {type:"reset"}; render(); break;
     case "reset":
-      clearSaved(); S = fresh(); modal = null; selWord = null; matchHint = ""; filter = "all"; render({top:true}); break;
+      S = fresh(); modal = null; selWord = null; matchHint = ""; filter = "all"; save(); render({top:true}); break;
+    case "ask-logout": modal = {type:"logout"}; render(); break;
+    case "logout":
+      modal = null;
+      KXSync.signOut().catch(function(){}).then(function(){
+        clearSaved(); S = fresh(); selWord = null; matchHint = ""; filter = "all";
+        auth.pass = ""; auth.msg = ""; render({top:true});
+      });
+      break;
+    case "auth-toggle": auth.mode = auth.mode === "up" ? "in" : "up"; auth.msg = ""; render(); break;
+    case "auth-go": ev.preventDefault(); doAuth(); break;
     case "practice": startPractice(); break;
     case "repeat": repeatExam(); break;
     case "back-exam": S.mode = "exam"; S.screen = S.exam.done ? "results" : "quiz"; filter = "all"; save(); render({top:true}); break;
@@ -774,7 +904,10 @@ app.addEventListener("click", function(ev){
   }
 });
 
+app.addEventListener("submit", function(ev){ ev.preventDefault(); doAuth(); });
 app.addEventListener("input", function(ev){
+  if(ev.target.id === "email"){ auth.email = ev.target.value; return; }
+  if(ev.target.id === "pass"){ auth.pass = ev.target.value; return; }
   if(ev.target.id !== "ans") return;
   var st = store(), q = stepsOf()[st.idx][0];
   st.answers[q.id] = ev.target.value;
@@ -789,7 +922,25 @@ app.addEventListener("keydown", function(ev){
   if(ev.key === "Escape" && modal){ modal = null; render(); }
 });
 
-render();
+/* Arranque: primero revisa si este aparato ya tiene sesión, luego sincroniza. */
+function syncNow(){
+  if(!window.KXSync || !KXSync.enabled || !KXSync.hasSession()) return;
+  KXSync.flush();
+  reconcile();
+}
+if(window.KXSync){
+  KXSync.init({onStatus:setSyncStatus, onSignedOut:function(){ render(); }}).then(function(){
+    render();
+    syncNow();
+  });
+  document.addEventListener("visibilitychange", function(){ if(!document.hidden) syncNow(); });
+  window.addEventListener("online", syncNow);
+  setInterval(function(){ if(!document.hidden) syncNow(); }, 30000);
+} else render();
+
+if("serviceWorker" in navigator && location.protocol.indexOf("http") === 0){
+  window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+}
 
 /* Utilidad de pruebas (no la usa el niño). */
 window.__kx = {EXAM:EXAM, BANK:BANK, C:C, isCorrect:isCorrect};
