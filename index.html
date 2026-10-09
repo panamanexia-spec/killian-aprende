@@ -724,8 +724,9 @@ function reviewItem(g){
   return h + '</div></article>';
 }
 
-function actionButtons(wrongCount){
+function actionButtons(wrongCount, unans){
   var exam = S.mode === "exam", h = '<div class="stack">';
+  if(unans > 0) h += '<button class="btn btn-blue btn-big" data-act="resume" type="button">SEGUIR RESPONDIENDO (faltan '+unans+')</button>';
   if(exam){
     h += wrongCount > 0
       ? '<button class="btn btn-sun btn-big" data-act="practice" type="button">VOLVER A PRACTICAR MIS ERRORES</button>'
@@ -742,6 +743,7 @@ function actionButtons(wrongCount){
 function renderResults(){
   var st = store(), qs = qsOf(), grades = gradeAll(qs, st.answers);
   var right = grades.filter(function(g){ return g.ok; }).length, wrong = qs.length - right;
+  var unans = grades.filter(function(g){ return !g.answered; }).length;
   var exam = S.mode === "exam";
   var score = right * POINTS, pct = Math.round(right / qs.length * 100);
   var stars = Math.round((exam ? score : pct) / 20), starHtml = "";
@@ -755,11 +757,11 @@ function renderResults(){
     '<h1>'+(exam ? "Resultados de Killian" : "Práctica de mis errores — Killian")+'</h1>' +
     big + '<div class="stars" role="img" aria-label="'+stars+' de 5 estrellas">'+starHtml+'</div>' +
     '<div class="stats"><div class="stat g"><b>'+right+'</b><span>✅ correctas</span></div>' +
-      '<div class="stat r"><b>'+wrong+'</b><span>❌ incorrectas</span></div>' +
+      '<div class="stat r"><b>'+wrong+'</b><span>❌ incorrectas'+(unans ? ' ('+unans+' sin responder)' : '')+'</span></div>' +
       '<div class="stat"><b>'+pct+'%</b><span>de aciertos</span></div></div>' +
     '<p class="msg">'+messageFor(exam ? score : pct)+'</p>' +
     (exam ? '' : '') +
-    actionButtons(wrong) +
+    actionButtons(wrong, unans) +
   '</main>' +
   '<section aria-label="Revisión de preguntas" class="review-wrap" style="display:flex;flex-direction:column;gap:14px">' +
     '<h2 style="color:var(--blue-d)">Revisión de todas las preguntas</h2>' +
@@ -767,7 +769,7 @@ function renderResults(){
     '<button type="button" class="tab" data-act="filter" data-f="bad" aria-pressed="'+(filter==="bad")+'">Solo las que fallé ('+wrong+')</button></div>' +
     '<div class="review">' + (shown.length ? shown.map(reviewItem).join("") : '<p class="note">🎉 ¡Todas fueron correctas!</p>') + '</div>' +
   '</section>' +
-  '<section class="card">' + actionButtons(wrong) + '</section>' + footer();
+  '<section class="card">' + actionButtons(wrong, unans) + '</section>' + footer();
 }
 
 /* ------------------------------------------------------------------ VENTANAS */
@@ -776,7 +778,10 @@ function renderModal(){
   var h;
   if(modal.type === "unanswered"){
     var list = modal.list.join(", ");
-    h = '<h2>¡Espera un momento! ✋</h2><p>Te faltan <b>'+modal.list.length+'</b> '+(modal.list.length===1?'pregunta':'preguntas')+' sin responder ('+esc(list)+').</p>' +
+    if(modal.none) h = '<h2>¡Espera un momento! ✋</h2><p>Todavía <b>no has respondido ninguna</b> pregunta.</p><p>Si terminas ahora, todas contarán como incorrectas.</p>' +
+      '<button type="button" class="btn btn-sun" data-act="modal-close" id="mfocus">Seguir respondiendo</button>' +
+      '<button type="button" class="btn btn-ghost" data-act="finish-now">Terminar de todos modos</button>';
+    else h = '<h2>¡Espera un momento! ✋</h2><p>Te faltan <b>'+modal.list.length+'</b> '+(modal.list.length===1?'pregunta':'preguntas')+' sin responder ('+esc(list)+').</p>' +
       '<p>Si terminas ahora, esas preguntas contarán como incorrectas.</p>' +
       '<button type="button" class="btn btn-sun" data-act="modal-close" id="mfocus">Seguir respondiendo</button>' +
       '<button type="button" class="btn btn-ghost" data-act="finish-now">Terminar de todos modos</button>';
@@ -826,7 +831,7 @@ function finishNow(){
 function tryFinish(){
   var st = store(), qs = qsOf();
   var missing = qs.filter(function(q){ return !isAnswered(st.answers[q.id]); }).map(function(q){ return S.mode==="practice" ? qs.indexOf(q)+1 : q.n; });
-  if(missing.length){ modal = {type:"unanswered", list:missing}; render(); }
+  if(missing.length){ modal = {type:"unanswered", list:missing, none:missing.length === qs.length}; render(); }
   else finishNow();
 }
 function startPractice(){
@@ -883,6 +888,10 @@ app.addEventListener("click", function(ev){
       save(); render(); break;
     case "finish": tryFinish(); break;
     case "finish-now": finishNow(); break;
+    case "resume":
+      var rst = store(), rsteps = stepsOf(), ri = rsteps.findIndex(function(sp){ return sp.some(function(q){ return !isAnswered(rst.answers[q.id]); }); });
+      rst.done = false; S.screen = "quiz"; rst.idx = ri < 0 ? 0 : ri; selWord = null; matchHint = "";
+      save(); render({top:true}); break;
     case "modal-close": modal = null; render(); break;
     case "ask-reset": modal = {type:"reset"}; render(); break;
     case "reset":
