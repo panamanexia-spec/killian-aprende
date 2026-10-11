@@ -176,6 +176,59 @@ button{font:inherit; color:inherit; cursor:pointer}
 .modal{background:#fff; border-radius:28px; padding:24px; max-width:460px; width:100%; display:flex; flex-direction:column; gap:14px; box-shadow:0 10px 0 var(--sky-2)}
 .modal h2{font-size:1.6rem; color:var(--blue-d)}
 
+/* inicio */
+.hello{display:flex; gap:12px; align-items:center; justify-content:space-between}
+.hello>div{min-width:0}
+.hello h1{font-size:1.9rem; color:var(--blue-d)}
+.hello .date{font-size:1.05rem}
+.starchip{display:inline-flex; gap:6px; align-items:center; background:#fff8dc; border:3px solid var(--sun); border-radius:999px; padding:6px 16px; font-family:var(--font-display); font-weight:800; font-size:1.3rem}
+.sec-title{font-size:1.4rem; color:var(--blue-d)}
+.tag-demo{background:#fff; border:3px dashed var(--sky-2); border-radius:14px; padding:6px 12px; font-size:.95rem}
+.mat{display:flex; gap:12px; align-items:center; flex-wrap:wrap; background:#fff8dc; border:4px solid var(--sun); border-radius:22px; padding:14px 16px}
+.mat .ico{font-size:2.2rem}
+.mat .txt{flex:1 1 180px; min-width:0}
+.mat .btn{min-height:56px; font-size:1.1rem; padding-inline:18px}
+.tasks{display:flex; flex-direction:column; gap:14px}
+.task{position:relative; display:flex; gap:14px; background:#fff; border-radius:26px; padding:16px; box-shadow:0 6px 0 var(--sky-2), 0 14px 24px rgba(18,48,107,.08); overflow:hidden; min-width:0}
+.task .emo{flex:none; width:64px; height:64px; border-radius:20px; background:var(--sky); display:grid; place-items:center; font-size:2rem}
+.task .body{display:flex; flex-direction:column; gap:6px; min-width:0; flex:1}
+.task h3{font-size:1.4rem; overflow-wrap:anywhere}
+.task .due{color:var(--blue); font-size:1rem}
+.task .acts{display:flex; flex-direction:column; gap:10px; margin-top:6px}
+.task .btn{min-height:60px; font-size:1.2rem}
+.chip.sm{font-size:.8rem; padding:2px 12px}
+.task.cel{animation:celebrate .9s ease forwards}
+.task.cel .btn{pointer-events:none}
+.plus{position:absolute; right:16px; top:10px; font-family:var(--font-display); font-weight:800; font-size:1.6rem; color:var(--sun-d); animation:rise .9s ease forwards}
+.bit{position:absolute; top:40%; left:50%; width:10px; height:14px; border-radius:3px; animation:burst .9s ease-out forwards}
+@keyframes celebrate{0%{transform:scale(1)}25%{transform:scale(1.04)}100%{transform:scale(.96); opacity:.15}}
+@keyframes rise{from{transform:translateY(0); opacity:1}to{transform:translateY(-26px); opacity:0}}
+@keyframes burst{to{transform:translate(var(--dx),var(--dy)) rotate(260deg); opacity:0}}
+.progress-day{display:flex; flex-direction:column; gap:6px}
+.progress-day .bar{height:16px}
+.more{text-align:center; color:var(--blue-d)}
+.alldone{text-align:center; display:flex; flex-direction:column; gap:12px; align-items:center}
+.alldone .owl{width:130px; height:130px}
+.alldone h2{font-size:2rem; color:var(--blue-d)}
+.prize{background:#fff8dc; border:4px solid var(--sun); border-radius:20px; padding:12px 18px; font-family:var(--font-display); font-weight:700; font-size:1.3rem}
+.tiles{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+.tile{display:flex; flex-direction:column; gap:4px; align-items:center; justify-content:center; text-align:center; min-height:116px; padding:12px 8px; background:#fff; border:3px solid var(--sky-2); border-radius:24px; box-shadow:0 6px 0 var(--sky-2); font-family:var(--font-display); font-weight:800; font-size:1.2rem; color:var(--blue-d); line-height:1.15}
+.tile span.big{font-size:2.3rem; line-height:1}
+.tile .big-owl{width:2.6rem; height:2.6rem}
+.tile:active{transform:translateY(4px); box-shadow:0 2px 0 var(--sky-2)}
+.topic{display:flex; flex-direction:column; gap:8px}
+.topic h3{font-size:1.5rem; color:var(--blue-d)}
+.medals{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px}
+.medal{background:#fff; border-radius:20px; padding:12px; text-align:center; border:3px solid var(--sun); display:flex; flex-direction:column; gap:2px; min-width:0}
+.medal.lock{border-color:var(--sky-2); filter:grayscale(1); opacity:.6}
+.medal .e{font-size:2.2rem}
+.wordrow{display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline; padding:10px 0; border-bottom:2px solid var(--sky)}
+.wordrow b{font-family:var(--font-display); font-size:1.3rem; color:var(--blue-d)}
+.fab{position:fixed; right:calc(14px + env(safe-area-inset-right,0px)); bottom:calc(14px + env(safe-area-inset-bottom,0px)); width:68px; height:68px; border-radius:50%; border:4px solid #fff; background:var(--sun); box-shadow:0 6px 18px rgba(18,48,107,.3); padding:4px; z-index:10}
+.fab svg{width:100%; height:100%}
+.bubble{position:fixed; right:calc(14px + env(safe-area-inset-right,0px)); bottom:calc(94px + env(safe-area-inset-bottom,0px)); max-width:min(320px, calc(100vw - 28px)); background:#fff; border:4px solid var(--sun); border-radius:22px; padding:14px 16px; box-shadow:0 10px 24px rgba(18,48,107,.25); z-index:10; display:flex; flex-direction:column; gap:8px}
+.app{padding-bottom:96px}
+
 /* entrada y estado de la nube */
 .auth{display:flex; flex-direction:column; gap:12px; text-align:center; align-items:center}
 .auth .owl{width:120px; height:120px}
@@ -422,20 +475,52 @@ var EXAM_STEPS = (function(){
 
 /* --------------------------------------------------------------- ESTADO */
 function freshExam(){ return {idx:0, answers:{}, done:false}; }
-function fresh(){ return {screen:"welcome", mode:"exam", exam:freshExam(), practice:null, vc:{}}; }
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, best:0, tries:0, prac:0}; }
+function fresh(){ return {screen:"home", mode:"exam", exam:freshExam(), practice:null, vc:{}, home:freshHome(), agenda:null}; }
+function normHome(h){
+  var o = freshHome();
+  if(!h || typeof h !== "object") return o;
+  ["tasks","mats","vids","days"].forEach(function(k){ if(h[k] && typeof h[k] === "object") o[k] = h[k]; });
+  ["best","tries","prac"].forEach(function(k){ o[k] = +h[k] || 0; });
+  return o;
+}
+function mergeHome(a, b){
+  a = normHome(a); b = normHome(b);
+  var o = freshHome();
+  ["tasks","mats","vids","days"].forEach(function(k){
+    var m = {}, i;
+    for(i in a[k]) m[i] = a[k][i];
+    for(i in b[k]) if(!(i in m) || b[k][i] < m[i]) m[i] = b[k][i];
+    o[k] = m;
+  });
+  ["best","tries","prac"].forEach(function(k){ o[k] = Math.max(a[k], b[k]); });
+  return o;
+}
+function homeEq(a, b){
+  a = normHome(a); b = normHome(b);
+  var ok = ["tasks","mats","vids","days"].every(function(k){
+    var ka = Object.keys(a[k]), kb = Object.keys(b[k]);
+    return ka.length === kb.length && ka.every(function(i){ return a[k][i] === b[k][i]; });
+  });
+  return ok && a.best === b.best && a.tries === b.tries && a.prac === b.prac;
+}
 
 function load(){
   try{
     var raw = localStorage.getItem(STORE_KEY);
     if(!raw) return fresh();
-    return normalize(JSON.parse(raw));
+    var n = normalize(JSON.parse(raw));
+    if(n.screen !== "quiz") n.screen = "home";   /* al abrir, Killian ve la pantalla de inicio (o sigue su examen) */
+    return n;
   }catch(e){ return fresh(); }
 }
 /* Revisa que lo guardado (en el aparato o en la nube) tenga la forma correcta. */
 function normalize(s){
   try{
     if(!s || typeof s !== "object" || !s.exam || typeof s.exam.answers !== "object") return fresh();
-    if(["welcome","quiz","results"].indexOf(s.screen) < 0) s.screen = "welcome";
+    if(["home","topics","stars","dict","welcome","quiz","results"].indexOf(s.screen) < 0) s.screen = "home";
+    s.home = normHome(s.home);
+    if(!s.agenda || !Array.isArray(s.agenda.tareas)) s.agenda = null;
     s.exam.idx = Math.min(Math.max(+s.exam.idx || 0, 0), EXAM_STEPS.length-1);
     s.vc = s.vc || {};
     if(s.mode === "practice"){
@@ -448,7 +533,7 @@ function normalize(s){
   }catch(e){ return fresh(); }
 }
 var S = load();
-function cloudPayload(){ return {at:S.at, mode:S.mode, exam:S.exam, practice:S.practice, vc:S.vc}; }
+function cloudPayload(){ return {at:S.at, mode:S.mode, exam:S.exam, practice:S.practice, vc:S.vc, home:S.home, agenda:S.agenda}; }
 function writeLocal(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
 function save(){
   S.at = Date.now();
@@ -457,7 +542,7 @@ function save(){
 }
 function clearSaved(){ try{ localStorage.removeItem(STORE_KEY); }catch(e){} }
 
-/* Trae de la nube lo más reciente (gana el cambio más nuevo). */
+/* Trae de la nube lo más reciente. El examen gana por fecha; lo marcado en el inicio (tareas, estrellas) se junta de todos los aparatos. */
 function reconcile(){
   if(!window.KXSync || !KXSync.hasSession() || KXSync.hasPending()) return Promise.resolve();
   return KXSync.pull().then(function(r){
@@ -466,16 +551,26 @@ function reconcile(){
     if(remote && (remote.at || 0) > mine){
       if(document.activeElement && document.activeElement.id === "ans") return;
       var screen = S.screen;
-      var n = normalize({screen:screen, mode:remote.mode, exam:remote.exam, practice:remote.practice, vc:remote.vc});
+      var n = normalize({screen:screen, mode:remote.mode, exam:remote.exam, practice:remote.practice, vc:remote.vc, home:remote.home, agenda:remote.agenda});
       var wasEmpty = !n.exam.done && answeredCount(EXAM, n.exam.answers) === 0 && !n.practice;
-      if(wasEmpty && screen !== "quiz") n.screen = "welcome";
-      if(wasEmpty && screen === "results") n.screen = "welcome";
+      if(wasEmpty && screen !== "quiz") n.screen = "home";
+      var merged = mergeHome(n.home, S.home), extra = !homeEq(merged, n.home);
+      n.home = merged;
       n.at = remote.at;
       S = n; modal = null; selWord = null; matchHint = "";
-      writeLocal(); KXSync.markOk(); render();
-    } else if(mine > ((remote && remote.at) || 0)){
+      writeLocal();
+      if(extra) save(); else KXSync.markOk();
+      render();
+    } else if(remote && mine > (remote.at || 0)){
+      S.home = mergeHome(S.home, remote.home);
       KXSync.push(cloudPayload());
-    } else KXSync.markOk();
+      render();
+    } else if(!remote && mine > 0){
+      KXSync.push(cloudPayload());
+    } else {
+      if(remote){ var m2 = mergeHome(S.home, remote.home); if(!homeEq(m2, S.home)){ S.home = m2; save(); render(); return; } }
+      KXSync.markOk();
+    }
   });
 }
 
@@ -519,8 +614,185 @@ var app = document.getElementById("app");
 
 function header(){
   return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div>' +
-    '<button class="link-btn" data-act="ask-reset" type="button">↺ Borrar progreso</button></header>';
+    '<button class="link-btn" data-act="home" type="button">🏠 Inicio</button></header>';
 }
+
+/* ------------------------------------------------------------------ INICIO */
+var SUBJ_EMO = {math:"🔢", spanish:"📖", español:"📖", english:"🔤", inglés:"🔤", science:"🔬", ciencias:"🔬", art:"🎨", arte:"🎨", music:"🎵", gym:"⚽"};
+function subjEmo(m){ return SUBJ_EMO[String(m||"").toLowerCase()] || "📚"; }
+function pad2(n){ return (n < 10 ? "0" : "") + n; }
+function dkey(d){ return d.getFullYear() + "-" + pad2(d.getMonth()+1) + "-" + pad2(d.getDate()); }
+function todayKey(){ return dkey(new Date()); }
+function addDays(k, n){ var d = parseD(k); d.setDate(d.getDate()+n); return dkey(d); }
+function parseD(k){ var p = String(k).split("-"); return new Date(+p[0], (+p[1]||1)-1, +p[2]||1); }
+function dayDiff(k){ return Math.round((parseD(k) - parseD(todayKey())) / 864e5); }
+function relDay(k){
+  var d = dayDiff(k);
+  if(d === 0) return "hoy"; if(d === 1) return "mañana"; if(d === -1) return "ayer";
+  return d > 1 ? "en " + d + " días" : "hace " + (-d) + " días";
+}
+function dayLabel(k){ try{ return parseD(k).toLocaleDateString("es", {weekday:"long", day:"numeric"}); }catch(e){ return k; } }
+
+/* Mientras mamá no importe la agenda real, se muestra una de ejemplo con fechas de hoy. */
+function demoAgenda(){
+  var t = todayKey();
+  return {demo:true,
+    tareas:[
+      {id:"d-t1", materia:"Math", titulo:"Páginas 34 y 35 del libro", detalle:"Sumas con llevada", fecha:t, entrega:addDays(t,1)},
+      {id:"d-t2", materia:"English", titulo:"Practicar OVER- y UNDER-", detalle:"Haz tu examen de práctica", fecha:t, entrega:addDays(t,2), accion:"examen"},
+      {id:"d-t3", materia:"Spanish", titulo:"Leer la lectura y copiar 5 palabras", detalle:"", fecha:t, entrega:addDays(t,1)},
+      {id:"d-t4", materia:"Science", titulo:"Dibujar el ciclo del agua", detalle:"Con colores", fecha:addDays(t,-1), entrega:t},
+      {id:"d-t5", materia:"Art", titulo:"Terminar el dibujo", detalle:"", fecha:addDays(t,1), entrega:addDays(t,3)}
+    ],
+    materiales:[{id:"d-m1", materia:"Art", material:"Cartulina azul y tijeras", llevar_el:addDays(t,2)}],
+    videos:[{id:"d-v1", materia:"Science", titulo:"The Water Cycle", url:"https://www.youtube.com/results?search_query=water+cycle+for+kids", fecha:t}]
+  };
+}
+function agendaData(){
+  var a = S.agenda || demoAgenda();
+  return {demo:!!a.demo, tareas:a.tareas||[], materiales:a.materiales||[], videos:a.videos||[]};
+}
+var cel = {}, helperOpen = false;
+function isDone(kind, id){ var m = kind === "task" ? S.home.tasks : kind === "vid" ? S.home.vids : S.home.mats; return !!m[id]; }
+function dueItems(){
+  var ag = agendaData(), t = todayKey(), items = [];
+  ag.tareas.forEach(function(x){ if(x.fecha <= t) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
+  ag.videos.forEach(function(v){ if(v.fecha <= t) items.push({kind:"vid", id:v.id, x:v, sort:v.fecha+"0"}); });
+  items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
+  return items;
+}
+function starCount(){
+  var H = S.home;
+  return Object.keys(H.tasks).length + Object.keys(H.vids).length + Object.keys(H.mats).length +
+    Object.keys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + H.prac;
+}
+function streak(){
+  var ks = Object.keys(S.home.days).sort(), best = 0, run = 0, prev = null;
+  ks.forEach(function(k){ run = prev && addDays(prev, 1) === k ? run + 1 : 1; best = Math.max(best, run); prev = k; });
+  return best;
+}
+function medals(){
+  var H = S.home, nt = Object.keys(H.tasks).length;
+  return [
+    {e:"✅", n:"Primera tarea", d:"Marca tu primera tarea", ok:nt >= 1},
+    {e:"🖐️", n:"Cinco tareas", d:"Completa 5 tareas", ok:nt >= 5},
+    {e:"📝", n:"Examen terminado", d:"Termina un examen", ok:H.tries >= 1},
+    {e:"💯", n:"Examen perfecto", d:"Saca 100 puntos", ok:H.best >= 100},
+    {e:"🔁", n:"Practicando errores", d:"Practica tus errores", ok:H.prac >= 1},
+    {e:"🔥", n:"3 días seguidos", d:"Termina todo 3 días seguidos", ok:streak() >= 3}
+  ];
+}
+function markDone(kind, id){
+  var H = S.home, map = kind === "task" ? H.tasks : kind === "vid" ? H.vids : H.mats;
+  if(map[id]) return;
+  map[id] = Date.now();
+  if(kind !== "mat"){
+    cel[id] = 1;
+    setTimeout(function(){ delete cel[id]; if(S.screen === "home") render(); }, 950);
+    var left = dueItems().filter(function(i){ return !isDone(i.kind, i.id); });
+    if(!left.length) H.days[todayKey()] = Date.now();
+  }
+  save(); render();
+}
+function homeHeader(){
+  return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div>' +
+    '<span class="starchip" aria-label="Tus estrellas">⭐ '+starCount()+'</span></header>';
+}
+function subHeader(title){
+  return '<header class="top"><button class="link-btn" data-act="home" type="button">← Inicio</button><b class="sec-title">'+esc(title)+'</b><span class="starchip">⭐ '+starCount()+'</span></header>';
+}
+function confetti(){
+  var cols = ["#ffc928","#1d6fd8","#4aa3f0","#ffffff","#12306b"], h = "";
+  for(var i=0;i<14;i++){
+    var dx = Math.round((Math.random()-.5)*260), dy = Math.round(-30 - Math.random()*110);
+    h += '<i class="bit" style="background:'+cols[i%cols.length]+';--dx:'+dx+'px;--dy:'+dy+'px"></i>';
+  }
+  return h + '<span class="plus">+1 ⭐</span>';
+}
+function taskCard(it){
+  var x = it.x, isVid = it.kind === "vid", c = !!cel[it.id];
+  var due = isVid ? "" : (x.entrega ? '<p class="due">📅 Para '+esc(relDay(x.entrega))+'</p>' : "");
+  var acts = "";
+  if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Ver el video</a>';
+  if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-topic">📝 Abrir el examen</button>';
+  acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
+  return '<article class="task'+(c?" cel":"")+'"><div class="emo" aria-hidden="true">'+(isVid ? "🎬" : subjEmo(x.materia))+'</div>' +
+    '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span><h3>'+esc(x.titulo)+'</h3>' +
+    (x.detalle ? '<p>'+esc(x.detalle)+'</p>' : "") + due + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
+}
+function renderHome(){
+  var now = new Date(), hr = now.getHours(), t = todayKey(), ag = agendaData();
+  var greet = hr < 12 ? "¡Buenos días" : hr < 19 ? "¡Buenas tardes" : "¡Buenas noches";
+  var dateTxt = ""; try{ dateTxt = now.toLocaleDateString("es", {weekday:"long", day:"numeric", month:"long"}); dateTxt = dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1); }catch(e){}
+  var mats = ag.materiales.filter(function(m){ return !S.home.mats[m.id] && m.llevar_el <= addDays(t, 7); })
+    .sort(function(a, b){ return a.llevar_el < b.llevar_el ? -1 : 1; });
+  var due = dueItems();
+  var pend = due.filter(function(i){ return !isDone(i.kind, i.id) || cel[i.id]; });
+  var shown = pend.slice(0, 3), later = pend.filter(function(i){ return !cel[i.id]; }).length - shown.filter(function(i){ return !cel[i.id]; }).length;
+  var doneToday = due.filter(function(i){ var m = i.kind === "task" ? S.home.tasks : S.home.vids; return m[i.id] && dkey(new Date(m[i.id])) === t; }).length;
+  var open = due.filter(function(i){ return !isDone(i.kind, i.id); }).length;
+  var tot = doneToday + open;
+  var h = homeHeader() +
+    '<section class="card hello"><div><h1>'+greet+', Killian!</h1><p class="date">'+esc(dateTxt)+'</p></div>' +
+    '<svg class="owl" style="width:84px;height:84px;flex:none" aria-hidden="true"><use href="#owl"/></svg></section>';
+  if(ag.demo) h += '<p class="tag-demo">📝 Esto es un ejemplo. Cuando mamá cargue la agenda de la semana, aquí aparecerán las tareas de verdad.</p>';
+  mats.forEach(function(m){
+    h += '<article class="mat"><span class="ico" aria-hidden="true">🎒</span><div class="txt"><b>Lleva: '+esc(m.material)+'</b><p>'+esc(m.materia||"")+' · el '+esc(dayLabel(m.llevar_el))+' ('+esc(relDay(m.llevar_el))+')</p></div>' +
+      '<button class="btn btn-sun" type="button" data-act="done" data-k="mat" data-id="'+esc(m.id)+'">✓ Ya lo preparé</button></article>';
+  });
+  h += '<section class="tasks" aria-label="Pendientes de hoy"><h2 class="sec-title">Mis pendientes de hoy</h2>';
+  if(tot > 0) h += '<div class="progress-day"><div class="prog-row"><span>Hoy llevas '+doneToday+' de '+tot+'</span></div><div class="bar"><i style="width:'+Math.round(doneToday/tot*100)+'%"></i></div></div>';
+  if(shown.length){
+    h += shown.map(taskCard).join("");
+    if(later > 0) h += '<p class="more">Después vienen '+later+' más. ¡Tú puedes! 💪</p>';
+  } else if(tot > 0){
+    h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>¡Terminaste todo por hoy! 🎉</h2>' +
+      '<p>¡Eres un campeón, Killian!</p><p class="prize">🏆 Premio de hoy: tienes ⭐ '+starCount()+' estrellas</p>' +
+      '<button class="btn btn-blue" type="button" data-act="go-screen" data-s="stars">Ver mis estrellas</button></div>';
+  } else {
+    h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
+      '<p>Puedes practicar inglés con tus temas.</p><button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
+  }
+  h += '</section><section class="tiles" aria-label="Más cosas">' +
+    '<button class="tile" type="button" data-act="go-screen" data-s="topics"><span class="big">📚</span>Mis temas</button>' +
+    '<button class="tile" type="button" data-act="go-screen" data-s="stars"><span class="big">⭐</span>Mis estrellas</button>' +
+    '<button class="tile" type="button" data-act="go-screen" data-s="dict"><span class="big">📖</span>Mi diccionario</button>' +
+    '<button class="tile" type="button" data-act="helper"><svg class="big-owl" aria-hidden="true"><use href="#owl"/></svg>Mi ayudante</button></section>';
+  return h + footer();
+}
+function renderTopics(){
+  var H = S.home, e = S.exam, n = answeredCount(EXAM, e.answers);
+  var state = e.done ? "✅ Terminado" : n > 0 ? "✏️ En curso: "+n+" de 25" : "🆕 Sin empezar";
+  return subHeader("Mis temas") +
+    '<article class="card topic"><span class="chip">English Word Study</span><h3>Prefijos OVER- y UNDER-</h3>' +
+    '<p>25 preguntas · 100 puntos</p><p>'+state+(H.tries > 0 ? ' · 🏆 Mejor nota: '+H.best+' / 100' : '')+'</p>' +
+    '<button class="btn btn-sun btn-big" type="button" data-act="open-topic">Abrir este tema</button></article>' +
+    '<p class="note">Aquí irán apareciendo los temas de estudio que mamá agregue.</p>' + footer();
+}
+function renderStars(){
+  var H = S.home;
+  var rows = [["✅ Tareas hechas", Object.keys(H.tasks).length], ["🎬 Videos vistos", Object.keys(H.vids).length], ["🎒 Materiales preparados", Object.keys(H.mats).length],
+    ["🎉 Días completos (2 ⭐ cada uno)", Object.keys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac]];
+  return subHeader("Mis estrellas") +
+    '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starCount()+'</div><p>¡Sigue así, Killian!</p></section>' +
+    '<section class="card"><h2 class="sec-title">Así ganas estrellas</h2>' + rows.map(function(r){ return '<p class="wordrow"><b>'+r[1]+'</b><span>'+esc(r[0])+'</span></p>'; }).join("") + '</section>' +
+    '<h2 class="sec-title">Mis medallas</h2><div class="medals">' + medals().map(function(m){
+      return '<div class="medal'+(m.ok?"":" lock")+'"><span class="e">'+(m.ok ? m.e : "🔒")+'</span><b>'+esc(m.n)+'</b><span>'+esc(m.d)+'</span></div>';
+    }).join("") + '</div>' + footer();
+}
+function renderDict(){
+  var ks = Object.keys(C).filter(function(k){ return k !== "prefix"; });
+  return subHeader("Mi diccionario") +
+    '<section class="card"><p class="note">Aquí estarán todas las palabras de tus temas y las que busques con el búho.</p>' +
+    ks.map(function(k){ var c = C[k];
+      return '<div class="wordrow"><b lang="en">'+esc(c.word)+'</b><span>'+esc(c.es)+'</span><span lang="en" style="flex-basis:100%;font-weight:600">'+esc(c.ex)+'</span></div>';
+    }).join("") + '</section>' + footer();
+}
+function renderFab(){
+  var b = helperOpen ? '<div class="bubble" role="dialog" aria-label="Mi ayudante"><b>¿Qué quieres que te ayude a traducir?</b><p>Todavía estoy aprendiendo a traducir. ¡Muy pronto podré ayudarte! 🦉</p><button class="link-btn" type="button" data-act="helper">Cerrar</button></div>' : "";
+  return b + '<button class="fab" type="button" data-act="helper" aria-label="Mi ayudante"><svg aria-hidden="true"><use href="#owl"/></svg></button>';
+}
+
 var SYNC_TXT = {
   ok:["☁️ Guardado en la nube", ""], syncing:["☁️ Guardando…", ""],
   offline:["📴 Sin internet: tu progreso se guardará al volver", "bad"],
@@ -531,6 +803,7 @@ function syncText(s){ return (SYNC_TXT[s] || SYNC_TXT.none); }
 function footer(){
   var st = window.KXSync ? KXSync.status : "none", t = syncText(st);
   return '<footer class="foot"><span id="syncst" class="syncst '+t[1]+'">'+t[0]+'</span>' +
+    (["welcome","quiz","results"].indexOf(S.screen) >= 0 ? '<button class="link-btn" data-act="ask-reset" type="button">↺ Borrar el progreso del examen</button>' : '') +
     (window.KXSync && KXSync.enabled ? '<button class="link-btn" data-act="ask-logout" type="button">Cerrar sesión en este aparato</button>' : '') +
     '</footer>';
 }
@@ -790,7 +1063,7 @@ function renderModal(){
       '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, quedarme</button>' +
       '<button type="button" class="btn btn-sun" data-act="logout">Sí, cerrar sesión</button>';
   } else {
-    h = '<h2>¿Borrar todo el progreso?</h2><p>Se borrarán tus respuestas y resultados de este dispositivo y empezarás desde cero.</p>' +
+    h = '<h2>¿Borrar el progreso del examen?</h2><p>Se borrarán las respuestas y resultados del examen en todos tus aparatos. Tus tareas y estrellas no se borran.</p>' +
       '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, mantener mi progreso</button>' +
       '<button type="button" class="btn btn-sun" data-act="reset">Sí, borrar y empezar</button>';
   }
@@ -802,8 +1075,18 @@ function render(opts){
   opts = opts || {};
   var y = window.scrollY;
   var needLogin = window.KXSync && KXSync.enabled && !KXSync.hasSession();
-  var html = needLogin ? renderAuth() : S.screen === "welcome" ? renderWelcome() : S.screen === "results" ? renderResults() : renderQuiz();
-  app.innerHTML = html + (needLogin ? "" : renderModal());
+  var html;
+  if(needLogin) html = renderAuth();
+  else switch(S.screen){
+    case "home": html = renderHome(); break;
+    case "topics": html = renderTopics(); break;
+    case "stars": html = renderStars(); break;
+    case "dict": html = renderDict(); break;
+    case "welcome": html = renderWelcome(); break;
+    case "results": html = renderResults(); break;
+    default: html = renderQuiz();
+  }
+  app.innerHTML = html + (needLogin ? "" : renderFab() + renderModal());
   if(opts.top) window.scrollTo(0, 0); else window.scrollTo(0, y);
   if(modal){ var f = document.getElementById("mfocus"); if(f) f.focus(); }
 }
@@ -825,6 +1108,9 @@ function go(idx){
   save(); render({top:true});
 }
 function finishNow(){
+  var gr = gradeAll(qsOf(), store().answers), okn = gr.filter(function(g){ return g.ok; }).length;
+  if(S.mode === "exam"){ S.home.tries++; S.home.best = Math.max(S.home.best, okn * POINTS); }
+  else S.home.prac++;
   store().done = true; S.screen = "results"; modal = null; filter = "all";
   save(); render({top:true});
 }
@@ -863,6 +1149,11 @@ app.addEventListener("click", function(ev){
   var act = el.getAttribute("data-act"), st = store();
   if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
   switch(act){
+    case "home": S.screen = "home"; helperOpen = false; save(); render({top:true}); break;
+    case "go-screen": S.screen = el.getAttribute("data-s"); helperOpen = false; save(); render({top:true}); break;
+    case "open-topic": S.screen = "welcome"; S.mode = "exam"; save(); render({top:true}); break;
+    case "helper": helperOpen = !helperOpen; render(); break;
+    case "done": markDone(el.getAttribute("data-k"), el.getAttribute("data-id")); break;
     case "start": S.screen = "quiz"; S.mode = "exam"; save(); render({top:true}); break;
     case "see-results": S.screen = "results"; S.mode = "exam"; filter = "all"; save(); render({top:true}); break;
     case "prev": go(st.idx-1); break;
@@ -895,7 +1186,8 @@ app.addEventListener("click", function(ev){
     case "modal-close": modal = null; render(); break;
     case "ask-reset": modal = {type:"reset"}; render(); break;
     case "reset":
-      S = fresh(); modal = null; selWord = null; matchHint = ""; filter = "all"; save(); render({top:true}); break;
+      S.exam = freshExam(); S.practice = null; S.mode = "exam"; S.vc = {}; S.screen = "welcome";
+      modal = null; selWord = null; matchHint = ""; filter = "all"; save(); render({top:true}); break;
     case "ask-logout": modal = {type:"logout"}; render(); break;
     case "logout":
       modal = null;
