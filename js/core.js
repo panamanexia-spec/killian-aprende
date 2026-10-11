@@ -303,7 +303,6 @@ app.addEventListener("click", function(ev){
   if(!el || !app.contains(el)) return;
   var act = el.getAttribute("data-act");
   if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
-  if(act === "t-open"){ var tid = el.getAttribute("data-id"); taskOpen[tid] = !taskOpen[tid]; render(); return; }
   if(helperClick(act, el)) return;
   if(progClick(act, el)) return;
   if(examClick(act, el, ev)) return;

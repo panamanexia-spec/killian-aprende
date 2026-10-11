@@ -35,12 +35,14 @@ function agendaData(){
   var a = S.agenda || demoAgenda();
   return {demo:!!a.demo, tareas:a.tareas||[], materiales:a.materiales||[], videos:a.videos||[], notas:a.notas||[]};
 }
-var cel = {}, taskOpen = {};
+var cel = {};
 function isDone(kind, id){ var m = kind === "task" ? S.home.tasks : kind === "vid" ? S.home.vids : S.home.mats; return !!m[id]; }
 function dueItems(){
   var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
   ag.tareas.forEach(function(x){ if(x.fecha <= t && x.fecha >= old) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
-  ag.videos.forEach(function(v){ if(v.fecha <= t && v.fecha >= old) items.push({kind:"vid", id:v.id, x:v, sort:addDays(v.fecha, 1)+"2"}); });
+  var linked = {};
+  ag.tareas.forEach(function(x){ (x.videos || []).forEach(function(id){ linked[id] = 1; }); });
+  ag.videos.forEach(function(v){ if(!linked[v.id] && v.fecha <= t && v.fecha >= old) items.push({kind:"vid", id:v.id, x:v, sort:addDays(v.fecha, 1)+"2"}); });
   items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
   return items;
 }
@@ -100,14 +102,21 @@ function confetti(){
   }
   return h + '<span class="plus">+1 ⭐</span>';
 }
-/* Para Killian solo lo que debe hacer en casa; lo de la escuela y el resto queda para mamá. */
+/* Tarjeta de pendiente: tipo de evaluación, qué hacer en casa, repaso y botones de video.
+   Los materiales no se repiten aquí (tienen su propia lista). */
 function kidDetail(d){
-  return String(d || "").split(/\n+/).map(function(l){ return l.trim(); }).filter(function(l, i){
-    if(!l) return false;
-    if(/^(en clase|llevar)\b/i.test(l)) return false;
-    if(i === 0 && /—/.test(l) && /\)/.test(l) && l.length < 90 && /\n/.test(String(d))) return false;   /* "Materia (día) — tipo." */
-    return true;
-  }).map(function(l){ return l.replace(/^(lo que pide|también):\s*/i, function(m){ return ""; }).replace(/^./, function(c){ return c.toUpperCase(); }); });
+  return String(d || "").split(/\n+/).map(function(l){ return l.trim(); }).filter(function(l){
+    return l && !/^(en clase|llevar|observaciones)\b/i.test(l) && !/—.*(sumativa|formativa)/i.test(l);
+  });
+}
+function linkedVideos(x){
+  var ag = agendaData();
+  return (x.videos || []).map(function(id){ for(var i = 0; i < ag.videos.length; i++) if(ag.videos[i].id === id) return ag.videos[i]; return null; }).filter(Boolean);
+}
+function evalChip(e){
+  if(!e) return "";
+  var su = /sumativ/i.test(e), fo = /formativ/i.test(e);
+  return '<span class="ev '+(su ? "su" : "fo")+'">'+(su ? "⭐ Sumativa" : "")+(su && fo ? " y " : "")+(fo ? (su ? "formativa" : "✏️ Formativa") : "")+'</span>';
 }
 function taskCard(it){
   var x = it.x, isVid = it.kind === "vid", c = !!cel[it.id];
@@ -115,14 +124,20 @@ function taskCard(it){
   var acts = "";
   if(isVid && videoInfo(x.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(it.id)+'">▶ Ver el video aquí</button>';
   else if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Abrir el enlace ↗</a>';
+  if(it.kind === "task") linkedVideos(x).forEach(function(v){
+    if(videoInfo(v.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(v.id)+'">▶ '+esc(v.titulo)+'</button>';
+    else if(/^https?:\/\//.test(v.url||"")) acts += '<a class="btn btn-blue" href="'+esc(v.url)+'" target="_blank" rel="noopener">▶ '+esc(v.titulo)+' ↗</a>';
+  });
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
-  var hasD = kidDetail(x.detalle).length > 0, open = !!taskOpen[it.id];
-  var dtl = hasD ? '<button class="more-btn" type="button" data-act="t-open" data-id="'+esc(it.id)+'" aria-expanded="'+open+'">'+(open ? "Ocultar detalles ▴" : "Ver qué hay que hacer ▾")+'</button>' +
-    (open ? '<div class="dtl">'+kidDetail(x.detalle).map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>' : "") : "";
+  var home = (x.en_casa && x.en_casa.length) ? x.en_casa : (x.en_casa ? [] : kidDetail(x.detalle));
+  var rep = x.repaso || [];
+  var body = "";
+  if(home.length) body += '<div class="blk"><b>🏠 En casa</b>'+home.map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>';
+  if(rep.length) body += '<div class="blk rep"><b>📚 Repaso en clase</b>'+rep.map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>';
   return '<article class="task'+(c?" cel":"")+'"><div class="emo" aria-hidden="true">'+(isVid ? "🎬" : subjEmo(x.materia))+'</div>' +
-    '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span><h3>'+esc(x.titulo)+'</h3>' +
-    due + dtl + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
+    '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span>'+(isVid ? "" : evalChip(x.evaluacion))+'<h3>'+esc(x.titulo)+'</h3>' +
+    due + body + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
 }
 /* Materiales de esta semana y la próxima, para tenerlos listos sin comprar a diario. */
 function weekMaterials(){
@@ -138,7 +153,9 @@ function renderMatsAside(){
   h += '<p class="small">Para tenerlos listos y no comprar cada día.</p>';
   var groups = [["Esta semana", function(m){ return m.llevar_el < nextMon; }], ["La próxima semana", function(m){ return m.llevar_el >= nextMon; }]];
   groups.forEach(function(g){
-    var items = list.filter(g[1]);
+    var items = list.filter(g[1]).map(function(m, i){ return {m:m, i:i}; });
+    items.sort(function(a, b){ var da = S.home.mats[a.m.id] || S.home.have[a.m.id] > 0 ? 1 : 0, db = S.home.mats[b.m.id] || S.home.have[b.m.id] > 0 ? 1 : 0; return da - db || a.i - b.i; });
+    items = items.map(function(o){ return o.m; });
     if(!items.length) return;
     h += '<h3 class="grp">'+g[0]+'</h3>' + items.map(function(m){
       var taken = !!S.home.mats[m.id], have = S.home.have[m.id] > 0;

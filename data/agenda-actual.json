@@ -8,7 +8,14 @@
       "titulo": "Buscar una imagen del ciclo de vida de un insecto",
       "detalle": "Science (lunes 12) — SUMATIVA.\nLo que pide: «Bring the picture of life cycle of any insects.» → Traer una imagen del ciclo de vida de cualquier insecto (dibujo, foto o impresión).\nTambién: ver el video del ciclo de vida de los insectos (está en Videos).\nEn clase: ver el video; investigar y responder preguntas; contar el ciclo de vida de otros animales y plantas.\nLlevar: lápiz, borrador, sacapuntas y el libro del estudiante.",
       "fecha": "2026-10-11",
-      "entrega": "2026-10-12"
+      "entrega": "2026-10-12",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Traer una imagen del ciclo de vida de cualquier insecto (dibujo, foto o impresión)."
+      ],
+      "videos": [
+        "v3"
+      ]
     },
     {
       "id": "t2",
@@ -16,7 +23,11 @@
       "titulo": "Terminar la lámina de Van Gogh (14 x 17 pulgadas)",
       "detalle": "Artistic Expressions (lunes 12) — formativa.\nLo que pide: «Create a 14 x 17 inch sheet featuring the work of painter Vincent Van Gogh.» → Hacer una lámina de 14 x 17 pulgadas con la obra del pintor Vincent van Gogh.\nEn clase: da una charla sobre el pintor, presenta una diapositiva y explica las figuras de su lámina.\nLlevar: lápices de colores.",
       "fecha": "2026-10-11",
-      "entrega": "2026-10-12"
+      "entrega": "2026-10-12",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Terminar la lámina de 14 x 17 pulgadas con la obra del pintor Vincent van Gogh."
+      ]
     },
     {
       "id": "t3",
@@ -24,15 +35,15 @@
       "titulo": "Repasar la presentación oral de Chino",
       "detalle": "Chino Mandarín (lunes 12) — SUMATIVA: presentación oral.\nLección 9: «Where is the toy» (orientación en mandarín).\nActividades externas: dos enlaces (están en Videos).\nEn clase: actividad de inicio de orientación en mandarín; 1) presentación oral sumativa; 2) tema formal «Eating Mooncakes during the Mid-Autumn Festival».\nLlevar: el folder del tema formal.",
       "fecha": "2026-10-11",
-      "entrega": "2026-10-12"
-    },
-    {
-      "id": "t4",
-      "materia": "Educación Física",
-      "titulo": "Preparar el folder del trabajo formal",
-      "detalle": "Educación Física (martes 13) — Trabajo formal, formativa.\nLo que pide: «Trae tus implementos para el formal: Folder del color correspondiente, hojas de raya, hoja de Evaluación, Dispositivo Electrónico para la investigación.»\nEn clase: analiza la información investigada; elabora el trabajo formal; revisa el contenido del trabajo.\nObservaciones: traer todos los implementos.",
-      "fecha": "2026-10-12",
-      "entrega": "2026-10-13"
+      "entrega": "2026-10-12",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Practicar la presentación oral. Lección 9: «Where is the toy» (orientación en mandarín)."
+      ],
+      "videos": [
+        "v1",
+        "v2"
+      ]
     },
     {
       "id": "t5",
@@ -40,7 +51,14 @@
       "titulo": "Estudiar la pieza musical con el video",
       "detalle": "Educación Musical (martes 13) — SUMATIVA.\nLo que pide: «Study the musical piece from the video at home.» → Estudiar en casa la pieza musical del video (está en Videos): «Gently Sleep», posición de las notas en una pieza musical.\n«Summative assessment. Bring flute and notebook.» → Llevar la flauta y el cuaderno.\n«Remember to watch the video to study.»",
       "fecha": "2026-10-12",
-      "entrega": "2026-10-13"
+      "entrega": "2026-10-13",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Estudiar la pieza musical «Gently Sleep» y la posición de las notas, viendo el video."
+      ],
+      "videos": [
+        "v4"
+      ]
     },
     {
       "id": "t6",
@@ -48,7 +66,14 @@
       "titulo": "Estudiar los apuntes de «Thunder Rose»",
       "detalle": "Reading and Conversation (martes 13) — SUMATIVA y formativa.\nUnit 1, Topic 13: Oral Presentation «The Thunder Rose» (continuación de la presentación).\nLo que pide: «Study the notes written in your notebook.» → Estudiar los apuntes del cuaderno.\nEn clase: repasa la historia y sus puntos clave; reorganiza la presentación oral; practica con un compañero.\nLlevar: libro de texto, laptop y útiles.",
       "fecha": "2026-10-12",
-      "entrega": "2026-10-13"
+      "entrega": "2026-10-13",
+      "evaluacion": "sumativa y formativa",
+      "en_casa": [
+        "Estudiar los apuntes del cuaderno sobre «The Thunder Rose» (presentación oral)."
+      ],
+      "repaso": [
+        "Repasan la historia y sus puntos clave."
+      ]
     },
     {
       "id": "t7",
@@ -56,7 +81,11 @@
       "titulo": "Patrones de multiplicación (página 335)",
       "detalle": "Math (martes 13) — formativa.\nUnit 11 «Patterns in Tables and Charts», Topic 2 «Patterns in Multiplication Tables».\nLo que pide: «Students will recognize how to describe patterns in multiplication from page 335. BRING TEXTBOOK UNIT 2.» → Trabajar la página 335 del Textbook Unit 2.\nTambién se trabaja el miércoles 14 (misma página 335).\nLlevar: libro, dispositivo, cargador, útiles y cuaderno.",
       "fecha": "2026-10-12",
-      "entrega": "2026-10-13"
+      "entrega": "2026-10-13",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Página 335 del Textbook Unit 2: patrones en las tablas de multiplicar (se trabaja martes y miércoles)."
+      ]
     },
     {
       "id": "t8",
@@ -64,7 +93,14 @@
       "titulo": "Estudiar el resumen de los adverbios",
       "detalle": "Español (jueves 15) — SUMATIVA.\nUnidad 6 Bélgica — Gramática: Los adverbios.\nLo que pide: «Estudia el resumen pegado en el cuaderno de Español sobre el tema de los adverbios para realizar la sumativa.»\nEn clase: repasa el tema, desarrolla la prueba sumativa y la entrega.\nLlevar: libro de texto, cuaderno de Español y la computadora para trabajar Progrentis.",
       "fecha": "2026-10-14",
-      "entrega": "2026-10-15"
+      "entrega": "2026-10-15",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Estudiar el resumen de los adverbios pegado en el cuaderno de Español."
+      ],
+      "repaso": [
+        "Repasan el tema antes de la prueba."
+      ]
     },
     {
       "id": "t9",
@@ -72,7 +108,11 @@
       "titulo": "Organizar el folder con las hojas del formal",
       "detalle": "Ciencias Sociales (jueves 15) — formativa.\nUnidad 1 «Investigación formal».\nLo que pide: «Estimado estudiante, recuerde la organización de su folder para el formal de ciencias sociales.»\nObservaciones: «Recuerde llevar su libro, cartuchera y folder con sus hojas organizadas para copiar su formal.»\nEn clase: escucha instrucciones, comprende los pasos del método científico y copia su formal; verifica correcciones.",
       "fecha": "2026-10-14",
-      "entrega": "2026-10-15"
+      "entrega": "2026-10-15",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Organizar el folder con las hojas del formal de Ciencias Sociales."
+      ]
     },
     {
       "id": "t10",
@@ -80,7 +120,11 @@
       "titulo": "Conseguir la foto de un presidente",
       "detalle": "Culture and Value (viernes 16) — formativa. Poster Project.\nUnit 4 «Leadership and Governance», Topic 4 «Traditional Leadership and Presidents».\nLo que pide: «Bring a picture of a president from any medium-sized country (color or black and white).» → Traer la foto de un presidente de un país mediano (a color o en blanco y negro).\nEn clase: en equipos investigan el gobierno y diseñan un póster con las fotos; al final comparten sus ideas.\nLlevar: el cuaderno de culture and values.",
       "fecha": "2026-10-15",
-      "entrega": "2026-10-16"
+      "entrega": "2026-10-16",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Conseguir la foto de un presidente de un país mediano (a color o blanco y negro)."
+      ]
     },
     {
       "id": "t11",
@@ -88,7 +132,11 @@
       "titulo": "Página 21 del Textbook Vol. 2 (Across and Down)",
       "detalle": "Reading and Composition (viernes 16) — formativa.\nUnit 6 «Suffixes –able and –ible», Topic 2.\nLo que pide: «Work in the page 21 from your Textbook Volume 2 Suffixes –able and –ible, Across and Down. Write one sentence for each word: convertible, incredible, agreeable, believable, comfortable, predictable, terrible, affordable.»\n→ Hacer la página 21 (Across and Down) y escribir una oración con cada una de las 8 palabras.\nLlevar: dispositivo, cuaderno, libro y útiles.",
       "fecha": "2026-10-15",
-      "entrega": "2026-10-16"
+      "entrega": "2026-10-16",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Página 21 del Textbook Vol. 2 (Across and Down): escribir una oración con cada palabra: convertible, incredible, agreeable, believable, comfortable, predictable, terrible, affordable."
+      ]
     },
     {
       "id": "t12",
@@ -96,7 +144,11 @@
       "titulo": "Página 365: ecuaciones para representar situaciones",
       "detalle": "Math (viernes 16) — formativa.\nUnit 12 «Patterns in Tables and Charts», Topic 2 «Using Equations to Represent Situations».\nLo que pide: «Apply your knowledge by working in the page 365. BRING TEXTBOOK UNIT 2.» → Trabajar la página 365 del Textbook Unit 2.\nLlevar: libro, dispositivo, cargador, útiles y cuaderno.",
       "fecha": "2026-10-15",
-      "entrega": "2026-10-16"
+      "entrega": "2026-10-16",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Página 365 del Textbook Unit 2: usar ecuaciones para representar situaciones."
+      ]
     }
   ],
   "materiales": [

@@ -426,3 +426,12 @@ details summary{cursor:pointer; font-weight:800; color:var(--blue-d); min-height
 .nrow.done p{opacity:.5; text-decoration:line-through}
 .nchk{flex:none; width:48px; height:48px; border-radius:50%; border:3px solid var(--blue); background:#fff; color:#fff; font-size:1.6rem; font-weight:800; cursor:pointer}
 .nrow.done .nchk{background:var(--blue)}
+
+.ev{display:inline-block; margin-left:6px; padding:3px 10px; border-radius:999px; font-family:var(--font-display); font-weight:800; font-size:.9rem; vertical-align:middle}
+.ev.su{background:#ffc928; color:#12306b}
+.ev.fo{background:var(--sky); color:var(--blue-d); border:2px solid var(--sky-2)}
+.task .blk{background:var(--sky); border-radius:16px; padding:10px 14px}
+.task .blk b{font-family:var(--font-display); color:var(--blue-d)}
+.task .blk p{margin:4px 0 0; overflow-wrap:anywhere; line-height:1.35}
+.task .blk.rep{background:#fff6d6}
+a.btn{text-decoration:none}
