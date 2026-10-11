@@ -35,8 +35,43 @@ api.init = function(callbacks){
   });
   return sb.auth.getSession().then(function(r){
     session = r && r.data ? r.data.session : null;
-  }).catch(function(){ session = null; });
+  }).catch(function(){ session = null; }).then(function(){
+    if(!session && hasStoredLogin()) startRestore();
+  });
 };
+
+/* En el iPhone, al abrir la app de la pantalla de inicio la red a veces aún no está lista y la sesión
+   guardada no se puede renovar al primer intento. Si hay una sesión guardada, se reintenta
+   (sin mostrar la pantalla de contraseña) en vez de pedir la contraseña otra vez. */
+function hasStoredLogin(){
+  try{
+    for(var i = 0; i < localStorage.length; i++){
+      var k = localStorage.key(i);
+      if(/^sb-.*-auth-token$/.test(k) && localStorage.getItem(k)) return true;
+    }
+  }catch(e){}
+  return false;
+}
+var restoreTimer = null, restoreTry = 0, DELAYS = [800, 2000, 4000, 8000, 15000];
+function startRestore(){
+  api.restoring = true; restoreTry = 0; scheduleRestore(300);
+}
+function scheduleRestore(ms){
+  clearTimeout(restoreTimer);
+  restoreTimer = setTimeout(tryRestore, ms);
+}
+function tryRestore(){
+  if(!api.restoring || session) return;
+  sb.auth.getSession().then(function(r){
+    session = r && r.data ? r.data.session : null;
+  }).catch(function(){}).then(function(){
+    if(session){ api.restoring = false; if(cbs.onRestored) cbs.onRestored(); return; }
+    if(restoreTry >= DELAYS.length || !hasStoredLogin()){ api.restoring = false; if(cbs.onSignedOut) cbs.onSignedOut(); return; }
+    scheduleRestore(DELAYS[restoreTry++]);
+  });
+}
+window.addEventListener("online", function(){ if(api.restoring){ restoreTry = 0; scheduleRestore(200); } });
+document.addEventListener("visibilitychange", function(){ if(!document.hidden && api.restoring){ restoreTry = 0; scheduleRestore(200); } });
 
 api.signIn = function(email, password){
   return sb.auth.signInWithPassword({email:email, password:password}).then(function(r){

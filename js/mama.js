@@ -199,14 +199,43 @@ function renderMom(){
     case "asks": return renderAsks();
     case "progreso": return renderProgress();
     case "prizes": return renderPrizesMom();
+    case "notas": return renderNotas();
     default: return renderMomMenu();
   }
+}
+/* ---- Notas con check, ordenadas por día ---- */
+function notaKey(n){ return n.semana + ":n:" + hashText(n.texto); }
+function notaDia(n){
+  var m = /(\d{1,2})\/(\d{1,2})/.exec(n.texto), w = String(n.semana).split("-");
+  if(!m) return "";
+  var y = +w[0], mo = +m[2], dd = +m[1];
+  if(mo < 1 || mo > 12 || dd < 1 || dd > 31) return "";
+  if(w[1] && mo < (+w[1]) - 6) y++;
+  return y + "-" + (mo < 10 ? "0" : "") + mo + "-" + (dd < 10 ? "0" : "") + dd;
+}
+function notasOrdenadas(){
+  var L = ((S.agenda && S.agenda.notas) || []).map(function(n, i){ return {n:n, i:i, d:notaDia(n), k:notaKey(n)}; });
+  L.sort(function(a, b){ if(a.d && b.d) return a.d < b.d ? -1 : a.d > b.d ? 1 : a.i - b.i; if(a.d) return -1; if(b.d) return 1; return a.i - b.i; });
+  return L;
+}
+function notasPend(){ return notasOrdenadas().filter(function(x){ return !(S.home.nchk[x.k] > 0); }).length; }
+function renderNotas(){
+  var L = notasOrdenadas(), h = momHeader("Notas para mamá", "mom-go", "← Zona de mamá"), pend = notasPend(), last = null;
+  h += '<section class="card mom"><p class="small">' + (L.length ? (pend ? 'Te faltan <b>' + pend + '</b> por marcar. Toca el círculo cuando ya lo tengas listo.' : '🌟 Todo marcado.') : 'No hay notas todavía.') + '</p></section>';
+  L.forEach(function(x){
+    var g = x.d ? capFirst(dayLabel(x.d)) + " · " + relDay(x.d) : "Sin fecha";
+    if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
+    var on = S.home.nchk[x.k] > 0;
+    h += '<div class="nrow' + (on ? ' done' : '') + '"><button class="nchk" type="button" role="checkbox" aria-checked="' + on + '" aria-label="Marcar nota" data-act="nchk" data-id="' + esc(x.k) + '">' + (on ? "✓" : "") + '</button><p>' + esc(x.n.texto) + '</p></div>';
+  });
+  return h + footer();
 }
 function renderMomMenu(){
   var notas = (S.agenda && S.agenda.notas) || [], nal = computeReport().alertas.filter(function(a){ return a.n === "warn"; }).length;
   var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
     '<section class="momgrid">' +
     '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Progreso y análisis' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="notas"><span class="big">📌</span>Notas' + (notas.length ? '<span class="small">' + (notasPend() ? notasPend() + ' sin marcar' : 'todo marcado') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
@@ -214,7 +243,6 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="asks"><span class="big">❓</span>Preguntas de Killian (' + askList().length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button>' +
     '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Probar los juegos</button></section>';
-  if(notas.length) h += '<section class="card"><h2 class="sec-title">📌 Notas para mamá</h2>' + notas.map(function(n){ return '<p class="wordrow"><span>'+esc(n.texto)+'</span><span class="small">semana del '+esc(n.semana)+'</span></p>'; }).join("") + '</section>';
   h += '<p class="small" style="text-align:center">El panel de progreso y análisis llega en una próxima etapa.</p>';
   return h + footer();
 }
@@ -438,6 +466,10 @@ function extraClick(act, el, ev){
       if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
+    case "nchk":
+      var nk = el.getAttribute("data-id");
+      S.home.nchk[nk] = S.home.nchk[nk] > 0 ? -Date.now() : Date.now();
+      saveHome(); render(); return true;
     case "have":
       var id = el.getAttribute("data-id");
       S.home.have[id] = S.home.have[id] > 0 ? -Date.now() : Date.now();   /* negativo = quitado; gana el más reciente */

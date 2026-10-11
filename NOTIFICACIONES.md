@@ -1,14 +1,15 @@
 # Avisos en el iPhone (ntfy)
 
-Dos avisos al día, **8:00 am** y **5:00 pm** (hora de Panamá), con lo importante de Killian:
+Avisos con lo importante de Killian (hora de Panamá):
 
-- **8:00 am:** pendientes de hoy, tareas atrasadas, lo que debe llevar hoy y exámenes cercanos.
-- **5:00 pm:** lo que todavía le falta de hoy (o «terminó todo» 🌟), tareas atrasadas, lo que debe llevar mañana, si hoy no ha practicado, exámenes cercanos con nota baja, tres intentos seguidos con nota baja y preguntas del búho que esperan tu respuesta.
+- **Lunes a viernes, 3:30 pm:** lo que tiene para el día siguiente (tareas de esta noche, materiales que debe llevar mañana, sumativas de mañana y tareas atrasadas). Los viernes: lo del fin de semana y el lunes.
+- **Lunes a viernes, 8:00 pm:** verificar que hizo todo (lo que aún falta, «terminó todo» 🌟, atrasadas, materiales sin marcar como listos, sumativa de mañana, si hoy no practicó, exámenes cercanos con nota baja, intentos bajos seguidos y preguntas del búho sin responder).
+- **Sábado y domingo, 8:00 am:** qué tiene pendiente, atrasadas, lo del lunes (materiales y sumativas) y exámenes cercanos.
 
 Si no hay nada que decir, no llega ningún aviso.
 
 ## Cómo funciona
-Todo ocurre **dentro de Supabase** (la misma base de datos de la página), con un programador (`pg_cron`) que arma el resumen con los datos de Killian y lo envía a **ntfy.sh**. No usa tu contraseña, ni claves en GitHub, ni cuentas nuevas. Quedó guardado en Supabase como la migración `notificaciones_ntfy` (y las tareas `killian-aviso-manana` y `killian-aviso-tarde`).
+Todo ocurre **dentro de Supabase** (la misma base de datos de la página), con un programador (`pg_cron`) que arma el resumen con los datos de Killian y lo envía a **ntfy.sh**. No usa tu contraseña, ni claves en GitHub, ni cuentas nuevas. Quedó guardado en Supabase como la migración `notificaciones_ntfy` (y las tareas `killian-previa`, `killian-verificar` y `killian-finde`).
 
 ## Recibirlos en el iPhone (una sola vez)
 1. Instala **ntfy** desde la App Store (gratis, sin cuenta).

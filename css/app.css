@@ -416,3 +416,13 @@ details summary{cursor:pointer; font-weight:800; color:var(--blue-d); min-height
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
 @media (prefers-reduced-motion:no-preference){.owl{animation:bob 3.2s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-6px)}}}
+
+.more-btn{align-self:flex-start; min-height:44px; padding:8px 14px; border-radius:16px; border:2px solid var(--sky-2); background:var(--sky); color:var(--blue-d); font-family:var(--font-display); font-weight:800; font-size:1rem; cursor:pointer}
+.dtl{background:var(--sky); border-radius:16px; padding:10px 14px; font-size:1rem; line-height:1.4}
+.dtl p{margin:0 0 8px; overflow-wrap:anywhere}.dtl p:last-child{margin:0}
+.nday{margin-top:14px}
+.nrow{display:flex; gap:12px; align-items:flex-start; background:#fff; border-radius:20px; padding:12px; margin:8px 0; box-shadow:0 4px 0 var(--sky-2)}
+.nrow p{margin:0; flex:1; min-width:0; overflow-wrap:anywhere; line-height:1.4}
+.nrow.done p{opacity:.5; text-decoration:line-through}
+.nchk{flex:none; width:48px; height:48px; border-radius:50%; border:3px solid var(--blue); background:#fff; color:#fff; font-size:1.6rem; font-weight:800; cursor:pointer}
+.nrow.done .nchk{background:var(--blue)}

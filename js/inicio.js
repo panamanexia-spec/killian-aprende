@@ -35,7 +35,7 @@ function agendaData(){
   var a = S.agenda || demoAgenda();
   return {demo:!!a.demo, tareas:a.tareas||[], materiales:a.materiales||[], videos:a.videos||[], notas:a.notas||[]};
 }
-var cel = {}, helperOpen = false;
+var cel = {}, taskOpen = {};
 function isDone(kind, id){ var m = kind === "task" ? S.home.tasks : kind === "vid" ? S.home.vids : S.home.mats; return !!m[id]; }
 function dueItems(){
   var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
@@ -108,9 +108,12 @@ function taskCard(it){
   else if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Abrir el enlace ↗</a>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
+  var hasD = !!(x.detalle && String(x.detalle).trim()), open = !!taskOpen[it.id];
+  var dtl = hasD ? '<button class="more-btn" type="button" data-act="t-open" data-id="'+esc(it.id)+'" aria-expanded="'+open+'">'+(open ? "Ocultar detalles ▴" : "Ver qué hay que hacer ▾")+'</button>' +
+    (open ? '<div class="dtl">'+String(x.detalle).split(/\n+/).map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>' : "") : "";
   return '<article class="task'+(c?" cel":"")+'"><div class="emo" aria-hidden="true">'+(isVid ? "🎬" : subjEmo(x.materia))+'</div>' +
     '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span><h3>'+esc(x.titulo)+'</h3>' +
-    (x.detalle ? '<p>'+esc(x.detalle)+'</p>' : "") + due + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
+    due + dtl + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
 }
 /* Materiales de esta semana y la próxima, para tenerlos listos sin comprar a diario. */
 function weekMaterials(){

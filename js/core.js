@@ -8,9 +8,9 @@ var MAMA = window.KX_MODE === "mama";      /* versión para el celular de mamá:
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem"], HNUMS = ["best","tries","prac","games","speed"];
-var SIGNED = {have:1, weak:1, ask:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk"], HNUMS = ["best","tries","prac","games","speed"];
+var SIGNED = {have:1, weak:1, ask:1, nchk:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
 function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}}; }
 function normHome(h){
@@ -272,7 +272,8 @@ function render(opts){
   var y = window.scrollY;
   var needLogin = window.KXSync && KXSync.enabled && !KXSync.hasSession();
   var html;
-  if(needLogin) html = renderAuth();
+  if(needLogin && KXSync.restoring) html = '<section class="card" style="text-align:center"><svg class="big-owl" aria-hidden="true" style="width:90px;height:90px"><use href="#owl"/></svg><h2>Entrando…</h2><p class="small">Un momentito, abriendo tu cuenta.</p></section>';
+  else if(needLogin) html = renderAuth();
   else switch(S.screen){
     case "home": html = renderHome(); break;
     case "mom": html = renderMom(); break;
@@ -302,6 +303,7 @@ app.addEventListener("click", function(ev){
   if(!el || !app.contains(el)) return;
   var act = el.getAttribute("data-act");
   if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
+  if(act === "t-open"){ var tid = el.getAttribute("data-id"); taskOpen[tid] = !taskOpen[tid]; render(); return; }
   if(helperClick(act, el)) return;
   if(progClick(act, el)) return;
   if(examClick(act, el, ev)) return;
@@ -393,7 +395,8 @@ function loadProjectFiles(){
 }
 function boot(){
   if(window.KXSync){
-    KXSync.init({onStatus:setSyncStatus, onSignedOut:function(){ render(); }}).then(function(){
+    KXSync.init({onStatus:setSyncStatus, onSignedOut:function(){ render(); },
+      onRestored:function(){ render({top:true}); syncNow().then(loadProjectFiles); }}).then(function(){
       render();
       syncNow().then(loadProjectFiles);
     });

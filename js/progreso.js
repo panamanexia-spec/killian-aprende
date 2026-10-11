@@ -192,6 +192,8 @@ function renderProgress(){
   var R = computeReport(), h = momHeader("Progreso y análisis", "mom-go", "← Zona de mamá");
   var al = R.alertas.length ? '<ul class="alerts">' + R.alertas.map(function(a){ return '<li class="al ' + a.n + '"><span aria-hidden="true">' + (a.n === "warn" ? "⚠️" : a.n === "good" ? "🌟" : "ℹ️") + '</span><span>' + esc(a.t) + '</span></li>'; }).join("") + '</ul>' : '<p class="note">Todo tranquilo por ahora. 😊</p>';
   h += '<section class="card mom"><h2 class="sec-title">🔔 Alertas</h2>' + al + '</section>';
+  var np = notasPend();
+  if(((S.agenda && S.agenda.notas) || []).length) h += '<button class="btn btn-ghost" type="button" data-act="mom-go" data-v="notas">📌 Notas para mamá' + (np ? ' (' + np + ' sin marcar)' : ' ✓') + '</button>';
   /* resumen de la semana */
   var w = R.semana;
   h += '<section class="card mom"><h2 class="sec-title">📅 Resumen de la semana</h2>';
