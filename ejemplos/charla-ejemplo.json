@@ -1,0 +1,14 @@
+{
+  "tipo": "charla",
+  "id": "ejemplo-charla",
+  "materia": "Reading and Conversation",
+  "titulo": "My favorite animal",
+  "idioma": "en",
+  "fecha_entrega": "2026-10-13",
+  "frases": [
+    { "texto": "Hello, my name is Killian.", "es": "Hola, me llamo Killian." },
+    { "texto": "My favorite animal is the dolphin.", "es": "Mi animal favorito es el delfín." },
+    { "texto": "Dolphins live in the ocean and they are very smart.", "es": "Los delfines viven en el océano y son muy inteligentes." },
+    { "texto": "Thank you for listening.", "es": "Gracias por escuchar." }
+  ]
+}

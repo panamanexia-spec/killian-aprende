@@ -38,7 +38,7 @@ function validateAgenda(o){
   list("tareas").forEach(function(x, i){
     var n = "Tarea " + (i + 1);
     if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
-    var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega), evaluacion:str(x.evaluacion), en_casa:strList(x.en_casa), repaso:strList(x.repaso), videos:strList(x.videos)};
+    var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega), evaluacion:str(x.evaluacion), en_casa:strList(x.en_casa), repaso:strList(x.repaso), videos:strList(x.videos), charla:str(x.charla)};
     if(!it.titulo) E.push(n + ": falta el título.");
     if(!isDate(it.fecha)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": falta la fecha o no es válida (usa 2026-10-13).");
     if(it.entrega && !isDate(it.entrega)) E.push(n + ": la fecha de entrega no es válida (usa 2026-10-14).");
@@ -202,6 +202,7 @@ function renderMom(){
     case "prizes": return renderPrizesMom();
     case "notas": return renderNotas();
     case "tareas": return renderTareasMom();
+    case "charlas": return renderCharlasMom();
     default: return renderMomMenu();
   }
 }
@@ -246,6 +247,20 @@ function renderTareasMom(){
   });
   return h + footer();
 }
+var chForm = {titulo:"", materia:"", idioma:"en", texto:"", msg:""};
+function renderCharlasMom(){
+  var h = momHeader("Charlas", "mom-go", "← Zona de mamá");
+  h += '<section class="card mom"><p>Aquí se agregan las charlas o presentaciones orales de Killian. La página las convierte en práctica: escuchar, repetir (con revisión de pronunciación), completar, ordenar y decirlas de memoria.</p>' +
+    (S.charlas.length ? S.charlas.map(function(c){ return '<p class="wordrow"><span><b>'+esc(c.titulo)+'</b> · '+esc(c.materia||"")+' · '+c.frases.length+' frases · '+LANGS[c.idioma].name+'</span><button class="link-btn del" type="button" data-act="chm-del" data-id="'+esc(c.id)+'">🗑 Quitar</button></p>'; }).join("") : '<p class="small">Todavía no hay charlas.</p>') + '</section>';
+  h += '<section class="card mom"><h2 class="sec-title">+ Nueva charla</h2>' +
+    (chForm.msg ? '<p class="err" role="alert">'+esc(chForm.msg)+'</p>' : '') +
+    '<label class="fld" for="chm-titulo"><span>Título</span><input id="chm-titulo" value="'+esc(chForm.titulo)+'"></label>' +
+    '<label class="fld" for="chm-materia"><span>Materia</span><input id="chm-materia" value="'+esc(chForm.materia)+'"></label>' +
+    '<label class="fld" for="chm-idioma"><span>Idioma de la charla</span><select id="chm-idioma"><option value="en"'+(chForm.idioma === "en" ? " selected" : "")+'>Inglés</option><option value="es"'+(chForm.idioma === "es" ? " selected" : "")+'>Español</option><option value="zh"'+(chForm.idioma === "zh" ? " selected" : "")+'>Chino</option></select></label>' +
+    '<label class="fld" for="chm-texto"><span>El texto de la charla (pégalo o escríbelo)</span><textarea id="chm-texto" rows="8">'+esc(chForm.texto)+'</textarea></label>' +
+    '<button class="btn btn-sun btn-big" type="button" data-act="chm-add">Guardar charla</button></section>';
+  return h + footer();
+}
 function renderMomMenu(){
   var notas = (S.agenda && S.agenda.notas) || [], nal = computeReport().alertas.filter(function(a){ return a.n === "warn"; }).length;
   var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
@@ -253,6 +268,7 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Progreso y análisis' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="notas"><span class="big">📌</span>Notas' + (notas.length ? '<span class="small">' + (notasPend() ? notasPend() + ' sin marcar' : 'todo marcado') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
@@ -375,7 +391,7 @@ function renderAsks(){
 function applyAgenda(d){
   var sem = d.semana, ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
   function keep(x){ return x.semana !== sem; }
-  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega, evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return pre + v; })}; }));
+  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega, evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return pre + v; }), charla:x.charla||""}; }));
   ag.materiales = ag.materiales.filter(keep).concat(d.materiales.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, material:x.material, llevar_el:x.llevar_el}; }));
   ag.videos = ag.videos.filter(keep).concat(d.videos.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, url:x.url, fecha:x.fecha}; }));
   ag.notas = (ag.notas || []).filter(keep).concat(d.notas.filter(function(n){ return str(n); }).map(function(n){ return {semana:sem, texto:str(n)}; }));
@@ -391,7 +407,7 @@ function draftFromWeek(sem){
   function id(x){ return String(x.id).indexOf(pre) === 0 ? String(x.id).slice(pre.length) : x.id; }
   function w(x){ return x.semana === sem; }
   return {semana:sem,
-    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||"", evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return String(v).indexOf(pre) === 0 ? String(v).slice(pre.length) : v; })}; }),
+    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||"", evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return String(v).indexOf(pre) === 0 ? String(v).slice(pre.length) : v; }), charla:x.charla||""}; }),
     materiales:ag.materiales.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", material:x.material||"", llevar_el:x.llevar_el||""}; }),
     videos:ag.videos.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", url:x.url||"", fecha:x.fecha||""}; }),
     notas:(ag.notas||[]).filter(w).map(function(n){ return n.texto; })};
@@ -483,6 +499,14 @@ function extraClick(act, el, ev){
       if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
+    case "chm-add":
+      chForm = {titulo:val("chm-titulo"), materia:val("chm-materia"), idioma:val("chm-idioma") || "en", texto:val("chm-texto"), msg:""};
+      var fr = splitFrases(chForm.texto), cid = (chForm.titulo || "charla").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "charla";
+      var cv = validateCharla({id:cid, titulo:chForm.titulo, materia:chForm.materia, idioma:chForm.idioma, frases:fr});
+      if(cv.errors.length){ chForm.msg = cv.errors.join(" "); render(); return true; }
+      S.charlas = S.charlas.filter(function(c){ return c.id !== cid; }).concat([cv.draft]); saveContent();
+      chForm = {titulo:"", materia:"", idioma:"en", texto:"", msg:""}; momNote = "✅ Charla guardada."; render({top:true}); return true;
+    case "chm-del": var did = el.getAttribute("data-id"); S.charlas = S.charlas.filter(function(c){ return c.id !== did; }); saveContent(); render(); return true;
     case "nchk":
       var nk = el.getAttribute("data-id");
       S.home.nchk[nk] = S.home.nchk[nk] > 0 ? -Date.now() : Date.now();

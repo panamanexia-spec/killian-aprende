@@ -157,3 +157,14 @@ La página revisa el archivo antes de guardar y te explica en español qué falt
 ## Mini vocabulario
 
 Al terminar cada examen, Killian hace un mini vocabulario de 5 a 8 palabras del tema (elige o escribe el significado; se aceptan mayúsculas, acentos y las variantes de `aceptadas`). Las que falla pasan a **«Mis palabras para practicar»** en el diccionario.
+
+## Charlas (presentaciones orales)
+Se guardan en `data/charlas/` (y se listan en `data/charlas/index.json`), o mamá las escribe en **Zona de mamá → Charlas**. Ejemplo en `ejemplos/charla-ejemplo.json`:
+
+```json
+{ "tipo": "charla", "id": "thunder-rose", "materia": "Reading and Conversation", "titulo": "The Thunder Rose",
+  "idioma": "en", "fecha_entrega": "2026-10-13",
+  "frases": [ { "texto": "Hello, my name is Killian.", "es": "Hola, me llamo Killian." } ] }
+```
+`idioma` puede ser `en`, `es` o `zh`. Para que una tarea abra la charla, ponle `"charla": "thunder-rose"` en la agenda.
+La práctica incluye escuchar y repetir con revisión de pronunciación (micrófono del navegador, gratis), completar, ordenar y decirla de memoria.

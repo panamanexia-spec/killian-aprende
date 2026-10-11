@@ -128,6 +128,7 @@ function taskCard(it){
     if(videoInfo(v.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(v.id)+'">▶ '+esc(v.titulo)+'</button>';
     else if(/^https?:\/\//.test(v.url||"")) acts += '<a class="btn btn-blue" href="'+esc(v.url)+'" target="_blank" rel="noopener">▶ '+esc(v.titulo)+' ↗</a>';
   });
+  if(it.kind === "task" && x.charla && charlaById(x.charla)) acts += '<button class="btn btn-blue" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'">🎤 Practicar mi charla</button>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
   var home = (x.en_casa && x.en_casa.length) ? x.en_casa : (x.en_casa ? [] : kidDetail(x.detalle));
@@ -207,6 +208,7 @@ function renderHome(){
   h += '</section></div>' + renderMatsAside() + '</div>' +
     '<section class="tiles" aria-label="Más cosas">' +
     '<button class="tile" type="button" data-act="go-screen" data-s="topics"><span class="big">📚</span>Mis temas</button>' +
+    (S.charlas.length ? '<button class="tile" type="button" data-act="go-screen" data-s="charlas"><span class="big">🎤</span>Mis charlas</button>' : '') +
     '<button class="tile" type="button" data-act="go-screen" data-s="stars"><span class="big">⭐</span>Mis estrellas</button>' +
     '<button class="tile" type="button" data-act="go-screen" data-s="dict"><span class="big">📖</span>Mi diccionario</button>' +
     (gamesUnlocked() ? '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Juegos</button>'
