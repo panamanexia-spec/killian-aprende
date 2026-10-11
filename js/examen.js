@@ -295,7 +295,7 @@ function vFinish(skip){
     v.items.forEach(function(it){
       var k = wordKey(tid, it), cur = H.weak[k];
       if(it.ok){ if(!H.known[k]) H.known[k] = now; if(cur > 0) H.weak[k] = -now; }
-      else if(it.ok === false){ H.weak[k] = now; }
+      else if(it.ok === false){ H.weak[k] = now; H.wfail[k] = (H.wfail[k] || 0) + 1; }
     });
     var h = S.ex.hist[tid], a = h && h[h.length - 1];
     if(a && a.ts === c.at) a.vocab = {ok:v.ok, total:v.items.filter(function(x){ return x.ok !== null; }).length, failed:v.failed.slice()};

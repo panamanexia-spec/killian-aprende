@@ -87,10 +87,10 @@ function markDone(kind, id){
 }
 function homeHeader(){
   return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div>' +
-    '<span class="starchip" aria-label="Tus estrellas">⭐ '+starCount()+'</span></header>';
+    '<span class="starchip" aria-label="Tus estrellas">⭐ '+starsAvail()+'</span></header>';
 }
 function subHeader(title, backAct, backTxt){
-  return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'"'+(backAct === "go-screen" ? ' data-s="topics"' : '')+' type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span class="starchip">⭐ '+starCount()+'</span></header>';
+  return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'"'+(backAct === "go-screen" ? ' data-s="topics"' : '')+' type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span class="starchip">⭐ '+starsAvail()+'</span></header>';
 }
 function confetti(){
   var cols = ["#ffc928","#1d6fd8","#4aa3f0","#ffffff","#12306b"], h = "";
@@ -169,7 +169,7 @@ function renderHome(){
     if(later > 0) h += '<p class="more">Después vienen '+later+' más. ¡Tú puedes! 💪</p>';
   } else if(tot > 0){
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>¡Terminaste todo por hoy! 🎉</h2>' +
-      '<p>¡Eres un campeón, Killian!</p><p class="prize">🏆 Premio de hoy: tienes ⭐ '+starCount()+' estrellas</p>' +
+      '<p>¡Eres un campeón, Killian!</p><p class="prize">🏆 Premio de hoy: tienes ⭐ '+starsAvail()+' estrellas</p>' +
       '<button class="btn btn-blue" type="button" data-act="go-screen" data-s="stars">Ver mis estrellas</button></div>';
   } else {
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
@@ -205,7 +205,7 @@ function renderStars(){
     ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac],
     ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games]];
   return subHeader("Mis estrellas") +
-    '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starCount()+'</div><p>¡Sigue así, Killian!</p></section>' +
+    '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starsAvail()+'</div><p>¡Sigue así, Killian!</p>'+(spentStars() ? '<p class="small">Has ganado '+starCount()+' en total y ya canjeaste '+spentStars()+'.</p>' : '')+'</section>' + renderPrizesKid() +
     '<section class="card"><h2 class="sec-title">Así ganas estrellas</h2>' + rows.map(function(r){ return '<p class="wordrow"><b>'+r[1]+'</b><span>'+esc(r[0])+'</span></p>'; }).join("") + '</section>' +
     '<h2 class="sec-title">Mis medallas</h2><div class="medals">' + medals().map(function(m){
       return '<div class="medal'+(m.ok?"":" lock")+'"><span class="e">'+(m.ok ? m.e : "🔒")+'</span><b>'+esc(m.n)+'</b><span>'+esc(m.d)+'</span></div>';

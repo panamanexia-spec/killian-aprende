@@ -353,6 +353,32 @@ button{font:inherit; color:inherit; cursor:pointer}
 .hpanel .tabs{gap:6px}
 .hpanel .tab{min-height:40px; padding:4px 12px; font-size:.95rem}
 
+/* progreso y premios */
+.alerts{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px}
+.al{display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:14px; background:var(--skip-bg)}
+.al.warn{background:var(--bad-bg)} .al.good{background:var(--ok-bg)} .al.info{background:var(--sky)}
+.hbars{display:flex; flex-direction:column; gap:8px}
+.hb{display:grid; grid-template-columns:minmax(80px,42%) 1fr auto; gap:8px; align-items:center}
+.hl{font-weight:800; overflow-wrap:break-word; font-size:.9rem; min-width:0}
+.htrack{height:14px; background:var(--sky); border-radius:4px; overflow:hidden}
+.htrack i{display:block; height:100%; background:var(--blue); border-radius:0 4px 4px 0}
+.htrack i.bad{background:var(--bad)}
+.hv{font-size:.9rem; font-weight:800; white-space:nowrap}
+.vbars{display:flex; gap:8px; align-items:stretch; height:140px; padding-top:4px}
+.vb{flex:1; min-width:0; display:flex; flex-direction:column; align-items:center}
+.vcol{width:100%; max-width:34px; flex:1; display:flex; align-items:flex-end; border-bottom:2px solid var(--sky-2)}
+.vcol i{display:block; width:100%; background:var(--blue); border-radius:4px 4px 0 0}
+.vv{font-size:.8rem; font-weight:800; min-height:1.1em}
+.vl{font-size:.8rem; color:var(--skip); margin-top:2px}
+.tevo{padding:8px 0; border-top:2px solid var(--sky); display:flex; flex-direction:column; gap:4px}
+.tevo .vbars{height:100px}
+.thead{display:flex; flex-wrap:wrap; gap:2px 10px; justify-content:space-between}
+.wlist, .recs{margin:0; padding-left:1.15em; display:flex; flex-direction:column; gap:6px}
+.repbox{width:100%; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.8rem; border:3px solid var(--sky-2); border-radius:12px; padding:8px; min-height:200px; color:var(--ink); background:#fff}
+.prize-row{display:grid; gap:4px; padding:10px 0; border-top:2px solid var(--sky)}
+.prize-row .bar{height:14px}
+details summary{cursor:pointer; font-weight:800; color:var(--blue-d); min-height:44px; display:flex; align-items:center}
+
 /* pulido */
 .link-btn{white-space:nowrap}
 .top .sec-title{flex:1 1 0; min-width:0; text-align:center; overflow-wrap:anywhere}
@@ -463,6 +489,7 @@ button{font:inherit; color:inherit; cursor:pointer}
 <script src="js/juegos.js"></script>
 <script src="js/examen.js"></script>
 <script src="js/ayudante.js"></script>
+<script src="js/progreso.js"></script>
 <script>boot();</script>
 </body>
 </html>

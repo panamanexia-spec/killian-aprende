@@ -196,16 +196,20 @@ function renderMom(){
     case "weeks": return renderWeeks();
     case "temas": return renderTemasMom();
     case "asks": return renderAsks();
+    case "progreso": return renderProgress();
+    case "prizes": return renderPrizesMom();
     default: return renderMomMenu();
   }
 }
 function renderMomMenu(){
-  var notas = (S.agenda && S.agenda.notas) || [];
+  var notas = (S.agenda && S.agenda.notas) || [], nal = computeReport().alertas.filter(function(a){ return a.n === "warn"; }).length;
   var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
     '<section class="momgrid">' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Progreso y análisis' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="prizes"><span class="big">🎁</span>Premios</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="asks"><span class="big">❓</span>Preguntas de Killian (' + askList().length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button>' +
     '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Probar los juegos</button></section>';
@@ -366,7 +370,7 @@ function extraClick(act, el, ev){
     case "pin-go": pinGo(); return true;
     case "mom-go":
       var v = el.getAttribute("data-v") || "menu";
-      momView = v; pinMsg = ""; momNote = "";
+      momView = v; pinMsg = ""; momNote = ""; progMsg = "";
       if(v === "import"){ imp.msg = ""; imp.errors = []; }
       if(v === "pin"){ momOk = true; }
       render({top:true}); return true;
@@ -452,7 +456,7 @@ function extraClick(act, el, ev){
         S.home.known[kk] = S.home.known[kk] || Date.now();
         if(S.home.weak[kk] > 0) S.home.weak[kk] = -Date.now();
         saveHome();
-      }
+      } else { noteFail(it.w._tid || dict.topic, it.w); saveHome(); }
       render(); return true;
     case "dict-next":
       var q3 = dict.quiz;

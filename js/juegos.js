@@ -183,6 +183,7 @@ function gamesClick(act, el){
       var sp = gm.s; if(sp.over) return true;
       sp.tries++;
       if(el.getAttribute("data-v") === sp.cur.w.es){ sp.score++; markKnown(sp.cur.w.tid, sp.cur.w.w); saveHome(); }
+      else { noteFail(sp.cur.w.tid, sp.cur.w.w); saveHome(); }
       nextSpeed(); render(); return true;
     case "games-locked": gm.lockMsg = true; render(); setTimeout(function(){ gm.lockMsg = false; if(S.screen === "home") render(); }, 3500); return true;
   }

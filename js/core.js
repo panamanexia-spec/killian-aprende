@@ -7,11 +7,11 @@ var STORE_KEY = "kx-over-under-v1";
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask"], HNUMS = ["best","tries","prac","games","speed"];
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem"], HNUMS = ["best","tries","prac","games","speed"];
 var SIGNED = {have:1, weak:1, ask:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
-function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], custom:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}}; }
+function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}}; }
 function normHome(h){
   var o = freshHome();
   if(!h || typeof h !== "object") return o;
@@ -28,7 +28,7 @@ function mergeHome(a, b){
     for(i in b[k]){
       if(!(i in m)) m[i] = b[k][i];
       else if(SIGNED[k]) m[i] = Math.abs(b[k][i]) > Math.abs(m[i]) ? b[k][i] : m[i];
-      else if(k === "gdays" || k === "look") m[i] = Math.max(b[k][i], m[i]);
+      else if(k === "gdays" || k === "look" || k === "mins" || k === "wfail") m[i] = Math.max(b[k][i], m[i]);
       else if(k === "lookTr") m[i] = m[i];                  /* se queda la traducción que ya había */
       else if(b[k][i] < m[i]) m[i] = b[k][i];            /* se conserva la primera vez */
     }
@@ -61,7 +61,7 @@ function normEx(e){
 }
 /* Agenda, temas y PIN: se revisan al leerlos para que un dato dañado no rompa la página. */
 function normContent(c){
-  var o = {agenda:null, temas:[], custom:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}};
+  var o = {agenda:null, temas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}};
   if(!c || typeof c !== "object") return o;
   if(c.fileSig && typeof c.fileSig === "object"){ o.fileSig.agenda = String(c.fileSig.agenda || ""); if(c.fileSig.temas && typeof c.fileSig.temas === "object") o.fileSig.temas = c.fileSig.temas; }
   var a = c.agenda;
@@ -75,6 +75,7 @@ function normContent(c){
     return t && t.id && Array.isArray(t.preguntas) && Array.isArray(t.vocabulario) && Array.isArray(t.resumen);
   });
   if(Array.isArray(c.custom)) o.custom = c.custom.filter(function(w){ return w && typeof w.en === "string" && typeof w.es === "string" && w.en && w.es; }).slice(0, 500);
+  if(Array.isArray(c.prizes)) o.prizes = c.prizes.filter(function(p){ return p && p.id && p.nombre && +p.costo >= 1; }).slice(0, 30);
   if(typeof c.pinHash === "string") o.pinHash = c.pinHash;
   if(typeof c.pinSalt === "string") o.pinSalt = c.pinSalt;
   o.cAt = +c.cAt || 0;
@@ -90,7 +91,7 @@ function normalize(s){
     o.ex = normEx(s.ex);
     o.at = +s.at || 0;
     var nc = normContent(s);
-    o.agenda = nc.agenda; o.temas = nc.temas; o.custom = nc.custom; o.pinHash = nc.pinHash; o.pinSalt = nc.pinSalt; o.cAt = nc.cAt; o.fileSig = nc.fileSig;
+    o.agenda = nc.agenda; o.temas = nc.temas; o.custom = nc.custom; o.prizes = nc.prizes; o.pinHash = nc.pinHash; o.pinSalt = nc.pinSalt; o.cAt = nc.cAt; o.fileSig = nc.fileSig;
     return o;
   }catch(e){ return fresh(); }
 }
@@ -107,7 +108,7 @@ function load(){
 var S = load();
 
 function rowExam(){ return {at:S.at, ex:S.ex}; }
-function rowContent(){ return {cAt:S.cAt, agenda:S.agenda, temas:S.temas, custom:S.custom, pinHash:S.pinHash, pinSalt:S.pinSalt, fileSig:S.fileSig}; }
+function rowContent(){ return {cAt:S.cAt, agenda:S.agenda, temas:S.temas, custom:S.custom, prizes:S.prizes, pinHash:S.pinHash, pinSalt:S.pinSalt, fileSig:S.fileSig}; }
 function writeLocal(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
 /* Cada parte se guarda aparte: así un aparato no pisa lo que otro cambió en otra parte. */
 function save(){ S.at = Date.now(); writeLocal(); if(window.KXSync) KXSync.push("examen", rowExam()); }
@@ -134,7 +135,7 @@ function reconcile(){
     var rc = rows.contenido, mineC = S.cAt || 0;
     if(rc && (rc.cAt || 0) > mineC){
       var nc = normContent(rc);
-      S.agenda = nc.agenda; S.temas = nc.temas; S.custom = nc.custom; S.pinHash = nc.pinHash; S.pinSalt = nc.pinSalt; S.cAt = nc.cAt; S.fileSig = nc.fileSig; changed = true;
+      S.agenda = nc.agenda; S.temas = nc.temas; S.custom = nc.custom; S.prizes = nc.prizes; S.pinHash = nc.pinHash; S.pinSalt = nc.pinSalt; S.cAt = nc.cAt; S.fileSig = nc.fileSig; changed = true;
     } else if(mineC > 0 && (!rc || mineC > (rc.cAt || 0))){ KXSync.push("contenido", rowContent()); pushed = true; }
     writeLocal();
     if(!pushed) KXSync.markOk();
@@ -297,6 +298,7 @@ app.addEventListener("click", function(ev){
   var act = el.getAttribute("data-act");
   if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
   if(helperClick(act, el)) return;
+  if(progClick(act, el)) return;
   if(examClick(act, el, ev)) return;
   if(extraClick(act, el, ev)) return;
   switch(act){
