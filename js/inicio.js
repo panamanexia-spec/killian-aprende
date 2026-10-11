@@ -100,6 +100,15 @@ function confetti(){
   }
   return h + '<span class="plus">+1 ⭐</span>';
 }
+/* Para Killian solo lo que debe hacer en casa; lo de la escuela y el resto queda para mamá. */
+function kidDetail(d){
+  return String(d || "").split(/\n+/).map(function(l){ return l.trim(); }).filter(function(l, i){
+    if(!l) return false;
+    if(/^(en clase|llevar)\b/i.test(l)) return false;
+    if(i === 0 && /—/.test(l) && /\)/.test(l) && l.length < 90 && /\n/.test(String(d))) return false;   /* "Materia (día) — tipo." */
+    return true;
+  }).map(function(l){ return l.replace(/^(lo que pide|también):\s*/i, function(m){ return ""; }).replace(/^./, function(c){ return c.toUpperCase(); }); });
+}
 function taskCard(it){
   var x = it.x, isVid = it.kind === "vid", c = !!cel[it.id];
   var due = isVid ? "" : (x.entrega ? '<p class="due">📅 Para '+esc(relDay(x.entrega))+'</p>' : "");
@@ -108,9 +117,9 @@ function taskCard(it){
   else if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Abrir el enlace ↗</a>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
-  var hasD = !!(x.detalle && String(x.detalle).trim()), open = !!taskOpen[it.id];
+  var hasD = kidDetail(x.detalle).length > 0, open = !!taskOpen[it.id];
   var dtl = hasD ? '<button class="more-btn" type="button" data-act="t-open" data-id="'+esc(it.id)+'" aria-expanded="'+open+'">'+(open ? "Ocultar detalles ▴" : "Ver qué hay que hacer ▾")+'</button>' +
-    (open ? '<div class="dtl">'+String(x.detalle).split(/\n+/).map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>' : "") : "";
+    (open ? '<div class="dtl">'+kidDetail(x.detalle).map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>' : "") : "";
   return '<article class="task'+(c?" cel":"")+'"><div class="emo" aria-hidden="true">'+(isVid ? "🎬" : subjEmo(x.materia))+'</div>' +
     '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span><h3>'+esc(x.titulo)+'</h3>' +
     due + dtl + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';

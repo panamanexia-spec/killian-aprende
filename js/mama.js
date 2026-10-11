@@ -200,6 +200,7 @@ function renderMom(){
     case "progreso": return renderProgress();
     case "prizes": return renderPrizesMom();
     case "notas": return renderNotas();
+    case "tareas": return renderTareasMom();
     default: return renderMomMenu();
   }
 }
@@ -230,12 +231,27 @@ function renderNotas(){
   });
   return h + footer();
 }
+/* Todo el detalle de las tareas (lo que pide la escuela y lo que harán en clase), por día. */
+function renderTareasMom(){
+  var h = momHeader("Detalle de tareas", "mom-go", "← Zona de mamá"), L = ((S.agenda && S.agenda.tareas) || []).slice(), last = null;
+  L.sort(function(a, b){ return (a.entrega || "9") < (b.entrega || "9") ? -1 : (a.entrega || "9") > (b.entrega || "9") ? 1 : 0; });
+  if(!L.length) return h + '<section class="card mom"><p class="small">No hay tareas cargadas.</p></section>' + footer();
+  L.forEach(function(x){
+    var g = x.entrega ? "Para " + capFirst(dayLabel(x.entrega)) + " · " + relDay(x.entrega) : "Sin fecha";
+    if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
+    var done = !!S.home.tasks[x.id];
+    h += '<article class="card mom"><span class="chip sm">' + esc(x.materia || "") + '</span> ' + (done ? '<span class="small">✓ Killian ya la hizo</span>' : '') + '<h3>' + esc(x.titulo) + '</h3>' +
+      String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") + '</article>';
+  });
+  return h + footer();
+}
 function renderMomMenu(){
   var notas = (S.agenda && S.agenda.notas) || [], nal = computeReport().alertas.filter(function(a){ return a.n === "warn"; }).length;
   var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
     '<section class="momgrid">' +
     '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Progreso y análisis' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="notas"><span class="big">📌</span>Notas' + (notas.length ? '<span class="small">' + (notasPend() ? notasPend() + ' sin marcar' : 'todo marcado') + '</span>' : '') + '</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
