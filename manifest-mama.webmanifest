@@ -1,0 +1,16 @@
+{
+  "name": "Killian · Mamá",
+  "short_name": "Mamá Killian",
+  "description": "Progreso y agenda de Killian para mamá",
+  "lang": "es",
+  "start_url": "mama.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#dff2ff",
+  "theme_color": "#12306b",
+  "icons": [
+    {"src": "icon-mama-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-mama-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

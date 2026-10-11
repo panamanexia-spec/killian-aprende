@@ -4,6 +4,7 @@
    Estado, guardado en el aparato y en la nube, pantalla de entrada, ventanas,
    dibujo de pantallas y eventos. */
 var STORE_KEY = "kx-over-under-v1";
+var MAMA = window.KX_MODE === "mama";      /* versión para el celular de mamá: abre directo la zona de mamá */
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
@@ -106,6 +107,7 @@ function load(){
   }catch(e){ return fresh(); }
 }
 var S = load();
+if(MAMA) S.screen = "mom";
 
 function rowExam(){ return {at:S.at, ex:S.ex}; }
 function rowContent(){ return {cAt:S.cAt, agenda:S.agenda, temas:S.temas, custom:S.custom, prizes:S.prizes, pinHash:S.pinHash, pinSalt:S.pinSalt, fileSig:S.fileSig}; }
@@ -156,6 +158,7 @@ function header(){
 }
 
 function renderFab(){
+  if(MAMA) return "";
   var b = renderHelper();
   var small = S.screen === "exam" || S.screen === "vocab" || (S.screen === "games" && gm.game) || (S.screen === "dict" && dict.quiz);
   return b + '<button class="fab' + (small ? ' small' : '') + '" type="button" data-act="helper" aria-label="Mi ayudante"><svg aria-hidden="true"><use href="#owl"/></svg></button>';
@@ -291,7 +294,9 @@ function render(opts){
 }
 
 /* ------------------------------------------------------------------ EVENTOS */
-function goHome(){ S.screen = "home"; helperOpen = false; momOk = false; dict.quiz = null; stopTimer(); writeLocal(); render({top:true}); }
+function goHome(){
+  if(MAMA){ S.screen = "mom"; momView = "menu"; helperOpen = false; stopTimer(); writeLocal(); render({top:true}); return; }
+  S.screen = "home"; helperOpen = false; momOk = false; dict.quiz = null; stopTimer(); writeLocal(); render({top:true}); }
 app.addEventListener("click", function(ev){
   var el = ev.target.closest("[data-act]");
   if(!el || !app.contains(el)) return;

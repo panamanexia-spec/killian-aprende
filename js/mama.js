@@ -164,11 +164,12 @@ function pinGo(){
   }
   if(Date.now() < pinLock){ pinMsg = "Espera unos segundos antes de volver a intentar."; render(); return; }
   hashPin(pin, S.pinSalt).then(function(h){
-    if(h === S.pinHash){ momOk = true; momAt = Date.now(); pinTries = 0; pinMsg = ""; momView = "menu"; momNote = ""; render({top:true}); }
+    if(h === S.pinHash){ momOk = true; momAt = Date.now(); pinTries = 0; pinMsg = ""; momView = MAMA ? "progreso" : "menu"; momNote = ""; render({top:true}); }
     else { pinTries++; if(pinTries >= 5){ pinLock = Date.now() + 30000; pinTries = 0; pinMsg = "Demasiados intentos. Espera 30 segundos."; } else pinMsg = "PIN incorrecto."; render(); }
   });
 }
 function momHeader(title, backAct, backTxt){
+  if(MAMA && (!backAct || backAct === "home")) return '<header class="top"><span></span><b class="sec-title">'+esc(title)+'</b><span></span></header>';
   return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'" type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span></span></header>';
 }
 function renderPinGate(){

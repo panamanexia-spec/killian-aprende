@@ -178,7 +178,8 @@ function hbars(rows){
   }).join("") + '</div>';
 }
 function vbars(cols, unit){
-  var max = Math.max.apply(null, cols.map(function(c){ return c.v; }).concat([1]));
+  var max = Math.max.apply(null, cols.map(function(c){ return c.v; }).concat([0]));
+  if(max === 0) return '<p class="small">Sin actividad en estos días.</p>';
   return '<div class="vbars" role="img" aria-label="Gráfica de barras">' + cols.map(function(c){
     var h = c.v > 0 ? Math.max(6, Math.round(c.v / max * 100)) : 0;
     return '<div class="vb" title="' + esc(c.title || (c.label + ": " + c.v + (unit || ""))) + '"><span class="vv">' + (c.v || "") + '</span><span class="vcol"><i style="height:' + h + '%"></i></span><span class="vl">' + esc(c.label) + '</span></div>';

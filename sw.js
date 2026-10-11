@@ -1,6 +1,6 @@
 /* Guarda la página en el aparato para que abra aunque no haya internet. */
-var V = "kx-v4";
-var CORE = ["./", "index.html", "sync.js", "js/data.js", "js/core.js", "js/inicio.js", "js/mama.js", "js/juegos.js", "js/examen.js", "js/ayudante.js", "js/progreso.js", "vendor/supabase.js", "manifest.webmanifest", "icon-192.png"];
+var V = "kx-v5";
+var CORE = ["./", "index.html", "mama.html", "css/app.css", "manifest-mama.webmanifest", "icon-mama-192.png", "sync.js", "js/data.js", "js/core.js", "js/inicio.js", "js/mama.js", "js/juegos.js", "js/examen.js", "js/ayudante.js", "js/progreso.js", "vendor/supabase.js", "manifest.webmanifest", "icon-192.png"];
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open(V).then(function(c){ return c.addAll(CORE); }).then(function(){ return self.skipWaiting(); }));
 });
@@ -20,6 +20,6 @@ self.addEventListener("fetch", function(e){
     }
     return res;
   }).catch(function(){
-    return caches.match(r).then(function(m){ return m || (r.mode === "navigate" ? caches.match("index.html") : undefined); });
+    return caches.match(r).then(function(m){ return m || (r.mode === "navigate" ? caches.match(u.pathname.indexOf("mama.html") >= 0 ? "mama.html" : "index.html") : undefined); });
   }));
 });
