@@ -128,7 +128,7 @@ function renderSpeed(){
   var left = Math.max(0, Math.ceil(s.dur - (Date.now() - s.t0) / 1000));
   return gmBack("Relámpago") +
     '<div class="prog-row"><span>⏱️ <b id="gtime">'+left+'</b> s</span><span>✅ '+s.score+'</span></div><div class="bar"><i id="gbar" style="width:'+(left/s.dur*100)+'%"></i></div>' +
-    '<main class="card qcard"><span class="chip">¿Qué significa?</span><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(s.cur.w.en)+'</p>' +
+    '<main class="card qcard"><span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(s.cur.w.en)+'</p>'+spk(s.cur.w.en,"en")+'</div>' +
     '<div class="opts">' + s.cur.opts.map(function(o, i){ return '<button type="button" class="opt" data-act="gm-speed" data-v="'+esc(o)+'"><span class="let">'+LET[i]+'</span><span>'+esc(o)+'</span></button>'; }).join("") + '</div></main>' + footer();
 }
 

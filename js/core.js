@@ -7,11 +7,11 @@ var STORE_KEY = "kx-over-under-v1";
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak"], HNUMS = ["best","tries","prac","games","speed"];
-var SIGNED = {have:1, weak:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask"], HNUMS = ["best","tries","prac","games","speed"];
+var SIGNED = {have:1, weak:1, ask:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
-function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}}; }
+function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], custom:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}}; }
 function normHome(h){
   var o = freshHome();
   if(!h || typeof h !== "object") return o;
@@ -28,7 +28,8 @@ function mergeHome(a, b){
     for(i in b[k]){
       if(!(i in m)) m[i] = b[k][i];
       else if(SIGNED[k]) m[i] = Math.abs(b[k][i]) > Math.abs(m[i]) ? b[k][i] : m[i];
-      else if(k === "gdays") m[i] = Math.max(b[k][i], m[i]);
+      else if(k === "gdays" || k === "look") m[i] = Math.max(b[k][i], m[i]);
+      else if(k === "lookTr") m[i] = m[i];                  /* se queda la traducción que ya había */
       else if(b[k][i] < m[i]) m[i] = b[k][i];            /* se conserva la primera vez */
     }
     o[k] = m;
@@ -60,7 +61,7 @@ function normEx(e){
 }
 /* Agenda, temas y PIN: se revisan al leerlos para que un dato dañado no rompa la página. */
 function normContent(c){
-  var o = {agenda:null, temas:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}};
+  var o = {agenda:null, temas:[], custom:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}}};
   if(!c || typeof c !== "object") return o;
   if(c.fileSig && typeof c.fileSig === "object"){ o.fileSig.agenda = String(c.fileSig.agenda || ""); if(c.fileSig.temas && typeof c.fileSig.temas === "object") o.fileSig.temas = c.fileSig.temas; }
   var a = c.agenda;
@@ -73,6 +74,7 @@ function normContent(c){
   if(Array.isArray(c.temas)) o.temas = c.temas.filter(function(t){
     return t && t.id && Array.isArray(t.preguntas) && Array.isArray(t.vocabulario) && Array.isArray(t.resumen);
   });
+  if(Array.isArray(c.custom)) o.custom = c.custom.filter(function(w){ return w && typeof w.en === "string" && typeof w.es === "string" && w.en && w.es; }).slice(0, 500);
   if(typeof c.pinHash === "string") o.pinHash = c.pinHash;
   if(typeof c.pinSalt === "string") o.pinSalt = c.pinSalt;
   o.cAt = +c.cAt || 0;
@@ -88,7 +90,7 @@ function normalize(s){
     o.ex = normEx(s.ex);
     o.at = +s.at || 0;
     var nc = normContent(s);
-    o.agenda = nc.agenda; o.temas = nc.temas; o.pinHash = nc.pinHash; o.pinSalt = nc.pinSalt; o.cAt = nc.cAt; o.fileSig = nc.fileSig;
+    o.agenda = nc.agenda; o.temas = nc.temas; o.custom = nc.custom; o.pinHash = nc.pinHash; o.pinSalt = nc.pinSalt; o.cAt = nc.cAt; o.fileSig = nc.fileSig;
     return o;
   }catch(e){ return fresh(); }
 }
@@ -105,7 +107,7 @@ function load(){
 var S = load();
 
 function rowExam(){ return {at:S.at, ex:S.ex}; }
-function rowContent(){ return {cAt:S.cAt, agenda:S.agenda, temas:S.temas, pinHash:S.pinHash, pinSalt:S.pinSalt, fileSig:S.fileSig}; }
+function rowContent(){ return {cAt:S.cAt, agenda:S.agenda, temas:S.temas, custom:S.custom, pinHash:S.pinHash, pinSalt:S.pinSalt, fileSig:S.fileSig}; }
 function writeLocal(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
 /* Cada parte se guarda aparte: así un aparato no pisa lo que otro cambió en otra parte. */
 function save(){ S.at = Date.now(); writeLocal(); if(window.KXSync) KXSync.push("examen", rowExam()); }
@@ -132,7 +134,7 @@ function reconcile(){
     var rc = rows.contenido, mineC = S.cAt || 0;
     if(rc && (rc.cAt || 0) > mineC){
       var nc = normContent(rc);
-      S.agenda = nc.agenda; S.temas = nc.temas; S.pinHash = nc.pinHash; S.pinSalt = nc.pinSalt; S.cAt = nc.cAt; S.fileSig = nc.fileSig; changed = true;
+      S.agenda = nc.agenda; S.temas = nc.temas; S.custom = nc.custom; S.pinHash = nc.pinHash; S.pinSalt = nc.pinSalt; S.cAt = nc.cAt; S.fileSig = nc.fileSig; changed = true;
     } else if(mineC > 0 && (!rc || mineC > (rc.cAt || 0))){ KXSync.push("contenido", rowContent()); pushed = true; }
     writeLocal();
     if(!pushed) KXSync.markOk();
@@ -153,7 +155,7 @@ function header(){
 }
 
 function renderFab(){
-  var b = helperOpen ? '<div class="bubble" role="dialog" aria-label="Mi ayudante"><b>¿Qué quieres que te ayude a traducir?</b><p>Todavía estoy aprendiendo a traducir. ¡Muy pronto podré ayudarte! 🦉</p><button class="link-btn" type="button" data-act="helper">Cerrar</button></div>' : "";
+  var b = renderHelper();
   var small = S.screen === "exam" || S.screen === "vocab" || (S.screen === "games" && gm.game) || (S.screen === "dict" && dict.quiz);
   return b + '<button class="fab' + (small ? ' small' : '') + '" type="button" data-act="helper" aria-label="Mi ayudante"><svg aria-hidden="true"><use href="#owl"/></svg></button>';
 }
@@ -294,12 +296,12 @@ app.addEventListener("click", function(ev){
   if(!el || !app.contains(el)) return;
   var act = el.getAttribute("data-act");
   if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
+  if(helperClick(act, el)) return;
   if(examClick(act, el, ev)) return;
   if(extraClick(act, el, ev)) return;
   switch(act){
     case "home": goHome(); break;
     case "go-screen": S.screen = el.getAttribute("data-s"); helperOpen = false; if(S.screen === "dict"){ dict.topic = null; dict.quiz = null; } if(S.screen === "games"){ gmEnd(); } writeLocal(); render({top:true}); break;
-    case "helper": helperOpen = !helperOpen; render(); break;
     case "done": markDone(el.getAttribute("data-k"), el.getAttribute("data-id")); break;
     case "modal-close": modal = null; render(); break;
     case "ask-logout": modal = {type:"logout"}; render(); break;
@@ -326,11 +328,12 @@ app.addEventListener("change", function(ev){
 app.addEventListener("input", function(ev){
   if(extraInput(ev)) return;
   if(examInput(ev)) return;
+  if(helperInput(ev)) return;
   if(ev.target.id === "email"){ auth.email = ev.target.value; return; }
   if(ev.target.id === "pass"){ auth.pass = ev.target.value; return; }
 });
 app.addEventListener("keydown", function(ev){
-  if(ev.key === "Enter" && examKey(ev)) return;
+  if(ev.key === "Enter" && (helperKey(ev) || examKey(ev))) return;
   if(ev.key === "Enter" && (ev.target.id === "pin" || ev.target.id === "pin2")){ ev.preventDefault(); pinGo(); }
   if(ev.key === "Escape" && modal){ modal = null; render(); }
 });

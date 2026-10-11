@@ -52,7 +52,7 @@ Pega este texto en el chat, junto con la agenda (texto, captura, foto o PDF, tal
 | `tareas[].materia`, `detalle` | no | Materia (Math, Spanish, Science…) y una aclaración |
 | `materiales[].material` | sí | Qué hay que llevar |
 | `materiales[].llevar_el` | sí | Día en que hay que llevarlo |
-| `videos[].titulo`, `url`, `fecha` | sí | El enlace debe empezar con `https://` |
+| `videos[].titulo`, `url`, `fecha` | sí | El enlace debe empezar con `https://`. Si es de **YouTube** o **Vimeo**, Killian lo ve dentro de la página; cualquier otro enlace se abre en otra pestaña |
 | `notas_para_mama` | no | Lista de avisos, solo los ves tú |
 
 **Qué pasa al importar:** si importas otra vez la misma `semana`, la página **reemplaza** esa semana (lo que Killian ya marcó se conserva mientras los `id` sigan iguales). Otras semanas no se tocan. Mientras no cargues ninguna agenda, la página muestra datos de ejemplo que no dan estrellas.

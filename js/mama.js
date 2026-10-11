@@ -195,6 +195,7 @@ function renderMom(){
     case "preview": case "edit": return renderEditor();
     case "weeks": return renderWeeks();
     case "temas": return renderTemasMom();
+    case "asks": return renderAsks();
     default: return renderMomMenu();
   }
 }
@@ -205,6 +206,7 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="asks"><span class="big">❓</span>Preguntas de Killian (' + askList().length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button>' +
     '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Probar los juegos</button></section>';
   if(notas.length) h += '<section class="card"><h2 class="sec-title">📌 Notas para mamá</h2>' + notas.map(function(n){ return '<p class="wordrow"><span>'+esc(n.texto)+'</span><span class="small">semana del '+esc(n.semana)+'</span></p>'; }).join("") + '</section>';
@@ -294,6 +296,28 @@ function renderTemasMom(){
       '<button class="link-btn del" type="button" data-act="ask-deltema" data-id="'+esc(t.id)+'">🗑 Borrar</button></div>';
   }).join("") : '<p>Todavía no hay temas cargados. Usa «Importar».</p>') + '</section>' +
   '<p class="small" style="text-align:center">El tema de OVER-/UNDER- viene incluido en la página y no se borra.</p>';
+  return h + footer();
+}
+
+/* ---- Preguntas de Killian (palabras que el búho no supo) ---- */
+function askList(){
+  var m = S.home.ask, out = [];
+  Object.keys(m).forEach(function(k){
+    if(m[k] > 0){ var i = k.indexOf(":"); out.push({key:k, dir:k.slice(0, i), w:k.slice(i + 1), ts:m[k]}); }
+  });
+  return out.sort(function(a, b){ return b.ts - a.ts; });
+}
+function renderAsks(){
+  var list = askList(), h = momHeader("Preguntas de Killian", "mom-go", "← Zona de mamá");
+  if(momNote) h += '<p class="good-note">' + esc(momNote) + '</p>';
+  h += '<section class="card mom"><p>Estas son las palabras que Killian le preguntó al búho y no encontró. Escribe su significado y el búho la usará la próxima vez.</p>' +
+    (list.length ? list.map(function(a, i){
+      var en = a.dir === "en";
+      return '<div class="erow"><div><b' + (en ? ' lang="en"' : '') + '>' + esc(a.w) + '</b> <span class="small">(' + (en ? "en inglés" : "en español") + ')</span></div>' +
+        '<label class="fld"><span>' + (en ? "Significado en español" : "Cómo se dice en inglés") + '</span><input id="as-' + i + '" type="text" maxlength="80"></label>' +
+        '<div class="stack"><button class="btn btn-sun" type="button" data-act="ask-save" data-i="' + i + '">Guardar para el búho</button>' +
+        '<button class="link-btn del" type="button" data-act="ask-drop" data-i="' + i + '">Quitar de la lista</button></div></div>';
+    }).join("") : '<p class="note">🎉 No hay preguntas pendientes.</p>') + '</section>';
   return h + footer();
 }
 
@@ -393,6 +417,13 @@ function extraClick(act, el, ev){
         saveContent(); momNote = "✅ Tema guardado: " + (t2.titulo_es || t2.titulo) + ".";
       }
       imp.draft = null; imp.text = ""; momView = "menu"; render({top:true}); return true;
+    case "ask-save":
+      var al = askList(), ai = +el.getAttribute("data-i"), a0 = al[ai], tx = (val("as-" + ai) || "").trim();
+      if(!a0 || !tx){ render(); return true; }
+      S.custom = (S.custom || []).concat([a0.dir === "en" ? {en:a0.w, es:tx} : {en:tx, es:a0.w}]);
+      S.home.ask[a0.key] = -Date.now(); saveContent(); saveHome(); momNote = "✅ Guardada: el búho ya conoce «" + a0.w + "»."; render(); return true;
+    case "ask-drop":
+      var al2 = askList(), a1 = al2[+el.getAttribute("data-i")]; if(a1){ S.home.ask[a1.key] = -Date.now(); saveHome(); } render(); return true;
     case "ask-deltema": modal = {type:"deltema", id:el.getAttribute("data-id")}; render(); return true;
     case "do-deltema":
       S.temas = S.temas.filter(function(x){ return x.id !== modal.id; }); modal = null; saveContent(); render(); return true;

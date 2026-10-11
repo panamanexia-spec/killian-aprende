@@ -104,7 +104,8 @@ function taskCard(it){
   var x = it.x, isVid = it.kind === "vid", c = !!cel[it.id];
   var due = isVid ? "" : (x.entrega ? '<p class="due">📅 Para '+esc(relDay(x.entrega))+'</p>' : "");
   var acts = "";
-  if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Ver el video</a>';
+  if(isVid && videoInfo(x.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(it.id)+'">▶ Ver el video aquí</button>';
+  else if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Abrir el enlace ↗</a>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
   return '<article class="task'+(c?" cel":"")+'"><div class="emo" aria-hidden="true">'+(isVid ? "🎬" : subjEmo(x.materia))+'</div>' +
@@ -193,7 +194,7 @@ function renderStudy(){
   return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
     '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="en">'+esc(t.titulo)+'</h2>' +
     t.resumen.map(function(r){
-      return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div><b lang="en">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div></div>';
+      return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="en">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en,"en")+'</div>';
     }).join("") + '</section>' +
     (t.vocabulario.length ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") +
     '<button class="btn btn-sun btn-big" type="button" data-act="open-tema" data-id="'+esc(t.id)+'">📝 Ir al examen</button>' + footer();
@@ -202,7 +203,7 @@ function renderStars(){
   var H = S.home;
   var rows = [["✅ Tareas hechas", realKeys(H.tasks).length], ["🎬 Videos vistos", realKeys(H.vids).length], ["🎒 Materiales preparados", realKeys(H.mats).length],
     ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac],
-    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games]];
+    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games]];
   return subHeader("Mis estrellas") +
     '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starCount()+'</div><p>¡Sigue así, Killian!</p></section>' +
     '<section class="card"><h2 class="sec-title">Así ganas estrellas</h2>' + rows.map(function(r){ return '<p class="wordrow"><b>'+r[1]+'</b><span>'+esc(r[0])+'</span></p>'; }).join("") + '</section>' +
@@ -228,7 +229,15 @@ function weakTopic(){
   vocabTopics().forEach(function(t){ t.words.forEach(function(w){ if(H.weak[wkey(t.id, w)] > 0) words.push({en:w.en, es:w.es, aceptadas:w.aceptadas, ejemplo_en:w.ejemplo_en, ejemplo_es:w.ejemplo_es, _tid:t.id}); }); });
   return words.length ? {id:"weak", title:"Mis palabras para practicar", emo:"⭐", words:words, weak:true} : null;
 }
-function topicById(id){ if(id === "weak") return weakTopic(); var l = vocabTopics(); for(var i=0;i<l.length;i++) if(l[i].id === id) return l[i]; return null; }
+/* «Palabras que busqué»: las que consultó con el búho. */
+function lookedTopic(){
+  var H = S.home, words = [];
+  Object.keys(H.look).sort(function(a, b){ return H.look[b] - H.look[a]; }).forEach(function(k){
+    if(H.lookTr[k]) words.push({en:k, es:H.lookTr[k], aceptadas:[H.lookTr[k]], ejemplo_en:"", ejemplo_es:"", _tid:"looked"});
+  });
+  return words.length ? {id:"looked", title:"Palabras que busqué", emo:"🔎", words:words.slice(0, 60)} : null;
+}
+function topicById(id){ if(id === "weak") return weakTopic(); if(id === "looked") return lookedTopic(); var l = vocabTopics(); for(var i=0;i<l.length;i++) if(l[i].id === id) return l[i]; return null; }
 function wkey(tid, w){ return tid + ":" + String(w.en).toLowerCase(); }
 function renderDict(){
   var tp = dict.topic ? topicById(dict.topic) : null;
@@ -236,7 +245,7 @@ function renderDict(){
   if(!tp){
     return subHeader("Mi diccionario") +
       '<p class="lead">Elige un tema y toca las tarjetas para ver qué significan las palabras. 👇</p><div class="dtopics">' +
-      (weakTopic() ? [weakTopic()] : []).concat(vocabTopics()).map(function(t){
+      [weakTopic(), lookedTopic()].filter(Boolean).concat(vocabTopics()).map(function(t){
         var k = t.words.filter(function(w){ return S.home.known[wkey(w._tid || t.id, w)]; }).length, pct = Math.round(k / t.words.length * 100);
         return '<button class="dtopic" type="button" data-act="dict-open" data-id="'+esc(t.id)+'"><span class="big">'+t.emo+'</span><b>'+esc(t.title)+'</b>' +
           '<span class="small">'+t.words.length+' palabras · '+k+' aprendidas</span><span class="bar"><i style="width:'+pct+'%"></i></span></button>';
@@ -248,10 +257,10 @@ function renderDict(){
     '<p class="small" style="text-align:center">Toca una tarjeta para darle la vuelta.</p><div class="cards">' +
     tp.words.map(function(w, i){
       var on = !!dict.flip[i], known = !!S.home.known[wkey(w._tid || tp.id, w)];
-      return '<button class="fcard'+(on?" back":"")+'" type="button" data-act="flip" data-i="'+i+'" aria-pressed="'+on+'">' +
+      return '<div class="fwrap"><button class="fcard'+(on?" back":"")+'" type="button" data-act="flip" data-i="'+i+'" aria-pressed="'+on+'">' +
         (known ? '<span class="kn" aria-label="Ya la aprendiste">✓</span>' : '') +
         (on ? '<b class="es">'+esc(w.es)+'</b>' + (w.ejemplo_en ? '<span lang="en" class="ex">'+esc(w.ejemplo_en)+'</span><span class="ex2">'+esc(w.ejemplo_es||"")+'</span>' : '')
-            : '<b lang="en">'+esc(w.en)+'</b><span class="hint">toca para ver</span>') + '</button>';
+            : '<b lang="en">'+esc(w.en)+'</b><span class="hint">toca para ver</span>') + '</button>' + spk(w.en, "en") + '</div>';
     }).join("") + '</div>' + footer();
 }
 function startQuiz2(tp){
@@ -285,7 +294,7 @@ function renderQuiz2(tp){
   if(answered) fb = it.pick === it.w.es ? '<p class="fb good">🎉 ¡Muy bien!</p>' : '<p class="fb bad">¡Casi! Significa «'+esc(it.w.es)+'». Ya lo sabes para la próxima. 💙</p>';
   return subHeader(tp.title, "dict-end", "← Salir") +
     '<div class="prog-row"><span>Palabra '+(q.i+1)+' de '+q.items.length+'</span></div>' +
-    '<main class="card qcard"><span class="chip">¿Qué significa?</span><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(it.w.en)+'</p>' +
+    '<main class="card qcard"><span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(it.w.en)+'</p>'+spk(it.w.en,"en")+'</div>' +
     '<div class="opts">'+opts+'</div>'+fb+
     (answered ? '<button class="btn btn-sun btn-big" type="button" data-act="dict-next">'+(last ? "Ver mi resultado" : "Siguiente →")+'</button>' : "") + '</main>' + footer();
 }

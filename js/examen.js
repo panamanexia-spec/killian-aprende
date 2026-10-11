@@ -204,7 +204,7 @@ function renderExam(){
   if(!c || c.phase !== "q"){ S.screen = "home"; return renderHome(); }
   var q = c.qs[c.idx], last = c.idx === c.qs.length - 1, a = c.answers[q.id];
   var body = '<span class="chip">' + esc(q.seccion || c.tema.titulo_es || c.tema.titulo) + '</span><p class="sec-es">' + esc(q.instruccion_es || DEFAULT_INSTR[q.tipo]) + '</p>';
-  body += '<p class="qtext" lang="en">' + blankHtml(q.pregunta_en) + '</p>';
+  body += '<div class="qrow"><p class="qtext" lang="en">' + blankHtml(q.pregunta_en) + '</p>' + spk(q.pregunta_en, "en") + '</div>';
   if(q.base_word) body += '<p class="base" lang="en">Base word: <b>' + esc(q.base_word) + '</b></p>';
   if(q.pregunta_es){
     body += ex.es[q.id] ? '<p class="es-box">🇪🇸 ' + blankHtml(q.pregunta_es) + '</p>' :
@@ -266,7 +266,7 @@ function renderVocab(){
       '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="v-go">¡Vamos! 🚀</button><button class="btn btn-ghost" type="button" data-act="v-skip">Saltar e ir a mis resultados</button></div></main>' + footer();
   }
   var it = v.items[v.i], answered = it.ok !== null, last = v.i === v.items.length - 1;
-  var body = '<span class="chip">¿Qué significa?</span><p class="qtext" lang="en" style="font-size:2.2rem">' + esc(it.en) + '</p>';
+  var body = '<span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="en" style="font-size:2.2rem">' + esc(it.en) + '</p>' + spk(it.en, "en") + '</div>';
   if(it.mode === "elegir"){
     body += '<div class="opts">' + it.opts.map(function(o, i){
       var cls = "opt"; if(answered){ if(o === it.es) cls += " good"; else if(o === it.said) cls += " bad"; }
@@ -335,7 +335,7 @@ function reviewItem(g, i, c){
   else h += '<p class="line"><span class="lbl">Respuesta de Killian</span><br><b lang="en">' + esc(mine) + '</b></p>';
   h += '<p class="verdict">' + verdicts[i % verdicts.length] + '</p>';
   if(!g.ok && q.tipo !== "unir"){
-    h += '<p class="line correct-box"><span class="lbl">Respuesta correcta</span><br><b lang="en">' + esc(right) + '</b>' +
+    h += '<p class="line correct-box"><span class="lbl">Respuesta correcta</span> ' + spk(q.pregunta_en.indexOf("___") >= 0 ? q.pregunta_en.replace(/_{3,}/, right) : right, "en", "mini") + '<br><b lang="en">' + esc(right) + '</b>' +
       (q.tipo === "completar" || (q.tipo === "opcion_multiple" && q.pregunta_en.indexOf("___") >= 0) ? '<br><span lang="en">' + filledHtml(q.pregunta_en, right) + '</span>' : '') + '</p>';
   }
   h += '<div class="learn"><p class="line"><span class="lbl">Explicación</span><br>' + esc(q.explicacion_es || "¡Sigue practicando este tema!") + '</p>';
