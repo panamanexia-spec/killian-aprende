@@ -14,4 +14,5 @@ Hay una versión pensada para ti, que abre directo la **zona de mamá** (con el 
 ## Cosas útiles
 - Mientras está abierta se actualiza sola cada 30 segundos y al volver a la app.
 - Se bloquea a los 15 minutos sin tocarla y vuelve a pedir el PIN.
+- Para recibir avisos en el celular mira `NOTIFICACIONES.md`.
 - Desde ahí puedes ver alertas, notas, palabras que falla, preguntas del búho, premios y copiar el reporte para Claude.
