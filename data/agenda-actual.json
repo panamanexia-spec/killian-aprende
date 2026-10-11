@@ -1,0 +1,214 @@
+{
+  "tipo": "agenda",
+  "semana": "2026-10-12",
+  "tareas": [
+    {
+      "id": "t1",
+      "materia": "Science",
+      "titulo": "Buscar una imagen del ciclo de vida de un insecto",
+      "detalle": "Para llevarla a clase el lunes",
+      "fecha": "2026-10-11",
+      "entrega": "2026-10-12"
+    },
+    {
+      "id": "t2",
+      "materia": "Artistic Expressions",
+      "titulo": "Terminar la lámina de Van Gogh (14 x 17 pulgadas)",
+      "detalle": "Una lámina con la obra del pintor Vincent Van Gogh. Prepárate para explicar las figuras.",
+      "fecha": "2026-10-11",
+      "entrega": "2026-10-12"
+    },
+    {
+      "id": "t3",
+      "materia": "Chino Mandarín",
+      "titulo": "Repasar la presentación oral de Chino",
+      "detalle": "Mira los 2 enlaces de Chino en Videos. El lunes es la evaluación sumativa.",
+      "fecha": "2026-10-11",
+      "entrega": "2026-10-12"
+    },
+    {
+      "id": "t4",
+      "materia": "Educación Física",
+      "titulo": "Preparar el folder del trabajo formal",
+      "detalle": "Folder del color correspondiente, hojas de raya y hoja de evaluación",
+      "fecha": "2026-10-12",
+      "entrega": "2026-10-13"
+    },
+    {
+      "id": "t5",
+      "materia": "Educación Musical",
+      "titulo": "Estudiar la pieza musical con el video",
+      "detalle": "Mañana es la sumativa. Practica con la flauta.",
+      "fecha": "2026-10-12",
+      "entrega": "2026-10-13"
+    },
+    {
+      "id": "t6",
+      "materia": "Reading and Conversation",
+      "titulo": "Estudiar los apuntes de «Thunder Rose»",
+      "detalle": "Presentación oral (sumativa). Estudia las notas del cuaderno.",
+      "fecha": "2026-10-12",
+      "entrega": "2026-10-13"
+    },
+    {
+      "id": "t7",
+      "materia": "Math",
+      "titulo": "Patrones de multiplicación (página 335)",
+      "detalle": "Llevar el Textbook Unit 2",
+      "fecha": "2026-10-12",
+      "entrega": "2026-10-13"
+    },
+    {
+      "id": "t8",
+      "materia": "Español",
+      "titulo": "Estudiar el resumen de los adverbios",
+      "detalle": "Está pegado en el cuaderno de Español. ¡Mañana es la sumativa!",
+      "fecha": "2026-10-14",
+      "entrega": "2026-10-15"
+    },
+    {
+      "id": "t9",
+      "materia": "Ciencias Sociales",
+      "titulo": "Organizar el folder con las hojas del formal",
+      "detalle": "Libro, cartuchera y folder con las hojas ordenadas para copiar su formal",
+      "fecha": "2026-10-14",
+      "entrega": "2026-10-15"
+    },
+    {
+      "id": "t10",
+      "materia": "Culture and Value",
+      "titulo": "Conseguir la foto de un presidente",
+      "detalle": "De un país mediano, a color o en blanco y negro (para el póster)",
+      "fecha": "2026-10-15",
+      "entrega": "2026-10-16"
+    },
+    {
+      "id": "t11",
+      "materia": "Reading and Composition",
+      "titulo": "Página 21 del Textbook Vol. 2 (Across and Down)",
+      "detalle": "Escribe una oración con cada palabra: convertible, incredible, agreeable, believable, comfortable, predictable, terrible, affordable",
+      "fecha": "2026-10-15",
+      "entrega": "2026-10-16"
+    },
+    {
+      "id": "t12",
+      "materia": "Math",
+      "titulo": "Página 365: ecuaciones para representar situaciones",
+      "detalle": "Llevar el Textbook Unit 2",
+      "fecha": "2026-10-15",
+      "entrega": "2026-10-16"
+    }
+  ],
+  "materiales": [
+    {
+      "id": "m1",
+      "materia": "Español / Artística",
+      "material": "Libro de caligrafía y lápices de colores",
+      "llevar_el": "2026-10-12"
+    },
+    {
+      "id": "m2",
+      "materia": "Artistic Expressions",
+      "material": "Lámina de 14 x 17 pulgadas de Van Gogh (terminada)",
+      "llevar_el": "2026-10-12"
+    },
+    {
+      "id": "m3",
+      "materia": "Science",
+      "material": "Imagen del ciclo de vida de un insecto",
+      "llevar_el": "2026-10-12"
+    },
+    {
+      "id": "m4",
+      "materia": "Chino Mandarín",
+      "material": "Folder del tema formal (Eating Mooncakes)",
+      "llevar_el": "2026-10-12"
+    },
+    {
+      "id": "m5",
+      "materia": "Educación Musical",
+      "material": "Flauta",
+      "llevar_el": "2026-10-13"
+    },
+    {
+      "id": "m6",
+      "materia": "Educación Física",
+      "material": "Folder del color correspondiente, hojas de raya y hoja de evaluación",
+      "llevar_el": "2026-10-13"
+    },
+    {
+      "id": "m7",
+      "materia": "Folklore",
+      "material": "Sombrero (para el baile de la Feria)",
+      "llevar_el": "2026-10-14"
+    },
+    {
+      "id": "m8",
+      "materia": "Ciencias Sociales",
+      "material": "Folder con las hojas organizadas del formal",
+      "llevar_el": "2026-10-15"
+    },
+    {
+      "id": "m9",
+      "materia": "Culture and Value",
+      "material": "Foto de un presidente (a color o blanco y negro)",
+      "llevar_el": "2026-10-16"
+    },
+    {
+      "id": "m10",
+      "materia": "Chino Mandarín",
+      "material": "Folder del tema formal (Eating Mooncakes)",
+      "llevar_el": "2026-10-16"
+    }
+  ],
+  "videos": [
+    {
+      "id": "v1",
+      "materia": "Chino Mandarín",
+      "titulo": "Chino: enlace 1 para la presentación oral",
+      "url": "https://reurl.cc/5XQky7",
+      "fecha": "2026-10-11"
+    },
+    {
+      "id": "v2",
+      "materia": "Chino Mandarín",
+      "titulo": "Chino: enlace 2 para la presentación oral",
+      "url": "https://reurl.cc/zOXZX0",
+      "fecha": "2026-10-11"
+    },
+    {
+      "id": "v3",
+      "materia": "Science",
+      "titulo": "Science: ciclo de vida de los insectos",
+      "url": "https://youtu.be/Ro8UdC8WIMg",
+      "fecha": "2026-10-11"
+    },
+    {
+      "id": "v4",
+      "materia": "Educación Musical",
+      "titulo": "Música: pieza musical «Gently Sleep»",
+      "url": "https://youtu.be/MMXactSfjoM?si=y80rNQSKAXxVR8MR",
+      "fecha": "2026-10-12"
+    },
+    {
+      "id": "v5",
+      "materia": "Science",
+      "titulo": "Science: ciclo de vida de la rana",
+      "url": "https://youtu.be/Uaj2mKgImN4",
+      "fecha": "2026-10-14"
+    }
+  ],
+  "notas_para_mama": [
+    "📝 SUMATIVAS lun 12/10: Chino Mandarín (presentación oral) y Science (ciclos de vida de los insectos).",
+    "📝 SUMATIVAS mar 13/10: Educación Musical (llevar flauta y cuaderno; ver el video para estudiar) y Reading and Conversation (presentación oral «Thunder Rose»; también formativa).",
+    "📝 SUMATIVAS mié 14/10: Español – Literatura «¿Quién anda ahí?» (actividades del libro, páginas 106 a 117) y Reading and Conversation (lectura oral «Luz Sees the Light»; también formativa).",
+    "📝 SUMATIVA jue 15/10: Español – Gramática, los adverbios (estudiar el resumen del cuaderno; llevar libro de texto, cuaderno y la computadora para Progrentis).",
+    "📝 SUMATIVA vie 16/10: Science – actividad práctica de sembrar semillas (lima y rábano). Los materiales se comparten en equipo y no hace falta bata, pero Observaciones dice «Bring the materials»: conviene confirmarlo con la maestra.",
+    "⚠️ Chino vie 16/10: el texto habla de «oral presentation sumative evaluation» pero las casillas de evaluación están vacías. Confirmar con la maestra.",
+    "⚠️ Ciencias Sociales lun 12/10: es la parte final de la actividad sumativa del cooperativismo (en la agenda aparece marcada como formativa).",
+    "📌 Español, lunes: caligrafía en clase. Las páginas 73 a 111 del libro de caligrafía son la sumativa #9 del tercer trimestre.",
+    "📌 Folklore mié 14/10: ensayo del baile de la Feria en el gimnasio. Los niños llevan sombrero y las niñas faldón.",
+    "📚 Libros de la semana: Reading and Composition, Textbook Vol. 2 (y el Vol. 1 si no terminó las actividades) lun, mié y vie; Reading and Conversation, Vol. 2 del libro de conversación mié, jue y vie; Math, Textbook Unit 2 mar, mié y vie.",
+    "💻 Computer Skills mar 13/10: seguir con la plataforma GoSteam (dispositivo cargado). Math mié 14/10: se sigue con la página 335."
+  ]
+}

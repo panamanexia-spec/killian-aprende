@@ -2,7 +2,9 @@
 
 Plataforma de estudio de inglés para Killian (4.º grado).
 
-- `index.html`: la página (examen de prefijos OVER- y UNDER-).
+- `index.html`: la página (marcado y estilos).
+- `js/`: el código por partes: `data.js` (datos y tema incluido), `core.js` (estado, nube, eventos), `inicio.js` (pantalla de inicio, estrellas, diccionario), `mama.js` (zona de mamá), `juegos.js`, `examen.js`.
+- `data/agenda-actual.json` y `data/temas/`: la agenda de la semana y los temas, que la página lee sola.
 - `sync.js`: conexión con Supabase (entrada de mamá y sincronización entre aparatos).
 - `vendor/supabase.js`: librería de Supabase, guardada aquí para que funcione sin depender de otros sitios.
 - `manifest.webmanifest`, `sw.js` e `icon-*.png`: permiten agregar la página a la pantalla de inicio y abrirla sin internet.

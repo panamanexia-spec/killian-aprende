@@ -1,0 +1,445 @@
+"use strict";
+/* ===================================================== ZONA DE MAMÁ ===== */
+function isDate(v){ return typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v) && dkey(parseD(v)) === v; }
+function str(v){ return typeof v === "string" ? v.trim() : (typeof v === "number" ? String(v) : ""); }
+function mondayOf(k){ var d = parseD(k), w = (d.getDay() + 6) % 7; d.setDate(d.getDate() - w); return dkey(d); }
+function normUrl(u){ u = str(u); return /^https?:\/\/\S+$/i.test(u) ? u : ""; }
+
+/* Lee el texto pegado (tolera ```json y comillas "bonitas" de chats). */
+function parseImportText(txt){
+  txt = String(txt || "").trim();
+  if(!txt) return {ok:false, msg:"Pega el contenido o elige un archivo primero."};
+  txt = txt.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "").trim();
+  try{ return {ok:true, obj:JSON.parse(txt)}; }catch(e1){
+    try{ return {ok:true, obj:JSON.parse(txt.replace(/[“”]/g, '"').replace(/[‘’]/g, "'"))}; }catch(e2){
+      return {ok:false, msg:"No pude leer el texto como un archivo de importación. Revisa que empiece con { y termine con } y que esté completo. (" + e1.message + ")"};
+    }
+  }
+}
+
+function validateAgenda(o){
+  var E = [], W = [], d = {semana:str(o.semana), tareas:[], materiales:[], videos:[], notas:[]};
+  if(!isDate(d.semana)) E.push("La semana debe ser una fecha con este formato: 2026-10-12 (año-mes-día).");
+  function list(name){
+    if(o[name] == null) return [];
+    if(Array.isArray(o[name])) return o[name];
+    E.push("«" + name + "» debe ser una lista."); return [];
+  }
+  function near(label, k){
+    if(isDate(k) && isDate(d.semana) && Math.abs(dayDiff(k) - dayDiff(d.semana)) > 21) W.push(label + ": la fecha " + k + " está lejos de la semana " + d.semana + ". ¿Es correcta?");
+  }
+  var seen = {};
+  function uid(kind, x, i, pre){
+    var id = str(x.id) || (pre + (i + 1));
+    if(seen[kind + id]) E.push((kind === "t" ? "Tarea " : kind === "m" ? "Material " : "Video ") + (i + 1) + ": el id «" + id + "» está repetido.");
+    seen[kind + id] = 1; return id;
+  }
+  list("tareas").forEach(function(x, i){
+    var n = "Tarea " + (i + 1);
+    if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
+    var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega)};
+    if(!it.titulo) E.push(n + ": falta el título.");
+    if(!isDate(it.fecha)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": falta la fecha o no es válida (usa 2026-10-13).");
+    if(it.entrega && !isDate(it.entrega)) E.push(n + ": la fecha de entrega no es válida (usa 2026-10-14).");
+    if(!it.materia) W.push(n + ": no tiene materia.");
+    if(it.entrega && isDate(it.entrega) && isDate(it.fecha) && it.entrega < it.fecha) W.push(n + ": la entrega es antes de la fecha de hacerla.");
+    near(n, it.fecha); d.tareas.push(it);
+  });
+  list("materiales").forEach(function(x, i){
+    var n = "Material " + (i + 1);
+    if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
+    var it = {id:uid("m", x, i, "m"), materia:str(x.materia), material:str(x.material), llevar_el:str(x.llevar_el)};
+    if(!it.material) E.push(n + ": falta qué material es.");
+    if(!isDate(it.llevar_el)) E.push(n + (it.material ? " («" + it.material + "»)" : "") + ": falta el día de llevarlo o no es válido (usa 2026-10-15).");
+    near(n, it.llevar_el); d.materiales.push(it);
+  });
+  list("videos").forEach(function(x, i){
+    var n = "Video " + (i + 1);
+    if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
+    var it = {id:uid("v", x, i, "v"), materia:str(x.materia), titulo:str(x.titulo), url:str(x.url), fecha:str(x.fecha)};
+    if(!it.titulo) E.push(n + ": falta el título.");
+    if(!normUrl(it.url)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": el enlace debe empezar con https://");
+    if(!isDate(it.fecha)) E.push(n + ": falta la fecha o no es válida (usa 2026-10-13).");
+    near(n, it.fecha); d.videos.push(it);
+  });
+  list("notas_para_mama").forEach(function(t){ if(str(t)) d.notas.push(str(t)); });
+  if(!E.length && !d.tareas.length && !d.materiales.length && !d.videos.length) E.push("La agenda no trae tareas, materiales ni videos.");
+  return {errors:E, warnings:W, draft:d};
+}
+
+function validateTema(o){
+  var E = [], W = [];
+  var t = {id:str(o.id), materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen),
+           resumen:[], subtemas:[], preguntas:[], vocabulario:[]};
+  if(!/^[a-z0-9][a-z0-9_-]*$/i.test(t.id)) E.push("El tema necesita un «id» sin espacios ni acentos, por ejemplo science-water-cycle.");
+  if(t.id === "overunder" || t.id === "weak") E.push("El id «" + t.id + "» está reservado. Usa otro.");
+  var ppr = +o.preguntas_por_ronda;
+  t.preguntas_por_ronda = ppr >= 3 && ppr <= 50 ? Math.round(ppr) : 10;
+  if(!t.titulo) E.push("Falta el «titulo» del tema.");
+  if(!t.materia) W.push("El tema no tiene materia.");
+  if(t.fecha_examen && !isDate(t.fecha_examen)){ E.push("«fecha_examen» no es válida (usa 2026-10-20)."); }
+  if(!t.fecha_examen) t.fecha_examen = "";
+  var tipos = ["opcion_multiple", "verdadero_falso", "unir", "completar"];
+  if(Array.isArray(o.subtemas)) o.subtemas.forEach(function(x){ if(str(x)) t.subtemas.push(str(x)); });
+  (Array.isArray(o.resumen) ? o.resumen : []).forEach(function(r, i){
+    if(!r || !str(r.en) || !str(r.es)){ E.push("Resumen " + (i + 1) + ": necesita «en» y «es»."); return; }
+    t.resumen.push({en:str(r.en), es:str(r.es), emoji:str(r.emoji)});
+  });
+  var seen = {};
+  (Array.isArray(o.preguntas) ? o.preguntas : []).forEach(function(p, i){
+    var n = "Pregunta " + (i + 1);
+    if(!p || typeof p !== "object"){ E.push(n + ": no se entiende."); return; }
+    var q = {id:str(p.id) || ("q" + (i + 1)), subtema:str(p.subtema) || "general", tipo:str(p.tipo), pregunta_en:str(p.pregunta_en), pregunta_es:str(p.pregunta_es), explicacion_es:str(p.explicacion_es),
+      ejemplo_en:str(p.ejemplo_en), ejemplo_es:str(p.ejemplo_es), pista_es:str(p.pista_es), peso:(+p.peso > 0 && +p.peso <= 10) ? +p.peso : 1};
+    if(seen[q.id]) E.push(n + ": el id «" + q.id + "» está repetido."); seen[q.id] = 1;
+    if(tipos.indexOf(q.tipo) < 0){ E.push(n + ": el tipo «" + q.tipo + "» no existe. Usa: " + tipos.join(", ") + "."); return; }
+    if(!q.pregunta_en) E.push(n + ": falta «pregunta_en».");
+    if(!q.explicacion_es) W.push(n + ": no tiene «explicacion_es» (Killian no verá por qué se equivocó).");
+    if(t.subtemas.length && q.subtema && t.subtemas.indexOf(q.subtema) < 0) W.push(n + ": el subtema «" + q.subtema + "» no está en la lista de subtemas.");
+    if(q.tipo === "opcion_multiple"){
+      var ops = (Array.isArray(p.opciones) ? p.opciones : []).map(str).filter(Boolean);
+      q.opciones = ops; q.correcta = str(p.correcta);
+      if(ops.length < 2) E.push(n + ": necesita al menos 2 «opciones».");
+      else if(ops.length > 6) E.push(n + ": admite hasta 6 «opciones».");
+      else if(ops.indexOf(q.correcta) < 0) E.push(n + ": la «correcta» («" + q.correcta + "») no está entre las opciones.");
+    } else if(q.tipo === "verdadero_falso"){
+      var c = p.correcta, cs = String(c).toLowerCase();
+      if(c === true || cs === "true" || cs === "verdadero" || cs === "v") q.correcta = true;
+      else if(c === false || cs === "false" || cs === "falso" || cs === "f") q.correcta = false;
+      else E.push(n + ": «correcta» debe ser true o false.");
+    } else if(q.tipo === "unir"){
+      var pares = (Array.isArray(p.pares) ? p.pares : []).map(function(x){
+        x = x || {}; return {izquierda:str(x.izquierda || x.en), derecha:str(x.derecha || x.es)};
+      }).filter(function(x){ return x.izquierda && x.derecha; });
+      q.pares = pares;
+      if(pares.length < 2) E.push(n + ": «unir» necesita al menos 2 pares con «izquierda» y «derecha».");
+      else if(pares.length > 6) E.push(n + ": «unir» admite hasta 6 pares.");
+      else if(pares.map(function(x){ return x.derecha; }).filter(function(x, k, a){ return a.indexOf(x) !== k; }).length) E.push(n + ": dos pares tienen el mismo significado («derecha»). Deben ser distintos.");
+    } else {
+      q.respuesta = str(p.respuesta != null ? p.respuesta : p.correcta);
+      q.aceptadas = (Array.isArray(p.aceptadas) ? p.aceptadas : []).map(str).filter(Boolean);
+      if(!q.respuesta) E.push(n + ": falta la «respuesta».");
+      if(q.pregunta_en.indexOf("___") < 0) W.push(n + ": la frase no tiene el hueco ______.");
+    }
+    t.preguntas.push(q);
+  });
+  (Array.isArray(o.vocabulario) ? o.vocabulario : []).forEach(function(v, i){
+    if(!v || !str(v.en) || !str(v.es)){ E.push("Palabra " + (i + 1) + ": necesita «en» y «es»."); return; }
+    t.vocabulario.push({en:str(v.en), es:str(v.es), aceptadas:(Array.isArray(v.aceptadas) ? v.aceptadas : []).map(str).filter(Boolean),
+      ejemplo_en:str(v.ejemplo_en), ejemplo_es:str(v.ejemplo_es)});
+  });
+  if(!t.preguntas.length && !E.length) E.push("El tema no trae preguntas.");
+  if(t.preguntas.length && t.preguntas.length < 10) W.push("Solo hay " + t.preguntas.length + " preguntas. Conviene tener más para varias rondas distintas.");
+  if(!t.vocabulario.length) W.push("El tema no trae vocabulario.");
+  return {errors:E, warnings:W, draft:t};
+}
+
+/* ---- PIN ---- */
+var momOk = false, momAt = 0, momView = "menu", pinMsg = "", pinTries = 0, pinLock = 0, momNote = "";
+var imp = {text:"", msg:"", kind:null, draft:null, errors:[], warnings:[], src:"import", busy:false};
+function hashPin(pin, salt){
+  var data = salt + ":" + pin;
+  if(window.crypto && crypto.subtle && window.TextEncoder){
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(data)).then(function(buf){
+      return Array.prototype.map.call(new Uint8Array(buf), function(b){ return ("0" + b.toString(16)).slice(-2); }).join("");
+    });
+  }
+  var h = 5381; for(var i=0;i<data.length;i++) h = ((h << 5) + h + data.charCodeAt(i)) | 0;
+  return Promise.resolve("x" + (h >>> 0).toString(16));
+}
+function newSalt(){ var s = ""; for(var i=0;i<16;i++) s += Math.floor(Math.random()*16).toString(16); return s; }
+function val(id){ var el = document.getElementById(id); return el ? el.value : ""; }
+function pinGo(){
+  var pin = val("pin").trim();
+  if(!S.pinHash || momView === "pin"){
+    var p2 = val("pin2").trim();
+    if(!/^\d{4}$/.test(pin)){ pinMsg = "El PIN debe tener exactamente 4 números."; render(); return; }
+    if(pin !== p2){ pinMsg = "Los dos PIN no son iguales. Escríbelos otra vez."; render(); return; }
+    var salt = newSalt();
+    hashPin(pin, salt).then(function(h){
+      S.pinSalt = salt; S.pinHash = h; saveContent();
+      momOk = true; momAt = Date.now(); momView = "menu"; pinMsg = ""; momNote = "✅ PIN guardado."; render({top:true});
+    });
+    return;
+  }
+  if(Date.now() < pinLock){ pinMsg = "Espera unos segundos antes de volver a intentar."; render(); return; }
+  hashPin(pin, S.pinSalt).then(function(h){
+    if(h === S.pinHash){ momOk = true; momAt = Date.now(); pinTries = 0; pinMsg = ""; momView = "menu"; momNote = ""; render({top:true}); }
+    else { pinTries++; if(pinTries >= 5){ pinLock = Date.now() + 30000; pinTries = 0; pinMsg = "Demasiados intentos. Espera 30 segundos."; } else pinMsg = "PIN incorrecto."; render(); }
+  });
+}
+function momHeader(title, backAct, backTxt){
+  return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'" type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span></span></header>';
+}
+function renderPinGate(){
+  var creating = !S.pinHash || momView === "pin";
+  return momHeader(creating ? "Crear PIN" : "Zona de mamá") +
+    '<main class="card auth mom"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h1>'+(creating ? "Crea tu PIN de 4 números" : "Escribe tu PIN")+'</h1>' +
+    '<p>'+(creating ? "Con este PIN solo tú entrarás a la zona de mamá." : "Esta zona es solo para mamá.")+'</p>' +
+    (pinMsg ? '<p class="err" role="alert">'+esc(pinMsg)+'</p>' : '') +
+    '<div class="pinbox"><label for="pin">'+(creating ? "PIN nuevo" : "PIN")+'</label><input id="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" pattern="[0-9]*">' +
+    (creating ? '<label for="pin2">Repite el PIN</label><input id="pin2" type="password" inputmode="numeric" maxlength="4" autocomplete="off" pattern="[0-9]*">' : '') +
+    '<button class="btn btn-sun btn-big" type="button" data-act="pin-go">'+(creating ? "GUARDAR PIN" : "ENTRAR")+'</button></div></main>' + footer();
+}
+function weeksList(){
+  var ag = S.agenda, set = {};
+  if(ag) ["tareas","materiales","videos","notas"].forEach(function(k){ (ag[k] || []).forEach(function(x){ if(x.semana) set[x.semana] = 1; }); });
+  return Object.keys(set).sort().reverse();
+}
+function renderMom(){
+  if(momOk && Date.now() - momAt > 15 * 60000) momOk = false;
+  if(!momOk || momView === "pin") return renderPinGate();
+  momAt = Date.now();
+  switch(momView){
+    case "import": return renderImport();
+    case "preview": case "edit": return renderEditor();
+    case "weeks": return renderWeeks();
+    case "temas": return renderTemasMom();
+    default: return renderMomMenu();
+  }
+}
+function renderMomMenu(){
+  var notas = (S.agenda && S.agenda.notas) || [];
+  var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
+    '<section class="momgrid">' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button>' +
+    '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Probar los juegos</button></section>';
+  if(notas.length) h += '<section class="card"><h2 class="sec-title">📌 Notas para mamá</h2>' + notas.map(function(n){ return '<p class="wordrow"><span>'+esc(n.texto)+'</span><span class="small">semana del '+esc(n.semana)+'</span></p>'; }).join("") + '</section>';
+  h += '<p class="small" style="text-align:center">El panel de progreso y análisis llega en una próxima etapa.</p>';
+  return h + footer();
+}
+function renderImport(){
+  var h = momHeader("Importar", "mom-go", "← Zona de mamá") + (S.agenda === null ? '' : '');
+  h += '<section class="card mom"><p>Pega aquí el contenido que te dio Claude (empieza con <b>{</b>) o elige el archivo <b>.json</b>.</p>' +
+    '<label class="fld" for="imptext"><span>Contenido</span><textarea id="imptext" rows="9" spellcheck="false" placeholder="{ &quot;tipo&quot;: &quot;agenda&quot;, … }">'+esc(imp.text)+'</textarea></label>' +
+    '<label class="fld" for="impfile"><span>o elige un archivo</span><input id="impfile" type="file" accept=".json,.txt,application/json,text/plain"></label>' +
+    (imp.msg ? '<p class="err" role="alert">'+esc(imp.msg)+'</p>' : '') +
+    (imp.errors.length ? '<div class="err" role="alert"><b>Hay que corregir esto antes de guardar:</b><ul>'+imp.errors.map(function(e){ return '<li>'+esc(e)+'</li>'; }).join("")+'</ul>' +
+      '<p>Corrige el archivo (puedes pedirle a Claude que lo arregle y pegarle estos mensajes) y vuelve a pulsar Revisar.</p></div>' : '') +
+    '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="imp-check">🔍 Revisar</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="imp-sample" data-v="agenda">Cargar una agenda de ejemplo</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="imp-sample" data-v="tema">Cargar un tema de ejemplo</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="imp-clear">Limpiar</button></div></section>';
+  return h + footer();
+}
+/* Editor: sirve para revisar lo importado y para editar la agenda a mano. */
+function inp(kind, i, f, label, v, type){
+  return '<label class="fld"><span>'+label+'</span><input type="'+(type||"text")+'" data-e="'+kind+'" data-i="'+i+'" data-f="'+f+'" value="'+esc(v||"")+'"></label>';
+}
+function renderEditor(){
+  var d = imp.draft, back = imp.src === "manual" ? ["weeks", "← Agenda"] : ["import", "← Volver"];
+  if(!d){ momView = "menu"; return renderMomMenu(); }
+  var h = momHeader(imp.kind === "agenda" ? "Revisar la agenda" : "Revisar el tema", "mom-go", back[1]);
+  h = h.replace('data-act="mom-go"', 'data-act="mom-go" data-v="'+back[0]+'"');
+  if(imp.msg) h += '<p class="err" role="alert">'+esc(imp.msg)+'</p>';
+  if(imp.errors.length) h += '<div class="err" role="alert"><b>Corrige esto para guardar:</b><ul>'+imp.errors.map(function(e){ return '<li>'+esc(e)+'</li>'; }).join("")+'</ul></div>';
+  if(imp.warnings.length) h += '<div class="warn"><b>Ojo:</b><ul>'+imp.warnings.map(function(e){ return '<li>'+esc(e)+'</li>'; }).join("")+'</ul></div>';
+  if(imp.kind === "agenda"){
+    h += '<section class="card mom"><label class="fld"><span>Semana (lunes)</span><input id="semana" type="date" value="'+esc(d.semana)+'"></label>' +
+      '<h2 class="sec-title">📝 Tareas ('+d.tareas.length+')</h2>' + d.tareas.map(function(x, i){
+        return '<div class="erow">'+inp("tareas",i,"materia","Materia",x.materia)+inp("tareas",i,"titulo","Qué hacer",x.titulo)+inp("tareas",i,"detalle","Detalle",x.detalle)+
+          inp("tareas",i,"fecha","Se hace el",x.fecha,"date")+inp("tareas",i,"entrega","Entrega",x.entrega,"date")+
+          '<button class="link-btn del" type="button" data-act="e-del" data-e="tareas" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="tareas">+ Agregar tarea</button>' +
+      '<h2 class="sec-title">🎒 Materiales ('+d.materiales.length+')</h2>' + d.materiales.map(function(x, i){
+        return '<div class="erow">'+inp("materiales",i,"materia","Materia",x.materia)+inp("materiales",i,"material","Material",x.material)+inp("materiales",i,"llevar_el","Llevar el",x.llevar_el,"date")+
+          '<button class="link-btn del" type="button" data-act="e-del" data-e="materiales" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="materiales">+ Agregar material</button>' +
+      '<h2 class="sec-title">🎬 Videos ('+d.videos.length+')</h2>' + d.videos.map(function(x, i){
+        return '<div class="erow">'+inp("videos",i,"materia","Materia",x.materia)+inp("videos",i,"titulo","Título",x.titulo)+inp("videos",i,"url","Enlace (https://…)",x.url,"url")+inp("videos",i,"fecha","Verlo el",x.fecha,"date")+
+          '<button class="link-btn del" type="button" data-act="e-del" data-e="videos" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="videos">+ Agregar video</button>' +
+      '<h2 class="sec-title">📌 Notas para mamá ('+d.notas.length+')</h2>' + d.notas.map(function(x, i){
+        return '<div class="erow">'+inp("notas",i,"t","Nota",x)+'<button class="link-btn del" type="button" data-act="e-del" data-e="notas" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="notas">+ Agregar nota</button></section>' +
+      '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="e-save">💾 Guardar la agenda</button>' +
+      (imp.src === "manual" && imp.exists ? '<button class="btn btn-ghost" type="button" data-act="ask-delweek">🗑 Borrar esta semana</button>' : '') + '</div>';
+  } else {
+    var ex = temaById(d.id);
+    h += '<section class="card mom"><span class="chip">'+esc(d.materia||"Tema")+'</span><h2 class="sec-title">'+esc(d.titulo_es||d.titulo)+'</h2>' +
+      (d.titulo_es ? '<p lang="en">'+esc(d.titulo)+'</p>' : '') + (d.fecha_examen ? '<p>🗓️ Examen: '+esc(d.fecha_examen)+'</p>' : '') +
+      (ex ? '<p class="warn">Este tema ya existe y se reemplazará con esta versión.</p>' : '') +
+      '<p>'+d.preguntas.length+' preguntas · '+d.vocabulario.length+' palabras · '+d.resumen.length+' frases de resumen</p>' +
+      '<h3 class="sec-title">Resumen</h3>' + d.resumen.map(function(r, i){
+        return '<div class="srow"><span class="semo">'+esc(r.emoji||"📌")+'</span><div><b lang="en">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div><button class="link-btn del" type="button" data-act="e-del" data-e="resumen" data-i="'+i+'">🗑</button></div>';
+      }).join("") +
+      '<h3 class="sec-title">Preguntas</h3>' + d.preguntas.map(function(q, i){
+        return '<div class="srow"><div style="flex:1;min-width:0"><span class="pill">'+esc(q.tipo.replace("_"," "))+'</span><p lang="en"><b>'+esc(q.pregunta_en)+'</b></p>' +
+          (q.explicacion_es ? '<p class="small">'+esc(q.explicacion_es)+'</p>' : '') + '</div><button class="link-btn del" type="button" data-act="e-del" data-e="preguntas" data-i="'+i+'">🗑</button></div>';
+      }).join("") +
+      '<h3 class="sec-title">Vocabulario</h3>' + d.vocabulario.map(function(v, i){
+        return '<div class="srow"><div style="flex:1"><b lang="en">'+esc(v.en)+'</b> → '+esc(v.es)+'</div><button class="link-btn del" type="button" data-act="e-del" data-e="vocabulario" data-i="'+i+'">🗑</button></div>';
+      }).join("") + '</section>' +
+      '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="e-save">💾 Guardar el tema</button></div>';
+  }
+  return h + footer();
+}
+function renderWeeks(){
+  var ws = weeksList(), t = todayKey(), h = momHeader("Agenda y materiales", "mom-go", "← Zona de mamá");
+  h += '<section class="card mom"><p>Elige una semana para ver o corregir sus tareas, materiales y videos.</p><div class="stack">' +
+    ws.map(function(w){
+      var ag = S.agenda, n = ag.tareas.filter(function(x){ return x.semana === w; }).length, m = ag.materiales.filter(function(x){ return x.semana === w; }).length, v = ag.videos.filter(function(x){ return x.semana === w; }).length;
+      return '<button class="btn btn-blue" type="button" data-act="week-edit" data-v="'+esc(w)+'">Semana del '+esc(w)+' · '+n+' tareas · '+m+' materiales · '+v+' videos</button>';
+    }).join("") + (ws.length ? "" : '<p class="small">Todavía no hay una agenda cargada. Usa «Importar» o crea una semana a mano.</p>') +
+    '<button class="btn btn-sun" type="button" data-act="week-new">+ Nueva semana a mano</button></div></section>';
+  return h + footer();
+}
+function renderTemasMom(){
+  var h = momHeader("Temas de estudio", "mom-go", "← Zona de mamá");
+  h += '<section class="card mom">' + (S.temas.length ? S.temas.map(function(t){
+    return '<div class="srow"><div style="flex:1;min-width:0"><b>'+esc(t.titulo_es||t.titulo)+'</b><p class="small">'+esc(t.materia||"")+' · '+t.preguntas.length+' preguntas · '+t.vocabulario.length+' palabras'+(t.fecha_examen ? ' · examen '+esc(t.fecha_examen) : '')+'</p></div>' +
+      '<button class="link-btn del" type="button" data-act="ask-deltema" data-id="'+esc(t.id)+'">🗑 Borrar</button></div>';
+  }).join("") : '<p>Todavía no hay temas cargados. Usa «Importar».</p>') + '</section>' +
+  '<p class="small" style="text-align:center">El tema de OVER-/UNDER- viene incluido en la página y no se borra.</p>';
+  return h + footer();
+}
+
+/* ---- Guardar ---- */
+function applyAgenda(d){
+  var sem = d.semana, ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
+  function keep(x){ return x.semana !== sem; }
+  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega}; }));
+  ag.materiales = ag.materiales.filter(keep).concat(d.materiales.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, material:x.material, llevar_el:x.llevar_el}; }));
+  ag.videos = ag.videos.filter(keep).concat(d.videos.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, url:x.url, fecha:x.fecha}; }));
+  ag.notas = (ag.notas || []).filter(keep).concat(d.notas.filter(function(n){ return str(n); }).map(function(n){ return {semana:sem, texto:str(n)}; }));
+  var firstReal = !S.agenda;
+  S.agenda = ag; saveContent();
+  if(firstReal){
+    ["tasks","vids","mats","have","days"].forEach(function(m){ Object.keys(S.home[m]).forEach(function(k){ if(/^(d-|demo:)/.test(k)) delete S.home[m][k]; }); });
+    saveHome();
+  }
+}
+function draftFromWeek(sem){
+  var ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
+  function id(x){ return String(x.id).indexOf(pre) === 0 ? String(x.id).slice(pre.length) : x.id; }
+  function w(x){ return x.semana === sem; }
+  return {semana:sem,
+    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||""}; }),
+    materiales:ag.materiales.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", material:x.material||"", llevar_el:x.llevar_el||""}; }),
+    videos:ag.videos.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", url:x.url||"", fecha:x.fecha||""}; }),
+    notas:(ag.notas||[]).filter(w).map(function(n){ return n.texto; })};
+}
+function newId(p){ return p + Date.now().toString(36) + Math.floor(Math.random()*1000).toString(36); }
+function sampleAgendaText(){
+  var t = todayKey(), mon = mondayOf(t);
+  return JSON.stringify({tipo:"agenda", semana:mon,
+    tareas:[{id:"t1", materia:"Math", titulo:"Páginas 34 y 35 del libro", detalle:"Sumas con llevada", fecha:addDays(mon,1), entrega:addDays(mon,2)},
+            {id:"t2", materia:"Spanish", titulo:"Leer la lectura y copiar 5 palabras", detalle:"", fecha:addDays(mon,2), entrega:addDays(mon,3)},
+            {id:"t3", materia:"Science", titulo:"Dibujar el ciclo del agua", detalle:"Con colores", fecha:addDays(mon,3), entrega:addDays(mon,4)}],
+    materiales:[{id:"m1", materia:"Art", material:"Cartulina azul y tijeras", llevar_el:addDays(mon,3)}, {id:"m2", materia:"Science", material:"Una botella plástica vacía", llevar_el:addDays(mon,4)}],
+    videos:[{id:"v1", materia:"Science", titulo:"The Water Cycle", url:"https://www.youtube.com/results?search_query=water+cycle+for+kids", fecha:addDays(mon,1)}],
+    notas_para_mama:["Reunión de padres el viernes"]}, null, 2);
+}
+
+/* ---- Clics y escritura de la zona de mamá ---- */
+function extraClick(act, el, ev){
+  if(gamesClick(act, el)) return true;
+  switch(act){
+    case "go-mom": momView = "menu"; momNote = ""; pinMsg = ""; S.screen = "mom"; helperOpen = false; writeLocal(); render({top:true}); return true;
+    case "pin-go": pinGo(); return true;
+    case "mom-go":
+      var v = el.getAttribute("data-v") || "menu";
+      momView = v; pinMsg = ""; momNote = "";
+      if(v === "import"){ imp.msg = ""; imp.errors = []; }
+      if(v === "pin"){ momOk = true; }
+      render({top:true}); return true;
+    case "imp-clear": imp = {text:"", msg:"", kind:null, draft:null, errors:[], warnings:[], src:"import"}; render(); return true;
+    case "imp-sample":
+      if(el.getAttribute("data-v") === "agenda"){ imp.text = sampleAgendaText(); imp.msg = ""; imp.errors = []; render(); }
+      else fetch("ejemplos/tema-ejemplo.json").then(function(r){ if(!r.ok) throw 0; return r.text(); }).then(function(t){ imp.text = t; imp.msg = ""; imp.errors = []; render(); })
+        .catch(function(){ imp.msg = "No pude cargar el ejemplo (¿hay internet?)."; render(); });
+      return true;
+    case "imp-check":
+      imp.text = val("imptext") || imp.text; imp.msg = ""; imp.errors = []; imp.warnings = [];
+      var pr = parseImportText(imp.text);
+      if(!pr.ok){ imp.msg = pr.msg; render(); return true; }
+      var o = pr.obj;
+      if(!o || typeof o !== "object" || Array.isArray(o)){ imp.msg = "El contenido debe ser un solo bloque que empiece con { ."; render(); return true; }
+      var res;
+      if(o.tipo === "agenda") res = validateAgenda(o);
+      else if(o.tipo === "tema") res = validateTema(o);
+      else { imp.msg = "Falta el campo «tipo»: debe decir \"agenda\" o \"tema\"."; render(); return true; }
+      imp.kind = o.tipo; imp.draft = res.draft; imp.errors = res.errors; imp.warnings = res.warnings; imp.src = "import"; imp.exists = false;
+      if(!res.errors.length){ momView = "preview"; render({top:true}); } else render();
+      return true;
+    case "week-edit": imp = {text:"", msg:"", kind:"agenda", draft:draftFromWeek(el.getAttribute("data-v")), errors:[], warnings:[], src:"manual", exists:true}; momView = "edit"; render({top:true}); return true;
+    case "week-new":
+      imp = {text:"", msg:"", kind:"agenda", draft:{semana:mondayOf(todayKey()), tareas:[], materiales:[], videos:[], notas:[]}, errors:[], warnings:[], src:"manual", exists:false};
+      momView = "edit"; render({top:true}); return true;
+    case "e-add":
+      var k = el.getAttribute("data-e"), d = imp.draft, t = todayKey();
+      if(k === "tareas") d.tareas.push({id:newId("t"), materia:"", titulo:"", detalle:"", fecha:t, entrega:""});
+      if(k === "materiales") d.materiales.push({id:newId("m"), materia:"", material:"", llevar_el:t});
+      if(k === "videos") d.videos.push({id:newId("v"), materia:"", titulo:"", url:"", fecha:t});
+      if(k === "notas") d.notas.push("");
+      render(); return true;
+    case "e-del":
+      imp.draft[el.getAttribute("data-e")].splice(+el.getAttribute("data-i"), 1); render(); return true;
+    case "e-save":
+      imp.msg = ""; imp.errors = [];
+      if(imp.kind === "agenda"){
+        var d2 = imp.draft;
+        var chk = validateAgenda({tipo:"agenda", semana:d2.semana, tareas:d2.tareas, materiales:d2.materiales, videos:d2.videos, notas_para_mama:d2.notas});
+        if(chk.errors.length){ imp.errors = chk.errors; imp.warnings = chk.warnings; render(); return true; }
+        applyAgenda(chk.draft); momNote = "✅ Agenda guardada: semana del " + chk.draft.semana + ".";
+      } else {
+        var t2 = imp.draft, i, found = false;
+        if(!t2.preguntas.length){ imp.errors = ["El tema debe tener al menos una pregunta."]; render(); return true; }
+        for(i=0;i<S.temas.length;i++) if(S.temas[i].id === t2.id){ S.temas[i] = t2; found = true; }
+        if(!found) S.temas.push(t2);
+        saveContent(); momNote = "✅ Tema guardado: " + (t2.titulo_es || t2.titulo) + ".";
+      }
+      imp.draft = null; imp.text = ""; momView = "menu"; render({top:true}); return true;
+    case "ask-deltema": modal = {type:"deltema", id:el.getAttribute("data-id")}; render(); return true;
+    case "do-deltema":
+      S.temas = S.temas.filter(function(x){ return x.id !== modal.id; }); modal = null; saveContent(); render(); return true;
+    case "ask-delweek": modal = {type:"delweek", sem:imp.draft.semana}; render(); return true;
+    case "do-delweek":
+      var sem = modal.sem; modal = null;
+      if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
+      saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
+    /* tareas y materiales */
+    case "have":
+      var id = el.getAttribute("data-id");
+      S.home.have[id] = S.home.have[id] > 0 ? -Date.now() : Date.now();   /* negativo = quitado; gana el más reciente */
+      saveHome(); render(); return true;
+    case "study": studyId = el.getAttribute("data-id"); S.screen = "study"; writeLocal(); render({top:true}); return true;
+    /* diccionario */
+    case "dict-open": dict.topic = el.getAttribute("data-id"); dict.flip = {}; dict.quiz = null; S.screen = "dict"; writeLocal(); render({top:true}); return true;
+    case "dict-back": dict.topic = null; dict.quiz = null; render({top:true}); return true;
+    case "flip": var fi = el.getAttribute("data-i"); dict.flip[fi] = !dict.flip[fi]; render(); return true;
+    case "dict-play": startQuiz2(topicById(dict.topic)); render({top:true}); return true;
+    case "dict-end": dict.quiz = null; render({top:true}); return true;
+    case "dict-pick":
+      var qz = dict.quiz, it = qz.items[qz.i]; if(it.pick !== null) return true;
+      it.pick = el.getAttribute("data-v");
+      if(it.pick === it.w.es){
+        qz.ok++; var kk = wkey(it.w._tid || dict.topic, it.w);
+        S.home.known[kk] = S.home.known[kk] || Date.now();
+        if(S.home.weak[kk] > 0) S.home.weak[kk] = -Date.now();
+        saveHome();
+      }
+      render(); return true;
+    case "dict-next":
+      var q3 = dict.quiz;
+      if(q3.i >= q3.items.length - 1){ q3.done = true; gameDone(); } else q3.i++;
+      render({top:true}); return true;
+  }
+  return false;
+}
+function extraInput(ev){
+  var t = ev.target;
+  if(t.id === "imptext"){ imp.text = t.value; return true; }
+  if(t.id === "semana" && imp.draft){ imp.draft.semana = t.value; return true; }
+  var e = t.getAttribute && t.getAttribute("data-e");
+  if(e && imp.draft){
+    var i = +t.getAttribute("data-i"), f = t.getAttribute("data-f");
+    if(e === "notas") imp.draft.notas[i] = t.value; else if(imp.draft[e] && imp.draft[e][i]) imp.draft[e][i][f] = t.value;
+    return true;
+  }
+  return false;
+}
+

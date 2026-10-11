@@ -1,6 +1,6 @@
 /* Guarda la página en el aparato para que abra aunque no haya internet. */
-var V = "kx-v1";
-var CORE = ["./", "index.html", "sync.js", "vendor/supabase.js", "manifest.webmanifest", "icon-192.png"];
+var V = "kx-v2";
+var CORE = ["./", "index.html", "sync.js", "js/data.js", "js/core.js", "js/inicio.js", "js/mama.js", "js/juegos.js", "js/examen.js", "vendor/supabase.js", "manifest.webmanifest", "icon-192.png"];
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open(V).then(function(c){ return c.addAll(CORE); }).then(function(){ return self.skipWaiting(); }));
 });

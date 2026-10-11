@@ -1,6 +1,10 @@
 # Formato de importación de Killian Aprende
 
-La página no usa inteligencia artificial. Tú le pasas a Claude (en el chat) lo que manda la escuela y Claude te devuelve un bloque de texto con este formato. Lo pegas en **🔒 Zona de mamá → Importar agenda o tema**, revisas la vista previa y guardas.
+La página no usa inteligencia artificial. Tú le pasas a Claude lo que manda la escuela (PDF, foto o texto) y Claude lo convierte a este formato.
+
+**Hay dos maneras de cargarlo:**
+1. **Automática (la normal):** Claude guarda el archivo en el proyecto (`data/agenda-actual.json` para la agenda, `data/temas/` para los temas) y lo publica. La página lo lee sola en todos los aparatos, sin que tú importes nada.
+2. **A mano:** pegas el bloque en **🔒 Zona de mamá → Importar agenda o tema**, revisas la vista previa y guardas. Sirve para probar o corregir algo rápido.
 
 Hay dos tipos de archivo: **agenda** (la semana) y **tema** (un tema de estudio con examen).
 
@@ -129,3 +133,27 @@ Hay un tema completo de ejemplo en `ejemplos/tema-ejemplo.json`. En la página t
 ## Si la página dice que algo está mal
 
 La página revisa el archivo antes de guardar y te explica en español qué falta (por ejemplo: «Tarea 2: falta la fecha o no es válida»). Copia esos mensajes en el chat y pídele a Claude que corrija el archivo. También puedes arreglar cosas a mano en la vista previa: editar, quitar o agregar tareas, materiales y videos.
+
+
+---
+
+## Carga automática desde el proyecto
+
+- **Agenda:** el archivo `data/agenda-actual.json` es la agenda vigente. Cuando cambia, la página **reemplaza toda la agenda anterior** (así desaparecen las semanas viejas y los datos de ejemplo). Lo que Killian ya marcó se conserva. Puede traer una sola agenda o una lista: `{ "agendas": [ {…semana 1…}, {…semana 2…} ] }`.
+- **Temas:** cada tema es un archivo en `data/temas/` y se anota en `data/temas/index.json`, por ejemplo `["science-water-cycle.json"]`. Un tema con el mismo `id` reemplaza al anterior.
+- La página solo vuelve a aplicar un archivo cuando su contenido cambia. Si corriges algo a mano en la zona de mamá, se conserva hasta que el archivo cambie otra vez.
+
+## Campos opcionales de las preguntas
+
+| Campo | Para qué sirve |
+|---|---|
+| `preguntas_por_ronda` (en el tema) | Cuántas preguntas tiene cada intento (de 3 a 50; por defecto 10) |
+| `ejemplo_en`, `ejemplo_es` | Un ejemplo que Killian ve cuando se equivoca |
+| `pista_es` | Pista en español que solo aparece desde el segundo intento (en «completar») |
+| `peso` | Cuánto vale la pregunta en la nota (por defecto 1) |
+
+**Cómo se arman los intentos:** el primer intento toma preguntas al azar del banco. «Intentarlo otra vez» da preguntas que Killian **todavía no vio**, con prioridad a los subtemas que falló. Por eso conviene un banco grande (20 preguntas o más) y poner bien el `subtema` de cada una.
+
+## Mini vocabulario
+
+Al terminar cada examen, Killian hace un mini vocabulario de 5 a 8 palabras del tema (elige o escribe el significado; se aceptan mayúsculas, acentos y las variantes de `aceptadas`). Las que falla pasan a **«Mis palabras para practicar»** en el diccionario.
