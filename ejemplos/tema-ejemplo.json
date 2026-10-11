@@ -1,0 +1,319 @@
+{
+  "tipo": "tema",
+  "id": "ejemplo-ciclo-del-agua",
+  "materia": "Science",
+  "titulo": "The Water Cycle (ejemplo)",
+  "titulo_es": "El ciclo del agua (ejemplo)",
+  "fecha_examen": "2026-12-01",
+  "resumen": [
+    {
+      "en": "Water evaporates when the sun heats it.",
+      "es": "El agua se evapora cuando el sol la calienta.",
+      "emoji": "☀️"
+    },
+    {
+      "en": "Water vapor goes up and cools down.",
+      "es": "El vapor sube y se enfría.",
+      "emoji": "⬆️"
+    },
+    {
+      "en": "Condensation makes clouds.",
+      "es": "La condensación forma las nubes.",
+      "emoji": "☁️"
+    },
+    {
+      "en": "Rain falls from the clouds.",
+      "es": "La lluvia cae de las nubes.",
+      "emoji": "🌧️"
+    },
+    {
+      "en": "Water goes back to the rivers and the sea.",
+      "es": "El agua vuelve a los ríos y al mar.",
+      "emoji": "🌊"
+    }
+  ],
+  "subtemas": [
+    "evaporation",
+    "condensation",
+    "precipitation"
+  ],
+  "preguntas": [
+    {
+      "id": "q1",
+      "subtema": "evaporation",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What makes water evaporate?",
+      "pregunta_es": "¿Qué hace que el agua se evapore?",
+      "opciones": [
+        "The sun",
+        "The moon",
+        "The wind",
+        "The snow"
+      ],
+      "correcta": "The sun",
+      "explicacion_es": "El sol calienta el agua y la convierte en vapor. La luna no da calor."
+    },
+    {
+      "id": "q2",
+      "subtema": "evaporation",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "When water evaporates, it becomes...",
+      "pregunta_es": "Cuando el agua se evapora, se convierte en...",
+      "opciones": [
+        "water vapor",
+        "ice",
+        "a rock",
+        "sand"
+      ],
+      "correcta": "water vapor",
+      "explicacion_es": "Evaporarse es pasar de líquido a vapor de agua, un gas que no se ve."
+    },
+    {
+      "id": "q3",
+      "subtema": "evaporation",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Evaporation happens when water gets hot.",
+      "pregunta_es": "La evaporación ocurre cuando el agua se calienta.",
+      "correcta": true,
+      "explicacion_es": "Verdadero: el calor hace que el agua suba al aire como vapor."
+    },
+    {
+      "id": "q4",
+      "subtema": "evaporation",
+      "tipo": "completar",
+      "pregunta_en": "The sun heats the water and it ______.",
+      "pregunta_es": "El sol calienta el agua y se ______.",
+      "respuesta": "evaporates",
+      "aceptadas": [
+        "evaporate"
+      ],
+      "explicacion_es": "«Evaporates» significa que se evapora, que sube como vapor."
+    },
+    {
+      "id": "q5",
+      "subtema": "condensation",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What forms when water vapor gets cold?",
+      "pregunta_es": "¿Qué se forma cuando el vapor de agua se enfría?",
+      "opciones": [
+        "clouds",
+        "volcanoes",
+        "sand",
+        "mountains"
+      ],
+      "correcta": "clouds",
+      "explicacion_es": "Cuando el vapor sube y se enfría, se junta en gotitas y forma nubes."
+    },
+    {
+      "id": "q6",
+      "subtema": "condensation",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Condensation turns water vapor into tiny drops.",
+      "pregunta_es": "La condensación convierte el vapor en gotitas.",
+      "correcta": true,
+      "explicacion_es": "Verdadero: el vapor frío se vuelve gotitas de agua."
+    },
+    {
+      "id": "q7",
+      "subtema": "condensation",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Condensation happens when vapor gets...",
+      "pregunta_es": "La condensación ocurre cuando el vapor se pone...",
+      "opciones": [
+        "cold",
+        "hot",
+        "dry",
+        "fast"
+      ],
+      "correcta": "cold",
+      "explicacion_es": "Al enfriarse, el vapor se convierte otra vez en agua."
+    },
+    {
+      "id": "q8",
+      "subtema": "condensation",
+      "tipo": "completar",
+      "pregunta_en": "Water vapor turns into clouds by ______.",
+      "pregunta_es": "El vapor se convierte en nubes por ______.",
+      "respuesta": "condensation",
+      "aceptadas": [],
+      "explicacion_es": "Condensation es el cambio de vapor a gotitas de agua."
+    },
+    {
+      "id": "q9",
+      "subtema": "precipitation",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which one is precipitation?",
+      "pregunta_es": "¿Cuál es precipitación?",
+      "opciones": [
+        "rain",
+        "wind",
+        "sun",
+        "sand"
+      ],
+      "correcta": "rain",
+      "explicacion_es": "La precipitación es el agua que cae de las nubes: lluvia, nieve o granizo."
+    },
+    {
+      "id": "q10",
+      "subtema": "precipitation",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Snow is a kind of precipitation.",
+      "pregunta_es": "La nieve es un tipo de precipitación.",
+      "correcta": true,
+      "explicacion_es": "Verdadero: la nieve también cae de las nubes."
+    },
+    {
+      "id": "q11",
+      "subtema": "precipitation",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Precipitation goes up into the sky.",
+      "pregunta_es": "La precipitación sube al cielo.",
+      "correcta": false,
+      "explicacion_es": "Falso: la precipitación cae desde las nubes hacia la tierra."
+    },
+    {
+      "id": "q12",
+      "subtema": "precipitation",
+      "tipo": "completar",
+      "pregunta_en": "Rain falls from the ______.",
+      "pregunta_es": "La lluvia cae de las ______.",
+      "respuesta": "clouds",
+      "aceptadas": [
+        "cloud"
+      ],
+      "explicacion_es": "Las nubes se llenan de agua y la dejan caer como lluvia."
+    },
+    {
+      "id": "q13",
+      "subtema": "evaporation",
+      "tipo": "unir",
+      "pregunta_en": "Match the words.",
+      "pregunta_es": "Une las palabras.",
+      "pares": [
+        {
+          "izquierda": "sun",
+          "derecha": "sol"
+        },
+        {
+          "izquierda": "cloud",
+          "derecha": "nube"
+        },
+        {
+          "izquierda": "rain",
+          "derecha": "lluvia"
+        },
+        {
+          "izquierda": "water",
+          "derecha": "agua"
+        }
+      ],
+      "explicacion_es": "Son las palabras básicas del ciclo del agua."
+    },
+    {
+      "id": "q14",
+      "subtema": "precipitation",
+      "tipo": "unir",
+      "pregunta_en": "Match the words.",
+      "pregunta_es": "Une las palabras.",
+      "pares": [
+        {
+          "izquierda": "snow",
+          "derecha": "nieve"
+        },
+        {
+          "izquierda": "ice",
+          "derecha": "hielo"
+        },
+        {
+          "izquierda": "river",
+          "derecha": "río"
+        },
+        {
+          "izquierda": "sea",
+          "derecha": "mar"
+        }
+      ],
+      "explicacion_es": "El agua pasa por ríos y mares, y puede caer como nieve o hielo."
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "cloud",
+      "es": "nube",
+      "aceptadas": [
+        "nube",
+        "nubes"
+      ],
+      "ejemplo_en": "The cloud is gray.",
+      "ejemplo_es": "La nube es gris."
+    },
+    {
+      "en": "rain",
+      "es": "lluvia",
+      "aceptadas": [
+        "lluvia",
+        "llover"
+      ],
+      "ejemplo_en": "The rain falls on the park.",
+      "ejemplo_es": "La lluvia cae sobre el parque."
+    },
+    {
+      "en": "sun",
+      "es": "sol",
+      "aceptadas": [
+        "sol"
+      ],
+      "ejemplo_en": "The sun is hot.",
+      "ejemplo_es": "El sol está caliente."
+    },
+    {
+      "en": "water",
+      "es": "agua",
+      "aceptadas": [
+        "agua"
+      ],
+      "ejemplo_en": "I drink water.",
+      "ejemplo_es": "Yo bebo agua."
+    },
+    {
+      "en": "vapor",
+      "es": "vapor",
+      "aceptadas": [
+        "vapor"
+      ],
+      "ejemplo_en": "Water vapor goes up.",
+      "ejemplo_es": "El vapor de agua sube."
+    },
+    {
+      "en": "snow",
+      "es": "nieve",
+      "aceptadas": [
+        "nieve"
+      ],
+      "ejemplo_en": "Snow is cold.",
+      "ejemplo_es": "La nieve es fría."
+    },
+    {
+      "en": "river",
+      "es": "río",
+      "aceptadas": [
+        "rio",
+        "río"
+      ],
+      "ejemplo_en": "The river is long.",
+      "ejemplo_es": "El río es largo."
+    },
+    {
+      "en": "cold",
+      "es": "frío",
+      "aceptadas": [
+        "frio",
+        "frío",
+        "fría",
+        "fria"
+      ],
+      "ejemplo_en": "The water is cold.",
+      "ejemplo_es": "El agua está fría."
+    }
+  ]
+}

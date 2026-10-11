@@ -229,6 +229,89 @@ button{font:inherit; color:inherit; cursor:pointer}
 .bubble{position:fixed; right:calc(14px + env(safe-area-inset-right,0px)); bottom:calc(94px + env(safe-area-inset-bottom,0px)); max-width:min(320px, calc(100vw - 28px)); background:#fff; border:4px solid var(--sun); border-radius:22px; padding:14px 16px; box-shadow:0 10px 24px rgba(18,48,107,.25); z-index:10; display:flex; flex-direction:column; gap:8px}
 .app{padding-bottom:96px}
 
+/* inicio en dos columnas, mamá, diccionario */
+.app.wide{max-width:1040px}
+.homegrid{display:grid; gap:16px; grid-template-columns:minmax(0,1fr)}
+.maincol{display:flex; flex-direction:column; gap:16px; min-width:0}
+.matsweek{display:flex; flex-direction:column; gap:8px; align-self:start}
+.matsweek .small, .small{font-size:.9rem; color:var(--blue-d)}
+.matsweek .grp{font-family:var(--font-display); font-size:1.05rem; color:var(--blue); margin-top:4px}
+.mrow{display:flex; gap:10px; align-items:center; justify-content:space-between; padding:8px 0; border-bottom:2px solid var(--sky); flex-wrap:wrap}
+.mrow .mtxt{display:flex; flex-direction:column; min-width:0; flex:1 1 140px}
+.mrow .mtxt span{font-size:.85rem; color:var(--blue-d); text-transform:capitalize}
+.mrow.taken{opacity:.6}
+.mrow.taken b{text-decoration:line-through}
+.have{min-height:44px; padding:6px 14px; border-radius:999px; border:3px solid var(--sky-2); background:#fff; font-weight:800; color:var(--blue-d)}
+.have.on{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+.pill{display:inline-block; background:var(--sky); border-radius:999px; padding:2px 12px; font-size:.85rem; font-weight:800}
+.pill.ok{background:var(--ok-bg); color:var(--ok)}
+@media (min-width:900px){
+  .homegrid{grid-template-columns:minmax(0,1fr) 340px; align-items:start}
+  .matsweek{position:sticky; top:12px}
+  .tiles{grid-template-columns:repeat(4,1fr)}
+}
+.momgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+.mom{display:flex; flex-direction:column; gap:12px}
+.mom .sec-title{margin-top:8px}
+.fld{display:flex; flex-direction:column; gap:4px; min-width:0}
+.fld>span{font-size:.85rem; font-weight:800; color:var(--blue-d)}
+.fld input, .fld textarea{width:100%; font:inherit; font-size:1rem; font-weight:700; padding:10px 12px; border:3px solid var(--sky-2); border-radius:14px; color:var(--ink); background:#fff; min-height:48px}
+.fld textarea{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9rem; min-height:160px}
+.fld input:focus, .fld textarea:focus{outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba(255,201,40,.7)}
+.erow{display:grid; gap:8px; background:var(--sky); border-radius:18px; padding:12px}
+.erow .del{justify-self:end}
+.warn{background:#fff8dc; border:3px solid var(--sun); border-radius:14px; padding:10px 14px}
+.warn ul, .err ul{margin:6px 0 0; padding-left:1.2em}
+.err{background:var(--bad-bg); color:var(--bad); border-radius:14px; padding:10px 14px}
+.good-note{background:var(--ok-bg); color:var(--ok); border-radius:14px; padding:10px 14px}
+.srow{display:flex; gap:10px; align-items:flex-start; padding:10px 0; border-bottom:2px solid var(--sky); min-width:0}
+.srow>div{min-width:0}
+.srow p{margin:0}
+.semo{font-size:1.8rem; flex:none}
+.pinbox{display:flex; flex-direction:column; gap:10px; width:100%; max-width:320px; text-align:left}
+.pinbox label{font-weight:800; color:var(--blue-d)}
+.pinbox input{font:inherit; font-size:2rem; letter-spacing:.5em; text-align:center; padding:10px; border:4px solid var(--sky-2); border-radius:16px; min-height:64px; width:100%}
+.dtopics{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px}
+.dtopic{display:flex; flex-direction:column; gap:6px; align-items:center; text-align:center; background:#fff; border:3px solid var(--sky-2); border-radius:24px; padding:16px 12px; box-shadow:0 6px 0 var(--sky-2); font-family:var(--font-display); font-size:1.15rem; color:var(--blue-d)}
+.dtopic .big{font-size:2.4rem; line-height:1}
+.dtopic .bar{width:100%; height:12px}
+.cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px}
+.fcard{position:relative; display:flex; flex-direction:column; gap:6px; align-items:center; justify-content:center; text-align:center; min-height:130px; padding:12px; background:#fff; border:3px solid var(--sky-2); border-radius:22px; box-shadow:0 5px 0 var(--sky-2); font-size:1rem}
+.fcard b{font-family:var(--font-display); font-size:1.6rem; line-height:1.1; color:var(--blue-d); overflow-wrap:anywhere}
+.fcard .hint{font-size:.8rem; color:var(--skip)}
+.fcard.back{background:var(--blue); border-color:var(--blue-d); box-shadow:0 5px 0 var(--blue-d); color:#fff}
+.fcard.back b{color:#fff}
+.fcard .ex{font-size:.85rem; font-weight:700}
+.fcard .ex2{font-size:.8rem; opacity:.9}
+.fcard .kn{position:absolute; top:6px; right:8px; width:26px; height:26px; border-radius:50%; background:var(--ok); color:#fff; display:grid; place-items:center; font-size:.9rem}
+.opt.good{background:var(--ok-bg); border-color:var(--ok); box-shadow:0 4px 0 var(--ok)}
+.opt.bad{background:var(--bad-bg); border-color:var(--bad); box-shadow:0 4px 0 var(--bad)}
+.opt[disabled]{cursor:default}
+.fb{font-family:var(--font-display); font-weight:800; font-size:1.2rem}
+.fb.good{color:var(--ok)} .fb.bad{color:var(--bad)}
+
+/* juegos */
+.gcards{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px}
+.gcard{display:flex; flex-direction:column; gap:6px; align-items:center; text-align:center; background:#fff; border:3px solid var(--sky-2); border-radius:24px; padding:18px 12px; box-shadow:0 6px 0 var(--sky-2); font-size:1rem; color:var(--blue-d)}
+.gcard .big{font-size:2.6rem; line-height:1}
+.gcard b{font-family:var(--font-display); font-size:1.4rem}
+.tile.locked{opacity:.6; background:var(--skip-bg); border-style:dashed}
+.tiles .tile:last-child:nth-child(odd){grid-column:1/-1}
+.mem{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+@media (min-width:600px){ .mem{grid-template-columns:repeat(4,1fr)} }
+.mcard{min-height:92px; padding:6px; border-radius:18px; border:3px solid var(--blue-d); background:var(--blue); color:#fff; display:grid; place-items:center; font-family:var(--font-display); font-weight:800; font-size:1.05rem; line-height:1.15; overflow-wrap:anywhere; box-shadow:0 5px 0 var(--blue-d)}
+.mcard svg{width:44px; height:44px}
+.mcard.up{background:#fff; color:var(--ink); border-color:var(--sun)}
+.mcard.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+.mcard[disabled]{opacity:1; cursor:default}
+.slots{display:flex; flex-wrap:wrap; gap:8px; justify-content:center}
+.slot{width:44px; height:54px; border-bottom:5px solid var(--sun); display:grid; place-items:center; font-family:var(--font-display); font-weight:800; font-size:1.8rem; color:var(--blue-d)}
+.slot.fill{background:var(--sky); border-radius:12px 12px 0 0}
+.slot.hintch{color:var(--skip)}
+.letters{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+.lt{width:56px; height:60px; border-radius:16px; border:3px solid var(--sky-2); background:#fff; font-family:var(--font-display); font-weight:800; font-size:1.7rem; color:var(--blue-d); box-shadow:0 4px 0 var(--sky-2); padding:0}
+.lt[disabled]{opacity:.35}
+
 /* entrada y estado de la nube */
 .auth{display:flex; flex-direction:column; gap:12px; text-align:center; align-items:center}
 .auth .owl{width:120px; height:120px}
@@ -475,34 +558,60 @@ var EXAM_STEPS = (function(){
 
 /* --------------------------------------------------------------- ESTADO */
 function freshExam(){ return {idx:0, answers:{}, done:false}; }
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, best:0, tries:0, prac:0}; }
-function fresh(){ return {screen:"home", mode:"exam", exam:freshExam(), practice:null, vc:{}, home:freshHome(), agenda:null}; }
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays"], HNUMS = ["best","tries","prac","games","speed"];
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
+function fresh(){ return {screen:"home", mode:"exam", exam:freshExam(), practice:null, vc:{}, home:freshHome(), agenda:null, temas:[], pinHash:"", pinSalt:"", cAt:0}; }
 function normHome(h){
   var o = freshHome();
   if(!h || typeof h !== "object") return o;
-  ["tasks","mats","vids","days"].forEach(function(k){ if(h[k] && typeof h[k] === "object") o[k] = h[k]; });
-  ["best","tries","prac"].forEach(function(k){ o[k] = +h[k] || 0; });
+  HMAPS.forEach(function(k){ if(h[k] && typeof h[k] === "object") o[k] = h[k]; });
+  HNUMS.forEach(function(k){ o[k] = +h[k] || 0; });
   return o;
 }
 function mergeHome(a, b){
   a = normHome(a); b = normHome(b);
   var o = freshHome();
-  ["tasks","mats","vids","days"].forEach(function(k){
+  HMAPS.forEach(function(k){
     var m = {}, i;
     for(i in a[k]) m[i] = a[k][i];
-    for(i in b[k]) if(!(i in m) || b[k][i] < m[i]) m[i] = b[k][i];
+    for(i in b[k]){
+      if(!(i in m)) m[i] = b[k][i];
+      else if(k === "have") m[i] = Math.abs(b[k][i]) > Math.abs(m[i]) ? b[k][i] : m[i];   /* gana el más reciente */
+      else if(k === "gdays") m[i] = Math.max(b[k][i], m[i]);
+      else if(b[k][i] < m[i]) m[i] = b[k][i];                                              /* se conserva la primera vez */
+    }
     o[k] = m;
   });
-  ["best","tries","prac"].forEach(function(k){ o[k] = Math.max(a[k], b[k]); });
+  HNUMS.forEach(function(k){ o[k] = Math.max(a[k], b[k]); });
   return o;
 }
 function homeEq(a, b){
   a = normHome(a); b = normHome(b);
-  var ok = ["tasks","mats","vids","days"].every(function(k){
+  var ok = HMAPS.every(function(k){
     var ka = Object.keys(a[k]), kb = Object.keys(b[k]);
     return ka.length === kb.length && ka.every(function(i){ return a[k][i] === b[k][i]; });
   });
-  return ok && a.best === b.best && a.tries === b.tries && a.prac === b.prac;
+  return ok && HNUMS.every(function(k){ return a[k] === b[k]; });
+}
+function homeEmpty(h){ return homeEq(h, freshHome()); }
+/* Agenda, temas y PIN: se revisan al leerlos para que un dato dañado no rompa la página. */
+function normContent(c){
+  var o = {agenda:null, temas:[], pinHash:"", pinSalt:"", cAt:0};
+  if(!c || typeof c !== "object") return o;
+  var a = c.agenda;
+  if(a && typeof a === "object" && Array.isArray(a.tareas) && Array.isArray(a.materiales) && Array.isArray(a.videos)){
+    o.agenda = {tareas:a.tareas.filter(function(x){ return x && x.id && x.fecha; }),
+      materiales:a.materiales.filter(function(x){ return x && x.id && x.llevar_el; }),
+      videos:a.videos.filter(function(x){ return x && x.id && x.fecha; }),
+      notas:Array.isArray(a.notas) ? a.notas.filter(function(n){ return n && n.texto; }) : []};
+  }
+  if(Array.isArray(c.temas)) o.temas = c.temas.filter(function(t){
+    return t && t.id && Array.isArray(t.preguntas) && Array.isArray(t.vocabulario) && Array.isArray(t.resumen);
+  });
+  if(typeof c.pinHash === "string") o.pinHash = c.pinHash;
+  if(typeof c.pinSalt === "string") o.pinSalt = c.pinSalt;
+  o.cAt = +c.cAt || 0;
+  return o;
 }
 
 function load(){
@@ -518,9 +627,10 @@ function load(){
 function normalize(s){
   try{
     if(!s || typeof s !== "object" || !s.exam || typeof s.exam.answers !== "object") return fresh();
-    if(["home","topics","stars","dict","welcome","quiz","results"].indexOf(s.screen) < 0) s.screen = "home";
+    if(["home","topics","stars","dict","study","mom","games","welcome","quiz","results"].indexOf(s.screen) < 0) s.screen = "home";
     s.home = normHome(s.home);
-    if(!s.agenda || !Array.isArray(s.agenda.tareas)) s.agenda = null;
+    var nc = normContent(s);
+    s.agenda = nc.agenda; s.temas = nc.temas; s.pinHash = nc.pinHash; s.pinSalt = nc.pinSalt; s.cAt = nc.cAt;
     s.exam.idx = Math.min(Math.max(+s.exam.idx || 0, 0), EXAM_STEPS.length-1);
     s.vc = s.vc || {};
     if(s.mode === "practice"){
@@ -533,44 +643,42 @@ function normalize(s){
   }catch(e){ return fresh(); }
 }
 var S = load();
-function cloudPayload(){ return {at:S.at, mode:S.mode, exam:S.exam, practice:S.practice, vc:S.vc, home:S.home, agenda:S.agenda}; }
+function rowExam(){ return {at:S.at, mode:S.mode, exam:S.exam, practice:S.practice, vc:S.vc}; }
+function rowContent(){ return {cAt:S.cAt, agenda:S.agenda, temas:S.temas, pinHash:S.pinHash, pinSalt:S.pinSalt}; }
 function writeLocal(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); }catch(e){} }
-function save(){
-  S.at = Date.now();
-  writeLocal();
-  if(window.KXSync) KXSync.push(cloudPayload());
-}
+/* Cada parte se guarda aparte: así un aparato no pisa lo que otro cambió en otra parte. */
+function save(){ S.at = Date.now(); writeLocal(); if(window.KXSync) KXSync.push("examen", rowExam()); }
+function saveHome(){ writeLocal(); if(window.KXSync) KXSync.push("inicio", S.home); }
+function saveContent(){ S.cAt = Date.now(); writeLocal(); if(window.KXSync) KXSync.push("contenido", rowContent()); }
 function clearSaved(){ try{ localStorage.removeItem(STORE_KEY); }catch(e){} }
 
-/* Trae de la nube lo más reciente. El examen gana por fecha; lo marcado en el inicio (tareas, estrellas) se junta de todos los aparatos. */
+function isTyping(){ var a = document.activeElement; return !!a && (a.tagName === "INPUT" || a.tagName === "TEXTAREA"); }
+/* Trae de la nube lo más reciente. Examen y contenido: gana el cambio más nuevo. Inicio (tareas, estrellas): se juntan los de todos los aparatos. */
 function reconcile(){
   if(!window.KXSync || !KXSync.hasSession() || KXSync.hasPending()) return Promise.resolve();
   return KXSync.pull().then(function(r){
-    if(!r.ok) return;
-    var remote = r.value, mine = S.at || 0;
-    if(remote && (remote.at || 0) > mine){
-      if(document.activeElement && document.activeElement.id === "ans") return;
-      var screen = S.screen;
-      var n = normalize({screen:screen, mode:remote.mode, exam:remote.exam, practice:remote.practice, vc:remote.vc, home:remote.home, agenda:remote.agenda});
-      var wasEmpty = !n.exam.done && answeredCount(EXAM, n.exam.answers) === 0 && !n.practice;
-      if(wasEmpty && screen !== "quiz") n.screen = "home";
-      var merged = mergeHome(n.home, S.home), extra = !homeEq(merged, n.home);
-      n.home = merged;
-      n.at = remote.at;
-      S = n; modal = null; selWord = null; matchHint = "";
-      writeLocal();
-      if(extra) save(); else KXSync.markOk();
-      render();
-    } else if(remote && mine > (remote.at || 0)){
-      S.home = mergeHome(S.home, remote.home);
-      KXSync.push(cloudPayload());
-      render();
-    } else if(!remote && mine > 0){
-      KXSync.push(cloudPayload());
-    } else {
-      if(remote){ var m2 = mergeHome(S.home, remote.home); if(!homeEq(m2, S.home)){ S.home = m2; save(); render(); return; } }
-      KXSync.markOk();
-    }
+    if(!r.ok || KXSync.hasPending() || isTyping()) return;
+    var rows = r.rows, changed = false, pushed = false;
+    var re = rows.examen, mine = S.at || 0;
+    if(re && (re.at || 0) > mine){
+      var ne = normalize({screen:"home", mode:re.mode, exam:re.exam, practice:re.practice, vc:re.vc});
+      var wasEmpty = !ne.exam.done && answeredCount(EXAM, ne.exam.answers) === 0 && !ne.practice;
+      S.mode = ne.mode; S.exam = ne.exam; S.practice = ne.practice; S.vc = ne.vc; S.at = re.at; changed = true;
+      modal = null; selWord = null; matchHint = "";
+      if(S.screen === "results" && !store().done) S.screen = wasEmpty ? "home" : "quiz";
+      if(wasEmpty && S.screen === "welcome") S.screen = "home";
+    } else if(mine > 0 && (!re || mine > (re.at || 0))){ KXSync.push("examen", rowExam()); pushed = true; }
+    var rh = rows.inicio, merged = mergeHome(S.home, rh);
+    if(!homeEq(merged, S.home)){ S.home = merged; changed = true; }
+    if(!homeEmpty(S.home) && (!rh || !homeEq(merged, rh))){ KXSync.push("inicio", S.home); pushed = true; }
+    var rc = rows.contenido, mineC = S.cAt || 0;
+    if(rc && (rc.cAt || 0) > mineC){
+      var nc = normContent(rc);
+      S.agenda = nc.agenda; S.temas = nc.temas; S.pinHash = nc.pinHash; S.pinSalt = nc.pinSalt; S.cAt = nc.cAt; changed = true;
+    } else if(mineC > 0 && (!rc || mineC > (rc.cAt || 0))){ KXSync.push("contenido", rowContent()); pushed = true; }
+    writeLocal();
+    if(!pushed) KXSync.markOk();
+    if(changed) render();
   });
 }
 
@@ -650,36 +758,44 @@ function demoAgenda(){
 }
 function agendaData(){
   var a = S.agenda || demoAgenda();
-  return {demo:!!a.demo, tareas:a.tareas||[], materiales:a.materiales||[], videos:a.videos||[]};
+  return {demo:!!a.demo, tareas:a.tareas||[], materiales:a.materiales||[], videos:a.videos||[], notas:a.notas||[]};
 }
 var cel = {}, helperOpen = false;
 function isDone(kind, id){ var m = kind === "task" ? S.home.tasks : kind === "vid" ? S.home.vids : S.home.mats; return !!m[id]; }
 function dueItems(){
-  var ag = agendaData(), t = todayKey(), items = [];
-  ag.tareas.forEach(function(x){ if(x.fecha <= t) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
-  ag.videos.forEach(function(v){ if(v.fecha <= t) items.push({kind:"vid", id:v.id, x:v, sort:v.fecha+"0"}); });
+  var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
+  ag.tareas.forEach(function(x){ if(x.fecha <= t && x.fecha >= old) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
+  ag.videos.forEach(function(v){ if(v.fecha <= t && v.fecha >= old) items.push({kind:"vid", id:v.id, x:v, sort:v.fecha+"0"}); });
   items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
   return items;
 }
+function knownCount(){ return Object.keys(S.home.known).length; }
+/* Lo marcado en la agenda de ejemplo (ids «d-…» y días «demo:…») nunca suma estrellas. */
+function realKeys(map){ return Object.keys(map).filter(function(k){ return !/^(d-|demo:)/.test(k); }); }
+function gameStars(){ var n = 0, g = S.home.gdays; Object.keys(g).forEach(function(k){ n += Math.min(g[k], 3); }); return n; }
 function starCount(){
   var H = S.home;
-  return Object.keys(H.tasks).length + Object.keys(H.vids).length + Object.keys(H.mats).length +
-    Object.keys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + H.prac;
+  return realKeys(H.tasks).length + realKeys(H.vids).length + realKeys(H.mats).length +
+    realKeys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + H.prac +
+    Math.floor(knownCount() / 5) + gameStars();
 }
 function streak(){
-  var ks = Object.keys(S.home.days).sort(), best = 0, run = 0, prev = null;
+  var ks = realKeys(S.home.days).sort(), best = 0, run = 0, prev = null;
   ks.forEach(function(k){ run = prev && addDays(prev, 1) === k ? run + 1 : 1; best = Math.max(best, run); prev = k; });
   return best;
 }
 function medals(){
-  var H = S.home, nt = Object.keys(H.tasks).length;
+  var H = S.home, nt = realKeys(H.tasks).length;
   return [
     {e:"✅", n:"Primera tarea", d:"Marca tu primera tarea", ok:nt >= 1},
     {e:"🖐️", n:"Cinco tareas", d:"Completa 5 tareas", ok:nt >= 5},
     {e:"📝", n:"Examen terminado", d:"Termina un examen", ok:H.tries >= 1},
     {e:"💯", n:"Examen perfecto", d:"Saca 100 puntos", ok:H.best >= 100},
     {e:"🔁", n:"Practicando errores", d:"Practica tus errores", ok:H.prac >= 1},
-    {e:"🔥", n:"3 días seguidos", d:"Termina todo 3 días seguidos", ok:streak() >= 3}
+    {e:"🔥", n:"3 días seguidos", d:"Termina todo 3 días seguidos", ok:streak() >= 3},
+    {e:"🧠", n:"10 palabras nuevas", d:"Aprende 10 palabras en el diccionario", ok:knownCount() >= 10},
+    {e:"🎮", n:"Jugador de palabras", d:"Termina un juego", ok:H.games >= 1},
+    {e:"⚡", n:"Relámpago", d:"Acierta 10 palabras en el juego Relámpago", ok:H.speed >= 10}
   ];
 }
 function markDone(kind, id){
@@ -690,16 +806,16 @@ function markDone(kind, id){
     cel[id] = 1;
     setTimeout(function(){ delete cel[id]; if(S.screen === "home") render(); }, 950);
     var left = dueItems().filter(function(i){ return !isDone(i.kind, i.id); });
-    if(!left.length) H.days[todayKey()] = Date.now();
+    if(!left.length) H.days[(agendaData().demo ? "demo:" : "") + todayKey()] = Date.now();
   }
-  save(); render();
+  saveHome(); render();
 }
 function homeHeader(){
   return '<header class="top"><div class="brand"><svg aria-hidden="true"><use href="#owl"/></svg><b>English Practice<br>with Killian</b></div>' +
     '<span class="starchip" aria-label="Tus estrellas">⭐ '+starCount()+'</span></header>';
 }
-function subHeader(title){
-  return '<header class="top"><button class="link-btn" data-act="home" type="button">← Inicio</button><b class="sec-title">'+esc(title)+'</b><span class="starchip">⭐ '+starCount()+'</span></header>';
+function subHeader(title, backAct, backTxt){
+  return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'"'+(backAct === "go-screen" ? ' data-s="topics"' : '')+' type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span class="starchip">⭐ '+starCount()+'</span></header>';
 }
 function confetti(){
   var cols = ["#ffc928","#1d6fd8","#4aa3f0","#ffffff","#12306b"], h = "";
@@ -720,11 +836,36 @@ function taskCard(it){
     '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span><h3>'+esc(x.titulo)+'</h3>' +
     (x.detalle ? '<p>'+esc(x.detalle)+'</p>' : "") + due + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
 }
+/* Materiales de esta semana y la próxima, para tenerlos listos sin comprar a diario. */
+function weekMaterials(){
+  var ag = agendaData(), t = todayKey(), from = mondayOf(t), to = addDays(from, 13);
+  return ag.materiales.filter(function(m){
+    return m.llevar_el <= to && (m.llevar_el >= from || !S.home.mats[m.id]);
+  }).sort(function(a, b){ return a.llevar_el < b.llevar_el ? -1 : a.llevar_el > b.llevar_el ? 1 : 0; });
+}
+function renderMatsAside(){
+  var list = weekMaterials(), t = todayKey(), thisMon = mondayOf(t), nextMon = addDays(thisMon, 7);
+  var h = '<aside class="card matsweek" aria-label="Materiales de la semana"><h2 class="sec-title">🎒 Materiales de la semana</h2>';
+  if(!list.length) return h + '<p>No hay materiales por ahora. 🎉</p></aside>';
+  h += '<p class="small">Para tenerlos listos y no comprar cada día.</p>';
+  var groups = [["Esta semana", function(m){ return m.llevar_el < nextMon; }], ["La próxima semana", function(m){ return m.llevar_el >= nextMon; }]];
+  groups.forEach(function(g){
+    var items = list.filter(g[1]);
+    if(!items.length) return;
+    h += '<h3 class="grp">'+g[0]+'</h3>' + items.map(function(m){
+      var taken = !!S.home.mats[m.id], have = S.home.have[m.id] > 0;
+      return '<div class="mrow'+(taken?" taken":"")+'"><div class="mtxt"><b>'+esc(m.material)+'</b><span>'+esc(m.materia||"")+' · '+esc(dayLabel(m.llevar_el))+'</span></div>' +
+        (taken ? '<span class="pill ok">✓ Listo</span>' :
+         '<button class="have'+(have?" on":"")+'" type="button" data-act="have" data-id="'+esc(m.id)+'" aria-pressed="'+have+'">'+(have ? "✓ Ya lo tengo" : "Ya lo tengo")+'</button>') + '</div>';
+    }).join("");
+  });
+  return h + '</aside>';
+}
 function renderHome(){
   var now = new Date(), hr = now.getHours(), t = todayKey(), ag = agendaData();
   var greet = hr < 12 ? "¡Buenos días" : hr < 19 ? "¡Buenas tardes" : "¡Buenas noches";
   var dateTxt = ""; try{ dateTxt = now.toLocaleDateString("es", {weekday:"long", day:"numeric", month:"long"}); dateTxt = dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1); }catch(e){}
-  var mats = ag.materiales.filter(function(m){ return !S.home.mats[m.id] && m.llevar_el <= addDays(t, 7); })
+  var mats = ag.materiales.filter(function(m){ return !S.home.mats[m.id] && m.llevar_el <= addDays(t, 2) && m.llevar_el >= addDays(t, -14); })
     .sort(function(a, b){ return a.llevar_el < b.llevar_el ? -1 : 1; });
   var due = dueItems();
   var pend = due.filter(function(i){ return !isDone(i.kind, i.id) || cel[i.id]; });
@@ -735,7 +876,9 @@ function renderHome(){
   var h = homeHeader() +
     '<section class="card hello"><div><h1>'+greet+', Killian!</h1><p class="date">'+esc(dateTxt)+'</p></div>' +
     '<svg class="owl" style="width:84px;height:84px;flex:none" aria-hidden="true"><use href="#owl"/></svg></section>';
-  if(ag.demo) h += '<p class="tag-demo">📝 Esto es un ejemplo. Cuando mamá cargue la agenda de la semana, aquí aparecerán las tareas de verdad.</p>';
+  if(gm.lockMsg) h += '<p class="note" role="status">🎮 ¡Casi! Termina tus pendientes de hoy y se abren los juegos.</p>';
+  if(ag.demo) h += '<p class="tag-demo">📝 Esto es un ejemplo. Cuando mamá cargue la agenda de la semana (🔒 Zona de mamá), aquí aparecerán las tareas de verdad.</p>';
+  h += '<div class="homegrid"><div class="maincol">';
   mats.forEach(function(m){
     h += '<article class="mat"><span class="ico" aria-hidden="true">🎒</span><div class="txt"><b>Lleva: '+esc(m.material)+'</b><p>'+esc(m.materia||"")+' · el '+esc(dayLabel(m.llevar_el))+' ('+esc(relDay(m.llevar_el))+')</p></div>' +
       '<button class="btn btn-sun" type="button" data-act="done" data-k="mat" data-id="'+esc(m.id)+'">✓ Ya lo preparé</button></article>';
@@ -753,26 +896,57 @@ function renderHome(){
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
       '<p>Puedes practicar inglés con tus temas.</p><button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
   }
-  h += '</section><section class="tiles" aria-label="Más cosas">' +
+  h += '</section></div>' + renderMatsAside() + '</div>' +
+    '<section class="tiles" aria-label="Más cosas">' +
     '<button class="tile" type="button" data-act="go-screen" data-s="topics"><span class="big">📚</span>Mis temas</button>' +
     '<button class="tile" type="button" data-act="go-screen" data-s="stars"><span class="big">⭐</span>Mis estrellas</button>' +
     '<button class="tile" type="button" data-act="go-screen" data-s="dict"><span class="big">📖</span>Mi diccionario</button>' +
+    (gamesUnlocked() ? '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Juegos</button>'
+      : '<button class="tile locked" type="button" data-act="games-locked" aria-disabled="true"><span class="big">🔒</span>Juegos<span class="small">Termina tus pendientes</span></button>') +
     '<button class="tile" type="button" data-act="helper"><svg class="big-owl" aria-hidden="true"><use href="#owl"/></svg>Mi ayudante</button></section>';
   return h + footer();
+}
+
+/* ------------------------------------------------------------------ TEMAS */
+function temaMeta(id){
+  for(var i=0;i<S.temas.length;i++) if(S.temas[i].id === id) return S.temas[i];
+  return null;
 }
 function renderTopics(){
   var H = S.home, e = S.exam, n = answeredCount(EXAM, e.answers);
   var state = e.done ? "✅ Terminado" : n > 0 ? "✏️ En curso: "+n+" de 25" : "🆕 Sin empezar";
-  return subHeader("Mis temas") +
+  var h = subHeader("Mis temas") +
     '<article class="card topic"><span class="chip">English Word Study</span><h3>Prefijos OVER- y UNDER-</h3>' +
     '<p>25 preguntas · 100 puntos</p><p>'+state+(H.tries > 0 ? ' · 🏆 Mejor nota: '+H.best+' / 100' : '')+'</p>' +
-    '<button class="btn btn-sun btn-big" type="button" data-act="open-topic">Abrir este tema</button></article>' +
-    '<p class="note">Aquí irán apareciendo los temas de estudio que mamá agregue.</p>' + footer();
+    '<button class="btn btn-sun btn-big" type="button" data-act="open-topic">Abrir este tema</button></article>';
+  S.temas.forEach(function(t){
+    var ex = t.fecha_examen ? '<p>🗓️ Examen: '+esc(dayLabel(t.fecha_examen))+' ('+esc(relDay(t.fecha_examen))+')</p>' : "";
+    h += '<article class="card topic"><span class="chip">'+esc(t.materia||"Tema")+'</span><h3>'+esc(t.titulo_es || t.titulo)+'</h3>' +
+      (t.titulo_es ? '<p lang="en">'+esc(t.titulo)+'</p>' : '') + ex +
+      '<p>'+t.preguntas.length+' preguntas · '+t.vocabulario.length+' palabras</p>' +
+      '<div class="stack">' + (t.resumen.length ? '<button class="btn btn-blue" type="button" data-act="study" data-id="'+esc(t.id)+'">📖 Estudiar el resumen</button>' : '') +
+      (t.vocabulario.length ? '<button class="btn btn-ghost" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Sus palabras</button>' : '') +
+      '<p class="small">El examen de este tema llega en la próxima etapa.</p></div></article>';
+  });
+  if(!S.temas.length) h += '<p class="note">Aquí irán apareciendo los temas de estudio que mamá agregue.</p>';
+  return h + footer();
+}
+var studyId = null;
+function renderStudy(){
+  var t = temaMeta(studyId);
+  if(!t) return subHeader("Estudiar", "go-screen", "← Mis temas") + '<p class="note">No encuentro ese tema.</p>' + footer();
+  return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
+    '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="en">'+esc(t.titulo)+'</h2>' +
+    t.resumen.map(function(r){
+      return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div><b lang="en">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div></div>';
+    }).join("") + '</section>' +
+    (t.vocabulario.length ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") + footer();
 }
 function renderStars(){
   var H = S.home;
-  var rows = [["✅ Tareas hechas", Object.keys(H.tasks).length], ["🎬 Videos vistos", Object.keys(H.vids).length], ["🎒 Materiales preparados", Object.keys(H.mats).length],
-    ["🎉 Días completos (2 ⭐ cada uno)", Object.keys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac]];
+  var rows = [["✅ Tareas hechas", realKeys(H.tasks).length], ["🎬 Videos vistos", realKeys(H.vids).length], ["🎒 Materiales preparados", realKeys(H.mats).length],
+    ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac],
+    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games]];
   return subHeader("Mis estrellas") +
     '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starCount()+'</div><p>¡Sigue así, Killian!</p></section>' +
     '<section class="card"><h2 class="sec-title">Así ganas estrellas</h2>' + rows.map(function(r){ return '<p class="wordrow"><b>'+r[1]+'</b><span>'+esc(r[0])+'</span></p>'; }).join("") + '</section>' +
@@ -780,14 +954,694 @@ function renderStars(){
       return '<div class="medal'+(m.ok?"":" lock")+'"><span class="e">'+(m.ok ? m.e : "🔒")+'</span><b>'+esc(m.n)+'</b><span>'+esc(m.d)+'</span></div>';
     }).join("") + '</div>' + footer();
 }
-function renderDict(){
-  var ks = Object.keys(C).filter(function(k){ return k !== "prefix"; });
-  return subHeader("Mi diccionario") +
-    '<section class="card"><p class="note">Aquí estarán todas las palabras de tus temas y las que busques con el búho.</p>' +
-    ks.map(function(k){ var c = C[k];
-      return '<div class="wordrow"><b lang="en">'+esc(c.word)+'</b><span>'+esc(c.es)+'</span><span lang="en" style="flex-basis:100%;font-weight:600">'+esc(c.ex)+'</span></div>';
-    }).join("") + '</section>' + footer();
+
+/* ------------------------------------------------------------ DICCIONARIO */
+var dict = {topic:null, flip:{}, quiz:null};
+var CORTA = {overuse:"usar demasiado", overheat:"calentarse demasiado", underwater:"debajo del agua", overflow:"desbordarse", overestimate:"calcular de más",
+  undercooked:"poco cocinado", undercover:"de incógnito", oversee:"supervisar", undershirt:"camiseta interior", overlook:"pasar por alto", overcook:"cocinar demasiado"};
+function vocabTopics(){
+  var words = Object.keys(C).filter(function(k){ return k !== "prefix"; }).map(function(k){
+    var c = C[k], es = CORTA[k] || c.es; return {en:c.word, es:es, aceptadas:[es, c.es], ejemplo_en:c.ex, ejemplo_es:c.exEs};
+  });
+  var list = [{id:"overunder", materia:"English", title:"Prefijos OVER- y UNDER-", emo:"🔤", words:words}];
+  S.temas.forEach(function(t){
+    if(t.vocabulario.length) list.push({id:t.id, materia:t.materia, title:t.titulo_es || t.titulo, emo:subjEmo(t.materia), words:t.vocabulario});
+  });
+  return list;
 }
+function topicById(id){ var l = vocabTopics(); for(var i=0;i<l.length;i++) if(l[i].id === id) return l[i]; return null; }
+function wkey(tid, w){ return tid + ":" + String(w.en).toLowerCase(); }
+function renderDict(){
+  var tp = dict.topic ? topicById(dict.topic) : null;
+  if(!tp){ dict.topic = null; dict.quiz = null; }
+  if(!tp){
+    return subHeader("Mi diccionario") +
+      '<p class="lead">Elige un tema y toca las tarjetas para ver qué significan las palabras. 👇</p><div class="dtopics">' +
+      vocabTopics().map(function(t){
+        var k = t.words.filter(function(w){ return S.home.known[wkey(t.id, w)]; }).length, pct = Math.round(k / t.words.length * 100);
+        return '<button class="dtopic" type="button" data-act="dict-open" data-id="'+esc(t.id)+'"><span class="big">'+t.emo+'</span><b>'+esc(t.title)+'</b>' +
+          '<span class="small">'+t.words.length+' palabras · '+k+' aprendidas</span><span class="bar"><i style="width:'+pct+'%"></i></span></button>';
+      }).join("") + '</div>' + footer();
+  }
+  if(dict.quiz) return renderQuiz2(tp);
+  return subHeader(tp.title, "dict-back", "← Temas") +
+    '<button class="btn btn-sun btn-big" type="button" data-act="dict-play">🎮 Jugar con estas palabras</button>' +
+    '<p class="small" style="text-align:center">Toca una tarjeta para darle la vuelta.</p><div class="cards">' +
+    tp.words.map(function(w, i){
+      var on = !!dict.flip[i], known = !!S.home.known[wkey(tp.id, w)];
+      return '<button class="fcard'+(on?" back":"")+'" type="button" data-act="flip" data-i="'+i+'" aria-pressed="'+on+'">' +
+        (known ? '<span class="kn" aria-label="Ya la aprendiste">✓</span>' : '') +
+        (on ? '<b class="es">'+esc(w.es)+'</b>' + (w.ejemplo_en ? '<span lang="en" class="ex">'+esc(w.ejemplo_en)+'</span><span class="ex2">'+esc(w.ejemplo_es||"")+'</span>' : '')
+            : '<b lang="en">'+esc(w.en)+'</b><span class="hint">toca para ver</span>') + '</button>';
+    }).join("") + '</div>' + footer();
+}
+function startQuiz2(tp){
+  var words = shuffle(tp.words).slice(0, 5), all = tp.words;
+  var items = words.map(function(w){
+    var others = shuffle(all.filter(function(x){ return x.es !== w.es; })).slice(0, 2).map(function(x){ return x.es; });
+    if(others.length < 2){
+      vocabTopics().forEach(function(t){ t.words.forEach(function(x){ if(others.length < 2 && x.es !== w.es && others.indexOf(x.es) < 0) others.push(x.es); }); });
+    }
+    return {w:w, opts:shuffle([w.es].concat(others)), pick:null};
+  });
+  dict.quiz = {items:items, i:0, ok:0, done:false};
+}
+function renderQuiz2(tp){
+  var q = dict.quiz;
+  if(q.done){
+    var msg = q.ok === q.items.length ? "¡Perfecto! 🌟" : q.ok >= 3 ? "¡Muy bien! 👏" : "¡Buen intento! Sigue practicando 💪";
+    return subHeader(tp.title, "dict-back", "← Temas") +
+      '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2 class="sec-title">'+msg+'</h2>' +
+      '<div class="score">'+q.ok+' <small>de '+q.items.length+'</small></div><p>Las palabras que acertaste ya cuentan como aprendidas.</p>' +
+      '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="dict-play">🎮 Jugar otra vez</button>' +
+      '<button class="btn btn-ghost" type="button" data-act="dict-end">Ver las tarjetas</button></div></section>' + footer();
+  }
+  var it = q.items[q.i], answered = it.pick !== null, last = q.i === q.items.length - 1;
+  var opts = it.opts.map(function(o, i){
+    var cls = "opt";
+    if(answered){ if(o === it.w.es) cls += " good"; else if(o === it.pick) cls += " bad"; }
+    return '<button type="button" class="'+cls+'" data-act="dict-pick" data-v="'+esc(o)+'"'+(answered?" disabled":"")+'><span class="let">'+LET[i]+'</span><span>'+esc(o)+'</span></button>';
+  }).join("");
+  var fb = "";
+  if(answered) fb = it.pick === it.w.es ? '<p class="fb good">🎉 ¡Muy bien!</p>' : '<p class="fb bad">¡Casi! Significa «'+esc(it.w.es)+'». Ya lo sabes para la próxima. 💙</p>';
+  return subHeader(tp.title, "dict-end", "← Salir") +
+    '<div class="prog-row"><span>Palabra '+(q.i+1)+' de '+q.items.length+'</span></div>' +
+    '<main class="card qcard"><span class="chip">¿Qué significa?</span><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(it.w.en)+'</p>' +
+    '<div class="opts">'+opts+'</div>'+fb+
+    (answered ? '<button class="btn btn-sun btn-big" type="button" data-act="dict-next">'+(last ? "Ver mi resultado" : "Siguiente →")+'</button>' : "") + '</main>' + footer();
+}
+
+/* ===================================================== ZONA DE MAMÁ ===== */
+function isDate(v){ return typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v) && dkey(parseD(v)) === v; }
+function str(v){ return typeof v === "string" ? v.trim() : (typeof v === "number" ? String(v) : ""); }
+function mondayOf(k){ var d = parseD(k), w = (d.getDay() + 6) % 7; d.setDate(d.getDate() - w); return dkey(d); }
+function normUrl(u){ u = str(u); return /^https?:\/\/\S+$/i.test(u) ? u : ""; }
+
+/* Lee el texto pegado (tolera ```json y comillas "bonitas" de chats). */
+function parseImportText(txt){
+  txt = String(txt || "").trim();
+  if(!txt) return {ok:false, msg:"Pega el contenido o elige un archivo primero."};
+  txt = txt.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "").trim();
+  try{ return {ok:true, obj:JSON.parse(txt)}; }catch(e1){
+    try{ return {ok:true, obj:JSON.parse(txt.replace(/[“”]/g, '"').replace(/[‘’]/g, "'"))}; }catch(e2){
+      return {ok:false, msg:"No pude leer el texto como un archivo de importación. Revisa que empiece con { y termine con } y que esté completo. (" + e1.message + ")"};
+    }
+  }
+}
+
+function validateAgenda(o){
+  var E = [], W = [], d = {semana:str(o.semana), tareas:[], materiales:[], videos:[], notas:[]};
+  if(!isDate(d.semana)) E.push("La semana debe ser una fecha con este formato: 2026-10-12 (año-mes-día).");
+  function list(name){
+    if(o[name] == null) return [];
+    if(Array.isArray(o[name])) return o[name];
+    E.push("«" + name + "» debe ser una lista."); return [];
+  }
+  function near(label, k){
+    if(isDate(k) && isDate(d.semana) && Math.abs(dayDiff(k) - dayDiff(d.semana)) > 21) W.push(label + ": la fecha " + k + " está lejos de la semana " + d.semana + ". ¿Es correcta?");
+  }
+  var seen = {};
+  function uid(kind, x, i, pre){
+    var id = str(x.id) || (pre + (i + 1));
+    if(seen[kind + id]) E.push((kind === "t" ? "Tarea " : kind === "m" ? "Material " : "Video ") + (i + 1) + ": el id «" + id + "» está repetido.");
+    seen[kind + id] = 1; return id;
+  }
+  list("tareas").forEach(function(x, i){
+    var n = "Tarea " + (i + 1);
+    if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
+    var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega)};
+    if(!it.titulo) E.push(n + ": falta el título.");
+    if(!isDate(it.fecha)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": falta la fecha o no es válida (usa 2026-10-13).");
+    if(it.entrega && !isDate(it.entrega)) E.push(n + ": la fecha de entrega no es válida (usa 2026-10-14).");
+    if(!it.materia) W.push(n + ": no tiene materia.");
+    if(it.entrega && isDate(it.entrega) && isDate(it.fecha) && it.entrega < it.fecha) W.push(n + ": la entrega es antes de la fecha de hacerla.");
+    near(n, it.fecha); d.tareas.push(it);
+  });
+  list("materiales").forEach(function(x, i){
+    var n = "Material " + (i + 1);
+    if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
+    var it = {id:uid("m", x, i, "m"), materia:str(x.materia), material:str(x.material), llevar_el:str(x.llevar_el)};
+    if(!it.material) E.push(n + ": falta qué material es.");
+    if(!isDate(it.llevar_el)) E.push(n + (it.material ? " («" + it.material + "»)" : "") + ": falta el día de llevarlo o no es válido (usa 2026-10-15).");
+    near(n, it.llevar_el); d.materiales.push(it);
+  });
+  list("videos").forEach(function(x, i){
+    var n = "Video " + (i + 1);
+    if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
+    var it = {id:uid("v", x, i, "v"), materia:str(x.materia), titulo:str(x.titulo), url:str(x.url), fecha:str(x.fecha)};
+    if(!it.titulo) E.push(n + ": falta el título.");
+    if(!normUrl(it.url)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": el enlace debe empezar con https://");
+    if(!isDate(it.fecha)) E.push(n + ": falta la fecha o no es válida (usa 2026-10-13).");
+    near(n, it.fecha); d.videos.push(it);
+  });
+  list("notas_para_mama").forEach(function(t){ if(str(t)) d.notas.push(str(t)); });
+  if(!E.length && !d.tareas.length && !d.materiales.length && !d.videos.length) E.push("La agenda no trae tareas, materiales ni videos.");
+  return {errors:E, warnings:W, draft:d};
+}
+
+function validateTema(o){
+  var E = [], W = [];
+  var t = {id:str(o.id), materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen),
+           resumen:[], subtemas:[], preguntas:[], vocabulario:[]};
+  if(!/^[a-z0-9][a-z0-9_-]*$/i.test(t.id)) E.push("El tema necesita un «id» sin espacios ni acentos, por ejemplo science-water-cycle.");
+  if(!t.titulo) E.push("Falta el «titulo» del tema.");
+  if(!t.materia) W.push("El tema no tiene materia.");
+  if(t.fecha_examen && !isDate(t.fecha_examen)){ E.push("«fecha_examen» no es válida (usa 2026-10-20)."); }
+  if(!t.fecha_examen) t.fecha_examen = "";
+  var tipos = ["opcion_multiple", "verdadero_falso", "unir", "completar"];
+  if(Array.isArray(o.subtemas)) o.subtemas.forEach(function(x){ if(str(x)) t.subtemas.push(str(x)); });
+  (Array.isArray(o.resumen) ? o.resumen : []).forEach(function(r, i){
+    if(!r || !str(r.en) || !str(r.es)){ E.push("Resumen " + (i + 1) + ": necesita «en» y «es»."); return; }
+    t.resumen.push({en:str(r.en), es:str(r.es), emoji:str(r.emoji)});
+  });
+  var seen = {};
+  (Array.isArray(o.preguntas) ? o.preguntas : []).forEach(function(p, i){
+    var n = "Pregunta " + (i + 1);
+    if(!p || typeof p !== "object"){ E.push(n + ": no se entiende."); return; }
+    var q = {id:str(p.id) || ("q" + (i + 1)), subtema:str(p.subtema), tipo:str(p.tipo), pregunta_en:str(p.pregunta_en), pregunta_es:str(p.pregunta_es), explicacion_es:str(p.explicacion_es)};
+    if(seen[q.id]) E.push(n + ": el id «" + q.id + "» está repetido."); seen[q.id] = 1;
+    if(tipos.indexOf(q.tipo) < 0){ E.push(n + ": el tipo «" + q.tipo + "» no existe. Usa: " + tipos.join(", ") + "."); return; }
+    if(!q.pregunta_en) E.push(n + ": falta «pregunta_en».");
+    if(!q.explicacion_es) W.push(n + ": no tiene «explicacion_es» (Killian no verá por qué se equivocó).");
+    if(t.subtemas.length && q.subtema && t.subtemas.indexOf(q.subtema) < 0) W.push(n + ": el subtema «" + q.subtema + "» no está en la lista de subtemas.");
+    if(q.tipo === "opcion_multiple"){
+      var ops = (Array.isArray(p.opciones) ? p.opciones : []).map(str).filter(Boolean);
+      q.opciones = ops; q.correcta = str(p.correcta);
+      if(ops.length < 2) E.push(n + ": necesita al menos 2 «opciones».");
+      else if(ops.indexOf(q.correcta) < 0) E.push(n + ": la «correcta» («" + q.correcta + "») no está entre las opciones.");
+    } else if(q.tipo === "verdadero_falso"){
+      var c = p.correcta, cs = String(c).toLowerCase();
+      if(c === true || cs === "true" || cs === "verdadero" || cs === "v") q.correcta = true;
+      else if(c === false || cs === "false" || cs === "falso" || cs === "f") q.correcta = false;
+      else E.push(n + ": «correcta» debe ser true o false.");
+    } else if(q.tipo === "unir"){
+      var pares = (Array.isArray(p.pares) ? p.pares : []).map(function(x){
+        x = x || {}; return {izquierda:str(x.izquierda || x.en), derecha:str(x.derecha || x.es)};
+      }).filter(function(x){ return x.izquierda && x.derecha; });
+      q.pares = pares;
+      if(pares.length < 2) E.push(n + ": «unir» necesita al menos 2 pares con «izquierda» y «derecha».");
+    } else {
+      q.respuesta = str(p.respuesta != null ? p.respuesta : p.correcta);
+      q.aceptadas = (Array.isArray(p.aceptadas) ? p.aceptadas : []).map(str).filter(Boolean);
+      if(!q.respuesta) E.push(n + ": falta la «respuesta».");
+      if(q.pregunta_en.indexOf("___") < 0) W.push(n + ": la frase no tiene el hueco ______.");
+    }
+    t.preguntas.push(q);
+  });
+  (Array.isArray(o.vocabulario) ? o.vocabulario : []).forEach(function(v, i){
+    if(!v || !str(v.en) || !str(v.es)){ E.push("Palabra " + (i + 1) + ": necesita «en» y «es»."); return; }
+    t.vocabulario.push({en:str(v.en), es:str(v.es), aceptadas:(Array.isArray(v.aceptadas) ? v.aceptadas : []).map(str).filter(Boolean),
+      ejemplo_en:str(v.ejemplo_en), ejemplo_es:str(v.ejemplo_es)});
+  });
+  if(!t.preguntas.length && !E.length) E.push("El tema no trae preguntas.");
+  if(t.preguntas.length && t.preguntas.length < 10) W.push("Solo hay " + t.preguntas.length + " preguntas. Conviene tener más para varias rondas distintas.");
+  if(!t.vocabulario.length) W.push("El tema no trae vocabulario.");
+  return {errors:E, warnings:W, draft:t};
+}
+
+/* ---- PIN ---- */
+var momOk = false, momAt = 0, momView = "menu", pinMsg = "", pinTries = 0, pinLock = 0, momNote = "";
+var imp = {text:"", msg:"", kind:null, draft:null, errors:[], warnings:[], src:"import", busy:false};
+function hashPin(pin, salt){
+  var data = salt + ":" + pin;
+  if(window.crypto && crypto.subtle && window.TextEncoder){
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(data)).then(function(buf){
+      return Array.prototype.map.call(new Uint8Array(buf), function(b){ return ("0" + b.toString(16)).slice(-2); }).join("");
+    });
+  }
+  var h = 5381; for(var i=0;i<data.length;i++) h = ((h << 5) + h + data.charCodeAt(i)) | 0;
+  return Promise.resolve("x" + (h >>> 0).toString(16));
+}
+function newSalt(){ var s = ""; for(var i=0;i<16;i++) s += Math.floor(Math.random()*16).toString(16); return s; }
+function val(id){ var el = document.getElementById(id); return el ? el.value : ""; }
+function pinGo(){
+  var pin = val("pin").trim();
+  if(!S.pinHash || momView === "pin"){
+    var p2 = val("pin2").trim();
+    if(!/^\d{4}$/.test(pin)){ pinMsg = "El PIN debe tener exactamente 4 números."; render(); return; }
+    if(pin !== p2){ pinMsg = "Los dos PIN no son iguales. Escríbelos otra vez."; render(); return; }
+    var salt = newSalt();
+    hashPin(pin, salt).then(function(h){
+      S.pinSalt = salt; S.pinHash = h; saveContent();
+      momOk = true; momAt = Date.now(); momView = "menu"; pinMsg = ""; momNote = "✅ PIN guardado."; render({top:true});
+    });
+    return;
+  }
+  if(Date.now() < pinLock){ pinMsg = "Espera unos segundos antes de volver a intentar."; render(); return; }
+  hashPin(pin, S.pinSalt).then(function(h){
+    if(h === S.pinHash){ momOk = true; momAt = Date.now(); pinTries = 0; pinMsg = ""; momView = "menu"; momNote = ""; render({top:true}); }
+    else { pinTries++; if(pinTries >= 5){ pinLock = Date.now() + 30000; pinTries = 0; pinMsg = "Demasiados intentos. Espera 30 segundos."; } else pinMsg = "PIN incorrecto."; render(); }
+  });
+}
+function momHeader(title, backAct, backTxt){
+  return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'" type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span></span></header>';
+}
+function renderPinGate(){
+  var creating = !S.pinHash || momView === "pin";
+  return momHeader(creating ? "Crear PIN" : "Zona de mamá") +
+    '<main class="card auth mom"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h1>'+(creating ? "Crea tu PIN de 4 números" : "Escribe tu PIN")+'</h1>' +
+    '<p>'+(creating ? "Con este PIN solo tú entrarás a la zona de mamá." : "Esta zona es solo para mamá.")+'</p>' +
+    (pinMsg ? '<p class="err" role="alert">'+esc(pinMsg)+'</p>' : '') +
+    '<div class="pinbox"><label for="pin">'+(creating ? "PIN nuevo" : "PIN")+'</label><input id="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" pattern="[0-9]*">' +
+    (creating ? '<label for="pin2">Repite el PIN</label><input id="pin2" type="password" inputmode="numeric" maxlength="4" autocomplete="off" pattern="[0-9]*">' : '') +
+    '<button class="btn btn-sun btn-big" type="button" data-act="pin-go">'+(creating ? "GUARDAR PIN" : "ENTRAR")+'</button></div></main>' + footer();
+}
+function weeksList(){
+  var ag = S.agenda, set = {};
+  if(ag) ["tareas","materiales","videos","notas"].forEach(function(k){ (ag[k] || []).forEach(function(x){ if(x.semana) set[x.semana] = 1; }); });
+  return Object.keys(set).sort().reverse();
+}
+function renderMom(){
+  if(momOk && Date.now() - momAt > 15 * 60000) momOk = false;
+  if(!momOk || momView === "pin") return renderPinGate();
+  momAt = Date.now();
+  switch(momView){
+    case "import": return renderImport();
+    case "preview": case "edit": return renderEditor();
+    case "weeks": return renderWeeks();
+    case "temas": return renderTemasMom();
+    default: return renderMomMenu();
+  }
+}
+function renderMomMenu(){
+  var notas = (S.agenda && S.agenda.notas) || [];
+  var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
+    '<section class="momgrid">' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button>' +
+    '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Probar los juegos</button></section>';
+  if(notas.length) h += '<section class="card"><h2 class="sec-title">📌 Notas para mamá</h2>' + notas.map(function(n){ return '<p class="wordrow"><span>'+esc(n.texto)+'</span><span class="small">semana del '+esc(n.semana)+'</span></p>'; }).join("") + '</section>';
+  h += '<p class="small" style="text-align:center">El panel de progreso y análisis llega en una próxima etapa.</p>';
+  return h + footer();
+}
+function renderImport(){
+  var h = momHeader("Importar", "mom-go", "← Zona de mamá") + (S.agenda === null ? '' : '');
+  h += '<section class="card mom"><p>Pega aquí el contenido que te dio Claude (empieza con <b>{</b>) o elige el archivo <b>.json</b>.</p>' +
+    '<label class="fld" for="imptext"><span>Contenido</span><textarea id="imptext" rows="9" spellcheck="false" placeholder="{ &quot;tipo&quot;: &quot;agenda&quot;, … }">'+esc(imp.text)+'</textarea></label>' +
+    '<label class="fld" for="impfile"><span>o elige un archivo</span><input id="impfile" type="file" accept=".json,.txt,application/json,text/plain"></label>' +
+    (imp.msg ? '<p class="err" role="alert">'+esc(imp.msg)+'</p>' : '') +
+    (imp.errors.length ? '<div class="err" role="alert"><b>Hay que corregir esto antes de guardar:</b><ul>'+imp.errors.map(function(e){ return '<li>'+esc(e)+'</li>'; }).join("")+'</ul>' +
+      '<p>Corrige el archivo (puedes pedirle a Claude que lo arregle y pegarle estos mensajes) y vuelve a pulsar Revisar.</p></div>' : '') +
+    '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="imp-check">🔍 Revisar</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="imp-sample" data-v="agenda">Cargar una agenda de ejemplo</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="imp-sample" data-v="tema">Cargar un tema de ejemplo</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="imp-clear">Limpiar</button></div></section>';
+  return h + footer();
+}
+/* Editor: sirve para revisar lo importado y para editar la agenda a mano. */
+function inp(kind, i, f, label, v, type){
+  return '<label class="fld"><span>'+label+'</span><input type="'+(type||"text")+'" data-e="'+kind+'" data-i="'+i+'" data-f="'+f+'" value="'+esc(v||"")+'"></label>';
+}
+function renderEditor(){
+  var d = imp.draft, back = imp.src === "manual" ? ["weeks", "← Agenda"] : ["import", "← Volver"];
+  if(!d){ momView = "menu"; return renderMomMenu(); }
+  var h = momHeader(imp.kind === "agenda" ? "Revisar la agenda" : "Revisar el tema", "mom-go", back[1]);
+  h = h.replace('data-act="mom-go"', 'data-act="mom-go" data-v="'+back[0]+'"');
+  if(imp.msg) h += '<p class="err" role="alert">'+esc(imp.msg)+'</p>';
+  if(imp.errors.length) h += '<div class="err" role="alert"><b>Corrige esto para guardar:</b><ul>'+imp.errors.map(function(e){ return '<li>'+esc(e)+'</li>'; }).join("")+'</ul></div>';
+  if(imp.warnings.length) h += '<div class="warn"><b>Ojo:</b><ul>'+imp.warnings.map(function(e){ return '<li>'+esc(e)+'</li>'; }).join("")+'</ul></div>';
+  if(imp.kind === "agenda"){
+    h += '<section class="card mom"><label class="fld"><span>Semana (lunes)</span><input id="semana" type="date" value="'+esc(d.semana)+'"></label>' +
+      '<h2 class="sec-title">📝 Tareas ('+d.tareas.length+')</h2>' + d.tareas.map(function(x, i){
+        return '<div class="erow">'+inp("tareas",i,"materia","Materia",x.materia)+inp("tareas",i,"titulo","Qué hacer",x.titulo)+inp("tareas",i,"detalle","Detalle",x.detalle)+
+          inp("tareas",i,"fecha","Se hace el",x.fecha,"date")+inp("tareas",i,"entrega","Entrega",x.entrega,"date")+
+          '<button class="link-btn del" type="button" data-act="e-del" data-e="tareas" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="tareas">+ Agregar tarea</button>' +
+      '<h2 class="sec-title">🎒 Materiales ('+d.materiales.length+')</h2>' + d.materiales.map(function(x, i){
+        return '<div class="erow">'+inp("materiales",i,"materia","Materia",x.materia)+inp("materiales",i,"material","Material",x.material)+inp("materiales",i,"llevar_el","Llevar el",x.llevar_el,"date")+
+          '<button class="link-btn del" type="button" data-act="e-del" data-e="materiales" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="materiales">+ Agregar material</button>' +
+      '<h2 class="sec-title">🎬 Videos ('+d.videos.length+')</h2>' + d.videos.map(function(x, i){
+        return '<div class="erow">'+inp("videos",i,"materia","Materia",x.materia)+inp("videos",i,"titulo","Título",x.titulo)+inp("videos",i,"url","Enlace (https://…)",x.url,"url")+inp("videos",i,"fecha","Verlo el",x.fecha,"date")+
+          '<button class="link-btn del" type="button" data-act="e-del" data-e="videos" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="videos">+ Agregar video</button>' +
+      '<h2 class="sec-title">📌 Notas para mamá ('+d.notas.length+')</h2>' + d.notas.map(function(x, i){
+        return '<div class="erow">'+inp("notas",i,"t","Nota",x)+'<button class="link-btn del" type="button" data-act="e-del" data-e="notas" data-i="'+i+'">🗑 Quitar</button></div>';
+      }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="notas">+ Agregar nota</button></section>' +
+      '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="e-save">💾 Guardar la agenda</button>' +
+      (imp.src === "manual" && imp.exists ? '<button class="btn btn-ghost" type="button" data-act="ask-delweek">🗑 Borrar esta semana</button>' : '') + '</div>';
+  } else {
+    var ex = temaMeta(d.id);
+    h += '<section class="card mom"><span class="chip">'+esc(d.materia||"Tema")+'</span><h2 class="sec-title">'+esc(d.titulo_es||d.titulo)+'</h2>' +
+      (d.titulo_es ? '<p lang="en">'+esc(d.titulo)+'</p>' : '') + (d.fecha_examen ? '<p>🗓️ Examen: '+esc(d.fecha_examen)+'</p>' : '') +
+      (ex ? '<p class="warn">Este tema ya existe y se reemplazará con esta versión.</p>' : '') +
+      '<p>'+d.preguntas.length+' preguntas · '+d.vocabulario.length+' palabras · '+d.resumen.length+' frases de resumen</p>' +
+      '<h3 class="sec-title">Resumen</h3>' + d.resumen.map(function(r, i){
+        return '<div class="srow"><span class="semo">'+esc(r.emoji||"📌")+'</span><div><b lang="en">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div><button class="link-btn del" type="button" data-act="e-del" data-e="resumen" data-i="'+i+'">🗑</button></div>';
+      }).join("") +
+      '<h3 class="sec-title">Preguntas</h3>' + d.preguntas.map(function(q, i){
+        return '<div class="srow"><div style="flex:1;min-width:0"><span class="pill">'+esc(q.tipo.replace("_"," "))+'</span><p lang="en"><b>'+esc(q.pregunta_en)+'</b></p>' +
+          (q.explicacion_es ? '<p class="small">'+esc(q.explicacion_es)+'</p>' : '') + '</div><button class="link-btn del" type="button" data-act="e-del" data-e="preguntas" data-i="'+i+'">🗑</button></div>';
+      }).join("") +
+      '<h3 class="sec-title">Vocabulario</h3>' + d.vocabulario.map(function(v, i){
+        return '<div class="srow"><div style="flex:1"><b lang="en">'+esc(v.en)+'</b> → '+esc(v.es)+'</div><button class="link-btn del" type="button" data-act="e-del" data-e="vocabulario" data-i="'+i+'">🗑</button></div>';
+      }).join("") + '</section>' +
+      '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="e-save">💾 Guardar el tema</button></div>';
+  }
+  return h + footer();
+}
+function renderWeeks(){
+  var ws = weeksList(), t = todayKey(), h = momHeader("Agenda y materiales", "mom-go", "← Zona de mamá");
+  h += '<section class="card mom"><p>Elige una semana para ver o corregir sus tareas, materiales y videos.</p><div class="stack">' +
+    ws.map(function(w){
+      var ag = S.agenda, n = ag.tareas.filter(function(x){ return x.semana === w; }).length, m = ag.materiales.filter(function(x){ return x.semana === w; }).length, v = ag.videos.filter(function(x){ return x.semana === w; }).length;
+      return '<button class="btn btn-blue" type="button" data-act="week-edit" data-v="'+esc(w)+'">Semana del '+esc(w)+' · '+n+' tareas · '+m+' materiales · '+v+' videos</button>';
+    }).join("") + (ws.length ? "" : '<p class="small">Todavía no hay una agenda cargada. Usa «Importar» o crea una semana a mano.</p>') +
+    '<button class="btn btn-sun" type="button" data-act="week-new">+ Nueva semana a mano</button></div></section>';
+  return h + footer();
+}
+function renderTemasMom(){
+  var h = momHeader("Temas de estudio", "mom-go", "← Zona de mamá");
+  h += '<section class="card mom">' + (S.temas.length ? S.temas.map(function(t){
+    return '<div class="srow"><div style="flex:1;min-width:0"><b>'+esc(t.titulo_es||t.titulo)+'</b><p class="small">'+esc(t.materia||"")+' · '+t.preguntas.length+' preguntas · '+t.vocabulario.length+' palabras'+(t.fecha_examen ? ' · examen '+esc(t.fecha_examen) : '')+'</p></div>' +
+      '<button class="link-btn del" type="button" data-act="ask-deltema" data-id="'+esc(t.id)+'">🗑 Borrar</button></div>';
+  }).join("") : '<p>Todavía no hay temas cargados. Usa «Importar».</p>') + '</section>' +
+  '<p class="small" style="text-align:center">El tema de OVER-/UNDER- viene incluido en la página y no se borra.</p>';
+  return h + footer();
+}
+
+/* ---- Guardar ---- */
+function applyAgenda(d){
+  var sem = d.semana, ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
+  function keep(x){ return x.semana !== sem; }
+  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega}; }));
+  ag.materiales = ag.materiales.filter(keep).concat(d.materiales.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, material:x.material, llevar_el:x.llevar_el}; }));
+  ag.videos = ag.videos.filter(keep).concat(d.videos.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, url:x.url, fecha:x.fecha}; }));
+  ag.notas = (ag.notas || []).filter(keep).concat(d.notas.filter(function(n){ return str(n); }).map(function(n){ return {semana:sem, texto:str(n)}; }));
+  var firstReal = !S.agenda;
+  S.agenda = ag; saveContent();
+  if(firstReal){
+    ["tasks","vids","mats","have","days"].forEach(function(m){ Object.keys(S.home[m]).forEach(function(k){ if(/^(d-|demo:)/.test(k)) delete S.home[m][k]; }); });
+    saveHome();
+  }
+}
+function draftFromWeek(sem){
+  var ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
+  function id(x){ return String(x.id).indexOf(pre) === 0 ? String(x.id).slice(pre.length) : x.id; }
+  function w(x){ return x.semana === sem; }
+  return {semana:sem,
+    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||""}; }),
+    materiales:ag.materiales.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", material:x.material||"", llevar_el:x.llevar_el||""}; }),
+    videos:ag.videos.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", url:x.url||"", fecha:x.fecha||""}; }),
+    notas:(ag.notas||[]).filter(w).map(function(n){ return n.texto; })};
+}
+function newId(p){ return p + Date.now().toString(36) + Math.floor(Math.random()*1000).toString(36); }
+function sampleAgendaText(){
+  var t = todayKey(), mon = mondayOf(t);
+  return JSON.stringify({tipo:"agenda", semana:mon,
+    tareas:[{id:"t1", materia:"Math", titulo:"Páginas 34 y 35 del libro", detalle:"Sumas con llevada", fecha:addDays(mon,1), entrega:addDays(mon,2)},
+            {id:"t2", materia:"Spanish", titulo:"Leer la lectura y copiar 5 palabras", detalle:"", fecha:addDays(mon,2), entrega:addDays(mon,3)},
+            {id:"t3", materia:"Science", titulo:"Dibujar el ciclo del agua", detalle:"Con colores", fecha:addDays(mon,3), entrega:addDays(mon,4)}],
+    materiales:[{id:"m1", materia:"Art", material:"Cartulina azul y tijeras", llevar_el:addDays(mon,3)}, {id:"m2", materia:"Science", material:"Una botella plástica vacía", llevar_el:addDays(mon,4)}],
+    videos:[{id:"v1", materia:"Science", titulo:"The Water Cycle", url:"https://www.youtube.com/results?search_query=water+cycle+for+kids", fecha:addDays(mon,1)}],
+    notas_para_mama:["Reunión de padres el viernes"]}, null, 2);
+}
+
+/* ---- Clics y escritura de la zona de mamá ---- */
+function extraClick(act, el, ev){
+  if(gamesClick(act, el)) return true;
+  switch(act){
+    case "go-mom": momView = "menu"; momNote = ""; pinMsg = ""; S.screen = "mom"; helperOpen = false; writeLocal(); render({top:true}); return true;
+    case "pin-go": pinGo(); return true;
+    case "mom-go":
+      var v = el.getAttribute("data-v") || "menu";
+      momView = v; pinMsg = ""; momNote = "";
+      if(v === "import"){ imp.msg = ""; imp.errors = []; }
+      if(v === "pin"){ momOk = true; }
+      render({top:true}); return true;
+    case "imp-clear": imp = {text:"", msg:"", kind:null, draft:null, errors:[], warnings:[], src:"import"}; render(); return true;
+    case "imp-sample":
+      if(el.getAttribute("data-v") === "agenda"){ imp.text = sampleAgendaText(); imp.msg = ""; imp.errors = []; render(); }
+      else fetch("ejemplos/tema-ejemplo.json").then(function(r){ if(!r.ok) throw 0; return r.text(); }).then(function(t){ imp.text = t; imp.msg = ""; imp.errors = []; render(); })
+        .catch(function(){ imp.msg = "No pude cargar el ejemplo (¿hay internet?)."; render(); });
+      return true;
+    case "imp-check":
+      imp.text = val("imptext") || imp.text; imp.msg = ""; imp.errors = []; imp.warnings = [];
+      var pr = parseImportText(imp.text);
+      if(!pr.ok){ imp.msg = pr.msg; render(); return true; }
+      var o = pr.obj;
+      if(!o || typeof o !== "object" || Array.isArray(o)){ imp.msg = "El contenido debe ser un solo bloque que empiece con { ."; render(); return true; }
+      var res;
+      if(o.tipo === "agenda") res = validateAgenda(o);
+      else if(o.tipo === "tema") res = validateTema(o);
+      else { imp.msg = "Falta el campo «tipo»: debe decir \"agenda\" o \"tema\"."; render(); return true; }
+      imp.kind = o.tipo; imp.draft = res.draft; imp.errors = res.errors; imp.warnings = res.warnings; imp.src = "import"; imp.exists = false;
+      if(!res.errors.length){ momView = "preview"; render({top:true}); } else render();
+      return true;
+    case "week-edit": imp = {text:"", msg:"", kind:"agenda", draft:draftFromWeek(el.getAttribute("data-v")), errors:[], warnings:[], src:"manual", exists:true}; momView = "edit"; render({top:true}); return true;
+    case "week-new":
+      imp = {text:"", msg:"", kind:"agenda", draft:{semana:mondayOf(todayKey()), tareas:[], materiales:[], videos:[], notas:[]}, errors:[], warnings:[], src:"manual", exists:false};
+      momView = "edit"; render({top:true}); return true;
+    case "e-add":
+      var k = el.getAttribute("data-e"), d = imp.draft, t = todayKey();
+      if(k === "tareas") d.tareas.push({id:newId("t"), materia:"", titulo:"", detalle:"", fecha:t, entrega:""});
+      if(k === "materiales") d.materiales.push({id:newId("m"), materia:"", material:"", llevar_el:t});
+      if(k === "videos") d.videos.push({id:newId("v"), materia:"", titulo:"", url:"", fecha:t});
+      if(k === "notas") d.notas.push("");
+      render(); return true;
+    case "e-del":
+      imp.draft[el.getAttribute("data-e")].splice(+el.getAttribute("data-i"), 1); render(); return true;
+    case "e-save":
+      imp.msg = ""; imp.errors = [];
+      if(imp.kind === "agenda"){
+        var d2 = imp.draft;
+        var chk = validateAgenda({tipo:"agenda", semana:d2.semana, tareas:d2.tareas, materiales:d2.materiales, videos:d2.videos, notas_para_mama:d2.notas});
+        if(chk.errors.length){ imp.errors = chk.errors; imp.warnings = chk.warnings; render(); return true; }
+        applyAgenda(chk.draft); momNote = "✅ Agenda guardada: semana del " + chk.draft.semana + ".";
+      } else {
+        var t2 = imp.draft, i, found = false;
+        if(!t2.preguntas.length){ imp.errors = ["El tema debe tener al menos una pregunta."]; render(); return true; }
+        for(i=0;i<S.temas.length;i++) if(S.temas[i].id === t2.id){ S.temas[i] = t2; found = true; }
+        if(!found) S.temas.push(t2);
+        saveContent(); momNote = "✅ Tema guardado: " + (t2.titulo_es || t2.titulo) + ".";
+      }
+      imp.draft = null; imp.text = ""; momView = "menu"; render({top:true}); return true;
+    case "ask-deltema": modal = {type:"deltema", id:el.getAttribute("data-id")}; render(); return true;
+    case "do-deltema":
+      S.temas = S.temas.filter(function(x){ return x.id !== modal.id; }); modal = null; saveContent(); render(); return true;
+    case "ask-delweek": modal = {type:"delweek", sem:imp.draft.semana}; render(); return true;
+    case "do-delweek":
+      var sem = modal.sem; modal = null;
+      if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
+      saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
+    /* tareas y materiales */
+    case "have":
+      var id = el.getAttribute("data-id");
+      S.home.have[id] = S.home.have[id] > 0 ? -Date.now() : Date.now();   /* negativo = quitado; gana el más reciente */
+      saveHome(); render(); return true;
+    case "study": studyId = el.getAttribute("data-id"); S.screen = "study"; writeLocal(); render({top:true}); return true;
+    /* diccionario */
+    case "dict-open": dict.topic = el.getAttribute("data-id"); dict.flip = {}; dict.quiz = null; S.screen = "dict"; writeLocal(); render({top:true}); return true;
+    case "dict-back": dict.topic = null; dict.quiz = null; render({top:true}); return true;
+    case "flip": var fi = el.getAttribute("data-i"); dict.flip[fi] = !dict.flip[fi]; render(); return true;
+    case "dict-play": startQuiz2(topicById(dict.topic)); render({top:true}); return true;
+    case "dict-end": dict.quiz = null; render({top:true}); return true;
+    case "dict-pick":
+      var qz = dict.quiz, it = qz.items[qz.i]; if(it.pick !== null) return true;
+      it.pick = el.getAttribute("data-v");
+      if(it.pick === it.w.es){ qz.ok++; S.home.known[wkey(dict.topic, it.w)] = S.home.known[wkey(dict.topic, it.w)] || Date.now(); saveHome(); }
+      render(); return true;
+    case "dict-next":
+      var q3 = dict.quiz;
+      if(q3.i >= q3.items.length - 1){ q3.done = true; gameDone(); } else q3.i++;
+      render({top:true}); return true;
+  }
+  return false;
+}
+function extraInput(ev){
+  var t = ev.target;
+  if(t.id === "imptext"){ imp.text = t.value; return true; }
+  if(t.id === "semana" && imp.draft){ imp.draft.semana = t.value; return true; }
+  var e = t.getAttribute && t.getAttribute("data-e");
+  if(e && imp.draft){
+    var i = +t.getAttribute("data-i"), f = t.getAttribute("data-f");
+    if(e === "notas") imp.draft.notas[i] = t.value; else if(imp.draft[e] && imp.draft[e][i]) imp.draft[e][i][f] = t.value;
+    return true;
+  }
+  return false;
+}
+
+/* ===================================================================== JUEGOS */
+var gm = {pool:"all", game:null, s:null, lockMsg:false}, gmTimer = null;
+function gamesUnlocked(){ return dueItems().every(function(i){ return isDone(i.kind, i.id); }); }
+function poolWords(){
+  var out = [];
+  vocabTopics().forEach(function(t){
+    if(gm.pool !== "all" && t.id !== gm.pool) return;
+    t.words.forEach(function(w){ out.push({tid:t.id, en:w.en, es:w.es, w:w}); });
+  });
+  return out;
+}
+function markKnown(tid, w){ var k = wkey(tid, w); if(!S.home.known[k]) S.home.known[k] = Date.now(); }
+function gameDone(){ var H = S.home, k = todayKey(); H.games++; H.gdays[k] = (H.gdays[k] || 0) + 1; saveHome(); }
+function stopTimer(){ if(gmTimer){ clearInterval(gmTimer); gmTimer = null; } }
+function gmEnd(){ gm.game = null; gm.s = null; stopTimer(); }
+
+function renderGames(){
+  if(gm.game === "memory") return renderMemory();
+  if(gm.game === "build") return renderBuild();
+  if(gm.game === "speed") return renderSpeed();
+  var pool = poolWords(), topics = vocabTopics();
+  var chips = '<div class="tabs"><button type="button" class="tab" data-act="gm-pool" data-id="all" aria-pressed="'+(gm.pool==="all")+'">Todas las palabras</button>' +
+    topics.map(function(t){ return '<button type="button" class="tab" data-act="gm-pool" data-id="'+esc(t.id)+'" aria-pressed="'+(gm.pool===t.id)+'">'+esc(t.title)+'</button>'; }).join("") + '</div>';
+  var h = subHeader("Juegos") + '<p class="lead">¡Jugar también es aprender! Elige las palabras y un juego. 🎮</p>' + chips;
+  if(pool.length < 4) return h + '<p class="note">Este grupo tiene pocas palabras. Elige otro, o pídele a mamá que agregue un tema.</p>' + footer();
+  var best = S.home.speed ? ' · Tu récord: '+S.home.speed : '';
+  return h + '<div class="gcards">' +
+    '<button class="gcard" type="button" data-act="gm-start" data-g="memory"><span class="big">🧠</span><b>Memoria</b><span>Une cada palabra con su significado</span></button>' +
+    '<button class="gcard" type="button" data-act="gm-start" data-g="build"><span class="big">🔤</span><b>Arma la palabra</b><span>Ordena las letras</span></button>' +
+    '<button class="gcard" type="button" data-act="gm-start" data-g="speed"><span class="big">⚡</span><b>Relámpago</b><span>30 segundos'+best+'</span></button></div>' +
+    '<p class="small" style="text-align:center">Cada juego terminado da ⭐ (hasta 3 por día) y las palabras que aciertas cuentan como aprendidas.</p>' + footer();
+}
+function gmBack(txt){ return subHeader(txt, "gm-hub", "← Juegos"); }
+function resultCard(title, big, sub){
+  return '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2 class="sec-title">'+title+'</h2>' +
+    '<div class="score">'+big+'</div><p>'+sub+'</p><div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="gm-start" data-g="'+gm.game+'">🎮 Jugar otra vez</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="gm-hub">Elegir otro juego</button></div></section>';
+}
+
+/* --- Memoria --- */
+function startMemory(){
+  var words = shuffle(poolWords()).slice(0, 6), cards = [];
+  words.forEach(function(w, i){ cards.push({k:i+"a", p:i, t:w.en, lang:"en"}); cards.push({k:i+"b", p:i, t:w.es, lang:"es"}); });
+  gm.s = {words:words, cards:shuffle(cards), open:[], done:{}, moves:0, lock:false, fin:false};
+}
+function renderMemory(){
+  var s = gm.s;
+  if(s.fin) return gmBack("Memoria") + resultCard("¡Lo lograste! 🌟", s.moves + ' <small>intentos</small>', "Encontraste todas las parejas. Esas palabras ya cuentan como aprendidas.") + footer();
+  return gmBack("Memoria") + '<p class="lead">Toca dos tarjetas: una en inglés y su significado en español.</p>' +
+    '<div class="mem">' + s.cards.map(function(c, i){
+      var up = s.open.indexOf(i) >= 0 || s.done[c.p];
+      return '<button type="button" class="mcard'+(up?" up":"")+(s.done[c.p]?" ok":"")+'" data-act="gm-flip" data-i="'+i+'"'+(up?" disabled":"")+' aria-label="'+(up ? esc(c.t) : "Tarjeta sin voltear")+'">' +
+        (up ? '<span lang="'+c.lang+'">'+esc(c.t)+'</span>' : '<svg aria-hidden="true"><use href="#owl"/></svg>') + '</button>';
+    }).join("") + '</div><p class="more">Intentos: '+s.moves+' · Parejas: '+Object.keys(s.done).length+' de '+s.words.length+'</p>' + footer();
+}
+
+/* --- Arma la palabra --- */
+function scramble(w){
+  var L = w.toUpperCase().split(""), r, n = 0;
+  do { r = shuffle(L); n++; } while(r.join("") === L.join("") && n < 8);
+  return r.map(function(ch, i){ return {id:i, ch:ch}; });
+}
+function startBuild(){
+  var words = shuffle(poolWords().filter(function(x){ return /^[a-z]{3,12}$/i.test(x.en); })).slice(0, 5);
+  if(words.length < 3) return false;
+  gm.s = {items:words.map(function(x){ return {x:x, letters:scramble(x.en)}; }), i:0, slots:[], solved:false, wrong:false, hint:false, ok:0, fin:false};
+  return true;
+}
+function renderBuild(){
+  var s = gm.s;
+  if(s.fin) return gmBack("Arma la palabra") + resultCard("¡Muy bien! 🎉", s.ok + ' <small>de '+s.items.length+'</small>', "Las palabras que armaste ya cuentan como aprendidas.") + footer();
+  var it = s.items[s.i], len = it.x.en.length, word = it.x.en.toUpperCase();
+  var slots = ""; for(var j=0;j<len;j++){
+    var id = s.slots[j], ch = id == null ? (s.hint && j === 0 ? word[0] : "") : it.letters[id].ch;
+    slots += '<span class="slot'+(id != null ? " fill" : (ch ? " hintch" : ""))+'">'+esc(ch)+'</span>';
+  }
+  var letters = it.letters.map(function(l){
+    var used = s.slots.indexOf(l.id) >= 0;
+    return '<button type="button" class="lt" data-act="gm-letter" data-i="'+l.id+'"'+((used || s.solved) ? " disabled" : "")+'>'+esc(l.ch)+'</button>';
+  }).join("");
+  var last = s.i === s.items.length - 1;
+  return gmBack("Arma la palabra") + '<div class="prog-row"><span>Palabra '+(s.i+1)+' de '+s.items.length+'</span></div>' +
+    '<main class="card qcard"><span class="chip">En español significa</span><p class="qtext">'+esc(it.x.es)+'</p>' +
+    '<div class="slots" lang="en" aria-label="Tu palabra">'+slots+'</div>' +
+    (s.wrong ? '<p class="fb bad">¡Casi! Inténtalo otra vez. 💙</p>' : '') +
+    (s.solved ? '<p class="fb good">🎉 ¡Muy bien! Es <b lang="en">'+esc(word)+'</b></p>' : '') +
+    '<div class="letters" lang="en">'+letters+'</div>' +
+    (s.solved ? '<button class="btn btn-sun btn-big" type="button" data-act="gm-next">'+(last ? "Ver mi resultado" : "Siguiente →")+'</button>'
+              : '<div class="nav"><button class="btn btn-ghost" type="button" data-act="gm-undo">⌫ Borrar</button><button class="btn btn-ghost" type="button" data-act="gm-hint">💡 Pista</button></div>') +
+    '</main>' + footer();
+}
+
+/* --- Relámpago --- */
+function nextSpeed(){
+  var pool = poolWords(), w = pool[Math.floor(Math.random() * pool.length)];
+  var others = shuffle(pool.filter(function(x){ return x.es !== w.es; })).map(function(x){ return x.es; });
+  var uniq = []; others.forEach(function(o){ if(uniq.indexOf(o) < 0) uniq.push(o); });
+  gm.s.cur = {w:w, opts:shuffle([w.es].concat(uniq.slice(0, 2)))};
+}
+function startSpeed(){
+  gm.s = {t0:Date.now(), dur:30, score:0, tries:0, over:false, cur:null};
+  nextSpeed(); stopTimer();
+  gmTimer = setInterval(function(){
+    if(S.screen !== "games" || gm.game !== "speed" || !gm.s || gm.s.over){ stopTimer(); return; }
+    var left = Math.max(0, gm.s.dur - (Date.now() - gm.s.t0) / 1000);
+    var tx = document.getElementById("gtime"), bar = document.getElementById("gbar");
+    if(tx) tx.textContent = Math.ceil(left); if(bar) bar.style.width = (left / gm.s.dur * 100) + "%";
+    if(left <= 0){
+      stopTimer(); gm.s.over = true;
+      var newBest = gm.s.score > S.home.speed; if(newBest) S.home.speed = gm.s.score;
+      gm.s.newBest = newBest; gameDone(); render({top:true});
+    }
+  }, 200);
+}
+function renderSpeed(){
+  var s = gm.s;
+  if(s.over) return gmBack("Relámpago") + resultCard(s.newBest && s.score > 0 ? "¡Nuevo récord! 🏆" : "¡Tiempo! ⚡", s.score + ' <small>aciertos</small>', "Tu récord es "+S.home.speed+". ¡Puedes superarlo!") + footer();
+  var left = Math.max(0, Math.ceil(s.dur - (Date.now() - s.t0) / 1000));
+  return gmBack("Relámpago") +
+    '<div class="prog-row"><span>⏱️ <b id="gtime">'+left+'</b> s</span><span>✅ '+s.score+'</span></div><div class="bar"><i id="gbar" style="width:'+(left/s.dur*100)+'%"></i></div>' +
+    '<main class="card qcard"><span class="chip">¿Qué significa?</span><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(s.cur.w.en)+'</p>' +
+    '<div class="opts">' + s.cur.opts.map(function(o, i){ return '<button type="button" class="opt" data-act="gm-speed" data-v="'+esc(o)+'"><span class="let">'+LET[i]+'</span><span>'+esc(o)+'</span></button>'; }).join("") + '</div></main>' + footer();
+}
+
+function gamesClick(act, el){
+  switch(act){
+    case "gm-pool": gm.pool = el.getAttribute("data-id"); render(); return true;
+    case "gm-hub": gmEnd(); render({top:true}); return true;
+    case "gm-start":
+      var g = el.getAttribute("data-g"); gm.game = g; stopTimer();
+      if(g === "memory") startMemory();
+      else if(g === "build"){ if(!startBuild()){ gm.game = null; gm.s = null; render(); return true; } }
+      else startSpeed();
+      render({top:true}); return true;
+    case "gm-flip":
+      var s = gm.s, i = +el.getAttribute("data-i"), c = s.cards[i];
+      if(s.lock || s.done[c.p] || s.open.indexOf(i) >= 0) return true;
+      s.open.push(i);
+      if(s.open.length === 2){
+        s.moves++;
+        var a = s.cards[s.open[0]], b = s.cards[s.open[1]];
+        if(a.p === b.p && a.k !== b.k){
+          s.done[a.p] = 1; s.open = [];
+          if(Object.keys(s.done).length === s.words.length){ s.fin = true; s.words.forEach(function(w){ markKnown(w.tid, w.w); }); gameDone(); }
+        } else {
+          s.lock = true; render();
+          setTimeout(function(){ s.open = []; s.lock = false; if(gm.game === "memory" && gm.s === s) render(); }, 900);
+          return true;
+        }
+      }
+      render(); return true;
+    case "gm-letter":
+      var b2 = gm.s; if(b2.solved) return true;
+      var it = b2.items[b2.i], id = +el.getAttribute("data-i");
+      if(b2.slots.indexOf(id) >= 0) return true;
+      b2.wrong = false; b2.slots.push(id);
+      if(b2.slots.length === it.x.en.length){
+        var tried = b2.slots.map(function(k){ return it.letters[k].ch; }).join("");
+        if(tried === it.x.en.toUpperCase()){ b2.solved = true; b2.ok++; markKnown(it.x.tid, it.x.w); }
+        else { b2.wrong = true; render(); setTimeout(function(){ if(gm.s === b2 && b2.wrong){ b2.slots = []; b2.wrong = false; render(); } }, 900); return true; }
+      }
+      render(); return true;
+    case "gm-undo": gm.s.slots.pop(); gm.s.wrong = false; render(); return true;
+    case "gm-hint": gm.s.hint = true; render(); return true;
+    case "gm-next":
+      var b3 = gm.s;
+      if(b3.i >= b3.items.length - 1){ b3.fin = true; gameDone(); }
+      else { b3.i++; b3.slots = []; b3.solved = false; b3.wrong = false; b3.hint = false; }
+      render({top:true}); return true;
+    case "gm-speed":
+      var sp = gm.s; if(sp.over) return true;
+      sp.tries++;
+      if(el.getAttribute("data-v") === sp.cur.w.es){ sp.score++; markKnown(sp.cur.w.tid, sp.cur.w.w); saveHome(); }
+      nextSpeed(); render(); return true;
+    case "games-locked": gm.lockMsg = true; render(); setTimeout(function(){ gm.lockMsg = false; if(S.screen === "home") render(); }, 3500); return true;
+  }
+  return false;
+}
+
 function renderFab(){
   var b = helperOpen ? '<div class="bubble" role="dialog" aria-label="Mi ayudante"><b>¿Qué quieres que te ayude a traducir?</b><p>Todavía estoy aprendiendo a traducir. ¡Muy pronto podré ayudarte! 🦉</p><button class="link-btn" type="button" data-act="helper">Cerrar</button></div>' : "";
   return b + '<button class="fab" type="button" data-act="helper" aria-label="Mi ayudante"><svg aria-hidden="true"><use href="#owl"/></svg></button>';
@@ -803,6 +1657,7 @@ function syncText(s){ return (SYNC_TXT[s] || SYNC_TXT.none); }
 function footer(){
   var st = window.KXSync ? KXSync.status : "none", t = syncText(st);
   return '<footer class="foot"><span id="syncst" class="syncst '+t[1]+'">'+t[0]+'</span>' +
+    (S.screen === "home" ? '<button class="link-btn" data-act="go-mom" type="button">🔒 Zona de mamá</button>' : '') +
     (["welcome","quiz","results"].indexOf(S.screen) >= 0 ? '<button class="link-btn" data-act="ask-reset" type="button">↺ Borrar el progreso del examen</button>' : '') +
     (window.KXSync && KXSync.enabled ? '<button class="link-btn" data-act="ask-logout" type="button">Cerrar sesión en este aparato</button>' : '') +
     '</footer>';
@@ -1058,6 +1913,14 @@ function renderModal(){
       '<p>Si terminas ahora, esas preguntas contarán como incorrectas.</p>' +
       '<button type="button" class="btn btn-sun" data-act="modal-close" id="mfocus">Seguir respondiendo</button>' +
       '<button type="button" class="btn btn-ghost" data-act="finish-now">Terminar de todos modos</button>';
+  } else if(modal.type === "deltema"){
+    h = '<h2>¿Borrar este tema?</h2><p>Se borrará el tema con sus preguntas y vocabulario. Puedes volver a importarlo después.</p>' +
+      '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, conservarlo</button>' +
+      '<button type="button" class="btn btn-sun" data-act="do-deltema">Sí, borrar</button>';
+  } else if(modal.type === "delweek"){
+    h = '<h2>¿Borrar esta semana?</h2><p>Se borrarán sus tareas, materiales, videos y notas. Lo que Killian ya marcó se conserva en sus estrellas.</p>' +
+      '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, conservarla</button>' +
+      '<button type="button" class="btn btn-sun" data-act="do-delweek">Sí, borrar</button>';
   } else if(modal.type === "logout"){
     h = '<h2>¿Cerrar sesión?</h2><p>Este aparato dejará de estar conectado. Tu progreso sigue guardado en la nube y volverá al entrar de nuevo.</p>' +
       '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, quedarme</button>' +
@@ -1079,6 +1942,9 @@ function render(opts){
   if(needLogin) html = renderAuth();
   else switch(S.screen){
     case "home": html = renderHome(); break;
+    case "mom": html = renderMom(); break;
+    case "games": html = renderGames(); break;
+    case "study": html = renderStudy(); break;
     case "topics": html = renderTopics(); break;
     case "stars": html = renderStars(); break;
     case "dict": html = renderDict(); break;
@@ -1086,6 +1952,7 @@ function render(opts){
     case "results": html = renderResults(); break;
     default: html = renderQuiz();
   }
+  app.className = "app" + (!needLogin && S.screen === "home" ? " wide" : "");
   app.innerHTML = html + (needLogin ? "" : renderFab() + renderModal());
   if(opts.top) window.scrollTo(0, 0); else window.scrollTo(0, y);
   if(modal){ var f = document.getElementById("mfocus"); if(f) f.focus(); }
@@ -1112,7 +1979,7 @@ function finishNow(){
   if(S.mode === "exam"){ S.home.tries++; S.home.best = Math.max(S.home.best, okn * POINTS); }
   else S.home.prac++;
   store().done = true; S.screen = "results"; modal = null; filter = "all";
-  save(); render({top:true});
+  save(); saveHome(); render({top:true});
 }
 function tryFinish(){
   var st = store(), qs = qsOf();
@@ -1148,14 +2015,15 @@ app.addEventListener("click", function(ev){
   if(!el || !app.contains(el)) return;
   var act = el.getAttribute("data-act"), st = store();
   if(act === "veil"){ if(ev.target === el){ modal = null; render(); } return; }
+  if(extraClick(act, el, ev)) return;
   switch(act){
-    case "home": S.screen = "home"; helperOpen = false; save(); render({top:true}); break;
-    case "go-screen": S.screen = el.getAttribute("data-s"); helperOpen = false; save(); render({top:true}); break;
-    case "open-topic": S.screen = "welcome"; S.mode = "exam"; save(); render({top:true}); break;
+    case "home": S.screen = "home"; helperOpen = false; momOk = false; dict.quiz = null; writeLocal(); render({top:true}); break;
+    case "go-screen": S.screen = el.getAttribute("data-s"); helperOpen = false; if(S.screen === "dict"){ dict.topic = null; dict.quiz = null; } writeLocal(); render({top:true}); break;
+    case "open-topic": S.screen = "welcome"; S.mode = "exam"; writeLocal(); render({top:true}); break;
     case "helper": helperOpen = !helperOpen; render(); break;
     case "done": markDone(el.getAttribute("data-k"), el.getAttribute("data-id")); break;
-    case "start": S.screen = "quiz"; S.mode = "exam"; save(); render({top:true}); break;
-    case "see-results": S.screen = "results"; S.mode = "exam"; filter = "all"; save(); render({top:true}); break;
+    case "start": S.screen = "quiz"; S.mode = "exam"; writeLocal(); render({top:true}); break;
+    case "see-results": S.screen = "results"; S.mode = "exam"; filter = "all"; writeLocal(); render({top:true}); break;
     case "prev": go(st.idx-1); break;
     case "next": go(st.idx+1); break;
     case "goto": go(+el.getAttribute("data-i")); break;
@@ -1200,13 +2068,21 @@ app.addEventListener("click", function(ev){
     case "auth-go": ev.preventDefault(); doAuth(); break;
     case "practice": startPractice(); break;
     case "repeat": repeatExam(); break;
-    case "back-exam": S.mode = "exam"; S.screen = S.exam.done ? "results" : "quiz"; filter = "all"; save(); render({top:true}); break;
+    case "back-exam": S.mode = "exam"; S.screen = S.exam.done ? "results" : "quiz"; filter = "all"; writeLocal(); render({top:true}); break;
     case "filter": filter = el.getAttribute("data-f"); render(); break;
   }
 });
 
-app.addEventListener("submit", function(ev){ ev.preventDefault(); doAuth(); });
+app.addEventListener("submit", function(ev){ ev.preventDefault(); if(ev.target.id === "authform") doAuth(); });
+app.addEventListener("change", function(ev){
+  if(ev.target.id !== "impfile" || !ev.target.files || !ev.target.files[0]) return;
+  var rd = new FileReader();
+  rd.onload = function(){ imp.text = String(rd.result || ""); imp.msg = ""; imp.errors = []; render(); };
+  rd.onerror = function(){ imp.msg = "No pude leer ese archivo."; render(); };
+  rd.readAsText(ev.target.files[0]);
+});
 app.addEventListener("input", function(ev){
+  if(extraInput(ev)) return;
   if(ev.target.id === "email"){ auth.email = ev.target.value; return; }
   if(ev.target.id === "pass"){ auth.pass = ev.target.value; return; }
   if(ev.target.id !== "ans") return;
@@ -1220,6 +2096,7 @@ app.addEventListener("keydown", function(ev){
     var st = store();
     if(st.idx < stepsOf().length-1) go(st.idx+1);
   }
+  if(ev.key === "Enter" && (ev.target.id === "pin" || ev.target.id === "pin2")){ ev.preventDefault(); pinGo(); }
   if(ev.key === "Escape" && modal){ modal = null; render(); }
 });
 
@@ -1244,7 +2121,7 @@ if("serviceWorker" in navigator && location.protocol.indexOf("http") === 0){
 }
 
 /* Utilidad de pruebas (no la usa el niño). */
-window.__kx = {EXAM:EXAM, BANK:BANK, C:C, isCorrect:isCorrect};
+window.__kx = {EXAM:EXAM, BANK:BANK, C:C, isCorrect:isCorrect, gm:function(){ return gm; }, S:function(){ return S; }};
 })();
 </script>
 </body>
