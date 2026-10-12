@@ -6,7 +6,7 @@
 "use strict";
 var SB_URL = "https://hhpoezwionzxmayebbpx.supabase.co";
 var SB_KEY = "sb_publishable_0R-GV1JwJOl8125gNiZ4ZA_yw5CDssI";
-var KEYS = ["examen", "inicio", "contenido"];
+var KEYS = ["examen", "inicio", "contenido", "grabaciones"];
 
 var sb = null, session = null, pending = {}, timer = null, retry = null, busy = false, cbs = {};
 var api = {enabled:false, status:"none", KEYS:KEYS};

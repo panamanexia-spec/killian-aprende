@@ -177,3 +177,15 @@ Cada tarea de `tareas` puede traer, además de `evaluacion`, `en_casa`, `repaso`
 - **Examen:** si un tema tiene `fecha_examen`, en «Pendientes de hoy» sale solo, en los 3 días de clase antes del examen, `📚 Estudiar: <tema> – hacer examen de práctica` con botón que abre el examen. Se marca hecho al terminar una ronda. El día antes del examen cambia a `🔁 Repasar mis errores de <tema>` y abre solo las preguntas que falló (si no hay errores registrados, sigue siendo «Estudiar»). Después del examen ya no sale.
 - **Charla:** si una charla tiene `fecha_entrega`, sale `🎤 Practicar mi charla: <título>` los 2 días de clase antes. Se marca hecho al terminar una práctica. Si alguna tarea de la agenda ya trae `"charla"` con ese id, no se repite.
 - Los días de clase son de lunes a viernes.
+
+## Charlas por niveles: campos opcionales de cada frase
+Cada frase de `frases` puede ser un texto simple, o un objeto con:
+- `texto` (obligatorio) y `es` (traducción al español).
+- **`pista`**: un emoji que representa la frase (si no se pone, se usa el primer emoji de la traducción `es`, y si no hay, 💬).
+- **`gesto`**: texto corto en español con el gesto que acompaña la frase (por ejemplo `"Señálate con el dedo"`).
+
+```json
+{ "texto": "Hello! My name is Killian.", "es": "¡Hola! Me llamo Killian.", "pista": "👋", "gesto": "Saluda con la mano" }
+```
+
+La charla se practica en 6 niveles: 1 Entender, 2 Eco, 3 Bola de nieve, 4 Sombra, 5 Desvanecer, 6 Ensayo final. Con `fecha_entrega`, en «Pendientes de hoy» sale **«🎤 Practicar mi charla (5 min)»** durante los 3 días de clase antes (3 sesiones por día); el día antes toca Sombra + Ensayo final. Las grabaciones del ensayo final se guardan en la nube y mamá las escucha en Zona de mamá → Charlas.

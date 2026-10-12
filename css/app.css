@@ -452,3 +452,33 @@ a.btn{text-decoration:none}
 .row2{display:grid; grid-template-columns:72px 1fr; gap:10px}
 @media (prefers-reduced-motion:reduce){.btn.rec{animation:none}}
 .due.late{color:#b45309}
+
+.bigemo{font-size:4rem; text-align:center; margin:0; line-height:1.1}
+.trad{margin:0; text-align:center; font-size:1.1rem; color:var(--blue-d)}
+.gesto{margin:0; background:#fff6d6; border-radius:14px; padding:8px 12px; font-weight:700}
+.chtext.sm{font-size:1.35rem}
+.chain{display:flex; flex-direction:column; gap:6px}
+.chain .chtext{margin:0}
+.wtok.ok{background:#d9f7e0; border-color:#4cb36b}
+.wtok.miss{background:#e8ebf0; border-color:#aab3c2; color:#5b6678}
+.wtok.small{border-color:transparent}
+.wtok.now{background:#ffc928; border-color:#e0a400}
+.wtok.past{background:#d9f7e0; border-color:#4cb36b}
+.reps{display:flex; gap:10px; justify-content:center; margin:0}
+.dot{width:20px; height:20px; border-radius:50%; border:3px solid var(--blue); background:#fff}
+.dot.on{background:var(--blue)}.dot.cur{background:#ffc928; border-color:#e0a400}
+.emorow{display:flex; flex-wrap:wrap; gap:6px; justify-content:center; font-size:2.4rem; margin:0}
+.countdown{font-family:var(--font-display); font-weight:800; font-size:5rem; text-align:center; margin:20px 0; color:var(--blue-d)}
+.stars-big{font-size:2rem; text-align:center; margin:0}
+.lvl{display:flex; align-items:center; gap:12px; width:100%; text-align:left; background:#fff; border:3px solid var(--sky-2); border-radius:22px; padding:12px 14px; box-shadow:0 5px 0 var(--sky-2); cursor:pointer; font:inherit; min-height:72px}
+.lvl.cur{border-color:#ffc928; box-shadow:0 5px 0 #e0a400}
+.lvl.lock{opacity:.55}
+.lvl .le{font-size:2rem; flex:none}
+.lvl .lvtxt{display:flex; flex-direction:column; flex:1; min-width:0}
+.lvl .lvtxt b{font-family:var(--font-display); color:var(--blue-d); font-size:1.15rem}
+.lvl .lvtxt span{font-size:.95rem}
+.lvl .ls{flex:none; font-weight:800; color:#e0a400; font-size:1.3rem}
+.lvchip{display:inline-block; font-size:.8rem; padding:2px 8px; border-radius:999px; background:#e8ebf0; margin:2px 2px 2px 0}
+.lvchip.on{background:#d9f7e0}
+.charlamom{border-top:2px solid var(--sky); padding:10px 0}
+.charlamom audio, .chcard audio{width:100%}

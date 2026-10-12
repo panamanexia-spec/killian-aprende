@@ -247,11 +247,20 @@ function renderTareasMom(){
   });
   return h + footer();
 }
+/* Cuántas veces practicó, en qué nivel va y las grabaciones del ensayo final. */
+function charlaStatsMom(c){
+  var id = c.id, ses = chSessions(id), rd = chReady(id), recs = GR.items.filter(function(x){ return x.charla === id; });
+  var lv = LEVELS.map(function(L){ var st = chStars(id, L.n); return '<span class="lvchip'+(st ? " on" : "")+'" title="'+esc(L.name)+'">'+L.n+' '+esc(L.name)+' '+(st ? starsTxt(st) : "·")+'</span>'; }).join("");
+  return '<div class="charlamom"><p class="wordrow"><span><b>'+esc(c.titulo)+'</b> · '+esc(c.materia||"")+' · '+c.frases.length+' frases · '+LANGS[c.idioma].name+(c.fecha ? ' · entrega '+esc(c.fecha) : '')+'</span><button class="link-btn del" type="button" data-act="chm-del" data-id="'+esc(id)+'">🗑 Quitar</button></p>' +
+    '<p class="small">Practicó <b>'+ses+'</b> '+(ses === 1 ? "vez" : "veces")+' ('+chToday(id)+' hoy) · va en el nivel <b>'+chNextLevel(id)+'</b> · charla lista al <b>'+rd+'%</b></p>' +
+    '<p class="lvrow">'+lv+'</p>' +
+    (recs.length ? recs.map(function(g){ return '<p class="small">🎙 Ensayo final · '+esc(new Date(g.ts).toLocaleString("es", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}))+' · '+g.pct+'%</p><audio controls preload="none" src="'+esc(g.data)+'"></audio>'; }).join("") : '<p class="small">Todavía no hay grabaciones del ensayo final.</p>') + '</div>';
+}
 var chForm = {titulo:"", materia:"", idioma:"en", texto:"", msg:""};
 function renderCharlasMom(){
   var h = momHeader("Charlas", "mom-go", "← Zona de mamá");
   h += '<section class="card mom"><p>Aquí se agregan las charlas o presentaciones orales de Killian. La página las convierte en práctica: escuchar, repetir (con revisión de pronunciación), completar, ordenar y decirlas de memoria.</p>' +
-    (S.charlas.length ? S.charlas.map(function(c){ return '<p class="wordrow"><span><b>'+esc(c.titulo)+'</b> · '+esc(c.materia||"")+' · '+c.frases.length+' frases · '+LANGS[c.idioma].name+'</span><button class="link-btn del" type="button" data-act="chm-del" data-id="'+esc(c.id)+'">🗑 Quitar</button></p>'; }).join("") : '<p class="small">Todavía no hay charlas.</p>') + '</section>';
+    (S.charlas.length ? S.charlas.map(charlaStatsMom).join("") : '<p class="small">Todavía no hay charlas.</p>') + '</section>';
   h += '<section class="card mom"><h2 class="sec-title">+ Nueva charla</h2>' +
     (chForm.msg ? '<p class="err" role="alert">'+esc(chForm.msg)+'</p>' : '') +
     '<label class="fld" for="chm-titulo"><span>Título</span><input id="chm-titulo" value="'+esc(chForm.titulo)+'"></label>' +

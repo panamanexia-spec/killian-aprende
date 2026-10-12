@@ -32,4 +32,4 @@ mover a `buzon/procesados/` y darle a Adela un resumen de 2–3 líneas de qué 
 - Los temas con `fecha_examen` generan solos tareas de estudio los días previos.
 
 ## Avisos
-- Avisos por ntfy, tema `killian-d84fb5f5d2eb4fe2b1210ca1`.
+- Avisos por ntfy, tema `(secreto: está en Supabase, tabla notif.config; no escribirlo en el repositorio, que es público)`.

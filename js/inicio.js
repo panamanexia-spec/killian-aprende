@@ -46,8 +46,7 @@ function prevSchoolDay(k, n){
 function wrongIdsOf(tid){ var h = tHist(tid), l = h[h.length - 1]; return l && l.wrong ? l.wrong : []; }
 /* Pendientes que salen solos: estudiar para un examen (3 días de clase antes) y practicar una charla (2 días antes). */
 function autoItems(){
-  var t = todayKey(), out = [], ag = agendaData(), linked = {};
-  ag.tareas.forEach(function(x){ if(x.charla) linked[x.charla] = 1; });
+  var t = todayKey(), out = [];
   allTemas().forEach(function(tm){
     var E = tm.fecha_examen; if(!E || !isDate(E) || E < t) return;
     var cur = null;   /* un solo pendiente por tema: el del día que toca */
@@ -60,13 +59,14 @@ function autoItems(){
     if(cur) out.push(cur);
   });
   S.charlas.forEach(function(c){
-    var E = c.fecha; if(!E || !isDate(E) || E < t || linked[c.id]) return;
-    var cur = null;
-    [2, 1].forEach(function(n){
-      var d = prevSchoolDay(E, n); if(d > t) return;
-      cur = ({kind:"task", id:"ch:" + c.id + ":" + d, sort:E + "0" + d, x:{id:"ch:" + c.id + ":" + d, materia:c.materia || "", fecha:d, entrega:E, auto:"ch", charla:c.id, titulo:"🎤 Practicar mi charla: " + c.titulo}});
-    });
-    if(cur) out.push(cur);
+    var E = c.fecha; if(!E || !isDate(E) || E < t) return;
+    var cur = null;   /* los 3 días de clase antes de la entrega, 3 sesiones por día */
+    [3, 2, 1].forEach(function(n){ var d = prevSchoolDay(E, n); if(d <= t) cur = {n:n, d:d}; });
+    if(!cur) return;
+    var id = "ch:" + c.id + ":" + cur.d, fin = cur.n === 1, nl = chNextLevel(c.id);
+    out.push({kind:"task", id:id, sort:E + "0" + cur.d, x:{id:id, materia:c.materia || "", fecha:cur.d, entrega:E, auto:"ch", charla:c.id, modo:fin ? "final" : "",
+      titulo:"🎤 Practicar mi charla (5 min)",
+      en_casa:["«" + c.titulo + "»: " + (fin ? "hoy toca Sombra y Ensayo final." : "vas en el nivel " + nl + " (" + LEVELS[nl - 1].name + ").") + " Sesión " + Math.min(3, chToday(c.id) + 1) + " de 3 de hoy."]}});
   });
   return out;
 }
@@ -97,7 +97,7 @@ function starCount(){
   var H = S.home;
   return realKeys(H.tasks).length + realKeys(H.vids).length + realKeys(H.mats).length +
     realKeys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + H.prac +
-    Math.min(20, Math.floor(knownCount() / 5)) + gameStars();
+    Math.min(20, Math.floor(knownCount() / 5)) + gameStars() + chStarTotal();
 }
 function streak(){
   var ks = realKeys(S.home.days).sort(), best = 0, run = 0, prev = null;
@@ -171,8 +171,10 @@ function taskCard(it){
     if(videoInfo(v.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(v.id)+'">▶ '+esc(v.titulo)+'</button>';
     else if(/^https?:\/\//.test(v.url||"")) acts += '<a class="btn btn-blue" href="'+esc(v.url)+'" target="_blank" rel="noopener">▶ '+esc(v.titulo)+' ↗</a>';
   });
-  if(it.kind === "task" && x.charla && charlaById(x.charla)) acts += '<button class="btn btn-blue" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'">🎤 Practicar mi charla</button>';
-  if(it.kind === "task" && x.tema && temaById(x.tema)) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
+  var cc = it.kind === "task" && x.charla ? charlaById(x.charla) : null;
+  if(cc && (x.auto || !(cc.fecha && cc.fecha >= todayKey() && prevSchoolDay(cc.fecha, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'" data-m="'+(x.modo || "")+'">🎤 Practicar mi charla</button>';
+  var tmx = it.kind === "task" && x.tema ? temaById(x.tema) : null;
+  if(tmx && (x.auto || !(tmx.fecha_examen && tmx.fecha_examen >= todayKey() && prevSchoolDay(tmx.fecha_examen, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
   var home = (x.en_casa && x.en_casa.length) ? x.en_casa : (x.en_casa ? [] : kidDetail(x.detalle));
@@ -282,7 +284,7 @@ function renderStars(){
   var H = S.home;
   var rows = [["✅ Tareas hechas", realKeys(H.tasks).length], ["🎬 Videos vistos", realKeys(H.vids).length], ["🎒 Materiales preparados", realKeys(H.mats).length],
     ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac],
-    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games]];
+    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games], ["🎤 Estrellas de mis charlas", chStarTotal()]];
   return subHeader("Mis estrellas") +
     '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starsAvail()+'</div><p>¡Sigue así, Killian!</p>'+(spentStars() ? '<p class="small">Has ganado '+starCount()+' en total y ya canjeaste '+spentStars()+'.</p>' : '')+'</section>' + renderPrizesKid() +
     '<section class="card"><h2 class="sec-title">Así ganas estrellas</h2>' + rows.map(function(r){ return '<p class="wordrow"><b>'+r[1]+'</b><span>'+esc(r[0])+'</span></p>'; }).join("") + '</section>' +
