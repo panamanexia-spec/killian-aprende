@@ -37,12 +37,55 @@ function agendaData(){
 }
 var cel = {};
 function isDone(kind, id){ var m = kind === "task" ? S.home.tasks : kind === "vid" ? S.home.vids : S.home.mats; return !!m[id]; }
+/* Días de clase (lunes a viernes) hacia atrás desde una fecha. */
+function prevSchoolDay(k, n){
+  var d = k;
+  while(n > 0){ d = addDays(d, -1); var w = parseD(d).getDay(); if(w !== 0 && w !== 6) n--; }
+  return d;
+}
+function wrongIdsOf(tid){ var h = tHist(tid), l = h[h.length - 1]; return l && l.wrong ? l.wrong : []; }
+/* Pendientes que salen solos: estudiar para un examen (3 días de clase antes) y practicar una charla (2 días antes). */
+function autoItems(){
+  var t = todayKey(), out = [], ag = agendaData(), linked = {};
+  ag.tareas.forEach(function(x){ if(x.charla) linked[x.charla] = 1; });
+  allTemas().forEach(function(tm){
+    var E = tm.fecha_examen; if(!E || !isDate(E) || E < t) return;
+    var cur = null;   /* un solo pendiente por tema: el del día que toca */
+    [3, 2, 1].forEach(function(n){
+      var d = prevSchoolDay(E, n); if(d > t) return;
+      var rep = n === 1 && wrongIdsOf(tm.id).length > 0, nm = tm.titulo_es || tm.titulo;
+      cur = ({kind:"task", id:"ex:" + tm.id + ":" + d, sort:E + "0" + d, x:{id:"ex:" + tm.id + ":" + d, materia:tm.materia || "", fecha:d, entrega:E, auto:"ex", tema:tm.id, modo:rep ? "repasar" : "estudiar",
+        titulo:rep ? "🔁 Repasar mis errores de " + nm : "📚 Estudiar: " + nm + " – hacer examen de práctica"}});
+    });
+    if(cur) out.push(cur);
+  });
+  S.charlas.forEach(function(c){
+    var E = c.fecha; if(!E || !isDate(E) || E < t || linked[c.id]) return;
+    var cur = null;
+    [2, 1].forEach(function(n){
+      var d = prevSchoolDay(E, n); if(d > t) return;
+      cur = ({kind:"task", id:"ch:" + c.id + ":" + d, sort:E + "0" + d, x:{id:"ch:" + c.id + ":" + d, materia:c.materia || "", fecha:d, entrega:E, auto:"ch", charla:c.id, titulo:"🎤 Practicar mi charla: " + c.titulo}});
+    });
+    if(cur) out.push(cur);
+  });
+  return out;
+}
+/* Al terminar una ronda de examen o una práctica de charla, esos pendientes se marcan hechos. */
+function markAutoDone(kind, id){
+  var H = S.home, ch = false;
+  autoItems().forEach(function(it){
+    var x = it.x; if(x.auto !== kind || (kind === "ex" ? x.tema : x.charla) !== id || H.tasks[it.id]) return;
+    H.tasks[it.id] = Date.now(); ch = true;
+  });
+  if(ch) saveHome();
+}
 function dueItems(){
   var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
   ag.tareas.forEach(function(x){ if(x.fecha <= t && x.fecha >= old) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
   var linked = {};
   ag.tareas.forEach(function(x){ (x.videos || []).forEach(function(id){ linked[id] = 1; }); });
   ag.videos.forEach(function(v){ if(!linked[v.id] && v.fecha <= t && v.fecha >= old) items.push({kind:"vid", id:v.id, x:v, sort:addDays(v.fecha, 1)+"2"}); });
+  autoItems().forEach(function(it){ it.sort = it.x.entrega + "1"; items.push(it); });
   items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
   return items;
 }
@@ -129,6 +172,7 @@ function taskCard(it){
     else if(/^https?:\/\//.test(v.url||"")) acts += '<a class="btn btn-blue" href="'+esc(v.url)+'" target="_blank" rel="noopener">▶ '+esc(v.titulo)+' ↗</a>';
   });
   if(it.kind === "task" && x.charla && charlaById(x.charla)) acts += '<button class="btn btn-blue" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'">🎤 Practicar mi charla</button>';
+  if(it.kind === "task" && x.tema && temaById(x.tema)) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
   var home = (x.en_casa && x.en_casa.length) ? x.en_casa : (x.en_casa ? [] : kidDetail(x.detalle));

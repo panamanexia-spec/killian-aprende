@@ -86,6 +86,7 @@ function listenOnce(lang, cb){
 /* ---- guardar práctica ---- */
 function chDone(){
   var k = ch.id + "|" + todayKey(); S.home.chd[k] = (S.home.chd[k] || 0) + 1; saveHome();
+  markAutoDone("ch", ch.id);
 }
 
 /* ---- pantallas ---- */

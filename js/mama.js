@@ -38,7 +38,7 @@ function validateAgenda(o){
   list("tareas").forEach(function(x, i){
     var n = "Tarea " + (i + 1);
     if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
-    var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega), evaluacion:str(x.evaluacion), en_casa:strList(x.en_casa), repaso:strList(x.repaso), videos:strList(x.videos), charla:str(x.charla)};
+    var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega), evaluacion:str(x.evaluacion), en_casa:strList(x.en_casa), repaso:strList(x.repaso), videos:strList(x.videos), charla:str(x.charla), tema:str(x.tema)};
     if(!it.titulo) E.push(n + ": falta el título.");
     if(!isDate(it.fecha)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": falta la fecha o no es válida (usa 2026-10-13).");
     if(it.entrega && !isDate(it.entrega)) E.push(n + ": la fecha de entrega no es válida (usa 2026-10-14).");
@@ -391,7 +391,7 @@ function renderAsks(){
 function applyAgenda(d){
   var sem = d.semana, ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
   function keep(x){ return x.semana !== sem; }
-  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega, evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return pre + v; }), charla:x.charla||""}; }));
+  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega, evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return pre + v; }), charla:x.charla||"", tema:x.tema||""}; }));
   ag.materiales = ag.materiales.filter(keep).concat(d.materiales.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, material:x.material, llevar_el:x.llevar_el}; }));
   ag.videos = ag.videos.filter(keep).concat(d.videos.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, url:x.url, fecha:x.fecha}; }));
   ag.notas = (ag.notas || []).filter(keep).concat(d.notas.filter(function(n){ return str(n); }).map(function(n){ return {semana:sem, texto:str(n)}; }));
@@ -407,7 +407,7 @@ function draftFromWeek(sem){
   function id(x){ return String(x.id).indexOf(pre) === 0 ? String(x.id).slice(pre.length) : x.id; }
   function w(x){ return x.semana === sem; }
   return {semana:sem,
-    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||"", evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return String(v).indexOf(pre) === 0 ? String(v).slice(pre.length) : v; }), charla:x.charla||""}; }),
+    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||"", evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return String(v).indexOf(pre) === 0 ? String(v).slice(pre.length) : v; }), charla:x.charla||"", tema:x.tema||""}; }),
     materiales:ag.materiales.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", material:x.material||"", llevar_el:x.llevar_el||""}; }),
     videos:ag.videos.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", url:x.url||"", fecha:x.fecha||""}; }),
     notas:(ag.notas||[]).filter(w).map(function(n){ return n.texto; })};

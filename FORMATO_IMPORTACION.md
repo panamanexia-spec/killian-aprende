@@ -168,3 +168,12 @@ Se guardan en `data/charlas/` (y se listan en `data/charlas/index.json`), o mam�
 ```
 `idioma` puede ser `en`, `es` o `zh`. Para que una tarea abra la charla, ponle `"charla": "thunder-rose"` en la agenda.
 La práctica incluye escuchar y repetir con revisión de pronunciación (micrófono del navegador, gratis), completar, ordenar y decirla de memoria.
+
+## Campos de enlace en las tareas de la agenda
+Cada tarea de `tareas` puede traer, además de `evaluacion`, `en_casa`, `repaso`, `videos` y `charla`:
+- **`"tema": "id-del-tema"`** → la tarea muestra el botón **📝 Practicar examen**, que abre directo una ronda de ese tema (igual que `charla` abre la práctica de la charla).
+
+## Pendientes automáticos (no hay que escribirlos en la agenda)
+- **Examen:** si un tema tiene `fecha_examen`, en «Pendientes de hoy» sale solo, en los 3 días de clase antes del examen, `📚 Estudiar: <tema> – hacer examen de práctica` con botón que abre el examen. Se marca hecho al terminar una ronda. El día antes del examen cambia a `🔁 Repasar mis errores de <tema>` y abre solo las preguntas que falló (si no hay errores registrados, sigue siendo «Estudiar»). Después del examen ya no sale.
+- **Charla:** si una charla tiene `fecha_entrega`, sale `🎤 Practicar mi charla: <título>` los 2 días de clase antes. Se marca hecho al terminar una práctica. Si alguna tarea de la agenda ya trae `"charla"` con ese id, no se repite.
+- Los días de clase son de lunes a viernes.

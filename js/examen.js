@@ -40,11 +40,13 @@ function chooseQuestions(tema, n){
   bank.sort(function(a, b){ return a.tier - b.tier || a.r - b.r; });
   return shuffle(bank.slice(0, Math.min(n, bank.length)).map(function(x){ return x.q; }));
 }
-function startRound(tid, official){
+function startRound(tid, official, errorsOnly){
   var tema = temaById(tid); if(!tema) return;
   var h = tHist(tid), round = h.length + 1, qs, usedOfficial = false;
   var n = tema.preguntas_por_ronda || 10;
-  if(tema.examen_oficial && tema.examen_oficial.length && (official || !h.length)){
+  var wrongQ = errorsOnly ? tema.preguntas.filter(function(q){ return wrongIdsOf(tid).indexOf(q.id) >= 0; }) : [];
+  if(wrongQ.length){ qs = shuffle(wrongQ); }
+  else if(tema.examen_oficial && tema.examen_oficial.length && (official || !h.length)){
     var byId = {}; tema.preguntas.forEach(function(q){ byId[q.id] = q; });
     qs = tema.examen_oficial.map(function(id){ return byId[id]; }).filter(Boolean); usedOfficial = true;
   } else qs = chooseQuestions(tema, n);
@@ -234,6 +236,7 @@ function xFinish(){
   c.result = {score:r.score, units:r.units, total:r.total, ts:att.ts};
   c.at = att.ts;
   H.tries++; H.best = Math.max(H.best, r.score); if(c.round > 1) H.prac++;
+  markAutoDone("ex", c.tema.id);
   filter = "all";
   if(c.tema.vocabulario.length >= 3){ c.phase = "vocab"; c.vocab = buildVocab(c); S.screen = "vocab"; }
   else { c.phase = "res"; S.screen = "results"; }
@@ -392,6 +395,7 @@ function examClick(act, el, ev){
   switch(act){
     case "open-tema": S.tid = el.getAttribute("data-id"); S.screen = "tema"; helperOpen = false; writeLocal(); render({top:true}); return true;
     case "x-start": startRound(S.tid, false); return true;
+    case "x-quick": startRound(el.getAttribute("data-id"), false, el.getAttribute("data-m") === "errors"); return true;
     case "x-official": startRound((S.ex.cur && S.screen === "results") ? S.ex.cur.tema.id : S.tid, true); return true;
     case "x-retry": startRound(S.ex.cur ? S.ex.cur.tema.id : S.tid, false); return true;
     case "x-continue":
