@@ -199,3 +199,5 @@ El resto del formato es igual (los campos se siguen llamando `pregunta_en`, `en`
 
 ## Botón de estudio en las tareas
 Si una tarea de la agenda trae `"tema"`, en «Pendientes de hoy» sale, justo arriba de «¡Ya lo hice!», el botón **📖 Estudiar mi resumen** (y **📝 Practicar examen** cuando el examen todavía no tiene su pendiente automático).
+
+> **Importante:** `fecha_examen` solo se pone cuando hay un **examen de verdad**. Si lo que hay ese día es una charla o presentación oral, el tema NO lleva `fecha_examen` (la fecha va en `fecha_entrega` de la charla); si no, a Killian le sale «Estudiar… hacer examen de práctica» como si hubiera examen.
