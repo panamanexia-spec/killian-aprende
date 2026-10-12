@@ -2,63 +2,33 @@
   "tipo": "charla",
   "id": "thunder-rose",
   "materia": "Reading and Conversation",
-  "titulo": "Thunder Rose – mi parte",
+  "titulo": "Thunder Rose – mi parte (corta)",
   "idioma": "en",
   "fecha_entrega": "2026-10-13",
   "frases": [
     {
-      "texto": "Hello! My name is Killian.",
-      "es": "¡Hola! Me llamo Killian.",
+      "texto": "Hello! I am Killian.",
+      "es": "¡Hola! Soy Killian.",
       "pista": "👋",
       "gesto": "Saluda con la mano"
     },
     {
-      "texto": "I will talk about Rose.",
-      "es": "Voy a hablar de Rose.",
-      "pista": "👉",
-      "gesto": "Señálate con el dedo"
-    },
-    {
-      "texto": "Rose lived in a small town with her ma and pa.",
-      "es": "🏡 Rose vivía en un pueblo pequeño con su mamá y su papá.",
+      "texto": "Rose lived in a small town.",
+      "es": "🏡 Rose vivía en un pueblo pequeño.",
       "pista": "🏡",
       "gesto": "Dibuja una casita con las manos"
     },
     {
-      "texto": "She was born on a stormy night.",
-      "es": "⛈️ Nació en una noche de tormenta.",
-      "pista": "⛈️",
-      "gesto": "Mueve los dedos como lluvia"
-    },
-    {
-      "texto": "Rose was born with superpowers!",
-      "es": "💪 ¡Rose nació con superpoderes!",
+      "texto": "She was born with superpowers!",
+      "es": "💪 ¡Nació con superpoderes!",
       "pista": "💪",
       "gesto": "Muestra los músculos"
     },
     {
-      "texto": "She did not cry. She sat up and talked.",
-      "es": "No lloró. Se sentó y habló.",
-      "pista": "🗣️",
-      "gesto": "Pon la mano en la boca y habla"
-    },
-    {
-      "texto": "She took the lightning and rolled it into a ball.",
-      "es": "⚡ Agarró el relámpago y lo hizo una bola.",
-      "pista": "⚡",
-      "gesto": "Haz un rayo con el dedo"
-    },
-    {
-      "texto": "She had the power of thunder and lightning.",
-      "es": "Tenía el poder del trueno y del relámpago.",
-      "pista": "🌩️",
-      "gesto": "Abre los brazos bien grande"
-    },
-    {
-      "texto": "That is why her name is Thunder Rose. Thank you!",
-      "es": "Por eso se llama Thunder Rose. ¡Gracias!",
+      "texto": "Thank you!",
+      "es": "¡Gracias!",
       "pista": "🌹",
-      "gesto": "Haz una flor con las manos y sonríe"
+      "gesto": "Sonríe y haz una pequeña reverencia"
     }
   ]
 }
