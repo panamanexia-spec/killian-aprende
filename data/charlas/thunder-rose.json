@@ -1,0 +1,46 @@
+{
+  "tipo": "charla",
+  "id": "thunder-rose",
+  "materia": "Reading and Conversation",
+  "titulo": "Thunder Rose – mi parte",
+  "idioma": "en",
+  "fecha_entrega": "2026-10-13",
+  "frases": [
+    {
+      "texto": "Hello! My name is Killian.",
+      "es": "¡Hola! Me llamo Killian."
+    },
+    {
+      "texto": "I will talk about Rose.",
+      "es": "Voy a hablar de Rose."
+    },
+    {
+      "texto": "Rose lived in a small town with her ma and pa.",
+      "es": "🏡 Rose vivía en un pueblo pequeño con su mamá y su papá."
+    },
+    {
+      "texto": "She was born on a stormy night.",
+      "es": "⛈️ Nació en una noche de tormenta."
+    },
+    {
+      "texto": "Rose was born with superpowers!",
+      "es": "💪 ¡Rose nació con superpoderes!"
+    },
+    {
+      "texto": "She did not cry. She sat up and talked.",
+      "es": "No lloró. Se sentó y habló."
+    },
+    {
+      "texto": "She took the lightning and rolled it into a ball.",
+      "es": "⚡ Agarró el relámpago y lo hizo una bola."
+    },
+    {
+      "texto": "She had the power of thunder and lightning.",
+      "es": "Tenía el poder del trueno y del relámpago."
+    },
+    {
+      "texto": "That is why her name is Thunder Rose. Thank you!",
+      "es": "Por eso se llama Thunder Rose. ¡Gracias!"
+    }
+  ]
+}
