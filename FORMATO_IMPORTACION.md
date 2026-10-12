@@ -201,3 +201,9 @@ El resto del formato es igual (los campos se siguen llamando `pregunta_en`, `en`
 Si una tarea de la agenda trae `"tema"`, en «Pendientes de hoy» sale, justo arriba de «¡Ya lo hice!», el botón **📖 Estudiar mi resumen** (y **📝 Practicar examen** cuando el examen todavía no tiene su pendiente automático).
 
 > **Importante:** `fecha_examen` solo se pone cuando hay un **examen de verdad**. Si lo que hay ese día es una charla o presentación oral, el tema NO lleva `fecha_examen` (la fecha va en `fecha_entrega` de la charla); si no, a Killian le sale «Estudiar… hacer examen de práctica» como si hubiera examen.
+
+## Charlas: `version`, estrellas y tareas de presentación oral
+- **`version`** (número, opcional, por defecto 1): al **reemplazar una charla por otra con el mismo `id`**, súbele la `version` (2, 3…) y el avance y las estrellas de Killian en esa charla **vuelven a 0**. Si no cambia, conserva su avance.
+- **Estrellas:** cada charla da como máximo **3 estrellas**, y las 3 solo si Killian termina **los 6 niveles** y deja la charla lista (80 % o más). No se regalan estrellas por nivel.
+- **Tareas de presentación oral:** si una tarea de la agenda dice que es una presentación oral/charla, ponle `"charla": "<id>"` (y **no** `"tema"`). Así sale el botón **🎤 Practicar mi charla (5 min)** dentro de esa tarea. El campo `"tema"` es solo para exámenes.
+- Lo que harán **en clase** (`repaso`, `detalle`) no se muestra en la página de Killian; mamá lo ve en Zona de mamá → Detalle de tareas.

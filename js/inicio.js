@@ -44,6 +44,17 @@ function prevSchoolDay(k, n){
   return d;
 }
 function wrongIdsOf(tid){ var h = tHist(tid), l = h[h.length - 1]; return l && l.wrong ? l.wrong : []; }
+/* El plan de una charla: los 3 días de clase antes de la entrega, 3 sesiones por día; el día antes toca Sombra + Ensayo final. */
+function charlaPlan(c){
+  var E = c.fecha, t = todayKey(); if(!E || !isDate(E) || E < t) return null;
+  var cur = null;
+  [3, 2, 1].forEach(function(n){ var d = prevSchoolDay(E, n); if(d <= t) cur = {n:n, d:d, fin:n === 1}; });
+  return cur;
+}
+function charlaLine(c, plan){
+  var nl = chNextLevel(c.id);
+  return "«" + c.titulo + "»: " + (plan.fin ? "hoy toca Sombra y Ensayo final." : "vas en el nivel " + nl + " (" + LEVELS[nl - 1].name + ").") + " Sesión " + Math.min(3, chToday(c.id) + 1) + " de 3 de hoy.";
+}
 /* Pendientes que salen solos: estudiar para un examen (3 días de clase antes) y practicar una charla (2 días antes). */
 function autoItems(){
   var t = todayKey(), out = [];
@@ -60,13 +71,13 @@ function autoItems(){
   });
   S.charlas.forEach(function(c){
     var E = c.fecha; if(!E || !isDate(E) || E < t) return;
-    var cur = null;   /* los 3 días de clase antes de la entrega, 3 sesiones por día */
-    [3, 2, 1].forEach(function(n){ var d = prevSchoolDay(E, n); if(d <= t) cur = {n:n, d:d}; });
-    if(!cur) return;
-    var id = "ch:" + c.id + ":" + cur.d, fin = cur.n === 1, nl = chNextLevel(c.id);
-    out.push({kind:"task", id:id, sort:E + "0" + cur.d, x:{id:id, materia:c.materia || "", fecha:cur.d, entrega:E, auto:"ch", charla:c.id, modo:fin ? "final" : "",
-      titulo:"🎤 Practicar mi charla (5 min)",
-      en_casa:["«" + c.titulo + "»: " + (fin ? "hoy toca Sombra y Ensayo final." : "vas en el nivel " + nl + " (" + LEVELS[nl - 1].name + ").") + " Sesión " + Math.min(3, chToday(c.id) + 1) + " de 3 de hoy."]}});
+    var plan = charlaPlan(c); if(!plan) return;
+    /* si una tarea de la agenda ya trae esta charla y está pendiente, el botón va dentro de esa tarea (no se repite) */
+    var linked = agendaData().tareas.some(function(x){ return x.charla === c.id && x.fecha <= t && !S.home.tasks[x.id]; });
+    if(linked) return;
+    var id = "ch:" + ns(c.id) + ":" + plan.d;
+    out.push({kind:"task", id:id, sort:E + "0" + plan.d, x:{id:id, materia:c.materia || "", fecha:plan.d, entrega:E, auto:"ch", charla:c.id, modo:plan.fin ? "final" : "",
+      titulo:"🎤 Practicar mi charla (5 min)", en_casa:[charlaLine(c, plan)]}});
   });
   return out;
 }
@@ -171,18 +182,17 @@ function taskCard(it){
     if(videoInfo(v.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(v.id)+'">▶ '+esc(v.titulo)+'</button>';
     else if(/^https?:\/\//.test(v.url||"")) acts += '<a class="btn btn-blue" href="'+esc(v.url)+'" target="_blank" rel="noopener">▶ '+esc(v.titulo)+' ↗</a>';
   });
-  var cc = it.kind === "task" && x.charla ? charlaById(x.charla) : null;
-  if(cc && (x.auto || !(cc.fecha && cc.fecha >= todayKey() && prevSchoolDay(cc.fecha, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'" data-m="'+(x.modo || "")+'">🎤 Practicar mi charla</button>';
+  var cc = it.kind === "task" && x.charla ? charlaById(x.charla) : null, cplan = cc ? charlaPlan(cc) : null;
+  if(cc) acts += '<button class="btn btn-blue btn-big" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'" data-m="'+((x.modo === "final" || (cplan && cplan.fin)) ? "final" : "")+'">🎤 Practicar mi charla (5 min)</button>';
   var tmx = it.kind === "task" && x.tema ? temaById(x.tema) : null;
   if(tmx && tmx.resumen && tmx.resumen.length) acts += '<button class="btn btn-blue" type="button" data-act="study" data-id="'+esc(tmx.id)+'">📖 Estudiar mi resumen</button>';
   if(tmx && (x.auto || !(tmx.fecha_examen && tmx.fecha_examen >= todayKey() && prevSchoolDay(tmx.fecha_examen, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
-  var home = (x.en_casa && x.en_casa.length) ? x.en_casa : (x.en_casa ? [] : kidDetail(x.detalle));
-  var rep = x.repaso || [];
+  var home = (x.en_casa && x.en_casa.length) ? x.en_casa.slice() : (x.en_casa ? [] : kidDetail(x.detalle));
+  if(cc && cplan && !x.auto) home.push(charlaLine(cc, cplan));
   var body = "";
   if(home.length) body += '<div class="blk"><b>🏠 En casa</b>'+home.map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>';
-  if(rep.length) body += '<div class="blk rep"><b>📚 Repaso en clase</b>'+rep.map(function(l){ return '<p>'+esc(l)+'</p>'; }).join("")+'</div>';
   return '<article class="task'+(c?" cel":"")+'"><div class="emo" aria-hidden="true">'+(isVid ? "🎬" : subjEmo(x.materia))+'</div>' +
     '<div class="body"><span class="chip sm">'+esc(x.materia||"")+'</span>'+(isVid ? "" : evalChip(x.evaluacion))+'<h3>'+esc(x.titulo)+'</h3>' +
     due + body + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';

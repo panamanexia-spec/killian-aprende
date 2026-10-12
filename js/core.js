@@ -8,9 +8,9 @@ var MAMA = window.KX_MODE === "mama";      /* versión para el celular de mamá:
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr"], HNUMS = ["best","tries","prac","games","speed"];
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv"], HNUMS = ["best","tries","prac","games","speed"];
 var SIGNED = {have:1, weak:1, ask:1, nchk:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
 function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], charlas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}, charlas:{}}}; }
 function normHome(h){
@@ -29,7 +29,7 @@ function mergeHome(a, b){
     for(i in b[k]){
       if(!(i in m)) m[i] = b[k][i];
       else if(SIGNED[k]) m[i] = Math.abs(b[k][i]) > Math.abs(m[i]) ? b[k][i] : m[i];
-      else if(k === "gdays" || k === "look" || k === "mins" || k === "wfail" || k === "chd" || k === "chl" || k === "chs" || k === "chr") m[i] = Math.max(b[k][i], m[i]);
+      else if(k === "gdays" || k === "look" || k === "mins" || k === "wfail" || k === "chd" || k === "chl" || k === "chs" || k === "chr" || k === "chv") m[i] = Math.max(b[k][i], m[i]);
       else if(k === "lookTr") m[i] = m[i];                  /* se queda la traducción que ya había */
       else if(b[k][i] < m[i]) m[i] = b[k][i];            /* se conserva la primera vez */
     }
@@ -258,9 +258,15 @@ function renderModal(){
       '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, conservarla</button>' +
       '<button type="button" class="btn btn-sun" data-act="do-delweek">Sí, borrar</button>';
   } else if(modal.type === "chend"){
-    h = '<h2>¡Nivel '+modal.lvl+' terminado! 🎉</h2><p class="stars-big" aria-label="'+modal.stars+' estrellas">'+("⭐".repeat(modal.stars))+'</p><p>«'+esc(modal.name)+'» · ¡'+(modal.stars === 3 ? "increíble" : modal.stars === 2 ? "muy bien" : "buen trabajo")+'!</p>' +
-      '<p>Tu charla está lista al <b>'+modal.ready+'%</b>.</p>' +
-      '<button type="button" class="btn btn-sun" data-act="ch-after" id="mfocus">'+(modal.next ? "Seguir con el nivel "+modal.next+" ▶" : "¡Listo!")+'</button>';
+    h = '<h2>¡Nivel '+modal.lvl+' terminado! 🎉</h2><p>«'+esc(modal.name)+'» · tu puntaje: <b>'+modal.score+'%</b></p>' +
+      '<p>Tu charla está lista al <b>'+modal.ready+'%</b> · ⭐ '+modal.stars+' de 3</p>' +
+      (modal.next ? '<button type="button" class="btn btn-sun" data-act="ch-after" id="mfocus">Seguir con el nivel '+modal.next+' ▶</button>' : '') +
+      '<button type="button" class="btn btn-blue" data-act="ch-repeat"'+(modal.next ? '' : ' id="mfocus"')+'>🔁 Repetir este nivel</button>' +
+      '<button type="button" class="btn btn-ghost" data-act="ch-tomenu">Ir a los niveles</button>';
+  } else if(modal.type === "chreset"){
+    h = '<h2>¿Empezar toda la charla de cero?</h2><p>«'+esc(modal.titulo)+'»: se borra el avance de esta charla y sus estrellas vuelven a 0. Las grabaciones se conservan.</p>' +
+      '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, seguir donde voy</button>' +
+      '<button type="button" class="btn btn-sun" data-act="ch-reset">Sí, empezar de cero</button>';
   } else if(modal.type === "logout"){
     h = '<h2>¿Cerrar sesión?</h2><p>Este aparato dejará de estar conectado. Tu progreso sigue guardado en la nube y volverá al entrar de nuevo.</p>' +
       '<button type="button" class="btn btn-ghost" data-act="modal-close" id="mfocus">No, quedarme</button>' +
@@ -368,7 +374,7 @@ function syncNow(){
    Solo se vuelven a aplicar cuando el archivo cambia. */
 function hashText(t){ var h = 5381; for(var i=0;i<t.length;i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0; return String(h >>> 0); }
 function fetchText(url){ return fetch(url, {cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error(url); return r.text(); }); }
-var AGENDA_SCHEMA = "|s3", KX_VERSION = "12-oct 12";
+var AGENDA_SCHEMA = "|s3", KX_VERSION = "13-oct 1";
 function loadProjectFiles(){
   if(window.KXSync && KXSync.enabled && !KXSync.hasSession()) return Promise.resolve();
   var changed = false;

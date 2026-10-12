@@ -7,10 +7,10 @@
    (fila «grabaciones») para que mamá las escuche desde su celular. */
 var LANGS = {en:{name:"inglés", tts:"en-US", rec:"en-US"}, es:{name:"español", tts:"es-US", rec:"es-MX"}, zh:{name:"chino", tts:"zh-CN", rec:"zh-CN"}};
 var LEVELS = [
-  {n:1, name:"Entender", e:"👀", w:10, d:"Mira cada frase, su dibujo y su gesto."},
-  {n:2, name:"Eco", e:"🔁", w:15, d:"Escucha y repite cada frase 3 veces."},
-  {n:3, name:"Bola de nieve", e:"⛄", w:20, d:"La charla va creciendo frase por frase."},
-  {n:4, name:"Sombra", e:"🎤", w:10, d:"Habla al mismo tiempo que la voz."},
+  {n:1, name:"Entender", e:"👀", w:5, d:"Mira cada frase, su dibujo y su gesto."},
+  {n:2, name:"Eco", e:"🔁", w:20, d:"Escucha y repite cada frase 3 veces."},
+  {n:3, name:"Bola de nieve", e:"⛄", w:25, d:"La charla va creciendo frase por frase."},
+  {n:4, name:"Sombra", e:"🎤", w:5, d:"Habla al mismo tiempo que la voz."},
   {n:5, name:"Desvanecer", e:"🌫️", w:20, d:"La ayuda va desapareciendo."},
   {n:6, name:"Ensayo final", e:"🏆", w:25, d:"La charla completa, de memoria."}
 ];
@@ -29,7 +29,7 @@ function cLang(c){ return LANGS[c.idioma] || LANGS.en; }
 
 /* ---- validar una charla ---- */
 function validateCharla(o){
-  var E = [], c = {id:str(o.id), materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), idioma:str(o.idioma) || "en", fecha:str(o.fecha_entrega || o.fecha), frases:[]};
+  var E = [], c = {id:str(o.id), materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), idioma:str(o.idioma) || "en", fecha:str(o.fecha_entrega || o.fecha), version:Math.max(1, Math.round(+o.version) || 1), frases:[]};
   if(!/^[a-z0-9][a-z0-9_-]*$/i.test(c.id)) E.push("La charla necesita un «id» sin espacios ni acentos, por ejemplo thunder-rose.");
   if(!c.titulo) E.push("Falta el título de la charla.");
   if(!LANGS[c.idioma]) E.push("«idioma» debe ser en, es o zh.");
@@ -136,11 +136,14 @@ function chStop(){
 }
 
 /* ---- micrófono: espera hasta 2 s de silencio; máximo = 3 s por cada 5 palabras + 3 s ---- */
+function listenMaxMs(nWords){ return (Math.ceil(nWords / 5) * 5 + 8) * 1000; }
 function listenSmart(lang, nWords, record, cb){
-  var maxMs = (Math.ceil(nWords / 5) * 3 + 3) * 1000, t0 = Date.now(), lastAt = 0, started = false, text = "", finished = false;
-  var r = null, iv = null, mr = null, stream = null, chunks = [], blob = null, mime = "", recDone = !record, results = null;
+  var F = window.__kxFast || 1, maxMs = listenMaxMs(nWords) * F, SIL = 3000 * F, WAIT = 9000 * F;
+  var t0 = Date.now(), lastAt = 0, started = false, text = "", base = "", finished = false;
+  var r = null, iv = null, mr = null, stream = null, chunks = [], blob = null, mime = "";
   var ctl = {abort:function(){ finished = true; clear(); }, stop:function(){ finish(null); }};
   chCtl = ctl;
+  function full(){ return (base + " " + text).replace(/\s+/g, " ").trim(); }
   function clear(){
     clearInterval(iv); if(r){ r.onresult = r.onerror = r.onend = null; try{ r.abort(); }catch(e){} }
     if(mr && mr.state !== "inactive") try{ mr.stop(); }catch(e){}
@@ -148,7 +151,7 @@ function listenSmart(lang, nWords, record, cb){
   }
   function done(err){
     if(chCtl === ctl) chCtl = null;
-    cb(err, text.trim(), blob, mime);
+    cb(err, full(), blob, mime);
   }
   function finish(err){
     if(finished) return; finished = true;
@@ -162,7 +165,7 @@ function listenSmart(lang, nWords, record, cb){
       if(finished){ s.getTracks().forEach(function(t){ t.stop(); }); return; }
       stream = s;
       try{
-        var opts = {audioBitsPerSecond:24000}; mr = new MediaRecorder(s, opts); mime = mr.mimeType || "";
+        mr = new MediaRecorder(s, {audioBitsPerSecond:24000}); mime = mr.mimeType || "";
         mr.ondataavailable = function(e){ if(e.data && e.data.size) chunks.push(e.data); };
         mr.start(500);
       }catch(e){ mr = null; ch.noRecord = true; }
@@ -170,12 +173,11 @@ function listenSmart(lang, nWords, record, cb){
   }
   if(!RecAPI || ch.noRec){
     /* sin reconocimiento de voz: solo graba hasta que pulse «Terminé» (o hasta el máximo) */
-    iv = setInterval(function(){ if(Date.now() - t0 > maxMs + 4000) finish("manual"); }, 300);
+    iv = setInterval(function(){ if(Date.now() - t0 > maxMs + 4000 * F) finish("manual"); }, 300);
     return ctl;
   }
   try{
     r = new RecAPI(); r.lang = (LANGS[lang] || LANGS.en).rec; r.interimResults = true; r.maxAlternatives = 1; r.continuous = true;
-    results = [];
     r.onresult = function(e){
       started = true; lastAt = Date.now();
       var s = ""; for(var i = 0; i < e.results.length; i++) s += e.results[i][0].transcript + " ";
@@ -186,39 +188,43 @@ function listenSmart(lang, nWords, record, cb){
       if(er === "no-speech" || er === "aborted") return;
       finish(er);
     };
-    r.onend = function(){ if(!finished){ try{ r.start(); }catch(e){ finish(null); } } };   /* algunos aparatos lo cortan solos */
+    /* algunos aparatos cortan el reconocimiento solos: se vuelve a abrir SIN perder lo que ya dijo */
+    r.onend = function(){ if(!finished){ base = full(); text = ""; try{ r.start(); }catch(e){ finish(null); } } };
     r.start();
   }catch(e){ finish("error"); return ctl; }
   iv = setInterval(function(){
     var now = Date.now();
-    if(started && now - lastAt > 2000 * (window.__kxFast || 1)) finish(null);
-    else if(!started && now - t0 > 6000) finish("no-speech");
+    if(started && now - lastAt > SIL) finish(null);              /* espera 3 s de silencio después de hablar */
+    else if(!started && now - t0 > WAIT) finish("no-speech");   /* hasta 9 s para empezar */
     else if(now - t0 > maxMs) finish(null);
   }, 200);
   return ctl;
 }
 
-/* ---- progreso guardado ---- */
-function chLevelDone(id){ return S.home.chl[id] || 0; }
-function chStars(id, n){ return S.home.chs[id + "|" + n] || 0; }
-function chReady(id){
-  var p = 0; LEVELS.forEach(function(L){ p += L.w * Math.min(3, chStars(id, L.n)) / 3; });
-  return Math.round(p);
-}
-function chStarTotal(){ var n = 0; for(var k in S.home.chs) n += Math.min(3, S.home.chs[k]); return n; }
-function chToday(id){ return S.home.chd[id + "|" + todayKey()] || 0; }
-function chSessions(id){ var n = 0, k; for(k in S.home.chd) if(k.indexOf(id + "|") === 0) n += S.home.chd[k]; return n; }
-function chNextLevel(id){ for(var n = 1; n <= 6; n++) if(!chStars(id, n)) return n; return 6; }
-function chUnlocked(id, n){ return n === 1 || chStars(id, n - 1) > 0 || (ch.queue.indexOf(n) >= 0 && ch.id === id); }
+/* ---- progreso guardado ----
+   Cada charla guarda su avance con un «espacio» propio (versión de la charla + número de reinicio),
+   así al reemplazar la charla o pulsar «Empezar de cero» el avance vuelve a 0. */
+function ns(id){ var c = charlaById(id); return id + "~" + ((c && c.version) || 1) + "." + (S.home.chv[id] || 0); }
+function chScore(id, n){ return S.home.chr[ns(id) + "|" + n] || 0; }          /* mejor puntaje del nivel (0 = sin terminar) */
+function chDoneLvl(id, n){ return chScore(id, n) > 0; }
+function chReady(id){ var p = 0; LEVELS.forEach(function(L){ p += L.w * Math.min(100, chScore(id, L.n)) / 100; }); return Math.round(p); }
+function chAll(id){ return LEVELS.every(function(L){ return chDoneLvl(id, L.n); }); }
+/* Las estrellas de una charla: máximo 3, y las 3 solo si termina TODOS los niveles y la charla queda lista (80%+). */
+function chStarsOf(id){ var r = chReady(id); return chAll(id) && r >= 80 ? 3 : r >= 65 ? 2 : r >= 35 ? 1 : 0; }
+function chStarTotal(){ var n = 0; S.charlas.forEach(function(c){ n += chStarsOf(c.id); }); return n; }
+function chToday(id){ return S.home.chd[ns(id) + "|" + todayKey()] || 0; }
+function chSessions(id){ var n = 0, k, pre = ns(id) + "|"; for(k in S.home.chd) if(k.indexOf(pre) === 0) n += S.home.chd[k]; return n; }
+function chNextLevel(id){ for(var n = 1; n <= 6; n++) if(!chDoneLvl(id, n)) return n; return 6; }
+function chUnlocked(id, n){ return n === 1 || chDoneLvl(id, n - 1) || (ch.queue.indexOf(n) >= 0 && ch.id === id); }
 function chFinish(n, pct){
-  var id = ch.id, stars = (n === 1 || n === 4) ? 3 : (pct >= 85 ? 3 : pct >= 55 ? 2 : 1), H = S.home;
-  H.chs[id + "|" + n] = Math.max(H.chs[id + "|" + n] || 0, stars);
-  H.chr[id + "|" + n] = Math.max(H.chr[id + "|" + n] || 0, Math.round(pct));
-  if(n <= (H.chl[id] || 0) + 1) H.chl[id] = Math.max(H.chl[id] || 0, n);   /* los niveles se desbloquean en orden */
-  var k = id + "|" + todayKey(); H.chd[k] = (H.chd[k] || 0) + 1;
+  var id = ch.id, H = S.home, key = ns(id) + "|" + n, sc = Math.max(1, Math.round(pct));
+  H.chr[key] = Math.max(H.chr[key] || 0, sc);
+  if(pct >= 35 || n === 1 || n === 4){   /* una sesión cuenta solo si de verdad practicó */
+    var k = ns(id) + "|" + todayKey(); H.chd[k] = (H.chd[k] || 0) + 1;
+    if(H.chd[k] >= 3) markAutoDone("ch", id);
+  }
   saveHome();
-  if(H.chd[k] >= 3) markAutoDone("ch", id);
-  return stars;
+  return sc;
 }
 
 /* ---- grabaciones del ensayo (guardadas en el aparato y en la nube) ---- */
@@ -251,7 +257,6 @@ function grAdd(blob, mime, pct){
 
 /* ---- pantallas ---- */
 function barHtml(label, pct){ return '<div class="progress-day"><div class="prog-row"><span>'+esc(label)+'</span></div><div class="bar"><i style="width:'+Math.max(2, Math.min(100, pct))+'%"></i></div></div>'; }
-function starsTxt(n){ return "★★★".slice(0, n) + "☆☆☆".slice(0, 3 - n); }
 function renderCharlas(){
   var h = subHeader("Mis charlas", "home", "← Inicio");
   if(!S.charlas.length) return h + '<p class="note">Todavía no hay charlas. Mamá las agrega en la zona de mamá. 😊</p>' + footer();
@@ -264,27 +269,31 @@ function renderCharla(){
   var c = charlaById(ch.id);
   if(!c) return renderCharlas();
   if(!ch.lvl) return renderMenu(c);
-  var L = LEVELS[ch.lvl - 1], h = subHeader(L.e + " Nivel " + L.n + " · " + L.name, "ch-menu", "← Niveles");
+  var L = LEVELS[ch.lvl - 1], h = subHeader(L.e + " Nivel " + L.n + " · " + L.name, "ch-menu", "← Niveles"), body;
   switch(ch.lvl){
-    case 1: return h + r1(c) + footer();
-    case 2: return h + r2(c) + footer();
-    case 3: return h + r3(c) + footer();
-    case 4: return h + r4(c) + footer();
-    case 5: return h + r5(c) + footer();
-    default: return h + r6(c) + footer();
+    case 1: body = r1(c); break;
+    case 2: body = r2(c); break;
+    case 3: body = r3(c); break;
+    case 4: body = r4(c); break;
+    case 5: body = r5(c); break;
+    default: body = r6(c);
   }
+  return h + body + '<div class="stack" style="margin-top:14px"><button class="btn btn-ghost" type="button" data-act="ch-restart">↺ Volver a empezar este nivel</button></div>' + footer();
 }
 function renderMenu(c){
   var id = c.id, next = chNextLevel(id), h = subHeader(c.titulo, "go-screen", "← Charlas").replace('data-act="go-screen"', 'data-act="go-screen" data-s="charlas"');
-  var rd = chReady(id);
+  var rd = chReady(id), st = chStarsOf(id);
   h += '<section class="card"><span class="chip">'+esc(c.materia||"")+'</span>' + (c.fecha ? '<p class="due">📅 Es '+esc(relDay(c.fecha))+'</p>' : '') +
     barHtml("Mi charla está lista al " + rd + "%", rd) +
-    '<p class="small">Hoy practicaste '+chToday(id)+' '+(chToday(id) === 1 ? "vez" : "veces")+'. ¡Sube de nivel poco a poco! 🪜</p></section>';
+    '<p class="chres">⭐ Estrellas de esta charla: '+st+' de 3</p>' +
+    '<p class="small">Las 3 estrellas se ganan al terminar todos los niveles y dejar la charla lista. Hoy practicaste '+chToday(id)+' '+(chToday(id) === 1 ? "vez" : "veces")+'.</p></section>';
   h += '<section class="stack">' + LEVELS.map(function(L){
-    var open = chUnlocked(id, L.n), st = chStars(id, L.n), cur = L.n === next;
+    var open = chUnlocked(id, L.n), sc = chScore(id, L.n), cur = L.n === next && !chDoneLvl(id, L.n);
     return '<button class="lvl'+(cur ? " cur" : "")+(open ? "" : " lock")+'" type="button" data-act="ch-level" data-n="'+L.n+'"'+(open ? "" : ' aria-disabled="true"')+'>' +
-      '<span class="le">'+(open ? L.e : "🔒")+'</span><span class="lvtxt"><b>Nivel '+L.n+' · '+esc(L.name)+'</b><span>'+esc(L.d)+'</span></span><span class="ls" aria-label="'+st+' estrellas">'+(st ? starsTxt(st) : (cur && open ? "¡Sigue aquí!" : ""))+'</span></button>';
+      '<span class="le">'+(open ? L.e : "🔒")+'</span><span class="lvtxt"><b>Nivel '+L.n+' · '+esc(L.name)+'</b><span>'+esc(L.d)+'</span></span><span class="ls">'+(sc ? "✓ "+Math.min(100, sc)+"%" : (cur && open ? "¡Sigue aquí!" : ""))+'</span></button>';
   }).join("") + '</section>';
+  if(ch.msg) h += '<p class="note" role="status">'+esc(ch.msg)+'</p>';
+  h += '<div class="stack" style="margin-top:14px"><button class="btn btn-ghost" type="button" data-act="ch-reset-ask">🔄 Empezar toda la charla de cero</button></div>';
   return h + footer();
 }
 
@@ -315,7 +324,11 @@ function markedTokens(res, lang){
   return res.tk.map(function(w, k){ return '<button type="button" class="wtok '+res.marks[k]+'" data-act="ch-word" data-w="'+esc(w)+'">'+esc(w)+'</button>'; }).join(lang === "zh" ? "" : " ");
 }
 function micBtn(label){
-  if(ch.listening) return '<button class="btn btn-sun rec" type="button" data-act="ch-done">🎤 Te escucho… (toca al terminar)</button>';
+  if(ch.listening){
+    var secs = Math.round(listenMaxMs(ch.listenWords || 5) / 1000);
+    return '<button class="btn btn-sun rec" type="button" data-act="ch-done">🎤 Te escucho… (toca al terminar)</button>' +
+      '<span class="tbar" aria-hidden="true"><i style="animation-duration:'+secs+'s"></i></span><p class="small" style="text-align:center">Tienes tiempo. Habla con calma. 💙</p>';
+  }
   return label ? '<button class="btn btn-sun" type="button" data-act="ch-rec">'+label+'</button>' : "";
 }
 function selfBtns(){ return '<div class="stack"><button class="btn btn-sun" type="button" data-act="ch-self" data-v="1">✅ Me salió</button><button class="btn btn-ghost" type="button" data-act="ch-self" data-v="0">🔁 Otra vez</button></div>'; }
@@ -349,7 +362,7 @@ function eStart(c){
 function eMic(c){
   var f = c.frases[ch.i], e = ch.e; if(!e) return;
   e.ph = "listen"; ch.res = null; render();
-  doListen(c, f.t, function(res){ eResult(c, res); });
+  doListen(c, f.t, function(res){ eResult(c, res); }, false, function(){ if(ch.e) ch.e.ph = "ready"; render(); });
 }
 function eResult(c, res){
   var e = ch.e; ch.res = res; e.best = Math.max(e.best, res.pct); e.tries++; e.ph = "ready"; render();
@@ -361,44 +374,55 @@ function eNext(c){
 }
 function avgScores(){ var s = Object.keys(ch.scores).map(function(k){ return ch.scores[k]; }); return s.length ? s.reduce(function(a, b){ return a + b; }, 0) / s.length : 0; }
 
-/* Escucha con revisión; llama a cb con el resultado comparado. */
-function doListen(c, target, cb, record){
-  ch.listening = true; ch.msg = ""; render();
+/* Escucha con revisión; llama a cb con el resultado comparado (u onEmpty si no se oyó nada). */
+function doListen(c, target, cb, record, onEmpty){
+  ch.listening = true; ch.msg = ""; ch.listenWords = tokens(target, c.idioma).length; render();
   var lv = ch.lvl;
-  listenSmart(c.idioma, tokens(target, c.idioma).length, !!record, function(err, text, blob, mime){
+  listenSmart(c.idioma, ch.listenWords, !!record, function(err, text, blob, mime){
     ch.listening = false;
     if(ch.lvl !== lv || !charlaById(ch.id)) return;
     if(err === "not-allowed" || err === "service-not-allowed" || err === "audio-capture" || err === "language-not-supported"){
-      ch.noRec = true; ch.msg = "No pude usar el micrófono. Di la frase en voz alta y toca «Me salió»."; ch.res = null;
-      if(lv === 2 && ch.e) ch.e.ph = "ready"; render(); return;
+      ch.noRec = true; ch.msg = "No pude usar el micrófono. Di la frase en voz alta y toca «Ya lo dije»."; ch.res = null;
+      if(onEmpty) onEmpty(); else render();
+      return;
+    }
+    if(!text && err !== "manual"){
+      ch.msg = "No te escuché 🎤 Acércate un poquito e inténtalo otra vez. ¡Sin prisa!"; ch.res = null;
+      if(onEmpty) onEmpty(); else render();
+      return;
     }
     var res = compare(target, text, c.idioma); res.blob = blob; res.mime = mime;
-    if(!text && err !== "manual") { res.pct = 0; res.empty = true; }
     cb(res);
   });
 }
 
-/* NIVEL 3 · Bola de nieve */
+/* NIVEL 3 · Bola de nieve: nada avanza solo; él decide cuándo sigue, repite o practica la frase difícil */
 function r3(c){
   var n = c.frases.length, s = ch.s || {k:1, ph:"idle", tries:0}, h = barHtml("Frases 1 a " + s.k + " de " + n, s.k / n * 100) + '<section class="card chcard">';
-  var list = c.frases.slice(0, s.k);
-  if(s.ph === "hard"){
+  var list = c.frases.slice(0, s.k), hard = /^hard/.test(s.ph);
+  if(hard){
     var hf = c.frases[s.hard];
-    h += '<p class="small">Vamos a practicar solo esta frase 💪</p><p class="bigemo">'+esc(pistaOf(hf))+'</p><p class="chtext" lang="'+c.idioma+'">'+(ch.res ? markedTokens(ch.res, c.idioma) : plainTokens(hf, c))+'</p><p class="trad">'+esc(hf.es || "")+'</p>';
+    h += '<p class="small" style="text-align:center">Vamos a practicar solo esta frase 💪</p><p class="bigemo">'+esc(pistaOf(hf))+'</p><p class="chtext" lang="'+c.idioma+'">'+(ch.res && ch.res.tk && ch.res.tk.length ? markedTokens(ch.res, c.idioma) : plainTokens(hf, c))+'</p><p class="trad">'+esc(hf.es || "")+'</p>';
   } else {
     h += '<div class="chain" lang="'+c.idioma+'">' + list.map(function(f, i){
       var res = ch.chainRes && ch.chainRes.parts ? ch.chainRes.parts[i] : null;
-      return '<p class="chtext sm">'+(res ? markedTokens(res, c.idioma) : plainTokens(f, c))+'</p>';
+      return '<p class="chtext sm">'+(res && res.tk.length ? markedTokens(res, c.idioma) : plainTokens(f, c))+'</p>';
     }).join("") + '</div>';
   }
-  var msg = s.ph === "play" ? "👂 Escucha la charla hasta aquí…" : s.ph === "listen" ? "🎤 ¡Tu turno! Repite todo" : s.ph === "hardplay" ? "👂 Escucha esta frase…" : s.ph === "hardlisten" ? "🎤 Repite solo esta frase" : s.ph === "fb" ? (ch.chainRes ? nice(ch.chainRes.pct) : (ch.res ? nice(ch.res.pct) : "")) : s.ph === "self" || s.ph === "hardself" ? "🎤 Tu turno: dilo en voz alta" : "Toca el botón para empezar";
+  var msg = s.ph === "play" ? "👂 Escucha la charla hasta aquí…" : s.ph === "listen" ? "🎤 ¡Tu turno! Repite todo" : s.ph === "hardplay" ? "👂 Escucha esta frase…" : s.ph === "hardlisten" ? "🎤 Repite solo esta frase" :
+    s.ph === "fb" ? (ch.chainRes ? nice(ch.chainRes.pct) : "") : s.ph === "hardfb" ? (ch.res ? nice(ch.res.pct) : "") : s.ph === "self" || s.ph === "hardself" ? "🎤 Tu turno: dilo en voz alta" : "Toca el botón para empezar";
   h += '<p class="chres" role="status">'+esc(msg)+'</p>';
   if(ch.msg) h += '<p class="note" role="status">'+esc(ch.msg)+'</p>';
   h += '<div class="stack">';
   if(s.ph === "idle") h += '<button class="btn btn-sun btn-big" type="button" data-act="ch-start">▶ Empezar</button>';
   if(s.ph === "listen" || s.ph === "hardlisten") h += micBtn();
   if(s.ph === "self" || s.ph === "hardself") h += selfBtns();
-  if(s.ph !== "idle") h += '<button class="btn btn-ghost" type="button" data-act="ch-skip">Saltar ⏭</button>';
+  if(s.ph === "fb"){
+    var ok = ch.chainRes && ch.chainRes.pct >= 55;
+    if(ok) h += '<button class="btn btn-sun btn-big" type="button" data-act="ch-s-next">'+(s.k >= n ? "¡Terminar el nivel! ✓" : "Sumar la frase "+(s.k + 1)+" ▶")+'</button><button class="btn btn-ghost" type="button" data-act="ch-s-again">🔁 Repetir esta parte</button>';
+    else h += '<button class="btn btn-sun btn-big" type="button" data-act="ch-s-again">🔁 Intentar otra vez</button><button class="btn btn-blue" type="button" data-act="ch-s-hard">💪 Practicar la frase difícil</button><button class="btn btn-ghost" type="button" data-act="ch-s-next">'+(s.k >= n ? "Terminar el nivel" : "Seguir de todos modos ▶")+'</button>';
+  }
+  if(s.ph === "hardfb") h += '<button class="btn btn-sun btn-big" type="button" data-act="ch-s-hard">🔁 Otra vez esta frase</button><button class="btn btn-blue" type="button" data-act="ch-s-again">↩ Volver a la cadena ▶</button>';
   return h + '</div></section>';
 }
 function sStart(c){
@@ -409,34 +433,32 @@ function sStart(c){
     s.ph = useMic() ? "listen" : "self"; render();
     if(useMic()){
       var txt = c.frases.slice(0, s.k).map(function(f){ return f.t; }).join(" ");
-      doListen(c, txt, function(res){ sChain(c, res); });
+      doListen(c, txt, function(res){ sChain(c, res); }, false, function(){ sEmpty(); });
     }
   });
 }
+function sEmpty(){ var s = ch.s; if(s){ s.ph = "idle"; render(); } }
 function sChain(c, res){
-  var s = ch.s, parts = c.frases.slice(0, s.k).map(function(f){ return compare(f.t, res.heard, c.idioma); });
-  res.parts = parts; ch.chainRes = res; s.ph = "fb"; render();
-  var ok = res.pct >= 55, hard = 0, worst = 101;
-  parts.forEach(function(p, i){ if(p.pct < worst){ worst = p.pct; hard = i; } });
-  later(function(){
-    if(ch.lvl !== 3) return;
-    if(ok || s.tries >= 1){ if(!ok) ch.msg = ""; sAdvance(c, res.pct); }
-    else { s.tries++; s.hard = hard; sHard(c); }
-  }, 1700);
+  var s = ch.s, parts = c.frases.slice(0, s.k).map(function(f){ return compare(f.t, res.heard, c.idioma); }), worst = 101;
+  res.parts = parts; ch.chainRes = res; s.ph = "fb"; s.tries++;
+  parts.forEach(function(p, i){ if(p.pct < worst){ worst = p.pct; s.hard = i; } });
+  ch.scores[s.k - 1] = Math.max(ch.scores[s.k - 1] || 0, res.pct);
+  render();
 }
 function sHard(c){
   var s = ch.s, f = c.frases[s.hard]; s.ph = "hardplay"; ch.res = null; ch.chainRes = null; render();
   speakC(f.t, c.idioma, 0.6, function(){
     if(ch.lvl !== 3) return;
     s.ph = useMic() ? "hardlisten" : "hardself"; render();
-    if(useMic()) doListen(c, f.t, function(res){ ch.res = res; s.ph = "fb"; render(); later(function(){ if(ch.lvl === 3) sStart(c); }, 1500); });
+    if(useMic()) doListen(c, f.t, function(res){ ch.res = res; s.ph = "hardfb"; render(); }, false, function(){ s.ph = "hardfb"; render(); });
   });
 }
-function sAdvance(c, pct){
-  var s = ch.s; ch.scores[s.k - 1] = Math.max(ch.scores[s.k - 1] || 0, pct); ch.chainRes = null; ch.res = null;
-  if(s.k >= c.frases.length){ endLevel(3, avgScores()); return; }
-  s.k++; s.tries = 0; render({top:true}); later(function(){ if(ch.lvl === 3) sStart(c); }, 400);
+function sNext(c){
+  var s = ch.s; ch.chainRes = null; ch.res = null;
+  if(s.k >= c.frases.length){ endLevel(3, avgOf(c.frases.length)); return; }
+  s.k++; s.tries = 0; s.ph = "idle"; render({top:true});
 }
+function avgOf(n){ var t = 0; for(var i = 0; i < n; i++) t += ch.scores[i] || 0; return n ? t / n : 0; }
 
 /* NIVEL 4 · Sombra: la voz y él hablan al mismo tiempo, con el texto resaltado como karaoke */
 function allTokens(c){
@@ -490,10 +512,10 @@ function kStart(c){
   });
 }
 
-/* NIVEL 5 · Desvanecer: texto completo → primeras letras → solo emojis → vacío */
+/* NIVEL 5 · Desvanecer: texto completo → primeras letras → solo emojis → vacío (él decide cuándo sigue) */
 var FADES = ["Con todo el texto", "Solo las primeras letras", "Solo los dibujos", "¡Sin ayuda!"];
 function r5(c){
-  var st = ch.fade || {st:0, tries:0, ph:"idle", sc:[]}, h = barHtml("Paso " + (st.st + 1) + " de 4 · " + FADES[st.st], (st.st + 1) / 4 * 100) + '<section class="card chcard">';
+  var st = ch.fade || {st:0, ph:"idle", best:[]}, h = barHtml("Paso " + (st.st + 1) + " de 4 · " + FADES[st.st], (st.st + 1) / 4 * 100) + '<section class="card chcard">';
   var all = c.frases;
   if(ch.res && ch.res.full){ h += '<p class="chtext sm" lang="'+c.idioma+'">'+markedTokens(ch.res.full, c.idioma)+'</p>'; }
   else if(st.st === 0) h += '<p class="chtext sm" lang="'+c.idioma+'">'+all.map(function(f){ return plainTokens(f, c); }).join(" ")+'</p>';
@@ -504,29 +526,29 @@ function r5(c){
   h += '<p class="chres" role="status">'+esc(msg)+'</p>';
   if(ch.msg) h += '<p class="note" role="status">'+esc(ch.msg)+'</p>';
   h += '<div class="stack">';
-  if(st.ph === "idle") h += '<button class="btn btn-sun btn-big" type="button" data-act="ch-start">🎤 Decir la charla</button>';
+  if(st.ph === "idle") h += '<button class="btn btn-sun btn-big" type="button" data-act="ch-start">🎤 Decir la charla</button><button class="btn btn-ghost" type="button" data-act="ch-say-all">🔊 Escucharla primero</button>';
   if(st.ph === "listen") h += micBtn();
   if(st.ph === "self") h += selfBtns();
-  if(st.ph === "idle") h += '<button class="btn btn-ghost" type="button" data-act="ch-say-all">🔊 Escucharla primero</button>';
+  if(st.ph === "fb"){
+    var ok = ch.res && ch.res.pct >= 50;
+    h += ok ? '<button class="btn btn-sun btn-big" type="button" data-act="ch-f-next">'+(st.st >= 3 ? "¡Terminar el nivel! ✓" : "Siguiente paso ▶")+'</button><button class="btn btn-ghost" type="button" data-act="ch-f-again">🔁 Intentar otra vez</button>'
+      : '<button class="btn btn-sun btn-big" type="button" data-act="ch-f-again">🔁 Intentar otra vez</button><button class="btn btn-ghost" type="button" data-act="ch-f-next">'+(st.st >= 3 ? "Terminar el nivel" : "Seguir de todos modos ▶")+'</button>';
+  }
   return h + '</div></section>';
 }
 function fStart(c){
-  var st = ch.fade = ch.fade || {st:0, tries:0, ph:"idle", sc:[]};
+  var st = ch.fade = ch.fade || {st:0, ph:"idle", best:[]};
   var full = c.frases.map(function(f){ return f.t; }).join(" ");
   st.ph = useMic() ? "listen" : "self"; ch.res = null; ch.msg = ""; render();
-  if(useMic()) doListen(c, full, function(res){ res.full = res; fResult(c, res); });
+  if(useMic()) doListen(c, full, function(res){ res.full = res; fResult(c, res); }, false, function(){ st.ph = "idle"; render(); });
 }
 function fResult(c, res){
-  var st = ch.fade; ch.res = res; st.ph = "fb"; render();
-  later(function(){
-    if(ch.lvl !== 5) return;
-    if(res.pct >= 50 || st.tries >= 1){ fAdvance(c, res.pct); } else { st.tries++; st.ph = "idle"; ch.res = null; ch.msg = "¡Otra vez, tú puedes! 💪"; render(); }
-  }, 2200);
+  var st = ch.fade; ch.res = res; st.ph = "fb"; st.best[st.st] = Math.max(st.best[st.st] || 0, res.pct); render();
 }
-function fAdvance(c, pct){
-  var st = ch.fade; st.sc.push(pct); ch.res = null; ch.msg = "";
-  if(st.st >= 3){ endLevel(5, st.sc.reduce(function(a, b){ return a + b; }, 0) / st.sc.length); return; }
-  st.st++; st.tries = 0; st.ph = "idle"; render({top:true});
+function fNext(c){
+  var st = ch.fade; ch.res = null; ch.msg = "";
+  if(st.st >= 3){ var t = 0; for(var i = 0; i < 4; i++) t += st.best[i] || 0; endLevel(5, t / 4); return; }
+  st.st++; st.ph = "idle"; render({top:true});
 }
 
 /* NIVEL 6 · Ensayo final: de pie, de memoria, cuenta regresiva y grabación */
@@ -561,7 +583,7 @@ function finListen(c){
   var f = ch.fin; if(!f || ch.lvl !== 6) return;
   var full = c.frases.map(function(x){ return x.t; }).join(" ");
   f.ph = useMic() ? "listen" : "self"; render();
-  doListen(c, full, function(res){ finEnd(c, res); }, true);
+  doListen(c, full, function(res){ finEnd(c, res); }, true, function(){ f.ph = "ready"; render(); });
   if(!useMic()) { /* solo graba; termina con el botón */ }
 }
 function finEnd(c, res){
@@ -573,21 +595,21 @@ function finEnd(c, res){
 }
 
 /* ---- terminar un nivel ---- */
+function resetRun(){ ch.i = 0; ch.e = ch.s = ch.fade = ch.fin = ch.res = ch.chainRes = null; ch.scores = {}; ch.seen = null; ch.pass = 0; ch.kph = null; ch.msg = ""; ch.listening = false; ch.playing = false; ch.hl = null; }
 function endLevel(n, pct){
   chStop(); ch.listening = false;
-  var id = ch.id, c = charlaById(id), stars = chFinish(n, pct), rd = chReady(id), title = c ? c.titulo : "";
+  var id = ch.id, c = charlaById(id), sc = chFinish(n, pct), rd = chReady(id), title = c ? c.titulo : "";
   if(n === 6 && ch.fin && ch.fin.blob) grAdd(ch.fin.blob, ch.fin.mime, ch.fin.res ? ch.fin.res.pct : pct);
-  var nextQ = ch.queue.length ? ch.queue.shift() : 0;
-  modal = {type:"chend", lvl:n, name:LEVELS[n - 1].name, stars:stars, ready:rd, titulo:title, next:nextQ};
-  ch.lvl = 0; ch.i = 0; ch.e = ch.s = ch.fade = ch.fin = ch.res = ch.chainRes = null; ch.scores = {}; ch.seen = null; ch.pass = 0; ch.kph = null; ch.playing = false;
+  var nextQ = ch.queue.length ? ch.queue.shift() : (n < 6 ? n + 1 : 0);
+  modal = {type:"chend", lvl:n, name:LEVELS[n - 1].name, score:Math.round(pct), ready:rd, stars:chStarsOf(id), titulo:title, next:nextQ};
+  ch.lvl = 0; resetRun();
   render({top:true});
 }
 function startLevel(n){
   var c = charlaById(ch.id); if(!c) return;
-  chStop(); ch.lvl = n; ch.i = 0; ch.e = ch.s = ch.fade = ch.fin = ch.res = ch.chainRes = null; ch.scores = {}; ch.seen = null; ch.pass = 0; ch.kph = null; ch.msg = ""; ch.listening = false; ch.playing = false; ch.hl = null;
+  chStop(); ch.lvl = n; resetRun();
   render({top:true});
   if(n === 2) later(function(){ if(ch.lvl === 2) eStart(c); }, 300);
-  if(n === 3) later(function(){ if(ch.lvl === 3) sStart(c); }, 300);
 }
 
 /* ---- clics ---- */
@@ -601,11 +623,14 @@ function charlaClick(act, el){
       S.screen = "charla"; modal = null; render({top:true});
       if(ch.queue.length) startLevel(ch.queue.shift());
       return true;
-    case "ch-menu": chStop(); ch.lvl = 0; ch.listening = false; ch.queue = []; render({top:true}); return true;
+    case "ch-menu": chStop(); ch.lvl = 0; ch.listening = false; ch.queue = []; ch.msg = ""; render({top:true}); return true;
+    case "ch-restart": if(ch.lvl) startLevel(ch.lvl); return true;
     case "ch-level":
       var n = +el.getAttribute("data-n");
       if(!chUnlocked(ch.id, n)){ ch.msg = "Primero termina el nivel " + (n - 1) + " 😉"; render(); return true; }
-      startLevel(n); return true;
+      ch.msg = ""; startLevel(n); return true;
+    case "ch-reset-ask": modal = {type:"chreset", titulo:c ? c.titulo : ""}; render(); return true;
+    case "ch-reset": S.home.chv[ch.id] = (S.home.chv[ch.id] || 0) + 1; saveHome(); modal = null; ch.lvl = 0; ch.queue = []; ch.msg = "Listo: empiezas la charla de cero 🌱"; render({top:true}); return true;
     case "ch-word": if(c) speakC(el.getAttribute("data-w"), c.idioma, 0.55); return true;
     case "ch-say": if(c && f) speakC(f.t, c.idioma, +el.getAttribute("data-r") || 0.9); return true;
     case "ch-say-all": if(c) speakSeq(c.frases.map(function(x){ return x.t; }), c.idioma, 0.85); return true;
@@ -617,30 +642,29 @@ function charlaClick(act, el){
     case "ch-prev": if(ch.i > 0){ chStop(); ch.playing = false; ch.i--; ch.hl = null; render({top:true}); } return true;
     case "ch-next": if(c && ch.i < c.frases.length - 1){ chStop(); ch.playing = false; ch.i++; ch.hl = null; render({top:true}); } return true;
     case "ch-l1done": endLevel(1, 100); return true;
-    case "ch-start":
-      if(ch.lvl === 3) sStart(c); else if(ch.lvl === 5) fStart(c);
-      return true;
+    case "ch-start": if(ch.lvl === 3) sStart(c); else if(ch.lvl === 5) fStart(c); return true;
     case "ch-e-again": if(c && ch.lvl === 2 && ch.e && ch.e.ph !== "play"){ chStop(); ch.listening = false; eStart(c); } return true;
     case "ch-e-mic": if(c && ch.lvl === 2) eMic(c); return true;
     case "ch-e-next": if(c && ch.lvl === 2){ chStop(); ch.listening = false; eNext(c); } return true;
     case "ch-rec": return true;
     case "ch-done": if(chCtl) chCtl.stop(); return true;
     case "ch-self":
-      var ok = el.getAttribute("data-v") === "1", res = {tk:[], marks:[], pct:ok ? 100 : 0, heard:"", self:true};
-      if(c && f && ch.lvl === 2){ res.tk = tokens(f.t, c.idioma); res.marks = res.tk.map(function(){ return ok ? "ok" : "small"; }); eResult(c, res); }
+      var ok = el.getAttribute("data-v") === "1";
+      if(c && f && ch.lvl === 2){ var tk = tokens(f.t, c.idioma); eResult(c, {tk:tk, marks:tk.map(function(){ return ok ? "ok" : "small"; }), pct:ok ? 100 : 0, heard:"", self:true}); }
       else if(c && ch.lvl === 3){
         var s = ch.s;
-        if(s.ph === "hardself"){ ch.res = null; later(function(){ sStart(c); }, 200); }
-        else { var parts = c.frases.slice(0, s.k).map(function(x){ var tk = tokens(x.t, c.idioma); return {tk:tk, marks:tk.map(function(){ return ok ? "ok" : "small"; }), pct:ok ? 100 : 0}; }); sChain(c, {pct:ok ? 100 : 0, parts:parts, heard:""}); }
+        if(s.ph === "hardself"){ s.ph = "hardfb"; ch.res = {tk:[], marks:[], pct:ok ? 100 : 0}; render(); }
+        else if(!ok){ sStart(c); }
+        else { var parts = c.frases.slice(0, s.k).map(function(x){ var t2 = tokens(x.t, c.idioma); return {tk:t2, marks:t2.map(function(){ return "ok"; }), pct:100}; }); sChain(c, {pct:100, parts:parts, heard:""}); }
       } else if(c && ch.lvl === 5){
-        var tk5 = c.frases.map(function(x){ return tokens(x.t, c.idioma).length; });
-        fResult(c, {pct:ok ? 100 : 0, tk:[], marks:[], heard:""});
+        if(!ok){ ch.fade.ph = "idle"; render(); } else fResult(c, {pct:100, tk:[], marks:[], heard:""});
       }
       return true;
-    case "ch-skip":
-      if(!c) return true; chStop(); ch.listening = false;
-      if(ch.lvl === 3){ sAdvance(c, 0); }
-      return true;
+    case "ch-s-again": if(c && ch.lvl === 3){ chStop(); ch.listening = false; sStart(c); } return true;
+    case "ch-s-hard": if(c && ch.lvl === 3){ chStop(); ch.listening = false; sHard(c); } return true;
+    case "ch-s-next": if(c && ch.lvl === 3){ chStop(); sNext(c); } return true;
+    case "ch-f-again": if(c && ch.lvl === 5){ chStop(); ch.fade.ph = "idle"; ch.res = null; ch.msg = ""; fStart(c); } return true;
+    case "ch-f-next": if(c && ch.lvl === 5){ chStop(); fNext(c); } return true;
     case "ch-kstart": if(c) kStart(c); return true;
     case "ch-kdone":
       if((ch.pass || 0) === 0){ ch.pass = 1; ch.kph = null; render({top:true}); } else endLevel(4, 100);
@@ -650,7 +674,9 @@ function charlaClick(act, el){
     case "ch-rate": endLevelFin(+el.getAttribute("data-v")); return true;
     case "ch-fin-ok": endLevel(6, ch.fin && ch.fin.res ? ch.fin.res.pct : 60); return true;
     case "ch-again": if(c) finStart(c); return true;
-    case "ch-after": var nq = modal && modal.next; modal = null; if(nq) startLevel(nq); else render({top:true}); return true;
+    case "ch-after": var nq = modal && modal.next; modal = null; if(nq && chUnlocked(ch.id, nq)) startLevel(nq); else { ch.lvl = 0; render({top:true}); } return true;
+    case "ch-repeat": var rl = modal && modal.lvl; modal = null; if(rl) startLevel(rl); else render(); return true;
+    case "ch-tomenu": modal = null; ch.lvl = 0; ch.queue = []; render({top:true}); return true;
   }
   return false;
 }

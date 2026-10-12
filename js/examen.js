@@ -238,7 +238,7 @@ function xFinish(){
   c.result = {score:r.score, units:r.units, total:r.total, ts:att.ts};
   c.at = att.ts;
   H.tries++; H.best = Math.max(H.best, r.score); if(c.round > 1) H.prac++;
-  markAutoDone("ex", c.tema.id);
+  if(c.qs.filter(function(q){ return isAnswered(q, c.answers[q.id]); }).length >= Math.ceil(c.qs.length / 2)) markAutoDone("ex", c.tema.id);   /* el pendiente se marca solo si contestó al menos la mitad */
   filter = "all";
   if(c.tema.vocabulario.length >= 3){ c.phase = "vocab"; c.vocab = buildVocab(c); S.screen = "vocab"; }
   else { c.phase = "res"; S.screen = "results"; }

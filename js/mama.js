@@ -244,16 +244,17 @@ function renderTareasMom(){
     if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
     var done = !!S.home.tasks[x.id];
     h += '<article class="card mom"><span class="chip sm">' + esc(x.materia || "") + '</span> ' + (done ? '<span class="small">✓ Killian ya la hizo</span>' : '') + '<h3>' + esc(x.titulo) + '</h3>' +
-      String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") + '</article>';
+      String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") +
+      (x.repaso && x.repaso.length ? '<p class="small" style="color:var(--ink)"><b>📚 Repaso en clase:</b> ' + esc(x.repaso.join(" ")) + '</p>' : '') + '</article>';
   });
   return h + footer();
 }
 /* Cuántas veces practicó, en qué nivel va y las grabaciones del ensayo final. */
 function charlaStatsMom(c){
   var id = c.id, ses = chSessions(id), rd = chReady(id), recs = GR.items.filter(function(x){ return x.charla === id; });
-  var lv = LEVELS.map(function(L){ var st = chStars(id, L.n); return '<span class="lvchip'+(st ? " on" : "")+'" title="'+esc(L.name)+'">'+L.n+' '+esc(L.name)+' '+(st ? starsTxt(st) : "·")+'</span>'; }).join("");
+  var lv = LEVELS.map(function(L){ var sc = chScore(id, L.n); return '<span class="lvchip'+(sc ? " on" : "")+'" title="'+esc(L.name)+'">'+L.n+' '+esc(L.name)+' '+(sc ? Math.min(100, sc)+'%' : "·")+'</span>'; }).join("");
   return '<div class="charlamom"><p class="wordrow"><span><b>'+esc(c.titulo)+'</b> · '+esc(c.materia||"")+' · '+c.frases.length+' frases · '+LANGS[c.idioma].name+(c.fecha ? ' · entrega '+esc(c.fecha) : '')+'</span><button class="link-btn del" type="button" data-act="chm-del" data-id="'+esc(id)+'">🗑 Quitar</button></p>' +
-    '<p class="small">Practicó <b>'+ses+'</b> '+(ses === 1 ? "vez" : "veces")+' ('+chToday(id)+' hoy) · va en el nivel <b>'+chNextLevel(id)+'</b> · charla lista al <b>'+rd+'%</b></p>' +
+    '<p class="small">Practicó <b>'+ses+'</b> '+(ses === 1 ? "vez" : "veces")+' ('+chToday(id)+' hoy) · va en el nivel <b>'+chNextLevel(id)+'</b> · charla lista al <b>'+rd+'%</b> · ⭐ '+chStarsOf(id)+' de 3</p>' +
     '<p class="lvrow">'+lv+'</p>' +
     (recs.length ? recs.map(function(g){ return '<p class="small">🎙 Ensayo final · '+esc(new Date(g.ts).toLocaleString("es", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}))+' · '+g.pct+'%</p><audio controls preload="none" src="'+esc(g.data)+'"></audio>'; }).join("") : '<p class="small">Todavía no hay grabaciones del ensayo final.</p>') + '</div>';
 }
