@@ -451,3 +451,4 @@ a.btn{text-decoration:none}
 @keyframes recpulse{50%{transform:scale(1.03)}}
 .row2{display:grid; grid-template-columns:72px 1fr; gap:10px}
 @media (prefers-reduced-motion:reduce){.btn.rec{animation:none}}
+.due.late{color:#b45309}

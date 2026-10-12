@@ -364,7 +364,7 @@ function syncNow(){
    Solo se vuelven a aplicar cuando el archivo cambia. */
 function hashText(t){ var h = 5381; for(var i=0;i<t.length;i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0; return String(h >>> 0); }
 function fetchText(url){ return fetch(url, {cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error(url); return r.text(); }); }
-var AGENDA_SCHEMA = "|s3", KX_VERSION = "12-oct 3";
+var AGENDA_SCHEMA = "|s3", KX_VERSION = "12-oct 4";
 function loadProjectFiles(){
   if(window.KXSync && KXSync.enabled && !KXSync.hasSession()) return Promise.resolve();
   var changed = false;

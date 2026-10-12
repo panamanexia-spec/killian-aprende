@@ -120,7 +120,7 @@ function evalChip(e){
 }
 function taskCard(it){
   var x = it.x, isVid = it.kind === "vid", c = !!cel[it.id];
-  var due = isVid ? "" : (x.entrega ? '<p class="due">📅 Para '+esc(relDay(x.entrega))+'</p>' : "");
+  var due = isVid ? "" : (x.entrega ? (x.entrega < todayKey() ? '<p class="due late">⏰ Atrasada · era para el '+esc(dayLabel(x.entrega))+'</p>' : '<p class="due">📅 Para '+esc(relDay(x.entrega))+'</p>') : "");
   var acts = "";
   if(isVid && videoInfo(x.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(it.id)+'">▶ Ver el video aquí</button>';
   else if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Abrir el enlace ↗</a>';
@@ -141,38 +141,42 @@ function taskCard(it){
     due + body + '<div class="acts">'+acts+'</div></div>' + (c ? confetti() : "") + '</article>';
 }
 /* Materiales de esta semana y la próxima, para tenerlos listos sin comprar a diario. */
-function weekMaterials(){
-  var ag = agendaData(), t = todayKey(), from = mondayOf(addDays(t, 2)), to = addDays(from, 13);
-  return ag.materiales.filter(function(m){
-    return m.llevar_el <= to && (m.llevar_el >= from || !S.home.mats[m.id]);
-  }).sort(function(a, b){ return a.llevar_el < b.llevar_el ? -1 : a.llevar_el > b.llevar_el ? 1 : 0; });
+/* Materiales urgentes: los de hoy (si es temprano) y los del próximo día de clases. */
+function matFrom(){ return new Date().getHours() >= 15 ? addDays(todayKey(), 1) : todayKey(); }   /* después de las 3 pm lo de hoy ya pasó */
+function urgentMats(){
+  var t = todayKey(), from = matFrom(), end = addDays(t, 1), wd = parseD(end).getDay();
+  if(wd === 6) end = addDays(t, 3); else if(wd === 0) end = addDays(t, 2);
+  return agendaData().materiales.filter(function(m){ return !S.home.mats[m.id] && m.llevar_el >= from && m.llevar_el <= end; })
+    .sort(function(a, b){ return a.llevar_el < b.llevar_el ? -1 : a.llevar_el > b.llevar_el ? 1 : 0; });
 }
-function renderMatsAside(){
-  var list = weekMaterials(), t = todayKey(), thisMon = mondayOf(addDays(t, 2)), nextMon = addDays(thisMon, 7);
+/* Lista de la semana: lo urgente ya está arriba; lo que ya está listo pasa al final. */
+function renderMatsAside(urgent){
+  var t = matFrom(), inUrgent = {}; urgent.forEach(function(m){ inUrgent[m.id] = 1; });
+  var list = agendaData().materiales.filter(function(m){ return m.llevar_el >= t && !inUrgent[m.id]; });
   var h = '<aside class="card matsweek" aria-label="Materiales de la semana"><h2 class="sec-title">🎒 Materiales de la semana</h2>';
-  if(!list.length) return h + '<p>No hay materiales por ahora. 🎉</p></aside>';
+  if(!list.length) return h + '<p>' + (urgent.length ? 'Lo demás que necesitas está arriba. 😊' : 'No hay materiales por ahora. 🎉') + '</p></aside>';
   h += '<p class="small">Para tenerlos listos y no comprar cada día.</p>';
-  var groups = [["Esta semana", function(m){ return m.llevar_el < nextMon; }], ["La próxima semana", function(m){ return m.llevar_el >= nextMon; }]];
-  groups.forEach(function(g){
-    var items = list.filter(g[1]).map(function(m, i){ return {m:m, i:i}; });
-    items.sort(function(a, b){ var da = S.home.mats[a.m.id] || S.home.have[a.m.id] > 0 ? 1 : 0, db = S.home.mats[b.m.id] || S.home.have[b.m.id] > 0 ? 1 : 0; return da - db || a.i - b.i; });
-    items = items.map(function(o){ return o.m; });
-    if(!items.length) return;
-    h += '<h3 class="grp">'+g[0]+'</h3>' + items.map(function(m){
-      var taken = !!S.home.mats[m.id], have = S.home.have[m.id] > 0;
-      return '<div class="mrow'+(taken?" taken":"")+'"><div class="mtxt"><b>'+esc(m.material)+'</b><span>'+esc(m.materia||"")+' · '+esc(capFirst(dayLabel(m.llevar_el)))+'</span></div>' +
-        (taken ? '<span class="pill ok">✓ Listo</span>' :
-         '<button class="have'+(have?" on":"")+'" type="button" data-act="have" data-id="'+esc(m.id)+'" aria-pressed="'+have+'">'+(have ? "✓ Ya lo tengo" : "Ya lo tengo")+'</button>') + '</div>';
-    }).join("");
+  function ready(m){ return !!S.home.mats[m.id] || S.home.have[m.id] > 0; }
+  var pending = list.filter(function(m){ return !ready(m); }), doneL = list.filter(ready);
+  function sorted(a){ return a.slice().sort(function(x, y){ return x.llevar_el < y.llevar_el ? -1 : x.llevar_el > y.llevar_el ? 1 : 0; }); }
+  function row(m){
+    var taken = !!S.home.mats[m.id], have = S.home.have[m.id] > 0;
+    return '<div class="mrow'+(ready(m)?" taken":"")+'"><div class="mtxt"><b>'+esc(m.material)+'</b><span>'+esc(m.materia||"")+' · '+esc(capFirst(dayLabel(m.llevar_el)))+'</span></div>' +
+      (taken ? '<span class="pill ok">✓ Listo</span>' :
+       '<button class="have'+(have?" on":"")+'" type="button" data-act="have" data-id="'+esc(m.id)+'" aria-pressed="'+have+'">'+(have ? "✓ Ya lo tengo" : "Ya lo tengo")+'</button>') + '</div>';
+  }
+  var nextMon = addDays(mondayOf(todayKey()), 7);
+  [["Esta semana", function(m){ return m.llevar_el < nextMon; }], ["La próxima semana", function(m){ return m.llevar_el >= nextMon; }]].forEach(function(g){
+    var it = sorted(pending.filter(g[1])); if(it.length) h += '<h3 class="grp">'+g[0]+'</h3>' + it.map(row).join("");
   });
+  if(doneL.length) h += '<h3 class="grp">✓ Ya listos</h3>' + sorted(doneL).map(row).join("");
   return h + '</aside>';
 }
 function renderHome(){
   var now = new Date(), hr = now.getHours(), t = todayKey(), ag = agendaData();
   var greet = hr < 12 ? "¡Buenos días" : hr < 19 ? "¡Buenas tardes" : "¡Buenas noches";
   var dateTxt = ""; try{ dateTxt = now.toLocaleDateString("es", {weekday:"long", day:"numeric", month:"long"}); dateTxt = dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1); }catch(e){}
-  var mats = ag.materiales.filter(function(m){ return !S.home.mats[m.id] && m.llevar_el <= addDays(t, 1) && m.llevar_el >= addDays(t, -14); })
-    .sort(function(a, b){ return a.llevar_el < b.llevar_el ? -1 : 1; });
+  var mats = urgentMats();
   var due = dueItems();
   var pend = due.filter(function(i){ return !isDone(i.kind, i.id) || cel[i.id]; });
   var shown = pend.slice(0, 3), later = pend.filter(function(i){ return !cel[i.id]; }).length - shown.filter(function(i){ return !cel[i.id]; }).length;
@@ -186,7 +190,7 @@ function renderHome(){
   if(ag.demo) h += '<p class="tag-demo">📝 Esto es un ejemplo. Cuando mamá cargue la agenda de la semana (🔒 Zona de mamá), aquí aparecerán las tareas de verdad.</p>';
   h += '<div class="homegrid"><div class="maincol">';
   if(mats.length){
-    h += '<article class="mat" aria-label="Para llevar"><div class="mhead"><span class="ico" aria-hidden="true">🎒</span><b>Para llevar ' + (mats.every(function(m){ return m.llevar_el === mats[0].llevar_el; }) ? esc(relDay(mats[0].llevar_el)) : 'pronto') + '</b></div>' +
+    h += '<article class="mat" aria-label="Para llevar"><div class="mhead"><span class="ico" aria-hidden="true">🎒</span><b>Para llevar ' + (mats.every(function(m){ return m.llevar_el === mats[0].llevar_el; }) ? esc(relDay(mats[0].llevar_el)) : 'hoy y mañana') + '</b></div>' +
       mats.map(function(m){
         return '<div class="mline"><div class="txt"><b>' + esc(m.material) + '</b><span>' + esc(m.materia||"") + ' · ' + esc(dayLabel(m.llevar_el)) + ' (' + esc(relDay(m.llevar_el)) + ')</span></div>' +
           '<button class="btn btn-sun" type="button" data-act="done" data-k="mat" data-id="' + esc(m.id) + '" aria-label="Ya preparé ' + esc(m.material) + '">✓ Listo</button></div>';
@@ -205,7 +209,7 @@ function renderHome(){
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
       '<p>Puedes practicar inglés con tus temas.</p><button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
   }
-  h += '</section></div>' + renderMatsAside() + '</div>' +
+  h += '</section></div>' + renderMatsAside(mats) + '</div>' +
     '<section class="tiles" aria-label="Más cosas">' +
     '<button class="tile" type="button" data-act="go-screen" data-s="topics"><span class="big">📚</span>Mis temas</button>' +
     (S.charlas.length ? '<button class="tile" type="button" data-act="go-screen" data-s="charlas"><span class="big">🎤</span>Mis charlas</button>' : '') +
