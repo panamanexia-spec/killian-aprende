@@ -87,7 +87,8 @@
       "evaluacion": "formativa",
       "en_casa": [
         "Página 335 del Textbook Unit 2: patrones en las tablas de multiplicar (se trabaja martes y miércoles)."
-      ]
+      ],
+      "tema": "math-patrones-ecuaciones"
     },
     {
       "id": "t8",
@@ -102,7 +103,8 @@
       ],
       "repaso": [
         "Repasan el tema antes de la prueba."
-      ]
+      ],
+      "tema": "es-adverbios"
     },
     {
       "id": "t9",
@@ -138,7 +140,8 @@
       "evaluacion": "formativa",
       "en_casa": [
         "Página 21 del Textbook Vol. 2 (Across and Down): escribir una oración con cada palabra: convertible, incredible, agreeable, believable, comfortable, predictable, terrible, affordable."
-      ]
+      ],
+      "tema": "comp-able-ible"
     },
     {
       "id": "t12",
@@ -150,7 +153,8 @@
       "evaluacion": "formativa",
       "en_casa": [
         "Página 365 del Textbook Unit 2: usar ecuaciones para representar situaciones."
-      ]
+      ],
+      "tema": "math-patrones-ecuaciones"
     }
   ],
   "materiales": [

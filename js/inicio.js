@@ -174,6 +174,7 @@ function taskCard(it){
   var cc = it.kind === "task" && x.charla ? charlaById(x.charla) : null;
   if(cc && (x.auto || !(cc.fecha && cc.fecha >= todayKey() && prevSchoolDay(cc.fecha, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'" data-m="'+(x.modo || "")+'">🎤 Practicar mi charla</button>';
   var tmx = it.kind === "task" && x.tema ? temaById(x.tema) : null;
+  if(tmx && tmx.resumen && tmx.resumen.length) acts += '<button class="btn btn-blue" type="button" data-act="study" data-id="'+esc(tmx.id)+'">📖 Estudiar mi resumen</button>';
   if(tmx && (x.auto || !(tmx.fecha_examen && tmx.fecha_examen >= todayKey() && prevSchoolDay(tmx.fecha_examen, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
@@ -273,9 +274,9 @@ function renderStudy(){
   var t = temaById(studyId);
   if(!t) return subHeader("Estudiar", "go-screen", "← Mis temas") + '<p class="note">No encuentro ese tema.</p>' + footer();
   return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
-    '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="en">'+esc(t.titulo)+'</h2>' +
+    '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="'+tlang(t.id)+'">'+esc(t.titulo)+'</h2>' +
     t.resumen.map(function(r){
-      return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="en">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en,"en")+'</div>';
+      return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="'+tlang(t.id)+'">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en, tlang(t.id))+'</div>';
     }).join("") + '</section>' +
     (t.vocabulario.length ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") +
     '<button class="btn btn-sun btn-big" type="button" data-act="open-tema" data-id="'+esc(t.id)+'">📝 Ir al examen</button>' + footer();
@@ -297,6 +298,7 @@ function renderStars(){
 var dict = {topic:null, flip:{}, quiz:null};
 var CORTA = {overuse:"usar demasiado", overheat:"calentarse demasiado", underwater:"debajo del agua", overflow:"desbordarse", overestimate:"calcular de más",
   undercooked:"poco cocinado", undercover:"de incógnito", oversee:"supervisar", undershirt:"camiseta interior", overlook:"pasar por alto", overcook:"cocinar demasiado"};
+function tlang(tid){ var t = tid ? temaById(tid) : null; return t && t.idioma === "es" ? "es" : "en"; }
 function vocabTopics(){
   var list = [];
   allTemas().forEach(function(t){
@@ -340,8 +342,8 @@ function renderDict(){
       var on = !!dict.flip[i], known = !!S.home.known[wkey(w._tid || tp.id, w)];
       return '<div class="fwrap"><button class="fcard'+(on?" back":"")+'" type="button" data-act="flip" data-i="'+i+'" aria-pressed="'+on+'">' +
         (known ? '<span class="kn" aria-label="Ya la aprendiste">✓</span>' : '') +
-        (on ? '<b class="es">'+esc(w.es)+'</b>' + (w.ejemplo_en ? '<span lang="en" class="ex">'+esc(w.ejemplo_en)+'</span><span class="ex2">'+esc(w.ejemplo_es||"")+'</span>' : '')
-            : '<b lang="en">'+esc(w.en)+'</b><span class="hint">toca para ver</span>') + '</button>' + spk(w.en, "en") + '</div>';
+        (on ? '<b class="es">'+esc(w.es)+'</b>' + (w.ejemplo_en ? '<span lang="'+tlang(w._tid || tp.id)+'" class="ex">'+esc(w.ejemplo_en)+'</span><span class="ex2">'+esc(w.ejemplo_es||"")+'</span>' : '')
+            : '<b lang="'+tlang(w._tid || tp.id)+'">'+esc(w.en)+'</b><span class="hint">toca para ver</span>') + '</button>' + spk(w.en, tlang(w._tid || tp.id)) + '</div>';
     }).join("") + '</div>' + footer();
 }
 function startQuiz2(tp){
@@ -375,7 +377,7 @@ function renderQuiz2(tp){
   if(answered) fb = it.pick === it.w.es ? '<p class="fb good">🎉 ¡Muy bien!</p>' : '<p class="fb bad">¡Casi! Significa «'+esc(it.w.es)+'». Ya lo sabes para la próxima. 💙</p>';
   return subHeader(tp.title, "dict-end", "← Salir") +
     '<div class="prog-row"><span>Palabra '+(q.i+1)+' de '+q.items.length+'</span></div>' +
-    '<main class="card qcard"><span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="en" style="font-size:2.2rem">'+esc(it.w.en)+'</p>'+spk(it.w.en,"en")+'</div>' +
+    '<main class="card qcard"><span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="'+tlang(it.w._tid || tp.id)+'" style="font-size:2.2rem">'+esc(it.w.en)+'</p>'+spk(it.w.en, tlang(it.w._tid || tp.id))+'</div>' +
     '<div class="opts">'+opts+'</div>'+fb+
     (answered ? '<button class="btn btn-sun btn-big" type="button" data-act="dict-next">'+(last ? "Ver mi resultado" : "Siguiente →")+'</button>' : "") + '</main>' + footer();
 }

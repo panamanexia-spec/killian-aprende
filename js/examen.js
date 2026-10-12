@@ -5,6 +5,8 @@
 var ex = {es:{}, sel:null, hint:""};            /* «ver en español» por pregunta; palabra elegida al unir */
 var vx = {fb:null, text:""};           /* mini vocabulario: respuesta mostrada / texto escrito */
 
+function XL(){ var c = S.ex && S.ex.cur; return c && c.tema && c.tema.idioma === "es" ? "es" : "en"; }
+function tfWord(v){ return XL() === "es" ? (v ? "VERDADERO" : "FALSO") : (v ? "TRUE" : "FALSE"); }
 function allTemas(){ return builtinTemas().concat(S.temas); }
 function temaById(id){ var l = allTemas(); for(var i=0;i<l.length;i++) if(l[i].id === id) return l[i]; return null; }
 function tHist(tid){ return S.ex.hist[tid] || []; }
@@ -50,7 +52,7 @@ function startRound(tid, official, errorsOnly){
     var byId = {}; tema.preguntas.forEach(function(q){ byId[q.id] = q; });
     qs = tema.examen_oficial.map(function(id){ return byId[id]; }).filter(Boolean); usedOfficial = true;
   } else qs = chooseQuestions(tema, n);
-  S.ex.cur = {tema:{id:tema.id, materia:tema.materia || "", titulo:tema.titulo, titulo_es:tema.titulo_es || "", vocabulario:tema.vocabulario.slice(0, 60), subtemas:tema.subtemas || []},
+  S.ex.cur = {tema:{id:tema.id, idioma:tema.idioma === "es" ? "es" : "en", materia:tema.materia || "", titulo:tema.titulo, titulo_es:tema.titulo_es || "", vocabulario:tema.vocabulario.slice(0, 60), subtemas:tema.subtemas || []},
     round:round, official:usedOfficial, qs:qs.map(prepQuestion), idx:0, answers:{}, phase:"q", t0:Date.now(), vocab:null, result:null, at:null};
   S.tid = tid; S.screen = "exam"; ex.es = {}; ex.sel = null; modal = null; filter = "all";
   save(); render({top:true});
@@ -109,7 +111,7 @@ function renderTopics(){
   allTemas().forEach(function(t){
     var exm = t.fecha_examen ? '<p>🗓️ Examen: ' + esc(dayLabel(t.fecha_examen)) + ' (' + esc(relDay(t.fecha_examen)) + ')</p>' : "";
     h += '<article class="card topic"><span class="chip">' + esc(t.materia || "Tema") + '</span><h3>' + esc(t.titulo_es || t.titulo) + '</h3>' +
-      (t.titulo_es ? '<p lang="en">' + esc(t.titulo) + '</p>' : '') + exm + '<p>' + statusOf(t.id) + '</p>' +
+      (t.titulo_es ? '<p lang="' + (t.idioma === "es" ? "es" : "en") + '">' + esc(t.titulo) + '</p>' : '') + exm + '<p>' + statusOf(t.id) + '</p>' +
       '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="open-tema" data-id="' + esc(t.id) + '">Abrir este tema</button></div></article>';
   });
   if(!S.temas.length) h += '<p class="note">Aquí irán apareciendo los temas de estudio que mamá agregue.</p>';
@@ -133,7 +135,7 @@ function renderTema(){
   }).join("") + '</section>' : "";
   return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
     '<main class="card hero"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><span class="eng">' + esc(t.materia || "Tema") + '</span>' +
-    '<h1>' + esc(t.titulo_es || t.titulo) + '</h1>' + (t.titulo_es ? '<p class="lead" lang="en">' + esc(t.titulo) + '</p>' : '') +
+    '<h1>' + esc(t.titulo_es || t.titulo) + '</h1>' + (t.titulo_es ? '<p class="lead" lang="' + (t.idioma === "es" ? "es" : "en") + '">' + esc(t.titulo) + '</p>' : '') +
     (t.fecha_examen ? '<p class="lead">🗓️ Examen: ' + esc(dayLabel(t.fecha_examen)) + ' (' + esc(relDay(t.fecha_examen)) + ')</p>' : '') +
     '<p class="note">No te preocupes si te equivocas. Este examen te ayudará a aprender.</p>' +
     '<div class="how"><h2>Instrucciones:</h2><ul><li>Lee cada pregunta con atención.</li><li>Selecciona o escribe tu respuesta.</li>' +
@@ -173,16 +175,16 @@ function renderQuestionBody(q, a, c){
   var h = "";
   if(q.tipo === "opcion_multiple"){
     h += '<div class="opts" role="group" aria-label="Opciones">' + q.opciones.map(function(o, i){
-      return '<button type="button" class="opt" lang="en" data-act="x-pick" data-v="' + esc(o) + '" aria-pressed="' + (a === o) + '"><span class="let">' + LET[i] + '</span><span>' + esc(o) + '</span></button>';
+      return '<button type="button" class="opt" lang="' + XL() + '" data-act="x-pick" data-v="' + esc(o) + '" aria-pressed="' + (a === o) + '"><span class="let">' + LET[i] + '</span><span>' + esc(o) + '</span></button>';
     }).join("") + '</div>';
   } else if(q.tipo === "verdadero_falso"){
     h += '<div class="opts tf" role="group" aria-label="Verdadero o falso">' +
-      '<button type="button" class="opt" lang="en" data-act="x-tf" data-v="true" aria-pressed="' + (a === true) + '"><span class="let">✓</span><span>True</span></button>' +
-      '<button type="button" class="opt" lang="en" data-act="x-tf" data-v="false" aria-pressed="' + (a === false) + '"><span class="let">✗</span><span>False</span></button></div>';
+      '<button type="button" class="opt" lang="' + XL() + '" data-act="x-tf" data-v="true" aria-pressed="' + (a === true) + '"><span class="let">✓</span><span>' + (XL() === "es" ? "Verdadero" : "True") + '</span></button>' +
+      '<button type="button" class="opt" lang="' + XL() + '" data-act="x-tf" data-v="false" aria-pressed="' + (a === false) + '"><span class="let">✗</span><span>' + (XL() === "es" ? "Falso" : "False") + '</span></button></div>';
   } else if(q.tipo === "completar"){
     if(c.round > 1 && q.pista_es) h += '<p class="hint">💡 Pista: ' + esc(q.pista_es) + '</p>';
     h += '<label for="xans" class="sec-es">Escribe la palabra completa en inglés:</label>' +
-      '<input id="xans" class="write" lang="en" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" value="' + esc(a || "") + '" placeholder="Escribe aquí…">';
+      '<input id="xans" class="write" lang="' + XL() + '" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" value="' + esc(a || "") + '" placeholder="Escribe aquí…">';
   } else {
     var used = {}; a = a || {};
     Object.keys(a).forEach(function(k){ used[a[k]] = +k; });
@@ -190,13 +192,13 @@ function renderQuestionBody(q, a, c){
     var msg = ex.hint || (cur != null ? "Paso 2: toca el significado de <b>" + esc(q.pares[cur].izquierda) + "</b>." : "Paso 1: toca una palabra en inglés.");
     h += '<div class="match"><div><h3>1. Palabras</h3><div class="words">' + q.pares.map(function(p, i){
       var r = a[i], L = r != null ? LET[q.rights.indexOf(r)] : null;
-      return '<button type="button" class="w' + (r != null ? " set" : "") + (i === cur ? " sel" : "") + '" lang="en" data-act="x-lw" data-i="' + i + '" aria-pressed="' + (i === cur) + '">' +
+      return '<button type="button" class="w' + (r != null ? " set" : "") + (i === cur ? " sel" : "") + '" lang="' + XL() + '" data-act="x-lw" data-i="' + i + '" aria-pressed="' + (i === cur) + '">' +
         '<small>' + (i + 1) + '.</small>' + esc(p.izquierda) + '<span class="tag" aria-label="' + (L ? "elegiste " + L : "sin elegir") + '">' + (L || "?") + '</span></button>';
     }).join("") + '</div></div><p class="step-msg" role="status">' + msg + '</p>' +
     '<div><h3>2. Significados</h3><div class="means">' + q.rights.map(function(r, i){
       var u = used[r];
       return '<button type="button" class="m' + (u != null ? " on" : "") + '" data-act="x-rm" data-i="' + i + '"><span class="let">' + LET[i] + '</span><span>' + esc(r) + '</span>' +
-        (u != null ? '<span class="used" lang="en">' + esc(q.pares[u].izquierda) + '</span>' : '') + '</button>';
+        (u != null ? '<span class="used" lang="' + XL() + '">' + esc(q.pares[u].izquierda) + '</span>' : '') + '</button>';
     }).join("") + '</div></div></div>';
   }
   return h;
@@ -206,8 +208,8 @@ function renderExam(){
   if(!c || c.phase !== "q"){ S.screen = "home"; return renderHome(); }
   var q = c.qs[c.idx], last = c.idx === c.qs.length - 1, a = c.answers[q.id];
   var body = '<span class="chip">' + esc(q.seccion || c.tema.titulo_es || c.tema.titulo) + '</span><p class="sec-es">' + esc(q.instruccion_es || DEFAULT_INSTR[q.tipo]) + '</p>';
-  body += '<div class="qrow"><p class="qtext" lang="en">' + blankHtml(q.pregunta_en) + '</p>' + spk(q.pregunta_en, "en") + '</div>';
-  if(q.base_word) body += '<p class="base" lang="en">Base word: <b>' + esc(q.base_word) + '</b></p>';
+  body += '<div class="qrow"><p class="qtext" lang="' + XL() + '">' + blankHtml(q.pregunta_en) + '</p>' + spk(q.pregunta_en, XL()) + '</div>';
+  if(q.base_word) body += '<p class="base" lang="' + XL() + '">Base word: <b>' + esc(q.base_word) + '</b></p>';
   if(q.pregunta_es){
     body += ex.es[q.id] ? '<p class="es-box">🇪🇸 ' + blankHtml(q.pregunta_es) + '</p>' :
       '<button type="button" class="link-btn es-btn" data-act="x-es">🇪🇸 Ver en español</button>';
@@ -269,7 +271,7 @@ function renderVocab(){
       '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="v-go">¡Vamos! 🚀</button><button class="btn btn-ghost" type="button" data-act="v-skip">Saltar e ir a mis resultados</button></div></main>' + footer();
   }
   var it = v.items[v.i], answered = it.ok !== null, last = v.i === v.items.length - 1;
-  var body = '<span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="en" style="font-size:2.2rem">' + esc(it.en) + '</p>' + spk(it.en, "en") + '</div>';
+  var body = '<span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="' + XL() + '" style="font-size:2.2rem">' + esc(it.en) + '</p>' + spk(it.en, XL()) + '</div>';
   if(it.mode === "elegir"){
     body += '<div class="opts">' + it.opts.map(function(o, i){
       var cls = "opt"; if(answered){ if(o === it.es) cls += " good"; else if(o === it.said) cls += " bad"; }
@@ -281,7 +283,7 @@ function renderVocab(){
       (answered ? "" : '<button type="button" class="btn btn-sun btn-big" data-act="v-check">Comprobar</button>');
   }
   if(answered) body += (it.ok ? '<p class="fb good">🎉 ¡Muy bien!</p>' : '<p class="fb bad">¡Casi! Se dice «' + esc(it.es) + '». Ya lo sabes para la próxima. 💙</p>') +
-    (it.ejemplo_en ? '<p class="small"><span lang="en">' + esc(it.ejemplo_en) + '</span><br>' + esc(it.ejemplo_es) + '</p>' : '') +
+    (it.ejemplo_en ? '<p class="small"><span lang="' + XL() + '">' + esc(it.ejemplo_en) + '</span><br>' + esc(it.ejemplo_es) + '</p>' : '') +
     '<button class="btn btn-sun btn-big" type="button" data-act="v-next">' + (last ? "Ver mis resultados" : "Siguiente →") + '</button>';
   return vocabHeader() + '<div class="prog-row"><span>Palabra ' + (v.i + 1) + ' de ' + v.items.length + '</span><span>✅ ' + v.ok + '</span></div>' +
     '<div class="bar"><i style="width:' + Math.round((v.i + (answered ? 1 : 0)) / v.items.length * 100) + '%"></i></div><main class="card qcard">' + body + '</main>' + footer();
@@ -316,16 +318,16 @@ function meaningOf(word, c){
 function reviewItem(g, i, c){
   var q = g.q, a = g.a, cls = g.ok ? "ok" : (g.answered ? "bad" : "skip"), verdicts;
   var head = '<div class="rv-head"><span class="rv-n">Pregunta ' + (i + 1) + '</span>' + (q.seccion ? '<span class="rv-sec">' + esc(q.seccion) + '</span>' : '') + '</div>';
-  var qline = '<span lang="en">' + blankHtml(q.pregunta_en) + '</span>' + (q.base_word ? ' <span lang="en">(Base word: ' + esc(q.base_word) + ')</span>' : "");
+  var qline = '<span lang="' + XL() + '">' + blankHtml(q.pregunta_en) + '</span>' + (q.base_word ? ' <span lang="' + XL() + '">(Base word: ' + esc(q.base_word) + ')</span>' : "");
   var mine, right, extra = "";
   switch(q.tipo){
-    case "verdadero_falso": mine = g.answered ? (a ? "TRUE" : "FALSE") : "(sin responder)"; right = q.correcta ? "TRUE" : "FALSE"; break;
+    case "verdadero_falso": mine = g.answered ? (a ? tfWord(true) : tfWord(false)) : "(sin responder)"; right = tfWord(!!q.correcta); break;
     case "completar": mine = g.answered ? String(a).trim().toUpperCase() : "(sin responder)"; right = q.respuesta.toUpperCase(); break;
     case "unir":
       mine = g.answered ? "" : "(sin responder)"; right = "";
       extra = q.pares.map(function(p, k){
         var got = a ? a[k] : null, okp = got === p.derecha;
-        return '<p class="line pair ' + (okp ? "okp" : "badp") + '"><b lang="en">' + esc(p.izquierda) + '</b> → ' + esc(p.derecha) + (okp ? ' ✅' : (got ? ' ❌ <span class="small">(elegiste: ' + esc(got) + ')</span>' : ' ❌ <span class="small">(sin responder)</span>')) + '</p>';
+        return '<p class="line pair ' + (okp ? "okp" : "badp") + '"><b lang="' + XL() + '">' + esc(p.izquierda) + '</b> → ' + esc(p.derecha) + (okp ? ' ✅' : (got ? ' ❌ <span class="small">(elegiste: ' + esc(got) + ')</span>' : ' ❌ <span class="small">(sin responder)</span>')) + '</p>';
       }).join("");
       break;
     default: mine = g.answered ? a : "(sin responder)"; right = q.correcta;
@@ -335,17 +337,17 @@ function reviewItem(g, i, c){
   else verdicts = ["❌ ¡Casi lo logras!", "❌ Vamos a aprenderlo juntos.", "❌ ¡Buen intento! Mira esto."];
   var h = '<article class="rv ' + cls + '">' + head + '<p class="rv-q">' + qline + '</p>';
   if(q.tipo === "unir") h += '<p class="lbl">Tus parejas</p>' + extra;
-  else h += '<p class="line"><span class="lbl">Respuesta de Killian</span><br><b lang="en">' + esc(mine) + '</b></p>';
+  else h += '<p class="line"><span class="lbl">Respuesta de Killian</span><br><b lang="' + XL() + '">' + esc(mine) + '</b></p>';
   h += '<p class="verdict">' + verdicts[i % verdicts.length] + '</p>';
   if(!g.ok && q.tipo !== "unir"){
-    h += '<p class="line correct-box"><span class="lbl">Respuesta correcta</span> ' + spk(q.pregunta_en.indexOf("___") >= 0 ? q.pregunta_en.replace(/_{3,}/, right) : right, "en", "mini") + '<br><b lang="en">' + esc(right) + '</b>' +
-      (q.tipo === "completar" || (q.tipo === "opcion_multiple" && q.pregunta_en.indexOf("___") >= 0) ? '<br><span lang="en">' + filledHtml(q.pregunta_en, right) + '</span>' : '') + '</p>';
+    h += '<p class="line correct-box"><span class="lbl">Respuesta correcta</span> ' + spk(q.pregunta_en.indexOf("___") >= 0 ? q.pregunta_en.replace(/_{3,}/, right) : right, XL(), "mini") + '<br><b lang="' + XL() + '">' + esc(right) + '</b>' +
+      (q.tipo === "completar" || (q.tipo === "opcion_multiple" && q.pregunta_en.indexOf("___") >= 0) ? '<br><span lang="' + XL() + '">' + filledHtml(q.pregunta_en, right) + '</span>' : '') + '</p>';
   }
   h += '<div class="learn"><p class="line"><span class="lbl">Explicación</span><br>' + esc(q.explicacion_es || "¡Sigue practicando este tema!") + '</p>';
   if(!g.ok){
-    if(g.answered && q.tipo === "opcion_multiple" && a !== q.correcta){ var m = meaningOf(a, c); if(m) h += '<p class="line">Tú elegiste <b lang="en">' + esc(a) + '</b>, que significa «' + esc(m) + '».</p>'; }
-    if(g.answered && q.tipo === "completar" && C[q.subtema] && C[q.subtema].parts) h += '<p class="line">Fíjate cómo se escribe: <b lang="en">' + esc(C[q.subtema].parts) + '</b> = <b lang="en">' + esc(q.respuesta.toUpperCase()) + '</b>.</p>';
-    if(q.ejemplo_en) h += '<p class="exa line"><span class="lbl">Otro ejemplo</span><br><span lang="en">' + esc(q.ejemplo_en) + '</span><br>' + esc(q.ejemplo_es || "") + '</p>';
+    if(g.answered && q.tipo === "opcion_multiple" && a !== q.correcta){ var m = meaningOf(a, c); if(m) h += '<p class="line">Tú elegiste <b lang="' + XL() + '">' + esc(a) + '</b>, que significa «' + esc(m) + '».</p>'; }
+    if(g.answered && q.tipo === "completar" && C[q.subtema] && C[q.subtema].parts) h += '<p class="line">Fíjate cómo se escribe: <b lang="' + XL() + '">' + esc(C[q.subtema].parts) + '</b> = <b lang="' + XL() + '">' + esc(q.respuesta.toUpperCase()) + '</b>.</p>';
+    if(q.ejemplo_en) h += '<p class="exa line"><span class="lbl">Otro ejemplo</span><br><span lang="' + XL() + '">' + esc(q.ejemplo_en) + '</span><br>' + esc(q.ejemplo_es || "") + '</p>';
   }
   return h + '</div></article>';
 }
@@ -371,12 +373,12 @@ function renderResults(){
   var goodSubs = [], subs = {};
   grades.forEach(function(g){ var s = g.q.subtema; (subs[s] = subs[s] || {ok:0, n:0}); subs[s].n++; if(g.ok) subs[s].ok++; });
   Object.keys(subs).forEach(function(s){ if(subs[s].n >= 1 && subs[s].ok === subs[s].n && s !== "vocabulario") goodSubs.push(subName(s)); });
-  var good = right > 0 ? '<p class="goodline">🌟 Acertaste <b>' + right + ' de ' + r.total + '</b>' + (goodSubs.length ? '. ¡Ya dominas: <b lang="en">' + esc(goodSubs.slice(0, 5).join(", ")) + '</b>!' : '. ¡Buen comienzo!') + '</p>' : '';
+  var good = right > 0 ? '<p class="goodline">🌟 Acertaste <b>' + right + ' de ' + r.total + '</b>' + (goodSubs.length ? '. ¡Ya dominas: <b lang="' + XL() + '">' + esc(goodSubs.slice(0, 5).join(", ")) + '</b>!' : '. ¡Buen comienzo!') + '</p>' : '';
   var v = c.vocab && c.vocab.done && c.vocab.items.some(function(x){ return x.ok !== null; });
   var vbox = v ? '<p class="goodline">🔤 Mini vocabulario: <b>' + c.vocab.ok + ' de ' + c.vocab.items.filter(function(x){ return x.ok !== null; }).length + '</b>' +
-    (c.vocab.failed.length ? '. Para practicar: <b lang="en">' + esc(c.vocab.failed.join(", ")) + '</b>' : '. ¡Todas bien!') + '</p>' : '';
+    (c.vocab.failed.length ? '. Para practicar: <b lang="' + XL() + '">' + esc(c.vocab.failed.join(", ")) + '</b>' : '. ¡Todas bien!') + '</p>' : '';
   return subHeader("Resultados", "go-screen", "← Mis temas") + '<main class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
-    '<h1>Resultados de Killian</h1><p lang="en" class="small">' + esc(c.tema.titulo) + (c.round > 1 ? ' · Intento ' + c.round : '') + '</p>' +
+    '<h1>Resultados de Killian</h1><p lang="' + XL() + '" class="small">' + esc(c.tema.titulo) + (c.round > 1 ? ' · Intento ' + c.round : '') + '</p>' +
     '<div class="score" aria-label="Puntuación final">' + r.score + ' <small>/ 100</small></div><div class="stars" role="img" aria-label="' + stars + ' de 5 estrellas">' + starHtml + '</div>' +
     '<p class="msg">' + messageFor(r.score, c.tema.titulo_es || c.tema.titulo) + '</p>' + good + vbox +
     '<div class="stats"><div class="stat g"><b>' + right + '</b><span>✅ correctas</span></div>' +

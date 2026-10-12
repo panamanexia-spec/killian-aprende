@@ -189,3 +189,13 @@ Cada frase de `frases` puede ser un texto simple, o un objeto con:
 ```
 
 La charla se practica en 6 niveles: 1 Entender, 2 Eco, 3 Bola de nieve, 4 Sombra, 5 Desvanecer, 6 Ensayo final. Con `fecha_entrega`, en «Pendientes de hoy» sale **«🎤 Practicar mi charla (5 min)»** durante los 3 días de clase antes (3 sesiones por día); el día antes toca Sombra + Ensayo final. Las grabaciones del ensayo final se guardan en la nube y mamá las escucha en Zona de mamá → Charlas.
+
+## Temas en español: campo `idioma`
+En un tema se puede poner **`"idioma": "es"`** (por defecto es `"en"`). Con `"es"`:
+- la voz lee en voz alta **en español** (preguntas, resumen, palabras y tarjetas),
+- las preguntas de verdadero/falso muestran **«Verdadero / Falso»** en vez de «True / False».
+
+El resto del formato es igual (los campos se siguen llamando `pregunta_en`, `en`, etc., aunque el texto esté en español). Ejemplo: `"id": "es-adverbios", "idioma": "es", …`.
+
+## Botón de estudio en las tareas
+Si una tarea de la agenda trae `"tema"`, en «Pendientes de hoy» sale, justo arriba de «¡Ya lo hice!», el botón **📖 Estudiar mi resumen** (y **📝 Practicar examen** cuando el examen todavía no tiene su pendiente automático).

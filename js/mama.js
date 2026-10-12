@@ -70,12 +70,13 @@ function validateAgenda(o){
 
 function validateTema(o){
   var E = [], W = [];
-  var t = {id:str(o.id), materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen),
+  var t = {id:str(o.id), idioma:str(o.idioma) || "en", materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen),
            resumen:[], subtemas:[], preguntas:[], vocabulario:[]};
   if(!/^[a-z0-9][a-z0-9_-]*$/i.test(t.id)) E.push("El tema necesita un «id» sin espacios ni acentos, por ejemplo science-water-cycle.");
   if(t.id === "overunder" || t.id === "weak") E.push("El id «" + t.id + "» está reservado. Usa otro.");
   var ppr = +o.preguntas_por_ronda;
   t.preguntas_por_ronda = ppr >= 3 && ppr <= 50 ? Math.round(ppr) : 10;
+  if(t.idioma !== "en" && t.idioma !== "es") E.push("«idioma» del tema debe ser en o es.");
   if(!t.titulo) E.push("Falta el «titulo» del tema.");
   if(!t.materia) W.push("El tema no tiene materia.");
   if(t.fecha_examen && !isDate(t.fecha_examen)){ E.push("«fecha_examen» no es válida (usa 2026-10-20)."); }
