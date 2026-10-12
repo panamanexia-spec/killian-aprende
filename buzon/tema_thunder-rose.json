@@ -1,0 +1,45 @@
+{
+  "tipo": "tema",
+  "id": "thunder-rose",
+  "materia": "Reading and Conversation",
+  "titulo": "Thunder Rose",
+  "titulo_es": "Thunder Rose: el nacimiento de Rose",
+  "fecha_examen": "2026-10-13",
+  "preguntas_por_ronda": 8,
+  "subtemas": ["mi parte", "el nacimiento", "vocabulario"],
+  "resumen": [
+    { "en": "Rose lived in a small town.", "es": "Rose vivía en un pueblo pequeño.", "emoji": "🏡" },
+    { "en": "She was born on a stormy night.", "es": "Nació en una noche de tormenta.", "emoji": "⛈️" },
+    { "en": "Rose was born with superpowers.", "es": "Rose nació con superpoderes.", "emoji": "💪" },
+    { "en": "She did not cry. She sat up and talked.", "es": "No lloró. Se sentó y habló.", "emoji": "👶" },
+    { "en": "She rolled the lightning into a ball.", "es": "Hizo una bola con el relámpago.", "emoji": "⚡" },
+    { "en": "Her ma and pa sang her a lullaby.", "es": "Su mamá y su papá le cantaron una canción de cuna.", "emoji": "🎵" }
+  ],
+  "preguntas": [
+    { "id": "tr1", "subtema": "mi parte", "tipo": "opcion_multiple", "pregunta_en": "Where did Rose live?", "pregunta_es": "¿Dónde vivía Rose?", "opciones": ["In a small town", "In a big city", "On a boat"], "correcta": "In a small town", "explicacion_es": "Rose vivía en un pueblo pequeño (small town). ¡Esa es tu parte de la charla!" },
+    { "id": "tr2", "subtema": "mi parte", "tipo": "opcion_multiple", "pregunta_en": "What was the weather when Rose was born?", "pregunta_es": "¿Cómo estaba el clima cuando nació Rose?", "opciones": ["Stormy", "Sunny", "Snowy"], "correcta": "Stormy", "explicacion_es": "Nació en una noche de tormenta (stormy night): lluvia, relámpagos y truenos." },
+    { "id": "tr3", "subtema": "mi parte", "tipo": "opcion_multiple", "pregunta_en": "What was special about Rose?", "pregunta_es": "¿Qué tenía de especial Rose?", "opciones": ["She had superpowers", "She could fly a plane", "She was very small"], "correcta": "She had superpowers", "explicacion_es": "Rose nació con superpoderes (superpowers)." },
+    { "id": "tr4", "subtema": "el nacimiento", "tipo": "opcion_multiple", "pregunta_en": "What did Rose do with the lightning?", "pregunta_es": "¿Qué hizo Rose con el relámpago?", "opciones": ["She rolled it into a ball", "She ran away", "She ate it"], "correcta": "She rolled it into a ball", "explicacion_es": "Agarró el relámpago y lo hizo una bola. ¡Eso muestra sus superpoderes!" },
+    { "id": "tr5", "subtema": "el nacimiento", "tipo": "verdadero_falso", "pregunta_en": "Rose cried when she was born.", "pregunta_es": "Rose lloró cuando nació.", "correcta": false, "explicacion_es": "¡Falso! No lloró: se sentó, miró alrededor y habló." },
+    { "id": "tr6", "subtema": "el nacimiento", "tipo": "verdadero_falso", "pregunta_en": "Rose talked when she was a baby.", "pregunta_es": "Rose habló cuando era bebé.", "correcta": true, "explicacion_es": "¡Verdadero! Habló con el doctor y con sus papás. Eso no es normal: ¡tenía superpoderes!" },
+    { "id": "tr7", "subtema": "el nacimiento", "tipo": "verdadero_falso", "pregunta_en": "Rose's ma and pa sang her a song.", "pregunta_es": "La mamá y el papá de Rose le cantaron una canción.", "correcta": true, "explicacion_es": "¡Verdadero! Le cantaron una canción de cuna (lullaby)." },
+    { "id": "tr8", "subtema": "el nacimiento", "tipo": "opcion_multiple", "pregunta_en": "Who said Rose will grow up good and strong?", "pregunta_es": "¿Quién dijo que Rose crecería buena y fuerte?", "opciones": ["The doctor", "Her teacher", "A cowboy"], "correcta": "The doctor", "explicacion_es": "Lo dijo el doctor (Doc Hollerday) cuando nació." },
+    { "id": "tr9", "subtema": "el nacimiento", "tipo": "opcion_multiple", "pregunta_en": "What name did Rose like?", "pregunta_es": "¿Qué nombre le gustaba a Rose?", "opciones": ["Rose", "Lily", "Daisy"], "correcta": "Rose", "explicacion_es": "Ella misma dijo que le gustaba el nombre Rose." },
+    { "id": "tr10", "subtema": "mi parte", "tipo": "completar", "pregunta_en": "Rose was born with ______!", "pregunta_es": "Rose nació con superpoderes.", "respuesta": "superpowers", "aceptadas": ["super powers", "superpower"], "explicacion_es": "Superpowers = superpoderes. Se dice SU-per-PÁ-uers.", "pista_es": "Empieza con S: super…" },
+    { "id": "tr11", "subtema": "mi parte", "tipo": "completar", "pregunta_en": "Rose lived in a small ______.", "pregunta_es": "Rose vivía en un pueblo pequeño.", "respuesta": "town", "aceptadas": ["village"], "explicacion_es": "Town = pueblo. Se dice táun.", "pista_es": "4 letras: t _ w n" },
+    { "id": "tr12", "subtema": "vocabulario", "tipo": "unir", "pregunta_en": "Match the words.", "pregunta_es": "Une cada palabra con su significado.", "pares": [ { "izquierda": "lightning", "derecha": "relámpago" }, { "izquierda": "thunder", "derecha": "trueno" }, { "izquierda": "stormy", "derecha": "de tormenta" }, { "izquierda": "town", "derecha": "pueblo" } ], "explicacion_es": "Lightning es la luz del rayo; thunder es el ruido; stormy es con tormenta; town es pueblo." },
+    { "id": "tr13", "subtema": "vocabulario", "tipo": "opcion_multiple", "pregunta_en": "What does LIGHTNING mean?", "pregunta_es": "¿Qué significa LIGHTNING?", "opciones": ["relámpago", "trueno", "lluvia"], "correcta": "relámpago", "explicacion_es": "Lightning es la luz del rayo (relámpago). El ruido es thunder (trueno)." },
+    { "id": "tr14", "subtema": "vocabulario", "tipo": "opcion_multiple", "pregunta_en": "What does RECALL mean?", "pregunta_es": "¿Qué significa RECALL?", "opciones": ["recordar", "llamar", "correr"], "correcta": "recordar", "explicacion_es": "Recall = recordar, contar algo que te acuerdas." },
+    { "id": "tr15", "subtema": "vocabulario", "tipo": "opcion_multiple", "pregunta_en": "If you are PARTIAL to something, you…", "pregunta_es": "Si eres PARTIAL a algo, tú…", "opciones": ["like it more", "don't like it", "break it"], "correcta": "like it more", "explicacion_es": "Partial to = que te gusta más que otras cosas. A Rose le gustaba más el nombre Rose." }
+  ],
+  "vocabulario": [
+    { "en": "town", "es": "pueblo", "aceptadas": ["ciudad pequeña"], "ejemplo_en": "Rose lived in a small town.", "ejemplo_es": "Rose vivía en un pueblo pequeño." },
+    { "en": "superpowers", "es": "superpoderes", "aceptadas": ["superpoder", "poderes"], "ejemplo_en": "Rose had superpowers.", "ejemplo_es": "Rose tenía superpoderes." },
+    { "en": "lightning", "es": "relámpago", "aceptadas": ["rayo", "relampago"], "ejemplo_en": "The lightning is bright.", "ejemplo_es": "El relámpago es brillante." },
+    { "en": "thunder", "es": "trueno", "aceptadas": ["truenos"], "ejemplo_en": "The thunder is loud.", "ejemplo_es": "El trueno es fuerte." },
+    { "en": "stormy", "es": "de tormenta", "aceptadas": ["tormentoso", "tormenta", "tormentosa"], "ejemplo_en": "It was a stormy night.", "ejemplo_es": "Era una noche de tormenta." },
+    { "en": "born", "es": "nació", "aceptadas": ["nacido", "nacer", "nacio"], "ejemplo_en": "Rose was born at night.", "ejemplo_es": "Rose nació de noche." },
+    { "en": "lullaby", "es": "canción de cuna", "aceptadas": ["cancion de cuna", "nana", "arrullo"], "ejemplo_en": "Mom sang a lullaby.", "ejemplo_es": "Mamá cantó una canción de cuna." },
+    { "en": "recall", "es": "recordar", "aceptadas": ["acordarse"], "ejemplo_en": "I recall the story.", "ejemplo_es": "Recuerdo la historia." }
+  ]
+}
