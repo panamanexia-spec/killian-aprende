@@ -1,0 +1,34 @@
+{
+  "tipo": "charla",
+  "id": "thunder-rose",
+  "materia": "Reading and Conversation",
+  "titulo": "Thunder Rose – mi parte (corta)",
+  "idioma": "en",
+  "fecha_entrega": "2026-10-13",
+  "frases": [
+    {
+      "texto": "Hello! I am Killian.",
+      "es": "¡Hola! Soy Killian.",
+      "pista": "👋",
+      "gesto": "Saluda con la mano"
+    },
+    {
+      "texto": "Rose lived in a small town.",
+      "es": "🏡 Rose vivía en un pueblo pequeño.",
+      "pista": "🏡",
+      "gesto": "Dibuja una casita con las manos"
+    },
+    {
+      "texto": "She was born with superpowers!",
+      "es": "💪 ¡Nació con superpoderes!",
+      "pista": "💪",
+      "gesto": "Muestra los músculos"
+    },
+    {
+      "texto": "Thank you!",
+      "es": "¡Gracias!",
+      "pista": "🌹",
+      "gesto": "Sonríe y haz una pequeña reverencia"
+    }
+  ]
+}
