@@ -75,7 +75,7 @@ function normContent(c){
   if(Array.isArray(c.temas)) o.temas = c.temas.filter(function(t){
     return t && t.id && Array.isArray(t.preguntas) && Array.isArray(t.vocabulario) && Array.isArray(t.resumen);
   });
-  if(Array.isArray(c.charlas)) o.charlas = c.charlas.filter(function(x){ return x && x.id && x.titulo && LANGS[x.idioma] && Array.isArray(x.frases) && x.frases.length; }).slice(0, 60);
+  if(Array.isArray(c.charlas)) o.charlas = c.charlas.filter(function(x){ return x && x.id && x.titulo && /^(en|es|zh)$/.test(x.idioma) && Array.isArray(x.frases) && x.frases.length; }).slice(0, 60);
   if(Array.isArray(c.custom)) o.custom = c.custom.filter(function(w){ return w && typeof w.en === "string" && typeof w.es === "string" && w.en && w.es; }).slice(0, 500);
   if(Array.isArray(c.prizes)) o.prizes = c.prizes.filter(function(p){ return p && p.id && p.nombre && +p.costo >= 1; }).slice(0, 30);
   if(typeof c.pinHash === "string") o.pinHash = c.pinHash;
@@ -364,7 +364,7 @@ function syncNow(){
    Solo se vuelven a aplicar cuando el archivo cambia. */
 function hashText(t){ var h = 5381; for(var i=0;i<t.length;i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0; return String(h >>> 0); }
 function fetchText(url){ return fetch(url, {cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error(url); return r.text(); }); }
-var AGENDA_SCHEMA = "|s3", KX_VERSION = "12-oct 6";
+var AGENDA_SCHEMA = "|s3", KX_VERSION = "12-oct 7";
 function loadProjectFiles(){
   if(window.KXSync && KXSync.enabled && !KXSync.hasSession()) return Promise.resolve();
   var changed = false;
