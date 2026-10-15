@@ -5,48 +5,812 @@
   "titulo": "Multiplication Patterns and Equations",
   "titulo_es": "Patrones de la tabla de multiplicar y ecuaciones",
   "preguntas_por_ronda": 10,
-  "subtemas": ["patrones", "ecuaciones"],
+  "subtemas": [
+    "patrones",
+    "ecuaciones"
+  ],
   "resumen": [
-    { "en": "Any number × 0 = 0.", "es": "Cualquier número por 0 da 0.", "emoji": "0️⃣" },
-    { "en": "Any number × 1 = the same number.", "es": "Cualquier número por 1 da el mismo número.", "emoji": "1️⃣" },
-    { "en": "× 2 answers are always even: 2, 4, 6, 8…", "es": "La tabla del 2 siempre da números pares.", "emoji": "👟" },
-    { "en": "× 5 answers end in 0 or 5.", "es": "La tabla del 5 siempre termina en 0 o en 5.", "emoji": "🖐️" },
-    { "en": "3 × 4 = 4 × 3. The order does not change the answer.", "es": "El orden no cambia el resultado: 3 × 4 es igual que 4 × 3.", "emoji": "🔄" },
-    { "en": "□ × 4 = 20. The box is the number we are looking for.", "es": "La cajita □ es el número que buscamos. □ × 4 = 20 → □ = 5.", "emoji": "📦" },
-    { "en": "Each truck needs 4 wheels. 20 wheels make 5 trucks.", "es": "Cada camión necesita 4 ruedas. Con 20 ruedas se arman 5 camiones: 5 × 4 = 20.", "emoji": "🚚" }
+    {
+      "en": "Any number × 0 = 0.",
+      "es": "Cualquier número por 0 da 0.",
+      "emoji": "0️⃣"
+    },
+    {
+      "en": "Any number × 1 = the same number.",
+      "es": "Cualquier número por 1 da el mismo número.",
+      "emoji": "1️⃣"
+    },
+    {
+      "en": "× 2 answers are always even: 2, 4, 6, 8…",
+      "es": "La tabla del 2 siempre da números pares.",
+      "emoji": "👟"
+    },
+    {
+      "en": "× 5 answers end in 0 or 5.",
+      "es": "La tabla del 5 siempre termina en 0 o en 5.",
+      "emoji": "🖐️"
+    },
+    {
+      "en": "3 × 4 = 4 × 3. The order does not change the answer.",
+      "es": "El orden no cambia el resultado: 3 × 4 es igual que 4 × 3.",
+      "emoji": "🔄"
+    },
+    {
+      "en": "□ × 4 = 20. The box is the number we are looking for.",
+      "es": "La cajita □ es el número que buscamos. □ × 4 = 20 → □ = 5.",
+      "emoji": "📦"
+    },
+    {
+      "en": "Each truck needs 4 wheels. 20 wheels make 5 trucks.",
+      "es": "Cada camión necesita 4 ruedas. Con 20 ruedas se arman 5 camiones: 5 × 4 = 20.",
+      "emoji": "🚚"
+    }
   ],
   "preguntas": [
-    { "id": "mp1", "subtema": "patrones", "tipo": "opcion_multiple", "pregunta_en": "What is 7 × 0?", "pregunta_es": "¿Cuánto es 7 × 0?", "opciones": ["0", "7", "70"], "correcta": "0", "explicacion_es": "Cualquier número por 0 da 0. ¡Siempre!" },
-    { "id": "mp2", "subtema": "patrones", "tipo": "opcion_multiple", "pregunta_en": "What is 9 × 1?", "pregunta_es": "¿Cuánto es 9 × 1?", "opciones": ["9", "1", "10"], "correcta": "9", "explicacion_es": "Cualquier número por 1 da el mismo número: 9 × 1 = 9." },
-    { "id": "mp3", "subtema": "patrones", "tipo": "verdadero_falso", "pregunta_en": "All the answers in the × 2 table are even numbers.", "pregunta_es": "Todos los resultados de la tabla del 2 son números pares.", "correcta": true, "explicacion_es": "¡Verdadero! 2, 4, 6, 8, 10… todos son pares." },
-    { "id": "mp4", "subtema": "patrones", "tipo": "verdadero_falso", "pregunta_en": "All the answers in the × 5 table end in 0 or 5.", "pregunta_es": "Todos los resultados de la tabla del 5 terminan en 0 o en 5.", "correcta": true, "explicacion_es": "¡Verdadero! 5, 10, 15, 20, 25… 🖐️" },
-    { "id": "mp5", "subtema": "patrones", "tipo": "verdadero_falso", "pregunta_en": "3 × 6 and 6 × 3 have different answers.", "pregunta_es": "3 × 6 y 6 × 3 dan resultados distintos.", "correcta": false, "explicacion_es": "¡Falso! Los dos dan 18. El orden no cambia el resultado. 🔄" },
-    { "id": "mp6", "subtema": "patrones", "tipo": "opcion_multiple", "pregunta_en": "Which number is in the × 5 table?", "pregunta_es": "¿Qué número está en la tabla del 5?", "opciones": ["35", "32", "27"], "correcta": "35", "explicacion_es": "35 termina en 5, así que está en la tabla del 5: 7 × 5 = 35." },
-    { "id": "mp7", "subtema": "patrones", "tipo": "opcion_multiple", "pregunta_en": "What comes next? 4, 8, 12, 16, …", "pregunta_es": "¿Qué número sigue? 4, 8, 12, 16, …", "opciones": ["20", "18", "24"], "correcta": "20", "explicacion_es": "Va de 4 en 4: es la tabla del 4. 16 + 4 = 20." },
-    { "id": "mp8", "subtema": "patrones", "tipo": "opcion_multiple", "pregunta_en": "What comes next? 3, 6, 9, 12, …", "pregunta_es": "¿Qué número sigue? 3, 6, 9, 12, …", "opciones": ["15", "14", "13"], "correcta": "15", "explicacion_es": "Va de 3 en 3: es la tabla del 3. 12 + 3 = 15." },
-    { "id": "mp9", "subtema": "patrones", "tipo": "verdadero_falso", "pregunta_en": "The answers in the × 4 table are double the answers in the × 2 table.", "pregunta_es": "Los resultados de la tabla del 4 son el doble de los de la tabla del 2.", "correcta": true, "explicacion_es": "¡Verdadero! 2 × 3 = 6 y 4 × 3 = 12, que es el doble de 6." },
-    { "id": "mp10", "subtema": "patrones", "tipo": "completar", "pregunta_en": "8 × 5 = ______", "pregunta_es": "8 × 5 = ______", "respuesta": "40", "explicacion_es": "8 × 5 = 40. Termina en 0, ¡como dice el patrón del 5!", "pista_es": "Cuenta de 5 en 5, ocho veces." },
-    { "id": "mp11", "subtema": "patrones", "tipo": "completar", "pregunta_en": "6 × 2 = ______", "pregunta_es": "6 × 2 = ______", "respuesta": "12", "explicacion_es": "6 × 2 = 12, es el doble de 6.", "pista_es": "Es 6 + 6." },
-    { "id": "mp12", "subtema": "patrones", "tipo": "unir", "pregunta_en": "Match each multiplication with its answer.", "pregunta_es": "Une cada multiplicación con su resultado.", "pares": [ { "izquierda": "3 × 3", "derecha": "9" }, { "izquierda": "4 × 4", "derecha": "16" }, { "izquierda": "5 × 5", "derecha": "25" }, { "izquierda": "6 × 6", "derecha": "36" } ], "explicacion_es": "Cuando un número se multiplica por sí mismo, el resultado está en la diagonal de la tabla." },
-    { "id": "eq1", "subtema": "ecuaciones", "tipo": "opcion_multiple", "pregunta_en": "□ × 4 = 20. What number goes in the box?", "pregunta_es": "□ × 4 = 20. ¿Qué número va en la cajita?", "opciones": ["5", "4", "16"], "correcta": "5", "explicacion_es": "5 × 4 = 20. Por eso con 20 ruedas se arman 5 camiones. 🚚" },
-    { "id": "eq2", "subtema": "ecuaciones", "tipo": "opcion_multiple", "pregunta_en": "Each truck needs 4 wheels. How many trucks can you build with 20 wheels?", "pregunta_es": "Cada camión necesita 4 ruedas. ¿Cuántos camiones se arman con 20 ruedas?", "opciones": ["5 trucks", "4 trucks", "24 trucks"], "correcta": "5 trucks", "explicacion_es": "□ × 4 = 20 → □ = 5. Son 5 camiones." },
-    { "id": "eq3", "subtema": "ecuaciones", "tipo": "opcion_multiple", "pregunta_en": "Each bike has 2 wheels. There are 12 wheels. Which equation helps?", "pregunta_es": "Cada bici tiene 2 ruedas. Hay 12 ruedas. ¿Qué ecuación ayuda?", "opciones": ["□ × 2 = 12", "□ + 2 = 12", "12 × 2 = □"], "correcta": "□ × 2 = 12", "explicacion_es": "Buscamos cuántas bicis (□) por 2 ruedas dan 12: □ × 2 = 12 → □ = 6." },
-    { "id": "eq4", "subtema": "ecuaciones", "tipo": "opcion_multiple", "pregunta_en": "A box has 3 toy cars. You have 15 cars. How many boxes?", "pregunta_es": "Una caja tiene 3 carritos. Tienes 15 carritos. ¿Cuántas cajas?", "opciones": ["5", "3", "12"], "correcta": "5", "explicacion_es": "□ × 3 = 15 → □ = 5 cajas." },
-    { "id": "eq5", "subtema": "ecuaciones", "tipo": "completar", "pregunta_en": "□ × 3 = 18. The box is ______.", "pregunta_es": "□ × 3 = 18. La cajita es ______.", "respuesta": "6", "explicacion_es": "6 × 3 = 18.", "pista_es": "Cuenta de 3 en 3 hasta llegar a 18." },
-    { "id": "eq6", "subtema": "ecuaciones", "tipo": "completar", "pregunta_en": "□ × 5 = 30. The box is ______.", "pregunta_es": "□ × 5 = 30. La cajita es ______.", "respuesta": "6", "explicacion_es": "6 × 5 = 30.", "pista_es": "Cuenta de 5 en 5 hasta llegar a 30." },
-    { "id": "eq7", "subtema": "ecuaciones", "tipo": "completar", "pregunta_en": "□ × 2 = 16. The box is ______.", "pregunta_es": "□ × 2 = 16. La cajita es ______.", "respuesta": "8", "explicacion_es": "8 × 2 = 16. La mitad de 16 es 8.", "pista_es": "¿Cuánto es la mitad de 16?" },
-    { "id": "eq8", "subtema": "ecuaciones", "tipo": "completar", "pregunta_en": "4 × □ = 28. The box is ______.", "pregunta_es": "4 × □ = 28. La cajita es ______.", "respuesta": "7", "explicacion_es": "4 × 7 = 28.", "pista_es": "Cuenta de 4 en 4 hasta llegar a 28." },
-    { "id": "eq9", "subtema": "ecuaciones", "tipo": "verdadero_falso", "pregunta_en": "In □ × 4 = 20, the box means the number we don't know yet.", "pregunta_es": "En □ × 4 = 20, la cajita es el número que todavía no sabemos.", "correcta": true, "explicacion_es": "¡Verdadero! La cajita es el misterio que hay que resolver. 🕵️" },
-    { "id": "eq10", "subtema": "ecuaciones", "tipo": "unir", "pregunta_en": "Match each equation with the number in the box.", "pregunta_es": "Une cada ecuación con el número de la cajita.", "pares": [ { "izquierda": "□ × 4 = 20", "derecha": "5" }, { "izquierda": "□ × 2 = 6", "derecha": "3" }, { "izquierda": "□ × 5 = 10", "derecha": "2" }, { "izquierda": "□ × 3 = 27", "derecha": "9" } ], "explicacion_es": "5 × 4 = 20, 3 × 2 = 6, 2 × 5 = 10 y 9 × 3 = 27." }
+    {
+      "id": "mp1",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 7 × 0?",
+      "pregunta_es": "¿Cuánto es 7 × 0?",
+      "opciones": [
+        "0",
+        "7",
+        "70"
+      ],
+      "correcta": "0",
+      "explicacion_es": "Cualquier número por 0 da 0. ¡Siempre!"
+    },
+    {
+      "id": "mp2",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 9 × 1?",
+      "pregunta_es": "¿Cuánto es 9 × 1?",
+      "opciones": [
+        "9",
+        "1",
+        "10"
+      ],
+      "correcta": "9",
+      "explicacion_es": "Cualquier número por 1 da el mismo número: 9 × 1 = 9."
+    },
+    {
+      "id": "mp3",
+      "subtema": "patrones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "All the answers in the × 2 table are even numbers.",
+      "pregunta_es": "Todos los resultados de la tabla del 2 son números pares.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! 2, 4, 6, 8, 10… todos son pares."
+    },
+    {
+      "id": "mp4",
+      "subtema": "patrones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "All the answers in the × 5 table end in 0 or 5.",
+      "pregunta_es": "Todos los resultados de la tabla del 5 terminan en 0 o en 5.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! 5, 10, 15, 20, 25… 🖐️"
+    },
+    {
+      "id": "mp5",
+      "subtema": "patrones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "3 × 6 and 6 × 3 have different answers.",
+      "pregunta_es": "3 × 6 y 6 × 3 dan resultados distintos.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Los dos dan 18. El orden no cambia el resultado. 🔄"
+    },
+    {
+      "id": "mp6",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which number is in the × 5 table?",
+      "pregunta_es": "¿Qué número está en la tabla del 5?",
+      "opciones": [
+        "35",
+        "32",
+        "27"
+      ],
+      "correcta": "35",
+      "explicacion_es": "35 termina en 5, así que está en la tabla del 5: 7 × 5 = 35."
+    },
+    {
+      "id": "mp7",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What comes next? 4, 8, 12, 16, …",
+      "pregunta_es": "¿Qué número sigue? 4, 8, 12, 16, …",
+      "opciones": [
+        "20",
+        "18",
+        "24"
+      ],
+      "correcta": "20",
+      "explicacion_es": "Va de 4 en 4: es la tabla del 4. 16 + 4 = 20."
+    },
+    {
+      "id": "mp8",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What comes next? 3, 6, 9, 12, …",
+      "pregunta_es": "¿Qué número sigue? 3, 6, 9, 12, …",
+      "opciones": [
+        "15",
+        "14",
+        "13"
+      ],
+      "correcta": "15",
+      "explicacion_es": "Va de 3 en 3: es la tabla del 3. 12 + 3 = 15."
+    },
+    {
+      "id": "mp9",
+      "subtema": "patrones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The answers in the × 4 table are double the answers in the × 2 table.",
+      "pregunta_es": "Los resultados de la tabla del 4 son el doble de los de la tabla del 2.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! 2 × 3 = 6 y 4 × 3 = 12, que es el doble de 6."
+    },
+    {
+      "id": "mp10",
+      "subtema": "patrones",
+      "tipo": "completar",
+      "pregunta_en": "8 × 5 = ______",
+      "pregunta_es": "8 × 5 = ______",
+      "respuesta": "40",
+      "explicacion_es": "8 × 5 = 40. Termina en 0, ¡como dice el patrón del 5!",
+      "pista_es": "Cuenta de 5 en 5, ocho veces."
+    },
+    {
+      "id": "mp11",
+      "subtema": "patrones",
+      "tipo": "completar",
+      "pregunta_en": "6 × 2 = ______",
+      "pregunta_es": "6 × 2 = ______",
+      "respuesta": "12",
+      "explicacion_es": "6 × 2 = 12, es el doble de 6.",
+      "pista_es": "Es 6 + 6."
+    },
+    {
+      "id": "mp12",
+      "subtema": "patrones",
+      "tipo": "unir",
+      "pregunta_en": "Match each multiplication with its answer.",
+      "pregunta_es": "Une cada multiplicación con su resultado.",
+      "pares": [
+        {
+          "izquierda": "3 × 3",
+          "derecha": "9"
+        },
+        {
+          "izquierda": "4 × 4",
+          "derecha": "16"
+        },
+        {
+          "izquierda": "5 × 5",
+          "derecha": "25"
+        },
+        {
+          "izquierda": "6 × 6",
+          "derecha": "36"
+        }
+      ],
+      "explicacion_es": "Cuando un número se multiplica por sí mismo, el resultado está en la diagonal de la tabla."
+    },
+    {
+      "id": "eq1",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "□ × 4 = 20. What number goes in the box?",
+      "pregunta_es": "□ × 4 = 20. ¿Qué número va en la cajita?",
+      "opciones": [
+        "5",
+        "4",
+        "16"
+      ],
+      "correcta": "5",
+      "explicacion_es": "5 × 4 = 20. Por eso con 20 ruedas se arman 5 camiones. 🚚"
+    },
+    {
+      "id": "eq2",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Each truck needs 4 wheels. How many trucks can you build with 20 wheels?",
+      "pregunta_es": "Cada camión necesita 4 ruedas. ¿Cuántos camiones se arman con 20 ruedas?",
+      "opciones": [
+        "5 trucks",
+        "4 trucks",
+        "24 trucks"
+      ],
+      "correcta": "5 trucks",
+      "explicacion_es": "□ × 4 = 20 → □ = 5. Son 5 camiones."
+    },
+    {
+      "id": "eq3",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Each bike has 2 wheels. There are 12 wheels. Which equation helps?",
+      "pregunta_es": "Cada bici tiene 2 ruedas. Hay 12 ruedas. ¿Qué ecuación ayuda?",
+      "opciones": [
+        "□ × 2 = 12",
+        "□ + 2 = 12",
+        "12 × 2 = □"
+      ],
+      "correcta": "□ × 2 = 12",
+      "explicacion_es": "Buscamos cuántas bicis (□) por 2 ruedas dan 12: □ × 2 = 12 → □ = 6."
+    },
+    {
+      "id": "eq4",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "A box has 3 toy cars. You have 15 cars. How many boxes?",
+      "pregunta_es": "Una caja tiene 3 carritos. Tienes 15 carritos. ¿Cuántas cajas?",
+      "opciones": [
+        "5",
+        "3",
+        "12"
+      ],
+      "correcta": "5",
+      "explicacion_es": "□ × 3 = 15 → □ = 5 cajas."
+    },
+    {
+      "id": "eq5",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "□ × 3 = 18. The box is ______.",
+      "pregunta_es": "□ × 3 = 18. La cajita es ______.",
+      "respuesta": "6",
+      "explicacion_es": "6 × 3 = 18.",
+      "pista_es": "Cuenta de 3 en 3 hasta llegar a 18."
+    },
+    {
+      "id": "eq6",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "□ × 5 = 30. The box is ______.",
+      "pregunta_es": "□ × 5 = 30. La cajita es ______.",
+      "respuesta": "6",
+      "explicacion_es": "6 × 5 = 30.",
+      "pista_es": "Cuenta de 5 en 5 hasta llegar a 30."
+    },
+    {
+      "id": "eq7",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "□ × 2 = 16. The box is ______.",
+      "pregunta_es": "□ × 2 = 16. La cajita es ______.",
+      "respuesta": "8",
+      "explicacion_es": "8 × 2 = 16. La mitad de 16 es 8.",
+      "pista_es": "¿Cuánto es la mitad de 16?"
+    },
+    {
+      "id": "eq8",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "4 × □ = 28. The box is ______.",
+      "pregunta_es": "4 × □ = 28. La cajita es ______.",
+      "respuesta": "7",
+      "explicacion_es": "4 × 7 = 28.",
+      "pista_es": "Cuenta de 4 en 4 hasta llegar a 28."
+    },
+    {
+      "id": "eq9",
+      "subtema": "ecuaciones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "In □ × 4 = 20, the box means the number we don't know yet.",
+      "pregunta_es": "En □ × 4 = 20, la cajita es el número que todavía no sabemos.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! La cajita es el misterio que hay que resolver. 🕵️"
+    },
+    {
+      "id": "eq10",
+      "subtema": "ecuaciones",
+      "tipo": "unir",
+      "pregunta_en": "Match each equation with the number in the box.",
+      "pregunta_es": "Une cada ecuación con el número de la cajita.",
+      "pares": [
+        {
+          "izquierda": "□ × 4 = 20",
+          "derecha": "5"
+        },
+        {
+          "izquierda": "□ × 2 = 6",
+          "derecha": "3"
+        },
+        {
+          "izquierda": "□ × 5 = 10",
+          "derecha": "2"
+        },
+        {
+          "izquierda": "□ × 3 = 27",
+          "derecha": "9"
+        }
+      ],
+      "explicacion_es": "5 × 4 = 20, 3 × 2 = 6, 2 × 5 = 10 y 9 × 3 = 27."
+    },
+    {
+      "id": "mpx1",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 9 × 0?",
+      "pregunta_es": "¿Cuánto es 9 × 0?",
+      "opciones": [
+        "0",
+        "9",
+        "90"
+      ],
+      "correcta": "0",
+      "explicacion_es": "9 bolsas con 0 dulces: ¡no hay dulces! Cualquier número × 0 = 0.",
+      "pista_es": "Piensa: 9 bolsas vacías."
+    },
+    {
+      "id": "mpx2",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 5 × 0?",
+      "pregunta_es": "¿Cuánto es 5 × 0?",
+      "opciones": [
+        "0",
+        "5",
+        "50"
+      ],
+      "correcta": "0",
+      "explicacion_es": "5 grupos de nada = nada. ¡Es 0!",
+      "pista_es": "5 bolsas vacías."
+    },
+    {
+      "id": "mpx3",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 0 × 12?",
+      "pregunta_es": "¿Cuánto es 0 × 12?",
+      "opciones": [
+        "0",
+        "12",
+        "1"
+      ],
+      "correcta": "0",
+      "explicacion_es": "0 grupos de 12 = 0. El orden no cambia el resultado: 12 × 0 = 0 × 12 = 0."
+    },
+    {
+      "id": "mpx4",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 8 × 1?",
+      "pregunta_es": "¿Cuánto es 8 × 1?",
+      "opciones": [
+        "8",
+        "1",
+        "9"
+      ],
+      "correcta": "8",
+      "explicacion_es": "1 grupo de 8 = 8. Cualquier número × 1 es el mismo número."
+    },
+    {
+      "id": "mpx5",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 6 × 2?",
+      "pregunta_es": "¿Cuánto es 6 × 2?",
+      "opciones": [
+        "12",
+        "8",
+        "62"
+      ],
+      "correcta": "12",
+      "explicacion_es": "×2 es el doble: 6 + 6 = 12.",
+      "pista_es": "Suma el número dos veces."
+    },
+    {
+      "id": "mpx6",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 7 × 2?",
+      "pregunta_es": "¿Cuánto es 7 × 2?",
+      "opciones": [
+        "14",
+        "9",
+        "72"
+      ],
+      "correcta": "14",
+      "explicacion_es": "El doble de 7: 7 + 7 = 14.",
+      "pista_es": "7 + 7"
+    },
+    {
+      "id": "mpx7",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 8 × 5?",
+      "pregunta_es": "¿Cuánto es 8 × 5?",
+      "opciones": [
+        "40",
+        "13",
+        "85"
+      ],
+      "correcta": "40",
+      "explicacion_es": "Cuenta de 5 en 5, 8 saltos: 5, 10, 15, 20, 25, 30, 35, 40.",
+      "pista_es": "Cuenta de 5 en 5."
+    },
+    {
+      "id": "mpx8",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is 5 × 5?",
+      "pregunta_es": "¿Cuánto es 5 × 5?",
+      "opciones": [
+        "25",
+        "10",
+        "55"
+      ],
+      "correcta": "25",
+      "explicacion_es": "5 saltos de 5: 5, 10, 15, 20, 25."
+    },
+    {
+      "id": "mpx9",
+      "subtema": "patrones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What comes next? 5, 10, 15, 20, …",
+      "pregunta_es": "¿Qué sigue? 5, 10, 15, 20, …",
+      "opciones": [
+        "25",
+        "30",
+        "24"
+      ],
+      "correcta": "25",
+      "explicacion_es": "Va de 5 en 5: 20 + 5 = 25."
+    },
+    {
+      "id": "mpx10",
+      "subtema": "patrones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "7 × 0 = 7",
+      "pregunta_es": "7 × 0 = 7",
+      "correcta": false,
+      "explicacion_es": "¡Falso! 7 bolsas con 0 dulces = 0 dulces. 7 × 0 = 0."
+    },
+    {
+      "id": "mpx11",
+      "subtema": "patrones",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "18 is an even number.",
+      "pregunta_es": "18 es un número par.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! 18 termina en 8, así que es par (even)."
+    },
+    {
+      "id": "mpx12",
+      "subtema": "patrones",
+      "tipo": "completar",
+      "pregunta_en": "5 × 4 = ______",
+      "pregunta_es": "5 × 4 = ______",
+      "respuesta": "20",
+      "aceptadas": [],
+      "explicacion_es": "Cuenta de 5 en 5, 4 saltos: 5, 10, 15, 20.",
+      "pista_es": "Cuenta de 5 en 5, cuatro saltos."
+    },
+    {
+      "id": "mpx13",
+      "subtema": "patrones",
+      "tipo": "completar",
+      "pregunta_en": "10 × 5 = ______",
+      "pregunta_es": "10 × 5 = ______",
+      "respuesta": "50",
+      "aceptadas": [],
+      "explicacion_es": "10 saltos de 5 llegan a 50.",
+      "pista_es": "Cuenta de 5 en 5, diez saltos."
+    },
+    {
+      "id": "eqx1",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "□ × 3 = 18. Count by 3s: 3, 6, 9, 12, 15, 18. What is the box?",
+      "pregunta_es": "□ × 3 = 18. Cuenta de 3 en 3. ¿Cuánto vale la cajita?",
+      "opciones": [
+        "6",
+        "5",
+        "15"
+      ],
+      "correcta": "6",
+      "explicacion_es": "Fueron 6 saltos de 3 hasta llegar a 18. □ = 6."
+    },
+    {
+      "id": "eqx2",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "□ × 2 = 10. What is the box?",
+      "pregunta_es": "□ × 2 = 10. ¿Cuánto vale la cajita?",
+      "opciones": [
+        "5",
+        "8",
+        "12"
+      ],
+      "correcta": "5",
+      "explicacion_es": "La mitad de 10 es 5: 5 + 5 = 10.",
+      "pista_es": "Piensa en la mitad."
+    },
+    {
+      "id": "eqx3",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "□ × 5 = 20. What is the box?",
+      "pregunta_es": "□ × 5 = 20. ¿Cuánto vale la cajita?",
+      "opciones": [
+        "4",
+        "5",
+        "15"
+      ],
+      "correcta": "4",
+      "explicacion_es": "Cuenta de 5 en 5 hasta 20: 5, 10, 15, 20. Fueron 4 saltos.",
+      "pista_es": "Cuenta de 5 en 5."
+    },
+    {
+      "id": "eqx4",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "3 × □ = 12. What is the box?",
+      "pregunta_es": "3 × □ = 12. ¿Cuánto vale la cajita?",
+      "opciones": [
+        "4",
+        "9",
+        "36"
+      ],
+      "correcta": "4",
+      "explicacion_es": "Cuenta de 3 en 3: 3, 6, 9, 12. Fueron 4 saltos."
+    },
+    {
+      "id": "eqx5",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "□ × 4 = 24. What is the box?",
+      "pregunta_es": "□ × 4 = 24. ¿Cuánto vale la cajita?",
+      "opciones": [
+        "6",
+        "8",
+        "20"
+      ],
+      "correcta": "6",
+      "explicacion_es": "Cuenta de 4 en 4: 4, 8, 12, 16, 20, 24. Fueron 6 saltos."
+    },
+    {
+      "id": "eqx6",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "□ × 2 = 12. The box is ______.",
+      "pregunta_es": "□ × 2 = 12. La cajita es ______.",
+      "respuesta": "6",
+      "aceptadas": [],
+      "explicacion_es": "La mitad de 12 es 6: 6 + 6 = 12.",
+      "pista_es": "Busca la mitad de 12."
+    },
+    {
+      "id": "eqx7",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "□ × 3 = 15. The box is ______.",
+      "pregunta_es": "□ × 3 = 15. La cajita es ______.",
+      "respuesta": "5",
+      "aceptadas": [],
+      "explicacion_es": "Cuenta de 3 en 3: 3, 6, 9, 12, 15. Fueron 5 saltos.",
+      "pista_es": "Cuenta de 3 en 3."
+    },
+    {
+      "id": "eqx8",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "2 × □ = 18. The box is ______.",
+      "pregunta_es": "2 × □ = 18. La cajita es ______.",
+      "respuesta": "9",
+      "aceptadas": [],
+      "explicacion_es": "La mitad de 18 es 9: 9 + 9 = 18.",
+      "pista_es": "Busca la mitad de 18."
+    },
+    {
+      "id": "eqx9",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "5 × □ = 35. The box is ______.",
+      "pregunta_es": "5 × □ = 35. La cajita es ______.",
+      "respuesta": "7",
+      "aceptadas": [],
+      "explicacion_es": "Cuenta de 5 en 5: 5, 10, 15, 20, 25, 30, 35. Fueron 7 saltos.",
+      "pista_es": "Cuenta de 5 en 5 hasta 35."
+    },
+    {
+      "id": "eqx10",
+      "subtema": "ecuaciones",
+      "tipo": "completar",
+      "pregunta_en": "□ × 5 = 30. The box is ______.",
+      "pregunta_es": "□ × 5 = 30. La cajita es ______.",
+      "respuesta": "6",
+      "aceptadas": [],
+      "explicacion_es": "Cuenta de 5 en 5: 5, 10, 15, 20, 25, 30. Fueron 6 saltos.",
+      "pista_es": "Cuenta de 5 en 5 hasta 30."
+    },
+    {
+      "id": "eqx11",
+      "subtema": "ecuaciones",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Each truck has 4 wheels. There are 24 wheels. How many trucks? (□ × 4 = 24)",
+      "pregunta_es": "Cada camión tiene 4 ruedas. Hay 24 ruedas. ¿Cuántos camiones? (□ × 4 = 24)",
+      "opciones": [
+        "6",
+        "8",
+        "28"
+      ],
+      "correcta": "6",
+      "explicacion_es": "Cuenta de 4 en 4 hasta 24: 4, 8, 12, 16, 20, 24 → 6 camiones 🚚.",
+      "pista_es": "Cuenta de 4 en 4."
+    },
+    {
+      "id": "eqx12",
+      "subtema": "ecuaciones",
+      "tipo": "unir",
+      "pregunta_en": "Match each equation with its box.",
+      "pregunta_es": "Une cada ecuación con el número de la cajita.",
+      "pares": [
+        {
+          "izquierda": "□ × 3 = 9",
+          "derecha": "3"
+        },
+        {
+          "izquierda": "□ × 2 = 8",
+          "derecha": "4"
+        },
+        {
+          "izquierda": "□ × 5 = 10",
+          "derecha": "2"
+        },
+        {
+          "izquierda": "□ × 1 = 7",
+          "derecha": "7"
+        }
+      ],
+      "explicacion_es": "9 = 3 saltos de 3; 8 es el doble de 4; 10 = 2 saltos de 5; ×1 deja el número igual."
+    }
   ],
   "vocabulario": [
-    { "en": "equation", "es": "ecuación", "aceptadas": ["ecuacion"], "ejemplo_en": "□ × 4 = 20 is an equation.", "ejemplo_es": "□ × 4 = 20 es una ecuación." },
-    { "en": "pattern", "es": "patrón", "aceptadas": ["patron"], "ejemplo_en": "The × 5 table has a pattern.", "ejemplo_es": "La tabla del 5 tiene un patrón." },
-    { "en": "table", "es": "tabla", "aceptadas": ["mesa"], "ejemplo_en": "Look at the multiplication table.", "ejemplo_es": "Mira la tabla de multiplicar." },
-    { "en": "even", "es": "par", "aceptadas": ["pares", "número par", "numero par"], "ejemplo_en": "8 is an even number.", "ejemplo_es": "8 es un número par." },
-    { "en": "odd", "es": "impar", "aceptadas": ["impares", "número impar", "numero impar"], "ejemplo_en": "7 is an odd number.", "ejemplo_es": "7 es un número impar." },
-    { "en": "wheels", "es": "ruedas", "aceptadas": ["rueda", "llantas", "llanta"], "ejemplo_en": "A truck has 4 wheels.", "ejemplo_es": "Un camión tiene 4 ruedas." },
-    { "en": "truck", "es": "camión", "aceptadas": ["camion"], "ejemplo_en": "The truck is big.", "ejemplo_es": "El camión es grande." },
-    { "en": "multiply", "es": "multiplicar", "aceptadas": ["multiplica"], "ejemplo_en": "Multiply 5 by 4.", "ejemplo_es": "Multiplica 5 por 4." }
+    {
+      "en": "equation",
+      "es": "ecuación",
+      "aceptadas": [
+        "ecuacion"
+      ],
+      "ejemplo_en": "□ × 4 = 20 is an equation.",
+      "ejemplo_es": "□ × 4 = 20 es una ecuación."
+    },
+    {
+      "en": "pattern",
+      "es": "patrón",
+      "aceptadas": [
+        "patron"
+      ],
+      "ejemplo_en": "The × 5 table has a pattern.",
+      "ejemplo_es": "La tabla del 5 tiene un patrón."
+    },
+    {
+      "en": "table",
+      "es": "tabla",
+      "aceptadas": [
+        "mesa"
+      ],
+      "ejemplo_en": "Look at the multiplication table.",
+      "ejemplo_es": "Mira la tabla de multiplicar."
+    },
+    {
+      "en": "even",
+      "es": "par",
+      "aceptadas": [
+        "pares",
+        "número par",
+        "numero par"
+      ],
+      "ejemplo_en": "8 is an even number.",
+      "ejemplo_es": "8 es un número par."
+    },
+    {
+      "en": "odd",
+      "es": "impar",
+      "aceptadas": [
+        "impares",
+        "número impar",
+        "numero impar"
+      ],
+      "ejemplo_en": "7 is an odd number.",
+      "ejemplo_es": "7 es un número impar."
+    },
+    {
+      "en": "wheels",
+      "es": "ruedas",
+      "aceptadas": [
+        "rueda",
+        "llantas",
+        "llanta"
+      ],
+      "ejemplo_en": "A truck has 4 wheels.",
+      "ejemplo_es": "Un camión tiene 4 ruedas."
+    },
+    {
+      "en": "truck",
+      "es": "camión",
+      "aceptadas": [
+        "camion"
+      ],
+      "ejemplo_en": "The truck is big.",
+      "ejemplo_es": "El camión es grande."
+    },
+    {
+      "en": "multiply",
+      "es": "multiplicar",
+      "aceptadas": [
+        "multiplica"
+      ],
+      "ejemplo_en": "Multiply 5 by 4.",
+      "ejemplo_es": "Multiplica 5 por 4."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "patrones",
+      "emoji": "🍬",
+      "titulo": "El truco del ×0 y del ×1",
+      "pasos": [
+        "Multiplicar es juntar grupos iguales. 7 × 0 significa 7 grupos con 0 cosas.",
+        "Imagina 7 bolsas y en cada bolsa hay 0 dulces. ¿Cuántos dulces tienes? ¡Ninguno! Es 0.",
+        "Por eso, cualquier número × 0 = 0. Y cualquier número × 1 es el mismo número: 1 bolsa con 7 dulces = 7."
+      ],
+      "ejemplo": "7 × 0 = 0 (7 bolsas vacías). 7 × 1 = 7 (una bolsa con 7).",
+      "truco": "Con el 0 todo desaparece. Con el 1 todo se queda igual."
+    },
+    {
+      "subtema": "patrones",
+      "emoji": "👏",
+      "titulo": "Saltos de 5 en 5 y dobles del ×2",
+      "pasos": [
+        "La tabla del 5: cuenta de 5 en 5 con tus dedos: 5, 10, 15, 20, 25, 30, 35, 40.",
+        "8 × 5 son 8 saltos de 5. Llegas a 40. Siempre termina en 0 o en 5.",
+        "La tabla del 2 es el doble: 6 × 2 = 6 + 6 = 12."
+      ],
+      "ejemplo": "8 × 5: 5, 10, 15, 20, 25, 30, 35, 40 → 8 saltos → 40.",
+      "truco": "Si no te acuerdas, cuenta con saltos. ¡Contar también vale!"
+    },
+    {
+      "subtema": "ecuaciones",
+      "emoji": "📦",
+      "titulo": "La cajita escondida □",
+      "pasos": [
+        "□ es un número escondido. Tú lo descubres.",
+        "□ × 3 = 18 significa: ¿cuántos grupos de 3 hacen 18?",
+        "Cuenta de 3 en 3 hasta llegar a 18: 3, 6, 9, 12, 15, 18. Fueron 6 saltos.",
+        "Entonces □ = 6. Compruébalo: 6 × 3 = 18 ✔️"
+      ],
+      "ejemplo": "4 × □ = 28 → cuenta de 4 en 4: 4, 8, 12, 16, 20, 24, 28 → 7 saltos → □ = 7.",
+      "truco": "Cuenta de 2 en 2, de 3 en 3… según el número que sí ves, hasta llegar al total."
+    },
+    {
+      "subtema": "ecuaciones",
+      "emoji": "🧩",
+      "titulo": "Con el ×2: busca la mitad",
+      "pasos": [
+        "□ × 2 = 16 quiere decir: ¿qué número, sumado con él mismo, da 16?",
+        "Piensa en la mitad de 16. La mitad de 16 es 8.",
+        "8 + 8 = 16, así que □ = 8."
+      ],
+      "ejemplo": "□ × 2 = 12 → la mitad de 12 es 6 → □ = 6.",
+      "truco": "Mitad = repartir en 2 partes iguales."
+    },
+    {
+      "subtema": "vocabulario",
+      "emoji": "🔤",
+      "titulo": "Palabras que se confunden",
+      "pasos": [
+        "even = par (2, 4, 6, 8…). Terminan en 0, 2, 4, 6 u 8.",
+        "odd = impar (1, 3, 5, 7, 9…). Truco: odd también significa «raro»: ¡sobra uno!",
+        "truck = camión 🚚. wheels = ruedas. multiply = multiplicar (×)."
+      ],
+      "ejemplo": "12 is even (12 es par). 7 is odd (7 es impar).",
+      "truco": "even → pares; odd → los que sobran."
+    }
   ]
 }

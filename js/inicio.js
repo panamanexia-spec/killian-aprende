@@ -285,6 +285,7 @@ function renderStudy(){
   if(!t) return subHeader("Estudiar", "go-screen", "← Mis temas") + '<p class="note">No encuentro ese tema.</p>' + footer();
   return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
     '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="'+tlang(t.id)+'">'+esc(t.titulo)+'</h2>' +
+    lessonsHtml(t.id, null).replace('<section class="card lessons">', '<section class="lessons-in">').replace('</section>', '</section>') +
     t.resumen.map(function(r){
       return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="'+tlang(t.id)+'">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en, tlang(t.id))+'</div>';
     }).join("") + '</section>' +

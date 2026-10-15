@@ -482,3 +482,11 @@ a.btn{text-decoration:none}
 .lvchip.on{background:#d9f7e0}
 .charlamom{border-top:2px solid var(--sky); padding:10px 0}
 .charlamom audio, .chcard audio{width:100%}
+
+.lessons .lesson, .lessons-in .lesson{background:#f4fbff; border:2px solid var(--sky-2); border-radius:18px; padding:10px 14px; margin:10px 0}
+.lesson h3{display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:1.25rem; color:var(--blue-d); margin:0 0 6px}
+.lesson ol{margin:0; padding-left:1.3em; line-height:1.45}
+.lesson li{margin:4px 0; overflow-wrap:anywhere}
+.lesson .ex-box{background:#fff; border-radius:14px; padding:8px 12px; margin:8px 0 0}
+.lesson .trick{background:#fff6d6; border-radius:14px; padding:8px 12px; margin:8px 0 0; font-weight:700}
+.lessons-in{margin-bottom:12px}

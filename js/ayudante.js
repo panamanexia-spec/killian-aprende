@@ -10,11 +10,28 @@ if(tts.ok){
   loadVoices();
   try{ window.speechSynthesis.addEventListener("voiceschanged", loadVoices); }catch(e){ try{ window.speechSynthesis.onvoiceschanged = loadVoices; }catch(e2){} }
 } else document.documentElement.classList.add("nospeech");
+/* Elige la mejor voz del aparato para el idioma: primero por país preferido y, dentro de eso, las «mejoradas» / de Google. */
+var VPREF = {en:["en-US", "en-GB", "en-AU", "en-CA", "en-IN"], es:["es-US", "es-MX", "es-419", "es-PA", "es-CO", "es-ES", "es-AR"], zh:["zh-CN", "zh-TW", "zh-HK"]};
+function vlang(v){ return String(v.lang || "").replace("_", "-"); }
 function pickVoice(lang){
-  var pref = lang === "en" ? ["en-US", "en-GB", "en-AU", "en-CA", "en-IN"] : ["es-US", "es-MX", "es-419", "es-PA", "es-CO", "es-ES"], vs = tts.voices, i, j;
-  for(i = 0; i < pref.length; i++) for(j = 0; j < vs.length; j++) if(String(vs[j].lang).replace("_", "-") === pref[i]) return vs[j];
-  for(j = 0; j < vs.length; j++) if(String(vs[j].lang).toLowerCase().indexOf(lang) === 0) return vs[j];
-  return null;
+  if(!tts.voices.length) loadVoices();
+  var pref = VPREF[lang] || [], best = null, bestScore = -1;
+  tts.voices.forEach(function(v){
+    var l = vlang(v), low = l.toLowerCase();
+    if(low.indexOf(lang) !== 0) return;
+    var pi = pref.indexOf(l), sc = (pi >= 0 ? 50 - pi : 0) + (/enhanced|premium|natural|neural|google|siri|compact/i.test(v.name || "") ? (/compact/i.test(v.name || "") ? 0 : 8) : 0) + (v.localService ? 1 : 0);
+    if(sc > bestScore){ bestScore = sc; best = v; }
+  });
+  return best;
+}
+/* Para mamá: qué voces tiene este aparato. */
+function voiceReport(){
+  if(!tts.voices.length) loadVoices();
+  var out = {total:tts.voices.length, es:[], en:[], picked:{es:null, en:null}};
+  tts.voices.forEach(function(v){ var l = vlang(v).toLowerCase(); if(l.indexOf("es") === 0) out.es.push(v.name + " (" + vlang(v) + ")"); else if(l.indexOf("en") === 0) out.en.push(v.name + " (" + vlang(v) + ")"); });
+  var pe = pickVoice("es"), pn = pickVoice("en");
+  out.picked.es = pe ? pe.name + " (" + vlang(pe) + ")" : null; out.picked.en = pn ? pn.name + " (" + vlang(pn) + ")" : null;
+  return out;
 }
 function speak(text, lang){
   if(!tts.ok) return;

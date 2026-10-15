@@ -71,7 +71,7 @@ function validateAgenda(o){
 function validateTema(o){
   var E = [], W = [];
   var t = {id:str(o.id), idioma:str(o.idioma) || "en", materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen),
-           resumen:[], subtemas:[], preguntas:[], vocabulario:[]};
+           resumen:[], subtemas:[], preguntas:[], vocabulario:[], lecciones:[]};
   if(!/^[a-z0-9][a-z0-9_-]*$/i.test(t.id)) E.push("El tema necesita un «id» sin espacios ni acentos, por ejemplo science-water-cycle.");
   if(t.id === "overunder" || t.id === "weak") E.push("El id «" + t.id + "» está reservado. Usa otro.");
   var ppr = +o.preguntas_por_ronda;
@@ -86,6 +86,10 @@ function validateTema(o){
   (Array.isArray(o.resumen) ? o.resumen : []).forEach(function(r, i){
     if(!r || !str(r.en) || !str(r.es)){ E.push("Resumen " + (i + 1) + ": necesita «en» y «es»."); return; }
     t.resumen.push({en:str(r.en), es:str(r.es), emoji:str(r.emoji)});
+  });
+  (Array.isArray(o.lecciones) ? o.lecciones : []).forEach(function(l, i){
+    if(!l || !str(l.titulo) || !strList(l.pasos).length){ E.push("Lección " + (i + 1) + ": necesita «titulo» y «pasos» (lista de textos)."); return; }
+    t.lecciones.push({subtema:str(l.subtema), titulo:str(l.titulo), emoji:str(l.emoji), pasos:strList(l.pasos), ejemplo:str(l.ejemplo), truco:str(l.truco)});
   });
   var seen = {};
   (Array.isArray(o.preguntas) ? o.preguntas : []).forEach(function(p, i){
@@ -204,6 +208,7 @@ function renderMom(){
     case "notas": return renderNotas();
     case "tareas": return renderTareasMom();
     case "charlas": return renderCharlasMom();
+    case "voces": return renderVoces();
     default: return renderMomMenu();
   }
 }
@@ -258,6 +263,21 @@ function charlaStatsMom(c){
     '<p class="lvrow">'+lv+'</p>' +
     (recs.length ? recs.map(function(g){ return '<p class="small">🎙 Ensayo final · '+esc(new Date(g.ts).toLocaleString("es", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}))+' · '+g.pct+'%</p><audio controls preload="none" src="'+esc(g.data)+'"></audio>'; }).join("") : '<p class="small">Todavía no hay grabaciones del ensayo final.</p>') + '</div>';
 }
+function renderVoces(){
+  var r = voiceReport(), h = momHeader("Voces de este aparato", "mom-go", "← Zona de mamá");
+  h += '<section class="card mom"><p>La voz que lee en español depende de las voces que tenga <b>este aparato</b> (la tablet, la Lenovo o el iPhone). Si no tiene una voz en español, lee en español con acento de inglés y la página no lo puede arreglar sola.</p>' +
+    '<p class="small">Voces encontradas: <b>' + r.total + '</b> · en español: <b>' + r.es.length + '</b> · en inglés: <b>' + r.en.length + '</b></p>' +
+    '<p><b>Voz en español que usa la página:</b><br>' + (r.picked.es ? esc(r.picked.es) : '<span class="err">Ninguna: este aparato no tiene voz en español.</span>') + '</p>' +
+    '<p><b>Voz en inglés que usa la página:</b><br>' + (r.picked.en ? esc(r.picked.en) : "Ninguna") + '</p>' +
+    '<div class="stack"><button class="btn btn-sun" type="button" data-act="voz-test" data-l="es">🔊 Probar en español</button><button class="btn btn-blue" type="button" data-act="voz-test" data-l="en">🔊 Probar en inglés</button></div>' +
+    (r.picked.es ? '<p class="small">Si al probar en español suena con acento de inglés, instala una voz mejor (abajo) y vuelve a abrir la página.</p>' : '') + '</section>' +
+    '<section class="card mom"><h2 class="sec-title">Cómo conseguir una voz en español</h2>' +
+    '<p><b>Tablet o celular Android:</b> Ajustes → Sistema (o Administración general) → Idioma → <b>Salida de texto a voz</b> → Motor de Google → ⚙️ → <b>Instalar datos de voz</b> → Español (México o EE. UU.).</p>' +
+    '<p><b>iPhone / iPad:</b> Ajustes → Accesibilidad → Contenido hablado → Voces → Español → baja una voz <b>«Mejorada»</b> (por ejemplo Paulina o Mónica).</p>' +
+    '<p><b>Computadora con Windows:</b> Configuración → Hora e idioma → Voz → Agregar voces → Español (México). En el navegador <b>Edge</b> suenan mejor las voces de Microsoft.</p>' +
+    '<p class="small">Después cierra el navegador por completo y ábrelo otra vez.</p></section>';
+  return h + footer();
+}
 var chForm = {titulo:"", materia:"", idioma:"en", texto:"", msg:""};
 function renderCharlasMom(){
   var h = momHeader("Charlas", "mom-go", "← Zona de mamá");
@@ -280,6 +300,7 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="notas"><span class="big">📌</span>Notas' + (notas.length ? '<span class="small">' + (notasPend() ? notasPend() + ' sin marcar' : 'todo marcado') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
@@ -510,6 +531,7 @@ function extraClick(act, el, ev){
       if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
+    case "voz-test": var vl = el.getAttribute("data-l"); speak(vl === "es" ? "Hola, soy tu voz en español. Los adverbios dicen dónde, cuándo y cómo pasa algo." : "Hello, I am your English voice. Rose lived in a small town.", vl); return true;
     case "chm-add":
       chForm = {titulo:val("chm-titulo"), materia:val("chm-materia"), idioma:val("chm-idioma") || "en", texto:val("chm-texto"), msg:""};
       var fr = splitFrases(chForm.texto), cid = (chForm.titulo || "charla").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "charla";

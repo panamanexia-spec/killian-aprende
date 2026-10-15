@@ -7,6 +7,17 @@ var vx = {fb:null, text:""};           /* mini vocabulario: respuesta mostrada /
 
 function XL(){ var c = S.ex && S.ex.cur; return c && c.tema && c.tema.idioma === "es" ? "es" : "en"; }
 function tfWord(v){ return XL() === "es" ? (v ? "VERDADERO" : "FALSO") : (v ? "TRUE" : "FALSE"); }
+/* «Te lo explico fácil»: lecciones cortas del tema (en español), para repasar lo que falló. */
+function lessonsHtml(tid, subs){
+  var t = temaById(tid), L = t && t.lecciones ? t.lecciones : [];
+  if(subs) L = L.filter(function(l){ return !l.subtema || subs.indexOf(l.subtema) >= 0; });
+  if(!L.length) return "";
+  return '<section class="card lessons"><h2 class="sec-title">😊 Te lo explico fácil</h2>' + L.map(function(l){
+    return '<article class="lesson"><h3>' + esc(l.emoji || "📘") + ' ' + esc(l.titulo) + ' ' + spk(l.pasos.join(". ") + (l.ejemplo ? ". Ejemplo. " + l.ejemplo : ""), "es", "mini") + '</h3>' +
+      '<ol>' + l.pasos.map(function(p){ return '<li>' + esc(p) + '</li>'; }).join("") + '</ol>' +
+      (l.ejemplo ? '<p class="ex-box"><b>Ejemplo:</b> ' + esc(l.ejemplo) + '</p>' : '') + (l.truco ? '<p class="trick">💡 ' + esc(l.truco) + '</p>' : '') + '</article>';
+  }).join("") + '</section>';
+}
 function allTemas(){ return builtinTemas().concat(S.temas); }
 function temaById(id){ var l = allTemas(); for(var i=0;i<l.length;i++) if(l[i].id === id) return l[i]; return null; }
 function tHist(tid){ return S.ex.hist[tid] || []; }
@@ -388,6 +399,7 @@ function renderResults(){
     '<div class="tabs"><button type="button" class="tab" data-act="filter" data-f="all" aria-pressed="' + (filter === "all") + '">Ver todas (' + grades.length + ')</button>' +
     '<button type="button" class="tab" data-act="filter" data-f="bad" aria-pressed="' + (filter === "bad") + '">Solo las que fallé (' + grades.filter(function(g){ return !g.ok; }).length + ')</button></div>' +
     '<div class="review">' + (shown.length ? shown.map(function(g){ return reviewItem(g, grades.indexOf(g), c); }).join("") : '<p class="note">🎉 ¡Todas fueron correctas!</p>') + '</div></section>' +
+    lessonsHtml(c.tema.id, grades.filter(function(g){ return !g.ok; }).map(function(g){ return g.q.subtema; })) +
     '<section class="card">' + resActions(c, wrong, unans) + '</section>' + footer();
 }
 

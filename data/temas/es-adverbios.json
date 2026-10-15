@@ -7,61 +7,781 @@
   "titulo_es": "Los adverbios",
   "fecha_examen": "2026-10-15",
   "preguntas_por_ronda": 10,
-  "subtemas": ["que-son", "lugar", "tiempo", "modo", "cantidad", "afirmacion", "negacion", "duda"],
+  "subtemas": [
+    "que-son",
+    "lugar",
+    "tiempo",
+    "modo",
+    "cantidad",
+    "afirmacion",
+    "negacion",
+    "duda"
+  ],
   "resumen": [
-    { "en": "Los adverbios acompañan al verbo.", "es": "Dicen DÓNDE, CUÁNDO o CÓMO pasa algo. No cambian: no tienen masculino, femenino ni plural.", "emoji": "🦉" },
-    { "en": "Juan juega aquí.", "es": "📍 LUGAR = ¿dónde? aquí, allí, cerca, lejos, arriba, abajo, dentro, fuera", "emoji": "📍" },
-    { "en": "Ayer comí helado.", "es": "⏰ TIEMPO = ¿cuándo? hoy, ayer, mañana, pronto, tarde, temprano", "emoji": "⏰" },
-    { "en": "María canta bien.", "es": "🏃 MODO = ¿cómo? bien, mal, despacio, rápidamente, lentamente, fácilmente", "emoji": "🏃" },
-    { "en": "Yo estudié mucho.", "es": "⚖️ CANTIDAD = ¿cuánto? mucho, poco, bastante, más, menos, demasiado, nada", "emoji": "⚖️" },
-    { "en": "Claro que iré al colegio.", "es": "✅ AFIRMACIÓN = dice que sí: sí, también, claro, ciertamente, desde luego", "emoji": "✅" },
-    { "en": "Nunca comeré naranja.", "es": "❌ NEGACIÓN = dice que no: no, nunca, jamás, tampoco", "emoji": "❌" },
-    { "en": "Tal vez llueva esta tarde.", "es": "🤔 DUDA = no está seguro: quizás, tal vez, acaso, posiblemente, probablemente", "emoji": "🤔" }
+    {
+      "en": "Los adverbios acompañan al verbo.",
+      "es": "Dicen DÓNDE, CUÁNDO o CÓMO pasa algo. No cambian: no tienen masculino, femenino ni plural.",
+      "emoji": "🦉"
+    },
+    {
+      "en": "Juan juega aquí.",
+      "es": "📍 LUGAR = ¿dónde? aquí, allí, cerca, lejos, arriba, abajo, dentro, fuera",
+      "emoji": "📍"
+    },
+    {
+      "en": "Ayer comí helado.",
+      "es": "⏰ TIEMPO = ¿cuándo? hoy, ayer, mañana, pronto, tarde, temprano",
+      "emoji": "⏰"
+    },
+    {
+      "en": "María canta bien.",
+      "es": "🏃 MODO = ¿cómo? bien, mal, despacio, rápidamente, lentamente, fácilmente",
+      "emoji": "🏃"
+    },
+    {
+      "en": "Yo estudié mucho.",
+      "es": "⚖️ CANTIDAD = ¿cuánto? mucho, poco, bastante, más, menos, demasiado, nada",
+      "emoji": "⚖️"
+    },
+    {
+      "en": "Claro que iré al colegio.",
+      "es": "✅ AFIRMACIÓN = dice que sí: sí, también, claro, ciertamente, desde luego",
+      "emoji": "✅"
+    },
+    {
+      "en": "Nunca comeré naranja.",
+      "es": "❌ NEGACIÓN = dice que no: no, nunca, jamás, tampoco",
+      "emoji": "❌"
+    },
+    {
+      "en": "Tal vez llueva esta tarde.",
+      "es": "🤔 DUDA = no está seguro: quizás, tal vez, acaso, posiblemente, probablemente",
+      "emoji": "🤔"
+    }
   ],
   "preguntas": [
-    { "id": "adv1", "subtema": "que-son", "tipo": "opcion_multiple", "pregunta_en": "¿Qué son los adverbios?", "opciones": ["Palabras que acompañan al verbo y dicen dónde, cuándo o cómo", "Nombres de personas y animales", "Palabras que solo dicen colores"], "correcta": "Palabras que acompañan al verbo y dicen dónde, cuándo o cómo", "explicacion_es": "El adverbio acompaña al verbo (la acción) y nos cuenta más: dónde, cuándo, cómo, cuánto…" },
-    { "id": "adv2", "subtema": "que-son", "tipo": "verdadero_falso", "pregunta_en": "Los adverbios tienen masculino y femenino.", "correcta": false, "explicacion_es": "¡Falso! Los adverbios no cambian. Se dice «él corre rápidamente» y «ella corre rápidamente»: igualito." },
-    { "id": "adv3", "subtema": "que-son", "tipo": "verdadero_falso", "pregunta_en": "Los adverbios no tienen singular ni plural.", "correcta": true, "explicacion_es": "¡Verdadero! No tienen número. «Aquí» nunca se convierte en «aquíes». 😄" },
-    { "id": "adv4", "subtema": "lugar", "tipo": "opcion_multiple", "pregunta_en": "Juan juega AQUÍ. ¿Qué tipo de adverbio es AQUÍ?", "opciones": ["Lugar 📍", "Tiempo ⏰", "Modo 🏃"], "correcta": "Lugar 📍", "explicacion_es": "AQUÍ dice DÓNDE juega Juan. Si dice dónde, es de lugar." },
-    { "id": "adv5", "subtema": "tiempo", "tipo": "opcion_multiple", "pregunta_en": "AYER comí helado. ¿Qué tipo de adverbio es AYER?", "opciones": ["Tiempo ⏰", "Lugar 📍", "Cantidad ⚖️"], "correcta": "Tiempo ⏰", "explicacion_es": "AYER dice CUÁNDO comí helado. Si dice cuándo, es de tiempo." },
-    { "id": "adv6", "subtema": "modo", "tipo": "opcion_multiple", "pregunta_en": "María canta BIEN. ¿Qué tipo de adverbio es BIEN?", "opciones": ["Modo 🏃", "Lugar 📍", "Duda 🤔"], "correcta": "Modo 🏃", "explicacion_es": "BIEN dice CÓMO canta María. Si dice cómo, es de modo." },
-    { "id": "adv7", "subtema": "cantidad", "tipo": "opcion_multiple", "pregunta_en": "Yo estudié MUCHO. ¿Qué tipo de adverbio es MUCHO?", "opciones": ["Cantidad ⚖️", "Tiempo ⏰", "Negación ❌"], "correcta": "Cantidad ⚖️", "explicacion_es": "MUCHO dice CUÁNTO estudié. Si dice cuánto, es de cantidad." },
-    { "id": "adv8", "subtema": "afirmacion", "tipo": "opcion_multiple", "pregunta_en": "CLARO que iré al colegio. ¿Qué tipo de adverbio es CLARO?", "opciones": ["Afirmación ✅", "Duda 🤔", "Negación ❌"], "correcta": "Afirmación ✅", "explicacion_es": "CLARO dice que SÍ, que es verdad. Eso es afirmación." },
-    { "id": "adv9", "subtema": "negacion", "tipo": "opcion_multiple", "pregunta_en": "NUNCA comeré naranja. ¿Qué tipo de adverbio es NUNCA?", "opciones": ["Negación ❌", "Afirmación ✅", "Modo 🏃"], "correcta": "Negación ❌", "explicacion_es": "NUNCA dice que NO. Eso es negación." },
-    { "id": "adv10", "subtema": "duda", "tipo": "opcion_multiple", "pregunta_en": "TAL VEZ llueva esta tarde. ¿Qué tipo de adverbio es TAL VEZ?", "opciones": ["Duda 🤔", "Afirmación ✅", "Lugar 📍"], "correcta": "Duda 🤔", "explicacion_es": "TAL VEZ significa que no estamos seguros. Eso es duda." },
-    { "id": "adv11", "subtema": "lugar", "tipo": "opcion_multiple", "pregunta_en": "Los adverbios de LUGAR responden a la pregunta…", "opciones": ["¿Dónde?", "¿Cuándo?", "¿Cómo?"], "correcta": "¿Dónde?", "explicacion_es": "Lugar = ¿dónde? 📍 Aquí, allí, cerca, lejos…" },
-    { "id": "adv12", "subtema": "tiempo", "tipo": "opcion_multiple", "pregunta_en": "Los adverbios de TIEMPO responden a la pregunta…", "opciones": ["¿Cuándo?", "¿Dónde?", "¿Cuánto?"], "correcta": "¿Cuándo?", "explicacion_es": "Tiempo = ¿cuándo? ⏰ Hoy, ayer, mañana, temprano…" },
-    { "id": "adv13", "subtema": "modo", "tipo": "opcion_multiple", "pregunta_en": "Los adverbios de MODO responden a la pregunta…", "opciones": ["¿Cómo?", "¿Dónde?", "¿Cuándo?"], "correcta": "¿Cómo?", "explicacion_es": "Modo = ¿cómo? 🏃 Bien, mal, despacio, rápidamente…" },
-    { "id": "adv14", "subtema": "tiempo", "tipo": "opcion_multiple", "pregunta_en": "¿Cuál de estas palabras es un adverbio de TIEMPO?", "opciones": ["mañana", "arriba", "despacio", "mucho"], "correcta": "mañana", "explicacion_es": "MAÑANA dice cuándo. Arriba es de lugar, despacio de modo y mucho de cantidad." },
-    { "id": "adv15", "subtema": "lugar", "tipo": "opcion_multiple", "pregunta_en": "¿Cuál de estas palabras es un adverbio de LUGAR?", "opciones": ["lejos", "hoy", "bien", "quizás"], "correcta": "lejos", "explicacion_es": "LEJOS dice dónde. Hoy es de tiempo, bien de modo y quizás de duda." },
-    { "id": "adv16", "subtema": "negacion", "tipo": "opcion_multiple", "pregunta_en": "¿Cuál de estas palabras es un adverbio de NEGACIÓN?", "opciones": ["jamás", "también", "cerca", "pronto"], "correcta": "jamás", "explicacion_es": "JAMÁS es como «nunca»: dice que no. También es afirmación, cerca es lugar y pronto es tiempo." },
-    { "id": "adv17", "subtema": "lugar", "tipo": "verdadero_falso", "pregunta_en": "En «El gato está ABAJO de la cama», ABAJO es un adverbio de lugar.", "correcta": true, "explicacion_es": "¡Verdadero! ABAJO dice dónde está el gato. 🐱" },
-    { "id": "adv18", "subtema": "tiempo", "tipo": "verdadero_falso", "pregunta_en": "En «HOY voy al cine», HOY es un adverbio de modo.", "correcta": false, "explicacion_es": "¡Falso! HOY dice cuándo voy al cine, así que es de TIEMPO ⏰." },
-    { "id": "adv19", "subtema": "afirmacion", "tipo": "verdadero_falso", "pregunta_en": "TAMBIÉN es un adverbio de afirmación.", "correcta": true, "explicacion_es": "¡Verdadero! «Ella también irá» dice que sí va. ✅" },
-    { "id": "adv20", "subtema": "duda", "tipo": "verdadero_falso", "pregunta_en": "QUIZÁS es un adverbio de cantidad.", "correcta": false, "explicacion_es": "¡Falso! QUIZÁS es de DUDA 🤔: no estamos seguros." },
-    { "id": "adv21", "subtema": "cantidad", "tipo": "verdadero_falso", "pregunta_en": "En «Tengo BASTANTE calor», BASTANTE es un adverbio de cantidad.", "correcta": true, "explicacion_es": "¡Verdadero! BASTANTE dice cuánto calor tengo. ⚖️" },
-    { "id": "adv22", "subtema": "lugar", "tipo": "unir", "pregunta_en": "Une cada adverbio con su tipo.", "pares": [ { "izquierda": "cerca", "derecha": "Lugar 📍" }, { "izquierda": "temprano", "derecha": "Tiempo ⏰" }, { "izquierda": "despacio", "derecha": "Modo 🏃" }, { "izquierda": "poco", "derecha": "Cantidad ⚖️" } ], "explicacion_es": "Cerca dice dónde, temprano dice cuándo, despacio dice cómo y poco dice cuánto." },
-    { "id": "adv23", "subtema": "duda", "tipo": "unir", "pregunta_en": "Une cada adverbio con su tipo.", "pares": [ { "izquierda": "sí", "derecha": "Afirmación ✅" }, { "izquierda": "no", "derecha": "Negación ❌" }, { "izquierda": "posiblemente", "derecha": "Duda 🤔" }, { "izquierda": "rápidamente", "derecha": "Modo 🏃" } ], "explicacion_es": "Sí afirma, no niega, posiblemente es duda y rápidamente dice cómo." },
-    { "id": "adv24", "subtema": "lugar", "tipo": "completar", "pregunta_en": "Lo contrario de CERCA es ______.", "respuesta": "lejos", "explicacion_es": "Cerca ↔ lejos. Los dos son adverbios de lugar. 📍", "pista_es": "Empieza con L: l _ _ o s" },
-    { "id": "adv25", "subtema": "lugar", "tipo": "completar", "pregunta_en": "Lo contrario de ARRIBA es ______.", "respuesta": "abajo", "explicacion_es": "Arriba ↔ abajo. Los dos son de lugar. 📍", "pista_es": "Empieza con A: a _ a j o" },
-    { "id": "adv26", "subtema": "lugar", "tipo": "completar", "pregunta_en": "Lo contrario de DENTRO es ______.", "respuesta": "fuera", "aceptadas": ["afuera"], "explicacion_es": "Dentro ↔ fuera. Los dos son de lugar. 📍", "pista_es": "Empieza con F: f _ e r a" },
-    { "id": "adv27", "subtema": "cantidad", "tipo": "completar", "pregunta_en": "Lo contrario de MÁS es ______.", "respuesta": "menos", "explicacion_es": "Más ↔ menos. Los dos son de cantidad. ⚖️", "pista_es": "Empieza con M: m _ n o s" },
-    { "id": "adv28", "subtema": "modo", "tipo": "completar", "pregunta_en": "Lo contrario de BIEN es ______.", "respuesta": "mal", "explicacion_es": "Bien ↔ mal. Los dos son de modo. 🏃", "pista_es": "3 letras: m _ l" },
-    { "id": "adv29", "subtema": "tiempo", "tipo": "completar", "pregunta_en": "Lo contrario de TARDE es ______.", "respuesta": "temprano", "aceptadas": ["pronto"], "explicacion_es": "Tarde ↔ temprano. Los dos son de tiempo. ⏰", "pista_es": "Empieza con T: t e m p _ _ _ o" },
-    { "id": "adv30", "subtema": "modo", "tipo": "opcion_multiple", "pregunta_en": "Muchos adverbios de MODO terminan en -MENTE. ¿Cuál es uno?", "opciones": ["lentamente", "lejos", "ayer"], "correcta": "lentamente", "explicacion_es": "LENTAMENTE dice cómo se hace algo. Truco: si termina en -mente, casi siempre es de modo." }
+    {
+      "id": "adv1",
+      "subtema": "que-son",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué son los adverbios?",
+      "opciones": [
+        "Palabras que acompañan al verbo y dicen dónde, cuándo o cómo",
+        "Nombres de personas y animales",
+        "Palabras que solo dicen colores"
+      ],
+      "correcta": "Palabras que acompañan al verbo y dicen dónde, cuándo o cómo",
+      "explicacion_es": "El adverbio acompaña al verbo (la acción) y nos cuenta más: dónde, cuándo, cómo, cuánto…"
+    },
+    {
+      "id": "adv2",
+      "subtema": "que-son",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los adverbios tienen masculino y femenino.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Los adverbios no cambian. Se dice «él corre rápidamente» y «ella corre rápidamente»: igualito."
+    },
+    {
+      "id": "adv3",
+      "subtema": "que-son",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los adverbios no tienen singular ni plural.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! No tienen número. «Aquí» nunca se convierte en «aquíes». 😄"
+    },
+    {
+      "id": "adv4",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Juan juega AQUÍ. ¿Qué tipo de adverbio es AQUÍ?",
+      "opciones": [
+        "Lugar 📍",
+        "Tiempo ⏰",
+        "Modo 🏃"
+      ],
+      "correcta": "Lugar 📍",
+      "explicacion_es": "AQUÍ dice DÓNDE juega Juan. Si dice dónde, es de lugar."
+    },
+    {
+      "id": "adv5",
+      "subtema": "tiempo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "AYER comí helado. ¿Qué tipo de adverbio es AYER?",
+      "opciones": [
+        "Tiempo ⏰",
+        "Lugar 📍",
+        "Cantidad ⚖️"
+      ],
+      "correcta": "Tiempo ⏰",
+      "explicacion_es": "AYER dice CUÁNDO comí helado. Si dice cuándo, es de tiempo."
+    },
+    {
+      "id": "adv6",
+      "subtema": "modo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "María canta BIEN. ¿Qué tipo de adverbio es BIEN?",
+      "opciones": [
+        "Modo 🏃",
+        "Lugar 📍",
+        "Duda 🤔"
+      ],
+      "correcta": "Modo 🏃",
+      "explicacion_es": "BIEN dice CÓMO canta María. Si dice cómo, es de modo."
+    },
+    {
+      "id": "adv7",
+      "subtema": "cantidad",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Yo estudié MUCHO. ¿Qué tipo de adverbio es MUCHO?",
+      "opciones": [
+        "Cantidad ⚖️",
+        "Tiempo ⏰",
+        "Negación ❌"
+      ],
+      "correcta": "Cantidad ⚖️",
+      "explicacion_es": "MUCHO dice CUÁNTO estudié. Si dice cuánto, es de cantidad."
+    },
+    {
+      "id": "adv8",
+      "subtema": "afirmacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "CLARO que iré al colegio. ¿Qué tipo de adverbio es CLARO?",
+      "opciones": [
+        "Afirmación ✅",
+        "Duda 🤔",
+        "Negación ❌"
+      ],
+      "correcta": "Afirmación ✅",
+      "explicacion_es": "CLARO dice que SÍ, que es verdad. Eso es afirmación."
+    },
+    {
+      "id": "adv9",
+      "subtema": "negacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "NUNCA comeré naranja. ¿Qué tipo de adverbio es NUNCA?",
+      "opciones": [
+        "Negación ❌",
+        "Afirmación ✅",
+        "Modo 🏃"
+      ],
+      "correcta": "Negación ❌",
+      "explicacion_es": "NUNCA dice que NO. Eso es negación."
+    },
+    {
+      "id": "adv10",
+      "subtema": "duda",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "TAL VEZ llueva esta tarde. ¿Qué tipo de adverbio es TAL VEZ?",
+      "opciones": [
+        "Duda 🤔",
+        "Afirmación ✅",
+        "Lugar 📍"
+      ],
+      "correcta": "Duda 🤔",
+      "explicacion_es": "TAL VEZ significa que no estamos seguros. Eso es duda."
+    },
+    {
+      "id": "adv11",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Los adverbios de LUGAR responden a la pregunta…",
+      "opciones": [
+        "¿Dónde?",
+        "¿Cuándo?",
+        "¿Cómo?"
+      ],
+      "correcta": "¿Dónde?",
+      "explicacion_es": "Lugar = ¿dónde? 📍 Aquí, allí, cerca, lejos…"
+    },
+    {
+      "id": "adv12",
+      "subtema": "tiempo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Los adverbios de TIEMPO responden a la pregunta…",
+      "opciones": [
+        "¿Cuándo?",
+        "¿Dónde?",
+        "¿Cuánto?"
+      ],
+      "correcta": "¿Cuándo?",
+      "explicacion_es": "Tiempo = ¿cuándo? ⏰ Hoy, ayer, mañana, temprano…"
+    },
+    {
+      "id": "adv13",
+      "subtema": "modo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Los adverbios de MODO responden a la pregunta…",
+      "opciones": [
+        "¿Cómo?",
+        "¿Dónde?",
+        "¿Cuándo?"
+      ],
+      "correcta": "¿Cómo?",
+      "explicacion_es": "Modo = ¿cómo? 🏃 Bien, mal, despacio, rápidamente…"
+    },
+    {
+      "id": "adv14",
+      "subtema": "tiempo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estas palabras es un adverbio de TIEMPO?",
+      "opciones": [
+        "mañana",
+        "arriba",
+        "despacio",
+        "mucho"
+      ],
+      "correcta": "mañana",
+      "explicacion_es": "MAÑANA dice cuándo. Arriba es de lugar, despacio de modo y mucho de cantidad."
+    },
+    {
+      "id": "adv15",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estas palabras es un adverbio de LUGAR?",
+      "opciones": [
+        "lejos",
+        "hoy",
+        "bien",
+        "quizás"
+      ],
+      "correcta": "lejos",
+      "explicacion_es": "LEJOS dice dónde. Hoy es de tiempo, bien de modo y quizás de duda."
+    },
+    {
+      "id": "adv16",
+      "subtema": "negacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estas palabras es un adverbio de NEGACIÓN?",
+      "opciones": [
+        "jamás",
+        "también",
+        "cerca",
+        "pronto"
+      ],
+      "correcta": "jamás",
+      "explicacion_es": "JAMÁS es como «nunca»: dice que no. También es afirmación, cerca es lugar y pronto es tiempo."
+    },
+    {
+      "id": "adv17",
+      "subtema": "lugar",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En «El gato está ABAJO de la cama», ABAJO es un adverbio de lugar.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! ABAJO dice dónde está el gato. 🐱"
+    },
+    {
+      "id": "adv18",
+      "subtema": "tiempo",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En «HOY voy al cine», HOY es un adverbio de modo.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! HOY dice cuándo voy al cine, así que es de TIEMPO ⏰."
+    },
+    {
+      "id": "adv19",
+      "subtema": "afirmacion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "TAMBIÉN es un adverbio de afirmación.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! «Ella también irá» dice que sí va. ✅"
+    },
+    {
+      "id": "adv20",
+      "subtema": "duda",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "QUIZÁS es un adverbio de cantidad.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! QUIZÁS es de DUDA 🤔: no estamos seguros."
+    },
+    {
+      "id": "adv21",
+      "subtema": "cantidad",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En «Tengo BASTANTE calor», BASTANTE es un adverbio de cantidad.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! BASTANTE dice cuánto calor tengo. ⚖️"
+    },
+    {
+      "id": "adv22",
+      "subtema": "lugar",
+      "tipo": "unir",
+      "pregunta_en": "Une cada adverbio con su tipo.",
+      "pares": [
+        {
+          "izquierda": "cerca",
+          "derecha": "Lugar 📍"
+        },
+        {
+          "izquierda": "temprano",
+          "derecha": "Tiempo ⏰"
+        },
+        {
+          "izquierda": "despacio",
+          "derecha": "Modo 🏃"
+        },
+        {
+          "izquierda": "poco",
+          "derecha": "Cantidad ⚖️"
+        }
+      ],
+      "explicacion_es": "Cerca dice dónde, temprano dice cuándo, despacio dice cómo y poco dice cuánto."
+    },
+    {
+      "id": "adv23",
+      "subtema": "duda",
+      "tipo": "unir",
+      "pregunta_en": "Une cada adverbio con su tipo.",
+      "pares": [
+        {
+          "izquierda": "sí",
+          "derecha": "Afirmación ✅"
+        },
+        {
+          "izquierda": "no",
+          "derecha": "Negación ❌"
+        },
+        {
+          "izquierda": "posiblemente",
+          "derecha": "Duda 🤔"
+        },
+        {
+          "izquierda": "rápidamente",
+          "derecha": "Modo 🏃"
+        }
+      ],
+      "explicacion_es": "Sí afirma, no niega, posiblemente es duda y rápidamente dice cómo."
+    },
+    {
+      "id": "adv24",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de CERCA es ______.",
+      "respuesta": "lejos",
+      "explicacion_es": "Cerca ↔ lejos. Los dos son adverbios de lugar. 📍",
+      "pista_es": "Empieza con L: l _ _ o s"
+    },
+    {
+      "id": "adv25",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de ARRIBA es ______.",
+      "respuesta": "abajo",
+      "explicacion_es": "Arriba ↔ abajo. Los dos son de lugar. 📍",
+      "pista_es": "Empieza con A: a _ a j o"
+    },
+    {
+      "id": "adv26",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de DENTRO es ______.",
+      "respuesta": "fuera",
+      "aceptadas": [
+        "afuera"
+      ],
+      "explicacion_es": "Dentro ↔ fuera. Los dos son de lugar. 📍",
+      "pista_es": "Empieza con F: f _ e r a"
+    },
+    {
+      "id": "adv27",
+      "subtema": "cantidad",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de MÁS es ______.",
+      "respuesta": "menos",
+      "explicacion_es": "Más ↔ menos. Los dos son de cantidad. ⚖️",
+      "pista_es": "Empieza con M: m _ n o s"
+    },
+    {
+      "id": "adv28",
+      "subtema": "modo",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de BIEN es ______.",
+      "respuesta": "mal",
+      "explicacion_es": "Bien ↔ mal. Los dos son de modo. 🏃",
+      "pista_es": "3 letras: m _ l"
+    },
+    {
+      "id": "adv29",
+      "subtema": "tiempo",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de TARDE es ______.",
+      "respuesta": "temprano",
+      "aceptadas": [
+        "pronto"
+      ],
+      "explicacion_es": "Tarde ↔ temprano. Los dos son de tiempo. ⏰",
+      "pista_es": "Empieza con T: t e m p _ _ _ o"
+    },
+    {
+      "id": "adv30",
+      "subtema": "modo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Muchos adverbios de MODO terminan en -MENTE. ¿Cuál es uno?",
+      "opciones": [
+        "lentamente",
+        "lejos",
+        "ayer"
+      ],
+      "correcta": "lentamente",
+      "explicacion_es": "LENTAMENTE dice cómo se hace algo. Truco: si termina en -mente, casi siempre es de modo."
+    },
+    {
+      "id": "advx1",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de ARRIBA?",
+      "pregunta_es": "¿Cuál es lo contrario de ARRIBA?",
+      "opciones": [
+        "abajo",
+        "dentro",
+        "ayer"
+      ],
+      "correcta": "abajo",
+      "explicacion_es": "Arriba ↔ abajo. Los dos son adverbios de lugar. 📍",
+      "pista_es": "Si algo está arriba, el contrario es…"
+    },
+    {
+      "id": "advx2",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de DENTRO?",
+      "pregunta_es": "¿Cuál es lo contrario de DENTRO?",
+      "opciones": [
+        "fuera",
+        "cerca",
+        "hoy"
+      ],
+      "correcta": "fuera",
+      "explicacion_es": "Dentro ↔ fuera. 📍"
+    },
+    {
+      "id": "advx3",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de CERCA?",
+      "pregunta_es": "¿Cuál es lo contrario de CERCA?",
+      "opciones": [
+        "lejos",
+        "aquí",
+        "despacio"
+      ],
+      "correcta": "lejos",
+      "explicacion_es": "Cerca ↔ lejos. 📍"
+    },
+    {
+      "id": "advx4",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de DELANTE?",
+      "pregunta_es": "¿Cuál es lo contrario de DELANTE?",
+      "opciones": [
+        "detrás",
+        "arriba",
+        "mañana"
+      ],
+      "correcta": "detrás",
+      "explicacion_es": "Delante ↔ detrás. 📍"
+    },
+    {
+      "id": "advx5",
+      "subtema": "tiempo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de TARDE?",
+      "pregunta_es": "¿Cuál es lo contrario de TARDE?",
+      "opciones": [
+        "temprano",
+        "abajo",
+        "mucho"
+      ],
+      "correcta": "temprano",
+      "explicacion_es": "Tarde ↔ temprano. ⏰",
+      "pista_es": "Piensa en levantarte a las 6 de la mañana."
+    },
+    {
+      "id": "advx6",
+      "subtema": "tiempo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de ANTES?",
+      "pregunta_es": "¿Cuál es lo contrario de ANTES?",
+      "opciones": [
+        "después",
+        "hoy",
+        "aquí"
+      ],
+      "correcta": "después",
+      "explicacion_es": "Antes ↔ después. ⏰"
+    },
+    {
+      "id": "advx7",
+      "subtema": "tiempo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es lo contrario de AYER?",
+      "pregunta_es": "¿Cuál es lo contrario de AYER?",
+      "opciones": [
+        "mañana",
+        "lejos",
+        "bien"
+      ],
+      "correcta": "mañana",
+      "explicacion_es": "Ayer ↔ mañana. ⏰"
+    },
+    {
+      "id": "advx8",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de CERCA es ______.",
+      "pregunta_es": "Lo contrario de CERCA es ______.",
+      "respuesta": "lejos",
+      "aceptadas": [],
+      "explicacion_es": "Cerca ↔ lejos. 📍",
+      "pista_es": "Empieza con L."
+    },
+    {
+      "id": "advx9",
+      "subtema": "tiempo",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de ANTES es ______.",
+      "pregunta_es": "Lo contrario de ANTES es ______.",
+      "respuesta": "después",
+      "aceptadas": [
+        "despues"
+      ],
+      "explicacion_es": "Antes ↔ después. ⏰",
+      "pista_es": "Empieza con D."
+    },
+    {
+      "id": "advx10",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Lo contrario de ABAJO es ______.",
+      "pregunta_es": "Lo contrario de ABAJO es ______.",
+      "respuesta": "arriba",
+      "aceptadas": [],
+      "explicacion_es": "Abajo ↔ arriba. 📍",
+      "pista_es": "Empieza con A."
+    },
+    {
+      "id": "advx11",
+      "subtema": "que-son",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "«Aquí» cambia a «aquíes» cuando hay muchos.",
+      "pregunta_es": "«Aquí» cambia a «aquíes» cuando hay muchos.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Los adverbios no cambian: «aquí» siempre es «aquí»."
+    },
+    {
+      "id": "advx12",
+      "subtema": "que-son",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los adverbios cambian si hablamos de una niña o de un niño.",
+      "pregunta_es": "Los adverbios cambian si hablamos de una niña o de un niño.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Los adverbios no tienen masculino ni femenino."
+    },
+    {
+      "id": "advx13",
+      "subtema": "que-son",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es un adverbio de lugar?",
+      "pregunta_es": "¿Cuál es un adverbio de lugar?",
+      "opciones": [
+        "allí",
+        "correr",
+        "casa"
+      ],
+      "correcta": "allí",
+      "explicacion_es": "«Allí» dice dónde. «Correr» es un verbo y «casa» es un nombre. 📍"
+    },
+    {
+      "id": "advx14",
+      "subtema": "que-son",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es un adverbio de tiempo?",
+      "pregunta_es": "¿Cuál es un adverbio de tiempo?",
+      "opciones": [
+        "ayer",
+        "mesa",
+        "rojo"
+      ],
+      "correcta": "ayer",
+      "explicacion_es": "«Ayer» dice cuándo. «Mesa» es un nombre y «rojo» es un adjetivo. ⏰"
+    },
+    {
+      "id": "advx15",
+      "subtema": "que-son",
+      "tipo": "unir",
+      "pregunta_en": "Une cada adverbio con su familia.",
+      "pregunta_es": "Une cada adverbio con su familia.",
+      "pares": [
+        {
+          "izquierda": "aquí",
+          "derecha": "lugar"
+        },
+        {
+          "izquierda": "ayer",
+          "derecha": "tiempo"
+        },
+        {
+          "izquierda": "bien",
+          "derecha": "modo"
+        },
+        {
+          "izquierda": "mucho",
+          "derecha": "cantidad"
+        }
+      ],
+      "explicacion_es": "Aquí → ¿dónde? (lugar); ayer → ¿cuándo? (tiempo); bien → ¿cómo? (modo); mucho → ¿cuánto? (cantidad)."
+    }
   ],
   "vocabulario": [
-    { "en": "aquí", "es": "lugar", "aceptadas": ["de lugar"], "ejemplo_en": "Juan juega aquí.", "ejemplo_es": "Dice dónde: es de lugar." },
-    { "en": "lejos", "es": "lugar", "aceptadas": ["de lugar"], "ejemplo_en": "Tu casa está lejos.", "ejemplo_es": "Dice dónde: es de lugar." },
-    { "en": "ayer", "es": "tiempo", "aceptadas": ["de tiempo"], "ejemplo_en": "Ayer comí helado.", "ejemplo_es": "Dice cuándo: es de tiempo." },
-    { "en": "temprano", "es": "tiempo", "aceptadas": ["de tiempo"], "ejemplo_en": "Llego temprano a mi escuela.", "ejemplo_es": "Dice cuándo: es de tiempo." },
-    { "en": "despacio", "es": "modo", "aceptadas": ["de modo"], "ejemplo_en": "Mi mamá come despacio.", "ejemplo_es": "Dice cómo: es de modo." },
-    { "en": "fácilmente", "es": "modo", "aceptadas": ["de modo"], "ejemplo_en": "Yo hago el examen fácilmente.", "ejemplo_es": "Dice cómo: es de modo." },
-    { "en": "mucho", "es": "cantidad", "aceptadas": ["de cantidad"], "ejemplo_en": "Yo estudié mucho.", "ejemplo_es": "Dice cuánto: es de cantidad." },
-    { "en": "menos", "es": "cantidad", "aceptadas": ["de cantidad"], "ejemplo_en": "Él quiere menos comida.", "ejemplo_es": "Dice cuánto: es de cantidad." },
-    { "en": "también", "es": "afirmación", "aceptadas": ["afirmacion", "de afirmación", "de afirmacion"], "ejemplo_en": "Ella también irá.", "ejemplo_es": "Dice que sí: es de afirmación." },
-    { "en": "nunca", "es": "negación", "aceptadas": ["negacion", "de negación", "de negacion"], "ejemplo_en": "Nunca comeré naranja.", "ejemplo_es": "Dice que no: es de negación." },
-    { "en": "quizás", "es": "duda", "aceptadas": ["de duda"], "ejemplo_en": "Quizás como helado hoy.", "ejemplo_es": "No está seguro: es de duda." },
-    { "en": "tal vez", "es": "duda", "aceptadas": ["de duda"], "ejemplo_en": "Tal vez llueva esta tarde.", "ejemplo_es": "No está seguro: es de duda." }
+    {
+      "en": "aquí",
+      "es": "lugar",
+      "aceptadas": [
+        "de lugar"
+      ],
+      "ejemplo_en": "Juan juega aquí.",
+      "ejemplo_es": "Dice dónde: es de lugar."
+    },
+    {
+      "en": "lejos",
+      "es": "lugar",
+      "aceptadas": [
+        "de lugar"
+      ],
+      "ejemplo_en": "Tu casa está lejos.",
+      "ejemplo_es": "Dice dónde: es de lugar."
+    },
+    {
+      "en": "ayer",
+      "es": "tiempo",
+      "aceptadas": [
+        "de tiempo"
+      ],
+      "ejemplo_en": "Ayer comí helado.",
+      "ejemplo_es": "Dice cuándo: es de tiempo."
+    },
+    {
+      "en": "temprano",
+      "es": "tiempo",
+      "aceptadas": [
+        "de tiempo"
+      ],
+      "ejemplo_en": "Llego temprano a mi escuela.",
+      "ejemplo_es": "Dice cuándo: es de tiempo."
+    },
+    {
+      "en": "despacio",
+      "es": "modo",
+      "aceptadas": [
+        "de modo"
+      ],
+      "ejemplo_en": "Mi mamá come despacio.",
+      "ejemplo_es": "Dice cómo: es de modo."
+    },
+    {
+      "en": "fácilmente",
+      "es": "modo",
+      "aceptadas": [
+        "de modo"
+      ],
+      "ejemplo_en": "Yo hago el examen fácilmente.",
+      "ejemplo_es": "Dice cómo: es de modo."
+    },
+    {
+      "en": "mucho",
+      "es": "cantidad",
+      "aceptadas": [
+        "de cantidad"
+      ],
+      "ejemplo_en": "Yo estudié mucho.",
+      "ejemplo_es": "Dice cuánto: es de cantidad."
+    },
+    {
+      "en": "menos",
+      "es": "cantidad",
+      "aceptadas": [
+        "de cantidad"
+      ],
+      "ejemplo_en": "Él quiere menos comida.",
+      "ejemplo_es": "Dice cuánto: es de cantidad."
+    },
+    {
+      "en": "también",
+      "es": "afirmación",
+      "aceptadas": [
+        "afirmacion",
+        "de afirmación",
+        "de afirmacion"
+      ],
+      "ejemplo_en": "Ella también irá.",
+      "ejemplo_es": "Dice que sí: es de afirmación."
+    },
+    {
+      "en": "nunca",
+      "es": "negación",
+      "aceptadas": [
+        "negacion",
+        "de negación",
+        "de negacion"
+      ],
+      "ejemplo_en": "Nunca comeré naranja.",
+      "ejemplo_es": "Dice que no: es de negación."
+    },
+    {
+      "en": "quizás",
+      "es": "duda",
+      "aceptadas": [
+        "de duda"
+      ],
+      "ejemplo_en": "Quizás como helado hoy.",
+      "ejemplo_es": "No está seguro: es de duda."
+    },
+    {
+      "en": "tal vez",
+      "es": "duda",
+      "aceptadas": [
+        "de duda"
+      ],
+      "ejemplo_en": "Tal vez llueva esta tarde.",
+      "ejemplo_es": "No está seguro: es de duda."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "que-son",
+      "emoji": "🦉",
+      "titulo": "¿Qué es un adverbio?",
+      "pasos": [
+        "Un adverbio acompaña al verbo y dice DÓNDE, CUÁNDO o CÓMO pasa algo.",
+        "Los adverbios NO cambian: no tienen niña/niño ni singular/plural. «Aquí» siempre es «aquí».",
+        "Aprende las 7 familias: lugar, tiempo, modo, cantidad, afirmación, negación y duda."
+      ],
+      "ejemplo": "Juan juega aquí (¿dónde? → aquí). María canta bien (¿cómo? → bien).",
+      "truco": "Pregunta al verbo: ¿dónde?, ¿cuándo?, ¿cómo?, ¿cuánto? La respuesta es el adverbio."
+    },
+    {
+      "subtema": "lugar",
+      "emoji": "📍",
+      "titulo": "Lugar = ¿dónde? (y sus contrarios)",
+      "pasos": [
+        "Los adverbios de lugar contestan «¿dónde?».",
+        "Vienen en parejas de contrarios: arriba ↔ abajo, dentro ↔ fuera, cerca ↔ lejos, delante ↔ detrás, aquí ↔ allí.",
+        "Para encontrar el contrario, imagina un dibujo: si algo está ARRIBA del árbol, lo contrario es que esté ABAJO."
+      ],
+      "ejemplo": "El gato está dentro de la casa. El perro está fuera.",
+      "truco": "Lo contrario de DENTRO es FUERA; de ARRIBA es ABAJO."
+    },
+    {
+      "subtema": "tiempo",
+      "emoji": "⏰",
+      "titulo": "Tiempo = ¿cuándo? (y sus contrarios)",
+      "pasos": [
+        "Los adverbios de tiempo contestan «¿cuándo?».",
+        "Parejas: temprano ↔ tarde, antes ↔ después, ayer ↔ mañana, pronto ↔ tarde.",
+        "Si llegas a las 6 de la mañana llegas TEMPRANO; a las 9 de la noche, TARDE."
+      ],
+      "ejemplo": "Me levanto temprano. Me acuesto tarde.",
+      "truco": "Lo contrario de TARDE es TEMPRANO."
+    }
   ]
 }

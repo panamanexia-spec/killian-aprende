@@ -207,3 +207,16 @@ Si una tarea de la agenda trae `"tema"`, en «Pendientes de hoy» sale, justo ar
 - **Estrellas:** cada charla da como máximo **3 estrellas**, y las 3 solo si Killian termina **los 6 niveles** y deja la charla lista (80 % o más). No se regalan estrellas por nivel.
 - **Tareas de presentación oral:** si una tarea de la agenda dice que es una presentación oral/charla, ponle `"charla": "<id>"` (y **no** `"tema"`). Así sale el botón **🎤 Practicar mi charla (5 min)** dentro de esa tarea. El campo `"tema"` es solo para exámenes.
 - Lo que harán **en clase** (`repaso`, `detalle`) no se muestra en la página de Killian; mamá lo ve en Zona de mamá → Detalle de tareas.
+
+## Temas: lecciones «Te lo explico fácil» (`lecciones`)
+Un tema puede traer una lista **`lecciones`** con explicaciones cortas en español. Salen en la pantalla de estudio del tema y, en los resultados, las de los subtemas que Killian falló (con botón 🔊 para escucharlas).
+
+```json
+"lecciones": [
+  { "subtema": "ecuaciones", "emoji": "📦", "titulo": "La cajita escondida □",
+    "pasos": ["□ es un número escondido.", "Cuenta de 3 en 3 hasta 18: 3, 6, 9, 12, 15, 18.", "Fueron 6 saltos, así que □ = 6."],
+    "ejemplo": "4 × □ = 28 → 4, 8, 12, 16, 20, 24, 28 → 7 saltos → □ = 7.",
+    "truco": "Cuenta de 2 en 2, de 3 en 3… hasta llegar al total." }
+]
+```
+`subtema` debe coincidir con el de las preguntas (si se omite, la lección sale siempre). `ejemplo` y `truco` son opcionales. Las preguntas pueden traer `pista_es` (se muestra desde el segundo intento).
