@@ -1,0 +1,53 @@
+{
+  "tipo": "tema",
+  "id": "math-sumas-restas",
+  "materia": "Math",
+  "titulo": "Adding and Subtracting (2 and 3 digits)",
+  "titulo_es": "Sumas y restas de 2 y 3 cifras (formal)",
+  "fecha_examen": "2026-10-23",
+  "preguntas_por_ronda": 8,
+  "subtemas": ["sumar", "sumar-llevando", "restar", "restar-prestando", "problemas"],
+  "resumen": [
+    { "en": "Add = put together. 23 + 14 = 37", "es": "Sumar es juntar. Siempre empieza por las unidades (la columna de la derecha).", "emoji": "➕" },
+    { "en": "Ones, tens, hundreds.", "es": "Unidades, decenas, centenas: pon cada número en su columna.", "emoji": "🏠" },
+    { "en": "5 + 8 = 13 → write 3, carry 1.", "es": "Si la columna da 10 o más, escribes las unidades y LLEVAS 1 a la columna de al lado.", "emoji": "🎒" },
+    { "en": "Subtract = take away. 86 − 42 = 44", "es": "Restar es quitar. El número grande va arriba.", "emoji": "➖" },
+    { "en": "4 − 9? Borrow 1 ten → 14 − 9 = 5.", "es": "Si arriba hay un número más pequeño, PIDE PRESTADO 1 a la columna de al lado: el 4 se vuelve 14.", "emoji": "🤝" },
+    { "en": "How many in all? → add. How many left? → subtract.", "es": "«In all / total» = sumar. «Left» = restar.", "emoji": "🌱" },
+    { "en": "Check: 45 + 29 = 74 ✅", "es": "Comprueba la resta con una suma: respuesta + lo que quitaste = el número de arriba.", "emoji": "✅" }
+  ],
+  "preguntas": [
+    { "id": "sr1", "subtema": "sumar", "tipo": "opcion_multiple", "pregunta_en": "23 + 14 = ?", "pregunta_es": "¿Cuánto es 23 + 14?", "opciones": ["37", "27", "47"], "correcta": "37", "explicacion_es": "Unidades: 3 + 4 = 7. Decenas: 2 + 1 = 3. ¡37!" },
+    { "id": "sr2", "subtema": "sumar", "tipo": "completar", "pregunta_en": "126 + 253 = ______", "pregunta_es": "126 + 253 = ______", "respuesta": "379", "explicacion_es": "6 + 3 = 9, 2 + 5 = 7, 1 + 2 = 3. ¡379!", "pista_es": "Empieza por la derecha: 6 + 3." },
+    { "id": "sr3", "subtema": "sumar", "tipo": "verdadero_falso", "pregunta_en": "When we add, we start with the ones.", "pregunta_es": "Cuando sumamos, empezamos por las unidades.", "correcta": true, "explicacion_es": "¡Verdadero! Siempre se empieza por la columna de la derecha: las unidades." },
+    { "id": "sr4", "subtema": "sumar-llevando", "tipo": "opcion_multiple", "pregunta_en": "45 + 38 = ?", "pregunta_es": "¿Cuánto es 45 + 38?", "opciones": ["83", "73", "713"], "correcta": "83", "explicacion_es": "5 + 8 = 13: escribes 3 y llevas 1. Luego 4 + 3 + 1 = 8. ¡83!" },
+    { "id": "sr5", "subtema": "sumar-llevando", "tipo": "completar", "pregunta_en": "348 + 135 = ______", "pregunta_es": "348 + 135 = ______", "respuesta": "483", "explicacion_es": "8 + 5 = 13: escribes 3, llevas 1. 4 + 3 + 1 = 8. 3 + 1 = 4. ¡483!", "pista_es": "8 + 5 = 13. ¡No olvides llevar 1!" },
+    { "id": "sr6", "subtema": "sumar-llevando", "tipo": "opcion_multiple", "pregunta_en": "365 + 142 = ?", "pregunta_es": "¿Cuánto es 365 + 142?", "opciones": ["507", "407", "4107"], "correcta": "507", "explicacion_es": "5 + 2 = 7. 6 + 4 = 10: escribes 0, llevas 1. 3 + 1 + 1 = 5. ¡507!" },
+    { "id": "sr7", "subtema": "sumar-llevando", "tipo": "verdadero_falso", "pregunta_en": "In 57 + 26, we need to carry 1.", "pregunta_es": "En 57 + 26 hay que llevar 1.", "correcta": true, "explicacion_es": "¡Verdadero! 7 + 6 = 13, así que llevas 1. 57 + 26 = 83." },
+    { "id": "sr8", "subtema": "restar", "tipo": "opcion_multiple", "pregunta_en": "86 − 42 = ?", "pregunta_es": "¿Cuánto es 86 − 42?", "opciones": ["44", "48", "128"], "correcta": "44", "explicacion_es": "6 − 2 = 4. 8 − 4 = 4. ¡44!" },
+    { "id": "sr9", "subtema": "restar", "tipo": "completar", "pregunta_en": "365 − 142 = ______", "pregunta_es": "365 − 142 = ______", "respuesta": "223", "explicacion_es": "5 − 2 = 3, 6 − 4 = 2, 3 − 1 = 2. ¡223!", "pista_es": "Empieza por la derecha: 5 − 2." },
+    { "id": "sr10", "subtema": "restar", "tipo": "verdadero_falso", "pregunta_en": "In a subtraction, the big number goes on top.", "pregunta_es": "En una resta, el número grande va arriba.", "correcta": true, "explicacion_es": "¡Verdadero! Arriba va el número más grande." },
+    { "id": "sr11", "subtema": "restar-prestando", "tipo": "opcion_multiple", "pregunta_en": "74 − 29 = ?", "pregunta_es": "¿Cuánto es 74 − 29?", "opciones": ["45", "55", "53"], "correcta": "45", "explicacion_es": "4 − 9 no se puede: pides prestado y queda 14 − 9 = 5. El 7 se vuelve 6: 6 − 2 = 4. ¡45!" },
+    { "id": "sr12", "subtema": "restar-prestando", "tipo": "completar", "pregunta_en": "452 − 128 = ______", "pregunta_es": "452 − 128 = ______", "respuesta": "324", "explicacion_es": "2 − 8 no se puede: 12 − 8 = 4. El 5 se vuelve 4: 4 − 2 = 2. 4 − 1 = 3. ¡324!", "pista_es": "2 − 8 no se puede… ¡pide prestado!" },
+    { "id": "sr13", "subtema": "restar-prestando", "tipo": "opcion_multiple", "pregunta_en": "94 − 57 = ?", "pregunta_es": "¿Cuánto es 94 − 57?", "opciones": ["37", "43", "47"], "correcta": "37", "explicacion_es": "14 − 7 = 7. El 9 se vuelve 8: 8 − 5 = 3. ¡37!" },
+    { "id": "sr14", "subtema": "restar-prestando", "tipo": "completar", "pregunta_en": "200 − 75 = ______", "pregunta_es": "200 − 75 = ______", "respuesta": "125", "explicacion_es": "Con ceros hay que pedir prestado dos veces. Comprueba: 125 + 75 = 200 ✅", "pista_es": "Comprueba sumando: ¿qué número + 75 da 200?" },
+    { "id": "sr15", "subtema": "restar-prestando", "tipo": "verdadero_falso", "pregunta_en": "To check 74 − 29 = 45, you can add 45 + 29.", "pregunta_es": "Para comprobar 74 − 29 = 45, puedes sumar 45 + 29.", "correcta": true, "explicacion_es": "¡Verdadero! 45 + 29 = 74. Si da el número de arriba, ¡está bien!" },
+    { "id": "sr16", "subtema": "problemas", "tipo": "opcion_multiple", "pregunta_en": "🌱 You plant 12 lima seeds and 25 radish seeds. How many seeds in all?", "pregunta_es": "Siembras 12 semillas de frijol y 25 de rábano. ¿Cuántas semillas en total?", "opciones": ["37", "13", "27"], "correcta": "37", "explicacion_es": "«In all» = sumar. 12 + 25 = 37 semillas. 🌱" },
+    { "id": "sr17", "subtema": "problemas", "tipo": "opcion_multiple", "pregunta_en": "🌸 A garden has 125 flowers. 60 are picked. How many are left?", "pregunta_es": "Un jardín tiene 125 flores. Cortan 60. ¿Cuántas quedan?", "opciones": ["65", "185", "75"], "correcta": "65", "explicacion_es": "«Left» = restar. 125 − 60 = 65 flores. 🌸" },
+    { "id": "sr18", "subtema": "problemas", "tipo": "completar", "pregunta_en": "🌳 A farm has 250 trees. They plant 130 more. Total: ______ trees.", "pregunta_es": "Una finca tiene 250 árboles. Siembran 130 más. Total: ______ árboles.", "respuesta": "380", "explicacion_es": "«More» y «total» = sumar. 250 + 130 = 380. 🌳", "pista_es": "Suma 250 + 130." },
+    { "id": "sr19", "subtema": "problemas", "tipo": "completar", "pregunta_en": "🫘 You have 47 seeds. You plant 8. ______ seeds are left.", "pregunta_es": "Tienes 47 semillas. Siembras 8. Quedan ______ semillas.", "respuesta": "39", "explicacion_es": "47 − 8: 7 − 8 no se puede, pides prestado: 17 − 8 = 9, y el 4 se vuelve 3. ¡39!", "pista_es": "«Left» = restar. 47 − 8." },
+    { "id": "sr20", "subtema": "problemas", "tipo": "unir", "pregunta_en": "Match each word with what you do.", "pregunta_es": "Une cada palabra con lo que tienes que hacer.", "pares": [ { "izquierda": "in all", "derecha": "sumar ➕" }, { "izquierda": "left", "derecha": "restar ➖" }, { "izquierda": "total", "derecha": "sumar en total ➕" }, { "izquierda": "take away", "derecha": "quitar ➖" } ], "explicacion_es": "In all y total = sumar. Left y take away = restar." },
+    { "id": "sr21", "subtema": "sumar-llevando", "tipo": "unir", "pregunta_en": "Match each sum with its answer.", "pregunta_es": "Une cada suma con su resultado.", "pares": [ { "izquierda": "23 + 14", "derecha": "37" }, { "izquierda": "45 + 38", "derecha": "83" }, { "izquierda": "125 + 60", "derecha": "185" }, { "izquierda": "18 + 15", "derecha": "33" } ], "explicacion_es": "23 + 14 = 37, 45 + 38 = 83, 125 + 60 = 185 y 18 + 15 = 33." }
+  ],
+  "vocabulario": [
+    { "en": "add", "es": "sumar", "aceptadas": ["suma", "sumas"], "ejemplo_en": "Add 23 and 14.", "ejemplo_es": "Suma 23 y 14." },
+    { "en": "subtract", "es": "restar", "aceptadas": ["resta", "restas"], "ejemplo_en": "Subtract 42 from 86.", "ejemplo_es": "Resta 42 de 86." },
+    { "en": "in all", "es": "en total", "aceptadas": ["total", "en todo"], "ejemplo_en": "How many seeds in all?", "ejemplo_es": "¿Cuántas semillas en total?" },
+    { "en": "left", "es": "quedan", "aceptadas": ["queda", "sobran", "sobra"], "ejemplo_en": "How many are left?", "ejemplo_es": "¿Cuántas quedan?" },
+    { "en": "ones", "es": "unidades", "aceptadas": ["unidad"], "ejemplo_en": "Start with the ones.", "ejemplo_es": "Empieza por las unidades." },
+    { "en": "tens", "es": "decenas", "aceptadas": ["decena"], "ejemplo_en": "45 has 4 tens.", "ejemplo_es": "45 tiene 4 decenas." },
+    { "en": "hundreds", "es": "centenas", "aceptadas": ["centena", "cientos"], "ejemplo_en": "348 has 3 hundreds.", "ejemplo_es": "348 tiene 3 centenas." },
+    { "en": "digits", "es": "cifras", "aceptadas": ["cifra", "dígitos", "digitos", "dígito"], "ejemplo_en": "348 has 3 digits.", "ejemplo_es": "348 tiene 3 cifras." },
+    { "en": "seeds", "es": "semillas", "aceptadas": ["semilla"], "ejemplo_en": "I plant 12 seeds.", "ejemplo_es": "Siembro 12 semillas." }
+  ]
+}

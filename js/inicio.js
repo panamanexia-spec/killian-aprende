@@ -58,8 +58,10 @@ function charlaLine(c, plan){
 /* Pendientes que salen solos: estudiar para un examen (3 días de clase antes) y practicar una charla (2 días antes). */
 function autoItems(){
   var t = todayKey(), out = [];
+  var ag0 = agendaData(), owned = {};   /* si la agenda ya trae tareas de ese tema, la agenda manda y no se repite el pendiente automático */
+  ag0.tareas.forEach(function(x){ if(x.tema) owned[x.tema] = 1; });
   allTemas().forEach(function(tm){
-    var E = tm.fecha_examen; if(!E || !isDate(E) || E < t) return;
+    var E = tm.fecha_examen; if(!E || !isDate(E) || E < t || owned[tm.id]) return;
     var cur = null;   /* un solo pendiente por tema: el del día que toca */
     [3, 2, 1].forEach(function(n){
       var d = prevSchoolDay(E, n); if(d > t) return;
@@ -92,10 +94,11 @@ function markAutoDone(kind, id){
 }
 function dueItems(){
   var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
-  ag.tareas.forEach(function(x){ if(x.fecha <= t && x.fecha >= old) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
+  var grace = addDays(t, -2);   /* lo que ya pasó hace más de 2 días ya no se le pide a Killian (mamá lo sigue viendo como atrasado) */
+  ag.tareas.forEach(function(x){ if(x.fecha <= t && x.fecha >= old && (x.entrega || x.fecha) >= grace) items.push({kind:"task", id:x.id, x:x, sort:(x.entrega||x.fecha)+"1"}); });
   var linked = {};
   ag.tareas.forEach(function(x){ (x.videos || []).forEach(function(id){ linked[id] = 1; }); });
-  ag.videos.forEach(function(v){ if(!linked[v.id] && v.fecha <= t && v.fecha >= old) items.push({kind:"vid", id:v.id, x:v, sort:addDays(v.fecha, 1)+"2"}); });
+  ag.videos.forEach(function(v){ if(!linked[v.id] && v.fecha <= t && v.fecha >= old && addDays(v.fecha, 1) >= grace) items.push({kind:"vid", id:v.id, x:v, sort:addDays(v.fecha, 1)+"2"}); });
   autoItems().forEach(function(it){ it.sort = it.x.entrega + "1"; items.push(it); });
   items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
   return items;
@@ -226,7 +229,10 @@ function taskCard(it){
   if(cc) acts += '<button class="btn btn-blue btn-big" type="button" data-act="ch-open" data-id="'+esc(x.charla)+'" data-m="'+((x.modo === "final" || (cplan && cplan.fin)) ? "final" : "")+'">🎤 Practicar mi charla (5 min)</button>';
   var tmx = it.kind === "task" && x.tema ? temaById(x.tema) : null;
   if(tmx && tmx.resumen && tmx.resumen.length) acts += '<button class="btn btn-blue" type="button" data-act="study" data-id="'+esc(tmx.id)+'">📖 Estudiar mi resumen</button>';
-  if(tmx && (x.auto || !(tmx.fecha_examen && tmx.fecha_examen >= todayKey() && prevSchoolDay(tmx.fecha_examen, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
+  if(tmx){
+    var rep = x.modo === "repasar" || (!x.auto && /repasar/i.test(x.titulo || "") && wrongIdsOf(tmx.id).length > 0);
+    acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(rep ? "errors" : "")+'">'+(rep ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
+  }
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   if(!hasCp) acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
   var home = (x.en_casa && x.en_casa.length) ? x.en_casa.slice() : (x.en_casa ? [] : kidDetail(x.detalle));
