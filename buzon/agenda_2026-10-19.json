@@ -1,0 +1,875 @@
+{
+  "tipo": "agenda",
+  "semana": "2026-10-19",
+  "tareas": [
+    {
+      "id": "w43-t01",
+      "materia": "Artistic Expressions",
+      "titulo": "🎨 Hoja de 14 × 17 sobre Van Gogh",
+      "fecha": "2026-10-18",
+      "entrega": "2026-10-19",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Hacer una hoja de 14 × 17 pulgadas con obras del pintor Vincent van Gogh",
+        "Llevar lápices de colores"
+      ],
+      "detalle": "Unit 3 Boost up your Knowledge – Topic 3.0 Painters' Chat – Vincent Van Gogh. External: Create an 14 x 17 inch sheet featuring the work of painter Vincent Van Gogh. Internal: Gives a talk about the painter, presents a slide, explains the figures. Observations: Bring color pencil.",
+      "copiar": {
+        "instrucciones_mama": "Hoja de 14 × 17 pulgadas. Título arriba, 2 o 3 imágenes de sus cuadros (impresas o dibujadas) y los datos abajo.",
+        "partes": [
+          {
+            "titulo": "1. El título",
+            "texto": "Vincent van Gogh",
+            "traduccion_es": "Se dice: van GÓU.",
+            "dibujo": "Escríbelo grande y de colores arriba de la hoja."
+          },
+          {
+            "titulo": "2. Los datos",
+            "texto": "Vincent van Gogh was a painter from the Netherlands.\nHe lived from 1853 to 1890.\nHe painted with bright colors and swirly lines.\nHe painted more than 800 paintings.",
+            "traduccion_es": "Fue un pintor de los Países Bajos.\nVivió de 1853 a 1890.\nPintaba con colores brillantes y líneas en remolino.\nPintó más de 800 cuadros."
+          },
+          {
+            "titulo": "3. Sus cuadros famosos",
+            "texto": "The Starry Night\nSunflowers\nThe Bedroom",
+            "traduccion_es": "La noche estrellada (STÁ-ri NÁIT)\nLos girasoles (SÁN-flau-ers)\nEl dormitorio",
+            "dibujo": "Pega o dibuja los cuadros y escribe el nombre debajo de cada uno."
+          },
+          {
+            "titulo": "4. Si la maestra te pregunta",
+            "texto": "My favorite painting is The Starry Night. It has a blue sky with swirly stars.",
+            "traduccion_es": "Mi cuadro favorito es La noche estrellada. Tiene un cielo azul con estrellas en remolino."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t02",
+      "materia": "Reading and Composition",
+      "titulo": "📘 Cuaderno pág. 41: prefijos inter- e intra-",
+      "fecha": "2026-10-18",
+      "entrega": "2026-10-19",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Cuaderno de trabajo pág. 41: completar la tabla y escribir una oración con cada palabra"
+      ],
+      "detalle": "Unit 6 Prefixes inter and intra. External: Work in the page 41 from your Textbook Volume 2 Prefixes inter and intra. Internal: teacher explains, students apply in textbook and submit. Bring device, notebook, textbook, school supplies.",
+      "copiar": {
+        "instrucciones_mama": "Respuestas de la pág. 41 (Word Study: Prefixes inter- and intra-). Inter- = entre; intra- = dentro de.",
+        "partes": [
+          {
+            "titulo": "1. La regla",
+            "texto": "inter- = between (entre) ↔️\nintra- = inside (dentro de) 🏠",
+            "dibujo": "No hace falta copiarla: es para entender."
+          },
+          {
+            "titulo": "2. La tabla",
+            "texto": "Copia la palabra nueva y su significado en cada fila.",
+            "tabla": [
+              [
+                "Prefix",
+                "Base Word",
+                "New Word",
+                "Meaning of New Word"
+              ],
+              [
+                "inter-",
+                "national",
+                "international",
+                "between nations"
+              ],
+              [
+                "intra-",
+                "state",
+                "intrastate",
+                "inside one state"
+              ],
+              [
+                "inter-",
+                "twine",
+                "intertwine",
+                "to twist together"
+              ],
+              [
+                "intra-",
+                "city",
+                "intracity",
+                "inside one city"
+              ]
+            ]
+          },
+          {
+            "titulo": "3. Oraciones 1 y 2",
+            "texto": "The Olympics are an international event.\nThe bus makes an intrastate trip in Texas.",
+            "traduccion_es": "Las Olimpiadas son un evento internacional.\nEl bus hace un viaje dentro del estado de Texas."
+          },
+          {
+            "titulo": "4. Oraciones 3 y 4",
+            "texto": "The vines intertwine around the fence.\nWe took an intracity bus to the park.",
+            "traduccion_es": "Las enredaderas se entrelazan en la cerca.\nTomamos un bus dentro de la ciudad para ir al parque."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t03",
+      "materia": "Educación Física",
+      "titulo": "📚 Estudiar: el trabajo formal (documentos en Teams)",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-20",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Repasar la documentación del formal que está en Teams",
+        "Preparar folder del color, hojas de raya, hoja de evaluación y dispositivo"
+      ],
+      "detalle": "Unidad III Trabajo Formal – Posturas correctas del cuerpo. Externas: Repasa la documentación brindada sobre el tema del formal que se encuentra en Teams. Trae folder del color correspondiente, hojas de raya, hoja de evaluación, dispositivo electrónico para la investigación. Internas: realiza sumativa sobre el tema del formal; elabora el trabajo formal."
+    },
+    {
+      "id": "w43-t04",
+      "materia": "Educación Musical",
+      "titulo": "🎼 Pentagrama con clave de sol y 6 notas",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-20",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "En el cuaderno: dibujar un pentagrama con clave de sol y poner 6 notas distintas"
+      ],
+      "detalle": "Unit 7 Stem Rule – Correct use of the stem in music. External: Draw a musical staff with a treble clef in the notebook and place six different notes on it. Internal: complete pages 20 and 21 of the music book in class. Remember to bring the book.",
+      "copiar": {
+        "instrucciones_mama": "En el cuaderno de música. Las líneas se cuentan de abajo hacia arriba. Si la maestra pidió otras figuras, cambia la columna Figura; la regla de la plica es la misma.",
+        "partes": [
+          {
+            "titulo": "1. El pentagrama",
+            "texto": "Dibuja 5 líneas rectas con regla.\nAl inicio, dibuja la clave de sol: su rizo se enrosca en la 2.ª línea.",
+            "dibujo": "5 líneas y la clave de sol 🎼"
+          },
+          {
+            "titulo": "2. La regla de la plica",
+            "texto": "Debajo de la 3.ª línea: el palito va hacia ARRIBA, a la derecha. ⬆️\nEn la 3.ª línea o más arriba: el palito va hacia ABAJO, a la izquierda. ⬇️"
+          },
+          {
+            "titulo": "3. Las 6 notas",
+            "texto": "Pon estas notas de izquierda a derecha y escribe su nombre debajo.",
+            "tabla": [
+              [
+                "Nota",
+                "Dónde va",
+                "Figura",
+                "Palito"
+              ],
+              [
+                "Mi",
+                "1.ª línea",
+                "Negra",
+                "Arriba ⬆️"
+              ],
+              [
+                "Sol",
+                "2.ª línea",
+                "Blanca",
+                "Arriba ⬆️"
+              ],
+              [
+                "La",
+                "2.º espacio",
+                "Corchea",
+                "Arriba ⬆️"
+              ],
+              [
+                "Si",
+                "3.ª línea",
+                "Negra",
+                "Abajo ⬇️"
+              ],
+              [
+                "Re",
+                "4.ª línea",
+                "Blanca",
+                "Abajo ⬇️"
+              ],
+              [
+                "Fa",
+                "5.ª línea",
+                "Negra",
+                "Abajo ⬇️"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t05",
+      "materia": "Reading and Conversation",
+      "titulo": "🎤 Practicar mi charla: Thunder Rose",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-20",
+      "evaluacion": "sumativa y formativa",
+      "charla": "thunder-rose",
+      "tema": "thunder-rose",
+      "en_casa": [
+        "Continuar preparando la presentación oral (pendiente)",
+        "Estudiar las notas del cuaderno"
+      ],
+      "detalle": "Unit 1 Oral Presentation The Thunder Rose. External: continuation of the presentation (pending). Study the notes written in your notebooks. Internal: reviews the story and key points, reschedules the oral presentation for a new date, practices with a partner. Textbook, laptop and school supplies."
+    },
+    {
+      "id": "w43-t06",
+      "materia": "Math",
+      "titulo": "🔢 Math págs. 369 a 372: ecuaciones en problemas",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-20",
+      "evaluacion": "formativa",
+      "tema": "math-patrones-ecuaciones",
+      "en_casa": [
+        "Trabajar las páginas 369–372 del libro",
+        "Llevar el libro Unidad 2"
+      ],
+      "detalle": "Unit 12 Algebra – Determining Unknowns in Equations – Your Turn. External: Apply your knowledge by working from the pages 369-372. BRING TEXTBOOK UNIT 2. Bring textbook, device, charger, school supplies, notebook.",
+      "copiar": {
+        "instrucciones_mama": "Lesson 12-2. Killian ya hizo la 3, la 4 y la 5. Revisa la 5: escribió que reparte entre 4 amigos, pero 32 ÷ 8 = 4 significa 8 amigos con 4 dulces cada uno; aquí va la versión corregida. En la 4 falta decir por qué la ecuación sirve para las dos historias.",
+        "partes": [
+          {
+            "titulo": "Pág. 369 – Pregunta 1: 8 × 7 = □",
+            "texto": "There are 8 boxes. Each box has 7 crayons. How many crayons are there in all?\n8 × 7 = 56\n8 = boxes, 7 = crayons in each box, 56 = crayons in all.",
+            "traduccion_es": "Hay 8 cajas. Cada caja tiene 7 crayolas. ¿Cuántas crayolas hay en total?\n8 = cajas, 7 = crayolas en cada caja, 56 = crayolas en total.",
+            "dibujo": "8 cajitas con 7 rayitas cada una."
+          },
+          {
+            "titulo": "Pág. 369 – Pregunta 2: 27 ÷ □ = 3",
+            "texto": "I have 27 stickers. I give 3 stickers to each friend. How many friends get stickers?\n27 ÷ 9 = 3\n27 = stickers in all, 9 = friends, 3 = stickers for each friend.",
+            "traduccion_es": "Tengo 27 stickers. Le doy 3 a cada amigo. ¿A cuántos amigos les doy?\n27 = stickers en total, 9 = amigos, 3 = stickers para cada amigo."
+          },
+          {
+            "titulo": "Pág. 370 – Pregunta 4 (lo que falta)",
+            "texto": "The equation matches both stories because they both have 30 things in all in groups of 5. The box is the number of groups: 6.",
+            "traduccion_es": "La ecuación sirve para las dos historias porque las dos tienen 30 cosas en total en grupos de 5. La cajita es el número de grupos: 6."
+          },
+          {
+            "titulo": "Pág. 370 – Pregunta 5 (corregida)",
+            "texto": "Michael has 32 candies. He gives 4 candies to each friend. How many friends get candies?\n32 ÷ 8 = 4",
+            "traduccion_es": "Michael tiene 32 dulces. Le da 4 a cada amigo. ¿A cuántos amigos les da?\n(Son 8 amigos con 4 dulces cada uno.)"
+          },
+          {
+            "titulo": "Pág. 371 – Pregunta 6",
+            "texto": "An equation helps me see what I know and what I need to find. Then I can solve the problem.",
+            "traduccion_es": "Una ecuación me ayuda a ver lo que sé y lo que tengo que encontrar. Así puedo resolver el problema."
+          },
+          {
+            "titulo": "Pág. 371 – Pregunta 7",
+            "texto": "C. 5 × □ = 40\nEach shirt cost $8.",
+            "traduccion_es": "5 camisas por el precio de cada una = $40. Cada camisa costó $8.",
+            "dibujo": "Encierra la letra C."
+          },
+          {
+            "titulo": "Pág. 372 – Pregunta 8",
+            "texto": "C. There were 4 people sharing some stamps. Each person got 6 stamps.\n24 ÷ 4 = 6",
+            "traduccion_es": "4 personas comparten estampillas y cada una recibe 6. En total eran 24.",
+            "dibujo": "Encierra la letra C."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t07",
+      "materia": "Basic Computer Skills",
+      "titulo": "💻 GoSteam: material teórico",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-20",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Seguir con el material teórico asignado en GoSteam",
+        "Cargar el dispositivo"
+      ],
+      "detalle": "Unit 1 Kubo the Forest Ranger – Robotic. External: Students will continue working on the theoretical material assigned on the GoSteam platform. Please bring your devices fully charged."
+    },
+    {
+      "id": "w43-t08",
+      "materia": "Español",
+      "titulo": "📚 Estudiar: Los adverbios",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-22",
+      "evaluacion": "sumativa",
+      "tema": "es-adverbios",
+      "en_casa": [
+        "Estudiar el resumen pegado en el cuaderno de Español"
+      ],
+      "detalle": "Sumativa de adverbios el 22/10. Estudia el resumen pegado en el cuaderno de Español sobre el tema de los adverbios."
+    },
+    {
+      "id": "w43-t09",
+      "materia": "Folklore",
+      "titulo": "🖍️ Investigar y dibujar: quincha, adobe y junta",
+      "fecha": "2026-10-19",
+      "entrega": "2026-10-21",
+      "en_casa": [
+        "En el cuaderno, investigar e ilustrar a mano: 1. Quincha 2. Adobe 3. Junta"
+      ],
+      "detalle": "Unidad 3 Baile de la Feria Folklórica – Bailes panameños. Externas: Se recomienda traer sombrero los niños y faldón las niñas. En su cuaderno investigar e ilustrar a mano: 1. Quincha 2. Adobe (material de construcción) 3. Junta 4. Almirez 5. Mola. Internas: ensayo del baile de la Feria en el gimnasio.",
+      "copiar": {
+        "instrucciones_mama": "En el cuaderno de Folklore: título, texto y dibujo a mano para cada uno.",
+        "partes": [
+          {
+            "titulo": "1. La quincha",
+            "texto": "La quincha es una forma antigua de hacer casas en el campo de Panamá. Se arma una pared con palos y cañas cruzadas, y luego se rellena con barro mezclado con paja.",
+            "dibujo": "Una pared de palos cruzados con barro."
+          },
+          {
+            "titulo": "2. El adobe",
+            "texto": "El adobe es un ladrillo de barro y paja que se seca al sol. Con adobe se hicieron casas e iglesias antiguas, sobre todo en Azuero. Las paredes de adobe mantienen la casa fresca.",
+            "dibujo": "Ladrillos de adobe secándose al sol."
+          },
+          {
+            "titulo": "3. La junta",
+            "texto": "La junta es una costumbre del campo panameño. Los vecinos se reúnen para ayudar a una familia a sembrar, cosechar o construir su casa. El dueño les da comida y al final hay música y baile.",
+            "dibujo": "Vecinos trabajando juntos frente a una casa."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t10",
+      "materia": "Folklore",
+      "titulo": "🖍️ Investigar y dibujar: almirez y mola",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-21",
+      "en_casa": [
+        "En el cuaderno, investigar e ilustrar a mano: 4. Almirez 5. Mola"
+      ],
+      "detalle": "Segunda parte de la investigación ilustrada de Folklore (quincha, adobe, junta, almirez, mola).",
+      "copiar": {
+        "partes": [
+          {
+            "titulo": "4. El almirez",
+            "texto": "El almirez es un recipiente pequeño, de metal o madera, con un mazo. Se usa en la cocina para machacar ajo, especias o granos. Es como un pilón pequeño.",
+            "dibujo": "Un vaso con un mazo adentro."
+          },
+          {
+            "titulo": "5. La mola",
+            "texto": "La mola es un arte de las mujeres gunas de Panamá. Se cosen varias capas de tela de colores y se recortan para formar dibujos de animales o figuras. Adorna la blusa de la mujer guna y es un símbolo de Panamá.",
+            "dibujo": "Una mola de colores con un animal, por ejemplo una tortuga 🐢."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t11",
+      "materia": "Reading and Composition",
+      "titulo": "📘 Cuaderno pág. 54: sufijos -ity y -ty",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-21",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Trabajar la página 54 del libro (Textbook Volume 2)"
+      ],
+      "detalle": "Unit 6 Suffixes ity and ty. External: Work in the page 54 from your Textbook Volume 2 Suffixes ity and ty. Bring your device, notebook, textbook, school supplies.",
+      "copiar": {
+        "instrucciones_mama": "Workbook pág. 54 (Module 7). Se llena la tabla con 3 palabras en cada columna y 3 oraciones.",
+        "partes": [
+          {
+            "titulo": "1. La tabla",
+            "texto": "Copia 3 palabras en cada columna.",
+            "tabla": [
+              [
+                "-ity",
+                "-ty"
+              ],
+              [
+                "activity",
+                "safety"
+              ],
+              [
+                "ability",
+                "loyalty"
+              ],
+              [
+                "electricity",
+                "royalty"
+              ]
+            ]
+          },
+          {
+            "titulo": "2. Tres oraciones",
+            "texto": "Soccer is my favorite activity.\nSafety is important at school.\nMy dog shows loyalty to me.",
+            "traduccion_es": "El fútbol es mi actividad favorita.\nLa seguridad es importante en la escuela.\nMi perro me demuestra lealtad."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t12",
+      "materia": "Math",
+      "titulo": "📐 Página 429: dibujo de cuadriláteros",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-21",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Tener lista la actividad de la página 429: dibujar lo que pide"
+      ],
+      "detalle": "Unit 14 Geometry – Comparing Quadrilaterals – Your Turn. External: Bring ready for class from page 429 this activity that you have to draw what it is requested.",
+      "copiar": {
+        "instrucciones_mama": "Lesson 14-1. Se dibuja en la cuadrícula de la pág. 429, usando las esquinas de los cuadritos.",
+        "partes": [
+          {
+            "titulo": "1. It is not a rhombus",
+            "texto": "Dibuja un rectángulo largo: 4 cuadritos de largo y 2 de alto.\nNo es rombo porque sus lados no miden todos igual.",
+            "dibujo": "▭ rectángulo de 4 × 2"
+          },
+          {
+            "titulo": "2. It is not a rectangle",
+            "texto": "Dibuja un trapecio: abajo una línea de 5 cuadritos, arriba una de 3 cuadritos centrada, y une las puntas.\nNo es rectángulo porque no tiene esquinas rectas.",
+            "dibujo": "⏢ trapecio"
+          },
+          {
+            "titulo": "3. Not a rectangle, but a rhombus",
+            "texto": "Dibuja un rombo (como un diamante): pon 4 puntos — arriba en el centro, abajo en el centro, y uno a cada lado, 2 cuadritos a la izquierda y 2 a la derecha. Únelos.\nEs rombo porque sus 4 lados miden igual, y no es rectángulo porque no tiene esquinas rectas.",
+            "dibujo": "◇ rombo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t13",
+      "materia": "Español",
+      "titulo": "📖 Leer con mamá: «¿Quién anda ahí?»",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-21",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Leer la lectura del libro de Español (págs. 106–117)",
+        "Llevar libro de texto y cuaderno"
+      ],
+      "detalle": "Unidad 6 Bélgica – Literatura – Lectura: «Quién anda ahí». Internas: lluvia de ideas sobre la lectura; actividades del libro de texto págs. 106 a 117; revisa y entrega para su evaluación sumativa. Traer libro de texto y cuaderno."
+    },
+    {
+      "id": "w43-t14",
+      "materia": "Reading and Conversation",
+      "titulo": "📚 Estudiar: Luz Sees the Light",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-21",
+      "evaluacion": "sumativa y formativa",
+      "tema": "rc-luz-sees-the-light",
+      "en_casa": [
+        "Repasar personajes, lugar, problema, solución y mensaje del cuento",
+        "Llevar el libro de conversación Volumen 2"
+      ],
+      "detalle": "Unit 1 Literary Elements of Luz Sees the Light. External: Brings Volume 2 of the conversation book to class. Internal: reviews main events and characters; identifies setting, characters, problem, solution and theme; writes a short paragraph about the story's message. Tema de práctica: rc-luz-sees-the-light."
+    },
+    {
+      "id": "w43-t15",
+      "materia": "Español",
+      "titulo": "📚 Estudiar: Los adverbios",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-22",
+      "evaluacion": "sumativa",
+      "tema": "es-adverbios",
+      "detalle": "Segundo día de estudio para la sumativa de adverbios del 22/10."
+    },
+    {
+      "id": "w43-t16",
+      "materia": "Math",
+      "titulo": "📚 Estudiar: sumas y restas (formal)",
+      "fecha": "2026-10-20",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa y formativa",
+      "tema": "math-sumas-restas",
+      "detalle": "Sustentación del formal (Math + Science) el 23/10: sumas y restas de números de 2 y 3 cifras."
+    },
+    {
+      "id": "w43-t17",
+      "materia": "Español",
+      "titulo": "🔁 Repasar mis errores: Los adverbios",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-22",
+      "evaluacion": "sumativa",
+      "tema": "es-adverbios",
+      "detalle": "Día antes de la sumativa de adverbios: repasar solo los errores."
+    },
+    {
+      "id": "w43-t18",
+      "materia": "Reading and Conversation",
+      "titulo": "📚 Repasar: Thunder Rose (worksheet)",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-22",
+      "evaluacion": "sumativa y formativa",
+      "tema": "thunder-rose",
+      "detalle": "Unit 1 Worksheet Thunder Rose (en clase). Internal: reviews main characters, events and message of Thunder Rose; completes a worksheet with questions and activities; checks answers with a partner."
+    },
+    {
+      "id": "w43-t19",
+      "materia": "Culture and Value",
+      "titulo": "✍️ Copiar párrafo 1: líderes tradicionales",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Copiar a mano el párrafo 1 (5 líneas) sobre Traditional Leadership"
+      ],
+      "detalle": "Unit 4 Leadership and Governance – Traditional Leadership and Presidents. External: Brings a handwritten research paper (2 paragraphs, 5 lines each) about Traditional Leadership and Presidents, and a medium-sized picture related to the topic. Internal: Presidential Pop-Up Frame; creates and shares a mini-poster. Brings culture and values notebook.",
+      "copiar": {
+        "instrucciones_mama": "Borrador escrito sin las notas del cuaderno de Culture and Values. Si la maestra dio otro enfoque, avísale a Claude en el chat para ajustarlo.",
+        "partes": [
+          {
+            "titulo": "Title",
+            "texto": "Traditional Leadership and Presidents",
+            "traduccion_es": "Liderazgo tradicional y presidentes"
+          },
+          {
+            "titulo": "Paragraph 1",
+            "texto": "A traditional leader guides a community using old customs. In Panama, the Guna people have leaders called sahilas. The sahila meets the people in the congress house. He gives advice and helps solve problems. People respect traditional leaders because they keep their culture alive.",
+            "traduccion_es": "Un líder tradicional guía a una comunidad con costumbres antiguas. En Panamá, los gunas tienen líderes llamados sahilas. El sahila se reúne con la gente en la casa del congreso. Da consejos y ayuda a resolver problemas. La gente respeta a los líderes tradicionales porque mantienen viva su cultura."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t20",
+      "materia": "Science",
+      "titulo": "📚 Estudiar: Life cycle and traits",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa",
+      "tema": "sci-life-cycle-traits",
+      "detalle": "Test de Science el 23/10 (Unit 4 Life cycle and traits). La maestra enviará los temas y números de página por Teams."
+    },
+    {
+      "id": "w43-t21",
+      "materia": "Math",
+      "titulo": "📚 Estudiar: sumas y restas (formal)",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa y formativa",
+      "tema": "math-sumas-restas",
+      "detalle": "Segundo día de estudio para la sustentación del formal del 23/10."
+    },
+    {
+      "id": "w43-t22",
+      "materia": "Reading and Composition",
+      "titulo": "📘 Cuaderno pág. 58: sufijos -ty y -ity",
+      "fecha": "2026-10-22",
+      "entrega": "2026-10-23",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Trabajar la página 58 del libro (Textbook Volume 2)"
+      ],
+      "detalle": "Unit 7 Suffixes ity and ty. External: Work in the page 58 from your Textbook Volume 2 Suffixes ity and ty. Bring your device, notebook, textbook, school supplies.",
+      "copiar": {
+        "instrucciones_mama": "Workbook pág. 58 (Module 7). Tabla y una oración por palabra.",
+        "partes": [
+          {
+            "titulo": "1. La tabla",
+            "texto": "Copia la palabra nueva y su significado.",
+            "tabla": [
+              [
+                "Suffix",
+                "Base Word",
+                "New Word",
+                "Meaning"
+              ],
+              [
+                "-ty",
+                "safe",
+                "safety",
+                "being safe"
+              ],
+              [
+                "-ity",
+                "diverse",
+                "diversity",
+                "many different kinds"
+              ],
+              [
+                "-ty",
+                "loyal",
+                "loyalty",
+                "being loyal"
+              ],
+              [
+                "-ity",
+                "secure",
+                "security",
+                "being safe and protected"
+              ]
+            ]
+          },
+          {
+            "titulo": "2. Cuatro oraciones",
+            "texto": "We wear helmets for safety.\nOur class has a lot of diversity.\nMy dog shows loyalty to my family.\nThe guard keeps our school's security.",
+            "traduccion_es": "Usamos casco por seguridad.\nNuestra clase tiene mucha diversidad.\nMi perro demuestra lealtad a mi familia.\nEl guardia cuida la seguridad de nuestra escuela."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t23",
+      "materia": "Culture and Value",
+      "titulo": "✍️ Copiar párrafo 2: presidentes + imagen",
+      "fecha": "2026-10-22",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Copiar a mano el párrafo 2 (5 líneas)",
+        "Guardar la imagen mediana en el bulto"
+      ],
+      "detalle": "Entrega del trabajo escrito a mano y la imagen para el Presidential Pop-Up Frame (sumativa del 23/10).",
+      "copiar": {
+        "partes": [
+          {
+            "titulo": "Paragraph 2",
+            "texto": "A president is the leader of a country. In Panama, people vote to choose the president every five years. The president works with other leaders to make the country better. The president of Panama today is José Raúl Mulino. A good leader listens to the people and is honest.",
+            "traduccion_es": "Un presidente es el líder de un país. En Panamá, la gente vota para elegir al presidente cada cinco años. El presidente trabaja con otros líderes para mejorar el país. El presidente de Panamá hoy es José Raúl Mulino. Un buen líder escucha a la gente y es honesto."
+          },
+          {
+            "titulo": "La imagen",
+            "texto": "Busca con mamá una imagen mediana: un sahila guna o el Palacio de las Garzas. Guárdala en el bulto.",
+            "dibujo": "A color o en blanco y negro."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t24",
+      "materia": "Science",
+      "titulo": "🔁 Repasar mis errores: Life cycle and traits",
+      "fecha": "2026-10-22",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa",
+      "tema": "sci-life-cycle-traits",
+      "detalle": "Día antes del test de Science: repasar solo los errores."
+    },
+    {
+      "id": "w43-t25",
+      "materia": "Math",
+      "titulo": "🔁 Repasar mis errores: sumas y restas",
+      "fecha": "2026-10-22",
+      "entrega": "2026-10-23",
+      "evaluacion": "sumativa y formativa",
+      "tema": "math-sumas-restas",
+      "detalle": "Unit 10 Plant Life and Numbers – Adding Subtracting Whole Numbers 2/3 digits – FORMAL TEST. External: Students will have the Sustentation TEST of the Formal together with Math and Science about Adding and Subtracting whole numbers with 2 and 3 digits."
+    },
+    {
+      "id": "w43-t27",
+      "materia": "Reading and Composition",
+      "titulo": "✍️ Cuaderno pág. 20: rocas raras (Text Structure)",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-23",
+      "evaluacion": "formativa",
+      "tema": "comp-able-ible",
+      "en_casa": [
+        "Cuaderno de trabajo (Grade 4, Module 6 Week 2) pág. 20: Text Structure, preguntas de «Weird and Wondrous Rocks»"
+      ],
+      "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
+      "copiar": {
+        "instrucciones_mama": "Respuestas cortas sacadas de las págs. 37 y 40 de «Weird and Wondrous Rocks». En la 4, otra respuesta válida sería «problem and solution»; la dejé en «cause and effect» porque es el tema de la página.",
+        "partes": [
+          {
+            "titulo": "Pág. 20 – Pregunta 1",
+            "texto": "1. The rocks may ring because they have a lot of iron. They may also ring because of stress from freezing and thawing again and again.",
+            "traduccion_es": "Las rocas pueden sonar porque tienen mucho hierro. También pueden sonar por la presión de congelarse y descongelarse una y otra vez."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 2",
+            "texto": "2. The author wants to explain why the rocks ring.",
+            "traduccion_es": "El autor quiere explicar por qué suenan las rocas."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 3",
+            "texto": "3. They wanted to know how the rocks move across the dry lakebed and leave tracks.",
+            "traduccion_es": "Querían saber cómo se mueven las rocas por el lago seco y dejan huellas."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 4",
+            "texto": "4. Cause and effect.",
+            "traduccion_es": "Causa y efecto."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 5",
+            "texto": "5. They set up a weather station to measure wind and rain. They put tracking devices in rocks and used cameras to record the movement.",
+            "traduccion_es": "Pusieron una estación del clima para medir el viento y la lluvia. Pusieron rastreadores en las rocas y usaron cámaras para grabar el movimiento."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 6",
+            "texto": "6. Rain and snow make a pond, and thin ice forms on top. The sun breaks the ice into big sheets. Then the wind pushes the ice, and the ice pushes the rocks.",
+            "traduccion_es": "La lluvia y la nieve forman un charco y arriba se hace hielo fino. El sol rompe el hielo en pedazos grandes. Luego el viento empuja el hielo y el hielo empuja las rocas."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t28",
+      "materia": "Reading and Composition",
+      "titulo": "🧩 Cuaderno pág. 21: crucigrama -able / -ible",
+      "fecha": "2026-10-22",
+      "entrega": "2026-10-23",
+      "evaluacion": "formativa",
+      "tema": "comp-able-ible",
+      "en_casa": [
+        "Pág. 21: crucigrama de sufijos -able e -ible"
+      ],
+      "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
+      "copiar": {
+        "instrucciones_mama": "Respuestas del crucigrama.",
+        "partes": [
+          {
+            "titulo": "Pág. 21 – Cómo se llena",
+            "texto": "Escribe una letra en cada cuadrito.\nAcross = horizontal ➡️\nDown = vertical ⬇️"
+          },
+          {
+            "titulo": "Pág. 21 – Across (horizontal ➡️)",
+            "texto": "Escribe estas palabras en los cuadritos horizontales y en las líneas de abajo.",
+            "tabla": [
+              [
+                "#",
+                "Palabra",
+                "Significado"
+              ],
+              [
+                "4",
+                "convertible",
+                "carro sin techo"
+              ],
+              [
+                "5",
+                "incredible",
+                "increíble"
+              ],
+              [
+                "7",
+                "agreeable",
+                "agradable"
+              ],
+              [
+                "8",
+                "believable",
+                "creíble"
+              ],
+              [
+                "9",
+                "comfortable",
+                "cómodo"
+              ]
+            ]
+          },
+          {
+            "titulo": "Pág. 21 – Down (vertical ⬇️)",
+            "texto": "Escribe estas palabras en los cuadritos verticales y en las líneas de abajo.",
+            "tabla": [
+              [
+                "#",
+                "Palabra",
+                "Significado"
+              ],
+              [
+                "1",
+                "predictable",
+                "predecible"
+              ],
+              [
+                "2",
+                "terrible",
+                "terrible"
+              ],
+              [
+                "3",
+                "affordable",
+                "barato"
+              ],
+              [
+                "6",
+                "invisible",
+                "invisible"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "materiales": [
+    {
+      "id": "w43-m01",
+      "materia": "Artistic Expressions",
+      "material": "Hoja de 14 × 17 pulgadas sobre Van Gogh y lápices de colores",
+      "llevar_el": "2026-10-19"
+    },
+    {
+      "id": "w43-m02",
+      "materia": "Español",
+      "material": "Libro de caligrafía, lápiz y lápices de colores",
+      "llevar_el": "2026-10-19"
+    },
+    {
+      "id": "w43-m03",
+      "materia": "Ciencias Sociales",
+      "material": "Folder del formal con las hojas organizadas",
+      "llevar_el": "2026-10-19"
+    },
+    {
+      "id": "w43-m04",
+      "materia": "Educación Física",
+      "material": "Folder del color del formal, hojas de raya y hoja de evaluación",
+      "llevar_el": "2026-10-20"
+    },
+    {
+      "id": "w43-m05",
+      "materia": "Educación Musical",
+      "material": "Libro de música",
+      "llevar_el": "2026-10-20"
+    },
+    {
+      "id": "w43-m06",
+      "materia": "Math",
+      "material": "Libro de Matemáticas Unidad 2",
+      "llevar_el": "2026-10-20"
+    },
+    {
+      "id": "w43-m07",
+      "materia": "Folklore",
+      "material": "Sombrero para el ensayo del baile",
+      "llevar_el": "2026-10-21"
+    },
+    {
+      "id": "w43-m08",
+      "materia": "Reading and Conversation",
+      "material": "Libro de conversación Volumen 2",
+      "llevar_el": "2026-10-21"
+    },
+    {
+      "id": "w43-m09",
+      "materia": "Ciencias Sociales",
+      "material": "Folder del formal con las hojas organizadas",
+      "llevar_el": "2026-10-22"
+    },
+    {
+      "id": "w43-m10",
+      "materia": "Culture and Value",
+      "material": "Trabajo escrito a mano (2 párrafos) + imagen mediana + cuaderno de Culture and Values",
+      "llevar_el": "2026-10-23"
+    }
+  ],
+  "videos": [
+    {
+      "id": "w43-v03",
+      "materia": "Science",
+      "titulo": "Traits of animals (Experience 2)",
+      "url": "https://youtu.be/j3qtpHGInnI",
+      "fecha": "2026-10-21"
+    }
+  ],
+  "notas_para_mama": [
+    "18/10 ⚠️ Para mañana lunes: la hoja de 14 × 17 de Van Gogh (Artistic Expressions) y la página 41 de Reading and Composition.",
+    "19/10 Sumativa: Science – siembra de semillas (frijol lima y rábano) en clase. No hace falta bata. Dice que los materiales se comparten en Teams/equipos: revisar Teams por si hay que llevar algo. Llevar libro, borrador y sacapuntas.",
+    "19/10 Chino: hay presentación oral sumativa (Where is the toy) el 19/10 o el 23/10. No tenemos el texto, así que no hay práctica en la plataforma.",
+    "19/10 Caligrafía: los lunes de este trimestre se trabajan las págs. 73 a 111 del libro de caligrafía y cuentan como la sumativa #9.",
+    "20/10 Sumativa: Educación Física – prueba del trabajo formal. Repasar la documentación de Teams.",
+    "20/10 Sumativa: Reading and Conversation – continúa la presentación oral de Thunder Rose (la están reprogramando).",
+    "21/10 Sumativa: Reading and Conversation – elementos literarios de «Luz Sees the Light».",
+    "21/10 Español: actividades del libro págs. 106–117 («¿Quién anda ahí?»). El cierre dice evaluación sumativa aunque no viene marcada.",
+    "21/10 Folklore: ensayo del baile de la Feria en el gimnasio; llevar sombrero.",
+    "22/10 Sumativa: Español – los adverbios (resumen pegado en el cuaderno). Llevar la computadora para Progrentis.",
+    "22/10 Sumativa: Reading and Conversation – worksheet de Thunder Rose en clase.",
+    "23/10 Sumativa: Science – test de Life cycle and traits. La maestra mandará los temas y páginas por Teams.",
+    "23/10 Sumativa: Culture and Value – trabajo escrito a mano (2 párrafos de 5 líneas) sobre líderes tradicionales y presidentes + una imagen mediana.",
+    "23/10 Sumativa: Math – sustentación del formal (Math + Science): sumas y restas de 2 y 3 cifras.",
+    "Todos los días: libro, cuaderno, cartuchera, dispositivo cargado y cargador."
+  ]
+}
