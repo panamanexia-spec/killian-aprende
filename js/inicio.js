@@ -85,10 +85,15 @@ function autoItems(){
 }
 /* Al terminar una ronda de examen o una práctica de charla, esos pendientes se marcan hechos. */
 function markAutoDone(kind, id){
-  var H = S.home, ch = false;
+  var H = S.home, ch = false, t = todayKey();
   autoItems().forEach(function(it){
     var x = it.x; if(x.auto !== kind || (kind === "ex" ? x.tema : x.charla) !== id || H.tasks[it.id]) return;
     H.tasks[it.id] = Date.now(); ch = true;
+  });
+  /* también las tareas de la agenda que traen ese tema (o esa charla) y ya tocan: practicar = hecha (quedan en el registro) */
+  agendaData().tareas.forEach(function(x){
+    if(x.copiar || H.tasks[x.id] || x.fecha > t) return;
+    if((kind === "ex" && x.tema === id) || (kind === "ch" && x.charla === id)){ H.tasks[x.id] = Date.now(); ch = true; }
   });
   if(ch) saveHome();
 }
