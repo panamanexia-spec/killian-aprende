@@ -294,6 +294,7 @@ function render(opts){
     case "study": html = renderStudy(); break;
     case "charlas": html = renderCharlas(); break;
     case "charla": html = renderCharla(); break;
+    case "copiar": html = renderCopiar(); break;
     case "topics": html = renderTopics(); break;
     case "tema": html = renderTema(); break;
     case "stars": html = renderStars(); break;
@@ -322,6 +323,7 @@ app.addEventListener("click", function(ev){
   if(helperClick(act, el)) return;
   if(progClick(act, el)) return;
   if(charlaClick(act, el)) return;
+  if(copiarClick(act, el)) return;
   if(examClick(act, el, ev)) return;
   if(extraClick(act, el, ev)) return;
   switch(act){
@@ -374,7 +376,7 @@ function syncNow(){
    Solo se vuelven a aplicar cuando el archivo cambia. */
 function hashText(t){ var h = 5381; for(var i=0;i<t.length;i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0; return String(h >>> 0); }
 function fetchText(url){ return fetch(url, {cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error(url); return r.text(); }); }
-var AGENDA_SCHEMA = "|s3", KX_VERSION = "15-oct 1";
+var AGENDA_SCHEMA = "|s3", KX_VERSION = "18-oct 1";
 function loadProjectFiles(){
   if(window.KXSync && KXSync.enabled && !KXSync.hasSession()) return Promise.resolve();
   var changed = false;

@@ -18,6 +18,27 @@ function parseImportText(txt){
 }
 
 function strList(v){ return (Array.isArray(v) ? v : v ? [v] : []).map(str).filter(Boolean); }
+/* «copiar»: texto que Killian copia en el cuaderno, por partes (con traducción, dibujo y tabla opcionales). */
+function validateCopiar(c, n){
+  var E = [], out = {instrucciones_mama:"", partes:[]};
+  if(!c || typeof c !== "object" || Array.isArray(c)){ return {errors:[n + ": «copiar» debe ser un bloque con «partes»."], val:null}; }
+  out.instrucciones_mama = str(c.instrucciones_mama);
+  var ps = Array.isArray(c.partes) ? c.partes : [];
+  if(!ps.length) E.push(n + ": «copiar» necesita al menos una parte en «partes».");
+  ps.forEach(function(p, i){
+    var m = n + ", parte " + (i + 1);
+    if(!p || typeof p !== "object"){ E.push(m + ": no se entiende."); return; }
+    var part = {titulo:str(p.titulo), texto:String(p.texto == null ? "" : p.texto).replace(/\r/g, "").trim(), traduccion_es:str(p.traduccion_es), dibujo:str(p.dibujo), tabla:[]};
+    if(!part.titulo) E.push(m + ": falta el «titulo».");
+    if(!part.texto && !(Array.isArray(p.tabla) && p.tabla.length)) E.push(m + ": falta el «texto» (o una «tabla»).");
+    if(p.tabla != null){
+      if(!Array.isArray(p.tabla) || p.tabla.some(function(r){ return !Array.isArray(r); })) E.push(m + ": la «tabla» debe ser una lista de filas, por ejemplo [[\"Nota\",\"Dónde va\"],[\"Mi\",\"1.ª línea\"]].");
+      else part.tabla = p.tabla.map(function(r){ return r.map(function(c2){ return str(c2); }); });
+    }
+    out.partes.push(part);
+  });
+  return {errors:E, val:out};
+}
 function validateAgenda(o){
   var E = [], W = [], d = {semana:str(o.semana), tareas:[], materiales:[], videos:[], notas:[]};
   if(!isDate(d.semana)) E.push("La semana debe ser una fecha con este formato: 2026-10-12 (año-mes-día).");
@@ -39,6 +60,9 @@ function validateAgenda(o){
     var n = "Tarea " + (i + 1);
     if(!x || typeof x !== "object"){ E.push(n + ": no se entiende."); return; }
     var it = {id:uid("t", x, i, "t"), materia:str(x.materia), titulo:str(x.titulo), detalle:str(x.detalle), fecha:str(x.fecha), entrega:str(x.entrega), evaluacion:str(x.evaluacion), en_casa:strList(x.en_casa), repaso:strList(x.repaso), videos:strList(x.videos), charla:str(x.charla), tema:str(x.tema)};
+    if(x.copiar != null){
+      var cv = validateCopiar(x.copiar, n); it.copiar = cv.val; cv.errors.forEach(function(e){ E.push(e); });
+    }
     if(!it.titulo) E.push(n + ": falta el título.");
     if(!isDate(it.fecha)) E.push(n + (it.titulo ? " («" + it.titulo + "»)" : "") + ": falta la fecha o no es válida (usa 2026-10-13).");
     if(it.entrega && !isDate(it.entrega)) E.push(n + ": la fecha de entrega no es válida (usa 2026-10-14).");
@@ -250,7 +274,9 @@ function renderTareasMom(){
     var done = !!S.home.tasks[x.id];
     h += '<article class="card mom"><span class="chip sm">' + esc(x.materia || "") + '</span> ' + (done ? '<span class="small">✓ Killian ya la hizo</span>' : '') + '<h3>' + esc(x.titulo) + '</h3>' +
       String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") +
-      (x.repaso && x.repaso.length ? '<p class="small" style="color:var(--ink)"><b>📚 Repaso en clase:</b> ' + esc(x.repaso.join(" ")) + '</p>' : '') + '</article>';
+      (x.repaso && x.repaso.length ? '<p class="small" style="color:var(--ink)"><b>📚 Repaso en clase:</b> ' + esc(x.repaso.join(" ")) + '</p>' : '') +
+      (x.copiar && x.copiar.partes ? '<p class="small" style="color:var(--ink)"><b>✏️ Copiar en el cuaderno ('+x.copiar.partes.length+' '+(x.copiar.partes.length === 1 ? "parte" : "partes")+'):</b> ' + esc(x.copiar.partes.map(function(p){ return p.titulo; }).join(" · ")) + '</p>' + (x.copiar.instrucciones_mama ? '<p class="small mamanote">👩 Para mamá: ' + esc(x.copiar.instrucciones_mama) + '</p>' : '') : '') +
+      (x.copiar && x.copiar.partes && !done ? '<button class="btn btn-ghost" type="button" data-act="mom-task-done" data-id="' + esc(x.id) + '">✔️ Marcarla como hecha (mamá)</button>' : '') + '</article>';
   });
   return h + footer();
 }
@@ -329,6 +355,24 @@ function renderImport(){
 function inp(kind, i, f, label, v, type){
   return '<label class="fld"><span>'+label+'</span><input type="'+(type||"text")+'" data-e="'+kind+'" data-i="'+i+'" data-f="'+f+'" value="'+esc(v||"")+'"></label>';
 }
+/* Editor de «Para copiar» dentro de cada tarea. */
+function cpInp(i, p, f, label, v, area){
+  var attrs = ' data-cp="1" data-i="'+i+'" data-p="'+p+'" data-f="'+f+'"';
+  return '<label class="fld"><span>'+label+'</span>' + (area ? '<textarea rows="'+(f === "texto" ? 4 : 3)+'"'+attrs+'>'+esc(v||"")+'</textarea>' : '<input type="text"'+attrs+' value="'+esc(v||"")+'">') + '</label>';
+}
+function copiarEditor(x, i){
+  var c = x.copiar;
+  if(!c) return '<button class="btn btn-ghost" type="button" data-act="cp-add" data-i="'+i+'">+ Agregar «Para copiar»</button>';
+  var h = '<div class="cpedit"><b>📝 Para copiar</b>' + cpInp(i, -1, "instrucciones_mama", "Para mamá (Killian no lo ve)", c.instrucciones_mama, true);
+  (c.partes || []).forEach(function(pt, k){
+    h += '<div class="cppart"><b>Parte '+(k + 1)+'</b>' + cpInp(i, k, "titulo", "Título", pt.titulo) + cpInp(i, k, "texto", "Texto que copia", pt.texto, true) +
+      cpInp(i, k, "traduccion_es", "Traducción (si está en inglés)", pt.traduccion_es) + cpInp(i, k, "dibujo", "Qué dibujar al lado", pt.dibujo) +
+      cpInp(i, k, "tabla", "Tabla (una fila por línea, columnas separadas con |)", (pt.tabla || []).map(function(r){ return r.join(" | "); }).join("\n"), true) +
+      '<button class="link-btn del" type="button" data-act="cp-delpart" data-i="'+i+'" data-p="'+k+'">🗑 Quitar esta parte</button></div>';
+  });
+  return h + '<button class="btn btn-ghost" type="button" data-act="cp-addpart" data-i="'+i+'">+ Agregar parte</button>' +
+    '<button class="link-btn del" type="button" data-act="cp-del" data-i="'+i+'">🗑 Quitar «Para copiar»</button></div>';
+}
 function renderEditor(){
   var d = imp.draft, back = imp.src === "manual" ? ["weeks", "← Agenda"] : ["import", "← Volver"];
   if(!d){ momView = "menu"; return renderMomMenu(); }
@@ -342,7 +386,7 @@ function renderEditor(){
       '<h2 class="sec-title">📝 Tareas ('+d.tareas.length+')</h2>' + d.tareas.map(function(x, i){
         return '<div class="erow">'+inp("tareas",i,"materia","Materia",x.materia)+inp("tareas",i,"titulo","Qué hacer",x.titulo)+inp("tareas",i,"detalle","Detalle",x.detalle)+
           inp("tareas",i,"fecha","Se hace el",x.fecha,"date")+inp("tareas",i,"entrega","Entrega",x.entrega,"date")+
-          '<button class="link-btn del" type="button" data-act="e-del" data-e="tareas" data-i="'+i+'">🗑 Quitar</button></div>';
+          copiarEditor(x, i) + '<button class="link-btn del" type="button" data-act="e-del" data-e="tareas" data-i="'+i+'">🗑 Quitar</button></div>';
       }).join("") + '<button class="btn btn-ghost" type="button" data-act="e-add" data-e="tareas">+ Agregar tarea</button>' +
       '<h2 class="sec-title">🎒 Materiales ('+d.materiales.length+')</h2>' + d.materiales.map(function(x, i){
         return '<div class="erow">'+inp("materiales",i,"materia","Materia",x.materia)+inp("materiales",i,"material","Material",x.material)+inp("materiales",i,"llevar_el","Llevar el",x.llevar_el,"date")+
@@ -423,7 +467,7 @@ function renderAsks(){
 function applyAgenda(d){
   var sem = d.semana, ag = S.agenda || {tareas:[], materiales:[], videos:[], notas:[]}, pre = sem + ":";
   function keep(x){ return x.semana !== sem; }
-  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega, evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return pre + v; }), charla:x.charla||"", tema:x.tema||""}; }));
+  ag.tareas = ag.tareas.filter(keep).concat(d.tareas.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, detalle:x.detalle, fecha:x.fecha, entrega:x.entrega, evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return pre + v; }), charla:x.charla||"", tema:x.tema||"", copiar:x.copiar||null}; }));
   ag.materiales = ag.materiales.filter(keep).concat(d.materiales.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, material:x.material, llevar_el:x.llevar_el}; }));
   ag.videos = ag.videos.filter(keep).concat(d.videos.map(function(x){ return {id:pre + x.id, semana:sem, materia:x.materia, titulo:x.titulo, url:x.url, fecha:x.fecha}; }));
   ag.notas = (ag.notas || []).filter(keep).concat(d.notas.filter(function(n){ return str(n); }).map(function(n){ return {semana:sem, texto:str(n)}; }));
@@ -439,7 +483,7 @@ function draftFromWeek(sem){
   function id(x){ return String(x.id).indexOf(pre) === 0 ? String(x.id).slice(pre.length) : x.id; }
   function w(x){ return x.semana === sem; }
   return {semana:sem,
-    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||"", evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return String(v).indexOf(pre) === 0 ? String(v).slice(pre.length) : v; }), charla:x.charla||"", tema:x.tema||""}; }),
+    tareas:ag.tareas.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", detalle:x.detalle||"", fecha:x.fecha||"", entrega:x.entrega||"", evaluacion:x.evaluacion||"", en_casa:x.en_casa||[], repaso:x.repaso||[], videos:(x.videos||[]).map(function(v){ return String(v).indexOf(pre) === 0 ? String(v).slice(pre.length) : v; }), charla:x.charla||"", tema:x.tema||"", copiar:x.copiar||null}; }),
     materiales:ag.materiales.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", material:x.material||"", llevar_el:x.llevar_el||""}; }),
     videos:ag.videos.filter(w).map(function(x){ return {id:id(x), materia:x.materia||"", titulo:x.titulo||"", url:x.url||"", fecha:x.fecha||""}; }),
     notas:(ag.notas||[]).filter(w).map(function(n){ return n.texto; })};
@@ -531,6 +575,11 @@ function extraClick(act, el, ev){
       if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
+    case "mom-task-done": markDone("task", el.getAttribute("data-id")); momNote = "✅ Tarea marcada como hecha."; render(); return true;
+    case "cp-add": imp.draft.tareas[+el.getAttribute("data-i")].copiar = {instrucciones_mama:"", partes:[{titulo:"1. ", texto:"", traduccion_es:"", dibujo:"", tabla:[]}]}; render(); return true;
+    case "cp-addpart": var cc1 = imp.draft.tareas[+el.getAttribute("data-i")].copiar; cc1.partes.push({titulo:(cc1.partes.length + 1) + ". ", texto:"", traduccion_es:"", dibujo:"", tabla:[]}); render(); return true;
+    case "cp-delpart": imp.draft.tareas[+el.getAttribute("data-i")].copiar.partes.splice(+el.getAttribute("data-p"), 1); render(); return true;
+    case "cp-del": imp.draft.tareas[+el.getAttribute("data-i")].copiar = null; render(); return true;
     case "voz-test": var vl = el.getAttribute("data-l"); speak(vl === "es" ? "Hola, soy tu voz en español. Los adverbios dicen dónde, cuándo y cómo pasa algo." : "Hello, I am your English voice. Rose lived in a small town.", vl); return true;
     case "chm-add":
       chForm = {titulo:val("chm-titulo"), materia:val("chm-materia"), idioma:val("chm-idioma") || "en", texto:val("chm-texto"), msg:""};
@@ -576,6 +625,14 @@ function extraInput(ev){
   var t = ev.target;
   if(t.id === "imptext"){ imp.text = t.value; return true; }
   if(t.id === "semana" && imp.draft){ imp.draft.semana = t.value; return true; }
+  if(t.getAttribute && t.getAttribute("data-cp") && imp.draft){
+    var ti = +t.getAttribute("data-i"), pi = +t.getAttribute("data-p"), ff = t.getAttribute("data-f"), cx = imp.draft.tareas[ti] && imp.draft.tareas[ti].copiar;
+    if(cx){
+      if(pi < 0) cx[ff] = t.value;
+      else if(cx.partes[pi]) cx.partes[pi][ff] = ff === "tabla" ? t.value.split(/\n/).map(function(l){ return l.trim(); }).filter(Boolean).map(function(l){ return l.split("|").map(function(c2){ return c2.trim(); }); }) : t.value;
+    }
+    return true;
+  }
   var e = t.getAttribute && t.getAttribute("data-e");
   if(e && imp.draft){
     var i = +t.getAttribute("data-i"), f = t.getAttribute("data-f");

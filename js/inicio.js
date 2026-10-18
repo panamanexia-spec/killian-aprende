@@ -156,6 +156,42 @@ function confetti(){
   }
   return h + '<span class="plus">+1 ⭐</span>';
 }
+/* ---- Copiar en el cuaderno ---- */
+var cpId = null;
+function cpKey(id, i){ return "cp:" + id + ":" + i; }
+function cpDoneCount(id, n){ var c = 0; for(var i = 0; i < n; i++) if(S.home.nchk[cpKey(id, i)] > 0) c++; return c; }
+function cpTask(){ var ag = agendaData(), r = null; ag.tareas.forEach(function(x){ if(x.id === cpId) r = x; }); return r; }
+function renderCopiar(){
+  var x = cpTask();
+  if(!x || !x.copiar || !x.copiar.partes || !x.copiar.partes.length){ S.screen = "home"; return renderHome(); }
+  var ps = x.copiar.partes, n = ps.length, d = cpDoneCount(x.id, n), lang = ps.some(function(p){ return p.traduccion_es; }) ? "en" : "es";
+  var h = subHeader("Para copiar", "home", "← Inicio") +
+    '<section class="card"><span class="chip">'+esc(x.materia||"")+'</span><h2 class="sec-title">'+esc(x.titulo)+'</h2>' +
+    '<div class="progress-day"><div class="prog-row"><span>'+d+' de '+n+' '+(n === 1 ? "parte copiada" : "partes copiadas")+'</span></div><div class="bar"><i style="width:'+Math.round(d / n * 100)+'%"></i></div></div>' +
+    '<p class="small">Copia cada parte en tu cuaderno, con letra bonita. Cuando termines una, tócala: ✓</p></section>';
+  h += ps.map(function(p, i){
+    var ok = S.home.nchk[cpKey(x.id, i)] > 0;
+    return '<article class="card cparte'+(ok ? " ok" : "")+'"><h3>'+esc(p.titulo)+'</h3>' +
+      (p.texto ? '<div class="cptext" lang="'+lang+'">'+esc(p.texto)+'</div><div class="stack">'+spk(p.texto, lang)+'</div>' : '') +
+      (p.traduccion_es ? '<p class="trad">'+esc(p.traduccion_es)+'</p>' : '') +
+      (p.dibujo ? '<p class="cpdib">🎨 <b>Dibuja al lado:</b> '+esc(p.dibujo)+'</p>' : '') +
+      (p.tabla && p.tabla.length ? '<div class="cptabwrap"><table class="cptab">'+p.tabla.map(function(r, ri){ return '<tr>'+r.map(function(c){ return (ri === 0 ? '<th>' : '<td>')+esc(c)+(ri === 0 ? '</th>' : '</td>'); }).join("")+'</tr>'; }).join("")+'</table></div>' : '') +
+      '<button class="btn '+(ok ? "btn-ghost" : "btn-sun")+'" type="button" data-act="cp-part" data-i="'+i+'" aria-pressed="'+ok+'">'+(ok ? "✓ Ya la copié (toca para quitar)" : "✏️ Ya la copié")+'</button></article>';
+  }).join("");
+  h += '<section class="card alldone">'+(d === n ? '<h2>¡Copiaste todo! 🎉</h2>' : '<p class="small">Cuando copies todas las partes, aquí se activa el botón final.</p>')+
+    '<button class="btn btn-sun btn-big" type="button" data-act="cp-done"'+(d === n ? "" : " disabled")+'>✅ ¡Listo, ya lo copié!</button></section>';
+  return h + footer();
+}
+function copiarClick(act, el){
+  switch(act){
+    case "cp-open": cpId = el.getAttribute("data-id"); S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
+    case "cp-part": var k = cpKey(cpId, el.getAttribute("data-i")); S.home.nchk[k] = S.home.nchk[k] > 0 ? -Date.now() : Date.now(); saveHome(); render(); return true;
+    case "cp-done":
+      var tk = cpTask(); if(!tk || cpDoneCount(cpId, tk.copiar.partes.length) < tk.copiar.partes.length) return true;
+      markDone("task", cpId); S.screen = "home"; render({top:true}); return true;
+  }
+  return false;
+}
 /* Tarjeta de pendiente: tipo de evaluación, qué hacer en casa, repaso y botones de video.
    Los materiales no se repiten aquí (tienen su propia lista). */
 function kidDetail(d){
@@ -175,7 +211,11 @@ function evalChip(e){
 function taskCard(it){
   var x = it.x, isVid = it.kind === "vid", c = !!cel[it.id];
   var due = isVid ? "" : (x.entrega ? (x.entrega < todayKey() ? '<p class="due late">⏰ Atrasada · era para el '+esc(dayLabel(x.entrega))+'</p>' : '<p class="due">📅 Para '+esc(relDay(x.entrega))+'</p>') : "");
-  var acts = "";
+  var acts = "", hasCp = it.kind === "task" && !!(x.copiar && x.copiar.partes && x.copiar.partes.length);
+  if(hasCp){
+    var cdone = cpDoneCount(it.id, x.copiar.partes.length);
+    acts += '<button class="btn btn-sun btn-big" type="button" data-act="cp-open" data-id="'+esc(it.id)+'">📝 Ver qué copiar'+(cdone ? ' ('+cdone+' de '+x.copiar.partes.length+')' : '')+'</button>';
+  }
   if(isVid && videoInfo(x.url)) acts += '<button class="btn btn-blue" type="button" data-act="play" data-id="'+esc(it.id)+'">▶ Ver el video aquí</button>';
   else if(isVid && /^https?:\/\//.test(x.url||"")) acts += '<a class="btn btn-blue" href="'+esc(x.url)+'" target="_blank" rel="noopener">▶ Abrir el enlace ↗</a>';
   if(it.kind === "task") linkedVideos(x).forEach(function(v){
@@ -188,7 +228,7 @@ function taskCard(it){
   if(tmx && tmx.resumen && tmx.resumen.length) acts += '<button class="btn btn-blue" type="button" data-act="study" data-id="'+esc(tmx.id)+'">📖 Estudiar mi resumen</button>';
   if(tmx && (x.auto || !(tmx.fecha_examen && tmx.fecha_examen >= todayKey() && prevSchoolDay(tmx.fecha_examen, 3) <= todayKey()))) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(x.modo === "repasar" ? "errors" : "")+'">'+(x.modo === "repasar" ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
-  acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
+  if(!hasCp) acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';
   var home = (x.en_casa && x.en_casa.length) ? x.en_casa.slice() : (x.en_casa ? [] : kidDetail(x.detalle));
   if(cc && cplan && !x.auto) home.push(charlaLine(cc, cplan));
   var body = "";

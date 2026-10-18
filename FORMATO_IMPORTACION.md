@@ -220,3 +220,38 @@ Un tema puede traer una lista **`lecciones`** con explicaciones cortas en españ
 ]
 ```
 `subtema` debe coincidir con el de las preguntas (si se omite, la lección sale siempre). `ejemplo` y `truco` son opcionales. Las preguntas pueden traer `pista_es` (se muestra desde el segundo intento).
+
+## Tareas «Para copiar» (`copiar`)
+Para tareas de investigación o escritura (folklore, música, Culture and Value…) donde Killian **copia un texto en el cuaderno**. Se agrega dentro de la tarea, es **opcional**, y se pone en `tareas[]`:
+
+```json
+{
+  "id": "t5", "materia": "Folklore", "titulo": "Copiar el texto de la quincha",
+  "fecha": "2026-10-19", "entrega": "2026-10-20",
+  "copiar": {
+    "instrucciones_mama": "Texto corto para mamá (opcional)",
+    "partes": [
+      {
+        "titulo": "1. La quincha",
+        "texto": "Texto que Killian copia en el cuaderno.",
+        "traduccion_es": "Traducción si el texto está en inglés (opcional)",
+        "dibujo": "Qué dibujar al lado (opcional)",
+        "tabla": [["Nota", "Dónde va"], ["Mi", "1.ª línea"]]
+      }
+    ]
+  }
+}
+```
+
+**Campos**
+- `copiar.partes` (obligatorio, al menos una): cada parte lleva `titulo` y `texto` (el `texto` puede tener saltos de línea con `\n`; si la parte solo trae `tabla`, el `texto` puede faltar).
+- `traduccion_es`, `dibujo` y `tabla` son opcionales. `tabla` es una **lista de filas** y cada fila una lista de textos; la primera fila se muestra como encabezado.
+- `instrucciones_mama` (opcional): **solo la ve mamá** (Zona de mamá → Detalle de tareas y editor de la semana). Killian no la ve.
+- Idioma de la voz 🔊: si alguna parte trae `traduccion_es`, el texto se lee en inglés; si no, en español.
+
+**Cómo funciona para Killian**
+- La tarea muestra el botón grande **📝 Ver qué copiar**, **encima** de los botones de video y de estudiar.
+- Abre una pantalla con **una tarjeta por parte** (letra grande, 🔊, traducción, dibujo y tabla) y un check **«Ya la copié»** en cada una. Los checks se sincronizan entre aparatos y se pueden quitar.
+- Al terminar todas las partes se activa **✅ ¡Listo, ya lo copié!**, que marca la tarea como hecha (con su estrella) en todos los aparatos.
+- En las tareas que traen `copiar` **no sale «¡Ya lo hice!»**: esa es la única forma de terminarlas.
+- Mamá puede **marcarla como hecha** desde Zona de mamá → Detalle de tareas (**✔️ Marcarla como hecha (mamá)**) y puede **ver y editar** todo el texto en Agenda y materiales → editar la semana (apartado «Para copiar» de cada tarea).

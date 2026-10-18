@@ -490,3 +490,16 @@ a.btn{text-decoration:none}
 .lesson .ex-box{background:#fff; border-radius:14px; padding:8px 12px; margin:8px 0 0}
 .lesson .trick{background:#fff6d6; border-radius:14px; padding:8px 12px; margin:8px 0 0; font-weight:700}
 .lessons-in{margin-bottom:12px}
+
+.cparte h3{font-size:1.35rem; margin:0 0 8px; color:var(--blue-d)}
+.cparte.ok{opacity:.75}
+.cptext{white-space:pre-wrap; font-family:var(--font-display); font-weight:700; font-size:1.7rem; line-height:1.5; overflow-wrap:anywhere; background:#fffdf3; border:3px dashed #ffc928; border-radius:18px; padding:12px 14px; margin:6px 0}
+.cpdib{background:var(--sky); border-radius:14px; padding:8px 12px; margin:8px 0}
+.cptabwrap{overflow-x:auto; margin:8px 0}
+.cptab{border-collapse:collapse; width:100%; font-size:1.2rem}
+.cptab th{background:var(--blue); color:#fff; padding:8px 10px; text-align:left}
+.cptab td{border:2px solid var(--sky-2); padding:8px 10px; background:#fff}
+.mamanote{background:#fff6d6; border-radius:12px; padding:6px 10px}
+
+.cpedit{border-top:2px dashed var(--sky-2); margin-top:10px; padding-top:8px}
+.cppart{background:#f4fbff; border-radius:14px; padding:8px 10px; margin:8px 0}
