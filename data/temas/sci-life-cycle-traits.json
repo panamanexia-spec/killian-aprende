@@ -1,0 +1,622 @@
+{
+  "tipo": "tema",
+  "id": "sci-life-cycle-traits",
+  "materia": "Science",
+  "titulo": "Life Cycles and Traits",
+  "titulo_es": "Ciclos de vida y características (traits)",
+  "fecha_examen": "2026-10-23",
+  "preguntas_por_ronda": 10,
+  "subtemas": [
+    "ciclo",
+    "plantas",
+    "insectos",
+    "animales",
+    "traits",
+    "vocabulario"
+  ],
+  "resumen": [
+    {
+      "en": "An organism is a living thing.",
+      "es": "Un organismo es un ser vivo: plantas, animales, personas.",
+      "emoji": "🐾"
+    },
+    {
+      "en": "A life cycle is the stages of a life.",
+      "es": "Un ciclo de vida son las etapas por las que pasa un ser vivo.",
+      "emoji": "🔄"
+    },
+    {
+      "en": "Birth → growth → reproduction → death.",
+      "es": "Todos tienen: nacer, crecer, reproducirse (hacer nuevos seres de su tipo) y morir.",
+      "emoji": "🐣"
+    },
+    {
+      "en": "Plant: seed → sprout → young plant → adult plant.",
+      "es": "Planta: semilla → brote → planta joven → planta adulta con flores y frutos. Germinar = cuando la semilla empieza a crecer.",
+      "emoji": "🌱"
+    },
+    {
+      "en": "Beetle: egg → larva → pupa → adult (4 stages).",
+      "es": "El escarabajo tiene 4 etapas: huevo, larva, pupa y adulto.",
+      "emoji": "🪲"
+    },
+    {
+      "en": "Cricket: egg → nymph → adult (3 stages).",
+      "es": "El grillo tiene 3 etapas: huevo, ninfa y adulto. La ninfa parece un adulto pequeñito.",
+      "emoji": "🦗"
+    },
+    {
+      "en": "Frog: small egg → tadpole → young frog → adult.",
+      "es": "La rana pone huevos muy pequeños. Salen renacuajos que cambian hasta ser ranas.",
+      "emoji": "🐸"
+    },
+    {
+      "en": "Sea turtle: big egg → hatchling → young → adult.",
+      "es": "La tortuga marina pone huevos grandes. Sale una tortuguita (hatchling) que crece.",
+      "emoji": "🐢"
+    },
+    {
+      "en": "Traits are features, like color or size.",
+      "es": "Traits = características: el color del pelo, el tamaño, la forma de las orejas. Las crías se parecen a sus papás, pero no son iguales.",
+      "emoji": "🐱"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "lc1",
+      "subtema": "ciclo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is an organism?",
+      "pregunta_es": "¿Qué es un organismo?",
+      "opciones": [
+        "A living thing",
+        "A rock",
+        "A machine"
+      ],
+      "correcta": "A living thing",
+      "explicacion_es": "Un organismo es un ser vivo. Una piedra no está viva."
+    },
+    {
+      "id": "lc2",
+      "subtema": "ciclo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is a life cycle?",
+      "pregunta_es": "¿Qué es un ciclo de vida?",
+      "opciones": [
+        "The stages a living thing goes through",
+        "A kind of bicycle",
+        "The food an animal eats"
+      ],
+      "correcta": "The stages a living thing goes through",
+      "explicacion_es": "El ciclo de vida son las etapas de la vida de un ser vivo. 🔄"
+    },
+    {
+      "id": "lc3",
+      "subtema": "ciclo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which stage is the BEGINNING of a life cycle?",
+      "pregunta_es": "¿Qué etapa es el COMIENZO de un ciclo de vida?",
+      "opciones": [
+        "Birth",
+        "Death",
+        "Reproduction"
+      ],
+      "correcta": "Birth",
+      "explicacion_es": "Birth = nacimiento. Es el inicio del ciclo. 🐣"
+    },
+    {
+      "id": "lc4",
+      "subtema": "ciclo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is GROWTH?",
+      "pregunta_es": "¿Qué es GROWTH?",
+      "opciones": [
+        "Getting bigger",
+        "Making a new organism",
+        "The end of life"
+      ],
+      "correcta": "Getting bigger",
+      "explicacion_es": "Growth = crecimiento: hacerse más grande. 📏"
+    },
+    {
+      "id": "lc5",
+      "subtema": "ciclo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is REPRODUCTION?",
+      "pregunta_es": "¿Qué es REPRODUCTION?",
+      "opciones": [
+        "Making a new organism of the same kind",
+        "Eating food",
+        "Sleeping"
+      ],
+      "correcta": "Making a new organism of the same kind",
+      "explicacion_es": "Reproducción = hacer un nuevo ser vivo de su mismo tipo. Una rana hace ranas. 🐸"
+    },
+    {
+      "id": "lc6",
+      "subtema": "ciclo",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "All living things have birth, growth, reproduction and death.",
+      "pregunta_es": "Todos los seres vivos nacen, crecen, se reproducen y mueren.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Los ciclos se ven distintos, pero todos siguen ese mismo patrón."
+    },
+    {
+      "id": "lc7",
+      "subtema": "ciclo",
+      "tipo": "unir",
+      "pregunta_en": "Match the stages.",
+      "pregunta_es": "Une cada etapa con su significado.",
+      "pares": [
+        {
+          "izquierda": "birth",
+          "derecha": "nacer"
+        },
+        {
+          "izquierda": "growth",
+          "derecha": "crecer"
+        },
+        {
+          "izquierda": "reproduction",
+          "derecha": "tener crías"
+        },
+        {
+          "izquierda": "death",
+          "derecha": "morir"
+        }
+      ],
+      "explicacion_es": "Birth, growth, reproduction, death: nacer, crecer, reproducirse y morir."
+    },
+    {
+      "id": "lc8",
+      "subtema": "plantas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Many plant life cycles begin with a…",
+      "pregunta_es": "Muchos ciclos de vida de las plantas empiezan con una…",
+      "opciones": [
+        "seed",
+        "flower",
+        "leaf"
+      ],
+      "correcta": "seed",
+      "explicacion_es": "Empiezan con una semilla (seed) que tiene adentro una plantita bebé. 🌰"
+    },
+    {
+      "id": "lc9",
+      "subtema": "plantas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What helps a seed grow?",
+      "pregunta_es": "¿Qué ayuda a crecer a una semilla?",
+      "opciones": [
+        "Water, soil and sunlight",
+        "Only candy",
+        "Darkness and ice"
+      ],
+      "correcta": "Water, soil and sunlight",
+      "explicacion_es": "Agua, tierra y luz del sol. 💧🟫☀️"
+    },
+    {
+      "id": "lc10",
+      "subtema": "plantas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is GERMINATION?",
+      "pregunta_es": "¿Qué es GERMINATION?",
+      "opciones": [
+        "When a seed starts to grow into a sprout",
+        "When a plant dies",
+        "When a flower closes"
+      ],
+      "correcta": "When a seed starts to grow into a sprout",
+      "explicacion_es": "Germinar = la semilla empieza a crecer y sale un brote. 🌱 Se dice yer-mi-NÉI-shon."
+    },
+    {
+      "id": "lc11",
+      "subtema": "plantas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Pumpkin: seed → sprout → young plant → ?",
+      "pregunta_es": "Calabaza: semilla → brote → planta joven → ?",
+      "opciones": [
+        "adult plant",
+        "egg",
+        "pupa"
+      ],
+      "correcta": "adult plant",
+      "explicacion_es": "Después de planta joven viene la planta adulta, con flores y calabazas. 🎃"
+    },
+    {
+      "id": "lc12",
+      "subtema": "plantas",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Without flowers, a pumpkin plant cannot make seeds.",
+      "pregunta_es": "Sin flores, la planta de calabaza no puede hacer semillas.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Las flores dan frutos con semillas. Sin semillas no hay plantas nuevas."
+    },
+    {
+      "id": "lc13",
+      "subtema": "plantas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the role of a seed in a life cycle?",
+      "pregunta_es": "¿Para qué sirve la semilla en el ciclo de vida?",
+      "opciones": [
+        "It grows into a new plant",
+        "It makes the plant die",
+        "It is food for rocks"
+      ],
+      "correcta": "It grows into a new plant",
+      "explicacion_es": "La semilla se convierte en una planta nueva y así el ciclo empieza otra vez. 🔄"
+    },
+    {
+      "id": "lc14",
+      "subtema": "insectos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How many stages does a beetle have?",
+      "pregunta_es": "¿Cuántas etapas tiene el escarabajo?",
+      "opciones": [
+        "4",
+        "3",
+        "2"
+      ],
+      "correcta": "4",
+      "explicacion_es": "4 etapas: huevo, larva, pupa y adulto. 🪲"
+    },
+    {
+      "id": "lc15",
+      "subtema": "insectos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How many stages does a cricket have?",
+      "pregunta_es": "¿Cuántas etapas tiene el grillo?",
+      "opciones": [
+        "3",
+        "4",
+        "5"
+      ],
+      "correcta": "3",
+      "explicacion_es": "3 etapas: huevo, ninfa y adulto. No tiene larva ni pupa. 🦗"
+    },
+    {
+      "id": "lc16",
+      "subtema": "insectos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Beetle: egg → larva → ? → adult",
+      "pregunta_es": "Escarabajo: huevo → larva → ? → adulto",
+      "opciones": [
+        "pupa",
+        "nymph",
+        "tadpole"
+      ],
+      "correcta": "pupa",
+      "explicacion_es": "Después de la larva viene la pupa. Ahí cambia a su forma de adulto."
+    },
+    {
+      "id": "lc17",
+      "subtema": "insectos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "A NYMPH looks like…",
+      "pregunta_es": "Una NINFA se parece a…",
+      "opciones": [
+        "a small adult",
+        "a worm",
+        "an egg"
+      ],
+      "correcta": "a small adult",
+      "explicacion_es": "La ninfa parece una versión pequeñita del adulto. Se dice NIMF."
+    },
+    {
+      "id": "lc18",
+      "subtema": "insectos",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "A larva has wings.",
+      "pregunta_es": "La larva tiene alas.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! La larva es joven y no tiene alas. Parece un gusanito."
+    },
+    {
+      "id": "lc19",
+      "subtema": "insectos",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The first stage of an insect's life cycle is the egg.",
+      "pregunta_es": "La primera etapa del ciclo de un insecto es el huevo.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Todos los insectos empiezan como huevo. 🥚"
+    },
+    {
+      "id": "lc20",
+      "subtema": "insectos",
+      "tipo": "unir",
+      "pregunta_en": "Match the beetle stages.",
+      "pregunta_es": "Une las etapas del escarabajo.",
+      "pares": [
+        {
+          "izquierda": "egg",
+          "derecha": "huevo"
+        },
+        {
+          "izquierda": "larva",
+          "derecha": "larva (gusanito)"
+        },
+        {
+          "izquierda": "pupa",
+          "derecha": "pupa (se transforma)"
+        },
+        {
+          "izquierda": "adult",
+          "derecha": "adulto"
+        }
+      ],
+      "explicacion_es": "Huevo → larva → pupa → adulto: ¡4 etapas!"
+    },
+    {
+      "id": "lc21",
+      "subtema": "animales",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What hatches from a frog egg?",
+      "pregunta_es": "¿Qué sale del huevo de una rana?",
+      "opciones": [
+        "A tadpole",
+        "A turtle",
+        "A bird"
+      ],
+      "correcta": "A tadpole",
+      "explicacion_es": "Sale un renacuajo (tadpole) que crece y se convierte en rana. 🐸"
+    },
+    {
+      "id": "lc22",
+      "subtema": "animales",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Frog eggs are very small.",
+      "pregunta_es": "Los huevos de rana son muy pequeños.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Los de rana son pequeños y los de tortuga marina son grandes."
+    },
+    {
+      "id": "lc23",
+      "subtema": "animales",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How are a frog and a sea turtle the SAME?",
+      "pregunta_es": "¿En qué se PARECEN la rana y la tortuga marina?",
+      "opciones": [
+        "Both start life as an egg",
+        "Both have very big eggs",
+        "Both become tadpoles"
+      ],
+      "correcta": "Both start life as an egg",
+      "explicacion_es": "Las dos empiezan como huevo y crecen hasta ser adultas. La diferencia: el tamaño del huevo."
+    },
+    {
+      "id": "lc24",
+      "subtema": "animales",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "A baby sea turtle that comes out of the egg is a…",
+      "pregunta_es": "La tortuguita que sale del huevo se llama…",
+      "opciones": [
+        "hatchling",
+        "tadpole",
+        "pupa"
+      ],
+      "correcta": "hatchling",
+      "explicacion_es": "Hatchling = cría recién salida del huevo. 🐢 Se dice JÁCH-ling."
+    },
+    {
+      "id": "lc25",
+      "subtema": "animales",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Penguins hatch from an egg.",
+      "pregunta_es": "Los pingüinos salen de un huevo.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Los pingüinos nacen de un huevo. 🐧"
+    },
+    {
+      "id": "lc26",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Frog: egg → ______ → young frog → adult.",
+      "pregunta_es": "Rana: huevo → renacuajo → rana joven → adulta.",
+      "respuesta": "tadpole",
+      "aceptadas": [
+        "tadpoles"
+      ],
+      "explicacion_es": "Tadpole = renacuajo. Se dice TÁD-poul.",
+      "pista_es": "Empieza con T: tad…"
+    },
+    {
+      "id": "lc27",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Cricket: egg → ______ → adult.",
+      "pregunta_es": "Grillo: huevo → ninfa → adulto.",
+      "respuesta": "nymph",
+      "aceptadas": [
+        "nimph",
+        "nymf"
+      ],
+      "explicacion_es": "Nymph = ninfa. Se dice NIMF.",
+      "pista_es": "5 letras: n y m p h"
+    },
+    {
+      "id": "tr1",
+      "subtema": "traits",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is a TRAIT?",
+      "pregunta_es": "¿Qué es un TRAIT?",
+      "opciones": [
+        "A feature, like fur color",
+        "A kind of food",
+        "A place to live"
+      ],
+      "correcta": "A feature, like fur color",
+      "explicacion_es": "Trait = característica: cómo es un ser vivo (color, tamaño, forma). Se dice TRÉIT."
+    },
+    {
+      "id": "tr2",
+      "subtema": "traits",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Kittens look a lot like their parents.",
+      "pregunta_es": "Los gatitos se parecen mucho a sus papás.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Las crías heredan características de sus papás. 🐱"
+    },
+    {
+      "id": "tr3",
+      "subtema": "traits",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "All kittens in a family look exactly the same.",
+      "pregunta_es": "Todos los gatitos de una familia son exactamente iguales.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Se parecen, pero cada uno es un poquito diferente: uno puede ser negro y otro con manchas."
+    },
+    {
+      "id": "tr4",
+      "subtema": "traits",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which one is a trait of a cat?",
+      "pregunta_es": "¿Cuál es una característica (trait) de un gato?",
+      "opciones": [
+        "Orange fur",
+        "Its favorite toy",
+        "Its name"
+      ],
+      "correcta": "Orange fur",
+      "explicacion_es": "El pelo naranja es una característica de su cuerpo. El juguete y el nombre no son traits."
+    },
+    {
+      "id": "tr5",
+      "subtema": "traits",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Where do young animals get their traits from?",
+      "pregunta_es": "¿De dónde sacan las crías sus características?",
+      "opciones": [
+        "From their parents",
+        "From the store",
+        "From the weather"
+      ],
+      "correcta": "From their parents",
+      "explicacion_es": "Las características se heredan de los papás. Por eso te pareces a tu familia. 👨‍👩‍👦"
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "organism",
+      "es": "organismo",
+      "aceptadas": [
+        "ser vivo"
+      ],
+      "ejemplo_en": "A frog is an organism.",
+      "ejemplo_es": "Una rana es un organismo."
+    },
+    {
+      "en": "life cycle",
+      "es": "ciclo de vida",
+      "aceptadas": [
+        "ciclo"
+      ],
+      "ejemplo_en": "A beetle has a life cycle.",
+      "ejemplo_es": "El escarabajo tiene un ciclo de vida."
+    },
+    {
+      "en": "growth",
+      "es": "crecimiento",
+      "aceptadas": [
+        "crecer"
+      ],
+      "ejemplo_en": "Growth means getting bigger.",
+      "ejemplo_es": "Crecer es hacerse más grande."
+    },
+    {
+      "en": "reproduction",
+      "es": "reproducción",
+      "aceptadas": [
+        "reproduccion",
+        "reproducirse"
+      ],
+      "ejemplo_en": "Reproduction makes new frogs.",
+      "ejemplo_es": "La reproducción hace ranas nuevas."
+    },
+    {
+      "en": "seed",
+      "es": "semilla",
+      "aceptadas": [
+        "semillas"
+      ],
+      "ejemplo_en": "I plant a seed.",
+      "ejemplo_es": "Siembro una semilla."
+    },
+    {
+      "en": "sprout",
+      "es": "brote",
+      "aceptadas": [
+        "retoño",
+        "retono"
+      ],
+      "ejemplo_en": "The sprout is green.",
+      "ejemplo_es": "El brote es verde."
+    },
+    {
+      "en": "egg",
+      "es": "huevo",
+      "aceptadas": [
+        "huevos"
+      ],
+      "ejemplo_en": "The turtle egg is big.",
+      "ejemplo_es": "El huevo de tortuga es grande."
+    },
+    {
+      "en": "larva",
+      "es": "larva",
+      "aceptadas": [
+        "gusano",
+        "gusanito"
+      ],
+      "ejemplo_en": "The larva has no wings.",
+      "ejemplo_es": "La larva no tiene alas."
+    },
+    {
+      "en": "pupa",
+      "es": "pupa",
+      "aceptadas": [
+        "capullo"
+      ],
+      "ejemplo_en": "The pupa changes into an adult.",
+      "ejemplo_es": "La pupa se convierte en adulto."
+    },
+    {
+      "en": "tadpole",
+      "es": "renacuajo",
+      "aceptadas": [
+        "renacuajos"
+      ],
+      "ejemplo_en": "The tadpole swims.",
+      "ejemplo_es": "El renacuajo nada."
+    },
+    {
+      "en": "adult",
+      "es": "adulto",
+      "aceptadas": [
+        "adulta",
+        "grande"
+      ],
+      "ejemplo_en": "The adult frog jumps.",
+      "ejemplo_es": "La rana adulta salta."
+    },
+    {
+      "en": "hatch",
+      "es": "salir del huevo",
+      "aceptadas": [
+        "nacer",
+        "eclosionar"
+      ],
+      "ejemplo_en": "Penguins hatch from eggs.",
+      "ejemplo_es": "Los pingüinos salen de huevos."
+    },
+    {
+      "en": "trait",
+      "es": "característica",
+      "aceptadas": [
+        "caracteristica",
+        "rasgo"
+      ],
+      "ejemplo_en": "Orange fur is a trait.",
+      "ejemplo_es": "El pelo naranja es una característica."
+    }
+  ]
+}

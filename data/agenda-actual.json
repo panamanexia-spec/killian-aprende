@@ -574,7 +574,7 @@
             "Repasar personajes, lugar, problema, solución y mensaje del cuento",
             "Llevar el libro de conversación Volumen 2"
           ],
-          "detalle": "Unit 1 Literary Elements of Luz Sees the Light. External: Brings Volume 2 of the conversation book to class. Internal: reviews main events and characters; identifies setting, characters, problem, solution and theme; writes a short paragraph about the story's message."
+          "detalle": "Unit 1 Literary Elements of Luz Sees the Light. External: Brings Volume 2 of the conversation book to class. Internal: reviews main events and characters; identifies setting, characters, problem, solution and theme; writes a short paragraph about the story's message. Tema de práctica: rc-luz-sees-the-light."
         },
         {
           "id": "w43-t15",
@@ -723,21 +723,141 @@
           "detalle": "Unit 10 Plant Life and Numbers – Adding Subtracting Whole Numbers 2/3 digits – FORMAL TEST. External: Students will have the Sustentation TEST of the Formal together with Math and Science about Adding and Subtracting whole numbers with 2 and 3 digits."
         },
         {
-          "id": "w43-t26",
-          "materia": "Chino Mandarín",
-          "titulo": "🎤 Practicar presentación de chino: Where is the toy",
+          "id": "w43-t27",
+          "materia": "Reading and Composition",
+          "titulo": "✍️ Cuaderno pág. 20: rocas raras (Text Structure)",
+          "fecha": "2026-10-21",
+          "entrega": "2026-10-23",
+          "evaluacion": "formativa",
+          "tema": "comp-able-ible",
+          "en_casa": [
+            "Cuaderno de trabajo (Grade 4, Module 6 Week 2) pág. 20: Text Structure, preguntas de «Weird and Wondrous Rocks»"
+          ],
+          "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
+          "copiar": {
+            "instrucciones_mama": "Respuestas cortas sacadas de las págs. 37 y 40 de «Weird and Wondrous Rocks». En la 4, otra respuesta válida sería «problem and solution»; la dejé en «cause and effect» porque es el tema de la página.",
+            "partes": [
+              {
+                "titulo": "Pág. 20 – Pregunta 1",
+                "texto": "1. The rocks may ring because they have a lot of iron. They may also ring because of stress from freezing and thawing again and again.",
+                "traduccion_es": "Las rocas pueden sonar porque tienen mucho hierro. También pueden sonar por la presión de congelarse y descongelarse una y otra vez."
+              },
+              {
+                "titulo": "Pág. 20 – Pregunta 2",
+                "texto": "2. The author wants to explain why the rocks ring.",
+                "traduccion_es": "El autor quiere explicar por qué suenan las rocas."
+              },
+              {
+                "titulo": "Pág. 20 – Pregunta 3",
+                "texto": "3. They wanted to know how the rocks move across the dry lakebed and leave tracks.",
+                "traduccion_es": "Querían saber cómo se mueven las rocas por el lago seco y dejan huellas."
+              },
+              {
+                "titulo": "Pág. 20 – Pregunta 4",
+                "texto": "4. Cause and effect.",
+                "traduccion_es": "Causa y efecto."
+              },
+              {
+                "titulo": "Pág. 20 – Pregunta 5",
+                "texto": "5. They set up a weather station to measure wind and rain. They put tracking devices in rocks and used cameras to record the movement.",
+                "traduccion_es": "Pusieron una estación del clima para medir el viento y la lluvia. Pusieron rastreadores en las rocas y usaron cámaras para grabar el movimiento."
+              },
+              {
+                "titulo": "Pág. 20 – Pregunta 6",
+                "texto": "6. Rain and snow make a pond, and thin ice forms on top. The sun breaks the ice into big sheets. Then the wind pushes the ice, and the ice pushes the rocks.",
+                "traduccion_es": "La lluvia y la nieve forman un charco y arriba se hace hielo fino. El sol rompe el hielo en pedazos grandes. Luego el viento empuja el hielo y el hielo empuja las rocas."
+              }
+            ]
+          }
+        },
+        {
+          "id": "w43-t28",
+          "materia": "Reading and Composition",
+          "titulo": "🧩 Cuaderno pág. 21: crucigrama -able / -ible",
           "fecha": "2026-10-22",
           "entrega": "2026-10-23",
-          "evaluacion": "sumativa",
-          "charla": "zh-where-is-the-toy",
-          "videos": [
-            "w43-v02"
-          ],
+          "evaluacion": "formativa",
+          "tema": "comp-able-ible",
           "en_casa": [
-            "Repasar con el link de la maestra",
-            "Workbook Book B1 págs. 37–38 (en clase)"
+            "Pág. 21: crucigrama de sufijos -able e -ible"
           ],
-          "detalle": "Lesson 9 – Where is the toy – orientation in Mandarin. External: https://reurl.cc/5XQky7. Internal: 1. oral presentation sumative evaluation 2. workbook BookB1 p.37-38."
+          "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
+          "copiar": {
+            "instrucciones_mama": "Respuestas del crucigrama.",
+            "partes": [
+              {
+                "titulo": "Pág. 21 – Cómo se llena",
+                "texto": "Escribe una letra en cada cuadrito.\nAcross = horizontal ➡️\nDown = vertical ⬇️"
+              },
+              {
+                "titulo": "Pág. 21 – Across (horizontal ➡️)",
+                "texto": "Escribe estas palabras en los cuadritos horizontales y en las líneas de abajo.",
+                "tabla": [
+                  [
+                    "#",
+                    "Palabra",
+                    "Significado"
+                  ],
+                  [
+                    "4",
+                    "convertible",
+                    "carro sin techo"
+                  ],
+                  [
+                    "5",
+                    "incredible",
+                    "increíble"
+                  ],
+                  [
+                    "7",
+                    "agreeable",
+                    "agradable"
+                  ],
+                  [
+                    "8",
+                    "believable",
+                    "creíble"
+                  ],
+                  [
+                    "9",
+                    "comfortable",
+                    "cómodo"
+                  ]
+                ]
+              },
+              {
+                "titulo": "Pág. 21 – Down (vertical ⬇️)",
+                "texto": "Escribe estas palabras en los cuadritos verticales y en las líneas de abajo.",
+                "tabla": [
+                  [
+                    "#",
+                    "Palabra",
+                    "Significado"
+                  ],
+                  [
+                    "1",
+                    "predictable",
+                    "predecible"
+                  ],
+                  [
+                    "2",
+                    "terrible",
+                    "terrible"
+                  ],
+                  [
+                    "3",
+                    "affordable",
+                    "barato"
+                  ],
+                  [
+                    "6",
+                    "invisible",
+                    "invisible"
+                  ]
+                ]
+              }
+            ]
+          }
         }
       ],
       "materiales": [
@@ -804,20 +924,6 @@
       ],
       "videos": [
         {
-          "id": "w43-v01",
-          "materia": "Chino Mandarín",
-          "titulo": "Chino: Where is the toy (link de la maestra)",
-          "url": "https://reurl.cc/5XQky7",
-          "fecha": "2026-10-18"
-        },
-        {
-          "id": "w43-v02",
-          "materia": "Chino Mandarín",
-          "titulo": "Chino: repaso Where is the toy",
-          "url": "https://reurl.cc/5XQky7",
-          "fecha": "2026-10-22"
-        },
-        {
           "id": "w43-v03",
           "materia": "Science",
           "titulo": "Traits of animals (Experience 2)",
@@ -828,7 +934,7 @@
       "notas_para_mama": [
         "18/10 ⚠️ Para mañana lunes: la hoja de 14 × 17 de Van Gogh (Artistic Expressions) y la página 41 de Reading and Composition.",
         "19/10 Sumativa: Science – siembra de semillas (frijol lima y rábano) en clase. No hace falta bata. Dice que los materiales se comparten en Teams/equipos: revisar Teams por si hay que llevar algo. Llevar libro, borrador y sacapuntas.",
-        "19/10 Chino: presentación oral sumativa (Where is the toy). Aparece también el 23/10. ¿Le toca a Killian el lunes o el jueves? Preguntar a la maestra.",
+        "19/10 Chino: hay presentación oral sumativa (Where is the toy) el 19/10 o el 23/10. No tenemos el texto, así que no hay práctica en la plataforma.",
         "19/10 Caligrafía: los lunes de este trimestre se trabajan las págs. 73 a 111 del libro de caligrafía y cuentan como la sumativa #9.",
         "20/10 Sumativa: Educación Física – prueba del trabajo formal. Repasar la documentación de Teams.",
         "20/10 Sumativa: Reading and Conversation – continúa la presentación oral de Thunder Rose (la están reprogramando).",
