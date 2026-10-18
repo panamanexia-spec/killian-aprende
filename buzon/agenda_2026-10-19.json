@@ -452,25 +452,72 @@
     {
       "id": "w43-t27",
       "materia": "Reading and Composition",
-      "titulo": "🧩 Crucigrama -able / -ible (cuaderno pág. 21)",
+      "titulo": "✍️ Cuaderno pág. 20: rocas raras (Text Structure)",
+      "fecha": "2026-10-21",
+      "entrega": "2026-10-23",
+      "evaluacion": "formativa",
+      "tema": "comp-able-ible",
+      "en_casa": [
+        "Cuaderno de trabajo (Grade 4, Module 6 Week 2) pág. 20: Text Structure, preguntas de «Weird and Wondrous Rocks»"
+      ],
+      "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
+      "copiar": {
+        "instrucciones_mama": "Respuestas cortas sacadas de las págs. 37 y 40 de «Weird and Wondrous Rocks». En la 4, otra respuesta válida sería «problem and solution»; la dejé en «cause and effect» porque es el tema de la página.",
+        "partes": [
+          {
+            "titulo": "Pág. 20 – Pregunta 1",
+            "texto": "1. The rocks may ring because they have a lot of iron. They may also ring because of stress from freezing and thawing again and again.",
+            "traduccion_es": "Las rocas pueden sonar porque tienen mucho hierro. También pueden sonar por la presión de congelarse y descongelarse una y otra vez."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 2",
+            "texto": "2. The author wants to explain why the rocks ring.",
+            "traduccion_es": "El autor quiere explicar por qué suenan las rocas."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 3",
+            "texto": "3. They wanted to know how the rocks move across the dry lakebed and leave tracks.",
+            "traduccion_es": "Querían saber cómo se mueven las rocas por el lago seco y dejan huellas."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 4",
+            "texto": "4. Cause and effect.",
+            "traduccion_es": "Causa y efecto."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 5",
+            "texto": "5. They set up a weather station to measure wind and rain. They put tracking devices in rocks and used cameras to record the movement.",
+            "traduccion_es": "Pusieron una estación del clima para medir el viento y la lluvia. Pusieron rastreadores en las rocas y usaron cámaras para grabar el movimiento."
+          },
+          {
+            "titulo": "Pág. 20 – Pregunta 6",
+            "texto": "6. Rain and snow make a pond, and thin ice forms on top. The sun breaks the ice into big sheets. Then the wind pushes the ice, and the ice pushes the rocks.",
+            "traduccion_es": "La lluvia y la nieve forman un charco y arriba se hace hielo fino. El sol rompe el hielo en pedazos grandes. Luego el viento empuja el hielo y el hielo empuja las rocas."
+          }
+        ]
+      }
+    },
+    {
+      "id": "w43-t28",
+      "materia": "Reading and Composition",
+      "titulo": "🧩 Cuaderno pág. 21: crucigrama -able / -ible",
       "fecha": "2026-10-22",
       "entrega": "2026-10-23",
       "evaluacion": "formativa",
       "tema": "comp-able-ible",
       "en_casa": [
-        "Cuaderno de trabajo (Grade 4, Module 6 Week 2) pág. 21: crucigrama de sufijos -able e -ible",
-        "Pág. 20 (Text Structure): pendiente, falta la lectura «Weird and Wondrous Rocks» págs. 37 y 40"
+        "Pág. 21: crucigrama de sufijos -able e -ible"
       ],
       "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
       "copiar": {
-        "instrucciones_mama": "Respuestas del crucigrama de la pág. 21. La pág. 20 queda pendiente hasta tener las págs. 37 y 40 de «Weird and Wondrous Rocks».",
+        "instrucciones_mama": "Respuestas del crucigrama.",
         "partes": [
           {
-            "titulo": "1. Cómo se llena",
+            "titulo": "Pág. 21 – Cómo se llena",
             "texto": "Escribe una letra en cada cuadrito.\nAcross = horizontal ➡️\nDown = vertical ⬇️"
           },
           {
-            "titulo": "2. Across (horizontal ➡️)",
+            "titulo": "Pág. 21 – Across (horizontal ➡️)",
             "texto": "Escribe estas palabras en los cuadritos horizontales y en las líneas de abajo.",
             "tabla": [
               [
@@ -506,7 +553,7 @@
             ]
           },
           {
-            "titulo": "3. Down (vertical ⬇️)",
+            "titulo": "Pág. 21 – Down (vertical ⬇️)",
             "texto": "Escribe estas palabras en los cuadritos verticales y en las líneas de abajo.",
             "tabla": [
               [
