@@ -165,7 +165,7 @@ function confetti(){
   return h + '<span class="plus">+1 ⭐</span>';
 }
 /* ---- Copiar en el cuaderno ---- */
-var cpId = null, cpMom = false;
+var cpId = null, cpMom = false, cpZoom = "";
 function cpKey(id, i){ return "cp:" + id + ":" + i; }
 function cpDoneCount(id, n){ var c = 0; for(var i = 0; i < n; i++) if(S.home.nchk[cpKey(id, i)] > 0) c++; return c; }
 function cpTask(){ var ag = agendaData(), r = null; ag.tareas.forEach(function(x){ if(x.id === cpId) r = x; }); return r; }
@@ -181,6 +181,7 @@ function renderCopiar(){
   h += ps.map(function(p, i){
     var ok = S.home.nchk[cpKey(x.id, i)] > 0;
     return '<article class="card cparte'+(ok ? " ok" : "")+'"><h3>'+esc(p.titulo)+'</h3>' +
+      (p.imagen ? '<button type="button" class="cpimgbtn" data-act="cp-zoom" data-src="img/copiar/'+esc(p.imagen)+'" aria-label="Ver el dibujo en pantalla completa"><img class="cpimg" src="img/copiar/'+esc(p.imagen)+'" alt="'+esc(p.titulo)+'" loading="lazy"><span class="cpzoomhint">🔍 Toca para verlo grande</span></button>' : '') +
       (p.texto ? '<div class="cptext" lang="'+lang+'">'+esc(p.texto)+'</div><div class="stack">'+spk(p.texto, lang)+'</div>' : '') +
       (p.traduccion_es ? '<p class="trad">'+esc(p.traduccion_es)+'</p>' : '') +
       (p.dibujo ? '<p class="cpdib">🎨 <b>Dibuja al lado:</b> '+esc(p.dibujo)+'</p>' : '') +
@@ -189,11 +190,14 @@ function renderCopiar(){
   }).join("");
   if(!cpMom) h += '<section class="card alldone">'+(d === n ? '<h2>¡Copiaste todo! 🎉</h2>' : '<p class="small">Cuando copies todas las partes, aquí se activa el botón final.</p>')+
     '<button class="btn btn-sun btn-big" type="button" data-act="cp-done"'+(d === n ? "" : " disabled")+'>✅ ¡Listo, ya lo copié!</button></section>';
+  if(cpZoom) h += '<div class="zoomveil" data-act="cp-unzoom" role="dialog" aria-label="Dibujo en pantalla completa"><img src="'+esc(cpZoom)+'" alt="Dibujo"><button type="button" class="btn btn-sun zoomclose" data-act="cp-unzoom">✕ Cerrar</button></div>';
   return h + footer();
 }
 function copiarClick(act, el){
   switch(act){
-    case "cp-open": cpId = el.getAttribute("data-id"); cpMom = false; S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
+    case "cp-open": cpId = el.getAttribute("data-id"); cpMom = false; cpZoom = ""; S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
+    case "cp-zoom": cpZoom = el.getAttribute("data-src"); render(); return true;
+    case "cp-unzoom": cpZoom = ""; render(); return true;
     case "cp-open-mom": cpId = el.getAttribute("data-id"); cpMom = true; S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
     case "cp-back-mom": cpMom = false; S.screen = "mom"; momView = el.getAttribute("data-v") || "paracopiar"; render({top:true}); return true;
     case "cp-part": if(cpMom) return true; var k = cpKey(cpId, el.getAttribute("data-i")); S.home.nchk[k] = S.home.nchk[k] > 0 ? -Date.now() : Date.now(); saveHome(); render(); return true;

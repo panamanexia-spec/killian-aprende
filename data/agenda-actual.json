@@ -488,7 +488,7 @@
         {
           "id": "w43-t06",
           "materia": "Math",
-          "titulo": "🔢 Páginas 369 a 372: ecuaciones",
+          "titulo": "🔢 Math págs. 369 a 372: ecuaciones en problemas",
           "fecha": "2026-10-19",
           "entrega": "2026-10-20",
           "evaluacion": "formativa",
@@ -497,7 +497,50 @@
             "Trabajar las páginas 369–372 del libro",
             "Llevar el libro Unidad 2"
           ],
-          "detalle": "Unit 12 Algebra – Determining Unknowns in Equations – Your Turn. External: Apply your knowledge by working from the pages 369-372. BRING TEXTBOOK UNIT 2. Bring textbook, device, charger, school supplies, notebook."
+          "detalle": "Unit 12 Algebra – Determining Unknowns in Equations – Your Turn. External: Apply your knowledge by working from the pages 369-372. BRING TEXTBOOK UNIT 2. Bring textbook, device, charger, school supplies, notebook.",
+          "copiar": {
+            "instrucciones_mama": "Lesson 12-2. Killian ya hizo la 3, la 4 y la 5. Revisa la 5: escribió que reparte entre 4 amigos, pero 32 ÷ 8 = 4 significa 8 amigos con 4 dulces cada uno; aquí va la versión corregida. En la 4 falta decir por qué la ecuación sirve para las dos historias.",
+            "partes": [
+              {
+                "titulo": "Pág. 369 – Pregunta 1: 8 × 7 = □",
+                "texto": "There are 8 boxes. Each box has 7 crayons. How many crayons are there in all?\n8 × 7 = 56\n8 = boxes, 7 = crayons in each box, 56 = crayons in all.",
+                "traduccion_es": "Hay 8 cajas. Cada caja tiene 7 crayolas. ¿Cuántas crayolas hay en total?\n8 = cajas, 7 = crayolas en cada caja, 56 = crayolas en total.",
+                "dibujo": "8 cajitas con 7 rayitas cada una."
+              },
+              {
+                "titulo": "Pág. 369 – Pregunta 2: 27 ÷ □ = 3",
+                "texto": "I have 27 stickers. I give 3 stickers to each friend. How many friends get stickers?\n27 ÷ 9 = 3\n27 = stickers in all, 9 = friends, 3 = stickers for each friend.",
+                "traduccion_es": "Tengo 27 stickers. Le doy 3 a cada amigo. ¿A cuántos amigos les doy?\n27 = stickers en total, 9 = amigos, 3 = stickers para cada amigo."
+              },
+              {
+                "titulo": "Pág. 370 – Pregunta 4 (lo que falta)",
+                "texto": "The equation matches both stories because they both have 30 things in all in groups of 5. The box is the number of groups: 6.",
+                "traduccion_es": "La ecuación sirve para las dos historias porque las dos tienen 30 cosas en total en grupos de 5. La cajita es el número de grupos: 6."
+              },
+              {
+                "titulo": "Pág. 370 – Pregunta 5 (corregida)",
+                "texto": "Michael has 32 candies. He gives 4 candies to each friend. How many friends get candies?\n32 ÷ 8 = 4",
+                "traduccion_es": "Michael tiene 32 dulces. Le da 4 a cada amigo. ¿A cuántos amigos les da?\n(Son 8 amigos con 4 dulces cada uno.)"
+              },
+              {
+                "titulo": "Pág. 371 – Pregunta 6",
+                "texto": "An equation helps me see what I know and what I need to find. Then I can solve the problem.",
+                "traduccion_es": "Una ecuación me ayuda a ver lo que sé y lo que tengo que encontrar. Así puedo resolver el problema."
+              },
+              {
+                "titulo": "Pág. 371 – Pregunta 7",
+                "texto": "C. 5 × □ = 40\nEach shirt cost $8.",
+                "traduccion_es": "5 camisas por el precio de cada una = $40. Cada camisa costó $8.",
+                "dibujo": "Encierra la letra C."
+              },
+              {
+                "titulo": "Pág. 372 – Pregunta 8",
+                "texto": "C. There were 4 people sharing some stamps. Each person got 6 stamps.\n24 ÷ 4 = 6",
+                "traduccion_es": "4 personas comparten estampillas y cada una recibe 6. En total eran 24.",
+                "dibujo": "Encierra la letra C."
+              }
+            ]
+          }
         },
         {
           "id": "w43-t07",
@@ -584,14 +627,46 @@
         {
           "id": "w43-t11",
           "materia": "Reading and Composition",
-          "titulo": "📘 Página 54: sufijos -ity y -ty",
+          "titulo": "📘 Cuaderno pág. 54: sufijos -ity y -ty",
           "fecha": "2026-10-20",
           "entrega": "2026-10-21",
           "evaluacion": "formativa",
           "en_casa": [
             "Trabajar la página 54 del libro (Textbook Volume 2)"
           ],
-          "detalle": "Unit 6 Suffixes ity and ty. External: Work in the page 54 from your Textbook Volume 2 Suffixes ity and ty. Bring your device, notebook, textbook, school supplies."
+          "detalle": "Unit 6 Suffixes ity and ty. External: Work in the page 54 from your Textbook Volume 2 Suffixes ity and ty. Bring your device, notebook, textbook, school supplies.",
+          "copiar": {
+            "instrucciones_mama": "Workbook pág. 54 (Module 7). Se llena la tabla con 3 palabras en cada columna y 3 oraciones.",
+            "partes": [
+              {
+                "titulo": "1. La tabla",
+                "texto": "Copia 3 palabras en cada columna.",
+                "tabla": [
+                  [
+                    "-ity",
+                    "-ty"
+                  ],
+                  [
+                    "activity",
+                    "safety"
+                  ],
+                  [
+                    "ability",
+                    "loyalty"
+                  ],
+                  [
+                    "electricity",
+                    "royalty"
+                  ]
+                ]
+              },
+              {
+                "titulo": "2. Tres oraciones",
+                "texto": "Soccer is my favorite activity.\nSafety is important at school.\nMy dog shows loyalty to me.",
+                "traduccion_es": "El fútbol es mi actividad favorita.\nLa seguridad es importante en la escuela.\nMi perro me demuestra lealtad."
+              }
+            ]
+          }
         },
         {
           "id": "w43-t12",
@@ -603,7 +678,32 @@
           "en_casa": [
             "Tener lista la actividad de la página 429: dibujar lo que pide"
           ],
-          "detalle": "Unit 14 Geometry – Comparing Quadrilaterals – Your Turn. External: Bring ready for class from page 429 this activity that you have to draw what it is requested."
+          "detalle": "Unit 14 Geometry – Comparing Quadrilaterals – Your Turn. External: Bring ready for class from page 429 this activity that you have to draw what it is requested.",
+          "copiar": {
+            "instrucciones_mama": "Lesson 14-1. Se dibuja en la cuadrícula de la pág. 429, usando las esquinas de los cuadritos.",
+            "partes": [
+              {
+                "titulo": "Mira el dibujo",
+                "texto": "Este es el dibujo de la página 429. Míralo bien y cópialo en la cuadrícula de tu libro.",
+                "imagen": "dibujo_math_429.png"
+              },
+              {
+                "titulo": "1. It is not a rhombus",
+                "texto": "Dibuja un rectángulo largo: 4 cuadritos de largo y 2 de alto.\nNo es rombo porque sus lados no miden todos igual.",
+                "dibujo": "▭ rectángulo de 4 × 2"
+              },
+              {
+                "titulo": "2. It is not a rectangle",
+                "texto": "Dibuja un trapecio: abajo una línea de 5 cuadritos, arriba una de 3 cuadritos centrada, y une las puntas.\nNo es rectángulo porque no tiene esquinas rectas.",
+                "dibujo": "⏢ trapecio"
+              },
+              {
+                "titulo": "3. Not a rectangle, but a rhombus",
+                "texto": "Dibuja un rombo (como un diamante): pon 4 puntos — arriba en el centro, abajo en el centro, y uno a cada lado, 2 cuadritos a la izquierda y 2 a la derecha. Únelos.\nEs rombo porque sus 4 lados miden igual, y no es rectángulo porque no tiene esquinas rectas.",
+                "dibujo": "◇ rombo"
+              }
+            ]
+          }
         },
         {
           "id": "w43-t13",
@@ -722,14 +822,60 @@
         {
           "id": "w43-t22",
           "materia": "Reading and Composition",
-          "titulo": "📘 Página 58: sufijos -ity y -ty",
+          "titulo": "📘 Cuaderno pág. 58: sufijos -ty y -ity",
           "fecha": "2026-10-22",
           "entrega": "2026-10-23",
           "evaluacion": "formativa",
           "en_casa": [
             "Trabajar la página 58 del libro (Textbook Volume 2)"
           ],
-          "detalle": "Unit 7 Suffixes ity and ty. External: Work in the page 58 from your Textbook Volume 2 Suffixes ity and ty. Bring your device, notebook, textbook, school supplies."
+          "detalle": "Unit 7 Suffixes ity and ty. External: Work in the page 58 from your Textbook Volume 2 Suffixes ity and ty. Bring your device, notebook, textbook, school supplies.",
+          "copiar": {
+            "instrucciones_mama": "Workbook pág. 58 (Module 7). Tabla y una oración por palabra.",
+            "partes": [
+              {
+                "titulo": "1. La tabla",
+                "texto": "Copia la palabra nueva y su significado.",
+                "tabla": [
+                  [
+                    "Suffix",
+                    "Base Word",
+                    "New Word",
+                    "Meaning"
+                  ],
+                  [
+                    "-ty",
+                    "safe",
+                    "safety",
+                    "being safe"
+                  ],
+                  [
+                    "-ity",
+                    "diverse",
+                    "diversity",
+                    "many different kinds"
+                  ],
+                  [
+                    "-ty",
+                    "loyal",
+                    "loyalty",
+                    "being loyal"
+                  ],
+                  [
+                    "-ity",
+                    "secure",
+                    "security",
+                    "being safe and protected"
+                  ]
+                ]
+              },
+              {
+                "titulo": "2. Cuatro oraciones",
+                "texto": "We wear helmets for safety.\nOur class has a lot of diversity.\nMy dog shows loyalty to my family.\nThe guard keeps our school's security.",
+                "traduccion_es": "Usamos casco por seguridad.\nNuestra clase tiene mucha diversidad.\nMi perro demuestra lealtad a mi familia.\nEl guardia cuida la seguridad de nuestra escuela."
+              }
+            ]
+          }
         },
         {
           "id": "w43-t23",

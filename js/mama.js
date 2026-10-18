@@ -28,9 +28,10 @@ function validateCopiar(c, n){
   ps.forEach(function(p, i){
     var m = n + ", parte " + (i + 1);
     if(!p || typeof p !== "object"){ E.push(m + ": no se entiende."); return; }
-    var part = {titulo:str(p.titulo), texto:String(p.texto == null ? "" : p.texto).replace(/\r/g, "").trim(), traduccion_es:str(p.traduccion_es), dibujo:str(p.dibujo), tabla:[]};
+    var part = {titulo:str(p.titulo), texto:String(p.texto == null ? "" : p.texto).replace(/\r/g, "").trim(), traduccion_es:str(p.traduccion_es), dibujo:str(p.dibujo), imagen:str(p.imagen), tabla:[]};
+    if(part.imagen && !/^[A-Za-z0-9][A-Za-z0-9_.-]*\.(png|jpe?g|webp|gif)$/i.test(part.imagen)) E.push(m + ": «imagen» debe ser solo el nombre de un archivo (png, jpg, webp o gif), sin carpetas ni espacios.");
     if(!part.titulo) E.push(m + ": falta el «titulo».");
-    if(!part.texto && !(Array.isArray(p.tabla) && p.tabla.length)) E.push(m + ": falta el «texto» (o una «tabla»).");
+    if(!part.texto && !part.imagen && !(Array.isArray(p.tabla) && p.tabla.length)) E.push(m + ": falta el «texto» (o una «tabla» o una «imagen»).");
     if(p.tabla != null){
       if(!Array.isArray(p.tabla) || p.tabla.some(function(r){ return !Array.isArray(r); })) E.push(m + ": la «tabla» debe ser una lista de filas, por ejemplo [[\"Nota\",\"Dónde va\"],[\"Mi\",\"1.ª línea\"]].");
       else part.tabla = p.tabla.map(function(r){ return r.map(function(c2){ return str(c2); }); });
@@ -382,7 +383,7 @@ function copiarEditor(x, i){
   var h = '<div class="cpedit"><b>📝 Para copiar</b>' + cpInp(i, -1, "instrucciones_mama", "Para mamá (Killian no lo ve)", c.instrucciones_mama, true);
   (c.partes || []).forEach(function(pt, k){
     h += '<div class="cppart"><b>Parte '+(k + 1)+'</b>' + cpInp(i, k, "titulo", "Título", pt.titulo) + cpInp(i, k, "texto", "Texto que copia", pt.texto, true) +
-      cpInp(i, k, "traduccion_es", "Traducción (si está en inglés)", pt.traduccion_es) + cpInp(i, k, "dibujo", "Qué dibujar al lado", pt.dibujo) +
+      cpInp(i, k, "traduccion_es", "Traducción (si está en inglés)", pt.traduccion_es) + cpInp(i, k, "dibujo", "Qué dibujar al lado", pt.dibujo) + cpInp(i, k, "imagen", "Imagen (nombre del archivo en la carpeta img/copiar)", pt.imagen) +
       cpInp(i, k, "tabla", "Tabla (una fila por línea, columnas separadas con |)", (pt.tabla || []).map(function(r){ return r.join(" | "); }).join("\n"), true) +
       '<button class="link-btn del" type="button" data-act="cp-delpart" data-i="'+i+'" data-p="'+k+'">🗑 Quitar esta parte</button></div>';
   });
@@ -592,8 +593,8 @@ function extraClick(act, el, ev){
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
     case "mom-task-done": markDone("task", el.getAttribute("data-id")); momNote = "✅ Tarea marcada como hecha."; render(); return true;
-    case "cp-add": imp.draft.tareas[+el.getAttribute("data-i")].copiar = {instrucciones_mama:"", partes:[{titulo:"1. ", texto:"", traduccion_es:"", dibujo:"", tabla:[]}]}; render(); return true;
-    case "cp-addpart": var cc1 = imp.draft.tareas[+el.getAttribute("data-i")].copiar; cc1.partes.push({titulo:(cc1.partes.length + 1) + ". ", texto:"", traduccion_es:"", dibujo:"", tabla:[]}); render(); return true;
+    case "cp-add": imp.draft.tareas[+el.getAttribute("data-i")].copiar = {instrucciones_mama:"", partes:[{titulo:"1. ", texto:"", traduccion_es:"", dibujo:"", imagen:"", tabla:[]}]}; render(); return true;
+    case "cp-addpart": var cc1 = imp.draft.tareas[+el.getAttribute("data-i")].copiar; cc1.partes.push({titulo:(cc1.partes.length + 1) + ". ", texto:"", traduccion_es:"", dibujo:"", imagen:"", tabla:[]}); render(); return true;
     case "cp-delpart": imp.draft.tareas[+el.getAttribute("data-i")].copiar.partes.splice(+el.getAttribute("data-p"), 1); render(); return true;
     case "cp-del": imp.draft.tareas[+el.getAttribute("data-i")].copiar = null; render(); return true;
     case "voz-test": var vl = el.getAttribute("data-l"); speak(vl === "es" ? "Hola, soy tu voz en español. Los adverbios dicen dónde, cuándo y cómo pasa algo." : "Hello, I am your English voice. Rose lived in a small town.", vl); return true;

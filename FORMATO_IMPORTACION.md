@@ -255,3 +255,16 @@ Para tareas de investigación o escritura (folklore, música, Culture and Value�
 - Al terminar todas las partes se activa **✅ ¡Listo, ya lo copié!**, que marca la tarea como hecha (con su estrella) en todos los aparatos.
 - En las tareas que traen `copiar` **no sale «¡Ya lo hice!»**: esa es la única forma de terminarlas.
 - Mamá puede **marcarla como hecha** desde Zona de mamá → Detalle de tareas (**✔️ Marcarla como hecha (mamá)**) y puede **ver y editar** todo el texto en Agenda y materiales → editar la semana (apartado «Para copiar» de cada tarea).
+
+## Imágenes en «Para copiar» (`imagen`)
+Cada parte de `copiar.partes` puede traer un campo opcional **`imagen`** con el **nombre de un archivo de imagen** (solo el nombre, sin carpetas ni espacios; formatos `png`, `jpg`, `jpeg`, `webp` o `gif`).
+
+```json
+{ "titulo": "Mira el dibujo", "texto": "Cópialo en la cuadrícula de tu libro.", "imagen": "dibujo_math_429.png" }
+```
+
+- **Dónde va el archivo:** súbelo a la carpeta **`buzon/`** junto con la agenda (por ejemplo `buzon/dibujo_math_429.png`). Al procesar el buzón, la imagen se guarda en **`img/copiar/`** (esa es la carpeta de imágenes de la plataforma) y el original queda en `buzon/procesados/`.
+- **Cómo se ve:** grande en la tarjeta de esa parte. Si Killian la toca, se abre en **pantalla completa** (se cierra con «✕ Cerrar» o tocándola).
+- La parte puede traer solo `imagen` (sin `texto` ni `tabla`), o imagen más texto, traducción y tabla.
+- Mamá también la ve (Zona de mamá → Para copiar) y puede escribir o cambiar el nombre del archivo en el editor de la semana.
+- Consejos: imágenes de ancho 800–1200 px, menos de ~500 KB, con fondo blanco. `tools/validar.js` avisa si el archivo no existe.

@@ -24,6 +24,11 @@ for(const file of process.argv.slice(2)){
     const r = x.tipo === "agenda" ? ctx.validateAgenda(x) : x.tipo === "tema" ? ctx.validateTema(x) : x.tipo === "charla" ? ctx.validateCharla(x) : {errors:["Falta «tipo»: agenda, tema o charla."], warnings:[]};
     errors.push(...r.errors); warnings.push(...(r.warnings || []));
   });
+  /* las imágenes de «copiar» deben existir en img/copiar/ (o junto al archivo, en el buzón) */
+  list.forEach(x => (x.tareas || []).forEach(t => ((t.copiar && t.copiar.partes) || []).forEach(pt => {
+    if(pt && pt.imagen && !fs.existsSync(path.join(root, "img/copiar", pt.imagen)) && !fs.existsSync(path.join(path.dirname(path.resolve(file)), pt.imagen)))
+      warnings.push("La imagen «" + pt.imagen + "» (tarea " + t.id + ") no está en img/copiar/ ni en el buzón.");
+  })));
   console.log(errors.length ? "✗" : "✓", file, "(" + (o.tipo || (o.agendas ? "agendas" : "?")) + ")");
   errors.forEach(e => console.log("    ERROR:", e)); warnings.forEach(w => console.log("    aviso:", w));
   if(errors.length) bad++;
