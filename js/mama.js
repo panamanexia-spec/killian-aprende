@@ -233,6 +233,7 @@ function renderMom(){
     case "tareas": return renderTareasMom();
     case "charlas": return renderCharlasMom();
     case "voces": return renderVoces();
+    case "paracopiar": return renderParaCopiar();
     default: return renderMomMenu();
   }
 }
@@ -276,7 +277,7 @@ function renderTareasMom(){
       String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") +
       (x.repaso && x.repaso.length ? '<p class="small" style="color:var(--ink)"><b>📚 Repaso en clase:</b> ' + esc(x.repaso.join(" ")) + '</p>' : '') +
       (x.copiar && x.copiar.partes ? '<p class="small" style="color:var(--ink)"><b>✏️ Copiar en el cuaderno ('+x.copiar.partes.length+' '+(x.copiar.partes.length === 1 ? "parte" : "partes")+'):</b> ' + esc(x.copiar.partes.map(function(p){ return p.titulo; }).join(" · ")) + '</p>' + (x.copiar.instrucciones_mama ? '<p class="small mamanote">👩 Para mamá: ' + esc(x.copiar.instrucciones_mama) + '</p>' : '') : '') +
-      (x.copiar && x.copiar.partes && !done ? '<button class="btn btn-ghost" type="button" data-act="mom-task-done" data-id="' + esc(x.id) + '">✔️ Marcarla como hecha (mamá)</button>' : '') + '</article>';
+      (x.copiar && x.copiar.partes ? '<button class="btn btn-sun" type="button" data-act="cp-open-mom" data-id="' + esc(x.id) + '">📝 Ver qué copiar</button>' : '') + (x.copiar && x.copiar.partes && !done ? '<button class="btn btn-ghost" type="button" data-act="mom-task-done" data-id="' + esc(x.id) + '">✔️ Marcarla como hecha (mamá)</button>' : '') + '</article>';
   });
   return h + footer();
 }
@@ -288,6 +289,19 @@ function charlaStatsMom(c){
     '<p class="small">Practicó <b>'+ses+'</b> '+(ses === 1 ? "vez" : "veces")+' ('+chToday(id)+' hoy) · va en el nivel <b>'+chNextLevel(id)+'</b> · charla lista al <b>'+rd+'%</b> · ⭐ '+chStarsOf(id)+' de 3</p>' +
     '<p class="lvrow">'+lv+'</p>' +
     (recs.length ? recs.map(function(g){ return '<p class="small">🎙 Ensayo final · '+esc(new Date(g.ts).toLocaleString("es", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}))+' · '+g.pct+'%</p><audio controls preload="none" src="'+esc(g.data)+'"></audio>'; }).join("") : '<p class="small">Todavía no hay grabaciones del ensayo final.</p>') + '</div>';
+}
+/* Lista de las tareas «Para copiar», con botón para ver cómo las ve Killian. */
+function renderParaCopiar(){
+  var h = momHeader("Para copiar", "mom-go", "← Zona de mamá"), L = ((S.agenda && S.agenda.tareas) || []).filter(function(x){ return x.copiar && x.copiar.partes && x.copiar.partes.length; });
+  L.sort(function(a, b){ return (a.entrega || "9") < (b.entrega || "9") ? -1 : (a.entrega || "9") > (b.entrega || "9") ? 1 : 0; });
+  h += '<section class="card mom"><p>Las tareas donde Killian copia un texto en el cuaderno. Toca <b>📝 Ver qué copiar</b> para ver la pantalla tal como la ve él (aquí no se marca nada).</p></section>';
+  if(!L.length) return h + '<section class="card mom"><p class="small">Todavía no hay tareas con «Para copiar».</p></section>' + footer();
+  L.forEach(function(x){
+    var done = !!S.home.tasks[x.id], n = x.copiar.partes.length, c = cpDoneCount(x.id, n);
+    h += '<article class="card mom"><span class="chip sm">' + esc(x.materia || "") + '</span> <span class="small">' + (done ? "✓ hecha" : c ? c + " de " + n + " partes" : n + (n === 1 ? " parte" : " partes")) + (x.entrega ? " · para " + esc(capFirst(dayLabel(x.entrega))) : "") + '</span><h3>' + esc(x.titulo) + '</h3>' +
+      '<button class="btn btn-sun" type="button" data-act="cp-open-mom" data-id="' + esc(x.id) + '">📝 Ver qué copiar</button></article>';
+  });
+  return h + footer();
 }
 function renderVoces(){
   var r = voiceReport(), h = momHeader("Voces de este aparato", "mom-go", "← Zona de mamá");
@@ -327,6 +341,7 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="paracopiar"><span class="big">📝</span>Para copiar</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +

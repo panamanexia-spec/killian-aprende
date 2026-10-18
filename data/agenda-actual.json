@@ -318,14 +318,70 @@
         {
           "id": "w43-t02",
           "materia": "Reading and Composition",
-          "titulo": "📘 Página 41: prefijos inter- e intra-",
+          "titulo": "📘 Cuaderno pág. 41: prefijos inter- e intra-",
           "fecha": "2026-10-18",
           "entrega": "2026-10-19",
           "evaluacion": "formativa",
           "en_casa": [
-            "Trabajar la página 41 del libro (Textbook Volume 2)"
+            "Cuaderno de trabajo pág. 41: completar la tabla y escribir una oración con cada palabra"
           ],
-          "detalle": "Unit 6 Prefixes inter and intra. External: Work in the page 41 from your Textbook Volume 2 Prefixes inter and intra. Internal: teacher explains, students apply in textbook and submit. Bring device, notebook, textbook, school supplies."
+          "detalle": "Unit 6 Prefixes inter and intra. External: Work in the page 41 from your Textbook Volume 2 Prefixes inter and intra. Internal: teacher explains, students apply in textbook and submit. Bring device, notebook, textbook, school supplies.",
+          "copiar": {
+            "instrucciones_mama": "Respuestas de la pág. 41 (Word Study: Prefixes inter- and intra-). Inter- = entre; intra- = dentro de.",
+            "partes": [
+              {
+                "titulo": "1. La regla",
+                "texto": "inter- = between (entre) ↔️\nintra- = inside (dentro de) 🏠",
+                "dibujo": "No hace falta copiarla: es para entender."
+              },
+              {
+                "titulo": "2. La tabla",
+                "texto": "Copia la palabra nueva y su significado en cada fila.",
+                "tabla": [
+                  [
+                    "Prefix",
+                    "Base Word",
+                    "New Word",
+                    "Meaning of New Word"
+                  ],
+                  [
+                    "inter-",
+                    "national",
+                    "international",
+                    "between nations"
+                  ],
+                  [
+                    "intra-",
+                    "state",
+                    "intrastate",
+                    "inside one state"
+                  ],
+                  [
+                    "inter-",
+                    "twine",
+                    "intertwine",
+                    "to twist together"
+                  ],
+                  [
+                    "intra-",
+                    "city",
+                    "intracity",
+                    "inside one city"
+                  ]
+                ]
+              },
+              {
+                "titulo": "3. Oraciones 1 y 2",
+                "texto": "The Olympics are an international event.\nThe bus makes an intrastate trip in Texas.",
+                "traduccion_es": "Las Olimpiadas son un evento internacional.\nEl bus hace un viaje dentro del estado de Texas."
+              },
+              {
+                "titulo": "4. Oraciones 3 y 4",
+                "texto": "The vines intertwine around the fence.\nWe took an intracity bus to the park.",
+                "traduccion_es": "Las enredaderas se entrelazan en la cerca.\nTomamos un bus dentro de la ciudad para ir al parque."
+              }
+            ]
+          }
         },
         {
           "id": "w43-t03",

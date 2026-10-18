@@ -160,7 +160,7 @@ function confetti(){
   return h + '<span class="plus">+1 ⭐</span>';
 }
 /* ---- Copiar en el cuaderno ---- */
-var cpId = null;
+var cpId = null, cpMom = false;
 function cpKey(id, i){ return "cp:" + id + ":" + i; }
 function cpDoneCount(id, n){ var c = 0; for(var i = 0; i < n; i++) if(S.home.nchk[cpKey(id, i)] > 0) c++; return c; }
 function cpTask(){ var ag = agendaData(), r = null; ag.tareas.forEach(function(x){ if(x.id === cpId) r = x; }); return r; }
@@ -168,7 +168,8 @@ function renderCopiar(){
   var x = cpTask();
   if(!x || !x.copiar || !x.copiar.partes || !x.copiar.partes.length){ S.screen = "home"; return renderHome(); }
   var ps = x.copiar.partes, n = ps.length, d = cpDoneCount(x.id, n), lang = ps.some(function(p){ return p.traduccion_es; }) ? "en" : "es";
-  var h = subHeader("Para copiar", "home", "← Inicio") +
+  var h = (cpMom ? subHeader("Para copiar", "cp-back-mom", "← Zona de mamá") : subHeader("Para copiar", "home", "← Inicio")) +
+    (cpMom ? '<p class="note">👩 <b>Vista de mamá:</b> así lo ve Killian. Aquí no se marca nada.</p>' + (x.copiar.instrucciones_mama ? '<p class="small mamanote">Para mamá: '+esc(x.copiar.instrucciones_mama)+'</p>' : '') : '') +
     '<section class="card"><span class="chip">'+esc(x.materia||"")+'</span><h2 class="sec-title">'+esc(x.titulo)+'</h2>' +
     '<div class="progress-day"><div class="prog-row"><span>'+d+' de '+n+' '+(n === 1 ? "parte copiada" : "partes copiadas")+'</span></div><div class="bar"><i style="width:'+Math.round(d / n * 100)+'%"></i></div></div>' +
     '<p class="small">Copia cada parte en tu cuaderno, con letra bonita. Cuando termines una, tócala: ✓</p></section>';
@@ -179,16 +180,18 @@ function renderCopiar(){
       (p.traduccion_es ? '<p class="trad">'+esc(p.traduccion_es)+'</p>' : '') +
       (p.dibujo ? '<p class="cpdib">🎨 <b>Dibuja al lado:</b> '+esc(p.dibujo)+'</p>' : '') +
       (p.tabla && p.tabla.length ? '<div class="cptabwrap"><table class="cptab">'+p.tabla.map(function(r, ri){ return '<tr>'+r.map(function(c){ return (ri === 0 ? '<th>' : '<td>')+esc(c)+(ri === 0 ? '</th>' : '</td>'); }).join("")+'</tr>'; }).join("")+'</table></div>' : '') +
-      '<button class="btn '+(ok ? "btn-ghost" : "btn-sun")+'" type="button" data-act="cp-part" data-i="'+i+'" aria-pressed="'+ok+'">'+(ok ? "✓ Ya la copié (toca para quitar)" : "✏️ Ya la copié")+'</button></article>';
+      (cpMom ? '' : '<button class="btn '+(ok ? "btn-ghost" : "btn-sun")+'" type="button" data-act="cp-part" data-i="'+i+'" aria-pressed="'+ok+'">'+(ok ? "✓ Ya la copié (toca para quitar)" : "✏️ Ya la copié")+'</button>') + '</article>';
   }).join("");
-  h += '<section class="card alldone">'+(d === n ? '<h2>¡Copiaste todo! 🎉</h2>' : '<p class="small">Cuando copies todas las partes, aquí se activa el botón final.</p>')+
+  if(!cpMom) h += '<section class="card alldone">'+(d === n ? '<h2>¡Copiaste todo! 🎉</h2>' : '<p class="small">Cuando copies todas las partes, aquí se activa el botón final.</p>')+
     '<button class="btn btn-sun btn-big" type="button" data-act="cp-done"'+(d === n ? "" : " disabled")+'>✅ ¡Listo, ya lo copié!</button></section>';
   return h + footer();
 }
 function copiarClick(act, el){
   switch(act){
-    case "cp-open": cpId = el.getAttribute("data-id"); S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
-    case "cp-part": var k = cpKey(cpId, el.getAttribute("data-i")); S.home.nchk[k] = S.home.nchk[k] > 0 ? -Date.now() : Date.now(); saveHome(); render(); return true;
+    case "cp-open": cpId = el.getAttribute("data-id"); cpMom = false; S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
+    case "cp-open-mom": cpId = el.getAttribute("data-id"); cpMom = true; S.screen = "copiar"; helperOpen = false; render({top:true}); return true;
+    case "cp-back-mom": cpMom = false; S.screen = "mom"; momView = el.getAttribute("data-v") || "paracopiar"; render({top:true}); return true;
+    case "cp-part": if(cpMom) return true; var k = cpKey(cpId, el.getAttribute("data-i")); S.home.nchk[k] = S.home.nchk[k] > 0 ? -Date.now() : Date.now(); saveHome(); render(); return true;
     case "cp-done":
       var tk = cpTask(); if(!tk || cpDoneCount(cpId, tk.copiar.partes.length) < tk.copiar.partes.length) return true;
       markDone("task", cpId); S.screen = "home"; render({top:true}); return true;
