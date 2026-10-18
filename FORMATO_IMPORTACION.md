@@ -268,3 +268,8 @@ Cada parte de `copiar.partes` puede traer un campo opcional **`imagen`** con el 
 - La parte puede traer solo `imagen` (sin `texto` ni `tabla`), o imagen más texto, traducción y tabla.
 - Mamá también la ve (Zona de mamá → Para copiar) y puede escribir o cambiar el nombre del archivo en el editor de la semana.
 - Consejos: imágenes de ancho 800–1200 px, menos de ~500 KB, con fondo blanco. `tools/validar.js` avisa si el archivo no existe.
+
+## Cuándo se marca «hecha» una tarea de estudio (sin cambios de formato)
+- Una práctica de examen con **80 % o más** marca sola como hechas las tareas de ese tema (las de la agenda con `"tema"` —«📚 Estudiar…», «🔁 Repasar mis errores»— y las automáticas de `fecha_examen`). Con menos de 80 % no se marca y Killian ve un mensaje de ánimo.
+- Las estrellas completas se ganan la primera vez que aprueba; si repite, **máximo 1 ⭐ extra por día y por tema**.
+- Para las tareas con `copiar` o con `charla` las reglas son las de antes (botón final / 3 sesiones al día).

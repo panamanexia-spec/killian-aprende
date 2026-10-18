@@ -510,3 +510,13 @@ a.btn{text-decoration:none}
 .zoomveil{position:fixed; inset:0; z-index:90; background:rgba(8,20,48,.985); display:flex; align-items:center; justify-content:center; padding:env(safe-area-inset-top) 8px env(safe-area-inset-bottom); touch-action:pinch-zoom}
 .zoomveil img{max-width:100%; max-height:100%; object-fit:contain; background:#fff; border-radius:12px}
 .zoomclose{position:fixed; top:calc(env(safe-area-inset-top) + 10px); right:10px}
+
+.doneban,.tryban{display:flex; flex-direction:column; gap:2px; border-radius:18px; padding:10px 14px; margin:10px 0; font-weight:700}
+.doneban{background:#d9f7e0; border:3px solid #4cb36b; color:#14612f}
+.doneban b{font-family:var(--font-display); font-size:1.35rem}
+.tryban{background:#fff6d6; border:3px solid #ffc928; color:#6b4a00}
+.tryban b{font-family:var(--font-display); font-size:1.3rem}
+.task.donecard{background:#f2fff5; border:3px solid #4cb36b}
+.donebig{margin:0; font-family:var(--font-display); font-weight:800; font-size:1.3rem; color:#14612f}
+.regico{font-size:1.6rem; flex:none; width:48px; text-align:center}
+.nrow.done p{text-decoration:none; opacity:.8}

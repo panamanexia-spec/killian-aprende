@@ -18,6 +18,18 @@ function lessonsHtml(tid, subs){
       (l.ejemplo ? '<p class="ex-box"><b>Ejemplo:</b> ' + esc(l.ejemplo) + '</p>' : '') + (l.truco ? '<p class="trick">💡 ' + esc(l.truco) + '</p>' : '') + '</article>';
   }).join("") + '</section>';
 }
+/* ---- ✅ Hecho: una práctica con 80 % o más aprueba el tema (la primera vez que pasa queda guardado el día) ---- */
+var PASS = 80;
+function aprTs(tid){
+  var t = S.home.apr[tid] || 0;
+  if(!t){ var h = tHist(tid); for(var i = 0; i < h.length; i++) if(h[i].score >= PASS){ t = h[i].ts; break; } }
+  return t;
+}
+function aprLine(tid){
+  var t = aprTs(tid); if(!t) return "";
+  var d = ""; try{ d = new Date(t).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){}
+  return "Puntaje " + bestOf(tid) + " · " + d;
+}
 function allTemas(){ return builtinTemas().concat(S.temas); }
 function temaById(id){ var l = allTemas(); for(var i=0;i<l.length;i++) if(l[i].id === id) return l[i]; return null; }
 function tHist(tid){ return S.ex.hist[tid] || []; }
@@ -114,7 +126,8 @@ function statusOf(tid){
   var c = curFor(tid), h = tHist(tid);
   if(c && c.phase === "q"){ var n = c.qs.filter(function(q){ return isAnswered(q, c.answers[q.id]); }).length; return "✏️ En curso: " + n + " de " + c.qs.length; }
   if(c && c.phase === "vocab") return "🔤 Falta el mini vocabulario";
-  if(h.length) return "✅ " + h.length + (h.length === 1 ? " intento" : " intentos") + " · 🏆 Mejor nota: " + bestOf(tid) + " / 100";
+  if(aprTs(tid)) return "✅ ¡Ya lo hiciste! · " + aprLine(tid) + " · " + h.length + (h.length === 1 ? " intento" : " intentos");
+  if(h.length) return "⏳ " + h.length + (h.length === 1 ? " intento" : " intentos") + " · 🏆 Mejor nota: " + bestOf(tid) + " / 100";
   return "🆕 Sin empezar";
 }
 function renderTopics(){
@@ -138,13 +151,14 @@ function renderTema(){
   } else if(c && c.phase === "vocab") main += '<button class="btn btn-sun btn-big" type="button" data-act="x-continue">CONTINUAR (mini vocabulario)</button>';
   else if(c && c.phase === "res") main += '<button class="btn btn-sun btn-big" type="button" data-act="x-continue">VER MIS RESULTADOS</button>';
   var other = S.ex.cur && S.ex.cur.tema.id !== t.id && S.ex.cur.phase !== "res";
-  main += '<button class="btn ' + (main ? "btn-ghost" : "btn-sun btn-big") + '" type="button" data-act="x-start">' + (h.length ? "INTENTARLO OTRA VEZ (preguntas nuevas)" : "¡COMENZAR EXAMEN!") + '</button>';
+  main += '<button class="btn ' + (main ? "btn-ghost" : "btn-sun btn-big") + '" type="button" data-act="x-start">' + (aprTs(t.id) ? "🔁 Practicar otra vez" : h.length ? "INTENTARLO OTRA VEZ (preguntas nuevas)" : "¡COMENZAR EXAMEN!") + '</button>';
   if(h.length && t.examen_oficial) main += '<button class="btn btn-ghost" type="button" data-act="x-official">Repetir el examen completo</button>';
   var hist = h.length ? '<section class="card"><h2 class="sec-title">Mis intentos</h2>' + h.slice().reverse().map(function(a, i){
     var d = ""; try{ d = new Date(a.ts).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){}
     return '<p class="wordrow"><b>' + a.score + ' / 100</b><span>Intento ' + a.n + ' · ' + esc(d) + (a.vocab ? ' · 🔤 ' + a.vocab.ok + '/' + a.vocab.total : '') + '</span></p>';
   }).join("") + '</section>' : "";
-  return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
+  var banner = aprTs(t.id) ? '<section class="doneban" role="status"><b>✅ ¡Ya lo hiciste!</b><span>' + esc(aprLine(t.id)) + '</span></section>' : "";
+  return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") + banner +
     '<main class="card hero"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><span class="eng">' + esc(t.materia || "Tema") + '</span>' +
     '<h1>' + esc(t.titulo_es || t.titulo) + '</h1>' + (t.titulo_es ? '<p class="lead" lang="' + (t.idioma === "es" ? "es" : "en") + '">' + esc(t.titulo) + '</p>' : '') +
     (t.fecha_examen ? '<p class="lead">🗓️ Examen: ' + esc(dayLabel(t.fecha_examen)) + ' (' + esc(relDay(t.fecha_examen)) + ')</p>' : '') +
@@ -248,8 +262,14 @@ function xFinish(){
   var h = S.ex.hist[c.tema.id] = (S.ex.hist[c.tema.id] || []).concat([att]).slice(-30);
   c.result = {score:r.score, units:r.units, total:r.total, ts:att.ts};
   c.at = att.ts;
-  H.tries++; H.best = Math.max(H.best, r.score); if(c.round > 1) H.prac++;
-  if(c.qs.filter(function(q){ return isAnswered(q, c.answers[q.id]); }).length >= Math.ceil(c.qs.length / 2)) markAutoDone("ex", c.tema.id);   /* el pendiente se marca solo si contestó al menos la mitad */
+  H.tries++; H.best = Math.max(H.best, r.score);
+  /* ✅ 80 % o más: la tarea de ese tema queda hecha (agenda y automáticas). Menos de 80 %: no se marca. */
+  var tid0 = c.tema.id;
+  var prevApr = !!(H.apr[tid0] || (S.ex.hist[tid0] || []).slice(0, -1).some(function(a){ return a.score >= PASS; }));
+  c.score = r.score; c.passed = r.score >= PASS; c.firstPass = c.passed && !prevApr; c.extra = false;
+  if(c.passed){ if(!H.apr[tid0]) H.apr[tid0] = Date.now(); markAutoDone("ex", tid0); }
+  /* repetir después de aprobar: como mucho 1 ⭐ extra por día y por tema (si de verdad practicó: 50 % o más) */
+  if(prevApr && r.score >= 50){ var kx = tid0 + "|" + todayKey(); if(!H.pxd[kx]){ H.pxd[kx] = 1; c.extra = true; } }
   filter = "all";
   if(c.tema.vocabulario.length >= 3){ c.phase = "vocab"; c.vocab = buildVocab(c); S.screen = "vocab"; }
   else { c.phase = "res"; S.screen = "results"; }
@@ -373,6 +393,12 @@ function resActions(c, wrongN, unans){
   h += '<button class="btn btn-ghost" data-act="go-screen" data-s="topics" type="button">← Mis temas</button></div>';
   return h;
 }
+function aprMsg(c, r){
+  if(c.firstPass) return '<p class="doneban" role="status"><b>✅ ¡Ya lo hiciste!</b><span>Tu tarea quedó marcada. ¡Felicidades, Killian! 🎉</span></p>';
+  if(c.passed) return '<p class="doneban" role="status"><b>✅ ¡Otra vez muy bien!</b><span>' + (c.extra ? '⭐ +1 estrella por practicar hoy' : 'Hoy ya ganaste tu estrella por practicar este tema') + '</span></p>';
+  if(!aprTs(c.tema.id)) return '<p class="tryban" role="status"><b>¡Buen esfuerzo! 💪</b><span>Inténtalo otra vez para ganar tu ✅ (necesitas ' + PASS + ' o más).</span></p>';
+  return c.extra ? '<p class="tryban" role="status"><b>¡Gracias por practicar! 🌟</b><span>⭐ +1 estrella por practicar hoy</span></p>' : '';
+}
 function renderResults(){
   var c = S.ex.cur;
   if(!c || c.phase !== "res"){ S.screen = "home"; return renderHome(); }
@@ -391,7 +417,7 @@ function renderResults(){
   return subHeader("Resultados", "go-screen", "← Mis temas") + '<main class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
     '<h1>Resultados de Killian</h1><p lang="' + XL() + '" class="small">' + esc(c.tema.titulo) + (c.round > 1 ? ' · Intento ' + c.round : '') + '</p>' +
     '<div class="score" aria-label="Puntuación final">' + r.score + ' <small>/ 100</small></div><div class="stars" role="img" aria-label="' + stars + ' de 5 estrellas">' + starHtml + '</div>' +
-    '<p class="msg">' + messageFor(r.score, c.tema.titulo_es || c.tema.titulo) + '</p>' + good + vbox +
+    '<p class="msg">' + messageFor(r.score, c.tema.titulo_es || c.tema.titulo) + '</p>' + aprMsg(c, r) + good + vbox +
     '<div class="stats"><div class="stat g"><b>' + right + '</b><span>✅ correctas</span></div>' +
     '<div class="stat r"><b>' + wrong + '</b><span>❌ incorrectas</span></div>' +
     '<div class="stat"><b>' + pct + '%</b><span>de aciertos</span></div></div>' + (unans ? '<p class="unans">⚪ ' + unans + (unans === 1 ? ' pregunta quedó' : ' preguntas quedaron') + ' sin responder</p>' : '') + resActions(c, wrong, unans) + '</main>' +

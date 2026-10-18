@@ -97,6 +97,19 @@ function markAutoDone(kind, id){
   });
   if(ch) saveHome();
 }
+/* Tareas de estudio que ya quedaron hechas hoy (con su puntaje), para que Killian y mamá vean que sí las hizo. */
+function doneStudyToday(){
+  var t = todayKey(), out = [];
+  agendaData().tareas.forEach(function(x){ var ts = S.home.tasks[x.id]; if(x.tema && temaById(x.tema) && ts && dkey(new Date(ts)) === t) out.push({id:x.id, x:x}); });
+  autoItems().forEach(function(it){ var ts = S.home.tasks[it.id]; if(it.x.auto === "ex" && ts && dkey(new Date(ts)) === t) out.push({id:it.id, x:it.x}); });
+  return out;
+}
+function doneCard(d){
+  var x = d.x, tm = temaById(x.tema);
+  return '<article class="task donecard"><div class="emo" aria-hidden="true">✅</div><div class="body"><span class="chip sm">' + esc(x.materia || "") + '</span><h3>' + esc(x.titulo) + '</h3>' +
+    '<p class="donebig">✅ ¡Ya lo hiciste!</p><p class="small">Puntaje ' + bestOf(x.tema) + ' · hoy</p>' +
+    '<div class="acts"><button class="btn btn-ghost" type="button" data-act="x-quick" data-id="' + esc(x.tema) + '" data-m="">🔁 Practicar otra vez</button></div></div></article>';
+}
 function dueItems(){
   var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
   var grace = addDays(t, -2);   /* lo que ya pasó hace más de 2 días ya no se le pide a Killian (mamá lo sigue viendo como atrasado) */
@@ -115,7 +128,7 @@ function gameStars(){ var n = 0, g = S.home.gdays; Object.keys(g).forEach(functi
 function starCount(){
   var H = S.home;
   return realKeys(H.tasks).length + realKeys(H.vids).length + realKeys(H.mats).length +
-    realKeys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + H.prac +
+    realKeys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + Object.keys(H.pxd).length +
     Math.min(20, Math.floor(knownCount() / 5)) + gameStars() + chStarTotal();
 }
 function streak(){
@@ -287,7 +300,18 @@ function renderMatsAside(urgent){
   if(doneL.length) h += '<h3 class="grp">✓ Ya listos</h3>' + sorted(doneL).map(row).join("");
   return h + '</aside>';
 }
+/* Si ya aprobó un tema (80 % o más) después de que le tocaba la tarea, esa tarea queda hecha aunque se haya practicado antes de esta versión. */
+function retroMark(){
+  var H = S.home, t = todayKey(), ch = false;
+  agendaData().tareas.forEach(function(x){
+    if(!x.tema || x.copiar || H.tasks[x.id] || x.fecha > t || !temaById(x.tema)) return;
+    var from = parseD(x.fecha).getTime(), ok = tHist(x.tema).some(function(a){ return a.score >= PASS && a.ts >= from; });
+    if(ok){ var last = 0; tHist(x.tema).forEach(function(a){ if(a.score >= PASS && a.ts >= from && (!last || a.ts < last)) last = a.ts; }); H.tasks[x.id] = last || Date.now(); ch = true; }
+  });
+  if(ch) saveHome();
+}
 function renderHome(){
+  retroMark();
   var now = new Date(), hr = now.getHours(), t = todayKey(), ag = agendaData();
   var greet = hr < 12 ? "¡Buenos días" : hr < 19 ? "¡Buenas tardes" : "¡Buenas noches";
   var dateTxt = ""; try{ dateTxt = now.toLocaleDateString("es", {weekday:"long", day:"numeric", month:"long"}); dateTxt = dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1); }catch(e){}
@@ -324,6 +348,8 @@ function renderHome(){
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
       '<p>Puedes practicar inglés con tus temas.</p><button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
   }
+  var dn = doneStudyToday();
+  if(dn.length) h += '<h2 class="sec-title">✅ Ya hechas hoy</h2>' + dn.map(doneCard).join("");
   h += '</section></div>' + renderMatsAside(mats) + '</div>' +
     '<section class="tiles" aria-label="Más cosas">' +
     '<button class="tile" type="button" data-act="go-screen" data-s="topics"><span class="big">📚</span>Mis temas</button>' +
@@ -353,7 +379,7 @@ function renderStudy(){
 function renderStars(){
   var H = S.home;
   var rows = [["✅ Tareas hechas", realKeys(H.tasks).length], ["🎬 Videos vistos", realKeys(H.vids).length], ["🎒 Materiales preparados", realKeys(H.mats).length],
-    ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de errores", H.prac],
+    ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de repaso (máx. 1 ⭐ por día y tema)", Object.keys(H.pxd).length],
     ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games], ["🎤 Estrellas de mis charlas", chStarTotal()]];
   return subHeader("Mis estrellas") +
     '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starsAvail()+'</div><p>¡Sigue así, Killian!</p>'+(spentStars() ? '<p class="small">Has ganado '+starCount()+' en total y ya canjeaste '+spentStars()+'.</p>' : '')+'</section>' + renderPrizesKid() +

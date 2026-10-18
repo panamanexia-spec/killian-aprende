@@ -235,6 +235,7 @@ function renderMom(){
     case "charlas": return renderCharlasMom();
     case "voces": return renderVoces();
     case "paracopiar": return renderParaCopiar();
+    case "registro": return renderRegistro();
     default: return renderMomMenu();
   }
 }
@@ -305,6 +306,26 @@ function renderParaCopiar(){
   });
   return h + footer();
 }
+/* Registro de estudio por día: qué está hecho ✅ y qué falta ⏳, con su mejor puntaje en cada tema. */
+function renderRegistro(){
+  var h = momHeader("Registro de estudio", "mom-go", "← Zona de mamá"), t = todayKey(), rows = [], seen = {};
+  ((S.agenda && S.agenda.tareas) || []).forEach(function(x){ if(x.tema && temaById(x.tema) && x.fecha >= addDays(t, -3) && x.fecha <= addDays(t, 7)) rows.push({id:x.id, x:x, d:x.fecha}); });
+  autoItems().forEach(function(it){ if(it.x.auto === "ex") rows.push({id:it.id, x:it.x, d:it.x.fecha}); });
+  rows.sort(function(a, b){ return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; });
+  var temas = {}; rows.forEach(function(r){ temas[r.x.tema] = 1; });
+  h += '<section class="card mom"><h2 class="sec-title">🏆 Mejor puntaje por tema</h2>' + (Object.keys(temas).length ? Object.keys(temas).map(function(id){
+    var tm = temaById(id), hh = tHist(id), ap = aprTs(id);
+    return '<p class="wordrow"><span><b>' + esc(tm.titulo_es || tm.titulo) + '</b></span><span>' + (hh.length ? (ap ? "✅ " : "⏳ ") + 'mejor <b>' + bestOf(id) + '</b> · ' + hh.length + (hh.length === 1 ? " intento" : " intentos") : "⏳ sin practicar") + '</span></p>';
+  }).join("") : '<p class="small">No hay tareas de estudio en estos días.</p>') + '<p class="small">✅ = sacó 80 o más y la tarea se marcó sola.</p></section>';
+  var last = null;
+  rows.forEach(function(r){
+    var g = capFirst(dayLabel(r.d)) + (r.d === t ? " · hoy" : "");
+    if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
+    var ts = S.home.tasks[r.id], done = !!ts, dd = ""; try{ if(ts) dd = new Date(ts).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){}
+    h += '<div class="nrow' + (done ? " done" : "") + '"><span class="regico" aria-hidden="true">' + (done ? "✅" : "⏳") + '</span><p><b>' + esc(r.x.titulo) + '</b><br><span class="small">' + esc(r.x.materia || "") + ' · ' + (done ? "hecha el " + esc(dd) : "falta") + ' · mejor puntaje <b>' + (tHist(r.x.tema).length ? bestOf(r.x.tema) : "—") + '</b></span></p></div>';
+  });
+  return h + footer();
+}
 function renderVoces(){
   var r = voiceReport(), h = momHeader("Voces de este aparato", "mom-go", "← Zona de mamá");
   h += '<section class="card mom"><p>La voz que lee en español depende de las voces que tenga <b>este aparato</b> (la tablet, la Lenovo o el iPhone). Si no tiene una voz en español, lee en español con acento de inglés y la página no lo puede arreglar sola.</p>' +
@@ -343,6 +364,7 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="registro"><span class="big">✅</span>Registro de estudio</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="paracopiar"><span class="big">📝</span>Para copiar</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
