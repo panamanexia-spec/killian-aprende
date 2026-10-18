@@ -448,6 +448,96 @@
       "evaluacion": "sumativa y formativa",
       "tema": "math-sumas-restas",
       "detalle": "Unit 10 Plant Life and Numbers – Adding Subtracting Whole Numbers 2/3 digits – FORMAL TEST. External: Students will have the Sustentation TEST of the Formal together with Math and Science about Adding and Subtracting whole numbers with 2 and 3 digits."
+    },
+    {
+      "id": "w43-t27",
+      "materia": "Reading and Composition",
+      "titulo": "🧩 Crucigrama -able / -ible (cuaderno pág. 21)",
+      "fecha": "2026-10-22",
+      "entrega": "2026-10-23",
+      "evaluacion": "formativa",
+      "tema": "comp-able-ible",
+      "en_casa": [
+        "Cuaderno de trabajo (Grade 4, Module 6 Week 2) pág. 21: crucigrama de sufijos -able e -ible",
+        "Pág. 20 (Text Structure): pendiente, falta la lectura «Weird and Wondrous Rocks» págs. 37 y 40"
+      ],
+      "detalle": "Word Study – Suffixes -able and -ible: complete the crossword puzzle with words with suffixes -able and -ible. Comprehension pág. 20 – Text Structure (cause and effect), lectura Weird and Wondrous Rocks págs. 37 y 40.",
+      "copiar": {
+        "instrucciones_mama": "Respuestas del crucigrama de la pág. 21. La pág. 20 queda pendiente hasta tener las págs. 37 y 40 de «Weird and Wondrous Rocks».",
+        "partes": [
+          {
+            "titulo": "1. Cómo se llena",
+            "texto": "Escribe una letra en cada cuadrito.\nAcross = horizontal ➡️\nDown = vertical ⬇️"
+          },
+          {
+            "titulo": "2. Across (horizontal ➡️)",
+            "texto": "Escribe estas palabras en los cuadritos horizontales y en las líneas de abajo.",
+            "tabla": [
+              [
+                "#",
+                "Palabra",
+                "Significado"
+              ],
+              [
+                "4",
+                "convertible",
+                "carro sin techo"
+              ],
+              [
+                "5",
+                "incredible",
+                "increíble"
+              ],
+              [
+                "7",
+                "agreeable",
+                "agradable"
+              ],
+              [
+                "8",
+                "believable",
+                "creíble"
+              ],
+              [
+                "9",
+                "comfortable",
+                "cómodo"
+              ]
+            ]
+          },
+          {
+            "titulo": "3. Down (vertical ⬇️)",
+            "texto": "Escribe estas palabras en los cuadritos verticales y en las líneas de abajo.",
+            "tabla": [
+              [
+                "#",
+                "Palabra",
+                "Significado"
+              ],
+              [
+                "1",
+                "predictable",
+                "predecible"
+              ],
+              [
+                "2",
+                "terrible",
+                "terrible"
+              ],
+              [
+                "3",
+                "affordable",
+                "barato"
+              ],
+              [
+                "6",
+                "invisible",
+                "invisible"
+              ]
+            ]
+          }
+        ]
+      }
     }
   ],
   "materiales": [
