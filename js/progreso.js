@@ -124,7 +124,7 @@ function computeReport(){
   R.tipos = Object.keys(tipos).map(function(k){ var s = tipos[k]; s.tasa = pct(s.falladas, s.vistas); return s; }).filter(function(s){ return s.vistas >= 3; }).sort(function(a, b){ return b.tasa - a.tasa; });
   /* --- palabras --- */
   var wordIndex = {}; vocabTopics().concat(GENERAL).forEach(function(tp){ tp.words.forEach(function(w){ wordIndex[wkey(tp.id, w)] = {en:w.en, es:w.es, tema:tp.title}; }); });
-  R.palabras_falladas = Object.keys(H.wfail).sort(function(a, b){ return H.wfail[b] - H.wfail[a]; }).slice(0, 10).map(function(k){
+  R.palabras_falladas = Object.keys(H.wfail).filter(function(k){ var tm = temaById(k.split(":")[0]); return !(tm && tm.idioma === "es"); }).sort(function(a, b){ return H.wfail[b] - H.wfail[a]; }).slice(0, 10).map(function(k){
     var w = wordIndex[k] || {en:k.split(":").slice(1).join(":"), es:"", tema:""}; return {en:w.en, es:w.es, tema:w.tema, veces:H.wfail[k], aun_por_practicar:H.weak[k] > 0};
   });
   R.palabras_por_practicar = Object.keys(H.weak).filter(function(k){ return H.weak[k] > 0; }).length;

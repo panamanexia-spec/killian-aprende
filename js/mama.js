@@ -95,7 +95,7 @@ function validateAgenda(o){
 
 function validateTema(o){
   var E = [], W = [];
-  var t = {id:str(o.id), idioma:str(o.idioma) || "en", materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen),
+  var t = {id:str(o.id), idioma:str(o.idioma) || "en", materia:str(o.materia), titulo:str(o.titulo), titulo_es:str(o.titulo_es), fecha_examen:str(o.fecha_examen), vocabulario_pregunta_es:str(o.vocabulario_pregunta_es),
            resumen:[], subtemas:[], preguntas:[], vocabulario:[], lecciones:[]};
   if(!/^[a-z0-9][a-z0-9_-]*$/i.test(t.id)) E.push("El tema necesita un «id» sin espacios ni acentos, por ejemplo science-water-cycle.");
   if(t.id === "overunder" || t.id === "weak") E.push("El id «" + t.id + "» está reservado. Usa otro.");
@@ -121,7 +121,7 @@ function validateTema(o){
     var n = "Pregunta " + (i + 1);
     if(!p || typeof p !== "object"){ E.push(n + ": no se entiende."); return; }
     var q = {id:str(p.id) || ("q" + (i + 1)), subtema:str(p.subtema) || "general", tipo:str(p.tipo), pregunta_en:str(p.pregunta_en), pregunta_es:str(p.pregunta_es), explicacion_es:str(p.explicacion_es),
-      ejemplo_en:str(p.ejemplo_en), ejemplo_es:str(p.ejemplo_es), pista_es:str(p.pista_es), peso:(+p.peso > 0 && +p.peso <= 10) ? +p.peso : 1};
+      ejemplo_en:str(p.ejemplo_en), ejemplo_es:str(p.ejemplo_es), pista_es:str(p.pista_es), instruccion_es:str(p.instruccion_es), peso:(+p.peso > 0 && +p.peso <= 10) ? +p.peso : 1};
     if(seen[q.id]) E.push(n + ": el id «" + q.id + "» está repetido."); seen[q.id] = 1;
     if(tipos.indexOf(q.tipo) < 0){ E.push(n + ": el tipo «" + q.tipo + "» no existe. Usa: " + tipos.join(", ") + "."); return; }
     if(!q.pregunta_en) E.push(n + ": falta «pregunta_en».");

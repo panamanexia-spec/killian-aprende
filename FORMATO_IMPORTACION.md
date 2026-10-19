@@ -197,6 +197,13 @@ En un tema se puede poner **`"idioma": "es"`** (por defecto es `"en"`). Con `"es
 
 El resto del formato es igual (los campos se siguen llamando `pregunta_en`, `en`, etc., aunque el texto esté en español). Ejemplo: `"id": "es-adverbios", "idioma": "es", …`.
 
+**Temas con `"idioma": "es"` son 100 % en español** (la página lo hace sola):
+- No sale el botón «Ver en español» (aunque venga `pregunta_es`) ni la palabra «inglés» en ninguna pantalla.
+- Cada pregunta puede traer **`instruccion_es`** (la frase corta que sale arriba, por ejemplo «Escribe la palabra que falta.»). Si no la trae, se usa una por defecto.
+- Campo nuevo del tema: **`vocabulario_pregunta_es`** (por ejemplo «¿Qué tipo de adverbio es?»). Es el título de las tarjetas del mini vocabulario, en vez de «¿Qué significa?». En el mini vocabulario, las opciones incorrectas salen solo del vocabulario de ese mismo tema.
+- Sus palabras **no entran** al diccionario de inglés, al búho traductor, a los juegos de palabras ni a «palabras en inglés que más falla» del reporte.
+
+
 ## Botón de estudio en las tareas
 Si una tarea de la agenda trae `"tema"`, en «Pendientes de hoy» sale, justo arriba de «¡Ya lo hice!», el botón **📖 Estudiar mi resumen** (y **📝 Practicar examen** cuando el examen todavía no tiene su pendiente automático).
 

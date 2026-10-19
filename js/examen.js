@@ -75,7 +75,7 @@ function startRound(tid, official, errorsOnly){
     var byId = {}; tema.preguntas.forEach(function(q){ byId[q.id] = q; });
     qs = tema.examen_oficial.map(function(id){ return byId[id]; }).filter(Boolean); usedOfficial = true;
   } else qs = chooseQuestions(tema, n);
-  S.ex.cur = {tema:{id:tema.id, idioma:tema.idioma === "es" ? "es" : "en", materia:tema.materia || "", titulo:tema.titulo, titulo_es:tema.titulo_es || "", vocabulario:tema.vocabulario.slice(0, 60), subtemas:tema.subtemas || []},
+  S.ex.cur = {tema:{id:tema.id, idioma:tema.idioma === "es" ? "es" : "en", vocabulario_pregunta_es:tema.vocabulario_pregunta_es || "", materia:tema.materia || "", titulo:tema.titulo, titulo_es:tema.titulo_es || "", vocabulario:tema.vocabulario.slice(0, 60), subtemas:tema.subtemas || []},
     round:round, official:usedOfficial, qs:qs.map(prepQuestion), idx:0, answers:{}, phase:"q", t0:Date.now(), vocab:null, result:null, at:null};
   S.tid = tid; S.screen = "exam"; ex.es = {}; ex.sel = null; modal = null; filter = "all";
   save(); render({top:true});
@@ -164,12 +164,12 @@ function renderTema(){
     (t.fecha_examen ? '<p class="lead">🗓️ Examen: ' + esc(dayLabel(t.fecha_examen)) + ' (' + esc(relDay(t.fecha_examen)) + ')</p>' : '') +
     '<p class="note">No te preocupes si te equivocas. Este examen te ayudará a aprender.</p>' +
     '<div class="how"><h2>Instrucciones:</h2><ul><li>Lee cada pregunta con atención.</li><li>Selecciona o escribe tu respuesta.</li>' +
-    '<li>Si no sabes, pulsa «Ver en español» o piensa en el significado de la oración.</li>' +
+    (t.idioma === "es" ? "" : '<li>Si no sabes, pulsa «Ver en español» o piensa en el significado de la oración.</li>') +
     '<li>Cuando termines, pulsa el botón "TERMINAR EXAMEN".</li><li>Después podrás revisar tus errores y aprender de ellos.</li></ul></div>' +
     '<p>' + statusOf(t.id) + '</p>' + (other ? '<p class="small">Tienes otro examen a medias. Si empiezas este, el otro se cierra.</p>' : '') +
     '<div class="stack">' + main + '</div>' +
     '<div class="stack">' + (t.resumen.length ? '<button class="btn btn-blue" type="button" data-act="study" data-id="' + esc(t.id) + '">📖 Estudiar el resumen</button>' : '') +
-    (t.vocabulario.length ? '<button class="btn btn-ghost" type="button" data-act="dict-open" data-id="' + esc(t.id) + '">🔤 Sus palabras</button>' : '') + '</div></main>' +
+    (t.vocabulario.length && t.idioma !== "es" ? '<button class="btn btn-ghost" type="button" data-act="dict-open" data-id="' + esc(t.id) + '">🔤 Sus palabras</button>' : '') + '</div></main>' +
     hist + footer();
 }
 
@@ -196,6 +196,7 @@ function updateExamChrome(){
 }
 var DEFAULT_INSTR = {opcion_multiple:"Lee la pregunta y elige la respuesta correcta.", verdadero_falso:"Decide si la oración es verdadera o falsa.",
   unir:"Une cada palabra con su pareja.", completar:"Escribe en inglés la palabra que falta."};
+function esT(){ return XL() === "es"; }   /* tema en español: nada de «inglés» ni «Ver en español» */
 function renderQuestionBody(q, a, c){
   var h = "";
   if(q.tipo === "opcion_multiple"){
@@ -208,13 +209,13 @@ function renderQuestionBody(q, a, c){
       '<button type="button" class="opt" lang="' + XL() + '" data-act="x-tf" data-v="false" aria-pressed="' + (a === false) + '"><span class="let">✗</span><span>' + (XL() === "es" ? "Falso" : "False") + '</span></button></div>';
   } else if(q.tipo === "completar"){
     if(c.round > 1 && q.pista_es) h += '<p class="hint">💡 Pista: ' + esc(q.pista_es) + '</p>';
-    h += '<label for="xans" class="sec-es">Escribe la palabra completa en inglés:</label>' +
+    h += '<label for="xans" class="sec-es">' + (esT() ? "Escribe la palabra:" : "Escribe la palabra completa en inglés:") + '</label>' +
       '<input id="xans" class="write" lang="' + XL() + '" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" value="' + esc(a || "") + '" placeholder="Escribe aquí…">';
   } else {
     var used = {}; a = a || {};
     Object.keys(a).forEach(function(k){ used[a[k]] = +k; });
     var cur = ex.sel;
-    var msg = ex.hint || (cur != null ? "Paso 2: toca el significado de <b>" + esc(q.pares[cur].izquierda) + "</b>." : "Paso 1: toca una palabra en inglés.");
+    var msg = ex.hint || (cur != null ? "Paso 2: toca el significado de <b>" + esc(q.pares[cur].izquierda) + "</b>." : "Paso 1: toca una palabra" + (esT() ? "." : " en inglés."));
     h += '<div class="match"><div><h3>1. Palabras</h3><div class="words">' + q.pares.map(function(p, i){
       var r = a[i], L = r != null ? LET[q.rights.indexOf(r)] : null;
       return '<button type="button" class="w' + (r != null ? " set" : "") + (i === cur ? " sel" : "") + '" lang="' + XL() + '" data-act="x-lw" data-i="' + i + '" aria-pressed="' + (i === cur) + '">' +
@@ -232,10 +233,10 @@ function renderExam(){
   var c = S.ex.cur;
   if(!c || c.phase !== "q"){ S.screen = "home"; return renderHome(); }
   var q = c.qs[c.idx], last = c.idx === c.qs.length - 1, a = c.answers[q.id];
-  var body = '<span class="chip">' + esc(q.seccion || c.tema.titulo_es || c.tema.titulo) + '</span><p class="sec-es">' + esc(q.instruccion_es || DEFAULT_INSTR[q.tipo]) + '</p>';
+  var body = '<span class="chip">' + esc(q.seccion || c.tema.titulo_es || c.tema.titulo) + '</span><p class="sec-es">' + esc(q.instruccion_es || (esT() && q.tipo === "completar" ? "Escribe la palabra que falta." : DEFAULT_INSTR[q.tipo])) + '</p>';
   body += '<div class="qrow"><p class="qtext" lang="' + XL() + '">' + blankHtml(q.pregunta_en) + '</p>' + spk(q.pregunta_en, XL()) + '</div>';
   if(q.base_word) body += '<p class="base" lang="' + XL() + '">Base word: <b>' + esc(q.base_word) + '</b></p>';
-  if(q.pregunta_es){
+  if(q.pregunta_es && !esT()){
     body += ex.es[q.id] ? '<p class="es-box">🇪🇸 ' + blankHtml(q.pregunta_es) + '</p>' :
       '<button type="button" class="link-btn es-btn" data-act="x-es">🇪🇸 Ver en español</button>';
   }
@@ -285,7 +286,7 @@ function buildVocab(c){
   var n = words.length <= 5 ? words.length : Math.min(8, Math.max(5, Math.round(words.length / 2)));
   var items = shuffle(pool.slice(0, n)).map(function(w, i){
     var others = shuffle(words.filter(function(x){ return x.es !== w.es; })).map(function(x){ return x.es; });
-    GENERAL.forEach(function(g){ g.words.forEach(function(x){ if(others.length < 4 && x.es !== w.es && others.indexOf(x.es) < 0) others.push(x.es); }); });
+    if(!esT()) GENERAL.forEach(function(g){ g.words.forEach(function(x){ if(others.length < 4 && x.es !== w.es && others.indexOf(x.es) < 0) others.push(x.es); }); });
     return {en:w.en, es:w.es, aceptadas:(w.aceptadas || []).concat([w.es]), ejemplo_en:w.ejemplo_en || "", ejemplo_es:w.ejemplo_es || "",
       mode:i % 2 === 0 ? "elegir" : "escribir", opts:shuffle([w.es].concat(others.slice(0, 2))), ok:null, said:""};
   });
@@ -302,18 +303,18 @@ function renderVocab(){
       '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="v-go">¡Vamos! 🚀</button><button class="btn btn-ghost" type="button" data-act="v-skip">Saltar e ir a mis resultados</button></div></main>' + footer();
   }
   var it = v.items[v.i], answered = it.ok !== null, last = v.i === v.items.length - 1;
-  var body = '<span class="chip">¿Qué significa?</span><div class="qrow"><p class="qtext" lang="' + XL() + '" style="font-size:2.2rem">' + esc(it.en) + '</p>' + spk(it.en, XL()) + '</div>';
+  var body = '<span class="chip">' + esc(esT() && c.tema.vocabulario_pregunta_es ? c.tema.vocabulario_pregunta_es : "¿Qué significa?") + '</span><div class="qrow"><p class="qtext" lang="' + XL() + '" style="font-size:2.2rem">' + esc(it.en) + '</p>' + spk(it.en, XL()) + '</div>';
   if(it.mode === "elegir"){
     body += '<div class="opts">' + it.opts.map(function(o, i){
       var cls = "opt"; if(answered){ if(o === it.es) cls += " good"; else if(o === it.said) cls += " bad"; }
       return '<button type="button" class="' + cls + '" data-act="v-pick" data-v="' + esc(o) + '"' + (answered ? " disabled" : "") + '><span class="let">' + LET[i] + '</span><span>' + esc(o) + '</span></button>';
     }).join("") + '</div>';
   } else {
-    body += '<label for="vans" class="sec-es">Escríbelo en español:</label><input id="vans" class="write" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" value="' +
+    body += '<label for="vans" class="sec-es">' + (esT() ? "Escribe tu respuesta:" : "Escríbelo en español:") + '</label><input id="vans" class="write" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" value="' +
       esc(answered ? it.said : vx.text) + '" placeholder="Escribe aquí…"' + (answered ? " disabled" : "") + '>' +
       (answered ? "" : '<button type="button" class="btn btn-sun btn-big" data-act="v-check">Comprobar</button>');
   }
-  if(answered) body += (it.ok ? '<p class="fb good">🎉 ¡Muy bien!</p>' : '<p class="fb bad">¡Casi! Se dice «' + esc(it.es) + '». Ya lo sabes para la próxima. 💙</p>') +
+  if(answered) body += (it.ok ? '<p class="fb good">🎉 ¡Muy bien!</p>' : '<p class="fb bad">¡Casi! ' + (esT() ? 'La respuesta es' : 'Se dice') + ' «' + esc(it.es) + '». Ya lo sabes para la próxima. 💙</p>') +
     (it.ejemplo_en ? '<p class="small"><span lang="' + XL() + '">' + esc(it.ejemplo_en) + '</span><br>' + esc(it.ejemplo_es) + '</p>' : '') +
     '<button class="btn btn-sun btn-big" type="button" data-act="v-next">' + (last ? "Ver mis resultados" : "Siguiente →") + '</button>';
   return vocabHeader() + '<div class="prog-row"><span>Palabra ' + (v.i + 1) + ' de ' + v.items.length + '</span><span>✅ ' + v.ok + '</span></div>' +
@@ -450,7 +451,7 @@ function examClick(act, el, ev){
     case "x-lw": var li = +el.getAttribute("data-i"); ex.sel = ex.sel === li ? null : li; ex.hint = ""; render(); return true;
     case "x-rm":
       var ri = +el.getAttribute("data-i"), ans = c.answers[q.id] || {}, right = q.rights[ri];
-      if(ex.sel == null){ ex.hint = "Primero toca una palabra en inglés 👆"; render(); return true; }
+      if(ex.sel == null){ ex.hint = esT() ? "Primero toca una palabra 👆" : "Primero toca una palabra en inglés 👆"; render(); return true; }
       ex.hint = "";
       if(ans[ex.sel] === right) delete ans[ex.sel];
       else {

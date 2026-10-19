@@ -59,7 +59,7 @@ function dictEntries(){
   vocabTopics().forEach(function(t){ t.words.forEach(function(w){ out.push({en:w.en, es:w.es, alts:w.aceptadas || [], ex_en:w.ejemplo_en || "", ex_es:w.ejemplo_es || ""}); }); });
   GENERAL.forEach(function(g){ g.words.forEach(function(w){ out.push({en:w.en, es:w.es, alts:w.aceptadas || [], ex_en:"", ex_es:""}); }); });
   (S.custom || []).forEach(function(w){ out.push({en:w.en, es:w.es, alts:[w.es], ex_en:w.ejemplo_en || "", ex_es:w.ejemplo_es || ""}); });
-  allTemas().forEach(function(t){ t.resumen.forEach(function(r){ out.push({en:r.en, es:r.es, alts:[], ex_en:"", ex_es:""}); }); });
+  allTemas().forEach(function(t){ if(t.idioma === "es") return; t.resumen.forEach(function(r){ out.push({en:r.en, es:r.es, alts:[], ex_en:"", ex_es:""}); }); });
   return out;
 }
 function lookupLocal(q, dir){

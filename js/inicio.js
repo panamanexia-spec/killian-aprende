@@ -426,7 +426,7 @@ function renderStudy(){
     t.resumen.map(function(r){
       return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="'+tlang(t.id)+'">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en, tlang(t.id))+'</div>';
     }).join("") + '</section>' +
-    (t.vocabulario.length ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") +
+    (t.vocabulario.length && t.idioma !== "es" ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") +
     '<button class="btn btn-sun btn-big" type="button" data-act="open-tema" data-id="'+esc(t.id)+'">📝 Ir al examen</button>' + footer();
 }
 function renderStars(){
@@ -450,6 +450,7 @@ function tlang(tid){ var t = tid ? temaById(tid) : null; return t && t.idioma ==
 function vocabTopics(){
   var list = [];
   allTemas().forEach(function(t){
+    if(t.idioma === "es") return;   /* las palabras de temas en español no van al diccionario de inglés, ni a juegos, ni al búho */
     if(t.vocabulario.length) list.push({id:t.id, materia:t.materia, title:t.titulo_es || t.titulo, emo:t.builtin ? "🔤" : subjEmo(t.materia), words:t.vocabulario});
   });
   return list;
