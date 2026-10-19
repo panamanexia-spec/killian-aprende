@@ -324,6 +324,14 @@ function renderRegistro(){
     var ts = S.home.tasks[r.id], done = !!ts, dd = ""; try{ if(ts) dd = new Date(ts).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){}
     h += '<div class="nrow' + (done ? " done" : "") + '"><span class="regico" aria-hidden="true">' + (done ? "✅" : "⏳") + '</span><p><b>' + esc(r.x.titulo) + '</b><br><span class="small">' + esc(r.x.materia || "") + ' · ' + (done ? "hecha el " + esc(dd) : "falta") + ' · mejor puntaje <b>' + (tHist(r.x.tema).length ? bestOf(r.x.tema) : "—") + '</b></span></p></div>';
   });
+  var adv = Object.keys(S.home.adv).filter(function(id){ return S.home.tasks[id]; }), tk = {};
+  ((S.agenda && S.agenda.tareas) || []).forEach(function(x){ tk[x.id] = x; });
+  h += '<h2 class="sec-title nday">🚀 Tareas adelantadas</h2>';
+  if(!adv.length) h += '<section class="card mom"><p class="small">Todavía no ha adelantado tareas.</p></section>';
+  else adv.sort(function(a, b){ return S.home.adv[b] - S.home.adv[a]; }).forEach(function(id){
+    var x = tk[id] || {titulo:id, materia:""}, dd = ""; try{ dd = new Date(S.home.adv[id]).toLocaleDateString("es", {weekday:"long", day:"numeric", month:"short"}); }catch(e){}
+    h += '<div class="nrow done"><span class="regico" aria-hidden="true">🚀</span><p><b>' + esc(x.titulo) + '</b><br><span class="small">' + esc(x.materia || "") + ' · era para el ' + esc(x.fecha ? dayLabel(x.fecha) : "") + ' · la hizo el ' + esc(dd) + '</span></p></div>';
+  });
   return h + footer();
 }
 function renderVoces(){

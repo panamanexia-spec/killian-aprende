@@ -92,8 +92,8 @@ function markAutoDone(kind, id){
   });
   /* también las tareas de la agenda que traen ese tema (o esa charla) y ya tocan: practicar = hecha (quedan en el registro) */
   agendaData().tareas.forEach(function(x){
-    if(x.copiar || H.tasks[x.id] || x.fecha > t) return;
-    if((kind === "ex" && x.tema === id) || (kind === "ch" && x.charla === id)){ H.tasks[x.id] = Date.now(); ch = true; }
+    if(x.copiar || H.tasks[x.id] || x.fecha > addDays(t, ADV_DAYS)) return;
+    if((kind === "ex" && x.tema === id) || (kind === "ch" && x.charla === id)){ H.tasks[x.id] = Date.now(); noteAdv(x); ch = true; }
   });
   if(ch) saveHome();
 }
@@ -109,6 +109,45 @@ function doneCard(d){
   return '<article class="task donecard"><div class="emo" aria-hidden="true">✅</div><div class="body"><span class="chip sm">' + esc(x.materia || "") + '</span><h3>' + esc(x.titulo) + '</h3>' +
     '<p class="donebig">✅ ¡Ya lo hiciste!</p><p class="small">Puntaje ' + bestOf(x.tema) + ' · hoy</p>' +
     '<div class="acts"><button class="btn btn-ghost" type="button" data-act="x-quick" data-id="' + esc(x.tema) + '" data-m="">🔁 Practicar otra vez</button></div></div></article>';
+}
+/* ---- Adelantar tareas: opcional, solo cuando ya terminó lo de hoy y mañana. 1 ⭐ por tarea adelantada, máx. 3 al día. ---- */
+var ADV_DAYS = 7, ADV_MAX = 3;
+function noteAdv(x){ if(x && x.fecha > todayKey() && !S.home.adv[x.id]) S.home.adv[x.id] = Date.now(); }
+function advStars(){
+  var per = {}; Object.keys(S.home.adv).forEach(function(id){
+    if(!S.home.tasks[id] || /^(d-|demo:)/.test(id)) return;
+    var d = dkey(new Date(S.home.adv[id])); per[d] = (per[d] || 0) + 1;
+  });
+  var n = 0; Object.keys(per).forEach(function(d){ n += Math.min(per[d], ADV_MAX); });
+  return n;
+}
+function advToday(){ var t = todayKey(); return Object.keys(S.home.adv).filter(function(id){ return S.home.tasks[id] && dkey(new Date(S.home.adv[id])) === t; }).length; }
+/* Tareas de los próximos días que todavía no son de hoy. Las ya hechas hoy se quedan a la vista con su ✅. */
+function advItems(){
+  var t = todayKey(), end = addDays(t, ADV_DAYS), items = [];
+  agendaData().tareas.forEach(function(x){
+    if(x.fecha <= t || x.fecha > end) return;
+    var done = !!S.home.tasks[x.id];
+    if(done && !(S.home.adv[x.id] && dkey(new Date(S.home.adv[x.id])) === t)) return;
+    items.push({kind:"task", id:x.id, x:x, sort:x.fecha + "1"});
+  });
+  items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
+  return items;
+}
+function renderAdelantar(){
+  var items = advItems(), n = advToday(), h = subHeader("Adelantar tareas", "home", "← Inicio") +
+    '<section class="card"><svg class="owl" aria-hidden="true" style="width:70px;height:70px"><use href="#owl"/></svg><h2 class="sec-title">🚀 Adelantar tareas</h2>' +
+    '<p>Si quieres, puedes hacer tareas de los próximos días. ¡Es opcional! Cada una te da ⭐ (hasta ' + ADV_MAX + ' al día).</p>' +
+    (n ? '<p class="prize">⭐ ¡Súper! Hoy adelantaste ' + n + (n === 1 ? ' tarea' : ' tareas') + '.</p>' : '') + '</section>';
+  if(!items.length) return h + '<div class="card alldone"><h2>¡Ya no hay más por adelantar! 🎉</h2><p>Descansa, campeón.</p></div>' + footer();
+  var last = null;
+  items.forEach(function(it){
+    var g = dayLabel(it.x.fecha); g = g.charAt(0).toUpperCase() + g.slice(1);
+    if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
+    if(S.home.tasks[it.id]) h += '<article class="task donecard"><div class="emo" aria-hidden="true">✅</div><div class="body"><span class="chip sm">' + esc(it.x.materia || "") + '</span><h3>' + esc(it.x.titulo) + '</h3><p class="donebig">⭐ ¡Súper! Adelantaste una tarea</p></div></article>';
+    else h += taskCard(it);
+  });
+  return h + footer();
 }
 function dueItems(){
   var ag = agendaData(), t = todayKey(), old = addDays(t, -14), items = [];
@@ -128,7 +167,7 @@ function gameStars(){ var n = 0, g = S.home.gdays; Object.keys(g).forEach(functi
 function starCount(){
   var H = S.home;
   return realKeys(H.tasks).length + realKeys(H.vids).length + realKeys(H.mats).length +
-    realKeys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + Object.keys(H.pxd).length +
+    realKeys(H.days).length * 2 + (H.tries > 0 ? 1 : 0) + (H.best >= 80 ? 2 : 0) + (H.best >= 100 ? 2 : 0) + Object.keys(H.pxd).length + advStars() +
     Math.min(20, Math.floor(knownCount() / 5)) + gameStars() + chStarTotal();
 }
 function streak(){
@@ -154,6 +193,7 @@ function markDone(kind, id){
   var H = S.home, map = kind === "task" ? H.tasks : kind === "vid" ? H.vids : H.mats;
   if(map[id]) return;
   map[id] = Date.now();
+  if(kind === "task") agendaData().tareas.forEach(function(x){ if(x.id === id) noteAdv(x); });
   if(kind !== "mat"){
     cel[id] = 1;
     setTimeout(function(){ delete cel[id]; if(S.screen === "home") render(); }, 950);
@@ -348,6 +388,8 @@ function renderHome(){
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
       '<p>Puedes practicar inglés con tus temas.</p><button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
   }
+  if(!open && !later && advItems().length) h += '<div class="card alldone"><h2>🎉 ¡Terminaste todo lo de mañana!</h2><p>Si quieres, puedes adelantar tareas de otros días. ¡Es opcional!</p>' +
+    '<button class="btn btn-sun btn-big" type="button" data-act="go-screen" data-s="adelantar">🚀 Adelantar tareas</button></div>';
   var dn = doneStudyToday();
   if(dn.length) h += '<h2 class="sec-title">✅ Ya hechas hoy</h2>' + dn.map(doneCard).join("");
   h += '</section></div>' + renderMatsAside(mats) + '</div>' +
@@ -380,7 +422,7 @@ function renderStars(){
   var H = S.home;
   var rows = [["✅ Tareas hechas", realKeys(H.tasks).length], ["🎬 Videos vistos", realKeys(H.vids).length], ["🎒 Materiales preparados", realKeys(H.mats).length],
     ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de repaso (máx. 1 ⭐ por día y tema)", Object.keys(H.pxd).length],
-    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games], ["🎤 Estrellas de mis charlas", chStarTotal()]];
+    ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🚀 Tareas adelantadas (1 ⭐ cada una, hasta 3 al día)", advStars()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games], ["🎤 Estrellas de mis charlas", chStarTotal()]];
   return subHeader("Mis estrellas") +
     '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starsAvail()+'</div><p>¡Sigue así, Killian!</p>'+(spentStars() ? '<p class="small">Has ganado '+starCount()+' en total y ya canjeaste '+spentStars()+'.</p>' : '')+'</section>' + renderPrizesKid() +
     '<section class="card"><h2 class="sec-title">Así ganas estrellas</h2>' + rows.map(function(r){ return '<p class="wordrow"><b>'+r[1]+'</b><span>'+esc(r[0])+'</span></p>'; }).join("") + '</section>' +
