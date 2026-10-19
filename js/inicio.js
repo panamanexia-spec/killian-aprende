@@ -4,7 +4,18 @@ var SUBJ_EMO = {math:"🔢", spanish:"📖", español:"📖", english:"🔤", in
 function subjEmo(m){ return SUBJ_EMO[String(m||"").toLowerCase()] || "📚"; }
 function pad2(n){ return (n < 10 ? "0" : "") + n; }
 function dkey(d){ return d.getFullYear() + "-" + pad2(d.getMonth()+1) + "-" + pad2(d.getDate()); }
-function todayKey(){ return dkey(new Date()); }
+/* «Hoy» y «ya pasó» siempre con la hora de Panamá, sin importar la hora del aparato. */
+var PTZ = null;
+function pkey(d){
+  try{
+    if(!PTZ) PTZ = new Intl.DateTimeFormat("en-CA", {timeZone:"America/Panama", year:"numeric", month:"2-digit", day:"2-digit"});
+    var r = PTZ.format(d); if(/^\d{4}-\d{2}-\d{2}$/.test(r)) return r;
+  }catch(e){}
+  return dkey(d);
+}
+function todayKey(){ return pkey(new Date()); }
+/* El lunes de la semana de una fecha. */
+function weekStart(k){ var d = parseD(k), wd = (d.getDay() + 6) % 7; return addDays(k, -wd); }
 function addDays(k, n){ var d = parseD(k); d.setDate(d.getDate()+n); return dkey(d); }
 function parseD(k){ var p = String(k).split("-"); return new Date(+p[0], (+p[1]||1)-1, +p[2]||1); }
 function dayDiff(k){ return Math.round((parseD(k) - parseD(todayKey())) / 864e5); }
@@ -100,8 +111,8 @@ function markAutoDone(kind, id){
 /* Tareas de estudio que ya quedaron hechas hoy (con su puntaje), para que Killian y mamá vean que sí las hizo. */
 function doneStudyToday(){
   var t = todayKey(), out = [];
-  agendaData().tareas.forEach(function(x){ var ts = S.home.tasks[x.id]; if(x.tema && temaById(x.tema) && ts && dkey(new Date(ts)) === t) out.push({id:x.id, x:x}); });
-  autoItems().forEach(function(it){ var ts = S.home.tasks[it.id]; if(it.x.auto === "ex" && ts && dkey(new Date(ts)) === t) out.push({id:it.id, x:it.x}); });
+  agendaData().tareas.forEach(function(x){ var ts = S.home.tasks[x.id]; if(x.tema && temaById(x.tema) && ts && pkey(new Date(ts)) === t) out.push({id:x.id, x:x}); });
+  autoItems().forEach(function(it){ var ts = S.home.tasks[it.id]; if(it.x.auto === "ex" && ts && pkey(new Date(ts)) === t) out.push({id:it.id, x:it.x}); });
   return out;
 }
 function doneCard(d){
@@ -116,19 +127,19 @@ function noteAdv(x){ if(x && x.fecha > todayKey() && !S.home.adv[x.id]) S.home.a
 function advStars(){
   var per = {}; Object.keys(S.home.adv).forEach(function(id){
     if(!S.home.tasks[id] || /^(d-|demo:)/.test(id)) return;
-    var d = dkey(new Date(S.home.adv[id])); per[d] = (per[d] || 0) + 1;
+    var d = pkey(new Date(S.home.adv[id])); per[d] = (per[d] || 0) + 1;
   });
   var n = 0; Object.keys(per).forEach(function(d){ n += Math.min(per[d], ADV_MAX); });
   return n;
 }
-function advToday(){ var t = todayKey(); return Object.keys(S.home.adv).filter(function(id){ return S.home.tasks[id] && dkey(new Date(S.home.adv[id])) === t; }).length; }
+function advToday(){ var t = todayKey(); return Object.keys(S.home.adv).filter(function(id){ return S.home.tasks[id] && pkey(new Date(S.home.adv[id])) === t; }).length; }
 /* Tareas de los próximos días que todavía no son de hoy. Las ya hechas hoy se quedan a la vista con su ✅. */
 function advItems(){
   var t = todayKey(), end = addDays(t, ADV_DAYS), items = [];
   agendaData().tareas.forEach(function(x){
     if(x.fecha <= t || x.fecha > end) return;
     var done = !!S.home.tasks[x.id];
-    if(done && !(S.home.adv[x.id] && dkey(new Date(S.home.adv[x.id])) === t)) return;
+    if(done && !(S.home.adv[x.id] && pkey(new Date(S.home.adv[x.id])) === t)) return;
     items.push({kind:"task", id:x.id, x:x, sort:x.fecha + "1"});
   });
   items.sort(function(a, b){ return a.sort < b.sort ? -1 : a.sort > b.sort ? 1 : 0; });
@@ -359,7 +370,7 @@ function renderHome(){
   var due = dueItems();
   var pend = due.filter(function(i){ return !isDone(i.kind, i.id) || cel[i.id]; });
   var shown = pend.slice(0, 3), later = pend.filter(function(i){ return !cel[i.id]; }).length - shown.filter(function(i){ return !cel[i.id]; }).length;
-  var doneToday = due.filter(function(i){ var m = i.kind === "task" ? S.home.tasks : S.home.vids; return m[i.id] && dkey(new Date(m[i.id])) === t; }).length;
+  var doneToday = due.filter(function(i){ var m = i.kind === "task" ? S.home.tasks : S.home.vids; return m[i.id] && pkey(new Date(m[i.id])) === t; }).length;
   var open = due.filter(function(i){ return !isDone(i.kind, i.id); }).length;
   var tot = doneToday + open;
   var h = homeHeader() +

@@ -6,7 +6,7 @@
 var DAYL = ["D", "L", "M", "M", "J", "V", "S"];
 function rk(map){ return realKeys(map); }
 function noteFail(tid, w){ var k = wkey(tid, w); S.home.wfail[k] = (S.home.wfail[k] || 0) + 1; }
-function dateOfTs(ts){ return dkey(new Date(ts)); }
+function dateOfTs(ts){ return pkey(new Date(ts)); }
 function fmtDay(k){ try{ return parseD(k).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){ return k; } }
 
 /* ---------------------------------------------------------------- uso (tiempo aproximado) */

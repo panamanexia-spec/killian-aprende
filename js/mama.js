@@ -254,34 +254,60 @@ function notasOrdenadas(){
   L.sort(function(a, b){ if(a.d && b.d) return a.d < b.d ? -1 : a.d > b.d ? 1 : a.i - b.i; if(a.d) return -1; if(b.d) return 1; return a.i - b.i; });
   return L;
 }
-function notasPend(){ return notasOrdenadas().filter(function(x){ return !(S.home.nchk[x.k] > 0); }).length; }
+/* Notas vivas: sin fecha o de hoy en adelante. Las ya pasadas se ocultan solas. */
+function notaViva(x){ return !x.d || x.d >= todayKey(); }
+function notasPend(){ return notasOrdenadas().filter(function(x){ return notaViva(x) && !(S.home.nchk[x.k] > 0); }).length; }
+var momShowDone = {};   /* «Ver hechas» abierto o cerrado, por pantalla */
+/* Lo hecho que ya pasó pero es de esta semana: se oculta, y sale con «Ver hechas». Lo de semanas anteriores ya no se ve. */
+function hechasBtn(v, n){
+  if(!n) return "";
+  return '<p style="text-align:center"><button class="link-btn" type="button" data-act="mom-showdone" data-v="' + v + '">' + (momShowDone[v] ? "Ocultar hechas" : "Ver hechas (" + n + ")") + '</button></p>';
+}
 function renderNotas(){
-  var L = notasOrdenadas(), h = momHeader("Notas para mamá", "mom-go", "← Zona de mamá"), pend = notasPend(), last = null;
-  h += '<section class="card mom"><p class="small">' + (L.length ? (pend ? 'Te faltan <b>' + pend + '</b> por marcar. Toca el círculo cuando ya lo tengas listo.' : '🌟 Todo marcado.') : 'No hay notas todavía.') + '</p></section>';
-  L.forEach(function(x){
+  var all = notasOrdenadas(), t = todayKey(), wk = weekStart(t), h = momHeader("Notas para mamá", "mom-go", "← Zona de mamá"), pend = notasPend(), last = null;
+  var on = function(x){ return S.home.nchk[x.k] > 0; };
+  var live = all.filter(notaViva), todo = live.filter(function(x){ return !on(x); }), doneL = live.filter(on);
+  var old = all.filter(function(x){ return !notaViva(x) && on(x) && x.d >= wk; });   /* hechas y pasadas, de esta semana */
+  h += '<section class="card mom"><p class="small">' + (live.length ? (pend ? 'Te faltan <b>' + pend + '</b> por marcar. Toca el círculo cuando ya lo tengas listo.' : '🌟 Todo marcado.') : 'No hay notas por ahora.') + '</p></section>';
+  todo.forEach(function(x){
     var g = x.d ? capFirst(dayLabel(x.d)) + " · " + relDay(x.d) : "Sin fecha";
     if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
-    var on = S.home.nchk[x.k] > 0;
-    h += '<div class="nrow' + (on ? ' done' : '') + '"><button class="nchk" type="button" role="checkbox" aria-checked="' + on + '" aria-label="Marcar nota" data-act="nchk" data-id="' + esc(x.k) + '">' + (on ? "✓" : "") + '</button><p>' + esc(x.n.texto) + '</p></div>';
+    h += notaRow(x, false);
   });
+  if(doneL.length) h += '<h2 class="sec-title nday">✅ Hechas</h2>' + doneL.map(function(x){ return notaRow(x, true); }).join("");
+  h += hechasBtn("notas", old.length);
+  if(momShowDone.notas) h += old.map(function(x){ return notaRow(x, true); }).join("");
   return h + footer();
 }
+function notaRow(x, on){
+  return '<div class="nrow' + (on ? ' done' : '') + '"><button class="nchk" type="button" role="checkbox" aria-checked="' + on + '" aria-label="Marcar nota" data-act="nchk" data-id="' + esc(x.k) + '">' + (on ? "✓" : "") + '</button><p>' + (x.d && on ? '<span class="small">' + esc(capFirst(dayLabel(x.d))) + ' · </span>' : '') + esc(x.n.texto) + '</p></div>';
+}
 /* Todo el detalle de las tareas (lo que pide la escuela y lo que harán en clase), por día. */
+function tareaMomCard(x, done, late){
+  return '<article class="card mom' + (done ? ' tdone' : '') + '"><span class="chip sm">' + esc(x.materia || "") + '</span> ' + (done ? '<span class="small">✓ Killian ya la hizo</span>' : late ? '<span class="small softlate">⏰ Pendiente</span>' : '') + '<h3>' + esc(x.titulo) + '</h3>' +
+    String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") +
+    (x.tema && temaById(x.tema) ? (function(){ var hh = tHist(x.tema); return '<p class="small" style="color:var(--ink)">📝 Examen de práctica «' + esc(temaById(x.tema).titulo_es || temaById(x.tema).titulo) + '»: ' + (hh.length ? 'practicó <b>' + hh.length + '</b> ' + (hh.length === 1 ? 'vez' : 'veces') + ' · mejor nota <b>' + bestOf(x.tema) + '</b> · última <b>' + hh[hh.length - 1].score + '</b>' : 'todavía no ha practicado') + '</p>'; })() : '') +
+    (x.repaso && x.repaso.length ? '<p class="small" style="color:var(--ink)"><b>📚 Repaso en clase:</b> ' + esc(x.repaso.join(" ")) + '</p>' : '') +
+    (x.copiar && x.copiar.partes ? '<p class="small" style="color:var(--ink)"><b>✏️ Copiar en el cuaderno ('+x.copiar.partes.length+' '+(x.copiar.partes.length === 1 ? "parte" : "partes")+'):</b> ' + esc(x.copiar.partes.map(function(p){ return p.titulo; }).join(" · ")) + '</p>' + (x.copiar.instrucciones_mama ? '<p class="small mamanote">👩 Para mamá: ' + esc(x.copiar.instrucciones_mama) + '</p>' : '') : '') +
+    (x.copiar && x.copiar.partes ? '<button class="btn btn-sun" type="button" data-act="cp-open-mom" data-id="' + esc(x.id) + '">📝 Ver qué copiar</button>' : '') + (x.copiar && x.copiar.partes && !done ? '<button class="btn btn-ghost" type="button" data-act="mom-task-done" data-id="' + esc(x.id) + '">✔️ Marcarla como hecha (mamá)</button>' : '') + '</article>';
+}
+function tareaDia(x){ return x.entrega || x.fecha || ""; }
 function renderTareasMom(){
-  var h = momHeader("Detalle de tareas", "mom-go", "← Zona de mamá"), L = ((S.agenda && S.agenda.tareas) || []).slice(), last = null;
-  L.sort(function(a, b){ return (a.entrega || "9") < (b.entrega || "9") ? -1 : (a.entrega || "9") > (b.entrega || "9") ? 1 : 0; });
+  var h = momHeader("Detalle de tareas", "mom-go", "← Zona de mamá"), L = ((S.agenda && S.agenda.tareas) || []).slice(), last = null, t = todayKey(), wk = weekStart(t);
+  L.sort(function(a, b){ return (tareaDia(a) || "9") < (tareaDia(b) || "9") ? -1 : (tareaDia(a) || "9") > (tareaDia(b) || "9") ? 1 : 0; });
   if(!L.length) return h + '<section class="card mom"><p class="small">No hay tareas cargadas.</p></section>' + footer();
-  L.forEach(function(x){
-    var g = x.entrega ? "Para " + capFirst(dayLabel(x.entrega)) + " · " + relDay(x.entrega) : "Sin fecha";
+  var isDone = function(x){ return !!S.home.tasks[x.id]; };
+  var todo = L.filter(function(x){ return !isDone(x); });
+  var doneNow = L.filter(function(x){ return isDone(x) && (!tareaDia(x) || tareaDia(x) >= t); });   /* hechas de hoy en adelante: abajo, en gris */
+  var old = L.filter(function(x){ return isDone(x) && tareaDia(x) && tareaDia(x) < t && tareaDia(x) >= wk; });   /* hechas y pasadas de esta semana: «Ver hechas» */
+  todo.forEach(function(x){
+    var d = tareaDia(x), g = d ? "Para " + capFirst(dayLabel(d)) + " · " + relDay(d) : "Sin fecha";
     if(g !== last){ h += '<h2 class="sec-title nday">' + esc(g) + '</h2>'; last = g; }
-    var done = !!S.home.tasks[x.id];
-    h += '<article class="card mom"><span class="chip sm">' + esc(x.materia || "") + '</span> ' + (done ? '<span class="small">✓ Killian ya la hizo</span>' : '') + '<h3>' + esc(x.titulo) + '</h3>' +
-      String(x.detalle || "").split(/\n+/).filter(Boolean).map(function(l){ return '<p class="small" style="color:var(--ink)">' + esc(l) + '</p>'; }).join("") +
-      (x.tema && temaById(x.tema) ? (function(){ var hh = tHist(x.tema); return '<p class="small" style="color:var(--ink)">📝 Examen de práctica «' + esc(temaById(x.tema).titulo_es || temaById(x.tema).titulo) + '»: ' + (hh.length ? 'practicó <b>' + hh.length + '</b> ' + (hh.length === 1 ? 'vez' : 'veces') + ' · mejor nota <b>' + bestOf(x.tema) + '</b> · última <b>' + hh[hh.length - 1].score + '</b>' : 'todavía no ha practicado') + '</p>'; })() : '') +
-      (x.repaso && x.repaso.length ? '<p class="small" style="color:var(--ink)"><b>📚 Repaso en clase:</b> ' + esc(x.repaso.join(" ")) + '</p>' : '') +
-      (x.copiar && x.copiar.partes ? '<p class="small" style="color:var(--ink)"><b>✏️ Copiar en el cuaderno ('+x.copiar.partes.length+' '+(x.copiar.partes.length === 1 ? "parte" : "partes")+'):</b> ' + esc(x.copiar.partes.map(function(p){ return p.titulo; }).join(" · ")) + '</p>' + (x.copiar.instrucciones_mama ? '<p class="small mamanote">👩 Para mamá: ' + esc(x.copiar.instrucciones_mama) + '</p>' : '') : '') +
-      (x.copiar && x.copiar.partes ? '<button class="btn btn-sun" type="button" data-act="cp-open-mom" data-id="' + esc(x.id) + '">📝 Ver qué copiar</button>' : '') + (x.copiar && x.copiar.partes && !done ? '<button class="btn btn-ghost" type="button" data-act="mom-task-done" data-id="' + esc(x.id) + '">✔️ Marcarla como hecha (mamá)</button>' : '') + '</article>';
+    h += tareaMomCard(x, false, !!d && d < t);
   });
+  if(doneNow.length) h += '<h2 class="sec-title nday">✅ Ya hechas</h2>' + doneNow.map(function(x){ return tareaMomCard(x, true); }).join("");
+  h += hechasBtn("tareas", old.length);
+  if(momShowDone.tareas) h += old.map(function(x){ return tareaMomCard(x, true); }).join("");
   return h + footer();
 }
 /* Cuántas veces practicó, en qué nivel va y las grabaciones del ensayo final. */
@@ -295,15 +321,22 @@ function charlaStatsMom(c){
 }
 /* Lista de las tareas «Para copiar», con botón para ver cómo las ve Killian. */
 function renderParaCopiar(){
+  var t = todayKey(), tm = addDays(t, 1), wk = weekStart(t), done = function(x){ return !!S.home.tasks[x.id]; };
   var h = momHeader("Para copiar", "mom-go", "← Zona de mamá"), L = ((S.agenda && S.agenda.tareas) || []).filter(function(x){ return x.copiar && x.copiar.partes && x.copiar.partes.length; });
-  L.sort(function(a, b){ return (a.entrega || "9") < (b.entrega || "9") ? -1 : (a.entrega || "9") > (b.entrega || "9") ? 1 : 0; });
+  var key = function(x){ return tareaDia(x) || "9"; };
+  /* primero lo que falta de hoy y mañana (y lo atrasado), luego lo demás que falta; lo hecho al final */
+  var up = L.filter(function(x){ return !done(x) && key(x) <= tm; }).sort(function(a, b){ return key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : 0; });
+  var rest = L.filter(function(x){ return !done(x) && key(x) > tm; }).sort(function(a, b){ return key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : 0; });
+  var fin = L.filter(function(x){ return done(x) && (!tareaDia(x) || tareaDia(x) >= wk); }).sort(function(a, b){ return key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : 0; });
   h += '<section class="card mom"><p>Las tareas donde Killian copia un texto en el cuaderno. Toca <b>📝 Ver qué copiar</b> para ver la pantalla tal como la ve él (aquí no se marca nada).</p></section>';
-  if(!L.length) return h + '<section class="card mom"><p class="small">Todavía no hay tareas con «Para copiar».</p></section>' + footer();
-  L.forEach(function(x){
-    var done = !!S.home.tasks[x.id], n = x.copiar.partes.length, c = cpDoneCount(x.id, n);
-    h += '<article class="card mom"><span class="chip sm">' + esc(x.materia || "") + '</span> <span class="small">' + (done ? "✓ hecha" : c ? c + " de " + n + " partes" : n + (n === 1 ? " parte" : " partes")) + (x.entrega ? " · para " + esc(capFirst(dayLabel(x.entrega))) : "") + '</span><h3>' + esc(x.titulo) + '</h3>' +
+  if(!up.length && !rest.length && !fin.length) return h + '<section class="card mom"><p class="small">Todavía no hay tareas con «Para copiar».</p></section>' + footer();
+  var card = function(x){
+    var d = done(x), n = x.copiar.partes.length, c = cpDoneCount(x.id, n), late = !d && tareaDia(x) && tareaDia(x) < t;
+    return '<article class="card mom' + (d ? ' tdone' : '') + '"><span class="chip sm">' + esc(x.materia || "") + '</span> <span class="small">' + (d ? "✓ hecha" : late ? "⏰ Pendiente" : c ? c + " de " + n + " partes" : n + (n === 1 ? " parte" : " partes")) + (x.entrega ? " · para " + esc(capFirst(dayLabel(x.entrega))) : "") + '</span><h3>' + esc(x.titulo) + '</h3>' +
       '<button class="btn btn-sun" type="button" data-act="cp-open-mom" data-id="' + esc(x.id) + '">📝 Ver qué copiar</button></article>';
-  });
+  };
+  h += up.map(card).join("") + rest.map(card).join("");
+  if(fin.length) h += '<h2 class="sec-title nday">✅ Ya hechas</h2>' + fin.map(card).join("");
   return h + footer();
 }
 /* Registro de estudio por día: qué está hecho ✅ y qué falta ⏳, con su mejor puntaje en cada tema. */
@@ -622,6 +655,7 @@ function extraClick(act, el, ev){
       if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
+    case "mom-showdone": var sv = el.getAttribute("data-v"); momShowDone[sv] = !momShowDone[sv]; render(); return true;
     case "mom-task-done": markDone("task", el.getAttribute("data-id")); momNote = "✅ Tarea marcada como hecha."; render(); return true;
     case "cp-add": imp.draft.tareas[+el.getAttribute("data-i")].copiar = {instrucciones_mama:"", partes:[{titulo:"1. ", texto:"", traduccion_es:"", dibujo:"", imagen:"", tabla:[]}]}; render(); return true;
     case "cp-addpart": var cc1 = imp.draft.tareas[+el.getAttribute("data-i")].copiar; cc1.partes.push({titulo:(cc1.partes.length + 1) + ". ", texto:"", traduccion_es:"", dibujo:"", imagen:"", tabla:[]}); render(); return true;

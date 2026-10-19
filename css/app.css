@@ -519,4 +519,7 @@ a.btn{text-decoration:none}
 .task.donecard{background:#f2fff5; border:3px solid #4cb36b}
 .donebig{margin:0; font-family:var(--font-display); font-weight:800; font-size:1.3rem; color:#14612f}
 .regico{font-size:1.6rem; flex:none; width:48px; text-align:center}
-.nrow.done p{text-decoration:none; opacity:.8}
+.nrow.done p{text-decoration:line-through; opacity:.55; color:#6b7280}
+.card.mom.tdone{opacity:.6; filter:grayscale(.7)}
+.card.mom.tdone h3{text-decoration:line-through}
+.softlate{color:#a15c00; font-weight:700}
