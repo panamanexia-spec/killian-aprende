@@ -399,30 +399,32 @@
     {
      "id": "w43-t04",
      "materia": "Educación Musical",
-     "titulo": "🎼 Pentagrama con clave de sol y 6 notas",
+     "titulo": "🎼 Musical staff: pentagrama con clave de sol y 6 notas",
      "fecha": "2026-10-19",
      "entrega": "2026-10-20",
      "evaluacion": "formativa",
      "en_casa": [
-      "En el cuaderno: dibujar un pentagrama con clave de sol y poner 6 notas distintas"
+      "In the notebook: draw a musical staff with a treble clef and 6 different notes (en el cuaderno: pentagrama con clave de sol y 6 notas)"
      ],
      "detalle": "Unit 7 Stem Rule – Correct use of the stem in music. External: Draw a musical staff with a treble clef in the notebook and place six different notes on it. Internal: complete pages 20 and 21 of the music book in class. Remember to bring the book.",
      "copiar": {
-      "instrucciones_mama": "En el cuaderno de música. Líneas contadas de abajo hacia arriba: Mi (1.ª línea, negra), Sol (2.ª línea, blanca), La (2.º espacio, corchea), Si (3.ª línea, negra), Re (4.ª línea, blanca), Fa (5.ª línea, negra). Regla del palito: debajo de la 3.ª línea va hacia arriba a la derecha; en la 3.ª línea o más arriba, hacia abajo a la izquierda. Si la maestra pidió otras figuras, cámbialas: la regla es la misma.",
+      "instrucciones_mama": "En inglés, como lo mandó la maestra. Letras con el nombre entre paréntesis, como en su libro: E (Mi) 1.ª línea, negra; G (Sol) 2.ª línea, blanca; A (La) 2.º espacio, corchea; B (Si) 3.ª línea, negra; D (Re) 4.ª línea, blanca; F (Fa) 5.ª línea, negra. Regla del palito (stem): debajo de la 3.ª línea va hacia arriba a la derecha; en la 3.ª línea o más arriba, hacia abajo a la izquierda.",
       "partes": [
        {
-        "titulo": "1. El título",
-        "texto": "Pentagrama con clave de sol"
+        "titulo": "1. The title",
+        "texto": "Musical staff with treble clef",
+        "traduccion_es": "Pentagrama con clave de sol (MIÚ-si-cal STAF uiz TRÉ-bol CLEF)"
        },
        {
-        "titulo": "2. El pentagrama",
-        "imagen": "dibujo_musica_pentagrama.png",
+        "titulo": "2. The staff",
+        "imagen": "dibujo_music_staff.png",
         "dibujo": "Copia este dibujo: 5 líneas con regla, la clave de sol y las 6 notas."
        },
        {
-        "titulo": "3. Los nombres de las notas",
-        "texto": "Mi    Sol    La    Si    Re    Fa",
-        "dibujo": "Escribe cada nombre debajo de su nota."
+        "titulo": "3. The note names",
+        "texto": "E (Mi)   G (Sol)   A (La)   B (Si)   D (Re)   F (Fa)",
+        "traduccion_es": "Escribe cada letra debajo de su nota.",
+        "dibujo": "Escribe cada letra debajo de su nota."
        }
       ]
      }
