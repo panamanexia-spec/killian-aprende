@@ -432,7 +432,7 @@ function renderStudy(){
 function renderStars(){
   var H = S.home;
   var rows = [["✅ Tareas hechas", realKeys(H.tasks).length], ["🎬 Videos vistos", realKeys(H.vids).length], ["🎒 Materiales preparados", realKeys(H.mats).length],
-    ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de repaso (máx. 1 ⭐ por día y tema)", Object.keys(H.pxd).length],
+    ["🎉 Días completos (2 ⭐ cada uno)", realKeys(H.days).length], ["📝 Exámenes terminados", H.tries], ["🔁 Prácticas de repaso (máx. 1 ⭐ por día)", Object.keys(H.pxd).length],
     ["🧠 Palabras aprendidas (1 ⭐ cada 5)", knownCount()], ["🚀 Tareas adelantadas (1 ⭐ cada una, hasta 3 al día)", advStars()], ["🔎 Palabras que buscaste con el búho", Object.keys(H.look).length], ["🎮 Juegos terminados (hasta 3 ⭐ al día)", H.games], ["🎤 Estrellas de mis charlas", chStarTotal()]];
   return subHeader("Mis estrellas") +
     '<section class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><div class="score">⭐ '+starsAvail()+'</div><p>¡Sigue así, Killian!</p>'+(spentStars() ? '<p class="small">Has ganado '+starCount()+' en total y ya canjeaste '+spentStars()+'.</p>' : '')+'</section>' + renderPrizesKid() +

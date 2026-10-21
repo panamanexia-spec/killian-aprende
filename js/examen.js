@@ -269,8 +269,8 @@ function xFinish(){
   var prevApr = !!(H.apr[tid0] || (S.ex.hist[tid0] || []).slice(0, -1).some(function(a){ return a.score >= PASS; }));
   c.score = r.score; c.passed = r.score >= PASS; c.firstPass = c.passed && !prevApr; c.extra = false;
   if(c.passed){ if(!H.apr[tid0]) H.apr[tid0] = Date.now(); markAutoDone("ex", tid0); }
-  /* repetir después de aprobar: como mucho 1 ⭐ extra por día y por tema (si de verdad practicó: 50 % o más) */
-  if(prevApr && r.score >= 50){ var kx = tid0 + "|" + todayKey(); if(!H.pxd[kx]){ H.pxd[kx] = 1; c.extra = true; } }
+  /* repetir después de aprobar: como mucho 1 ⭐ extra POR DÍA en total (si de verdad practicó: 50 % o más) */
+  if(prevApr && r.score >= 50){ var tk0 = todayKey(), got = Object.keys(H.pxd).some(function(k){ return k.slice(-tk0.length - 1) === "|" + tk0; }); if(!got){ H.pxd[tid0 + "|" + tk0] = 1; c.extra = true; } }
   filter = "all";
   if(c.tema.vocabulario.length >= 3){ c.phase = "vocab"; c.vocab = buildVocab(c); S.screen = "vocab"; }
   else { c.phase = "res"; S.screen = "results"; }
@@ -396,7 +396,7 @@ function resActions(c, wrongN, unans){
 }
 function aprMsg(c, r){
   if(c.firstPass) return '<p class="doneban" role="status"><b>✅ ¡Ya lo hiciste!</b><span>Tu tarea quedó marcada. ¡Felicidades, Killian! 🎉</span></p>';
-  if(c.passed) return '<p class="doneban" role="status"><b>✅ ¡Otra vez muy bien!</b><span>' + (c.extra ? '⭐ +1 estrella por practicar hoy' : 'Hoy ya ganaste tu estrella por practicar este tema') + '</span></p>';
+  if(c.passed) return '<p class="doneban" role="status"><b>✅ ¡Otra vez muy bien!</b><span>' + (c.extra ? '⭐ +1 estrella por practicar hoy' : 'Hoy ya ganaste tu estrella por practicar') + '</span></p>';
   if(!aprTs(c.tema.id)) return '<p class="tryban" role="status"><b>¡Buen esfuerzo! 💪</b><span>Inténtalo otra vez para ganar tu ✅ (necesitas ' + PASS + ' o más).</span></p>';
   return c.extra ? '<p class="tryban" role="status"><b>¡Gracias por practicar! 🌟</b><span>⭐ +1 estrella por practicar hoy</span></p>' : '';
 }
@@ -405,8 +405,6 @@ function renderResults(){
   if(!c || c.phase !== "res"){ S.screen = "home"; return renderHome(); }
   var grades = gradeCur(c), r = resultOf(grades), unans = grades.filter(function(g){ return !g.answered; }).length;
   var right = r.units, wrong = r.total - r.units, pct = r.total ? Math.round(right / r.total * 100) : 0;
-  var stars = Math.round(r.score / 20), starHtml = "";
-  for(var i=0;i<5;i++) starHtml += '<svg aria-hidden="true" fill="' + (i < stars ? '#ffc928' : '#dff2ff') + '"><use href="#star"/></svg>';
   var shown = filter === "bad" ? grades.filter(function(g){ return !g.ok; }) : grades;
   var goodSubs = [], subs = {};
   grades.forEach(function(g){ var s = g.q.subtema; (subs[s] = subs[s] || {ok:0, n:0}); subs[s].n++; if(g.ok) subs[s].ok++; });
@@ -417,7 +415,7 @@ function renderResults(){
     (c.vocab.failed.length ? '. Para practicar: <b lang="' + XL() + '">' + esc(c.vocab.failed.join(", ")) + '</b>' : '. ¡Todas bien!') + '</p>' : '';
   return subHeader("Resultados", "go-screen", "← Mis temas") + '<main class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
     '<h1>Resultados de Killian</h1><p lang="' + XL() + '" class="small">' + esc(c.tema.titulo) + (c.round > 1 ? ' · Intento ' + c.round : '') + '</p>' +
-    '<div class="score" aria-label="Puntuación final">' + r.score + ' <small>/ 100</small></div><div class="stars" role="img" aria-label="' + stars + ' de 5 estrellas">' + starHtml + '</div>' +
+    '<div class="score" aria-label="Puntuación final">' + r.score + ' <small>/ 100</small></div>' +
     '<p class="msg">' + messageFor(r.score, c.tema.titulo_es || c.tema.titulo) + '</p>' + aprMsg(c, r) + good + vbox +
     '<div class="stats"><div class="stat g"><b>' + right + '</b><span>✅ correctas</span></div>' +
     '<div class="stat r"><b>' + wrong + '</b><span>❌ incorrectas</span></div>' +

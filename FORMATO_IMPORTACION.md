@@ -278,5 +278,5 @@ Cada parte de `copiar.partes` puede traer un campo opcional **`imagen`** con el 
 
 ## Cuándo se marca «hecha» una tarea de estudio (sin cambios de formato)
 - Una práctica de examen con **80 % o más** marca sola como hechas las tareas de ese tema (las de la agenda con `"tema"` —«📚 Estudiar…», «🔁 Repasar mis errores»— y las automáticas de `fecha_examen`). Con menos de 80 % no se marca y Killian ve un mensaje de ánimo.
-- Las estrellas completas se ganan la primera vez que aprueba; si repite, **máximo 1 ⭐ extra por día y por tema**.
+- Las estrellas completas se ganan la primera vez que aprueba; si repite, **máximo 1 ⭐ extra por día en total**.
 - Para las tareas con `copiar` o con `charla` las reglas son las de antes (botón final / 3 sesiones al día).
