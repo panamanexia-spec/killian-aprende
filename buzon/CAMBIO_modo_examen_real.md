@@ -8,11 +8,11 @@ Killian sacó **54/100 en Over/Under** y **20/100 en Perímetro**. La práctica 
 - en Matemáticas el colegio da **figuras dibujadas** (con lados sin número) y la plataforma no puede mostrar imágenes en las preguntas;
 - en el examen dejó **muchas líneas en blanco**, y la plataforma lo deja terminar con preguntas vacías.
 
-En el buzón ya están dos temas nuevos a nivel colegio (`tema_rc-over-under.json`, `tema_math-perimetro.json`) y 32 dibujos `per_*.png`.
+Los temas de over/under y perímetro (y sus 32 dibujos `per_*.png`) están en la carpeta `guardados/`: **no los cargues todavía**, Adela quiere que Killian se concentre en la semana del 26/10. Úsalos solo para probar en tu copia.
 
 ## Qué cambiar (todo gratis, sin borrar el progreso de Killian)
 
-1. **Imágenes en las preguntas.** Aceptar el campo opcional `imagen` (solo nombre de archivo png/jpg/webp/gif) en cualquier pregunta de un tema. Al procesar el buzón, guardar esas imágenes en `img/temas/` y mostrarlas grandes arriba de la pregunta (y en la corrección). Que `validateTema` lo conserve y `tools/validar.js` avise si falta el archivo. Subir ya los 32 `per_*.png` del buzón.
+1. **Imágenes en las preguntas.** Aceptar el campo opcional `imagen` (solo nombre de archivo png/jpg/webp/gif) en cualquier pregunta de un tema. Al procesar el buzón, guardar esas imágenes en `img/temas/` y mostrarlas grandes arriba de la pregunta (y en la corrección). Que `validateTema` lo conserve y `tools/validar.js` avise si falta el archivo. Cuando esos temas se carguen, sus dibujos irán con ellos.
 
 2. **Conservar `examen_oficial`** (lista de ids de preguntas) en los temas importados, igual que en el tema interno de OVER/UNDER.
 
@@ -26,10 +26,10 @@ En el buzón ya están dos temas nuevos a nivel colegio (`tema_rc-over-under.jso
 
 6. **Plan automático antes de cada examen** (temas con `fecha_examen`): 4 días antes y 3 días antes → Entrenar; 2 días antes → Examen real; el día anterior → Repasar mis errores + Examen real. Si no llega a 80 en el Examen real, que al día siguiente vuelva a salir.
 
-7. **Notas reales del colegio en Zona de mamá.** Un formulario simple: materia, tema (lista de temas), fecha y nota del colegio. En Progreso, mostrar al lado: nota del colegio vs. mejor «Examen real» de ese tema. Cargar ya: Over/Under 09/10 = 54; Perímetro 07/10 = 20.
+7. **Notas reales del colegio en Zona de mamá.** Un formulario simple: materia, tema (lista de temas), fecha y nota del colegio. En Progreso, mostrar al lado: nota del colegio vs. mejor «Examen real» de ese tema. Notas para anotar: Over/Under 09/10 = 54; Perímetro 07/10 = 20 (se pueden anotar aunque el tema todavía no esté cargado).
 
 ## Cómo probarlo
-- Importar `tema_math-perimetro.json`: la pregunta «r1» debe mostrar el dibujo del rectángulo.
+- Probar con `guardados/tema_math-perimetro.json` en una copia local, SIN publicarlo: la pregunta «r1» debe mostrar el dibujo del rectángulo.
 - En «Examen real» no debe salir «Ver en español» ni pistas, y deben salir 20 preguntas.
 - Terminar con una vacía → sale el aviso.
 - Sacar 70 en Examen real → no da ✅; 80 → sí.
