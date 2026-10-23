@@ -66,7 +66,8 @@
       "opciones": [
         "Luz",
         "Robert",
-        "Gord"
+        "Gord",
+        "Anika"
       ],
       "correcta": "Luz",
       "explicacion_es": "Luz es la protagonista: el cuento trata de su idea y de lo que le pasa."
@@ -80,7 +81,9 @@
       "opciones": [
         "Robert",
         "Gord",
-        "Fofo"
+        "Fofo",
+        "Anika",
+        "Luz"
       ],
       "correcta": "Robert",
       "explicacion_es": "Robert es el amigo nuevo de Luz, el de los lentes. 👓"
@@ -94,7 +97,8 @@
       "opciones": [
         "Luz's neighbor",
         "Luz's teacher",
-        "Luz's brother"
+        "Luz's brother",
+        "Luz's friend from school"
       ],
       "correcta": "Luz's neighbor",
       "explicacion_es": "Gord es el vecino de Luz. Él dice que hay que prepararse para más apagones."
@@ -134,7 +138,8 @@
       "opciones": [
         "In a city neighborhood",
         "On a farm",
-        "At the beach"
+        "At the beach",
+        "In a small town"
       ],
       "correcta": "In a city neighborhood",
       "explicacion_es": "El lugar (setting) es un barrio de una ciudad."
@@ -148,7 +153,8 @@
       "opciones": [
         "Full of garbage",
         "Full of flowers",
-        "Full of water"
+        "Full of water",
+        "Full of cars"
       ],
       "correcta": "Full of garbage",
       "explicacion_es": "Al principio el terreno está abandonado y lleno de basura y llantas viejas. 🗑️"
@@ -171,7 +177,8 @@
       "opciones": [
         "Turn it into a park and garden",
         "Build a mall",
-        "Make a parking lot"
+        "Make a parking lot",
+        "Build a school"
       ],
       "correcta": "Turn it into a park and garden",
       "explicacion_es": "Luz quiere un parque donde la gente juegue, escuche música y siembre su propia comida."
@@ -185,7 +192,8 @@
       "opciones": [
         "Nobody helps her and her friends laugh",
         "She loses her shoes",
-        "It is raining"
+        "It is raining",
+        "There is a blackout at night"
       ],
       "correcta": "Nobody helps her and her friends laugh",
       "explicacion_es": "Sus amigos se ríen de la idea, los vecinos no le hacen caso y ella no puede limpiar el terreno sola."
@@ -217,7 +225,8 @@
       "opciones": [
         "Friends and neighbors work together",
         "Luz gives up",
-        "Luz moves away"
+        "Luz moves away",
+        "The city cleans the lot for her"
       ],
       "correcta": "Friends and neighbors work together",
       "explicacion_es": "Robert y Anika vuelven para ayudar, y luego todo el barrio trabaja junto."
@@ -231,7 +240,8 @@
       "opciones": [
         "Posters",
         "A video game",
-        "A cake"
+        "A cake",
+        "Letters to the mayor"
       ],
       "correcta": "Posters",
       "explicacion_es": "Hacen carteles (posters) y los reparten a amigos y vecinos."
@@ -245,7 +255,8 @@
       "opciones": [
         "Friendship Park",
         "Garbage Park",
-        "Luz Park"
+        "Luz Park",
+        "Robert Park"
       ],
       "correcta": "Friendship Park",
       "explicacion_es": "Se llama Friendship Park: el Parque de la Amistad. 🌻"
@@ -268,7 +279,8 @@
       "opciones": [
         "Car-free Sundays",
         "A big mall",
-        "More cars"
+        "More cars",
+        "Planting trees on the street"
       ],
       "correcta": "Car-free Sundays",
       "explicacion_es": "Gord logró que la ciudad cerrara la calle los domingos para caminar sin carros. 🚶"
@@ -282,7 +294,8 @@
       "opciones": [
         "Shoes he designed",
         "A bike",
-        "A plant"
+        "A plant",
+        "A book about gardens"
       ],
       "correcta": "Shoes he designed",
       "explicacion_es": "Robert le regala unos zapatos diseñados por él, para darle las gracias por ser su amiga. 👟"
@@ -296,7 +309,8 @@
       "opciones": [
         "Working together we can do big things",
         "Never help your neighbors",
-        "Parks are boring"
+        "Parks are boring",
+        "Cities are better than farms"
       ],
       "correcta": "Working together we can do big things",
       "explicacion_es": "El mensaje (theme): juntos podemos lograr cosas grandes. 🤝"
@@ -310,7 +324,8 @@
       "opciones": [
         "They grow food close to home",
         "They buy more things",
-        "They use more cars"
+        "They use more cars",
+        "They recycle all the garbage"
       ],
       "correcta": "They grow food close to home",
       "explicacion_es": "Si siembran su comida cerca, no hay que traerla de lejos gastando petróleo. 🌎"
@@ -372,7 +387,8 @@
       "opciones": [
         "a peaceful place in an ugly area",
         "a big store",
-        "a loud street"
+        "a loud street",
+        "a desert with no water"
       ],
       "correcta": "a peaceful place in an ugly area",
       "explicacion_es": "Oasis = un lugar tranquilo y bonito en medio de algo feo. Luz quiere que el terreno sea un oasis. 🌴"
@@ -386,7 +402,8 @@
       "opciones": [
         "putting them in place, ready to use",
         "breaking them",
-        "painting them"
+        "painting them",
+        "buying them at the store"
       ],
       "correcta": "putting them in place, ready to use",
       "explicacion_es": "Installing = instalar: poner algo listo para usarse. 🪑"
@@ -413,7 +430,8 @@
       "opciones": [
         "There is a blackout",
         "They open Friendship Park",
-        "Robert gives Luz shoes"
+        "Robert gives Luz shoes",
+        "Luz asks for permission"
       ],
       "correcta": "There is a blackout",
       "explicacion_es": "Primero hay un apagón. Después viene la idea del parque, y al final el parque y el regalo."
@@ -638,6 +656,113 @@
       "aceptadas": [],
       "explicacion_es": "Food = comida 🥕.",
       "pista_es": "Comida en inglés"
+    },
+    {
+      "id": "lw17",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Luz needs ______ from the city to use the lot.",
+      "pregunta_es": "Luz necesita ______ de la ciudad para usar el terreno.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "permission",
+      "aceptadas": [
+        "permision"
+      ],
+      "explicacion_es": "Permission = permiso.",
+      "pista_es": "per-MI-shon"
+    },
+    {
+      "id": "lw18",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "The lot was ______: nobody took care of it.",
+      "pregunta_es": "El terreno estaba ______: nadie lo cuidaba.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "abandoned",
+      "aceptadas": [
+        "abandon"
+      ],
+      "explicacion_es": "Abandoned = abandonado.",
+      "pista_es": "Se parece al español"
+    },
+    {
+      "id": "lw19",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Blackouts were ______: they happened often.",
+      "pregunta_es": "Los apagones eran ______: pasaban seguido.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "frequent",
+      "aceptadas": [],
+      "explicacion_es": "Frequent = frecuente.",
+      "pista_es": "Se parece al español"
+    },
+    {
+      "id": "lw20",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "The park was an ______: a peaceful place in an ugly area.",
+      "pregunta_es": "El parque era un ______: un lugar tranquilo en una zona fea.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "oasis",
+      "aceptadas": [],
+      "explicacion_es": "Oasis = lugar tranquilo y bonito 🌴.",
+      "pista_es": "Igual en español"
+    },
+    {
+      "id": "lw21",
+      "subtema": "problema",
+      "tipo": "completar",
+      "pregunta_en": "At first, Luz's friends ______ at her idea.",
+      "pregunta_es": "Al principio, los amigos de Luz se ______ de su idea.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "laugh",
+      "aceptadas": [
+        "laughed",
+        "laughs"
+      ],
+      "explicacion_es": "Laugh (LAF) = reírse.",
+      "pista_es": "LAF"
+    },
+    {
+      "id": "lw22",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "It was a lot of work, but everyone did a ______.",
+      "pregunta_es": "Fue mucho trabajo, pero todos hicieron su ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "part",
+      "aceptadas": [],
+      "explicacion_es": "Did a part = hizo su parte. ¡Todos ayudaron!",
+      "pista_es": "parte en inglés"
+    },
+    {
+      "id": "lw23",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Luz wants to make a park. She is the main ______.",
+      "pregunta_es": "Luz quiere hacer un parque. Es el ______ principal.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "character",
+      "aceptadas": [
+        "characters"
+      ],
+      "explicacion_es": "Character (QUÉ-rac-ter) = personaje.",
+      "pista_es": "QUÉ-rac-ter"
+    },
+    {
+      "id": "lw24",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "The story's setting is a city ______.",
+      "pregunta_es": "El lugar del cuento es un ______ de la ciudad.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "neighborhood",
+      "aceptadas": [
+        "neighbourhood"
+      ],
+      "explicacion_es": "Setting = lugar. Neighborhood = barrio.",
+      "pista_es": "neighbor + hood"
     }
   ],
   "vocabulario": [
@@ -747,6 +872,31 @@
       ],
       "ejemplo_en": "Friendship Park is beautiful.",
       "ejemplo_es": "El Parque de la Amistad es bonito."
+    }
+  ],
+  "lecciones": [
+    {
+      "emoji": "🗂️",
+      "titulo": "Los 5 elementos del cuento",
+      "pasos": [
+        "Characters (personajes): Luz, Robert, Anika, Gord.",
+        "Setting (lugar): un barrio de la ciudad.",
+        "Problem (problema): nadie la ayuda con el terreno lleno de basura.",
+        "Solution (solución): amigos y vecinos trabajan juntos.",
+        "Theme (mensaje): juntos podemos hacer cosas grandes."
+      ],
+      "truco": "Pregúntate: ¿Quién? ¿Dónde? ¿Qué pasó? ¿Cómo se arregló? ¿Qué aprendí?"
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "Revisa que escribiste bien las palabras en inglés."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
     }
   ]
 }

@@ -81,6 +81,17 @@
       ],
       "ejemplo": "a small town → ¿cómo es el pueblo? small.",
       "truco": "Casi siempre va justo antes de la cosa: small town, stormy night."
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "Revisa que escribiste bien las palabras en inglés."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
     }
   ],
   "preguntas": [
@@ -94,7 +105,8 @@
       "opciones": [
         "Rose",
         "lived",
-        "small town"
+        "small town",
+        "town"
       ],
       "correcta": "Rose",
       "explicacion_es": "El sujeto dice QUIÉN hace algo. ¿Quién vivía en el pueblo? 👉 Rose."
@@ -109,7 +121,8 @@
       "opciones": [
         "Her ma and pa",
         "sang",
-        "a lullaby"
+        "a lullaby",
+        "sang a lullaby"
       ],
       "correcta": "Her ma and pa",
       "explicacion_es": "¿Quiénes cantaron? 👉 Her ma and pa (su mamá y su papá). El sujeto puede tener varias palabras."
@@ -124,7 +137,8 @@
       "opciones": [
         "The doctor",
         "smiled",
-        "the baby"
+        "the baby",
+        "smiled at the baby"
       ],
       "correcta": "The doctor",
       "explicacion_es": "¿Quién sonrió? 👉 The doctor. «The baby» recibe la sonrisa, pero no es el sujeto."
@@ -139,7 +153,8 @@
       "opciones": [
         "She",
         "rolled",
-        "the lightning"
+        "the lightning",
+        "into a ball"
       ],
       "correcta": "She",
       "explicacion_es": "¿Quién hizo la bola? 👉 She (ella). Palabras como she, he, I, they también pueden ser sujeto."
@@ -178,7 +193,8 @@
       "opciones": [
         "lived in a small town",
         "Rose",
-        "Rose lived"
+        "Rose lived",
+        "small town"
       ],
       "correcta": "lived in a small town",
       "explicacion_es": "El predicado dice QUÉ HACE el sujeto. ¿Qué hacía Rose? 👉 lived in a small town."
@@ -193,7 +209,8 @@
       "opciones": [
         "did not cry",
         "The baby",
-        "The baby did"
+        "The baby did",
+        "cry"
       ],
       "correcta": "did not cry",
       "explicacion_es": "¿Qué hizo (o no hizo) la bebé? 👉 did not cry (no lloró)."
@@ -208,7 +225,8 @@
       "opciones": [
         "sat up and talked",
         "Rose",
-        "Rose sat"
+        "Rose sat",
+        "talked"
       ],
       "correcta": "sat up and talked",
       "explicacion_es": "Todo lo que viene después del sujeto es el predicado: sat up and talked."
@@ -242,7 +260,9 @@
       "instruccion_es": "Lee la oración y elige la respuesta correcta.",
       "opciones": [
         "sang her a lullaby",
-        "Her ma and pa"
+        "Her ma and pa",
+        "lullaby",
+        "sang"
       ],
       "correcta": "sang her a lullaby",
       "explicacion_es": "La raya | separa las dos partes. A la izquierda el sujeto (quién) y a la derecha el predicado (qué hacen)."
@@ -442,7 +462,8 @@
       "opciones": [
         "The strong girl",
         "rolled the lightning",
-        "strong"
+        "strong",
+        "the lightning"
       ],
       "correcta": "The strong girl",
       "explicacion_es": "¿Quién lo hizo? 👉 The strong girl. ¡Ojo! «strong» está dentro del sujeto y es un adjetivo."
@@ -473,7 +494,8 @@
       "opciones": [
         "Rose talked.",
         "The small town.",
-        "Sang a lullaby."
+        "Sang a lullaby.",
+        "Small and strong."
       ],
       "correcta": "Rose talked.",
       "explicacion_es": "Una oración completa necesita quién (Rose) y qué hace (talked). Las otras están incompletas."
@@ -759,6 +781,33 @@
       "aceptadas": [],
       "explicacion_es": "Strong = fuerte. Describe a Rose.",
       "pista_es": "Empieza con str…"
+    },
+    {
+      "id": "ws8",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The thunder woke up the town. → Subject: ______",
+      "pregunta_es": "El trueno despertó al pueblo.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "The thunder",
+      "aceptadas": [
+        "the thunder",
+        "thunder"
+      ],
+      "explicacion_es": "¿Qué despertó al pueblo? The thunder (el trueno).",
+      "pista_es": "¿Qué cosa lo hizo?"
+    },
+    {
+      "id": "wa8",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "The huge storm came at night. → Adjective: ______",
+      "pregunta_es": "La tormenta enorme llegó de noche.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "huge",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo era la tormenta? huge (JIUCH) = enorme ⛈️.",
+      "pista_es": "enorme"
     }
   ],
   "vocabulario": [

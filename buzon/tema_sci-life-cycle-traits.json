@@ -68,7 +68,8 @@
       "opciones": [
         "A living thing",
         "A rock",
-        "A machine"
+        "A machine",
+        "A kind of food"
       ],
       "correcta": "A living thing",
       "explicacion_es": "Organism = ser vivo. Una piedra no está viva. Se dice ÓR-ga-nis-m. 🐾"
@@ -82,7 +83,8 @@
       "opciones": [
         "A series of stages an organism goes through during its life",
         "A kind of bicycle",
-        "The food an animal eats"
+        "The food an animal eats",
+        "How long an animal sleeps"
       ],
       "correcta": "A series of stages an organism goes through during its life",
       "explicacion_es": "Ciclo de vida = las etapas por las que pasa un ser vivo en su vida. 🔄 Se dice LÁIF SÁI-kol."
@@ -96,7 +98,8 @@
       "opciones": [
         "A period of getting larger",
         "Making a new organism",
-        "The end of life"
+        "The end of life",
+        "When a seed falls"
       ],
       "correcta": "A period of getting larger",
       "explicacion_es": "Growth = crecimiento: el tiempo en que se hace más grande. 📏 Se dice GRÓUZ."
@@ -110,7 +113,8 @@
       "opciones": [
         "To make a new organism of the same kind",
         "To eat food",
-        "To sleep"
+        "To sleep",
+        "To grow taller"
       ],
       "correcta": "To make a new organism of the same kind",
       "explicacion_es": "Reproducción = hacer un ser vivo nuevo de su mismo tipo. Una rana hace ranas. 🐸 Se dice ri-pro-DÁK-shon."
@@ -159,7 +163,9 @@
       "opciones": [
         "seed",
         "flower",
-        "leaf"
+        "leaf",
+        "root",
+        "fruit"
       ],
       "correcta": "seed",
       "explicacion_es": "Empiezan con una semilla (seed) que tiene adentro una plantita bebé. 🌰"
@@ -173,7 +179,8 @@
       "opciones": [
         "The growth of a seed into a young plant",
         "When a plant dies",
-        "When a flower closes"
+        "When a flower closes",
+        "When a seed is planted in the soil"
       ],
       "correcta": "The growth of a seed into a young plant",
       "explicacion_es": "Germinar = la semilla empieza a crecer y sale una plantita. 🌱 Se dice yer-mi-NÉI-shon."
@@ -187,7 +194,9 @@
       "opciones": [
         "seedling",
         "egg",
-        "pupa"
+        "pupa",
+        "adult plant",
+        "young sprout"
       ],
       "correcta": "seedling",
       "explicacion_es": "Después del brote viene el seedling (plantita joven con hojas). Se dice SÍD-ling. 🌿",
@@ -237,7 +246,8 @@
       "opciones": [
         "It grows into a new plant and starts the cycle again",
         "It makes the plant die",
-        "It is food for rocks"
+        "It is food for rocks",
+        "It helps the flower open"
       ],
       "correcta": "It grows into a new plant and starts the cycle again",
       "explicacion_es": "La semilla se convierte en una planta nueva y el ciclo empieza otra vez. 🔄 (Esta es la pregunta B de la hoja.)"
@@ -251,7 +261,8 @@
       "opciones": [
         "Because it is growing through the stages of its life cycle",
         "Because someone painted it",
-        "Because it is a different plant every day"
+        "Because it is a different plant every day",
+        "Because the weather changes its color"
       ],
       "correcta": "Because it is growing through the stages of its life cycle",
       "explicacion_es": "Es la misma planta: va cambiando de semilla a brote, a plantita y a planta adulta. 🌰➡️🌱➡️🌿"
@@ -265,7 +276,8 @@
       "opciones": [
         "4",
         "3",
-        "2"
+        "2",
+        "5"
       ],
       "correcta": "4",
       "explicacion_es": "4 etapas: huevo, larva, pupa y adulto. 🪲"
@@ -279,7 +291,8 @@
       "opciones": [
         "3",
         "4",
-        "5"
+        "5",
+        "2"
       ],
       "correcta": "3",
       "explicacion_es": "3 etapas: huevo, ninfa y adulto. No tiene larva ni pupa. 🦗"
@@ -293,7 +306,9 @@
       "opciones": [
         "pupa",
         "nymph",
-        "tadpole"
+        "tadpole",
+        "larva",
+        "seedling"
       ],
       "correcta": "pupa",
       "explicacion_es": "Después de la larva viene la pupa. Ahí cambia a su forma de adulto. Se dice PIÚ-pa."
@@ -331,7 +346,8 @@
       "opciones": [
         "Both hatch from eggs and grow into adults",
         "Both have very big eggs",
-        "Both become tadpoles"
+        "Both become tadpoles",
+        "Both live in the ocean all their life"
       ],
       "correcta": "Both hatch from eggs and grow into adults",
       "explicacion_es": "Las dos salen de un huevo, crecen y llegan a adultas (huevo → muy joven → joven → adulto). La diferencia: el tamaño del huevo."
@@ -345,7 +361,9 @@
       "opciones": [
         "hatchling",
         "tadpole",
-        "pupa"
+        "pupa",
+        "nymph",
+        "larva"
       ],
       "correcta": "hatchling",
       "explicacion_es": "Hatchling = cría recién salida del huevo. 🐢 Se dice JÁCH-ling."
@@ -372,7 +390,8 @@
       "opciones": [
         "Plants",
         "Animals",
-        "Both"
+        "Both",
+        "Neither"
       ],
       "correcta": "Plants",
       "explicacion_es": "Solo las semillas de las plantas germinan. 🌱"
@@ -386,7 +405,8 @@
       "opciones": [
         "Animals",
         "Plants",
-        "Both"
+        "Both",
+        "Neither"
       ],
       "correcta": "Animals",
       "explicacion_es": "El huevo es de los animales. Las plantas tienen semillas. 🥚"
@@ -400,7 +420,8 @@
       "opciones": [
         "Both",
         "Plants",
-        "Animals"
+        "Animals",
+        "Neither"
       ],
       "correcta": "Both",
       "explicacion_es": "¡Los dos! Birth, growth, reproduction y death van en el centro del diagrama (Both). 🌱🐸"
@@ -414,7 +435,8 @@
       "opciones": [
         "Both start a new life",
         "Both come from plants",
-        "Both can fly"
+        "Both can fly",
+        "Both have fur"
       ],
       "correcta": "Both start a new life",
       "explicacion_es": "Los dos son el comienzo de un ser vivo nuevo. La diferencia: el huevo es de un animal y la semilla es de una planta. 🥚🌰"
@@ -428,7 +450,8 @@
       "opciones": [
         "No new pumpkin plants will grow",
         "There will be more pumpkins",
-        "The pumpkins will turn blue"
+        "The pumpkins will turn blue",
+        "The pumpkin plants will grow faster"
       ],
       "correcta": "No new pumpkin plants will grow",
       "explicacion_es": "Sin semillas no nacen plantas nuevas, y el granjero tendrá cada vez menos calabazas. 🎃❌"
@@ -442,7 +465,8 @@
       "opciones": [
         "No baby birds; that type of bird could disappear",
         "The birds will grow bigger",
-        "Nothing will change"
+        "Nothing will change",
+        "The birds will lay more eggs"
       ],
       "correcta": "No baby birds; that type of bird could disappear",
       "explicacion_es": "Sin huevos no hay reproducción: no nacen pajaritos, y cuando los adultos mueran, ese pájaro se acaba. 🐦❌🥚"
@@ -456,7 +480,8 @@
       "opciones": [
         "A feature, like fur color",
         "A kind of food",
-        "A place to live"
+        "A place to live",
+        "A stage of the life cycle"
       ],
       "correcta": "A feature, like fur color",
       "explicacion_es": "Trait = característica: cómo es un ser vivo (color, tamaño, forma). Se dice TRÉIT."
@@ -479,7 +504,8 @@
       "opciones": [
         "Their environment and care (food, exercise) were different",
         "They are a different kind of animal",
-        "They changed their name"
+        "They changed their name",
+        "They were born from eggs"
       ],
       "correcta": "Their environment and care (food, exercise) were different",
       "explicacion_es": "El ambiente también cambia cómo se ve un animal: comida, ejercicio y cuidados. Uno quedó gordito y cansado; el otro, fuerte y activo. 🐕🏃"
@@ -737,6 +763,117 @@
       ],
       "explicacion_es": "Parents = papás. Se parecen, pero no son iguales.",
       "pista_es": "Mamá y papá en inglés"
+    },
+    {
+      "id": "w19",
+      "subtema": "insectos",
+      "tipo": "completar",
+      "pregunta_en": "Cricket: egg → ______ → adult.",
+      "pregunta_es": "Grillo: huevo → ______ → adulto.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "nymph",
+      "aceptadas": [
+        "nymphs"
+      ],
+      "explicacion_es": "Nymph (NIMF) = ninfa. El grillo tiene 3 etapas.",
+      "pista_es": "Empieza con ny…"
+    },
+    {
+      "id": "w20",
+      "subtema": "animales",
+      "tipo": "completar",
+      "pregunta_en": "Frog: egg → ______ → young frog → adult.",
+      "pregunta_es": "Rana: huevo → ______ → ranita → adulta.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "tadpole",
+      "aceptadas": [
+        "tadpoles"
+      ],
+      "explicacion_es": "Tadpole (TÁD-poul) = renacuajo 🐸.",
+      "pista_es": "renacuajo en inglés"
+    },
+    {
+      "id": "w21",
+      "subtema": "animales",
+      "tipo": "completar",
+      "pregunta_en": "Frog eggs are very ______. Sea turtle eggs are large.",
+      "pregunta_es": "Los huevos de rana son muy ______. Los de tortuga son grandes.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "small",
+      "aceptadas": [
+        "little",
+        "tiny"
+      ],
+      "explicacion_es": "Small = pequeños.",
+      "pista_es": "Lo contrario de large"
+    },
+    {
+      "id": "w22",
+      "subtema": "comparar",
+      "tipo": "completar",
+      "pregunta_en": "Only plants can ______ (a seed grows into a young plant).",
+      "pregunta_es": "Solo las plantas pueden ______ (una semilla se vuelve plantita).",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "germinate",
+      "aceptadas": [
+        "germinates"
+      ],
+      "explicacion_es": "Germinate = germinar. Solo pasa con semillas.",
+      "pista_es": "Se parece al español: germin…"
+    },
+    {
+      "id": "w23",
+      "subtema": "predecir",
+      "tipo": "completar",
+      "pregunta_en": "If a plant cannot make seeds, no new ______ will grow.",
+      "pregunta_es": "Si una planta no puede hacer semillas, no crecerán ______ nuevas.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "plants",
+      "aceptadas": [
+        "plant"
+      ],
+      "explicacion_es": "Sin semillas no hay plantas nuevas: el ciclo se rompe.",
+      "pista_es": "plantas en inglés"
+    },
+    {
+      "id": "w24",
+      "subtema": "traits",
+      "tipo": "completar",
+      "pregunta_en": "Two dogs of the same kind can look different because their ______ was different.",
+      "pregunta_es": "Dos perros de la misma raza se ven distintos porque su ______ fue distinto.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "environment",
+      "aceptadas": [
+        "environments"
+      ],
+      "explicacion_es": "Environment (en-VÁI-ron-ment) = ambiente: comida, ejercicio y cuidado.",
+      "pista_es": "en-VÁI-ron-ment"
+    },
+    {
+      "id": "w25",
+      "subtema": "ciclo",
+      "tipo": "completar",
+      "pregunta_en": "The first stage of every life cycle is ______.",
+      "pregunta_es": "La primera etapa de todo ciclo de vida es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "birth",
+      "aceptadas": [
+        "born"
+      ],
+      "explicacion_es": "Birth = nacer 🐣.",
+      "pista_es": "Empieza con b…"
+    },
+    {
+      "id": "w26",
+      "subtema": "plantas",
+      "tipo": "completar",
+      "pregunta_en": "A seed grows into a new plant and starts the life cycle ______.",
+      "pregunta_es": "Una semilla crece y empieza el ciclo otra ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "again",
+      "aceptadas": [],
+      "explicacion_es": "Again = otra vez 🔁.",
+      "pista_es": "a-GUÉN"
     }
   ],
   "vocabulario": [
@@ -850,6 +987,42 @@
       ],
       "ejemplo_en": "Penguins hatch from eggs.",
       "ejemplo_es": "Los pingüinos salen de huevos."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "ciclo",
+      "emoji": "🔄",
+      "titulo": "Las 4 etapas: nace, crece, se reproduce, muere",
+      "pasos": [
+        "birth (BERZ) = nacer 🐣",
+        "growth (GROUZ) = crecer 📏",
+        "reproduction = tener crías 👶",
+        "death (DEZ) = morir 🥀"
+      ],
+      "truco": "«Nace, Crece, Cría, Muere»: ¡como un círculo que vuelve a empezar!"
+    },
+    {
+      "subtema": "insectos",
+      "emoji": "🐞",
+      "titulo": "Escarabajo 4, grillo 3",
+      "pasos": [
+        "Beetle (escarabajo): egg → larva → pupa → adult = 4 etapas.",
+        "Cricket (grillo): egg → nymph → adult = 3 etapas.",
+        "Frog (rana): egg → tadpole → young frog → adult."
+      ],
+      "truco": "El grillo se salta la pupa: por eso tiene 3."
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "Revisa que escribiste bien las palabras en inglés."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
     }
   ]
 }
