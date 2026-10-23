@@ -5,7 +5,7 @@
   "titulo": "Luz Sees the Light",
   "titulo_es": "Luz Sees the Light: elementos literarios",
   "fecha_examen": "2026-10-29",
-  "preguntas_por_ronda": 10,
+  "preguntas_por_ronda": 20,
   "subtemas": [
     "personajes",
     "lugar",
@@ -417,6 +417,227 @@
       ],
       "correcta": "There is a blackout",
       "explicacion_es": "Primero hay un apagón. Después viene la idea del parque, y al final el parque y el regalo."
+    },
+    {
+      "id": "lw1",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "The main character of the story is ______.",
+      "pregunta_es": "La protagonista del cuento es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Luz",
+      "aceptadas": [
+        "luz"
+      ],
+      "explicacion_es": "Luz es el personaje principal 👧🏽.",
+      "pista_es": "El nombre del título"
+    },
+    {
+      "id": "lw2",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Luz's new friend is ______. He is new in the city.",
+      "pregunta_es": "El amigo nuevo de Luz es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Robert",
+      "aceptadas": [
+        "robert"
+      ],
+      "explicacion_es": "Robert es nuevo en la ciudad.",
+      "pista_es": "Empieza con R"
+    },
+    {
+      "id": "lw3",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Luz's friend who helps her is ______.",
+      "pregunta_es": "La amiga de Luz que la ayuda es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Anika",
+      "aceptadas": [
+        "anika"
+      ],
+      "explicacion_es": "Anika la ayuda con el parque.",
+      "pista_es": "Empieza con A"
+    },
+    {
+      "id": "lw4",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Gord is Luz's ______.",
+      "pregunta_es": "Gord es el ______ de Luz.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "neighbor",
+      "aceptadas": [
+        "neighbour"
+      ],
+      "explicacion_es": "Gord es su vecino 🏠.",
+      "pista_es": "Vecino en inglés: NÉI-bor"
+    },
+    {
+      "id": "lw5",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "The story happens in a city ______.",
+      "pregunta_es": "El cuento pasa en un ______ de la ciudad.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "neighborhood",
+      "aceptadas": [
+        "neighbourhood"
+      ],
+      "explicacion_es": "Neighborhood = barrio 🏙️.",
+      "pista_es": "neighbor + hood"
+    },
+    {
+      "id": "lw6",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "At the beginning, the empty lot is full of ______.",
+      "pregunta_es": "Al principio, el terreno está lleno de ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "garbage",
+      "aceptadas": [
+        "trash"
+      ],
+      "explicacion_es": "Garbage = basura 🗑️.",
+      "pista_es": "Empieza con g…"
+    },
+    {
+      "id": "lw7",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Luz's neighborhood has ______. The lights go out.",
+      "pregunta_es": "El barrio de Luz tiene ______. Se va la luz.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "blackouts",
+      "aceptadas": [
+        "blackout"
+      ],
+      "explicacion_es": "Blackout = apagón 🔦.",
+      "pista_es": "black + out"
+    },
+    {
+      "id": "lw8",
+      "subtema": "problema",
+      "tipo": "completar",
+      "pregunta_en": "Luz wants to turn the lot into a park and a ______.",
+      "pregunta_es": "Luz quiere convertir el terreno en un parque y un ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "garden",
+      "aceptadas": [
+        "gardens"
+      ],
+      "explicacion_es": "Garden = huerto/jardín 🌱.",
+      "pista_es": "Empieza con g… (huerto)"
+    },
+    {
+      "id": "lw9",
+      "subtema": "problema",
+      "tipo": "completar",
+      "pregunta_en": "Luz feels ______ because nobody helps her.",
+      "pregunta_es": "Luz se siente ______ porque nadie la ayuda.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "sad",
+      "aceptadas": [],
+      "explicacion_es": "Sad = triste 😞. Ese es el problema.",
+      "pista_es": "3 letras"
+    },
+    {
+      "id": "lw10",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "The friends make ______ to tell the neighbors.",
+      "pregunta_es": "Los amigos hacen ______ para avisar a los vecinos.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "posters",
+      "aceptadas": [
+        "poster",
+        "signs"
+      ],
+      "explicacion_es": "Posters = carteles 📢.",
+      "pista_es": "Carteles en inglés"
+    },
+    {
+      "id": "lw11",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "The new park is called ______ Park.",
+      "pregunta_es": "El parque nuevo se llama ______ Park.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Friendship",
+      "aceptadas": [
+        "friendship"
+      ],
+      "explicacion_es": "Friendship Park = Parque de la Amistad 🌻.",
+      "pista_es": "Amistad en inglés"
+    },
+    {
+      "id": "lw12",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "The people use old ______ to make planter boxes.",
+      "pregunta_es": "La gente usa ______ viejas para hacer maceteros.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "tires",
+      "aceptadas": [
+        "tyres",
+        "tire"
+      ],
+      "explicacion_es": "Tires = llantas 🛞.",
+      "pista_es": "Llantas en inglés"
+    },
+    {
+      "id": "lw13",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "Gord's idea was car-free ______.",
+      "pregunta_es": "La idea de Gord fueron los ______ sin carros.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Sundays",
+      "aceptadas": [
+        "sunday",
+        "sundays"
+      ],
+      "explicacion_es": "Car-free Sundays = domingos sin carros 🚫🚗.",
+      "pista_es": "Un día de la semana"
+    },
+    {
+      "id": "lw14",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "At the end, Robert gives Luz ______ he designed.",
+      "pregunta_es": "Al final, Robert le regala a Luz unos ______ que él diseñó.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "shoes",
+      "aceptadas": [
+        "shoe"
+      ],
+      "explicacion_es": "Shoes = zapatos 👟.",
+      "pista_es": "Lo que te pones en los pies"
+    },
+    {
+      "id": "lw15",
+      "subtema": "mensaje",
+      "tipo": "completar",
+      "pregunta_en": "When we work ______, we can do big things.",
+      "pregunta_es": "Cuando trabajamos ______, podemos hacer cosas grandes.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "together",
+      "aceptadas": [],
+      "explicacion_es": "Together = juntos 🤝. ¡Es el mensaje del cuento!",
+      "pista_es": "to-GUE-der"
+    },
+    {
+      "id": "lw16",
+      "subtema": "mensaje",
+      "tipo": "completar",
+      "pregunta_en": "The garden helps the planet because they grow ______ close to home.",
+      "pregunta_es": "El huerto ayuda al planeta porque siembran ______ cerca de casa.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "food",
+      "aceptadas": [],
+      "explicacion_es": "Food = comida 🥕.",
+      "pista_es": "Comida en inglés"
     }
   ],
   "vocabulario": [

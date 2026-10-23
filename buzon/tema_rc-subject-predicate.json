@@ -6,7 +6,7 @@
   "materia": "Reading and Composition",
   "idioma": "en",
   "fecha_examen": "2026-10-26",
-  "preguntas_por_ronda": 10,
+  "preguntas_por_ronda": 20,
   "subtemas": [
     "subject",
     "predicate",
@@ -487,6 +487,278 @@
       "instruccion_es": "¿Es verdadero o falso?",
       "correcta": false,
       "explicacion_es": "Falso. Falta el sujeto: ¿QUIÉN cantó? Por ejemplo: «Her ma sang a lullaby.»"
+    },
+    {
+      "id": "ws1",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "Rose lived in a small town. → Subject: ______",
+      "pregunta_es": "Rose vivía en un pueblo pequeño.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "Rose",
+      "aceptadas": [
+        "rose"
+      ],
+      "explicacion_es": "¿Quién vivía? Rose.",
+      "pista_es": "Pregunta ¿quién?"
+    },
+    {
+      "id": "ws2",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The doctor smiled at the baby. → Subject: ______",
+      "pregunta_es": "El doctor le sonrió a la bebé.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "The doctor",
+      "aceptadas": [
+        "the doctor",
+        "doctor"
+      ],
+      "explicacion_es": "¿Quién sonrió? The doctor.",
+      "pista_es": "Está al principio"
+    },
+    {
+      "id": "ws3",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "Her ma and pa sang a lullaby. → Subject: ______",
+      "pregunta_es": "Su mamá y su papá cantaron una canción de cuna.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "Her ma and pa",
+      "aceptadas": [
+        "her ma and pa",
+        "ma and pa"
+      ],
+      "explicacion_es": "¿Quiénes cantaron? Her ma and pa.",
+      "pista_es": "Son dos personas"
+    },
+    {
+      "id": "ws4",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The strong girl rolled the lightning. → Subject: ______",
+      "pregunta_es": "La niña fuerte hizo rodar el relámpago.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "The strong girl",
+      "aceptadas": [
+        "the strong girl",
+        "strong girl"
+      ],
+      "explicacion_es": "¿Quién? The strong girl. El sujeto puede tener un adjetivo adentro.",
+      "pista_es": "Las primeras 3 palabras"
+    },
+    {
+      "id": "ws5",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The baby did not cry. → Subject: ______",
+      "pregunta_es": "La bebé no lloró.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "The baby",
+      "aceptadas": [
+        "the baby",
+        "baby"
+      ],
+      "explicacion_es": "¿Quién no lloró? The baby.",
+      "pista_es": "¿Quién no lloró?"
+    },
+    {
+      "id": "ws6",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "She sat up and talked. → Subject: ______",
+      "pregunta_es": "Ella se sentó y habló.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "She",
+      "aceptadas": [
+        "she"
+      ],
+      "explicacion_es": "¿Quién? She (ella).",
+      "pista_es": "Una sola palabra"
+    },
+    {
+      "id": "ws7",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The small town had a big storm. → Subject: ______",
+      "pregunta_es": "El pueblo pequeño tuvo una tormenta grande.",
+      "instruccion_es": "Escribe el SUJETO (¿quién?) de la oración. ✍️",
+      "respuesta": "The small town",
+      "aceptadas": [
+        "the small town",
+        "small town"
+      ],
+      "explicacion_es": "¿Qué tuvo la tormenta? The small town. El sujeto también puede ser una cosa.",
+      "pista_es": "¿Qué cosa tuvo la tormenta?"
+    },
+    {
+      "id": "wp1",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "Rose | ______. (Rose lived in a small town.)",
+      "pregunta_es": "Rose vivía en un pueblo pequeño.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace?) de la oración. ✍️",
+      "respuesta": "lived in a small town",
+      "aceptadas": [
+        "lived in a small town."
+      ],
+      "explicacion_es": "Lo que viene después de Rose es el predicado.",
+      "pista_es": "Empieza con lived"
+    },
+    {
+      "id": "wp2",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "The baby | ______. (The baby did not cry.)",
+      "pregunta_es": "La bebé no lloró.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace?) de la oración. ✍️",
+      "respuesta": "did not cry",
+      "aceptadas": [
+        "did not cry.",
+        "didn't cry"
+      ],
+      "explicacion_es": "¿Qué hizo la bebé? did not cry.",
+      "pista_es": "Empieza con did"
+    },
+    {
+      "id": "wp3",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "She | ______. (She sat up and talked.)",
+      "pregunta_es": "Ella se sentó y habló.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace?) de la oración. ✍️",
+      "respuesta": "sat up and talked",
+      "aceptadas": [
+        "sat up and talked."
+      ],
+      "explicacion_es": "Todo después de She: sat up and talked.",
+      "pista_es": "Empieza con sat"
+    },
+    {
+      "id": "wp4",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "The doctor | ______. (The doctor smiled at the baby.)",
+      "pregunta_es": "El doctor le sonrió a la bebé.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace?) de la oración. ✍️",
+      "respuesta": "smiled at the baby",
+      "aceptadas": [
+        "smiled at the baby."
+      ],
+      "explicacion_es": "¿Qué hizo el doctor? smiled at the baby.",
+      "pista_es": "Empieza con smiled"
+    },
+    {
+      "id": "wp5",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "Rose | ______. (Rose was born with superpowers.)",
+      "pregunta_es": "Rose nació con superpoderes.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace?) de la oración. ✍️",
+      "respuesta": "was born with superpowers",
+      "aceptadas": [
+        "was born with superpowers."
+      ],
+      "explicacion_es": "¿Qué pasó con Rose? was born with superpowers.",
+      "pista_es": "Empieza con was"
+    },
+    {
+      "id": "wp6",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "Rose rolled the lightning into a ball. → Verb: ______",
+      "pregunta_es": "Rose hizo una bola con el relámpago.",
+      "instruccion_es": "Escribe el VERBO (la acción) del predicado. ✍️",
+      "respuesta": "rolled",
+      "aceptadas": [
+        "roll"
+      ],
+      "explicacion_es": "Rolled (ROLD) = hizo rodar. Es la acción.",
+      "pista_es": "Termina en -ed"
+    },
+    {
+      "id": "wa1",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "Rose lived in a small town. → Adjective: ______",
+      "pregunta_es": "Rose vivía en un pueblo pequeño.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "small",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo era el pueblo? small.",
+      "pista_es": "pequeño"
+    },
+    {
+      "id": "wa2",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "She was born on a stormy night. → Adjective: ______",
+      "pregunta_es": "Nació en una noche de tormenta.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "stormy",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo era la noche? stormy ⛈️.",
+      "pista_es": "tormentosa"
+    },
+    {
+      "id": "wa3",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "Rose had a big smile. → Adjective: ______",
+      "pregunta_es": "Rose tenía una sonrisa grande.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "big",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo era la sonrisa? big 😁.",
+      "pista_es": "grande"
+    },
+    {
+      "id": "wa4",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "The strong girl rolled the lightning. → Adjective: ______",
+      "pregunta_es": "La niña fuerte hizo rodar el relámpago.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "strong",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo es la niña? strong 💪.",
+      "pista_es": "fuerte"
+    },
+    {
+      "id": "wa5",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "The happy baby talked. → Adjective: ______",
+      "pregunta_es": "La bebé feliz habló.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "happy",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo estaba la bebé? happy 😊.",
+      "pista_es": "feliz"
+    },
+    {
+      "id": "wa6",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "It was a dark night. → Adjective: ______",
+      "pregunta_es": "Era una noche oscura.",
+      "instruccion_es": "Escribe el ADJETIVO (¿cómo es?) de la oración. ✍️",
+      "respuesta": "dark",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo era la noche? dark 🌑.",
+      "pista_es": "oscura"
+    },
+    {
+      "id": "wa7",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "Rose was a ______ girl. (fuerte 💪)",
+      "pregunta_es": "Rose era una niña ______. (fuerte)",
+      "instruccion_es": "Escribe un adjetivo en inglés para describir. ✍️",
+      "respuesta": "strong",
+      "aceptadas": [],
+      "explicacion_es": "Strong = fuerte. Describe a Rose.",
+      "pista_es": "Empieza con str…"
     }
   ],
   "vocabulario": [

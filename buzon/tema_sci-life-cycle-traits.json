@@ -5,7 +5,7 @@
   "titulo": "Life Cycles and Traits",
   "titulo_es": "Ciclos de vida y características (traits)",
   "fecha_examen": "2026-10-26",
-  "preguntas_por_ronda": 10,
+  "preguntas_por_ronda": 20,
   "subtemas": [
     "palabras",
     "ciclo",
@@ -483,6 +483,260 @@
       ],
       "correcta": "Their environment and care (food, exercise) were different",
       "explicacion_es": "El ambiente también cambia cómo se ve un animal: comida, ejercicio y cuidados. Uno quedó gordito y cansado; el otro, fuerte y activo. 🐕🏃"
+    },
+    {
+      "id": "w1",
+      "subtema": "palabras",
+      "tipo": "completar",
+      "pregunta_en": "An ______ is a living thing.",
+      "pregunta_es": "Un ______ es un ser vivo.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "organism",
+      "aceptadas": [
+        "organisms"
+      ],
+      "explicacion_es": "Organism = organismo, cualquier ser vivo.",
+      "pista_es": "Empieza con o… (organismo)"
+    },
+    {
+      "id": "w2",
+      "subtema": "palabras",
+      "tipo": "completar",
+      "pregunta_en": "A life ______ is the stages a living thing goes through.",
+      "pregunta_es": "El ciclo de vida son las etapas de un ser vivo.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "cycle",
+      "aceptadas": [
+        "cicle"
+      ],
+      "explicacion_es": "Life cycle = ciclo de vida.",
+      "pista_es": "Suena como «SÁI-col»"
+    },
+    {
+      "id": "w3",
+      "subtema": "palabras",
+      "tipo": "completar",
+      "pregunta_en": "Getting larger is called ______.",
+      "pregunta_es": "Hacerse más grande se llama ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "growth",
+      "aceptadas": [
+        "grow",
+        "growing"
+      ],
+      "explicacion_es": "Growth = crecimiento 📏.",
+      "pista_es": "Empieza con gr…"
+    },
+    {
+      "id": "w4",
+      "subtema": "palabras",
+      "tipo": "completar",
+      "pregunta_en": "Making a new organism of the same kind is ______.",
+      "pregunta_es": "Hacer un nuevo ser vivo de la misma clase es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "reproduction",
+      "aceptadas": [
+        "reproduce"
+      ],
+      "explicacion_es": "Reproduction = reproducción, tener crías 👶.",
+      "pista_es": "Se parece al español: re-pro-…"
+    },
+    {
+      "id": "w5",
+      "subtema": "ciclo",
+      "tipo": "completar",
+      "pregunta_en": "The four stages are birth, growth, reproduction and ______.",
+      "pregunta_es": "Las cuatro etapas son nacer, crecer, reproducirse y ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "death",
+      "aceptadas": [
+        "die",
+        "dying"
+      ],
+      "explicacion_es": "Death = morir 🥀. Es la última etapa.",
+      "pista_es": "Empieza con d…"
+    },
+    {
+      "id": "w6",
+      "subtema": "plantas",
+      "tipo": "completar",
+      "pregunta_en": "Many plant life cycles begin with a ______.",
+      "pregunta_es": "Muchos ciclos de plantas empiezan con una ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "seed",
+      "aceptadas": [
+        "seeds"
+      ],
+      "explicacion_es": "Seed = semilla 🌰.",
+      "pista_es": "4 letras: s _ _ d"
+    },
+    {
+      "id": "w7",
+      "subtema": "plantas",
+      "tipo": "completar",
+      "pregunta_en": "When a seed grows into a young plant, it is called ______.",
+      "pregunta_es": "Cuando una semilla crece y se vuelve plantita se llama ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "germination",
+      "aceptadas": [
+        "germinate"
+      ],
+      "explicacion_es": "Germination = germinación 🌱.",
+      "pista_es": "Se parece al español: germin…"
+    },
+    {
+      "id": "w8",
+      "subtema": "plantas",
+      "tipo": "completar",
+      "pregunta_en": "Pumpkin: seed → young sprout → ______ → adult plant.",
+      "pregunta_es": "Calabaza: semilla → brote → ______ → planta adulta.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "seedling",
+      "aceptadas": [
+        "seedlings"
+      ],
+      "explicacion_es": "Seedling = plantita joven 🌿. Va antes de la planta adulta.",
+      "pista_es": "seed + ling"
+    },
+    {
+      "id": "w9",
+      "subtema": "plantas",
+      "tipo": "completar",
+      "pregunta_en": "A pumpkin plant needs ______ to make seeds.",
+      "pregunta_es": "La planta de calabaza necesita ______ para hacer semillas.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "flowers",
+      "aceptadas": [
+        "flower"
+      ],
+      "explicacion_es": "Sin flores no hay semillas 🌼.",
+      "pista_es": "Lo que tiene pétalos 🌸"
+    },
+    {
+      "id": "w10",
+      "subtema": "insectos",
+      "tipo": "completar",
+      "pregunta_en": "Beetle: egg → larva → ______ → adult.",
+      "pregunta_es": "Escarabajo: huevo → larva → ______ → adulto.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "pupa",
+      "aceptadas": [
+        "pupae"
+      ],
+      "explicacion_es": "Pupa = la etapa donde se transforma. El escarabajo tiene 4 etapas.",
+      "pista_es": "4 letras: p _ p a"
+    },
+    {
+      "id": "w11",
+      "subtema": "insectos",
+      "tipo": "completar",
+      "pregunta_en": "Beetle: egg → ______ → pupa → adult.",
+      "pregunta_es": "Escarabajo: huevo → ______ → pupa → adulto.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "larva",
+      "aceptadas": [
+        "larvae"
+      ],
+      "explicacion_es": "Larva = la etapa después del huevo 🐛.",
+      "pista_es": "Es igual en español"
+    },
+    {
+      "id": "w12",
+      "subtema": "insectos",
+      "tipo": "completar",
+      "pregunta_en": "A beetle has ______ stages.",
+      "pregunta_es": "Un escarabajo tiene ______ etapas.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "4",
+      "aceptadas": [
+        "four"
+      ],
+      "explicacion_es": "Huevo, larva, pupa y adulto = 4.",
+      "pista_es": "Cuenta: egg, larva, pupa, adult"
+    },
+    {
+      "id": "w13",
+      "subtema": "insectos",
+      "tipo": "completar",
+      "pregunta_en": "A cricket has ______ stages.",
+      "pregunta_es": "Un grillo tiene ______ etapas.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "3",
+      "aceptadas": [
+        "three"
+      ],
+      "explicacion_es": "Huevo, ninfa y adulto = 3 🦗.",
+      "pista_es": "Cuenta: egg, nymph, adult"
+    },
+    {
+      "id": "w14",
+      "subtema": "animales",
+      "tipo": "completar",
+      "pregunta_en": "A frog starts as an ______.",
+      "pregunta_es": "Una rana empieza como un ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "egg",
+      "aceptadas": [
+        "eggs"
+      ],
+      "explicacion_es": "La rana sale de un huevo 🥚.",
+      "pista_es": "3 letras: e g g"
+    },
+    {
+      "id": "w15",
+      "subtema": "animales",
+      "tipo": "completar",
+      "pregunta_en": "A baby sea turtle that comes out of the egg is a ______.",
+      "pregunta_es": "Una tortuguita que sale del huevo es una ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "hatchling",
+      "aceptadas": [
+        "hatchlings"
+      ],
+      "explicacion_es": "Hatchling = cría recién salida del huevo 🐢.",
+      "pista_es": "hatch + ling"
+    },
+    {
+      "id": "w16",
+      "subtema": "comparar",
+      "tipo": "completar",
+      "pregunta_en": "Plants come from seeds. Many animals come from ______.",
+      "pregunta_es": "Las plantas vienen de semillas. Muchos animales vienen de ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "eggs",
+      "aceptadas": [
+        "egg"
+      ],
+      "explicacion_es": "Semilla y huevo se parecen: los dos empiezan una vida nueva.",
+      "pista_es": "🥚"
+    },
+    {
+      "id": "w17",
+      "subtema": "traits",
+      "tipo": "completar",
+      "pregunta_en": "A ______ is a feature, like fur color.",
+      "pregunta_es": "Un ______ es una característica, como el color del pelo.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "trait",
+      "aceptadas": [
+        "traits"
+      ],
+      "explicacion_es": "Trait (TRÉIT) = característica.",
+      "pista_es": "Suena «TRÉIT»"
+    },
+    {
+      "id": "w18",
+      "subtema": "traits",
+      "tipo": "completar",
+      "pregunta_en": "Young animals look a lot like their ______.",
+      "pregunta_es": "Las crías se parecen mucho a sus ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "parents",
+      "aceptadas": [
+        "parent"
+      ],
+      "explicacion_es": "Parents = papás. Se parecen, pero no son iguales.",
+      "pista_es": "Mamá y papá en inglés"
     }
   ],
   "vocabulario": [
