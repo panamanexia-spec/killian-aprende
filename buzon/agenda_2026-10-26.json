@@ -1,0 +1,423 @@
+{
+  "tipo": "agenda",
+  "semana": "2026-10-26",
+  "tareas": [
+    {
+      "id": "w44-t01",
+      "materia": "Science",
+      "titulo": "📚 Estudiar: Life cycle and traits",
+      "fecha": "2026-10-24",
+      "entrega": "2026-10-26",
+      "evaluacion": "sumativa",
+      "tema": "sci-life-cycle-traits",
+      "en_casa": [
+        "Leer el resumen con mamá y hacer un examen de práctica (15 min)",
+        "Revisar en Teams los temas y páginas que mandó la maestra"
+      ],
+      "detalle": "Estudio 1 de 2 para el test del lunes 26/10. Unit 4 Life cycle and traits – Sub-topic: Test. External: Send the topics and page numbers in team. Internal: Beg: All the questions are going to explain clearly. Mid: Clarifies the doubts while writing the test and invigilates the answers. End: Evaluate the answers and feedback on the test. Observations: Bring the pencil, eraser, sharpener, student book. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t02",
+      "materia": "Reading and Composition",
+      "titulo": "📚 Estudiar: subject, predicate, adjective",
+      "fecha": "2026-10-24",
+      "entrega": "2026-10-26",
+      "evaluacion": "sumativa y formativa",
+      "tema": "rc-subject-predicate",
+      "en_casa": [
+        "Leer el resumen con mamá y hacer un examen de práctica (15 min)",
+        "Mirar la práctica del cuaderno de Reading and Composition"
+      ],
+      "detalle": "Estudio 1 de 2 para el FORMAL TEST del lunes 26/10. Unit 2 Thunder Rose – Subject, Predicate and Adjective – FORMAL TEST. External: Today you will have THE FORMAL TEST, of Thunder Rose that will of Subject, Predicate and Adjective. The activity was practiced and given to students, also check your notebook for reference. Internal: Beg: teacher explains how to proceed with the test. Mid: students apply their knowledge in the test. End: students submit their assessment. Observations: Bring your device, notebook, textbook, school supplies. Evaluación: sumativa y formativa."
+    },
+    {
+      "id": "w44-t03",
+      "materia": "Artistic Expressions",
+      "titulo": "🎤 Practicar mi charla: Vincent van Gogh",
+      "fecha": "2026-10-24",
+      "entrega": "2026-10-26",
+      "evaluacion": "formativa",
+      "charla": "art-van-gogh",
+      "en_casa": [
+        "Tener lista la hoja de 14 × 17 sobre Van Gogh",
+        "Aprenderse la charla de memoria",
+        "Llevar lápices de colores el lunes"
+      ],
+      "detalle": "Unit 3 Boost up your Knowledge – Topic 3.0 Painters' Chat – Vincent Van Gogh. External: Create an 14 x 17 inch sheet featuring the work of painter Vincent Van Gogh. to learn the talk by heart. Internal: Beginning: gives a talk about the painter. Middle: presents a slide. End: explain the figures. Observations: Bring color pencil. Evaluación: formativa."
+    },
+    {
+      "id": "w44-t04",
+      "materia": "Español",
+      "titulo": "📖 Leer la novela: Los enigmas del inspector Ramírez",
+      "fecha": "2026-10-24",
+      "entrega": "2026-10-26",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Leer la novela con mamá (un capítulo o 15 minutos)",
+        "Al terminar, decir en voz alta: ¿quiénes son los personajes?, ¿dónde pasa?, ¿cuál es el misterio?"
+      ],
+      "detalle": "Formal escrito parte 1 (26/10). Unidad 4 Canadá – Literatura – Novela «Los enigmas del inspector Ramírez». Externas: Lee en casa la novela «Los enigmas del inspector Ramírez» para realizar el formal escrito en clase. Traer folder amarillo, con su gancho, 15 hojas de rayas y hoja de evaluación de análisis literario. Internas: Inicio: participa de lluvia de ideas sobre lo leído en la novela. Nudo: realiza el formal escrito aplicando pasos del análisis literario. Cierre: revisa y entrega, para su evaluación sumativa. Observaciones: LOS ESTUDIANTES DEBEN TENER A MANO LA NOVELA «LOS ENIGMAS DEL INSPECTOR RAMÍREZ» PARA REALIZAR EL (texto cortado en la agenda).",
+      "tema": "es-analisis-literario"
+    },
+    {
+      "id": "w44-t05",
+      "materia": "Science",
+      "titulo": "🔁 Repasar mis errores: Life cycle and traits",
+      "fecha": "2026-10-25",
+      "entrega": "2026-10-26",
+      "evaluacion": "sumativa",
+      "tema": "sci-life-cycle-traits",
+      "en_casa": [
+        "Repasar solo las preguntas que falló",
+        "Guardar en el bulto lápiz, borrador, sacapuntas y libro de Science"
+      ],
+      "detalle": "Día antes del test de Science: repasar solo los errores. Unit 4 Life cycle and traits – Sub-topic: Test. External: Send the topics and page numbers in team. Internal: Beg: All the questions are going to explain clearly. Mid: Clarifies the doubts while writing the test and invigilates the answers. End: Evaluate the answers and feedback on the test. Observations: Bring the pencil, eraser, sharpener, student book. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t06",
+      "materia": "Reading and Composition",
+      "titulo": "🔁 Repasar mis errores: subject, predicate, adjective",
+      "fecha": "2026-10-25",
+      "entrega": "2026-10-26",
+      "evaluacion": "sumativa y formativa",
+      "tema": "rc-subject-predicate",
+      "en_casa": [
+        "Repasar solo las preguntas que falló"
+      ],
+      "detalle": "Día antes del FORMAL TEST: repasar solo los errores. Unit 2 Thunder Rose – Subject, Predicate and Adjective – FORMAL TEST. External: Today you will have THE FORMAL TEST, of Thunder Rose that will of Subject, Predicate and Adjective. The activity was practiced and given to students, also check your notebook for reference. Internal: Beg: teacher explains how to proceed with the test. Mid: students apply their knowledge in the test. End: students submit their assessment. Observations: Bring your device, notebook, textbook, school supplies. Evaluación: sumativa y formativa."
+    },
+    {
+      "id": "w44-t07",
+      "materia": "Artistic Expressions",
+      "titulo": "🎤 Ensayo final: mi charla de Van Gogh",
+      "fecha": "2026-10-25",
+      "entrega": "2026-10-26",
+      "evaluacion": "formativa",
+      "charla": "art-van-gogh",
+      "en_casa": [
+        "Decir la charla de memoria a mamá, señalando los cuadros de la hoja"
+      ],
+      "detalle": "Ensayo final. Unit 3 Boost up your Knowledge – Topic 3.0 Painters' Chat – Vincent Van Gogh. External: Create an 14 x 17 inch sheet featuring the work of painter Vincent Van Gogh. to learn the talk by heart. Internal: Beginning: gives a talk about the painter. Middle: presents a slide. End: explain the figures. Observations: Bring color pencil. Evaluación: formativa."
+    },
+    {
+      "id": "w44-t08",
+      "materia": "Español",
+      "titulo": "📖 Leer la novela y preparar el folder amarillo",
+      "fecha": "2026-10-25",
+      "entrega": "2026-10-26",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Seguir leyendo la novela",
+        "Preparar el folder amarillo con gancho, 15 hojas de rayas y la hoja de evaluación de análisis literario",
+        "Meter la novela en el bulto"
+      ],
+      "detalle": "Formal escrito parte 1 (26/10). Unidad 4 Canadá – Literatura – Novela «Los enigmas del inspector Ramírez». Externas: Lee en casa la novela «Los enigmas del inspector Ramírez» para realizar el formal escrito en clase. Traer folder amarillo, con su gancho, 15 hojas de rayas y hoja de evaluación de análisis literario. Internas: Inicio: participa de lluvia de ideas sobre lo leído en la novela. Nudo: realiza el formal escrito aplicando pasos del análisis literario. Cierre: revisa y entrega, para su evaluación sumativa. Observaciones: LOS ESTUDIANTES DEBEN TENER A MANO LA NOVELA «LOS ENIGMAS DEL INSPECTOR RAMÍREZ» PARA REALIZAR EL (texto cortado en la agenda).",
+      "tema": "es-analisis-literario"
+    },
+    {
+      "id": "w44-t09",
+      "materia": "Educación Física",
+      "titulo": "📚 Estudiar: voleibol y estilo dorso",
+      "fecha": "2026-10-25",
+      "entrega": "2026-10-27",
+      "evaluacion": "sumativa",
+      "tema": "ef-voleibol-dorso",
+      "en_casa": [
+        "Repasar la información entregada sobre voleibol y estilo dorso"
+      ],
+      "detalle": "Estudio 1 de 2 para la sumativa escrita del 27/10. Unidad III Deporte & Natación – Voleibol & Estilo Dorso – Realiza sumativa escrita. Externas: «Repasa la información entregada sobre los deportes que se están tratando en el trimestre. Voleibol & Estilo Dorso». Internas: Inicio: realiza sumativa escrita, lee y escucha las indicaciones de la profesora. Intermedio: completa la sumativa escrita. Término: entrega la sumativa escrita. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t10",
+      "materia": "Ciencias Sociales",
+      "titulo": "📺 Ver el video: la convivencia",
+      "fecha": "2026-10-25",
+      "entrega": "2026-10-26",
+      "evaluacion": "formativa",
+      "videos": [
+        "w44-v01"
+      ],
+      "en_casa": [
+        "Ver el video sobre la convivencia"
+      ],
+      "detalle": "Unidad 3 Convivencia armónica natural y social – Tema 12 La sociedad y las normas de convivencia. Conocimientos: reconoce los tipos de actividades económicas de Panamá. Externas: observe el siguiente video sobre el tema la convivencia https://www.youtube.com/watch?v=ZjZHxOEv1p8. 26/10 (formativa): escucha instrucciones; discute las páginas 137 a la 140 y anota sus ideas en su cuaderno; retroalimentación. Lleve libro, dispositivo y cuaderno. 29/10 (sumativa): realiza taller de las páginas 141, 142 y 143 de su texto; entrega su libro para revisión. Lleve libro, dispositivo, lápices de colores, marcadores, 3 hojas blancas y cuaderno."
+    },
+    {
+      "id": "w44-t11",
+      "materia": "Educación Musical",
+      "titulo": "🎼 Trabajo escrito: la regla de la plica (stem)",
+      "fecha": "2026-10-26",
+      "entrega": "2026-10-27",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Contestar a mano, en hojas blancas o de raya, las preguntas del cuaderno de música",
+        "Ponerlas en un folder",
+        "Preparar una presentación corta para la clase"
+      ],
+      "detalle": "Unit 7 Stem Rule – Correct use of the stem in music. External: Complete the assignment by hand, using white or lined paper placed in a folder covering the topic discussed in class and give a short presentation to the class. Internal: Two summative grades will be assigned. The first grade will be for the written assignment, and the second for the presentation. Observations: The questions you need to work on are written in the music notebook. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t12",
+      "materia": "Educación Física",
+      "titulo": "🔁 Repasar mis errores: voleibol y estilo dorso",
+      "fecha": "2026-10-26",
+      "entrega": "2026-10-27",
+      "evaluacion": "sumativa",
+      "tema": "ef-voleibol-dorso",
+      "en_casa": [
+        "Repasar solo lo que falló"
+      ],
+      "detalle": "Día antes de la sumativa escrita. Unidad III Deporte & Natación – Voleibol & Estilo Dorso – Realiza sumativa escrita. Externas: «Repasa la información entregada sobre los deportes que se están tratando en el trimestre. Voleibol & Estilo Dorso». Internas: Inicio: realiza sumativa escrita, lee y escucha las indicaciones de la profesora. Intermedio: completa la sumativa escrita. Término: entrega la sumativa escrita. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t13",
+      "materia": "Reading and Conversation",
+      "titulo": "📚 Estudiar: Luz Sees the Light",
+      "fecha": "2026-10-26",
+      "entrega": "2026-10-29",
+      "evaluacion": "sumativa y formativa",
+      "tema": "rc-luz-sees-the-light",
+      "en_casa": [
+        "Estudiar el word bank del cuaderno y el análisis literario de Luz Sees the Light"
+      ],
+      "detalle": "Estudio 1 de 3 para el test del 29/10. Unit 1 Test: Luz Sees the Light (29/10). External: Study from your word bank in your notebook and also from your literary analysis, Luz sees the light. Internal: Beg: reviews the main characters, events, and message of «Luz Sees the Light». Mid: completes the test independently. End: submits the test to the teacher. Textbook, laptop, and school supplies. Evaluación: sumativa y formativa. Antes: 27/10 Oral Reading Comprehension (formativa: predice con el título y dibujos, lee en voz alta y responde preguntas) y 28/10 Literary Elements (sumativa y formativa: setting, characters, problem, solution, theme; escribe un párrafo corto sobre el mensaje)."
+    },
+    {
+      "id": "w44-t14",
+      "materia": "Reading and Conversation",
+      "titulo": "📚 Estudiar: Luz Sees the Light",
+      "fecha": "2026-10-27",
+      "entrega": "2026-10-29",
+      "evaluacion": "sumativa y formativa",
+      "tema": "rc-luz-sees-the-light",
+      "en_casa": [
+        "Estudiar el word bank del cuaderno y el análisis literario"
+      ],
+      "detalle": "Estudio 2 de 3 para el test del 29/10. Unit 1 Test: Luz Sees the Light (29/10). External: Study from your word bank in your notebook and also from your literary analysis, Luz sees the light. Internal: Beg: reviews the main characters, events, and message of «Luz Sees the Light». Mid: completes the test independently. End: submits the test to the teacher. Textbook, laptop, and school supplies. Evaluación: sumativa y formativa. Antes: 27/10 Oral Reading Comprehension (formativa: predice con el título y dibujos, lee en voz alta y responde preguntas) y 28/10 Literary Elements (sumativa y formativa: setting, characters, problem, solution, theme; escribe un párrafo corto sobre el mensaje)."
+    },
+    {
+      "id": "w44-t15",
+      "materia": "Reading and Composition",
+      "titulo": "📘 Libro pág. 67 (vol. 2): prefijos y sufijos",
+      "fecha": "2026-10-27",
+      "entrega": "2026-10-28",
+      "evaluacion": "formativa",
+      "tema": "rc-prefixes-suffixes",
+      "en_casa": [
+        "Seguir trabajando en el libro, página 67 volumen 2: prefix, suffix and affixes"
+      ],
+      "detalle": "Unit 2 Prefixes and Suffixes – Class Activity. External: Continue working in your textbook, page 67 volume 2. Prefix, suffix and affixes. Internal: Beg: teacher explains the importance of prefix and suffix. Mid: students apply their knowledge for assigned activity. End: students continue applying into the board. Bring your device, notebook, textbook, school supplies. Evaluación: formativa."
+    },
+    {
+      "id": "w44-t16",
+      "materia": "Español",
+      "titulo": "📖 Terminar de leer la novela",
+      "fecha": "2026-10-27",
+      "entrega": "2026-10-28",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Leer en casa la novela para terminar el formal escrito en clase",
+        "Meter la novela en el bulto"
+      ],
+      "detalle": "Formal escrito parte 2 (28/10). Unidad 4 Canadá – Literatura. Externas: Lee en casa la novela «Los enigmas del inspector Ramírez» para terminar el formal escrito en clase. Internas: lluvia de ideas; termina de elaborar el formal escrito aplicando pasos del análisis literario; revisa y entrega, para su evaluación sumativa. Observaciones: LOS ESTUDIANTES DEBEN TENER A MANO LA NOVELA.",
+      "tema": "es-analisis-literario"
+    },
+    {
+      "id": "w44-t17",
+      "materia": "Reading and Conversation",
+      "titulo": "🔁 Repasar mis errores: Luz Sees the Light",
+      "fecha": "2026-10-28",
+      "entrega": "2026-10-29",
+      "evaluacion": "sumativa y formativa",
+      "tema": "rc-luz-sees-the-light",
+      "en_casa": [
+        "Repasar solo las preguntas que falló"
+      ],
+      "detalle": "Día antes del test. Unit 1 Test: Luz Sees the Light (29/10). External: Study from your word bank in your notebook and also from your literary analysis, Luz sees the light. Internal: Beg: reviews the main characters, events, and message of «Luz Sees the Light». Mid: completes the test independently. End: submits the test to the teacher. Textbook, laptop, and school supplies. Evaluación: sumativa y formativa. Antes: 27/10 Oral Reading Comprehension (formativa: predice con el título y dibujos, lee en voz alta y responde preguntas) y 28/10 Literary Elements (sumativa y formativa: setting, characters, problem, solution, theme; escribe un párrafo corto sobre el mensaje)."
+    },
+    {
+      "id": "w44-t18",
+      "materia": "Ciencias Sociales",
+      "titulo": "📚 Repasar: la sociedad y las normas de convivencia",
+      "fecha": "2026-10-28",
+      "entrega": "2026-10-29",
+      "evaluacion": "sumativa",
+      "tema": "soc-convivencia",
+      "en_casa": [
+        "Volver a ver el video de la convivencia",
+        "Repasar las ideas del cuaderno (págs. 137 a 140)",
+        "Guardar lápices de colores, marcadores y 3 hojas blancas"
+      ],
+      "detalle": "Unidad 3 Convivencia armónica natural y social – Tema 12 La sociedad y las normas de convivencia. Conocimientos: reconoce los tipos de actividades económicas de Panamá. Externas: observe el siguiente video sobre el tema la convivencia https://www.youtube.com/watch?v=ZjZHxOEv1p8. 26/10 (formativa): escucha instrucciones; discute las páginas 137 a la 140 y anota sus ideas en su cuaderno; retroalimentación. Lleve libro, dispositivo y cuaderno. 29/10 (sumativa): realiza taller de las páginas 141, 142 y 143 de su texto; entrega su libro para revisión. Lleve libro, dispositivo, lápices de colores, marcadores, 3 hojas blancas y cuaderno."
+    },
+    {
+      "id": "w44-t19",
+      "materia": "Science",
+      "titulo": "📺 Ver el video: traits of animals",
+      "fecha": "2026-10-28",
+      "entrega": "2026-10-29",
+      "evaluacion": "formativa",
+      "videos": [
+        "w44-v02"
+      ],
+      "en_casa": [
+        "Ver el video para entender las características (traits) de los animales"
+      ],
+      "detalle": "Unit 4 Life cycle and traits – Experience 2. External: Watch the video to understand the characteristics and traits of the animals. https://youtu.be/j3qtpHGInnI. Internal: watches the phenomenon video and observes the appearance of the cat; investigates the differences and similarities among the cats; investigates relationship between the cat and records the answers. Bring the pencil, eraser, sharpener, student book. Evaluación: formativa."
+    },
+    {
+      "id": "w44-t20",
+      "materia": "Culture and Value",
+      "titulo": "🎤 Practicar mi charla: mi presidente",
+      "fecha": "2026-10-28",
+      "entrega": "2026-10-30",
+      "evaluacion": "sumativa",
+      "charla": "cv-presidente",
+      "en_casa": [
+        "Estudiar la información corta e importante de su presidente"
+      ],
+      "detalle": "Unit 4 Leadership and Governance – Oral Presentation – President Presentations (Summative). External: Study the short, important information about your president. Internal: BEGINNING: reviews presentation guidelines. MIDDLE: delivers a short, creative oral presentation of the team poster. CLOSING: celebrates with applause and reflects on good leadership. Observations: Brings culture and values notebook. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t21",
+      "materia": "Reading and Composition",
+      "titulo": "📘 Libro pág. 74 (vol. 2): prefijos y sufijos",
+      "fecha": "2026-10-29",
+      "entrega": "2026-10-30",
+      "evaluacion": "formativa",
+      "tema": "rc-prefixes-suffixes",
+      "en_casa": [
+        "Seguir trabajando en el libro, página 74 volumen 2: prefix, suffix and affixes"
+      ],
+      "detalle": "Unit 2 Prefixes and Suffixes – Class Activity. External: Continue working in your textbook, page 74 volume 2. Prefix, suffix and affixes. Internal: teacher explains the importance of prefix and suffix; students apply their knowledge; continue on the board. Bring your device, notebook, textbook, school supplies. Evaluación: formativa."
+    },
+    {
+      "id": "w44-t22",
+      "materia": "Culture and Value",
+      "titulo": "🎤 Ensayo final: mi presidente",
+      "fecha": "2026-10-29",
+      "entrega": "2026-10-30",
+      "evaluacion": "sumativa",
+      "charla": "cv-presidente",
+      "en_casa": [
+        "Decir la presentación a mamá",
+        "Guardar el cuaderno de Culture and Values"
+      ],
+      "detalle": "Día antes de la presentación. Unit 4 Leadership and Governance – Oral Presentation – President Presentations (Summative). External: Study the short, important information about your president. Internal: BEGINNING: reviews presentation guidelines. MIDDLE: delivers a short, creative oral presentation of the team poster. CLOSING: celebrates with applause and reflects on good leadership. Observations: Brings culture and values notebook. Evaluación: sumativa."
+    },
+    {
+      "id": "w44-t23",
+      "materia": "Science",
+      "titulo": "📺 Ver el video: traits of different animals",
+      "fecha": "2026-10-29",
+      "entrega": "2026-10-30",
+      "evaluacion": "formativa",
+      "videos": [
+        "w44-v03"
+      ],
+      "en_casa": [
+        "Ver el video para entender los traits de distintos animales"
+      ],
+      "detalle": "Unit 4 Life cycle and traits – Hands on station activity. External: Watch the video to understand the traits of the different animals https://youtu.be/F5C-rRvaQVQ. Internal: compares the height of the adult and baby chicks and investigates the height using a ruler; writes the similarities and differences in the features of the adult and baby chicks; evaluates the observation and concludes the topic. Bring the pencil, eraser, student book. Evaluación: formativa."
+    }
+  ],
+  "materiales": [
+    {
+      "id": "w44-m01",
+      "materia": "Español",
+      "material": "Novela «Los enigmas del inspector Ramírez» + folder amarillo con gancho, 15 hojas de rayas y hoja de evaluación de análisis literario",
+      "llevar_el": "2026-10-26"
+    },
+    {
+      "id": "w44-m02",
+      "materia": "Artistic Expressions",
+      "material": "Hoja de 14 × 17 sobre Van Gogh y lápices de colores",
+      "llevar_el": "2026-10-26"
+    },
+    {
+      "id": "w44-m03",
+      "materia": "Science",
+      "material": "Lápiz, borrador, sacapuntas y libro de Science (test)",
+      "llevar_el": "2026-10-26"
+    },
+    {
+      "id": "w44-m04",
+      "materia": "Educación Musical",
+      "material": "Folder con el trabajo escrito a mano + cuaderno de música",
+      "llevar_el": "2026-10-27"
+    },
+    {
+      "id": "w44-m05",
+      "materia": "Español",
+      "material": "Novela «Los enigmas del inspector Ramírez»",
+      "llevar_el": "2026-10-28"
+    },
+    {
+      "id": "w44-m06",
+      "materia": "Folklore",
+      "material": "Sombrero para el ensayo del baile",
+      "llevar_el": "2026-10-28"
+    },
+    {
+      "id": "w44-m07",
+      "materia": "Ciencias Sociales",
+      "material": "Lápices de colores, marcadores y 3 hojas blancas",
+      "llevar_el": "2026-10-29"
+    },
+    {
+      "id": "w44-m08",
+      "materia": "Culture and Value",
+      "material": "Cuaderno de Culture and Values (presentación del presidente)",
+      "llevar_el": "2026-10-30"
+    }
+  ],
+  "videos": [
+    {
+      "id": "w44-v01",
+      "materia": "Ciencias Sociales",
+      "titulo": "La convivencia",
+      "url": "https://www.youtube.com/watch?v=ZjZHxOEv1p8",
+      "fecha": "2026-10-25"
+    },
+    {
+      "id": "w44-v02",
+      "materia": "Science",
+      "titulo": "Traits of animals (Experience 2)",
+      "url": "https://youtu.be/j3qtpHGInnI",
+      "fecha": "2026-10-28"
+    },
+    {
+      "id": "w44-v03",
+      "materia": "Science",
+      "titulo": "Traits of different animals (hands on station)",
+      "url": "https://youtu.be/F5C-rRvaQVQ",
+      "fecha": "2026-10-29"
+    },
+    {
+      "id": "w44-v04",
+      "materia": "Chino Mandarín",
+      "titulo": "Lesson 9: Where is the toy",
+      "url": "https://reurl.cc/5XQky7",
+      "fecha": "2026-10-29"
+    }
+  ],
+  "notas_para_mama": [
+    "26/10 Sumativa: Science – test de Life cycle and traits. La maestra dice que manda los temas y páginas por Teams: revisar. (La agenda pasada lo tenía el 23/10; preguntar si se movió al lunes.)",
+    "26/10 Sumativa y formativa: Reading and Composition – FORMAL TEST de Thunder Rose: subject, predicate y adjective. Revisar la práctica del cuaderno.",
+    "26/10 Sumativa: Español – formal escrito de la novela «Los enigmas del inspector Ramírez» (parte 1). Llevar novela, folder amarillo con gancho, 15 hojas de rayas y hoja de evaluación de análisis literario.",
+    "26/10 Artistic Expressions (formativa): charla de memoria sobre Van Gogh con su hoja de 14 × 17. Llevar lápices de colores.",
+    "26/10 Chino: workbook Book B1 págs. 39–42 en clase. Sin información para preparar en casa.",
+    "27/10 Sumativa: Educación Física – sumativa escrita de voleibol y estilo dorso.",
+    "27/10 Sumativa: Educación Musical – trabajo escrito a mano en folder + presentación corta (son 2 notas). Las preguntas están en el cuaderno de música.",
+    "28/10 Sumativa: Español – termina el formal escrito de la novela (parte 2). Llevar la novela.",
+    "28/10 Sumativa y formativa: Reading and Conversation – elementos literarios de «Luz Sees the Light» (en clase).",
+    "28/10 Folklore: ensayo del baile de la Feria en el gimnasio; llevar sombrero.",
+    "29/10 Sumativa y formativa: Reading and Conversation – TEST de «Luz Sees the Light» (word bank del cuaderno + análisis literario).",
+    "29/10 Sumativa: Ciencias Sociales – taller de las págs. 141–143 del libro y entrega el libro para revisión.",
+    "29/10 Sumativa: Español – termina las actividades del libro págs. 106–117 («¿Quién anda ahí?») en clase. Llevar libro y cuaderno.",
+    "30/10 Sumativa: Culture and Value – presentación oral del póster del equipo sobre su presidente.",
+    "30/10 Sumativa: Chino – presentación oral y «formal topic ejercicio» (Lesson 9 Where is the toy). No tenemos el material.",
+    "Preguntar a la maestra de Sociales: el tema dice «normas de convivencia» pero «Conocimientos a aprender» dice «actividades económicas de Panamá». ¿Cuál entra en el taller del 29/10?",
+    "Todos los días: libro, cuaderno, cartuchera, dispositivo cargado y cargador."
+  ]
+}

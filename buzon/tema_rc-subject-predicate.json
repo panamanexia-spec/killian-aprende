@@ -1,0 +1,587 @@
+{
+  "tipo": "tema",
+  "id": "rc-subject-predicate",
+  "titulo": "Subject, Predicate and Adjective",
+  "titulo_es": "Sujeto, predicado y adjetivo (Thunder Rose)",
+  "materia": "Reading and Composition",
+  "idioma": "en",
+  "fecha_examen": "2026-10-26",
+  "preguntas_por_ronda": 10,
+  "subtemas": [
+    "subject",
+    "predicate",
+    "adjective",
+    "mix"
+  ],
+  "resumen": [
+    {
+      "en": "A sentence has two parts: the subject and the predicate.",
+      "es": "Una oración tiene dos partes: el sujeto (SÁB-yect) y el predicado (PRÉ-di-quet).",
+      "emoji": "✂️"
+    },
+    {
+      "en": "The subject tells WHO.",
+      "es": "El sujeto dice QUIÉN. Ejemplo: Rose.",
+      "emoji": "🙋"
+    },
+    {
+      "en": "The predicate tells WHAT the subject DOES.",
+      "es": "El predicado dice QUÉ HACE el sujeto. Ejemplo: lived in a small town.",
+      "emoji": "🏃"
+    },
+    {
+      "en": "Rose | lived in a small town.",
+      "es": "Rose = sujeto | lived in a small town = predicado.",
+      "emoji": "🏡"
+    },
+    {
+      "en": "An adjective describes a noun.",
+      "es": "Un adjetivo (Á-yec-tiv) dice CÓMO es algo: small, big, strong, stormy.",
+      "emoji": "🎨"
+    },
+    {
+      "en": "She was born on a stormy night.",
+      "es": "«Stormy» es el adjetivo: dice cómo era la noche (tormentosa).",
+      "emoji": "⛈️"
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "subject",
+      "emoji": "🙋",
+      "titulo": "El sujeto = ¿QUIÉN?",
+      "pasos": [
+        "Lee la oración.",
+        "Pregunta: ¿QUIÉN hace la acción?",
+        "Esa palabra (o grupo de palabras) es el sujeto."
+      ],
+      "ejemplo": "Rose rolled the lightning. → ¿Quién? Rose.",
+      "truco": "El sujeto casi siempre está al principio."
+    },
+    {
+      "subtema": "predicate",
+      "emoji": "🏃",
+      "titulo": "El predicado = ¿QUÉ HACE?",
+      "pasos": [
+        "Encuentra el sujeto.",
+        "Todo lo que sigue después es el predicado.",
+        "Adentro siempre hay un verbo (acción)."
+      ],
+      "ejemplo": "Rose | sat up and talked. → predicado: sat up and talked.",
+      "truco": "Haz una raya | después del sujeto: a la derecha queda el predicado."
+    },
+    {
+      "subtema": "adjective",
+      "emoji": "🎨",
+      "titulo": "El adjetivo = ¿CÓMO ES?",
+      "pasos": [
+        "Busca una cosa o persona (sustantivo).",
+        "Busca la palabra que dice cómo es.",
+        "Esa es el adjetivo."
+      ],
+      "ejemplo": "a small town → ¿cómo es el pueblo? small.",
+      "truco": "Casi siempre va justo antes de la cosa: small town, stormy night."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "sp1",
+      "subtema": "subject",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the SUBJECT? «Rose lived in a small town.»",
+      "pregunta_es": "¿Cuál es el SUJETO? «Rose vivía en un pueblo pequeño.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "Rose",
+        "lived",
+        "small town"
+      ],
+      "correcta": "Rose",
+      "explicacion_es": "El sujeto dice QUIÉN hace algo. ¿Quién vivía en el pueblo? 👉 Rose."
+    },
+    {
+      "id": "sp2",
+      "subtema": "subject",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the SUBJECT? «Her ma and pa sang a lullaby.»",
+      "pregunta_es": "¿Cuál es el SUJETO? «Su mamá y su papá cantaron una canción de cuna.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "Her ma and pa",
+        "sang",
+        "a lullaby"
+      ],
+      "correcta": "Her ma and pa",
+      "explicacion_es": "¿Quiénes cantaron? 👉 Her ma and pa (su mamá y su papá). El sujeto puede tener varias palabras."
+    },
+    {
+      "id": "sp3",
+      "subtema": "subject",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the SUBJECT? «The doctor smiled at the baby.»",
+      "pregunta_es": "¿Cuál es el SUJETO? «El doctor le sonrió a la bebé.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "The doctor",
+        "smiled",
+        "the baby"
+      ],
+      "correcta": "The doctor",
+      "explicacion_es": "¿Quién sonrió? 👉 The doctor. «The baby» recibe la sonrisa, pero no es el sujeto."
+    },
+    {
+      "id": "sp4",
+      "subtema": "subject",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the SUBJECT? «She rolled the lightning into a ball.»",
+      "pregunta_es": "¿Cuál es el SUJETO? «Ella hizo una bola con el relámpago.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "She",
+        "rolled",
+        "the lightning"
+      ],
+      "correcta": "She",
+      "explicacion_es": "¿Quién hizo la bola? 👉 She (ella). Palabras como she, he, I, they también pueden ser sujeto."
+    },
+    {
+      "id": "sp5",
+      "subtema": "subject",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The SUBJECT tells WHO or WHAT the sentence is about.",
+      "pregunta_es": "El SUJETO dice DE QUIÉN o DE QUÉ habla la oración.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! El sujeto es el «quién» de la oración. 🙋"
+    },
+    {
+      "id": "sp6",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "______ was born on a stormy night. (Who? → Rose)",
+      "pregunta_es": "______ nació en una noche de tormenta. (¿Quién? → Rose)",
+      "instruccion_es": "Escribe en inglés la palabra que falta.",
+      "respuesta": "Rose",
+      "aceptadas": [
+        "rose"
+      ],
+      "explicacion_es": "El sujeto aquí es Rose: ella es la que nació.",
+      "pista_es": "Es el nombre de la niña del cuento 🌹"
+    },
+    {
+      "id": "sp7",
+      "subtema": "predicate",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the PREDICATE? «Rose lived in a small town.»",
+      "pregunta_es": "¿Cuál es el PREDICADO? «Rose vivía en un pueblo pequeño.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "lived in a small town",
+        "Rose",
+        "Rose lived"
+      ],
+      "correcta": "lived in a small town",
+      "explicacion_es": "El predicado dice QUÉ HACE el sujeto. ¿Qué hacía Rose? 👉 lived in a small town."
+    },
+    {
+      "id": "sp8",
+      "subtema": "predicate",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the PREDICATE? «The baby did not cry.»",
+      "pregunta_es": "¿Cuál es el PREDICADO? «La bebé no lloró.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "did not cry",
+        "The baby",
+        "The baby did"
+      ],
+      "correcta": "did not cry",
+      "explicacion_es": "¿Qué hizo (o no hizo) la bebé? 👉 did not cry (no lloró)."
+    },
+    {
+      "id": "sp9",
+      "subtema": "predicate",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the PREDICATE? «Rose sat up and talked.»",
+      "pregunta_es": "¿Cuál es el PREDICADO? «Rose se sentó y habló.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "sat up and talked",
+        "Rose",
+        "Rose sat"
+      ],
+      "correcta": "sat up and talked",
+      "explicacion_es": "Todo lo que viene después del sujeto es el predicado: sat up and talked."
+    },
+    {
+      "id": "sp10",
+      "subtema": "predicate",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The PREDICATE always has a verb (an action word).",
+      "pregunta_es": "El PREDICADO siempre tiene un verbo (una palabra de acción).",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! En el predicado está la acción: lived, sang, rolled, cried… 🏃"
+    },
+    {
+      "id": "sp11",
+      "subtema": "predicate",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "In «Rose was born with superpowers», the predicate is «Rose».",
+      "pregunta_es": "En «Rose nació con superpoderes», el predicado es «Rose».",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso. «Rose» es el sujeto (quién). El predicado es «was born with superpowers» (qué pasó)."
+    },
+    {
+      "id": "sp12",
+      "subtema": "predicate",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which part is the PREDICATE? «Her ma and pa | sang her a lullaby.»",
+      "pregunta_es": "¿Qué parte es el PREDICADO? «Su mamá y su papá | le cantaron una canción de cuna.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "sang her a lullaby",
+        "Her ma and pa"
+      ],
+      "correcta": "sang her a lullaby",
+      "explicacion_es": "La raya | separa las dos partes. A la izquierda el sujeto (quién) y a la derecha el predicado (qué hacen)."
+    },
+    {
+      "id": "sp13",
+      "subtema": "adjective",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which word is the ADJECTIVE? «Rose lived in a small town.»",
+      "pregunta_es": "¿Cuál palabra es el ADJETIVO? «Rose vivía en un pueblo pequeño.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "small",
+        "town",
+        "lived",
+        "Rose"
+      ],
+      "correcta": "small",
+      "explicacion_es": "El adjetivo describe a un sustantivo. ¿Cómo era el pueblo? 👉 small (pequeño)."
+    },
+    {
+      "id": "sp14",
+      "subtema": "adjective",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which word is the ADJECTIVE? «She was born on a stormy night.»",
+      "pregunta_es": "¿Cuál palabra es el ADJETIVO? «Nació en una noche de tormenta.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "stormy",
+        "night",
+        "born",
+        "She"
+      ],
+      "correcta": "stormy",
+      "explicacion_es": "¿Cómo era la noche? 👉 stormy (tormentosa) ⛈️."
+    },
+    {
+      "id": "sp15",
+      "subtema": "adjective",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which word is the ADJECTIVE? «Rose will grow up strong.»",
+      "pregunta_es": "¿Cuál palabra es el ADJETIVO? «Rose crecerá fuerte.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "strong",
+        "grow",
+        "Rose",
+        "will"
+      ],
+      "correcta": "strong",
+      "explicacion_es": "¿Cómo será Rose? 👉 strong (fuerte) 💪."
+    },
+    {
+      "id": "sp16",
+      "subtema": "adjective",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which word is the ADJECTIVE? «Rose had a big smile.»",
+      "pregunta_es": "¿Cuál palabra es el ADJETIVO? «Rose tenía una sonrisa grande.»",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "big",
+        "smile",
+        "had",
+        "Rose"
+      ],
+      "correcta": "big",
+      "explicacion_es": "¿Cómo era la sonrisa? 👉 big (grande) 😁."
+    },
+    {
+      "id": "sp17",
+      "subtema": "adjective",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "An ADJECTIVE describes a noun: how it looks, how it feels, how big it is.",
+      "pregunta_es": "Un ADJETIVO describe a un sustantivo: cómo se ve, cómo se siente, qué tamaño tiene.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Adjetivos: small, big, stormy, strong, happy… 🎨"
+    },
+    {
+      "id": "sp18",
+      "subtema": "adjective",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "«Lightning» is an adjective.",
+      "pregunta_es": "«Lightning» (relámpago) es un adjetivo.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso. «Lightning» es una cosa: es un sustantivo. Un adjetivo diría CÓMO es, por ejemplo «bright lightning» (relámpago brillante)."
+    },
+    {
+      "id": "sp19",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "Rose lived in a ______ town. (pequeño)",
+      "pregunta_es": "Rose vivía en un pueblo ______. (pequeño)",
+      "instruccion_es": "Escribe en inglés la palabra que falta.",
+      "respuesta": "small",
+      "aceptadas": [],
+      "explicacion_es": "«Small» = pequeño. Es el adjetivo que describe al pueblo.",
+      "pista_es": "Empieza con s… y significa pequeño"
+    },
+    {
+      "id": "sp20",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "It was a ______ night. (tormentosa ⛈️)",
+      "pregunta_es": "Era una noche ______. (tormentosa ⛈️)",
+      "instruccion_es": "Escribe en inglés la palabra que falta.",
+      "respuesta": "stormy",
+      "aceptadas": [],
+      "explicacion_es": "«Stormy» = tormentosa. Describe a la noche.",
+      "pista_es": "Viene de storm (tormenta)"
+    },
+    {
+      "id": "sp21",
+      "subtema": "mix",
+      "tipo": "unir",
+      "pregunta_en": "Match each part with its job.",
+      "pregunta_es": "Une cada parte con lo que hace.",
+      "instruccion_es": "Une cada palabra con su significado.",
+      "pares": [
+        {
+          "izquierda": "subject",
+          "derecha": "¿quién? 🙋"
+        },
+        {
+          "izquierda": "predicate",
+          "derecha": "¿qué hace? 🏃"
+        },
+        {
+          "izquierda": "adjective",
+          "derecha": "¿cómo es? 🎨"
+        }
+      ],
+      "explicacion_es": "Sujeto = quién · Predicado = qué hace · Adjetivo = cómo es."
+    },
+    {
+      "id": "sp22",
+      "subtema": "mix",
+      "tipo": "unir",
+      "pregunta_en": "Match the word with its meaning.",
+      "pregunta_es": "Une la palabra con su significado.",
+      "instruccion_es": "Une cada palabra con su significado.",
+      "pares": [
+        {
+          "izquierda": "subject",
+          "derecha": "sujeto"
+        },
+        {
+          "izquierda": "predicate",
+          "derecha": "predicado"
+        },
+        {
+          "izquierda": "adjective",
+          "derecha": "adjetivo"
+        },
+        {
+          "izquierda": "sentence",
+          "derecha": "oración"
+        }
+      ],
+      "explicacion_es": "Son las palabras del examen. ¡Apréndelas en inglés!"
+    },
+    {
+      "id": "sp23",
+      "subtema": "adjective",
+      "tipo": "unir",
+      "pregunta_en": "Match the adjective with its meaning.",
+      "pregunta_es": "Une el adjetivo con su significado.",
+      "instruccion_es": "Une cada palabra con su significado.",
+      "pares": [
+        {
+          "izquierda": "small",
+          "derecha": "pequeño"
+        },
+        {
+          "izquierda": "big",
+          "derecha": "grande"
+        },
+        {
+          "izquierda": "strong",
+          "derecha": "fuerte"
+        },
+        {
+          "izquierda": "stormy",
+          "derecha": "tormentosa"
+        }
+      ],
+      "explicacion_es": "Todos estos describen cómo es algo: son adjetivos."
+    },
+    {
+      "id": "sp24",
+      "subtema": "mix",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«The strong girl rolled the lightning.» What is the SUBJECT?",
+      "pregunta_es": "«La niña fuerte hizo rodar el relámpago.» ¿Cuál es el SUJETO?",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "The strong girl",
+        "rolled the lightning",
+        "strong"
+      ],
+      "correcta": "The strong girl",
+      "explicacion_es": "¿Quién lo hizo? 👉 The strong girl. ¡Ojo! «strong» está dentro del sujeto y es un adjetivo."
+    },
+    {
+      "id": "sp25",
+      "subtema": "mix",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«The strong girl rolled the lightning.» Which word is the ADJECTIVE?",
+      "pregunta_es": "«La niña fuerte hizo rodar el relámpago.» ¿Cuál es el ADJETIVO?",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "strong",
+        "girl",
+        "rolled",
+        "lightning"
+      ],
+      "correcta": "strong",
+      "explicacion_es": "¿Cómo es la niña? 👉 strong (fuerte)."
+    },
+    {
+      "id": "sp26",
+      "subtema": "mix",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which one is a complete sentence (subject + predicate)?",
+      "pregunta_es": "¿Cuál es una oración completa (sujeto + predicado)?",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "Rose talked.",
+        "The small town.",
+        "Sang a lullaby."
+      ],
+      "correcta": "Rose talked.",
+      "explicacion_es": "Una oración completa necesita quién (Rose) y qué hace (talked). Las otras están incompletas."
+    },
+    {
+      "id": "sp27",
+      "subtema": "mix",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "«Sang a lullaby.» is a complete sentence.",
+      "pregunta_es": "«Cantó una canción de cuna.» es una oración completa.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso. Falta el sujeto: ¿QUIÉN cantó? Por ejemplo: «Her ma sang a lullaby.»"
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "subject",
+      "es": "sujeto",
+      "aceptadas": [
+        "el sujeto"
+      ],
+      "ejemplo_en": "Rose is the subject.",
+      "ejemplo_es": "Se dice SÁB-yect."
+    },
+    {
+      "en": "predicate",
+      "es": "predicado",
+      "aceptadas": [
+        "el predicado"
+      ],
+      "ejemplo_en": "«Lived in a town» is the predicate.",
+      "ejemplo_es": "Se dice PRÉ-di-quet."
+    },
+    {
+      "en": "adjective",
+      "es": "adjetivo",
+      "aceptadas": [
+        "el adjetivo"
+      ],
+      "ejemplo_en": "«Small» is an adjective.",
+      "ejemplo_es": "Se dice Á-yec-tiv."
+    },
+    {
+      "en": "sentence",
+      "es": "oración",
+      "aceptadas": [
+        "oracion",
+        "frase"
+      ],
+      "ejemplo_en": "Rose talked. It is a sentence.",
+      "ejemplo_es": "Se dice SÉN-tens."
+    },
+    {
+      "en": "noun",
+      "es": "sustantivo",
+      "aceptadas": [
+        "nombre"
+      ],
+      "ejemplo_en": "«Town» is a noun.",
+      "ejemplo_es": "Se dice NÁUN."
+    },
+    {
+      "en": "verb",
+      "es": "verbo",
+      "aceptadas": [
+        "acción",
+        "accion"
+      ],
+      "ejemplo_en": "«Talked» is a verb.",
+      "ejemplo_es": "Se dice VERB."
+    },
+    {
+      "en": "small",
+      "es": "pequeño",
+      "aceptadas": [
+        "pequeno",
+        "chiquito"
+      ],
+      "ejemplo_en": "a small town",
+      "ejemplo_es": "un pueblo pequeño"
+    },
+    {
+      "en": "stormy",
+      "es": "tormentosa",
+      "aceptadas": [
+        "tormentoso",
+        "de tormenta"
+      ],
+      "ejemplo_en": "a stormy night",
+      "ejemplo_es": "una noche de tormenta"
+    },
+    {
+      "en": "strong",
+      "es": "fuerte",
+      "aceptadas": [],
+      "ejemplo_en": "Rose is strong.",
+      "ejemplo_es": "Rose es fuerte."
+    },
+    {
+      "en": "lightning",
+      "es": "relámpago",
+      "aceptadas": [
+        "relampago",
+        "rayo"
+      ],
+      "ejemplo_en": "She rolled the lightning.",
+      "ejemplo_es": "Se dice LÁIT-ning."
+    }
+  ]
+}
