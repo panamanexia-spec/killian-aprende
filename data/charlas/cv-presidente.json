@@ -1,0 +1,65 @@
+{
+  "tipo": "charla",
+  "id": "cv-presidente",
+  "titulo": "Our President: José Raúl Mulino",
+  "materia": "Culture and Value",
+  "idioma": "en",
+  "fecha_entrega": "2026-10-30",
+  "version": 1,
+  "frases": [
+    {
+      "texto": "Good morning! My name is Killian.",
+      "es": "👋 ¡Buenos días! Me llamo Killian.",
+      "pista": "👋",
+      "gesto": "Saluda con la mano"
+    },
+    {
+      "texto": "Our president is José Raúl Mulino.",
+      "es": "🇵🇦 Nuestro presidente es José Raúl Mulino.",
+      "pista": "🇵🇦",
+      "gesto": "Señala la foto del póster"
+    },
+    {
+      "texto": "He is the president of Panama.",
+      "es": "🏛️ Es el presidente de Panamá.",
+      "pista": "🏛️",
+      "gesto": "Pon la mano en el corazón"
+    },
+    {
+      "texto": "He was born in David, Chiriquí, in 1959.",
+      "es": "🎂 Nació en David, Chiriquí, en 1959.",
+      "pista": "🎂",
+      "gesto": "Señala Chiriquí en el mapa (oeste)"
+    },
+    {
+      "texto": "He is a lawyer.",
+      "es": "⚖️ Es abogado (LÓ-ier).",
+      "pista": "⚖️",
+      "gesto": "Haz como que firmas un papel"
+    },
+    {
+      "texto": "He became president on July 1, 2024.",
+      "es": "📅 Empezó a ser presidente el 1 de julio de 2024.",
+      "pista": "📅",
+      "gesto": "Levanta un dedo: 1 de julio"
+    },
+    {
+      "texto": "He will be president until 2029.",
+      "es": "⏳ Será presidente hasta 2029.",
+      "pista": "⏳",
+      "gesto": "Señala hacia adelante"
+    },
+    {
+      "texto": "A good leader listens to the people and is honest.",
+      "es": "👂 Un buen líder escucha a la gente y es honesto.",
+      "pista": "👂",
+      "gesto": "Señala tu oreja"
+    },
+    {
+      "texto": "Thank you!",
+      "es": "🙏 ¡Gracias!",
+      "pista": "🙏",
+      "gesto": "Sonríe y haz una pequeña reverencia"
+    }
+  ]
+}
