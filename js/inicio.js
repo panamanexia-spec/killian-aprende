@@ -73,14 +73,21 @@ function autoItems(){
   ag0.tareas.forEach(function(x){ if(x.tema) owned[x.tema] = 1; });
   allTemas().forEach(function(tm){
     var E = tm.fecha_examen; if(!E || !isDate(E) || E < t || owned[tm.id]) return;
-    var cur = null;   /* un solo pendiente por tema: el del día que toca */
-    [3, 2, 1].forEach(function(n){
-      var d = prevSchoolDay(E, n); if(d > t) return;
-      var rep = n === 1 && wrongIdsOf(tm.id).length > 0, nm = tm.titulo_es || tm.titulo;
-      cur = ({kind:"task", id:"ex:" + tm.id + ":" + d, sort:E + "0" + d, x:{id:"ex:" + tm.id + ":" + d, materia:tm.materia || "", fecha:d, entrega:E, auto:"ex", tema:tm.id, modo:rep ? "repasar" : "estudiar",
-        titulo:rep ? "🔁 Repasar mis errores de " + nm : "📚 Estudiar: " + nm + " – hacer examen de práctica"}});
-    });
-    if(cur) out.push(cur);
+    /* plan antes del examen: 4 y 3 días antes → Entrenar; 2 días antes → Examen real; el día anterior → Repasar mis errores + Examen real */
+    var nm = tm.titulo_es || tm.titulo, cur = null;
+    [4, 3, 2, 1].forEach(function(n){ var d = prevSchoolDay(E, n); if(d <= t) cur = {n:n, d:d}; });
+    if(!cur) return;
+    if(aprTs(tm.id) && pkey(new Date(aprTs(tm.id))) >= prevSchoolDay(E, 4)) return;   /* ya sacó 80+ en el examen real: no se le insiste */
+    var mk = function(modo, titulo){
+      var id = "ex:" + tm.id + ":" + cur.d + ":" + modo;
+      out.push({kind:"task", id:id, sort:E + "0" + cur.d + modo, x:{id:id, materia:tm.materia || "", fecha:cur.d, entrega:E, auto:"ex", tema:tm.id, modo:modo, titulo:titulo}});
+    };
+    if(cur.n >= 3) mk("entrenar", "🏋️ Entrenar: " + nm);
+    else if(cur.n === 2) mk("real", "📝 Examen real: " + nm);
+    else {
+      if(wrongIdsOf(tm.id).length > 0) mk("repasar", "🔁 Repasar mis errores de " + nm);
+      mk("real", "📝 Examen real: " + nm);
+    }
   });
   S.charlas.forEach(function(c){
     var E = c.fecha; if(!E || !isDate(E) || E < t) return;
@@ -95,16 +102,22 @@ function autoItems(){
   return out;
 }
 /* Al terminar una ronda de examen o una práctica de charla, esos pendientes se marcan hechos. */
-function markAutoDone(kind, id){
+function markAutoDone(kind, id, how){
   var H = S.home, ch = false, t = todayKey();
+  var allowed = how === "real" ? ["entrenar", "real"] : how === "train" ? ["entrenar"] : how === "repasar" ? ["repasar"] : [];
   autoItems().forEach(function(it){
     var x = it.x; if(x.auto !== kind || (kind === "ex" ? x.tema : x.charla) !== id || H.tasks[it.id]) return;
+    if(kind === "ex" && allowed.indexOf(x.modo) < 0) return;
     H.tasks[it.id] = Date.now(); ch = true;
   });
-  /* también las tareas de la agenda que traen ese tema (o esa charla) y ya tocan: practicar = hecha (quedan en el registro) */
+  /* también las tareas de la agenda que traen ese tema (o esa charla) y ya tocan (o se adelantan): ronda completa = hecha (quedan en el registro) */
   agendaData().tareas.forEach(function(x){
     if(x.copiar || H.tasks[x.id] || x.fecha > addDays(t, ADV_DAYS)) return;
-    if((kind === "ex" && x.tema === id) || (kind === "ch" && x.charla === id)){ H.tasks[x.id] = Date.now(); noteAdv(x); ch = true; }
+    if(kind === "ex" && x.tema === id){
+      var rep = /repasar/i.test(x.titulo || "");
+      if(rep ? how !== "repasar" : (how !== "real" && how !== "train")) return;
+      H.tasks[x.id] = Date.now(); noteAdv(x); ch = true;
+    } else if(kind === "ch" && x.charla === id){ H.tasks[x.id] = Date.now(); noteAdv(x); ch = true; }
   });
   if(ch) saveHome();
 }
@@ -307,7 +320,9 @@ function taskCard(it){
   if(tmx && tmx.resumen && tmx.resumen.length) acts += '<button class="btn btn-blue" type="button" data-act="study" data-id="'+esc(tmx.id)+'">📖 Estudiar mi resumen</button>';
   if(tmx){
     var rep = x.modo === "repasar" || (!x.auto && /repasar/i.test(x.titulo || "") && wrongIdsOf(tmx.id).length > 0);
-    acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="'+(rep ? "errors" : "")+'">'+(rep ? "🔁 Repasar mis errores" : "📝 Practicar examen")+'</button>';
+    if(rep) acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="errors">🔁 Repasar mis errores</button>';
+    if(x.modo !== "real") acts += '<button class="btn btn-blue" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="">🏋️ Entrenar</button>';
+    if(x.modo !== "entrenar") acts += '<button class="btn btn-sun" type="button" data-act="x-quick" data-id="'+esc(x.tema)+'" data-m="real">📝 Examen real</button>';
   }
   if(it.kind === "task" && x.accion === "examen") acts += '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="overunder">📝 Abrir el examen</button>';
   if(!hasCp) acts += '<button class="btn btn-sun" type="button" data-act="done" data-k="'+it.kind+'" data-id="'+esc(it.id)+'">'+(isVid ? "¡Ya lo vi! ✓" : "¡Ya lo hice! ✓")+'</button>';

@@ -217,6 +217,12 @@ function renderProgress(){
       }).join("");
   }
   h += '</section>';
+  /* notas del colegio vs examen real */
+  var sl = schList();
+  h += '<section class="card mom"><h2 class="sec-title">🏫 Colegio vs 📝 Examen real</h2>' + (sl.length ? sl.map(function(x){
+    var br = x.tid ? bestReal(x.tid) : -1, n = x.tid ? realCount(x.tid) : 0;
+    return '<p class="wordrow"><span><b>' + esc(schTitle(x)) + '</b><br><span class="small">' + esc(capFirst(dayLabel(x.fecha))) + '</span></span><span>🏫 <b>' + x.nota + '</b> · 📝 ' + (br >= 0 ? '<b>' + br + '</b> (' + n + (n === 1 ? ' examen' : ' exámenes') + ')' : 'sin examen real') + '</span></p>';
+  }).join("") : '<p class="small">Anota las notas del colegio en Zona de mamá → Notas del colegio.</p>') + '</section>';
   /* deficiencias */
   h += '<section class="card mom"><h2 class="sec-title">🎯 Dónde le cuesta más</h2>';
   var subFail = R.subtemas.filter(function(s){ return s.falladas > 0; });
@@ -253,6 +259,7 @@ function reportText(R){
   L.push("");
   L.push("## Notas por tema (puntos sobre 100, en orden de intento)");
   if(!R.temas.length) L.push("- Sin exámenes todavía.");
+  schList().forEach(function(x){ L.push("- Colegio: " + schTitle(x) + " (" + x.fecha + "): " + x.nota + " · mejor examen real en la página: " + (x.tid && bestReal(x.tid) >= 0 ? bestReal(x.tid) : "sin examen real")); });
   R.temas.forEach(function(x){ L.push("- " + x.tema + " (" + x.materia + "): " + x.notas.join(" → ") + (x.fecha_examen ? " · examen " + x.fecha_examen : "")); });
   L.push("");
   L.push("## Subtemas con más fallas");

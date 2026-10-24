@@ -152,8 +152,20 @@ function validateTema(o){
       if(!q.respuesta) E.push(n + ": falta la «respuesta».");
       if(q.pregunta_en.indexOf("___") < 0) W.push(n + ": la frase no tiene el hueco ______.");
     }
+    var im = str(p.imagen);
+    if(im){
+      if(/^[A-Za-z0-9_.-]+\.(png|jpe?g|webp|gif)$/i.test(im)) q.imagen = im;
+      else E.push(n + ": «imagen» debe ser solo el nombre del archivo (png, jpg, webp o gif), sin carpetas ni espacios.");
+    }
     t.preguntas.push(q);
   });
+  /* examen_oficial: lista de ids de preguntas que forman el examen completo */
+  if(Array.isArray(o.examen_oficial) && o.examen_oficial.length){
+    var okIds = {}; t.preguntas.forEach(function(q){ okIds[q.id] = 1; });
+    var eo = o.examen_oficial.map(str).filter(function(id){ return okIds[id]; });
+    if(eo.length < o.examen_oficial.length) W.push("«examen_oficial» nombra preguntas que no existen; se ignoraron.");
+    if(eo.length) t.examen_oficial = eo;
+  }
   (Array.isArray(o.vocabulario) ? o.vocabulario : []).forEach(function(v, i){
     if(!v || !str(v.en) || !str(v.es)){ E.push("Palabra " + (i + 1) + ": necesita «en» y «es»."); return; }
     t.vocabulario.push({en:str(v.en), es:str(v.es), aceptadas:(Array.isArray(v.aceptadas) ? v.aceptadas : []).map(str).filter(Boolean),
@@ -236,6 +248,8 @@ function renderMom(){
     case "voces": return renderVoces();
     case "paracopiar": return renderParaCopiar();
     case "registro": return renderRegistro();
+    case "colegio": return renderColegio();
+    case "salud": return renderSalud();
     default: return renderMomMenu();
   }
 }
@@ -339,6 +353,62 @@ function renderParaCopiar(){
   if(fin.length) h += '<h2 class="sec-title nday">✅ Ya hechas</h2>' + fin.map(card).join("");
   return h + footer();
 }
+/* ---- Salud de la página: revisa que todo esté enlazado y que no haya errores guardados en este aparato ---- */
+function renderSalud(){
+  var h = momHeader("Salud de la página", "mom-go", "← Zona de mamá"), ag = (S.agenda && S.agenda.tareas) || [], probs = [], okTema = {}, okCh = {};
+  allTemas().forEach(function(t){ okTema[t.id] = 1; }); S.charlas.forEach(function(c){ okCh[c.id] = 1; });
+  ag.forEach(function(x){
+    if(x.tema && !okTema[x.tema]) probs.push("La tarea «" + x.titulo + "» apunta al tema «" + x.tema + "», que todavía no está cargado.");
+    if(x.charla && !okCh[x.charla]) probs.push("La tarea «" + x.titulo + "» apunta a la charla «" + x.charla + "», que todavía no está cargada.");
+  });
+  allTemas().forEach(function(t){ if(t.fecha_examen && t.preguntas.length < (t.preguntas_por_ronda || 10)) probs.push("El tema «" + (t.titulo_es || t.titulo) + "» tiene menos preguntas (" + t.preguntas.length + ") que las de un examen real (" + (t.preguntas_por_ronda || 10) + ")."); });
+  var errs = []; try{ errs = JSON.parse(localStorage.getItem("kx-errlog") || "[]"); }catch(e){}
+  h += '<section class="card mom"><p><b>Versión:</b> ' + esc(KX_VERSION) + '<br><b>Semanas de agenda:</b> ' + (S.agenda ? 1 : 0) + ' activa · <b>Tareas:</b> ' + ag.length + ' · <b>Temas:</b> ' + allTemas().length + ' · <b>Charlas:</b> ' + S.charlas.length + '</p></section>';
+  h += '<section class="card mom"><h2 class="sec-title">' + (probs.length ? "⚠️ Cosas por revisar" : "✅ Todo enlazado") + '</h2>' + (probs.length ? probs.map(function(x){ return '<p class="small softlate">' + esc(x) + '</p>'; }).join("") + '<p class="small">Esto no se rompe nada: solo avisa que falta mandar ese tema, esa charla o más preguntas.</p>' : '<p class="small">Las tareas con tema o charla encuentran su contenido.</p>') + '</section>';
+  h += '<section class="card mom"><h2 class="sec-title">' + (errs.length ? "🛠️ Errores guardados en este aparato" : "✅ Sin errores en este aparato") + '</h2>' +
+    errs.slice().reverse().slice(0, 8).map(function(e){ var d = ""; try{ d = new Date(e.t).toLocaleString("es", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone:"America/Panama"}); }catch(x){} return '<p class="small">' + esc(d) + ' · ' + esc(e.m) + '</p>'; }).join("") +
+    (errs.length ? '<button class="btn btn-ghost" type="button" data-act="err-clear">Borrar esta lista</button><p class="small">Si ves errores repetidos, mándaselos a Claude Code.</p>' : '') + '</section>';
+  return h + footer();
+}
+/* ---- Notas reales del colegio: se anotan aquí y se comparan con el mejor «Examen real» ---- */
+var sc = {materia:"", tid:"", titulo:"", fecha:"", nota:"", msg:""};
+function schClean(x){ return String(x == null ? "" : x).replace(/[|\n\r]/g, " ").trim().slice(0, 60); }
+function schList(){
+  var H = S.home, out = [];
+  Object.keys(H.sch || {}).forEach(function(k){
+    if(!(H.sch[k] > 0)) return;
+    var p = k.split("|"); out.push({k:k, tid:p[0], fecha:p[1], nota:+p[2], materia:p[3] || "", titulo:p[4] || ""});
+  });
+  out.sort(function(a, b){ return a.fecha < b.fecha ? 1 : a.fecha > b.fecha ? -1 : 0; });
+  return out;
+}
+function schTitle(x){ var tm = x.tid && temaById(x.tid); return tm ? (tm.titulo_es || tm.titulo) : (x.titulo || x.tid || "Examen"); }
+/* Las dos primeras notas que Adela pidió anotar (una sola vez; si las quita, no vuelven). */
+function seedSchool(){
+  var H = S.home; if(H.schSeed) return;
+  var ts = Date.UTC(2026, 9, 23);
+  H.sch["overunder|2026-10-09|54|English|Prefijos OVER- y UNDER-"] = ts;
+  H.sch["math-perimetro|2026-10-07|20|Math|Perímetro"] = ts;
+  H.schSeed = 1;
+}
+function renderColegio(){
+  var h = momHeader("Notas del colegio", "mom-go", "← Zona de mamá"), L = schList();
+  h += '<section class="card mom"><p>Anota aquí la nota real que sacó Killian en el colegio. En <b>Progreso</b> la verás al lado de su mejor <b>📝 Examen real</b> en la página.</p></section>';
+  h += '<section class="card mom"><h2 class="sec-title">Notas anotadas</h2>' + (L.length ? L.map(function(x){
+    var br = x.tid ? bestReal(x.tid) : -1;
+    return '<div class="nrow"><p><b>' + esc(schTitle(x)) + '</b><br><span class="small">' + esc(x.materia) + ' · ' + esc(capFirst(dayLabel(x.fecha))) + '</span><br>🏫 Colegio: <b>' + x.nota + '</b> · 📝 Mejor examen real: <b>' + (br >= 0 ? br : "—") + '</b></p>' +
+      '<button class="link-btn del" type="button" data-act="sc-del" data-id="' + esc(x.k) + '">🗑 Quitar</button></div>';
+  }).join("") : '<p class="small">Todavía no hay notas anotadas.</p>') + '</section>';
+  var opts = '<option value="">(otro tema: escríbelo abajo)</option>' + allTemas().map(function(t){ return '<option value="' + esc(t.id) + '"' + (sc.tid === t.id ? " selected" : "") + '>' + esc(t.titulo_es || t.titulo) + '</option>'; }).join("");
+  h += '<section class="card mom"><h2 class="sec-title">+ Anotar una nota</h2>' + (sc.msg ? '<p class="err" role="alert">' + esc(sc.msg) + '</p>' : '') +
+    '<label class="fld" for="sc-materia"><span>Materia</span><input id="sc-materia" value="' + esc(sc.materia) + '"></label>' +
+    '<label class="fld" for="sc-tema"><span>Tema</span><select id="sc-tema">' + opts + '</select></label>' +
+    '<label class="fld" for="sc-titulo"><span>Si no está en la lista, nombre del examen</span><input id="sc-titulo" value="' + esc(sc.titulo) + '"></label>' +
+    '<label class="fld" for="sc-fecha"><span>Fecha del examen</span><input id="sc-fecha" type="date" value="' + esc(sc.fecha) + '"></label>' +
+    '<label class="fld" for="sc-nota"><span>Nota del colegio (0 a 100)</span><input id="sc-nota" type="number" min="0" max="100" inputmode="numeric" value="' + esc(sc.nota) + '"></label>' +
+    '<button class="btn btn-sun btn-big" type="button" data-act="sc-add">Guardar nota</button></section>';
+  return h + footer();
+}
 /* Registro de estudio por día: qué está hecho ✅ y qué falta ⏳, con su mejor puntaje en cada tema. */
 function renderRegistro(){
   var h = momHeader("Registro de estudio", "mom-go", "← Zona de mamá"), t = todayKey(), rows = [], seen = {};
@@ -405,6 +475,8 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="salud"><span class="big">🩺</span>Salud de la página</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="colegio"><span class="big">🏫</span>Notas del colegio</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="registro"><span class="big">✅</span>Registro de estudio</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="paracopiar"><span class="big">📝</span>Para copiar</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
@@ -655,6 +727,16 @@ function extraClick(act, el, ev){
       if(S.agenda){ ["tareas","materiales","videos","notas"].forEach(function(kk){ S.agenda[kk] = (S.agenda[kk] || []).filter(function(x){ return x.semana !== sem; }); }); }
       saveContent(); imp.draft = null; momView = "weeks"; momNote = "Semana borrada."; render({top:true}); return true;
     /* tareas y materiales */
+    case "sc-add":
+      sc = {materia:schClean(val("sc-materia")), tid:val("sc-tema"), titulo:schClean(val("sc-titulo")), fecha:val("sc-fecha"), nota:val("sc-nota"), msg:""};
+      var scn = Math.round(+sc.nota), sct = sc.tid ? (temaById(sc.tid) ? (temaById(sc.tid).titulo_es || temaById(sc.tid).titulo) : sc.tid) : sc.titulo;
+      if(!sct){ sc.msg = "Elige el tema o escribe el nombre del examen."; render(); return true; }
+      if(!isDate(sc.fecha)){ sc.msg = "Pon la fecha del examen."; render(); return true; }
+      if(!(sc.nota !== "" && scn >= 0 && scn <= 100)){ sc.msg = "La nota debe ser un número de 0 a 100."; render(); return true; }
+      S.home.sch[(sc.tid || "x") + "|" + sc.fecha + "|" + scn + "|" + (sc.materia || (temaById(sc.tid) || {}).materia || "") + "|" + (sc.tid && temaById(sc.tid) ? "" : sct)] = Date.now();
+      sc = {materia:"", tid:"", titulo:"", fecha:"", nota:"", msg:""}; saveHome(); momNote = "✅ Nota guardada."; render(); return true;
+    case "err-clear": try{ localStorage.removeItem("kx-errlog"); }catch(e){} render(); return true;
+    case "sc-del": var sk = el.getAttribute("data-id"); if(S.home.sch[sk] > 0){ S.home.sch[sk] = -Date.now(); saveHome(); render(); } return true;
     case "mom-showdone": var sv = el.getAttribute("data-v"); momShowDone[sv] = !momShowDone[sv]; render(); return true;
     case "mom-task-done": markDone("task", el.getAttribute("data-id")); momNote = "✅ Tarea marcada como hecha."; render(); return true;
     case "cp-add": imp.draft.tareas[+el.getAttribute("data-i")].copiar = {instrucciones_mama:"", partes:[{titulo:"1. ", texto:"", traduccion_es:"", dibujo:"", imagen:"", tabla:[]}]}; render(); return true;

@@ -29,6 +29,11 @@ for(const file of process.argv.slice(2)){
     if(pt && pt.imagen && !fs.existsSync(path.join(root, "img/copiar", pt.imagen)) && !fs.existsSync(path.join(path.dirname(path.resolve(file)), pt.imagen)))
       warnings.push("La imagen «" + pt.imagen + "» (tarea " + t.id + ") no está en img/copiar/ ni en el buzón.");
   })));
+  /* las imágenes de preguntas de un tema deben existir en img/temas/ (o junto al archivo, en el buzón) */
+  list.forEach(x => (x.preguntas || []).forEach(q => {
+    if(q && q.imagen && !fs.existsSync(path.join(root, "img/temas", q.imagen)) && !fs.existsSync(path.join(path.dirname(path.resolve(file)), q.imagen)))
+      warnings.push("La imagen «" + q.imagen + "» (pregunta " + q.id + ") no está en img/temas/ ni en el buzón.");
+  }));
   console.log(errors.length ? "✗" : "✓", file, "(" + (o.tipo || (o.agendas ? "agendas" : "?")) + ")");
   errors.forEach(e => console.log("    ERROR:", e)); warnings.forEach(w => console.log("    aviso:", w));
   if(errors.length) bad++;

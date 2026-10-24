@@ -8,9 +8,9 @@ var MAMA = window.KX_MODE === "mama";      /* versión para el celular de mamá:
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv","apr","pxd","adv"], HNUMS = ["best","tries","prac","games","speed"];
-var SIGNED = {have:1, weak:1, ask:1, nchk:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, apr:{}, pxd:{}, adv:{}, best:0, tries:0, prac:0, games:0, speed:0}; }
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv","apr","pxd","adv","sch"], HNUMS = ["best","tries","prac","games","speed","schSeed"];
+var SIGNED = {have:1, weak:1, ask:1, nchk:1, sch:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, apr:{}, pxd:{}, adv:{}, sch:{}, best:0, tries:0, prac:0, games:0, speed:0, schSeed:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
 function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], charlas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}, charlas:{}}}; }
 function normHome(h){
@@ -427,7 +427,12 @@ function loadProjectFiles(){
   }).catch(function(){});
   return Promise.all([pa, pt, pc]).then(function(){ if(changed){ saveContent(); render(); } });
 }
+/* Si algo falla en un aparato, queda anotado (solo en ese aparato) para verlo en Zona de mamá → Salud de la página. */
+function logErr(m){ try{ var a = JSON.parse(localStorage.getItem("kx-errlog") || "[]"); a.push({t:Date.now(), m:String(m).slice(0, 200)}); localStorage.setItem("kx-errlog", JSON.stringify(a.slice(-20))); }catch(e){} }
+window.addEventListener("error", function(e){ logErr((e.message || "error") + " @" + String(e.filename || "").split("/").pop() + ":" + (e.lineno || 0)); });
+window.addEventListener("unhandledrejection", function(e){ logErr("promesa: " + (e.reason && e.reason.message || e.reason)); });
 function boot(){
+  seedSchool();
   if(window.KXSync){
     KXSync.init({onStatus:setSyncStatus, onSignedOut:function(){ render(); },
       onRestored:function(){ render({top:true}); syncNow().then(loadProjectFiles); }}).then(function(){

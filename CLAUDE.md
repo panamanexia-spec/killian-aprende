@@ -22,7 +22,7 @@
 ## Buzón (rutina principal)
 Los archivos los prepara Claude en el chat (proyecto «Killian Aprende») y los deja en `buzon/` de este repositorio.
 Cuando Adela diga **"revisa el buzón"** (o en la revisión diaria), sigue los pasos de `buzon/LEEME.md`:
-validar con `node tools/validar.js`, subir a `data/`, subir `KX_VERSION`, publicar en `main`,
+validar con `node tools/validar.js`, subir a `data/`, correr `node tools/revisar.js` antes de publicar, subir `KX_VERSION`, publicar en `main`,
 mover a `buzon/procesados/` y darle a Adela un resumen de 2–3 líneas de qué verá Killian hoy.
 **Nunca borres nada de `buzon/procesados/`.**
 

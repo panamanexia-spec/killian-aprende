@@ -280,3 +280,12 @@ Cada parte de `copiar.partes` puede traer un campo opcional **`imagen`** con el 
 - Una práctica de examen con **80 % o más** marca sola como hechas las tareas de ese tema (las de la agenda con `"tema"` —«📚 Estudiar…», «🔁 Repasar mis errores»— y las automáticas de `fecha_examen`). Con menos de 80 % no se marca y Killian ve un mensaje de ánimo.
 - Las estrellas completas se ganan la primera vez que aprueba; si repite, **máximo 1 ⭐ extra por día en total**.
 - Para las tareas con `copiar` o con `charla` las reglas son las de antes (botón final / 3 sesiones al día).
+
+## Modo examen real: `imagen` en preguntas y `examen_oficial`
+Cada tema tiene dos botones: **🏋️ Entrenar** (con ayudas: «Ver en español», pistas) y **📝 Examen real** (como en el colegio: sin ayudas, con reloj que cuenta el tiempo usado, sin decir si acertó hasta el final). El ✅ del tema **solo se gana con 80 o más en «Examen real»**.
+- **`preguntas_por_ronda`**: en «Examen real» es el número de preguntas del examen (por ejemplo 20). Pon el mismo número de preguntas que tiene el examen del colegio.
+- **`imagen`** (opcional, en cualquier pregunta): solo el **nombre del archivo** (png, jpg, jpeg, webp o gif, sin carpetas ni espacios). El archivo va en **`img/temas/`** (Claude Code lo copia desde el buzón junto con el tema). La imagen sale grande arriba de la pregunta y también en la corrección. Sirve para figuras de Matemáticas (lados sin número, etc.).
+- **`examen_oficial`** (opcional, en el tema): lista de `id` de preguntas que forman el examen completo. Si existe, el primer «Examen real» usa exactamente esas preguntas.
+- **Nunca en blanco:** si pulsa «TERMINAR» con preguntas vacías, la página le avisa con cariño y lo lleva a la primera vacía; si pulsa otra vez, ya lo deja terminar.
+- **Plan automático** (temas con `fecha_examen` y sin tarea de la agenda que los enlace): 4 y 3 días de clase antes → 🏋️ Entrenar; 2 días antes → 📝 Examen real; el día anterior → 🔁 Repasar mis errores + 📝 Examen real. Las tareas de estudio se marcan hechas al **terminar una ronda completa** (sin preguntas vacías); «Repasar mis errores», al corregir todo lo que falló.
+- **Notas del colegio:** mamá las anota en Zona de mamá → 🏫 Notas del colegio y se comparan con el mejor «Examen real» en Progreso.

@@ -15,6 +15,8 @@ Lo ya subido se mueve a `buzon/procesados/`.
    - **tema** → `data/temas/<id>.json` y se agrega el nombre en `data/temas/index.json`.
    - **charla** → `data/charlas/<id>.json` y se agrega el nombre en `data/charlas/index.json`.
    - Si una charla/tema es para una tarea de la agenda, se enlaza con `"charla": "<id>"` / `"tema": "<id>"` en esa tarea.
-4. Sube `KX_VERSION` en `js/core.js` (por ejemplo «12-oct 8») y publica en `main`.
+   - **imágenes de preguntas de un tema** (`"imagen"` en las preguntas) → `img/temas/`; imágenes de «Para copiar» → `img/copiar/`.
+4. Corre `node tools/revisar.js` (revisa sintaxis, validador, enlaces tema/charla e imágenes); si dice «HAY PROBLEMAS», no publiques y avisa.
+   Sube `KX_VERSION` en `js/core.js` (por ejemplo «12-oct 8») y publica en `main`.
 5. Mueve cada archivo a `buzon/procesados/` y borra el original de `buzon/`.
 6. Resumen corto: qué se subió y qué verá Killian.

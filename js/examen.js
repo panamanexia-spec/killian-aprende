@@ -22,9 +22,12 @@ function lessonsHtml(tid, subs){
 var PASS = 80;
 function aprTs(tid){
   var t = S.home.apr[tid] || 0;
-  if(!t){ var h = tHist(tid); for(var i = 0; i < h.length; i++) if(h[i].score >= PASS){ t = h[i].ts; break; } }
+  if(!t){ var h = tHist(tid); for(var i = 0; i < h.length; i++) if(h[i].score >= PASS && h[i].mode !== "train"){ t = h[i].ts; break; } }
   return t;
 }
+/* Mejor nota en «Examen real» (para compararla con la nota del colegio). */
+function bestReal(tid){ return tHist(tid).reduce(function(m, a){ return a.mode === "real" ? Math.max(m, a.score) : m; }, -1); }
+function realCount(tid){ return tHist(tid).filter(function(a){ return a.mode === "real"; }).length; }
 function aprLine(tid){
   var t = aprTs(tid); if(!t) return "";
   var d = ""; try{ d = new Date(t).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){}
@@ -65,19 +68,19 @@ function chooseQuestions(tema, n){
   bank.sort(function(a, b){ return a.tier - b.tier || a.r - b.r; });
   return shuffle(bank.slice(0, Math.min(n, bank.length)).map(function(x){ return x.q; }));
 }
-function startRound(tid, official, errorsOnly){
+function startRound(tid, official, errorsOnly, mode){
   var tema = temaById(tid); if(!tema) return;
   var h = tHist(tid), round = h.length + 1, qs, usedOfficial = false;
-  var n = tema.preguntas_por_ronda || 10;
-  var wrongQ = errorsOnly ? tema.preguntas.filter(function(q){ return wrongIdsOf(tid).indexOf(q.id) >= 0; }) : [];
+  var n = tema.preguntas_por_ronda || 10, real = mode === "real";
+  var wrongQ = errorsOnly && !real ? tema.preguntas.filter(function(q){ return wrongIdsOf(tid).indexOf(q.id) >= 0; }) : [];
   if(wrongQ.length){ qs = shuffle(wrongQ); }
-  else if(tema.examen_oficial && tema.examen_oficial.length && (official || !h.length)){
+  else if(tema.examen_oficial && tema.examen_oficial.length && (official || real || !h.length)){
     var byId = {}; tema.preguntas.forEach(function(q){ byId[q.id] = q; });
     qs = tema.examen_oficial.map(function(id){ return byId[id]; }).filter(Boolean); usedOfficial = true;
   } else qs = chooseQuestions(tema, n);
   S.ex.cur = {tema:{id:tema.id, idioma:tema.idioma === "es" ? "es" : "en", vocabulario_pregunta_es:tema.vocabulario_pregunta_es || "", materia:tema.materia || "", titulo:tema.titulo, titulo_es:tema.titulo_es || "", vocabulario:tema.vocabulario.slice(0, 60), subtemas:tema.subtemas || []},
-    round:round, official:usedOfficial, qs:qs.map(prepQuestion), idx:0, answers:{}, phase:"q", t0:Date.now(), vocab:null, result:null, at:null};
-  S.tid = tid; S.screen = "exam"; ex.es = {}; ex.sel = null; modal = null; filter = "all";
+    round:round, mode:real ? "real" : "train", errorsOnly:!!(errorsOnly && wrongQ.length), secs:0, warned:false, official:usedOfficial, qs:qs.map(prepQuestion), idx:0, answers:{}, phase:"q", t0:Date.now(), vocab:null, result:null, at:null};
+  S.tid = tid; S.screen = "exam"; ex.es = {}; ex.warn = false; ex.sel = null; modal = null; filter = "all";
   save(); render({top:true});
 }
 
@@ -151,8 +154,10 @@ function renderTema(){
   } else if(c && c.phase === "vocab") main += '<button class="btn btn-sun btn-big" type="button" data-act="x-continue">CONTINUAR (mini vocabulario)</button>';
   else if(c && c.phase === "res") main += '<button class="btn btn-sun btn-big" type="button" data-act="x-continue">VER MIS RESULTADOS</button>';
   var other = S.ex.cur && S.ex.cur.tema.id !== t.id && S.ex.cur.phase !== "res";
-  main += '<button class="btn ' + (main ? "btn-ghost" : "btn-sun btn-big") + '" type="button" data-act="x-start">' + (aprTs(t.id) ? "🔁 Practicar otra vez" : h.length ? "INTENTARLO OTRA VEZ (preguntas nuevas)" : "¡COMENZAR EXAMEN!") + '</button>';
-  if(h.length && t.examen_oficial) main += '<button class="btn btn-ghost" type="button" data-act="x-official">Repetir el examen completo</button>';
+  main += '<button class="btn ' + (main ? "btn-ghost" : "btn-blue btn-big") + '" type="button" data-act="x-start">🏋️ Entrenar</button>' +
+    '<p class="small" style="text-align:center;margin:0">Con ayudas para aprender. ¡Sin presión!</p>' +
+    '<button class="btn ' + (main ? "btn-ghost" : "btn-sun btn-big") + '" type="button" data-act="x-real">📝 Examen real</button>' +
+    '<p class="small" style="text-align:center;margin:0">Como en el colegio: sin ayudas y con reloj. Con 80 o más ganas tu ✅.</p>';
   var hist = h.length ? '<section class="card"><h2 class="sec-title">Mis intentos</h2>' + h.slice().reverse().map(function(a, i){
     var d = ""; try{ d = new Date(a.ts).toLocaleDateString("es", {day:"numeric", month:"short"}); }catch(e){}
     return '<p class="wordrow"><b>' + a.score + ' / 100</b><span>Intento ' + a.n + ' · ' + esc(d) + (a.vocab ? ' · 🔤 ' + a.vocab.ok + '/' + a.vocab.total : '') + '</span></p>';
@@ -163,9 +168,9 @@ function renderTema(){
     '<h1>' + esc(t.titulo_es || t.titulo) + '</h1>' + (t.titulo_es ? '<p class="lead" lang="' + (t.idioma === "es" ? "es" : "en") + '">' + esc(t.titulo) + '</p>' : '') +
     (t.fecha_examen ? '<p class="lead">🗓️ Examen: ' + esc(dayLabel(t.fecha_examen)) + ' (' + esc(relDay(t.fecha_examen)) + ')</p>' : '') +
     '<p class="note">No te preocupes si te equivocas. Este examen te ayudará a aprender.</p>' +
-    '<div class="how"><h2>Instrucciones:</h2><ul><li>Lee cada pregunta con atención.</li><li>Selecciona o escribe tu respuesta.</li>' +
-    (t.idioma === "es" ? "" : '<li>Si no sabes, pulsa «Ver en español» o piensa en el significado de la oración.</li>') +
-    '<li>Cuando termines, pulsa el botón "TERMINAR EXAMEN".</li><li>Después podrás revisar tus errores y aprender de ellos.</li></ul></div>' +
+    '<div class="how"><h2>Instrucciones:</h2><ul><li>Lee cada pregunta con atención.</li><li>Selecciona o escribe tu respuesta.</li><li>🏋️ <b>Entrenar</b> tiene ayudas. 📝 <b>Examen real</b> es como en el colegio: sin ayudas y con reloj.</li>' +
+    (t.idioma === "es" ? "" : '<li>En «Entrenar», si no sabes, pulsa «Ver en español» o piensa en el significado de la oración.</li>') +
+    '<li>Nunca dejes una pregunta en blanco: escribe tu mejor idea 🍀</li><li>Cuando termines, pulsa el botón "TERMINAR EXAMEN".</li><li>Después podrás revisar tus errores y aprender de ellos.</li></ul></div>' +
     '<p>' + statusOf(t.id) + '</p>' + (other ? '<p class="small">Tienes otro examen a medias. Si empiezas este, el otro se cierra.</p>' : '') +
     '<div class="stack">' + main + '</div>' +
     '<div class="stack">' + (t.resumen.length ? '<button class="btn btn-blue" type="button" data-act="study" data-id="' + esc(t.id) + '">📖 Estudiar el resumen</button>' : '') +
@@ -175,6 +180,17 @@ function renderTema(){
 
 /* ---------- el examen, una pregunta por pantalla ---------- */
 function examHeader(){ return subHeader(S.ex.cur.tema.titulo_es || S.ex.cur.tema.titulo, "home", "🏠 Inicio"); }
+function isReal(c){ return !!c && c.mode === "real"; }
+function fmtClock(sec){ sec = Math.max(0, Math.round(sec || 0)); return Math.floor(sec / 60) + ":" + ("0" + (sec % 60)).slice(-2); }
+function qImg(q){ return q.imagen ? '<img class="qimg" src="img/temas/' + esc(q.imagen) + '" alt="Dibujo de la pregunta" loading="lazy">' : ""; }
+/* Reloj del examen real: cuenta el tiempo usado (sin cuenta regresiva), solo mientras está en la pantalla del examen. */
+setInterval(function(){
+  var c = S.ex && S.ex.cur;
+  if(!isReal(c) || c.phase !== "q" || S.screen !== "exam" || document.hidden) return;
+  c.secs = (c.secs || 0) + 1;
+  var e = document.getElementById("xclock"); if(e) e.textContent = "⏱️ " + fmtClock(c.secs);
+  if(c.secs % 15 === 0) save();
+}, 1000);
 function progressHtml(){
   var c = S.ex.cur, total = c.qs.length, ans = c.qs.filter(function(q){ return isAnswered(q, c.answers[q.id]); }).length;
   var dots = c.qs.map(function(q, i){
@@ -208,7 +224,7 @@ function renderQuestionBody(q, a, c){
       '<button type="button" class="opt" lang="' + XL() + '" data-act="x-tf" data-v="true" aria-pressed="' + (a === true) + '"><span class="let">✓</span><span>' + (XL() === "es" ? "Verdadero" : "True") + '</span></button>' +
       '<button type="button" class="opt" lang="' + XL() + '" data-act="x-tf" data-v="false" aria-pressed="' + (a === false) + '"><span class="let">✗</span><span>' + (XL() === "es" ? "Falso" : "False") + '</span></button></div>';
   } else if(q.tipo === "completar"){
-    if(c.round > 1 && q.pista_es) h += '<p class="hint">💡 Pista: ' + esc(q.pista_es) + '</p>';
+    if(c.round > 1 && q.pista_es && !isReal(c)) h += '<p class="hint">💡 Pista: ' + esc(q.pista_es) + '</p>';
     h += '<label for="xans" class="sec-es">' + (esT() ? "Escribe la palabra:" : "Escribe la palabra completa en inglés:") + '</label>' +
       '<input id="xans" class="write" lang="' + XL() + '" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" value="' + esc(a || "") + '" placeholder="Escribe aquí…">';
   } else {
@@ -233,10 +249,14 @@ function renderExam(){
   var c = S.ex.cur;
   if(!c || c.phase !== "q"){ S.screen = "home"; return renderHome(); }
   var q = c.qs[c.idx], last = c.idx === c.qs.length - 1, a = c.answers[q.id];
-  var body = '<span class="chip">' + esc(q.seccion || c.tema.titulo_es || c.tema.titulo) + '</span><p class="sec-es">' + esc(q.instruccion_es || (esT() && q.tipo === "completar" ? "Escribe la palabra que falta." : DEFAULT_INSTR[q.tipo])) + '</p>';
+  var real = isReal(c), miss = c.qs.filter(function(x){ return !isAnswered(x, c.answers[x.id]); }).length;
+  var body = (real ? '<p class="realbar"><span class="chip">📝 Examen real</span><span class="clock" id="xclock" aria-label="Tiempo usado">⏱️ ' + fmtClock(c.secs) + '</span></p>' : '') +
+    (c.warned && miss ? '<p class="blankwarn" role="status">⚪ Te faltan ' + miss + '. ¡Nunca dejes una en blanco! Escribe tu mejor idea 🍀</p>' : '') +
+    '<span class="chip">' + esc(q.seccion || c.tema.titulo_es || c.tema.titulo) + '</span><p class="sec-es">' + esc(q.instruccion_es || (esT() && q.tipo === "completar" ? "Escribe la palabra que falta." : DEFAULT_INSTR[q.tipo])) + '</p>';
   body += '<div class="qrow"><p class="qtext" lang="' + XL() + '">' + blankHtml(q.pregunta_en) + '</p>' + spk(q.pregunta_en, XL()) + '</div>';
   if(q.base_word) body += '<p class="base" lang="' + XL() + '">Base word: <b>' + esc(q.base_word) + '</b></p>';
-  if(q.pregunta_es && !esT()){
+  body += qImg(q);
+  if(q.pregunta_es && !esT() && !real){
     body += ex.es[q.id] ? '<p class="es-box">🇪🇸 ' + blankHtml(q.pregunta_es) + '</p>' :
       '<button type="button" class="link-btn es-btn" data-act="x-es">🇪🇸 Ver en español</button>';
   }
@@ -250,25 +270,28 @@ function renderExam(){
 function xGo(i){ var c = S.ex.cur; c.idx = Math.min(Math.max(i, 0), c.qs.length - 1); ex.sel = null; ex.hint = ""; save(); render({top:true}); }
 function xSet(v){ var c = S.ex.cur, q = c.qs[c.idx]; c.answers[q.id] = v; save(); render(); }
 function xTryFinish(){
-  var c = S.ex.cur, missing = [];
-  c.qs.forEach(function(q, i){ if(!isAnswered(q, c.answers[q.id])) missing.push(i + 1); });
-  if(missing.length){ modal = {type:"unanswered", list:missing, none:missing.length === c.qs.length}; render(); }
-  else xFinish();
+  var c = S.ex.cur, first = -1;
+  c.qs.forEach(function(q, i){ if(first < 0 && !isAnswered(q, c.answers[q.id])) first = i; });
+  if(first >= 0 && !c.warned){ c.warned = true; xGo(first); return; }   /* 1.ª vez: aviso cariñoso y lo lleva a la primera vacía */
+  xFinish();
 }
 function xFinish(){
   var c = S.ex.cur, g = gradeCur(c), r = resultOf(g), H = S.home;
   modal = null;
   var att = {n:c.round, ts:Date.now(), score:r.score, units:[r.units, r.total], wrong:r.wrong, subWrong:r.subWrong,
-    seen:c.qs.map(function(q){ return q.id; }), official:c.official, nq:c.qs.length, vocab:null};
+    seen:c.qs.map(function(q){ return q.id; }), official:c.official, nq:c.qs.length, vocab:null,
+    mode:c.mode === "real" ? "real" : "train", secs:c.secs || 0, full:c.qs.every(function(q){ return isAnswered(q, c.answers[q.id]); })};
   var h = S.ex.hist[c.tema.id] = (S.ex.hist[c.tema.id] || []).concat([att]).slice(-30);
   c.result = {score:r.score, units:r.units, total:r.total, ts:att.ts};
   c.at = att.ts;
   H.tries++; H.best = Math.max(H.best, r.score);
   /* ✅ 80 % o más: la tarea de ese tema queda hecha (agenda y automáticas). Menos de 80 %: no se marca. */
   var tid0 = c.tema.id;
-  var prevApr = !!(H.apr[tid0] || (S.ex.hist[tid0] || []).slice(0, -1).some(function(a){ return a.score >= PASS; }));
-  c.score = r.score; c.passed = r.score >= PASS; c.firstPass = c.passed && !prevApr; c.extra = false;
-  if(c.passed){ if(!H.apr[tid0]) H.apr[tid0] = Date.now(); markAutoDone("ex", tid0); }
+  var real = isReal(c), prevApr = !!(H.apr[tid0] || (S.ex.hist[tid0] || []).slice(0, -1).some(function(a){ return a.score >= PASS && a.mode !== "train"; }));
+  c.score = r.score; c.passed = real && r.score >= PASS; c.fullRound = att.full; c.firstPass = c.passed && !prevApr; c.extra = false;
+  if(c.passed && !H.apr[tid0]) H.apr[tid0] = Date.now();
+  /* tareas de estudio: se marcan al terminar una ronda COMPLETA; «Repasar mis errores», al corregir todo lo que falló */
+  if(att.full) markAutoDone("ex", tid0, c.errorsOnly ? (r.score >= 100 ? "repasar" : "") : real ? "real" : "train");
   /* repetir después de aprobar: como mucho 1 ⭐ extra POR DÍA en total (si de verdad practicó: 50 % o más) */
   if(prevApr && r.score >= 50){ var tk0 = todayKey(), got = Object.keys(H.pxd).some(function(k){ return k.slice(-tk0.length - 1) === "|" + tk0; }); if(!got){ H.pxd[tid0 + "|" + tk0] = 1; c.extra = true; } }
   filter = "all";
@@ -367,7 +390,7 @@ function reviewItem(g, i, c){
   if(g.ok) verdicts = ["✅ ¡Muy bien, Killian!", "✅ ¡Correcto! ¡Sigue así!", "✅ ¡Excelente trabajo!"];
   else if(!g.answered) verdicts = ["⚪ Esta se quedó sin responder. ¡Vamos a aprenderla!"];
   else verdicts = ["❌ ¡Casi lo logras!", "❌ Vamos a aprenderlo juntos.", "❌ ¡Buen intento! Mira esto."];
-  var h = '<article class="rv ' + cls + '">' + head + '<p class="rv-q">' + qline + '</p>';
+  var h = '<article class="rv ' + cls + '">' + head + '<p class="rv-q">' + qline + '</p>' + qImg(q);
   if(q.tipo === "unir") h += '<p class="lbl">Tus parejas</p>' + extra;
   else h += '<p class="line"><span class="lbl">Respuesta de Killian</span><br><b lang="' + XL() + '">' + esc(mine) + '</b></p>';
   h += '<p class="verdict">' + verdicts[i % verdicts.length] + '</p>';
@@ -387,7 +410,8 @@ function resActions(c, wrongN, unans){
   var t = temaById(c.tema.id), failed = c.vocab && c.vocab.failed && c.vocab.failed.length;
   var h = '<div class="stack">';
   if(unans > 0) h += '<button class="btn btn-blue btn-big" data-act="x-resume" type="button">SEGUIR RESPONDIENDO (faltan ' + unans + ')</button>';
-  h += '<button class="btn btn-sun btn-big" data-act="x-retry" type="button">' + (wrongN > 0 ? "INTENTARLO OTRA VEZ" : "OTRO INTENTO (preguntas nuevas)") + '</button>';
+  if(!isReal(c)) h += '<button class="btn btn-sun btn-big" data-act="x-real" type="button">📝 HACER EL EXAMEN REAL</button>';
+  h += '<button class="btn ' + (isReal(c) ? "btn-sun btn-big" : "btn-blue") + '" data-act="x-retry" type="button">' + (isReal(c) ? "📝 OTRO EXAMEN REAL" : "🏋️ ENTRENAR OTRA VEZ") + '</button>';
   if(wrongN > 0) h += '<p class="small" style="text-align:center">Te daré preguntas nuevas, con más de lo que más te costó.</p>';
   if(failed) h += '<button class="btn btn-blue" data-act="dict-open" data-id="weak" type="button">🔤 PRACTICAR MIS PALABRAS</button>';
   if(t && t.examen_oficial) h += '<button class="btn btn-ghost" data-act="x-official" type="button">REPETIR TODO EL EXAMEN</button>';
@@ -395,9 +419,11 @@ function resActions(c, wrongN, unans){
   return h;
 }
 function aprMsg(c, r){
+  if(!isReal(c) && r.score >= PASS && !c.extra && !aprTs(c.tema.id)) return '<p class="tryban" role="status"><b>¡Muy bien entrenando! 💪</b><span>Ahora prueba el 📝 Examen real para ganar tu ✅.</span></p>';
+  if(!isReal(c) && r.score >= PASS && !aprTs(c.tema.id)) return '<p class="tryban" role="status"><b>¡Muy bien entrenando! 💪</b><span>Ahora prueba el 📝 Examen real para ganar tu ✅. ⭐ +1 estrella por practicar hoy</span></p>';
   if(c.firstPass) return '<p class="doneban" role="status"><b>✅ ¡Ya lo hiciste!</b><span>Tu tarea quedó marcada. ¡Felicidades, Killian! 🎉</span></p>';
   if(c.passed) return '<p class="doneban" role="status"><b>✅ ¡Otra vez muy bien!</b><span>' + (c.extra ? '⭐ +1 estrella por practicar hoy' : 'Hoy ya ganaste tu estrella por practicar') + '</span></p>';
-  if(!aprTs(c.tema.id)) return '<p class="tryban" role="status"><b>¡Buen esfuerzo! 💪</b><span>Inténtalo otra vez para ganar tu ✅ (necesitas ' + PASS + ' o más).</span></p>';
+  if(!aprTs(c.tema.id)) return '<p class="tryban" role="status"><b>¡Buen esfuerzo! 💪</b><span>Inténtalo otra vez para ganar tu ✅ (necesitas ' + PASS + ' o más en el 📝 Examen real).</span></p>';
   return c.extra ? '<p class="tryban" role="status"><b>¡Gracias por practicar! 🌟</b><span>⭐ +1 estrella por practicar hoy</span></p>' : '';
 }
 function renderResults(){
@@ -415,6 +441,7 @@ function renderResults(){
     (c.vocab.failed.length ? '. Para practicar: <b lang="' + XL() + '">' + esc(c.vocab.failed.join(", ")) + '</b>' : '. ¡Todas bien!') + '</p>' : '';
   return subHeader("Resultados", "go-screen", "← Mis temas") + '<main class="card res"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg>' +
     '<h1>Resultados de Killian</h1><p lang="' + XL() + '" class="small">' + esc(c.tema.titulo) + (c.round > 1 ? ' · Intento ' + c.round : '') + '</p>' +
+    '<p class="small"><b>' + (isReal(c) ? '📝 Examen real · ⏱️ ' + fmtClock(c.secs) : '🏋️ Entrenamiento') + '</b></p>' +
     '<div class="score" aria-label="Puntuación final">' + r.score + ' <small>/ 100</small></div>' +
     '<p class="msg">' + messageFor(r.score, c.tema.titulo_es || c.tema.titulo) + '</p>' + aprMsg(c, r) + good + vbox +
     '<div class="stats"><div class="stat g"><b>' + right + '</b><span>✅ correctas</span></div>' +
@@ -434,9 +461,10 @@ function examClick(act, el, ev){
   switch(act){
     case "open-tema": S.tid = el.getAttribute("data-id"); S.screen = "tema"; helperOpen = false; writeLocal(); render({top:true}); return true;
     case "x-start": startRound(S.tid, false); return true;
-    case "x-quick": startRound(el.getAttribute("data-id"), false, el.getAttribute("data-m") === "errors"); return true;
-    case "x-official": startRound((S.ex.cur && S.screen === "results") ? S.ex.cur.tema.id : S.tid, true); return true;
-    case "x-retry": startRound(S.ex.cur ? S.ex.cur.tema.id : S.tid, false); return true;
+    case "x-quick": var qm = el.getAttribute("data-m"); startRound(el.getAttribute("data-id"), false, qm === "errors", qm === "real" ? "real" : "train"); return true;
+    case "x-real": startRound(S.tid, false, false, "real"); return true;
+    case "x-official": startRound((S.ex.cur && S.screen === "results") ? S.ex.cur.tema.id : S.tid, true, false, S.ex.cur && S.screen === "results" ? S.ex.cur.mode : "train"); return true;
+    case "x-retry": startRound(S.ex.cur ? S.ex.cur.tema.id : S.tid, false, false, S.ex.cur ? S.ex.cur.mode : "train"); return true;
     case "x-continue":
       if(!c) return true;
       S.screen = c.phase === "q" ? "exam" : c.phase === "vocab" ? "vocab" : "results"; filter = "all"; writeLocal(); render({top:true}); return true;

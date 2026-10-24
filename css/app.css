@@ -523,3 +523,8 @@ a.btn{text-decoration:none}
 .card.mom.tdone{opacity:.6; filter:grayscale(.7)}
 .card.mom.tdone h3{text-decoration:line-through}
 .softlate{color:#a15c00; font-weight:700}
+.qimg{display:block; width:100%; max-width:560px; height:auto; margin:10px auto; border-radius:16px; border:3px solid var(--sky-2); background:#fff}
+.realbar{display:flex; justify-content:space-between; align-items:center; gap:10px; margin:0 0 8px}
+.realbar .chip{background:#c23d3d}
+.clock{font-family:var(--font-display); font-weight:800; font-size:1.3rem; color:var(--blue-d); background:#fff; border-radius:999px; padding:2px 14px; box-shadow:0 3px 0 var(--sky-2)}
+.blankwarn{background:#fff7d6; border:3px solid #ffc928; border-radius:16px; padding:10px 14px; margin:0 0 8px; font-weight:800; color:#7a5200}
