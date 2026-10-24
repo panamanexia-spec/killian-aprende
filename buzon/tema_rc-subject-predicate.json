@@ -15,34 +15,39 @@
   ],
   "resumen": [
     {
-      "en": "A sentence has two parts: the subject and the predicate.",
-      "es": "Una oración tiene dos partes: el sujeto (SÁB-yect) y el predicado (PRÉ-di-quet).",
-      "emoji": "✂️"
-    },
-    {
-      "en": "The subject tells WHO.",
-      "es": "El sujeto dice QUIÉN. Ejemplo: Rose.",
+      "en": "The subject tells us who or what the sentence is about.",
+      "es": "El sujeto (SÁB-yect) nos dice QUIÉN o QUÉ es el tema de la oración.",
       "emoji": "🙋"
     },
     {
-      "en": "The predicate tells WHAT the subject DOES.",
-      "es": "El predicado dice QUÉ HACE el sujeto. Ejemplo: lived in a small town.",
+      "en": "The predicate tells us what the subject does or is.",
+      "es": "El predicado (PRÉ-di-quet) nos dice qué HACE o qué ES el sujeto.",
       "emoji": "🏃"
     },
     {
-      "en": "Rose | lived in a small town.",
-      "es": "Rose = sujeto | lived in a small town = predicado.",
-      "emoji": "🏡"
+      "en": "The dog / runs in the park.",
+      "es": "El perro (sujeto) / corre en el parque (predicado).",
+      "emoji": "🐶"
     },
     {
-      "en": "An adjective describes a noun.",
-      "es": "Un adjetivo (Á-yec-tiv) dice CÓMO es algo: small, big, strong, stormy.",
+      "en": "Maria / reads a book.",
+      "es": "María (sujeto) / lee un libro (predicado).",
+      "emoji": "📖"
+    },
+    {
+      "en": "An adjective is a word that describes a person, animal, place, or thing.",
+      "es": "Un adjetivo (Á-yec-tiv) describe a una persona, animal, lugar o cosa.",
       "emoji": "🎨"
     },
     {
-      "en": "She was born on a stormy night.",
-      "es": "«Stormy» es el adjetivo: dice cómo era la noche (tormentosa).",
-      "emoji": "⛈️"
+      "en": "The big dog runs. I have a red ball.",
+      "es": "«big» (grande) y «red» (rojo) son adjetivos.",
+      "emoji": "🔴"
+    },
+    {
+      "en": "Rose / lived in a small town.",
+      "es": "Thunder Rose: Rose = sujeto · lived in a small town = predicado · small = adjetivo.",
+      "emoji": "🌹"
     }
   ],
   "lecciones": [
@@ -808,6 +813,173 @@
       "aceptadas": [],
       "explicacion_es": "¿Cómo era la tormenta? huge (JIUCH) = enorme ⛈️.",
       "pista_es": "enorme"
+    },
+    {
+      "id": "nb1",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The dog runs in the park. → Subject: ______",
+      "pregunta_es": "El perro corre en el parque.",
+      "instruccion_es": "Escribe el SUJETO (¿quién o qué?) de la oración. ✍️",
+      "respuesta": "The dog",
+      "aceptadas": [
+        "the dog",
+        "dog"
+      ],
+      "explicacion_es": "¿Quién corre? The dog. (Es del cuaderno.)",
+      "pista_es": "¿Quién corre?"
+    },
+    {
+      "id": "nb2",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "Maria reads a book. → Subject: ______",
+      "pregunta_es": "María lee un libro.",
+      "instruccion_es": "Escribe el SUJETO (¿quién o qué?) de la oración. ✍️",
+      "respuesta": "Maria",
+      "aceptadas": [
+        "maria",
+        "María"
+      ],
+      "explicacion_es": "¿Quién lee? Maria.",
+      "pista_es": "Un nombre"
+    },
+    {
+      "id": "nb3",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The birds are singing. → Subject: ______",
+      "pregunta_es": "Los pájaros están cantando.",
+      "instruccion_es": "Escribe el SUJETO (¿quién o qué?) de la oración. ✍️",
+      "respuesta": "The birds",
+      "aceptadas": [
+        "the birds",
+        "birds"
+      ],
+      "explicacion_es": "¿Quiénes cantan? The birds.",
+      "pista_es": "¿Quiénes cantan?"
+    },
+    {
+      "id": "nb4",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "My brother | ______. (My brother plays soccer.)",
+      "pregunta_es": "Mi hermano juega fútbol.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace o qué es?) de la oración. ✍️",
+      "respuesta": "plays soccer",
+      "aceptadas": [
+        "plays soccer."
+      ],
+      "explicacion_es": "¿Qué hace mi hermano? plays soccer.",
+      "pista_es": "Empieza con plays"
+    },
+    {
+      "id": "nb5",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "The teacher | ______. (The teacher writes on the board.)",
+      "pregunta_es": "La maestra escribe en la pizarra.",
+      "instruccion_es": "Escribe el PREDICADO (¿qué hace o qué es?) de la oración. ✍️",
+      "respuesta": "writes on the board",
+      "aceptadas": [
+        "writes on the board."
+      ],
+      "explicacion_es": "¿Qué hace la maestra? writes on the board.",
+      "pista_es": "Empieza con writes"
+    },
+    {
+      "id": "nb6",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "I have a red ball. → Adjective: ______",
+      "pregunta_es": "Tengo una pelota roja.",
+      "instruccion_es": "Escribe el ADJETIVO de la oración. ✍️",
+      "respuesta": "red",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo es la pelota? red (roja) 🔴.",
+      "pista_es": "un color"
+    },
+    {
+      "id": "nb7",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "He has a blue backpack. → Adjective: ______",
+      "pregunta_es": "Él tiene una mochila azul.",
+      "instruccion_es": "Escribe el ADJETIVO de la oración. ✍️",
+      "respuesta": "blue",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo es la mochila? blue (azul) 🎒.",
+      "pista_es": "un color"
+    },
+    {
+      "id": "nb8",
+      "subtema": "adjective",
+      "tipo": "completar",
+      "pregunta_en": "The small cat is sleeping. → Adjective: ______",
+      "pregunta_es": "El gato pequeño está durmiendo.",
+      "instruccion_es": "Escribe el ADJETIVO de la oración. ✍️",
+      "respuesta": "small",
+      "aceptadas": [],
+      "explicacion_es": "¿Cómo es el gato? small (pequeño) 🐱.",
+      "pista_es": "pequeño"
+    },
+    {
+      "id": "nb9",
+      "subtema": "predicate",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "The predicate tells us…",
+      "pregunta_es": "El predicado nos dice…",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "what the subject does or is",
+        "who or what the sentence is about",
+        "how something looks",
+        "the name of a place"
+      ],
+      "correcta": "what the subject does or is",
+      "explicacion_es": "Así lo dice tu cuaderno: el predicado dice qué HACE o qué ES el sujeto."
+    },
+    {
+      "id": "nb10",
+      "subtema": "adjective",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "An adjective describes…",
+      "pregunta_es": "Un adjetivo describe…",
+      "instruccion_es": "Lee la oración y elige la respuesta correcta.",
+      "opciones": [
+        "a person, animal, place, or thing",
+        "only actions",
+        "only the subject",
+        "the end of a sentence"
+      ],
+      "correcta": "a person, animal, place, or thing",
+      "explicacion_es": "Así lo dice tu cuaderno: el adjetivo describe a una persona, animal, lugar o cosa."
+    },
+    {
+      "id": "nb11",
+      "subtema": "subject",
+      "tipo": "completar",
+      "pregunta_en": "The subject tells us who or ______ the sentence is about.",
+      "pregunta_es": "El sujeto nos dice quién o ______ es el tema de la oración.",
+      "instruccion_es": "Escribe la palabra que falta. ✍️",
+      "respuesta": "what",
+      "aceptadas": [],
+      "explicacion_es": "Who or what = quién o qué. Es la definición del cuaderno.",
+      "pista_es": "Qué en inglés"
+    },
+    {
+      "id": "nb12",
+      "subtema": "predicate",
+      "tipo": "completar",
+      "pregunta_en": "The predicate tells us what the subject ______ or is.",
+      "pregunta_es": "El predicado nos dice qué ______ o qué es el sujeto.",
+      "instruccion_es": "Escribe la palabra que falta. ✍️",
+      "respuesta": "does",
+      "aceptadas": [
+        "do"
+      ],
+      "explicacion_es": "Does = hace. Es la definición del cuaderno.",
+      "pista_es": "Hace en inglés"
     }
   ],
   "vocabulario": [

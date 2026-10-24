@@ -48,20 +48,6 @@
       "detalle": "Unit 3 Boost up your Knowledge – Topic 3.0 Painters' Chat – Vincent Van Gogh. External: Create an 14 x 17 inch sheet featuring the work of painter Vincent Van Gogh. to learn the talk by heart. Internal: Beginning: gives a talk about the painter. Middle: presents a slide. End: explain the figures. Observations: Bring color pencil. Evaluación: formativa."
     },
     {
-      "id": "w44-t04",
-      "materia": "Español",
-      "titulo": "📖 Leer la novela: Los enigmas del inspector Ramírez",
-      "fecha": "2026-10-24",
-      "entrega": "2026-10-26",
-      "evaluacion": "sumativa",
-      "en_casa": [
-        "Leer la novela con mamá (un capítulo o 15 minutos)",
-        "Al terminar, decir en voz alta: ¿quiénes son los personajes?, ¿dónde pasa?, ¿cuál es el misterio?"
-      ],
-      "detalle": "Formal escrito parte 1 (26/10). Unidad 4 Canadá – Literatura – Novela «Los enigmas del inspector Ramírez». Externas: Lee en casa la novela «Los enigmas del inspector Ramírez» para realizar el formal escrito en clase. Traer folder amarillo, con su gancho, 15 hojas de rayas y hoja de evaluación de análisis literario. Internas: Inicio: participa de lluvia de ideas sobre lo leído en la novela. Nudo: realiza el formal escrito aplicando pasos del análisis literario. Cierre: revisa y entrega, para su evaluación sumativa. Observaciones: LOS ESTUDIANTES DEBEN TENER A MANO LA NOVELA «LOS ENIGMAS DEL INSPECTOR RAMÍREZ» PARA REALIZAR EL (texto cortado en la agenda).",
-      "tema": "es-analisis-literario"
-    },
-    {
       "id": "w44-t05",
       "materia": "Science",
       "titulo": "🔁 Repasar mis errores + 📝 examen real: Life cycle and traits",
@@ -104,21 +90,6 @@
       "detalle": "Ensayo final. Unit 3 Boost up your Knowledge – Topic 3.0 Painters' Chat – Vincent Van Gogh. External: Create an 14 x 17 inch sheet featuring the work of painter Vincent Van Gogh. to learn the talk by heart. Internal: Beginning: gives a talk about the painter. Middle: presents a slide. End: explain the figures. Observations: Bring color pencil. Evaluación: formativa."
     },
     {
-      "id": "w44-t08",
-      "materia": "Español",
-      "titulo": "📖 Leer la novela y preparar el folder amarillo",
-      "fecha": "2026-10-25",
-      "entrega": "2026-10-26",
-      "evaluacion": "sumativa",
-      "en_casa": [
-        "Seguir leyendo la novela",
-        "Preparar el folder amarillo con gancho, 15 hojas de rayas y la hoja de evaluación de análisis literario",
-        "Meter la novela en el bulto"
-      ],
-      "detalle": "Formal escrito parte 1 (26/10). Unidad 4 Canadá – Literatura – Novela «Los enigmas del inspector Ramírez». Externas: Lee en casa la novela «Los enigmas del inspector Ramírez» para realizar el formal escrito en clase. Traer folder amarillo, con su gancho, 15 hojas de rayas y hoja de evaluación de análisis literario. Internas: Inicio: participa de lluvia de ideas sobre lo leído en la novela. Nudo: realiza el formal escrito aplicando pasos del análisis literario. Cierre: revisa y entrega, para su evaluación sumativa. Observaciones: LOS ESTUDIANTES DEBEN TENER A MANO LA NOVELA «LOS ENIGMAS DEL INSPECTOR RAMÍREZ» PARA REALIZAR EL (texto cortado en la agenda).",
-      "tema": "es-analisis-literario"
-    },
-    {
       "id": "w44-t09",
       "materia": "Educación Física",
       "titulo": "🏋️ Entrenar + 📝 examen real: voleibol y estilo dorso",
@@ -150,16 +121,43 @@
     {
       "id": "w44-t11",
       "materia": "Educación Musical",
-      "titulo": "🎼 Trabajo escrito: la regla de la plica (stem)",
-      "fecha": "2026-10-26",
+      "titulo": "🎼 Trabajo de la plica (1/2): portada a la pregunta 5",
+      "fecha": "2026-10-25",
       "entrega": "2026-10-27",
       "evaluacion": "sumativa",
       "en_casa": [
-        "Contestar a mano, en hojas blancas o de raya, las preguntas del cuaderno de música",
-        "Ponerlas en un folder",
-        "Preparar una presentación corta para la clase"
+        "Copiar a mano las partes 1 a 5 en hojas de raya",
+        "Copiar el dibujo de las partes de la figura musical"
       ],
-      "detalle": "Unit 7 Stem Rule – Correct use of the stem in music. External: Complete the assignment by hand, using white or lined paper placed in a folder covering the topic discussed in class and give a short presentation to the class. Internal: Two summative grades will be assigned. The first grade will be for the written assignment, and the second for the presentation. Observations: The questions you need to work on are written in the music notebook. Evaluación: sumativa."
+      "detalle": "Unit 7 Stem Rule – Correct use of the stem in music. External: Complete the assignment by hand, using white or lined paper placed in a folder covering the topic discussed in class and give a short presentation to the class. Internal: Two summative grades will be assigned. The first grade will be for the written assignment, and the second for the presentation. Observations: The questions you need to work on are written in the music notebook. Evaluación: sumativa.",
+      "copiar": {
+        "instrucciones_mama": "Trabajo a mano en hojas blancas o de raya, dentro de un folder. Regla de la plica: debajo de la 3.ª línea → plica arriba a la derecha; en la 3.ª línea o arriba → plica abajo a la izquierda. El PDF «Musica_trabajo_plica_Killian.pdf» tiene todo para imprimir. Partes 1–5 hoy, 6–10 mañana.",
+        "partes": [
+          {
+            "titulo": "1. Hoja de presentación",
+            "texto": "Colegio Internacional Saint George\nEducación Musical\nTrabajo investigativo: La plica musical\nNombre: Killian\nGrado: 3° Euclides\nProfesora: Paola Ferri\nFecha: 27 de octubre de 2026",
+            "dibujo": "Esta va sola en la primera hoja, bien centrada. Puedes adornarla con notas musicales."
+          },
+          {
+            "titulo": "2. Introducción",
+            "texto": "En este trabajo voy a investigar sobre la plica musical. Voy a explicar qué es, para qué sirve, cuáles son las partes de una figura musical y cuándo la plica va hacia arriba o hacia abajo. Así podré escribir y leer la música de forma correcta."
+          },
+          {
+            "titulo": "3. ¿Qué es una plica musical?",
+            "texto": "La plica es la línea recta que sale de la cabeza de algunas figuras musicales. Es como el palito de la nota. La tienen la blanca, la negra, la corchea y la semicorchea. La redonda no tiene plica."
+          },
+          {
+            "titulo": "4. ¿Cuál es la función de la plica?",
+            "texto": "La plica, junto con la cabeza, nos ayuda a saber qué figura es y cuánto tiempo dura el sonido. También ayuda a que la música se vea ordenada y sea fácil de leer."
+          },
+          {
+            "titulo": "5. ¿Cuáles son las partes de la figura musical?",
+            "texto": "La figura musical tiene tres partes:\n1. La cabeza: es el óvalo. Puede ser blanca (vacía) o negra (rellena).\n2. La plica: es la línea recta que sale de la cabeza.\n3. El corchete: es la colita que tienen la corchea y la semicorchea.",
+            "dibujo": "Copia este dibujo y escribe el nombre de cada parte.",
+            "imagen": "dibujo_musica_partes.png"
+          }
+        ]
+      }
     },
     {
       "id": "w44-t12",
@@ -190,6 +188,49 @@
       "detalle": "Plan nuevo «como en el colegio» (por las notas de Over/Under 54 y Perímetro 20). Estudio 1 de 3 para el test del 29/10. Unit 1 Test: Luz Sees the Light (29/10). External: Study from your word bank in your notebook and also from your literary analysis, Luz sees the light. Internal: Beg: reviews the main characters, events, and message of «Luz Sees the Light». Mid: completes the test independently. End: submits the test to the teacher. Textbook, laptop, and school supplies. Evaluación: sumativa y formativa. Antes: 27/10 Oral Reading Comprehension (formativa: predice con el título y dibujos, lee en voz alta y responde preguntas) y 28/10 Literary Elements (sumativa y formativa: setting, characters, problem, solution, theme; escribe un párrafo corto sobre el mensaje)."
     },
     {
+      "id": "w44-t24",
+      "materia": "Educación Musical",
+      "titulo": "🎼 Trabajo de la plica (2/2): preguntas 6 a 10 + presentación",
+      "fecha": "2026-10-26",
+      "entrega": "2026-10-27",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Copiar a mano las partes 6 a 10",
+        "Dibujar el anexo: pentagrama con la regla de la plica",
+        "Meter todo en el folder",
+        "Practicar la presentación corta (1 minuto)"
+      ],
+      "detalle": "Unit 7 Stem Rule – Correct use of the stem in music. External: Complete the assignment by hand, using white or lined paper placed in a folder covering the topic discussed in class and give a short presentation to the class. Internal: Two summative grades will be assigned. The first grade will be for the written assignment, and the second for the presentation. Observations: The questions you need to work on are written in the music notebook. Evaluación: sumativa.",
+      "charla": "mus-plica",
+      "copiar": {
+        "instrucciones_mama": "Segunda parte. Al final, poner todas las hojas en orden dentro del folder: portada, introducción, preguntas, anexos, conclusión.",
+        "partes": [
+          {
+            "titulo": "6. ¿Cuándo escribir la plica arriba?",
+            "texto": "La plica va hacia arriba cuando la nota está debajo de la tercera línea del pentagrama. En ese caso, la plica se dibuja al lado derecho de la cabeza."
+          },
+          {
+            "titulo": "7. ¿Cuándo escribir la plica abajo?",
+            "texto": "La plica va hacia abajo cuando la nota está en la tercera línea o más arriba. En ese caso, la plica se dibuja al lado izquierdo de la cabeza."
+          },
+          {
+            "titulo": "8. ¿Por qué es importante la plica?",
+            "texto": "La plica es importante porque nos dice qué figura es y cuánto dura cada nota. Si la escribimos en el lado correcto, las notas no se salen del pentagrama y la música queda ordenada, bonita y fácil de leer para todos."
+          },
+          {
+            "titulo": "9. Anexos",
+            "texto": "Anexo 1: La regla de la plica",
+            "dibujo": "Dibuja un pentagrama con regla, la clave de sol y las notas como en el dibujo. Pinta de azul las que llevan la plica arriba y de naranja las que la llevan abajo.",
+            "imagen": "dibujo_musica_plica.png"
+          },
+          {
+            "titulo": "10. Conclusión",
+            "texto": "Aprendí que la plica es la línea que sale de la cabeza de la nota y que nos ayuda a saber cuánto dura. También aprendí la regla: debajo de la tercera línea la plica va arriba a la derecha, y en la tercera línea o más arriba va abajo a la izquierda. Ahora puedo escribir mis notas de forma correcta."
+          }
+        ]
+      }
+    },
+    {
       "id": "w44-t14",
       "materia": "Reading and Conversation",
       "titulo": "📝 Examen real: Luz Sees the Light",
@@ -205,29 +246,75 @@
     {
       "id": "w44-t15",
       "materia": "Reading and Composition",
-      "titulo": "📘 Libro pág. 67 (vol. 2): prefijos y sufijos",
+      "titulo": "📘 Libro pág. 67: inter-, intra-, -ty, -ity",
       "fecha": "2026-10-27",
       "entrega": "2026-10-28",
       "evaluacion": "formativa",
-      "tema": "rc-prefixes-suffixes",
       "en_casa": [
         "Seguir trabajando en el libro, página 67 volumen 2: prefix, suffix and affixes"
       ],
-      "detalle": "Unit 2 Prefixes and Suffixes – Class Activity. External: Continue working in your textbook, page 67 volume 2. Prefix, suffix and affixes. Internal: Beg: teacher explains the importance of prefix and suffix. Mid: students apply their knowledge for assigned activity. End: students continue applying into the board. Bring your device, notebook, textbook, school supplies. Evaluación: formativa."
-    },
-    {
-      "id": "w44-t16",
-      "materia": "Español",
-      "titulo": "📖 Terminar de leer la novela",
-      "fecha": "2026-10-27",
-      "entrega": "2026-10-28",
-      "evaluacion": "sumativa",
-      "en_casa": [
-        "Leer en casa la novela para terminar el formal escrito en clase",
-        "Meter la novela en el bulto"
-      ],
-      "detalle": "Formal escrito parte 2 (28/10). Unidad 4 Canadá – Literatura. Externas: Lee en casa la novela «Los enigmas del inspector Ramírez» para terminar el formal escrito en clase. Internas: lluvia de ideas; termina de elaborar el formal escrito aplicando pasos del análisis literario; revisa y entrega, para su evaluación sumativa. Observaciones: LOS ESTUDIANTES DEBEN TENER A MANO LA NOVELA.",
-      "tema": "es-analisis-literario"
+      "detalle": "Unit 2 Prefixes and Suffixes – Class Activity. External: Continue working in your textbook, page 67 volume 2. Prefix, suffix and affixes. Internal: Beg: teacher explains the importance of prefix and suffix. Mid: students apply their knowledge for assigned activity. End: students continue applying into the board. Bring your device, notebook, textbook, school supplies. Evaluación: formativa.",
+      "copiar": {
+        "instrucciones_mama": "Pág. 67 (Module 7, Week 3): Affixes inter-, intra-, -ty, -ity. Cada palabra de la caja se usa una vez. En la 3 también serviría «honesty», pero esa va en la 7 («always tells the truth»).",
+        "partes": [
+          {
+            "titulo": "Pág. 67 – Respuestas",
+            "tabla": [
+              [
+                "#",
+                "Word",
+                "Significa"
+              ],
+              [
+                "1",
+                "sixty",
+                "sesenta"
+              ],
+              [
+                "2",
+                "intramural",
+                "dentro de la misma escuela"
+              ],
+              [
+                "3",
+                "Loyalty",
+                "lealtad"
+              ],
+              [
+                "4",
+                "international",
+                "de otro país"
+              ],
+              [
+                "5",
+                "reality",
+                "de la vida real (reality shows)"
+              ],
+              [
+                "6",
+                "interaction",
+                "relación entre personas"
+              ],
+              [
+                "7",
+                "honesty",
+                "honestidad"
+              ],
+              [
+                "8",
+                "intrastate",
+                "dentro de un mismo estado"
+              ]
+            ],
+            "dibujo": "Escribe cada palabra en su línea del libro."
+          },
+          {
+            "titulo": "Las oraciones completas",
+            "texto": "1. We had a big party for my grandfather when he was sixty.\n2. My brother plays for the intramural football team at his college.\n3. Loyalty is an important part of a friendship.\n4. We have an international student from Spain in our class this year.\n5. My mom enjoys watching reality TV shows after work.\n6. The Study Buddy program at my school promotes an interaction between older and younger students.\n7. Betty is known for her honesty because she always tells the truth.\n8. The intrastate road stopped at the state line.",
+            "traduccion_es": "1. Hicimos una fiesta a mi abuelo cuando cumplió sesenta.\n2. Mi hermano juega en el equipo de fútbol interno de su universidad.\n3. La lealtad es parte importante de la amistad.\n4. Tenemos un estudiante internacional de España.\n5. A mi mamá le gustan los reality shows.\n6. El programa Study Buddy promueve la interacción entre grandes y pequeños.\n7. Betty es conocida por su honestidad porque siempre dice la verdad.\n8. La carretera dentro del estado terminaba en la frontera del estado."
+          }
+        ]
+      }
     },
     {
       "id": "w44-t17",
@@ -289,15 +376,85 @@
     {
       "id": "w44-t21",
       "materia": "Reading and Composition",
-      "titulo": "📘 Libro pág. 74 (vol. 2): prefijos y sufijos",
+      "titulo": "📘 Libro pág. 74: raíces griegas auto y bio",
       "fecha": "2026-10-29",
       "entrega": "2026-10-30",
       "evaluacion": "formativa",
-      "tema": "rc-prefixes-suffixes",
       "en_casa": [
         "Seguir trabajando en el libro, página 74 volumen 2: prefix, suffix and affixes"
       ],
-      "detalle": "Unit 2 Prefixes and Suffixes – Class Activity. External: Continue working in your textbook, page 74 volume 2. Prefix, suffix and affixes. Internal: teacher explains the importance of prefix and suffix; students apply their knowledge; continue on the board. Bring your device, notebook, textbook, school supplies. Evaluación: formativa."
+      "detalle": "Unit 2 Prefixes and Suffixes – Class Activity. External: Continue working in your textbook, page 74 volume 2. Prefix, suffix and affixes. Internal: teacher explains the importance of prefix and suffix; students apply their knowledge; continue on the board. Bring your device, notebook, textbook, school supplies. Evaluación: formativa.",
+      "copiar": {
+        "instrucciones_mama": "Pág. 74 (Module 8): Greek Roots auto (= uno mismo) y bio (= vida). Cada palabra de la caja se usa una vez.",
+        "partes": [
+          {
+            "titulo": "La regla",
+            "texto": "auto = self (uno mismo) 🙋\nbio = life (vida) 🌱",
+            "dibujo": "No hace falta copiarla: es para entender."
+          },
+          {
+            "titulo": "Pág. 74 – Respuestas",
+            "tabla": [
+              [
+                "#",
+                "Word",
+                "Significa"
+              ],
+              [
+                "1",
+                "automobile",
+                "carro (auto-MO-bil)"
+              ],
+              [
+                "2",
+                "biography",
+                "biografía"
+              ],
+              [
+                "3",
+                "automatic",
+                "automático"
+              ],
+              [
+                "4",
+                "biology",
+                "biología"
+              ],
+              [
+                "5",
+                "autobiography",
+                "autobiografía"
+              ],
+              [
+                "6",
+                "autograph",
+                "autógrafo"
+              ],
+              [
+                "7",
+                "biosphere",
+                "biosfera"
+              ],
+              [
+                "8",
+                "autopilot",
+                "piloto automático"
+              ],
+              [
+                "9",
+                "biofuel",
+                "biocombustible"
+              ]
+            ],
+            "dibujo": "Escribe cada palabra en su línea del libro."
+          },
+          {
+            "titulo": "Las oraciones completas",
+            "texto": "1. My dad drove my brother and me to school in his automobile.\n2. I liked reading the biography of George Washington in history class.\n3. New cars have automatic steering that makes the car drive between the lines.\n4. The students dissected a frog in their biology lab.\n5. My writing homework for the week was to write an autobiography about my life.\n6. Marissa was thrilled to get an autograph from her favorite singer at the concert.\n7. Many different kinds of plants and animals live in Earth's biosphere.\n8. The farmer moved as though he was on autopilot as he completed his morning chores in the barn.\n9. Scientists are working to invent an affordable biofuel to reduce the use of fossil fuels like oil.",
+            "traduccion_es": "1. Mi papá nos llevó a la escuela en su carro.\n2. Me gustó leer la biografía de George Washington.\n3. Los carros nuevos tienen dirección automática.\n4. Los estudiantes estudiaron una rana en el laboratorio de biología.\n5. Mi tarea fue escribir una autobiografía sobre mi vida.\n6. Marissa recibió un autógrafo de su cantante favorito.\n7. Muchas plantas y animales viven en la biosfera de la Tierra.\n8. El granjero se movía como en piloto automático.\n9. Los científicos quieren inventar un biocombustible barato."
+          }
+        ]
+      }
     },
     {
       "id": "w44-t22",
@@ -331,12 +488,6 @@
   ],
   "materiales": [
     {
-      "id": "w44-m01",
-      "materia": "Español",
-      "material": "Novela «Los enigmas del inspector Ramírez» + folder amarillo con gancho, 15 hojas de rayas y hoja de evaluación de análisis literario",
-      "llevar_el": "2026-10-26"
-    },
-    {
       "id": "w44-m02",
       "materia": "Artistic Expressions",
       "material": "Hoja de 14 × 17 sobre Van Gogh y lápices de colores",
@@ -353,12 +504,6 @@
       "materia": "Educación Musical",
       "material": "Folder con el trabajo escrito a mano + cuaderno de música",
       "llevar_el": "2026-10-27"
-    },
-    {
-      "id": "w44-m05",
-      "materia": "Español",
-      "material": "Novela «Los enigmas del inspector Ramírez»",
-      "llevar_el": "2026-10-28"
     },
     {
       "id": "w44-m06",
@@ -411,14 +556,13 @@
   ],
   "notas_para_mama": [
     "23/10 🆕 Método nuevo por las notas de Over/Under (54) y Perímetro (20): cada tema tiene rondas de 20 preguntas y casi la mitad son para ESCRIBIR, como en el colegio. Orden: 🏋️ Entrenar (con ayudas) → 📝 Examen real (sin «Ver en español», sin pistas, sin dejar nada en blanco) → el día antes, 🔁 Repasar errores + otro examen real. Meta: 80 o más en el examen real.",
-    "26/10 Sumativa: Science – test de Life cycle and traits. La maestra dice que manda los temas y páginas por Teams: revisar. (La agenda pasada lo tenía el 23/10; preguntar si se movió al lunes.)",
+    "23/10 Español: el formal de la novela «Los enigmas del inspector Ramírez» ya lo terminaron en la escuela (dice mamá). Se quitaron las tareas de lectura.",
+    "26/10 Sumativa: Science – test de Life cycle and traits. La maestra dice que manda los temas y páginas por Teams: revisar. (Entran las mismas páginas de la semana pasada (Experience 1).)",
     "26/10 Sumativa y formativa: Reading and Composition – FORMAL TEST de Thunder Rose: subject, predicate y adjective. Revisar la práctica del cuaderno.",
-    "26/10 Sumativa: Español – formal escrito de la novela «Los enigmas del inspector Ramírez» (parte 1). Llevar novela, folder amarillo con gancho, 15 hojas de rayas y hoja de evaluación de análisis literario.",
     "26/10 Artistic Expressions (formativa): charla de memoria sobre Van Gogh con su hoja de 14 × 17. Llevar lápices de colores.",
     "26/10 Chino: workbook Book B1 págs. 39–42 en clase. Sin información para preparar en casa.",
     "27/10 Sumativa: Educación Física – sumativa escrita de voleibol y estilo dorso.",
     "27/10 Sumativa: Educación Musical – trabajo escrito a mano en folder + presentación corta (son 2 notas). Las preguntas están en el cuaderno de música.",
-    "28/10 Sumativa: Español – termina el formal escrito de la novela (parte 2). Llevar la novela.",
     "28/10 Sumativa y formativa: Reading and Conversation – elementos literarios de «Luz Sees the Light» (en clase).",
     "28/10 Folklore: ensayo del baile de la Feria en el gimnasio; llevar sombrero.",
     "29/10 Sumativa y formativa: Reading and Conversation – TEST de «Luz Sees the Light» (word bank del cuaderno + análisis literario).",
@@ -427,6 +571,8 @@
     "30/10 Sumativa: Culture and Value – presentación oral del póster del equipo sobre su presidente.",
     "30/10 Sumativa: Chino – presentación oral y «formal topic ejercicio» (Lesson 9 Where is the toy). No tenemos el material.",
     "Preguntar a la maestra de Sociales: el tema dice «normas de convivencia» pero «Conocimientos a aprender» dice «actividades económicas de Panamá». ¿Cuál entra en el taller del 29/10?",
-    "Todos los días: libro, cuaderno, cartuchera, dispositivo cargado y cargador."
+    "Todos los días: libro, cuaderno, cartuchera, dispositivo cargado y cargador.",
+    "Educación Física: el formal «Posturas correctas del cuerpo» está listo para imprimir (Formal_Educacion_Fisica_Killian.docx). Falta poner la fecha de entrega.",
+    "Chino: el enlace de la agenda (reurl.cc/5XQky7) abre un mensaje de Microsoft Teams del colegio; hay que verlo con la cuenta de Teams de Killian. Mandar captura del mensaje y fotos del workbook B1 págs. 39–42."
   ]
 }
