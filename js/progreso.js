@@ -29,7 +29,13 @@ document.addEventListener("visibilitychange", function(){ if(document.hidden) us
 
 /* ---------------------------------------------------------------- premios */
 function spentStars(){ var n = 0, r = S.home.redeem; Object.keys(r).forEach(function(k){ n += +r[k] || 0; }); return n; }
-function starsAvail(){ return Math.max(0, starCount() - spentStars()); }
+/* Estrellas que mamá le quitó (ajuste en Zona de mamá). Clave "ts|cantidad|motivo"; valor positivo = quitada, negativo = devuelta. */
+function quitList(){
+  var out = []; Object.keys(S.home.quit || {}).forEach(function(k){ var p = k.split("|"); out.push({k:k, ts:+p[0] || 0, n:+p[1] || 0, why:p.slice(2).join("|"), on:S.home.quit[k] > 0}); });
+  return out.sort(function(a, b){ return b.ts - a.ts; });
+}
+function quitStars(){ return quitList().reduce(function(n, x){ return n + (x.on ? x.n : 0); }, 0); }
+function starsAvail(){ return Math.max(0, starCount() - spentStars() - quitStars()); }
 function prizeList(){ return S.prizes || []; }
 function renderPrizesKid(){
   var list = prizeList(), av = starsAvail();

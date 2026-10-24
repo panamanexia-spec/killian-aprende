@@ -250,6 +250,7 @@ function renderMom(){
     case "registro": return renderRegistro();
     case "colegio": return renderColegio();
     case "salud": return renderSalud();
+    case "estrellas": return renderEstrellasMom();
     default: return renderMomMenu();
   }
 }
@@ -352,6 +353,33 @@ function renderParaCopiar(){
   h += up.map(card).join("") + rest.map(card).join("");
   if(fin.length) h += '<h2 class="sec-title nday">✅ Ya hechas</h2>' + fin.map(card).join("");
   return h + footer();
+}
+/* ---- Ajustar estrellas: mamá puede quitarle estrellas (y devolverlas si fue un error) ---- */
+var qf = {n:"", why:""};
+function renderEstrellasMom(){
+  var h = momHeader("Ajustar estrellas", "mom-go", "← Zona de mamá"), L = quitList();
+  h += (momNote ? '<p class="good-note">' + esc(momNote) + '</p>' : '') +
+    '<section class="card mom"><div class="score" style="text-align:center">⭐ ' + starsAvail() + '</div><p class="small" style="text-align:center">Estrellas que tiene ahora. Ganó ' + starCount() + ' en total' + (spentStars() ? ', canjeó ' + spentStars() : '') + (quitStars() ? ' y le quitaste ' + quitStars() : '') + '.</p></section>' +
+    '<section class="card mom"><h2 class="sec-title">Quitar estrellas</h2><p class="small">Para que sus estrellas reflejen cómo le va en los exámenes del colegio. Killian no ve ningún mensaje feo: solo ve su total.</p>' +
+    '<div class="stack"><button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="1">− 1 ⭐</button><button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="3">− 3 ⭐</button>' +
+    '<button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="5">− 5 ⭐</button><button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="10">− 10 ⭐</button></div>' +
+    (qf.msg ? '<p class="err" role="alert">' + esc(qf.msg) + '</p>' : '') +
+    '<label class="fld" for="qs-n"><span>O escribe otra cantidad</span><input id="qs-n" type="number" min="1" max="500" inputmode="numeric" value="' + esc(qf.n) + '"></label>' +
+    '<label class="fld" for="qs-why"><span>Motivo (opcional, solo lo ves tú)</span><input id="qs-why" value="' + esc(qf.why) + '" placeholder="Ej.: nota del examen de Perímetro"></label>' +
+    '<button class="btn btn-sun btn-big" type="button" data-act="qs-custom">Quitar esa cantidad</button></section>' +
+    '<section class="card mom"><h2 class="sec-title">Historial de ajustes</h2>' + (L.length ? L.map(function(x){
+      var d = ""; try{ d = new Date(x.ts).toLocaleDateString("es", {day:"numeric", month:"short", timeZone:"America/Panama"}); }catch(e){}
+      return '<div class="nrow' + (x.on ? '' : ' done') + '"><p><b>' + (x.on ? '− ' : '(devuelta) − ') + x.n + ' ⭐</b> · ' + esc(d) + (x.why ? '<br><span class="small">' + esc(x.why) + '</span>' : '') + '</p>' +
+        '<button class="link-btn" type="button" data-act="qs-undo" data-id="' + esc(x.k) + '">' + (x.on ? '↩️ Devolver' : '🔁 Quitar otra vez') + '</button></div>';
+    }).join("") : '<p class="small">Todavía no has quitado estrellas.</p>') + '</section>';
+  return h + footer();
+}
+function quitAdd(n){
+  n = Math.round(+n);
+  if(!(n >= 1 && n <= 500)){ qf.msg = "Escribe un número de 1 a 500."; render(); return; }
+  var why = String(val("qs-why") || qf.why || "").replace(/[|\n\r]/g, " ").trim().slice(0, 60);
+  S.home.quit[Date.now() + "|" + n + "|" + why] = Date.now(); qf = {n:"", why:"", msg:""};
+  saveHome(); momNote = "✅ Le quitaste " + n + (n === 1 ? " estrella." : " estrellas."); render();
 }
 /* ---- Salud de la página: revisa que todo esté enlazado y que no haya errores guardados en este aparato ---- */
 function renderSalud(){
@@ -475,6 +503,7 @@ function renderMomMenu(){
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="estrellas"><span class="big">⭐</span>Ajustar estrellas</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="salud"><span class="big">🩺</span>Salud de la página</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="colegio"><span class="big">🏫</span>Notas del colegio</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="registro"><span class="big">✅</span>Registro de estudio</button>' +
@@ -735,6 +764,9 @@ function extraClick(act, el, ev){
       if(!(sc.nota !== "" && scn >= 0 && scn <= 100)){ sc.msg = "La nota debe ser un número de 0 a 100."; render(); return true; }
       S.home.sch[(sc.tid || "x") + "|" + sc.fecha + "|" + scn + "|" + (sc.materia || (temaById(sc.tid) || {}).materia || "") + "|" + (sc.tid && temaById(sc.tid) ? "" : sct)] = Date.now();
       sc = {materia:"", tid:"", titulo:"", fecha:"", nota:"", msg:""}; saveHome(); momNote = "✅ Nota guardada."; render(); return true;
+    case "qs-quick": qf.why = val("qs-why"); quitAdd(el.getAttribute("data-n")); return true;
+    case "qs-custom": qf.why = val("qs-why"); quitAdd(val("qs-n")); return true;
+    case "qs-undo": var qk = el.getAttribute("data-id"); if(S.home.quit[qk] != null){ S.home.quit[qk] = S.home.quit[qk] > 0 ? -Date.now() : Date.now(); saveHome(); momNote = "✅ Listo."; render(); } return true;
     case "err-clear": try{ localStorage.removeItem("kx-errlog"); }catch(e){} render(); return true;
     case "sc-del": var sk = el.getAttribute("data-id"); if(S.home.sch[sk] > 0){ S.home.sch[sk] = -Date.now(); saveHome(); render(); } return true;
     case "mom-showdone": var sv = el.getAttribute("data-v"); momShowDone[sv] = !momShowDone[sv]; render(); return true;

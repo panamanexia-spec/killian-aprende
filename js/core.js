@@ -8,9 +8,9 @@ var MAMA = window.KX_MODE === "mama";      /* versión para el celular de mamá:
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv","apr","pxd","adv","sch"], HNUMS = ["best","tries","prac","games","speed","schSeed"];
-var SIGNED = {have:1, weak:1, ask:1, nchk:1, sch:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, apr:{}, pxd:{}, adv:{}, sch:{}, best:0, tries:0, prac:0, games:0, speed:0, schSeed:0}; }
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv","apr","pxd","adv","sch","quit"], HNUMS = ["best","tries","prac","games","speed","schSeed"];
+var SIGNED = {have:1, weak:1, ask:1, nchk:1, sch:1, quit:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, apr:{}, pxd:{}, adv:{}, sch:{}, quit:{}, best:0, tries:0, prac:0, games:0, speed:0, schSeed:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
 function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], charlas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}, charlas:{}}}; }
 function normHome(h){
@@ -377,7 +377,7 @@ function syncNow(){
    Solo se vuelven a aplicar cuando el archivo cambia. */
 function hashText(t){ var h = 5381; for(var i=0;i<t.length;i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0; return String(h >>> 0); }
 function fetchText(url){ return fetch(url, {cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error(url); return r.text(); }); }
-var AGENDA_SCHEMA = "|s3", KX_VERSION = "24-oct 2";
+var AGENDA_SCHEMA = "|s3", KX_VERSION = "24-oct 3";
 function loadProjectFiles(){
   if(window.KXSync && KXSync.enabled && !KXSync.hasSession()) return Promise.resolve();
   var changed = false;
