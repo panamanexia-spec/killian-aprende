@@ -4,58 +4,899 @@
   "materia": "Reading and Conversation",
   "titulo": "Luz Sees the Light",
   "titulo_es": "Luz Sees the Light: elementos literarios",
-  "fecha_examen": "2026-10-21",
-  "preguntas_por_ronda": 10,
-  "subtemas": ["personajes", "lugar", "problema", "solucion", "mensaje", "vocabulario"],
+  "fecha_examen": "2026-10-29",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "personajes",
+    "lugar",
+    "problema",
+    "solucion",
+    "mensaje",
+    "vocabulario"
+  ],
   "resumen": [
-    { "en": "Luz lives in a city neighborhood.", "es": "Luz vive en un barrio de una ciudad. Ahí hay apagones (blackouts).", "emoji": "🏙️" },
-    { "en": "Characters: Luz, Robert, Anika and Gord.", "es": "Personajes: Luz, su amigo nuevo Robert, su amiga Anika y el vecino Gord.", "emoji": "👧🏽" },
-    { "en": "There is an old lot full of garbage.", "es": "Hay un terreno abandonado lleno de basura.", "emoji": "🗑️" },
-    { "en": "Luz wants to turn the lot into a park and a garden.", "es": "Luz quiere convertir el terreno en un parque con huerto para sembrar comida.", "emoji": "🌱" },
-    { "en": "Problem: nobody helps her and her friends laugh.", "es": "Problema: nadie la ayuda, sus amigos se ríen y ella no puede sola. Se siente triste.", "emoji": "😞" },
-    { "en": "Solution: her friends and neighbors help her.", "es": "Solución: Robert y Anika deciden ayudar, hacen carteles y todo el barrio trabaja junto.", "emoji": "🤝" },
-    { "en": "The lot becomes Friendship Park.", "es": "El terreno se convierte en Friendship Park (Parque de la Amistad).", "emoji": "🌻" },
-    { "en": "Message: when we work together, we can do big things.", "es": "Mensaje: cuando trabajamos juntos podemos lograr cosas grandes y ayudar al planeta.", "emoji": "🌎" }
+    {
+      "en": "Luz lives in a city neighborhood.",
+      "es": "Luz vive en un barrio de una ciudad. Ahí hay apagones (blackouts).",
+      "emoji": "🏙️"
+    },
+    {
+      "en": "Characters: Luz, Robert, Anika and Gord.",
+      "es": "Personajes: Luz, su amigo nuevo Robert, su amiga Anika y el vecino Gord.",
+      "emoji": "👧🏽"
+    },
+    {
+      "en": "There is an old lot full of garbage.",
+      "es": "Hay un terreno abandonado lleno de basura.",
+      "emoji": "🗑️"
+    },
+    {
+      "en": "Luz wants to turn the lot into a park and a garden.",
+      "es": "Luz quiere convertir el terreno en un parque con huerto para sembrar comida.",
+      "emoji": "🌱"
+    },
+    {
+      "en": "Problem: nobody helps her and her friends laugh.",
+      "es": "Problema: nadie la ayuda, sus amigos se ríen y ella no puede sola. Se siente triste.",
+      "emoji": "😞"
+    },
+    {
+      "en": "Solution: her friends and neighbors help her.",
+      "es": "Solución: Robert y Anika deciden ayudar, hacen carteles y todo el barrio trabaja junto.",
+      "emoji": "🤝"
+    },
+    {
+      "en": "The lot becomes Friendship Park.",
+      "es": "El terreno se convierte en Friendship Park (Parque de la Amistad).",
+      "emoji": "🌻"
+    },
+    {
+      "en": "Message: when we work together, we can do big things.",
+      "es": "Mensaje: cuando trabajamos juntos podemos lograr cosas grandes y ayudar al planeta.",
+      "emoji": "🌎"
+    }
   ],
   "preguntas": [
-    { "id": "luz1", "subtema": "personajes", "tipo": "opcion_multiple", "pregunta_en": "Who is the main character of the story?", "pregunta_es": "¿Quién es el personaje principal del cuento?", "opciones": ["Luz", "Robert", "Gord"], "correcta": "Luz", "explicacion_es": "Luz es la protagonista: el cuento trata de su idea y de lo que le pasa." },
-    { "id": "luz2", "subtema": "personajes", "tipo": "opcion_multiple", "pregunta_en": "Who is Luz's new friend? He is new in the city.", "pregunta_es": "¿Quién es el amigo nuevo de Luz? Es nuevo en la ciudad.", "opciones": ["Robert", "Gord", "Fofo"], "correcta": "Robert", "explicacion_es": "Robert es el amigo nuevo de Luz, el de los lentes. 👓" },
-    { "id": "luz3", "subtema": "personajes", "tipo": "opcion_multiple", "pregunta_en": "Who is Gord?", "pregunta_es": "¿Quién es Gord?", "opciones": ["Luz's neighbor", "Luz's teacher", "Luz's brother"], "correcta": "Luz's neighbor", "explicacion_es": "Gord es el vecino de Luz. Él dice que hay que prepararse para más apagones." },
-    { "id": "luz4", "subtema": "personajes", "tipo": "unir", "pregunta_en": "Match each character.", "pregunta_es": "Une cada personaje con lo que hace.", "pares": [ { "izquierda": "Luz", "derecha": "quiere hacer un parque" }, { "izquierda": "Robert", "derecha": "le regala unos zapatos" }, { "izquierda": "Anika", "derecha": "su amiga que la ayuda" }, { "izquierda": "Gord", "derecha": "el vecino de los domingos sin carros" } ], "explicacion_es": "Luz tiene la idea; Robert y Anika la ayudan; Gord logra que la calle se cierre los domingos." },
-    { "id": "luz5", "subtema": "lugar", "tipo": "opcion_multiple", "pregunta_en": "Where does the story happen?", "pregunta_es": "¿Dónde pasa el cuento?", "opciones": ["In a city neighborhood", "On a farm", "At the beach"], "correcta": "In a city neighborhood", "explicacion_es": "El lugar (setting) es un barrio de una ciudad." },
-    { "id": "luz6", "subtema": "lugar", "tipo": "opcion_multiple", "pregunta_en": "What is the empty lot like at the beginning?", "pregunta_es": "¿Cómo es el terreno vacío al principio?", "opciones": ["Full of garbage", "Full of flowers", "Full of water"], "correcta": "Full of garbage", "explicacion_es": "Al principio el terreno está abandonado y lleno de basura y llantas viejas. 🗑️" },
-    { "id": "luz7", "subtema": "lugar", "tipo": "verdadero_falso", "pregunta_en": "Luz's neighborhood has blackouts.", "pregunta_es": "En el barrio de Luz hay apagones.", "correcta": true, "explicacion_es": "¡Verdadero! Se va la luz: no hay tele, ni cocina, ni aire acondicionado." },
-    { "id": "luz8", "subtema": "problema", "tipo": "opcion_multiple", "pregunta_en": "What does Luz want to do with the empty lot?", "pregunta_es": "¿Qué quiere hacer Luz con el terreno vacío?", "opciones": ["Turn it into a park and garden", "Build a mall", "Make a parking lot"], "correcta": "Turn it into a park and garden", "explicacion_es": "Luz quiere un parque donde la gente juegue, escuche música y siembre su propia comida." },
-    { "id": "luz9", "subtema": "problema", "tipo": "opcion_multiple", "pregunta_en": "Why does Luz feel sad at the start of her project?", "pregunta_es": "¿Por qué Luz se siente triste al empezar su proyecto?", "opciones": ["Nobody helps her and her friends laugh", "She loses her shoes", "It is raining"], "correcta": "Nobody helps her and her friends laugh", "explicacion_es": "Sus amigos se ríen de la idea, los vecinos no le hacen caso y ella no puede limpiar el terreno sola." },
-    { "id": "luz10", "subtema": "problema", "tipo": "verdadero_falso", "pregunta_en": "Luz can clean the lot all by herself.", "pregunta_es": "Luz puede limpiar el terreno ella sola.", "correcta": false, "explicacion_es": "¡Falso! Lo intenta, pero es muy difícil. Ella dice que no lo puede hacer sola." },
-    { "id": "luz11", "subtema": "problema", "tipo": "verdadero_falso", "pregunta_en": "At first, Anika thinks a farm in the city is a funny idea.", "pregunta_es": "Al principio, Anika cree que una granja en la ciudad es una idea chistosa.", "correcta": true, "explicacion_es": "¡Verdadero! Anika se ríe y dice que ni un tractor cabría en el terreno. 😄" },
-    { "id": "luz12", "subtema": "solucion", "tipo": "opcion_multiple", "pregunta_en": "How is the problem solved?", "pregunta_es": "¿Cómo se resuelve el problema?", "opciones": ["Friends and neighbors work together", "Luz gives up", "Luz moves away"], "correcta": "Friends and neighbors work together", "explicacion_es": "Robert y Anika vuelven para ayudar, y luego todo el barrio trabaja junto." },
-    { "id": "luz13", "subtema": "solucion", "tipo": "opcion_multiple", "pregunta_en": "What do the friends make to tell the neighbors?", "pregunta_es": "¿Qué hacen los amigos para avisarle al barrio?", "opciones": ["Posters", "A video game", "A cake"], "correcta": "Posters", "explicacion_es": "Hacen carteles (posters) y los reparten a amigos y vecinos." },
-    { "id": "luz14", "subtema": "solucion", "tipo": "opcion_multiple", "pregunta_en": "What is the name of the new park?", "pregunta_es": "¿Cómo se llama el parque nuevo?", "opciones": ["Friendship Park", "Garbage Park", "Luz Park"], "correcta": "Friendship Park", "explicacion_es": "Se llama Friendship Park: el Parque de la Amistad. 🌻" },
-    { "id": "luz15", "subtema": "solucion", "tipo": "verdadero_falso", "pregunta_en": "The people use old tires to make planter boxes.", "pregunta_es": "La gente usa llantas viejas para hacer maceteros.", "correcta": true, "explicacion_es": "¡Verdadero! Reutilizan las llantas para sembrar plantas." },
-    { "id": "luz16", "subtema": "solucion", "tipo": "opcion_multiple", "pregunta_en": "What was Gord's idea?", "pregunta_es": "¿Cuál fue la idea de Gord?", "opciones": ["Car-free Sundays", "A big mall", "More cars"], "correcta": "Car-free Sundays", "explicacion_es": "Gord logró que la ciudad cerrara la calle los domingos para caminar sin carros. 🚶" },
-    { "id": "luz17", "subtema": "solucion", "tipo": "opcion_multiple", "pregunta_en": "What gift does Robert give Luz at the end?", "pregunta_es": "¿Qué le regala Robert a Luz al final?", "opciones": ["Shoes he designed", "A bike", "A plant"], "correcta": "Shoes he designed", "explicacion_es": "Robert le regala unos zapatos diseñados por él, para darle las gracias por ser su amiga. 👟" },
-    { "id": "luz18", "subtema": "mensaje", "tipo": "opcion_multiple", "pregunta_en": "What is the message of the story?", "pregunta_es": "¿Cuál es el mensaje del cuento?", "opciones": ["Working together we can do big things", "Never help your neighbors", "Parks are boring"], "correcta": "Working together we can do big things", "explicacion_es": "El mensaje (theme): juntos podemos lograr cosas grandes. 🤝" },
-    { "id": "luz19", "subtema": "mensaje", "tipo": "opcion_multiple", "pregunta_en": "Why will the garden help the planet?", "pregunta_es": "¿Por qué el huerto ayuda al planeta?", "opciones": ["They grow food close to home", "They buy more things", "They use more cars"], "correcta": "They grow food close to home", "explicacion_es": "Si siembran su comida cerca, no hay que traerla de lejos gastando petróleo. 🌎" },
-    { "id": "luz20", "subtema": "mensaje", "tipo": "verdadero_falso", "pregunta_en": "The park helps the community have a place to play and grow food.", "pregunta_es": "El parque le da al barrio un lugar para jugar y sembrar comida.", "correcta": true, "explicacion_es": "¡Verdadero! Y también es un lugar para estar juntos durante los apagones." },
-    { "id": "luz21", "subtema": "mensaje", "tipo": "completar", "pregunta_en": "It was a lot of work, but everyone did a ______.", "pregunta_es": "Fue mucho trabajo, pero todos hicieron una parte.", "respuesta": "part", "aceptadas": ["parte"], "explicacion_es": "Part = parte. Cada uno ayudó un poquito y así lo lograron.", "pista_es": "4 letras: p _ r t" },
-    { "id": "luz22", "subtema": "vocabulario", "tipo": "unir", "pregunta_en": "Match the words.", "pregunta_es": "Une cada palabra con su significado.", "pares": [ { "izquierda": "frequent", "derecha": "que pasa seguido" }, { "izquierda": "sufficient", "derecha": "lo justo que se necesita" }, { "izquierda": "abandoned", "derecha": "abandonado" }, { "izquierda": "permission", "derecha": "permiso" } ], "explicacion_es": "Frequent = frecuente; sufficient = suficiente; abandoned = abandonado; permission = permiso." },
-    { "id": "luz23", "subtema": "vocabulario", "tipo": "opcion_multiple", "pregunta_en": "An OASIS is…", "pregunta_es": "Un OASIS es…", "opciones": ["a peaceful place in an ugly area", "a big store", "a loud street"], "correcta": "a peaceful place in an ugly area", "explicacion_es": "Oasis = un lugar tranquilo y bonito en medio de algo feo. Luz quiere que el terreno sea un oasis. 🌴" },
-    { "id": "luz24", "subtema": "vocabulario", "tipo": "opcion_multiple", "pregunta_en": "INSTALLING park benches means…", "pregunta_es": "INSTALLING park benches significa…", "opciones": ["putting them in place, ready to use", "breaking them", "painting them"], "correcta": "putting them in place, ready to use", "explicacion_es": "Installing = instalar: poner algo listo para usarse. 🪑" },
-    { "id": "luz25", "subtema": "vocabulario", "tipo": "completar", "pregunta_en": "Luz needs ______ from the city to use the lot.", "pregunta_es": "Luz necesita permiso de la ciudad para usar el terreno.", "respuesta": "permission", "aceptadas": ["permision"], "explicacion_es": "Permission = permiso. Se dice per-MÍ-shon.", "pista_es": "Empieza con P: per…" },
-    { "id": "luz26", "subtema": "problema", "tipo": "opcion_multiple", "pregunta_en": "What happens first in the story?", "pregunta_es": "¿Qué pasa primero en el cuento?", "opciones": ["There is a blackout", "They open Friendship Park", "Robert gives Luz shoes"], "correcta": "There is a blackout", "explicacion_es": "Primero hay un apagón. Después viene la idea del parque, y al final el parque y el regalo." }
+    {
+      "id": "luz1",
+      "subtema": "personajes",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Who is the main character of the story?",
+      "pregunta_es": "¿Quién es el personaje principal del cuento?",
+      "opciones": [
+        "Luz",
+        "Robert",
+        "Gord",
+        "Anika"
+      ],
+      "correcta": "Luz",
+      "explicacion_es": "Luz es la protagonista: el cuento trata de su idea y de lo que le pasa."
+    },
+    {
+      "id": "luz2",
+      "subtema": "personajes",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Who is Luz's new friend? He is new in the city.",
+      "pregunta_es": "¿Quién es el amigo nuevo de Luz? Es nuevo en la ciudad.",
+      "opciones": [
+        "Robert",
+        "Gord",
+        "Fofo",
+        "Anika",
+        "Luz"
+      ],
+      "correcta": "Robert",
+      "explicacion_es": "Robert es el amigo nuevo de Luz, el de los lentes. 👓"
+    },
+    {
+      "id": "luz3",
+      "subtema": "personajes",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Who is Gord?",
+      "pregunta_es": "¿Quién es Gord?",
+      "opciones": [
+        "Luz's neighbor",
+        "Luz's teacher",
+        "Luz's brother",
+        "Luz's friend from school"
+      ],
+      "correcta": "Luz's neighbor",
+      "explicacion_es": "Gord es el vecino de Luz. Él dice que hay que prepararse para más apagones."
+    },
+    {
+      "id": "luz4",
+      "subtema": "personajes",
+      "tipo": "unir",
+      "pregunta_en": "Match each character.",
+      "pregunta_es": "Une cada personaje con lo que hace.",
+      "pares": [
+        {
+          "izquierda": "Luz",
+          "derecha": "quiere hacer un parque"
+        },
+        {
+          "izquierda": "Robert",
+          "derecha": "le regala unos zapatos"
+        },
+        {
+          "izquierda": "Anika",
+          "derecha": "su amiga que la ayuda"
+        },
+        {
+          "izquierda": "Gord",
+          "derecha": "el vecino de los domingos sin carros"
+        }
+      ],
+      "explicacion_es": "Luz tiene la idea; Robert y Anika la ayudan; Gord logra que la calle se cierre los domingos."
+    },
+    {
+      "id": "luz5",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Where does the story happen?",
+      "pregunta_es": "¿Dónde pasa el cuento?",
+      "opciones": [
+        "In a city neighborhood",
+        "On a farm",
+        "At the beach",
+        "In a small town"
+      ],
+      "correcta": "In a city neighborhood",
+      "explicacion_es": "El lugar (setting) es un barrio de una ciudad."
+    },
+    {
+      "id": "luz6",
+      "subtema": "lugar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the empty lot like at the beginning?",
+      "pregunta_es": "¿Cómo es el terreno vacío al principio?",
+      "opciones": [
+        "Full of garbage",
+        "Full of flowers",
+        "Full of water",
+        "Full of cars"
+      ],
+      "correcta": "Full of garbage",
+      "explicacion_es": "Al principio el terreno está abandonado y lleno de basura y llantas viejas. 🗑️"
+    },
+    {
+      "id": "luz7",
+      "subtema": "lugar",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Luz's neighborhood has blackouts.",
+      "pregunta_es": "En el barrio de Luz hay apagones.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Se va la luz: no hay tele, ni cocina, ni aire acondicionado."
+    },
+    {
+      "id": "luz8",
+      "subtema": "problema",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What does Luz want to do with the empty lot?",
+      "pregunta_es": "¿Qué quiere hacer Luz con el terreno vacío?",
+      "opciones": [
+        "Turn it into a park and garden",
+        "Build a mall",
+        "Make a parking lot",
+        "Build a school"
+      ],
+      "correcta": "Turn it into a park and garden",
+      "explicacion_es": "Luz quiere un parque donde la gente juegue, escuche música y siembre su propia comida."
+    },
+    {
+      "id": "luz9",
+      "subtema": "problema",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Why does Luz feel sad at the start of her project?",
+      "pregunta_es": "¿Por qué Luz se siente triste al empezar su proyecto?",
+      "opciones": [
+        "Nobody helps her and her friends laugh",
+        "She loses her shoes",
+        "It is raining",
+        "There is a blackout at night"
+      ],
+      "correcta": "Nobody helps her and her friends laugh",
+      "explicacion_es": "Sus amigos se ríen de la idea, los vecinos no le hacen caso y ella no puede limpiar el terreno sola."
+    },
+    {
+      "id": "luz10",
+      "subtema": "problema",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Luz can clean the lot all by herself.",
+      "pregunta_es": "Luz puede limpiar el terreno ella sola.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Lo intenta, pero es muy difícil. Ella dice que no lo puede hacer sola."
+    },
+    {
+      "id": "luz11",
+      "subtema": "problema",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "At first, Anika thinks a farm in the city is a funny idea.",
+      "pregunta_es": "Al principio, Anika cree que una granja en la ciudad es una idea chistosa.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Anika se ríe y dice que ni un tractor cabría en el terreno. 😄"
+    },
+    {
+      "id": "luz12",
+      "subtema": "solucion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How is the problem solved?",
+      "pregunta_es": "¿Cómo se resuelve el problema?",
+      "opciones": [
+        "Friends and neighbors work together",
+        "Luz gives up",
+        "Luz moves away",
+        "The city cleans the lot for her"
+      ],
+      "correcta": "Friends and neighbors work together",
+      "explicacion_es": "Robert y Anika vuelven para ayudar, y luego todo el barrio trabaja junto."
+    },
+    {
+      "id": "luz13",
+      "subtema": "solucion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What do the friends make to tell the neighbors?",
+      "pregunta_es": "¿Qué hacen los amigos para avisarle al barrio?",
+      "opciones": [
+        "Posters",
+        "A video game",
+        "A cake",
+        "Letters to the mayor"
+      ],
+      "correcta": "Posters",
+      "explicacion_es": "Hacen carteles (posters) y los reparten a amigos y vecinos."
+    },
+    {
+      "id": "luz14",
+      "subtema": "solucion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the name of the new park?",
+      "pregunta_es": "¿Cómo se llama el parque nuevo?",
+      "opciones": [
+        "Friendship Park",
+        "Garbage Park",
+        "Luz Park",
+        "Robert Park"
+      ],
+      "correcta": "Friendship Park",
+      "explicacion_es": "Se llama Friendship Park: el Parque de la Amistad. 🌻"
+    },
+    {
+      "id": "luz15",
+      "subtema": "solucion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The people use old tires to make planter boxes.",
+      "pregunta_es": "La gente usa llantas viejas para hacer maceteros.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Reutilizan las llantas para sembrar plantas."
+    },
+    {
+      "id": "luz16",
+      "subtema": "solucion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What was Gord's idea?",
+      "pregunta_es": "¿Cuál fue la idea de Gord?",
+      "opciones": [
+        "Car-free Sundays",
+        "A big mall",
+        "More cars",
+        "Planting trees on the street"
+      ],
+      "correcta": "Car-free Sundays",
+      "explicacion_es": "Gord logró que la ciudad cerrara la calle los domingos para caminar sin carros. 🚶"
+    },
+    {
+      "id": "luz17",
+      "subtema": "solucion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What gift does Robert give Luz at the end?",
+      "pregunta_es": "¿Qué le regala Robert a Luz al final?",
+      "opciones": [
+        "Shoes he designed",
+        "A bike",
+        "A plant",
+        "A book about gardens"
+      ],
+      "correcta": "Shoes he designed",
+      "explicacion_es": "Robert le regala unos zapatos diseñados por él, para darle las gracias por ser su amiga. 👟"
+    },
+    {
+      "id": "luz18",
+      "subtema": "mensaje",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the message of the story?",
+      "pregunta_es": "¿Cuál es el mensaje del cuento?",
+      "opciones": [
+        "Working together we can do big things",
+        "Never help your neighbors",
+        "Parks are boring",
+        "Cities are better than farms"
+      ],
+      "correcta": "Working together we can do big things",
+      "explicacion_es": "El mensaje (theme): juntos podemos lograr cosas grandes. 🤝"
+    },
+    {
+      "id": "luz19",
+      "subtema": "mensaje",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Why will the garden help the planet?",
+      "pregunta_es": "¿Por qué el huerto ayuda al planeta?",
+      "opciones": [
+        "They grow food close to home",
+        "They buy more things",
+        "They use more cars",
+        "They recycle all the garbage"
+      ],
+      "correcta": "They grow food close to home",
+      "explicacion_es": "Si siembran su comida cerca, no hay que traerla de lejos gastando petróleo. 🌎"
+    },
+    {
+      "id": "luz20",
+      "subtema": "mensaje",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The park helps the community have a place to play and grow food.",
+      "pregunta_es": "El parque le da al barrio un lugar para jugar y sembrar comida.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Y también es un lugar para estar juntos durante los apagones."
+    },
+    {
+      "id": "luz21",
+      "subtema": "mensaje",
+      "tipo": "completar",
+      "pregunta_en": "It was a lot of work, but everyone did a ______.",
+      "pregunta_es": "Fue mucho trabajo, pero todos hicieron una parte.",
+      "respuesta": "part",
+      "aceptadas": [
+        "parte"
+      ],
+      "explicacion_es": "Part = parte. Cada uno ayudó un poquito y así lo lograron.",
+      "pista_es": "4 letras: p _ r t"
+    },
+    {
+      "id": "luz22",
+      "subtema": "vocabulario",
+      "tipo": "unir",
+      "pregunta_en": "Match the words.",
+      "pregunta_es": "Une cada palabra con su significado.",
+      "pares": [
+        {
+          "izquierda": "frequent",
+          "derecha": "que pasa seguido"
+        },
+        {
+          "izquierda": "sufficient",
+          "derecha": "lo justo que se necesita"
+        },
+        {
+          "izquierda": "abandoned",
+          "derecha": "abandonado"
+        },
+        {
+          "izquierda": "permission",
+          "derecha": "permiso"
+        }
+      ],
+      "explicacion_es": "Frequent = frecuente; sufficient = suficiente; abandoned = abandonado; permission = permiso."
+    },
+    {
+      "id": "luz23",
+      "subtema": "vocabulario",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "An OASIS is…",
+      "pregunta_es": "Un OASIS es…",
+      "opciones": [
+        "a peaceful place in an ugly area",
+        "a big store",
+        "a loud street",
+        "a desert with no water"
+      ],
+      "correcta": "a peaceful place in an ugly area",
+      "explicacion_es": "Oasis = un lugar tranquilo y bonito en medio de algo feo. Luz quiere que el terreno sea un oasis. 🌴"
+    },
+    {
+      "id": "luz24",
+      "subtema": "vocabulario",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "INSTALLING park benches means…",
+      "pregunta_es": "INSTALLING park benches significa…",
+      "opciones": [
+        "putting them in place, ready to use",
+        "breaking them",
+        "painting them",
+        "buying them at the store"
+      ],
+      "correcta": "putting them in place, ready to use",
+      "explicacion_es": "Installing = instalar: poner algo listo para usarse. 🪑"
+    },
+    {
+      "id": "luz25",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Luz needs ______ from the city to use the lot.",
+      "pregunta_es": "Luz necesita permiso de la ciudad para usar el terreno.",
+      "respuesta": "permission",
+      "aceptadas": [
+        "permision"
+      ],
+      "explicacion_es": "Permission = permiso. Se dice per-MÍ-shon.",
+      "pista_es": "Empieza con P: per…"
+    },
+    {
+      "id": "luz26",
+      "subtema": "problema",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What happens first in the story?",
+      "pregunta_es": "¿Qué pasa primero en el cuento?",
+      "opciones": [
+        "There is a blackout",
+        "They open Friendship Park",
+        "Robert gives Luz shoes",
+        "Luz asks for permission"
+      ],
+      "correcta": "There is a blackout",
+      "explicacion_es": "Primero hay un apagón. Después viene la idea del parque, y al final el parque y el regalo."
+    },
+    {
+      "id": "lw1",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "The main character of the story is ______.",
+      "pregunta_es": "La protagonista del cuento es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Luz",
+      "aceptadas": [
+        "luz"
+      ],
+      "explicacion_es": "Luz es el personaje principal 👧🏽.",
+      "pista_es": "El nombre del título"
+    },
+    {
+      "id": "lw2",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Luz's new friend is ______. He is new in the city.",
+      "pregunta_es": "El amigo nuevo de Luz es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Robert",
+      "aceptadas": [
+        "robert"
+      ],
+      "explicacion_es": "Robert es nuevo en la ciudad.",
+      "pista_es": "Empieza con R"
+    },
+    {
+      "id": "lw3",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Luz's friend who helps her is ______.",
+      "pregunta_es": "La amiga de Luz que la ayuda es ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Anika",
+      "aceptadas": [
+        "anika"
+      ],
+      "explicacion_es": "Anika la ayuda con el parque.",
+      "pista_es": "Empieza con A"
+    },
+    {
+      "id": "lw4",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Gord is Luz's ______.",
+      "pregunta_es": "Gord es el ______ de Luz.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "neighbor",
+      "aceptadas": [
+        "neighbour"
+      ],
+      "explicacion_es": "Gord es su vecino 🏠.",
+      "pista_es": "Vecino en inglés: NÉI-bor"
+    },
+    {
+      "id": "lw5",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "The story happens in a city ______.",
+      "pregunta_es": "El cuento pasa en un ______ de la ciudad.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "neighborhood",
+      "aceptadas": [
+        "neighbourhood"
+      ],
+      "explicacion_es": "Neighborhood = barrio 🏙️.",
+      "pista_es": "neighbor + hood"
+    },
+    {
+      "id": "lw6",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "At the beginning, the empty lot is full of ______.",
+      "pregunta_es": "Al principio, el terreno está lleno de ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "garbage",
+      "aceptadas": [
+        "trash"
+      ],
+      "explicacion_es": "Garbage = basura 🗑️.",
+      "pista_es": "Empieza con g…"
+    },
+    {
+      "id": "lw7",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "Luz's neighborhood has ______. The lights go out.",
+      "pregunta_es": "El barrio de Luz tiene ______. Se va la luz.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "blackouts",
+      "aceptadas": [
+        "blackout"
+      ],
+      "explicacion_es": "Blackout = apagón 🔦.",
+      "pista_es": "black + out"
+    },
+    {
+      "id": "lw8",
+      "subtema": "problema",
+      "tipo": "completar",
+      "pregunta_en": "Luz wants to turn the lot into a park and a ______.",
+      "pregunta_es": "Luz quiere convertir el terreno en un parque y un ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "garden",
+      "aceptadas": [
+        "gardens"
+      ],
+      "explicacion_es": "Garden = huerto/jardín 🌱.",
+      "pista_es": "Empieza con g… (huerto)"
+    },
+    {
+      "id": "lw9",
+      "subtema": "problema",
+      "tipo": "completar",
+      "pregunta_en": "Luz feels ______ because nobody helps her.",
+      "pregunta_es": "Luz se siente ______ porque nadie la ayuda.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "sad",
+      "aceptadas": [],
+      "explicacion_es": "Sad = triste 😞. Ese es el problema.",
+      "pista_es": "3 letras"
+    },
+    {
+      "id": "lw10",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "The friends make ______ to tell the neighbors.",
+      "pregunta_es": "Los amigos hacen ______ para avisar a los vecinos.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "posters",
+      "aceptadas": [
+        "poster",
+        "signs"
+      ],
+      "explicacion_es": "Posters = carteles 📢.",
+      "pista_es": "Carteles en inglés"
+    },
+    {
+      "id": "lw11",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "The new park is called ______ Park.",
+      "pregunta_es": "El parque nuevo se llama ______ Park.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Friendship",
+      "aceptadas": [
+        "friendship"
+      ],
+      "explicacion_es": "Friendship Park = Parque de la Amistad 🌻.",
+      "pista_es": "Amistad en inglés"
+    },
+    {
+      "id": "lw12",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "The people use old ______ to make planter boxes.",
+      "pregunta_es": "La gente usa ______ viejas para hacer maceteros.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "tires",
+      "aceptadas": [
+        "tyres",
+        "tire"
+      ],
+      "explicacion_es": "Tires = llantas 🛞.",
+      "pista_es": "Llantas en inglés"
+    },
+    {
+      "id": "lw13",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "Gord's idea was car-free ______.",
+      "pregunta_es": "La idea de Gord fueron los ______ sin carros.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "Sundays",
+      "aceptadas": [
+        "sunday",
+        "sundays"
+      ],
+      "explicacion_es": "Car-free Sundays = domingos sin carros 🚫🚗.",
+      "pista_es": "Un día de la semana"
+    },
+    {
+      "id": "lw14",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "At the end, Robert gives Luz ______ he designed.",
+      "pregunta_es": "Al final, Robert le regala a Luz unos ______ que él diseñó.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "shoes",
+      "aceptadas": [
+        "shoe"
+      ],
+      "explicacion_es": "Shoes = zapatos 👟.",
+      "pista_es": "Lo que te pones en los pies"
+    },
+    {
+      "id": "lw15",
+      "subtema": "mensaje",
+      "tipo": "completar",
+      "pregunta_en": "When we work ______, we can do big things.",
+      "pregunta_es": "Cuando trabajamos ______, podemos hacer cosas grandes.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "together",
+      "aceptadas": [],
+      "explicacion_es": "Together = juntos 🤝. ¡Es el mensaje del cuento!",
+      "pista_es": "to-GUE-der"
+    },
+    {
+      "id": "lw16",
+      "subtema": "mensaje",
+      "tipo": "completar",
+      "pregunta_en": "The garden helps the planet because they grow ______ close to home.",
+      "pregunta_es": "El huerto ayuda al planeta porque siembran ______ cerca de casa.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "food",
+      "aceptadas": [],
+      "explicacion_es": "Food = comida 🥕.",
+      "pista_es": "Comida en inglés"
+    },
+    {
+      "id": "lw17",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Luz needs ______ from the city to use the lot.",
+      "pregunta_es": "Luz necesita ______ de la ciudad para usar el terreno.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "permission",
+      "aceptadas": [
+        "permision"
+      ],
+      "explicacion_es": "Permission = permiso.",
+      "pista_es": "per-MI-shon"
+    },
+    {
+      "id": "lw18",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "The lot was ______: nobody took care of it.",
+      "pregunta_es": "El terreno estaba ______: nadie lo cuidaba.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "abandoned",
+      "aceptadas": [
+        "abandon"
+      ],
+      "explicacion_es": "Abandoned = abandonado.",
+      "pista_es": "Se parece al español"
+    },
+    {
+      "id": "lw19",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "Blackouts were ______: they happened often.",
+      "pregunta_es": "Los apagones eran ______: pasaban seguido.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "frequent",
+      "aceptadas": [],
+      "explicacion_es": "Frequent = frecuente.",
+      "pista_es": "Se parece al español"
+    },
+    {
+      "id": "lw20",
+      "subtema": "vocabulario",
+      "tipo": "completar",
+      "pregunta_en": "The park was an ______: a peaceful place in an ugly area.",
+      "pregunta_es": "El parque era un ______: un lugar tranquilo en una zona fea.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "oasis",
+      "aceptadas": [],
+      "explicacion_es": "Oasis = lugar tranquilo y bonito 🌴.",
+      "pista_es": "Igual en español"
+    },
+    {
+      "id": "lw21",
+      "subtema": "problema",
+      "tipo": "completar",
+      "pregunta_en": "At first, Luz's friends ______ at her idea.",
+      "pregunta_es": "Al principio, los amigos de Luz se ______ de su idea.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "laugh",
+      "aceptadas": [
+        "laughed",
+        "laughs"
+      ],
+      "explicacion_es": "Laugh (LAF) = reírse.",
+      "pista_es": "LAF"
+    },
+    {
+      "id": "lw22",
+      "subtema": "solucion",
+      "tipo": "completar",
+      "pregunta_en": "It was a lot of work, but everyone did a ______.",
+      "pregunta_es": "Fue mucho trabajo, pero todos hicieron su ______.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "part",
+      "aceptadas": [],
+      "explicacion_es": "Did a part = hizo su parte. ¡Todos ayudaron!",
+      "pista_es": "parte en inglés"
+    },
+    {
+      "id": "lw23",
+      "subtema": "personajes",
+      "tipo": "completar",
+      "pregunta_en": "Luz wants to make a park. She is the main ______.",
+      "pregunta_es": "Luz quiere hacer un parque. Es el ______ principal.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "character",
+      "aceptadas": [
+        "characters"
+      ],
+      "explicacion_es": "Character (QUÉ-rac-ter) = personaje.",
+      "pista_es": "QUÉ-rac-ter"
+    },
+    {
+      "id": "lw24",
+      "subtema": "lugar",
+      "tipo": "completar",
+      "pregunta_en": "The story's setting is a city ______.",
+      "pregunta_es": "El lugar del cuento es un ______ de la ciudad.",
+      "instruccion_es": "Escribe en inglés la palabra que falta. ✍️",
+      "respuesta": "neighborhood",
+      "aceptadas": [
+        "neighbourhood"
+      ],
+      "explicacion_es": "Setting = lugar. Neighborhood = barrio.",
+      "pista_es": "neighbor + hood"
+    }
   ],
   "vocabulario": [
-    { "en": "neighborhood", "es": "barrio", "aceptadas": ["vecindario", "comunidad"], "ejemplo_en": "Luz loves her neighborhood.", "ejemplo_es": "Luz quiere a su barrio." },
-    { "en": "blackout", "es": "apagón", "aceptadas": ["apagon", "se fue la luz"], "ejemplo_en": "There is a blackout.", "ejemplo_es": "Hay un apagón." },
-    { "en": "garbage", "es": "basura", "aceptadas": ["basuras"], "ejemplo_en": "The lot is full of garbage.", "ejemplo_es": "El terreno está lleno de basura." },
-    { "en": "garden", "es": "huerto", "aceptadas": ["jardín", "jardin", "huerta"], "ejemplo_en": "They plant a garden.", "ejemplo_es": "Siembran un huerto." },
-    { "en": "frequent", "es": "frecuente", "aceptadas": ["seguido", "a menudo"], "ejemplo_en": "Luz makes frequent trips to the mall.", "ejemplo_es": "Luz va seguido al centro comercial." },
-    { "en": "sufficient", "es": "suficiente", "aceptadas": ["lo justo"], "ejemplo_en": "We have sufficient food.", "ejemplo_es": "Tenemos suficiente comida." },
-    { "en": "oasis", "es": "oasis", "aceptadas": ["lugar tranquilo"], "ejemplo_en": "The park is an oasis.", "ejemplo_es": "El parque es un oasis." },
-    { "en": "permission", "es": "permiso", "aceptadas": ["permisos"], "ejemplo_en": "She asks for permission.", "ejemplo_es": "Ella pide permiso." },
-    { "en": "installing", "es": "instalando", "aceptadas": ["instalar", "poniendo"], "ejemplo_en": "They are installing benches.", "ejemplo_es": "Están instalando bancas." },
-    { "en": "abandoned", "es": "abandonado", "aceptadas": ["abandonada", "vacío", "vacio"], "ejemplo_en": "The lot was abandoned.", "ejemplo_es": "El terreno estaba abandonado." },
-    { "en": "friendship", "es": "amistad", "aceptadas": ["amistades"], "ejemplo_en": "Friendship Park is beautiful.", "ejemplo_es": "El Parque de la Amistad es bonito." }
+    {
+      "en": "neighborhood",
+      "es": "barrio",
+      "aceptadas": [
+        "vecindario",
+        "comunidad"
+      ],
+      "ejemplo_en": "Luz loves her neighborhood.",
+      "ejemplo_es": "Luz quiere a su barrio."
+    },
+    {
+      "en": "blackout",
+      "es": "apagón",
+      "aceptadas": [
+        "apagon",
+        "se fue la luz"
+      ],
+      "ejemplo_en": "There is a blackout.",
+      "ejemplo_es": "Hay un apagón."
+    },
+    {
+      "en": "garbage",
+      "es": "basura",
+      "aceptadas": [
+        "basuras"
+      ],
+      "ejemplo_en": "The lot is full of garbage.",
+      "ejemplo_es": "El terreno está lleno de basura."
+    },
+    {
+      "en": "garden",
+      "es": "huerto",
+      "aceptadas": [
+        "jardín",
+        "jardin",
+        "huerta"
+      ],
+      "ejemplo_en": "They plant a garden.",
+      "ejemplo_es": "Siembran un huerto."
+    },
+    {
+      "en": "frequent",
+      "es": "frecuente",
+      "aceptadas": [
+        "seguido",
+        "a menudo"
+      ],
+      "ejemplo_en": "Luz makes frequent trips to the mall.",
+      "ejemplo_es": "Luz va seguido al centro comercial."
+    },
+    {
+      "en": "sufficient",
+      "es": "suficiente",
+      "aceptadas": [
+        "lo justo"
+      ],
+      "ejemplo_en": "We have sufficient food.",
+      "ejemplo_es": "Tenemos suficiente comida."
+    },
+    {
+      "en": "oasis",
+      "es": "oasis",
+      "aceptadas": [
+        "lugar tranquilo"
+      ],
+      "ejemplo_en": "The park is an oasis.",
+      "ejemplo_es": "El parque es un oasis."
+    },
+    {
+      "en": "permission",
+      "es": "permiso",
+      "aceptadas": [
+        "permisos"
+      ],
+      "ejemplo_en": "She asks for permission.",
+      "ejemplo_es": "Ella pide permiso."
+    },
+    {
+      "en": "installing",
+      "es": "instalando",
+      "aceptadas": [
+        "instalar",
+        "poniendo"
+      ],
+      "ejemplo_en": "They are installing benches.",
+      "ejemplo_es": "Están instalando bancas."
+    },
+    {
+      "en": "abandoned",
+      "es": "abandonado",
+      "aceptadas": [
+        "abandonada",
+        "vacío",
+        "vacio"
+      ],
+      "ejemplo_en": "The lot was abandoned.",
+      "ejemplo_es": "El terreno estaba abandonado."
+    },
+    {
+      "en": "friendship",
+      "es": "amistad",
+      "aceptadas": [
+        "amistades"
+      ],
+      "ejemplo_en": "Friendship Park is beautiful.",
+      "ejemplo_es": "El Parque de la Amistad es bonito."
+    }
+  ],
+  "lecciones": [
+    {
+      "emoji": "🗂️",
+      "titulo": "Los 5 elementos del cuento",
+      "pasos": [
+        "Characters (personajes): Luz, Robert, Anika, Gord.",
+        "Setting (lugar): un barrio de la ciudad.",
+        "Problem (problema): nadie la ayuda con el terreno lleno de basura.",
+        "Solution (solución): amigos y vecinos trabajan juntos.",
+        "Theme (mensaje): juntos podemos hacer cosas grandes."
+      ],
+      "truco": "Pregúntate: ¿Quién? ¿Dónde? ¿Qué pasó? ¿Cómo se arregló? ¿Qué aprendí?"
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "Revisa que escribiste bien las palabras en inglés."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
   ]
 }

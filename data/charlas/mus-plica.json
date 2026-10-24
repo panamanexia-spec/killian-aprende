@@ -1,0 +1,46 @@
+{
+  "tipo": "charla",
+  "id": "mus-plica",
+  "titulo": "La plica musical",
+  "materia": "Educación Musical",
+  "idioma": "es",
+  "fecha_entrega": "2026-10-27",
+  "version": 1,
+  "frases": [
+    {
+      "texto": "Buenos días. Mi trabajo es sobre la plica musical.",
+      "pista": "👋",
+      "gesto": "Saluda y muestra tu folder"
+    },
+    {
+      "texto": "La plica es la línea recta que sale de la cabeza de la nota.",
+      "pista": "🎵",
+      "gesto": "Dibuja una línea en el aire"
+    },
+    {
+      "texto": "La figura musical tiene tres partes: cabeza, plica y corchete.",
+      "pista": "3️⃣",
+      "gesto": "Cuenta con tres dedos"
+    },
+    {
+      "texto": "Si la nota está debajo de la tercera línea, la plica va arriba, a la derecha.",
+      "pista": "⬆️",
+      "gesto": "Señala hacia arriba con la mano derecha"
+    },
+    {
+      "texto": "Si la nota está en la tercera línea o más arriba, la plica va abajo, a la izquierda.",
+      "pista": "⬇️",
+      "gesto": "Señala hacia abajo con la mano izquierda"
+    },
+    {
+      "texto": "La plica es importante porque nos dice cuánto dura la nota y ordena la música.",
+      "pista": "⭐",
+      "gesto": "Muestra el dibujo del anexo"
+    },
+    {
+      "texto": "Muchas gracias.",
+      "pista": "🙏",
+      "gesto": "Sonríe"
+    }
+  ]
+}

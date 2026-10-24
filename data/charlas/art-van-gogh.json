@@ -1,0 +1,71 @@
+{
+  "tipo": "charla",
+  "id": "art-van-gogh",
+  "titulo": "Vincent van Gogh",
+  "materia": "Artistic Expressions",
+  "idioma": "en",
+  "fecha_entrega": "2026-10-26",
+  "version": 1,
+  "frases": [
+    {
+      "texto": "Hello! My name is Killian.",
+      "es": "👋 ¡Hola! Me llamo Killian.",
+      "pista": "👋",
+      "gesto": "Saluda con la mano"
+    },
+    {
+      "texto": "Today I will talk about Vincent van Gogh.",
+      "es": "🎨 Hoy voy a hablar de Vincent van Gogh (van GÓU).",
+      "pista": "🎨",
+      "gesto": "Señala tu hoja"
+    },
+    {
+      "texto": "He was a painter from the Netherlands.",
+      "es": "🇳🇱 Fue un pintor de los Países Bajos.",
+      "pista": "🇳🇱",
+      "gesto": "Haz como que pintas con un pincel"
+    },
+    {
+      "texto": "He lived from 1853 to 1890.",
+      "es": "📅 Vivió de 1853 a 1890.",
+      "pista": "📅",
+      "gesto": "Señala los años en la hoja"
+    },
+    {
+      "texto": "He painted with bright colors and swirly lines.",
+      "es": "🌀 Pintaba con colores brillantes y líneas en remolino.",
+      "pista": "🌀",
+      "gesto": "Dibuja un remolino en el aire"
+    },
+    {
+      "texto": "He painted more than 800 paintings.",
+      "es": "🖼️ Pintó más de 800 cuadros.",
+      "pista": "🖼️",
+      "gesto": "Abre los brazos: ¡muchos!"
+    },
+    {
+      "texto": "His famous paintings are The Starry Night, Sunflowers and The Bedroom.",
+      "es": "⭐ Sus cuadros famosos son La noche estrellada (STÁ-ri NÁIT), Los girasoles (SÁN-flau-ers) y El dormitorio.",
+      "pista": "⭐",
+      "gesto": "Señala cada cuadro en tu hoja"
+    },
+    {
+      "texto": "My favorite painting is The Starry Night.",
+      "es": "🌌 Mi cuadro favorito es La noche estrellada.",
+      "pista": "🌌",
+      "gesto": "Pon la mano en el corazón"
+    },
+    {
+      "texto": "It has a blue sky with swirly stars.",
+      "es": "✨ Tiene un cielo azul con estrellas en remolino.",
+      "pista": "✨",
+      "gesto": "Señala el cielo"
+    },
+    {
+      "texto": "Thank you!",
+      "es": "🙏 ¡Gracias!",
+      "pista": "🙏",
+      "gesto": "Sonríe y haz una pequeña reverencia"
+    }
+  ]
+}

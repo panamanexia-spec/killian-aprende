@@ -1,0 +1,536 @@
+{
+  "tipo": "tema",
+  "id": "soc-simbolos-patrios",
+  "idioma": "es",
+  "materia": "Ciencias Sociales",
+  "titulo": "Los símbolos patrios de Panamá (formal)",
+  "titulo_es": "Los símbolos patrios de Panamá (formal)",
+  "preguntas_por_ronda": 10,
+  "vocabulario_pregunta_es": "¿Qué es o qué significa?",
+  "subtemas": [
+    "simbolos",
+    "bandera",
+    "escudo",
+    "himno",
+    "fechas",
+    "otros"
+  ],
+  "resumen": [
+    {
+      "en": "Bandera, Escudo e Himno",
+      "es": "Los 3 símbolos patrios de Panamá.",
+      "emoji": "🇵🇦"
+    },
+    {
+      "en": "Azul y rojo",
+      "es": "Azul = partido Conservador. Rojo = partido Liberal. Blanco = la paz.",
+      "emoji": "🎨"
+    },
+    {
+      "en": "Dos estrellas",
+      "es": "Estrella azul = pureza y honestidad. Estrella roja = autoridad y ley.",
+      "emoji": "⭐"
+    },
+    {
+      "en": "El Escudo",
+      "es": "Lo ideó Nicanor Villalaz. Tiene 10 estrellas, una por provincia, y el águila harpía arriba.",
+      "emoji": "🛡️"
+    },
+    {
+      "en": "Pro Mundi Beneficio",
+      "es": "Significa «para beneficio del mundo».",
+      "emoji": "🌎"
+    },
+    {
+      "en": "El Himno",
+      "es": "Letra de Jerónimo de la Ossa y música de Santos Jorge.",
+      "emoji": "🎵"
+    },
+    {
+      "en": "3 y 4 de noviembre",
+      "es": "El 3: separación de Colombia (1903). El 4: Día de los Símbolos Patrios.",
+      "emoji": "📅"
+    },
+    {
+      "en": "Otros símbolos",
+      "es": "Flor del Espíritu Santo, el balboa, la pollera y el águila harpía.",
+      "emoji": "🌸"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "sp1",
+      "subtema": "simbolos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuáles son los tres símbolos patrios de Panamá?",
+      "opciones": [
+        "La Bandera, el Escudo y el Himno",
+        "La pollera, la mola y el sombrero",
+        "El balboa, la flor y el águila"
+      ],
+      "correcta": "La Bandera, el Escudo y el Himno",
+      "explicacion_es": "Los símbolos PATRIOS son 3: Bandera 🇵🇦, Escudo 🛡️ e Himno 🎵. Los otros son símbolos de identidad.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp2",
+      "subtema": "simbolos",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "La Bandera fue el primer símbolo patrio de Panamá.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! La Bandera fue el primer símbolo y se izó en 1903.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "sp3",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué representa el cuadrante AZUL de la Bandera?",
+      "opciones": [
+        "El partido Conservador",
+        "El partido Liberal",
+        "La paz"
+      ],
+      "correcta": "El partido Conservador",
+      "explicacion_es": "Azul = Conservador. Truco: «Azul y Conservador» 💙",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp4",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué representa el cuadrante ROJO de la Bandera?",
+      "opciones": [
+        "El partido Liberal",
+        "El partido Conservador",
+        "El mar"
+      ],
+      "correcta": "El partido Liberal",
+      "explicacion_es": "Rojo = Liberal ❤️",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp5",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué representa el color BLANCO de la Bandera?",
+      "opciones": [
+        "La paz",
+        "La riqueza",
+        "La vegetación"
+      ],
+      "correcta": "La paz",
+      "explicacion_es": "El blanco es la paz entre los dos partidos para hacer Patria 🕊️",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp6",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué representa la estrella AZUL?",
+      "opciones": [
+        "La pureza y la honestidad",
+        "La autoridad y la ley",
+        "Las provincias"
+      ],
+      "correcta": "La pureza y la honestidad",
+      "explicacion_es": "Estrella azul ⭐ = pureza y honestidad en la vida cívica.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp7",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué representa la estrella ROJA?",
+      "opciones": [
+        "La autoridad y la ley",
+        "La pureza",
+        "El trabajo"
+      ],
+      "correcta": "La autoridad y la ley",
+      "explicacion_es": "Estrella roja ⭐ = autoridad y ley ⚖️",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp8",
+      "subtema": "bandera",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "La Bandera tiene tres estrellas.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! La Bandera tiene DOS estrellas: una azul y una roja.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "sp9",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién confeccionó (cosió) la primera Bandera?",
+      "opciones": [
+        "María de la Ossa de Amador",
+        "Ernestina Sucre",
+        "Santos Jorge"
+      ],
+      "correcta": "María de la Ossa de Amador",
+      "explicacion_es": "María de la Ossa de Amador la cosió, con Angélica Bergamota. La diseñó Manuel E. Amador 🧵",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp10",
+      "subtema": "bandera",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién escribió el Juramento a la Bandera?",
+      "opciones": [
+        "Ernestina Sucre",
+        "Ricardo Miró",
+        "Max Lemm"
+      ],
+      "correcta": "Ernestina Sucre",
+      "explicacion_es": "Ernestina Sucre escribió: «Bandera panameña: juro a Dios y a la Patria…»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp11",
+      "subtema": "escudo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién ideó el Escudo de Armas?",
+      "opciones": [
+        "Nicanor Villalaz",
+        "Jerónimo de la Ossa",
+        "Vasco Núñez de Balboa"
+      ],
+      "correcta": "Nicanor Villalaz",
+      "explicacion_es": "Nicanor Villalaz lo ideó y Max Lemm lo dibujó 🎨",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp12",
+      "subtema": "escudo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué ave está arriba del Escudo?",
+      "opciones": [
+        "El águila harpía",
+        "La paloma",
+        "El tucán"
+      ],
+      "correcta": "El águila harpía",
+      "explicacion_es": "El águila harpía 🦅 representa la soberanía.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp13",
+      "subtema": "escudo",
+      "tipo": "completar",
+      "pregunta_en": "La cinta del Escudo dice: Pro Mundi ______.",
+      "respuesta": "Beneficio",
+      "explicacion_es": "«Pro Mundi Beneficio» significa «para beneficio del mundo» 🌎",
+      "pista_es": "Empieza con B: B e n e _ i c i o",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "aceptadas": [
+        "beneficio"
+      ]
+    },
+    {
+      "id": "sp14",
+      "subtema": "escudo",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué representan las estrellas de oro del Escudo?",
+      "opciones": [
+        "Las provincias",
+        "Los presidentes",
+        "Los mares"
+      ],
+      "correcta": "Las provincias",
+      "explicacion_es": "Cada estrella es una provincia ⭐",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp15",
+      "subtema": "escudo",
+      "tipo": "completar",
+      "pregunta_en": "Hoy el Escudo tiene ______ estrellas.",
+      "respuesta": "10",
+      "explicacion_es": "Son 10 porque en 2014 se creó la provincia de Panamá Oeste. Antes eran 9.",
+      "pista_es": "Es un número entre 9 y 11",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "aceptadas": [
+        "diez"
+      ]
+    },
+    {
+      "id": "sp16",
+      "subtema": "escudo",
+      "tipo": "unir",
+      "pregunta_en": "Une cada dibujo del Escudo con lo que significa.",
+      "pares": [
+        {
+          "izquierda": "Pala y azadón",
+          "derecha": "El trabajo"
+        },
+        {
+          "izquierda": "Cornucopia con monedas",
+          "derecha": "La riqueza"
+        },
+        {
+          "izquierda": "Rueda con alas",
+          "derecha": "El progreso"
+        },
+        {
+          "izquierda": "Fondo verde",
+          "derecha": "La vegetación"
+        }
+      ],
+      "explicacion_es": "Pala y azadón = trabajo 🛠️, cornucopia = riqueza 💰, rueda con alas = progreso, verde = vegetación 🌿",
+      "instruccion_es": "Une cada dibujo del Escudo con lo que significa."
+    },
+    {
+      "id": "sp17",
+      "subtema": "escudo",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El sable y el fusil del Escudo significan el fin de las guerras entre hermanos.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Están colgados para decir que se acabaron las guerras.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "sp18",
+      "subtema": "himno",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién escribió la letra del Himno Nacional?",
+      "opciones": [
+        "Jerónimo de la Ossa",
+        "Santos Jorge",
+        "Nicanor Villalaz"
+      ],
+      "correcta": "Jerónimo de la Ossa",
+      "explicacion_es": "Letra ✍️ = Jerónimo de la Ossa. Música 🎵 = Santos Jorge.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp19",
+      "subtema": "himno",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién compuso la música del Himno Nacional?",
+      "opciones": [
+        "Santos Jorge",
+        "Jerónimo de la Ossa",
+        "Ricardo Miró"
+      ],
+      "correcta": "Santos Jorge",
+      "explicacion_es": "Santos Jorge puso la música 🎵",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp20",
+      "subtema": "himno",
+      "tipo": "completar",
+      "pregunta_en": "Alcanzamos por fin la ______.",
+      "respuesta": "victoria",
+      "explicacion_es": "Así empieza el coro del Himno: «Alcanzamos por fin la victoria» 🎵",
+      "pista_es": "Empieza con V: v i c _ o r i a",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "sp21",
+      "subtema": "fechas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué día es el Día de los Símbolos Patrios?",
+      "opciones": [
+        "4 de noviembre",
+        "3 de noviembre",
+        "28 de noviembre"
+      ],
+      "correcta": "4 de noviembre",
+      "explicacion_es": "El 3 de noviembre es la separación de Colombia y el 4 de noviembre los Símbolos Patrios 🇵🇦",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp22",
+      "subtema": "fechas",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Panamá se separó de Colombia el 3 de noviembre de 1903.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Por eso el Escudo muestra el sol y la luna: la hora de la separación.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "sp23",
+      "subtema": "otros",
+      "tipo": "unir",
+      "pregunta_en": "Une cada símbolo con lo que es.",
+      "pares": [
+        {
+          "izquierda": "Flor del Espíritu Santo",
+          "derecha": "Flor nacional"
+        },
+        {
+          "izquierda": "Balboa",
+          "derecha": "Moneda"
+        },
+        {
+          "izquierda": "Pollera",
+          "derecha": "Traje típico"
+        },
+        {
+          "izquierda": "Águila harpía",
+          "derecha": "Ave nacional"
+        }
+      ],
+      "explicacion_es": "Flor 🌸, moneda 🪙, traje 👗 y ave 🦅: son otros símbolos de identidad.",
+      "instruccion_es": "Une cada símbolo con lo que es."
+    },
+    {
+      "id": "sp24",
+      "subtema": "otros",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Por qué la moneda se llama balboa?",
+      "opciones": [
+        "Por Vasco Núñez de Balboa",
+        "Por un río de Panamá",
+        "Por un presidente"
+      ],
+      "correcta": "Por Vasco Núñez de Balboa",
+      "explicacion_es": "Honra a Vasco Núñez de Balboa, el explorador del Mar del Sur 🌊",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "sp25",
+      "subtema": "otros",
+      "tipo": "completar",
+      "pregunta_en": "Un balboa tiene ______ centésimos.",
+      "respuesta": "100",
+      "explicacion_es": "1 balboa = 100 centésimos. 50 centésimos son medio balboa 🪙",
+      "pista_es": "Es un número redondo",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "aceptadas": [
+        "cien"
+      ]
+    },
+    {
+      "id": "sp26",
+      "subtema": "otros",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "La flor del Espíritu Santo es una orquídea blanca.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Es una orquídea color marfil y en el centro parece una paloma 🕊️",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "sp27",
+      "subtema": "otros",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El águila harpía vive en el desierto.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Vive en las selvas de Darién, Chagres y Bocas del Toro 🌳",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "sp28",
+      "subtema": "otros",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué tienen en común el águila harpía y la flor del Espíritu Santo?",
+      "opciones": [
+        "Están en peligro de extinción",
+        "Son de color rojo",
+        "Viven en el mar"
+      ],
+      "correcta": "Están en peligro de extinción",
+      "explicacion_es": "Las dos están en peligro de extinción. ¡Hay que cuidarlas! 💚",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "azul de la Bandera",
+      "es": "Conservador",
+      "aceptadas": [
+        "partido conservador",
+        "conservador"
+      ]
+    },
+    {
+      "en": "rojo de la Bandera",
+      "es": "Liberal",
+      "aceptadas": [
+        "partido liberal",
+        "liberal"
+      ]
+    },
+    {
+      "en": "blanco de la Bandera",
+      "es": "paz",
+      "aceptadas": [
+        "la paz"
+      ]
+    },
+    {
+      "en": "estrella roja",
+      "es": "autoridad y ley",
+      "aceptadas": [
+        "autoridad",
+        "la ley",
+        "ley",
+        "la autoridad y la ley"
+      ]
+    },
+    {
+      "en": "estrella azul",
+      "es": "pureza",
+      "aceptadas": [
+        "honestidad",
+        "pureza y honestidad"
+      ]
+    },
+    {
+      "en": "pala y azadón",
+      "es": "trabajo",
+      "aceptadas": [
+        "el trabajo"
+      ]
+    },
+    {
+      "en": "cornucopia",
+      "es": "riqueza",
+      "aceptadas": [
+        "la riqueza"
+      ]
+    },
+    {
+      "en": "rueda con alas",
+      "es": "progreso",
+      "aceptadas": [
+        "el progreso"
+      ]
+    },
+    {
+      "en": "estrellas del Escudo",
+      "es": "provincias",
+      "aceptadas": [
+        "las provincias"
+      ]
+    },
+    {
+      "en": "balboa",
+      "es": "moneda",
+      "aceptadas": [
+        "la moneda"
+      ]
+    },
+    {
+      "en": "pollera",
+      "es": "traje típico",
+      "aceptadas": [
+        "vestido típico",
+        "traje tipico",
+        "vestido"
+      ]
+    },
+    {
+      "en": "águila harpía",
+      "es": "ave nacional",
+      "aceptadas": [
+        "el ave nacional",
+        "ave"
+      ]
+    }
+  ]
+}
