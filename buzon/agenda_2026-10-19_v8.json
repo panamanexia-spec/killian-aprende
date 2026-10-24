@@ -760,44 +760,48 @@
       "evaluacion": "sumativa",
       "tema": "soc-simbolos-patrios",
       "en_casa": [
-        "Copiar a mano, en orden, las partes del formal (de la portada a la hoja de evaluación)"
+        "Copiar el formal a mano, UNA hoja por parte, en este orden: portada, índice, 1. Resumen … 10. Hoja de evaluación"
       ],
-      "detalle": "Investigación Formal de Historia, Trimestre I. Profesora Yessi Pedroza. Tema: Lección 21 «Manifestaciones culturales panameñas» – los símbolos patrios de Panamá. El texto completo también está en el documento «Formal de Historia – Símbolos patrios de Panamá (Killian)».",
+      "detalle": "Investigación Formal de Historia, Trimestre I. Profesora Yessi Pedroza. Tema: Lección 21 «Manifestaciones culturales panameñas» – los símbolos patrios de Panamá.",
       "copiar": {
-        "instrucciones_mama": "Una parte por hoja, en el orden del índice. Títulos de colores y letra clara (en el formal anterior perdió puntos en presentación). Si se cansa, sigue mañana desde la parte donde quedó: los checks se guardan.",
+        "instrucciones_mama": "Igual que la plantilla del colegio: cada «Hoja N» va en una hoja aparte, en ese orden (portada, índice, y cada parte del índice en su propia hoja). La Recopilación de datos (hoja 9) puede ocupar varias hojas. Títulos claros y letra bonita. Si se cansa, sigue mañana: los checks se guardan.",
         "partes": [
           {
-            "titulo": "Portada",
-            "texto": "Tema: Los símbolos patrios de Panamá\nNombre: Killian\nGrado: 3.° Euclides",
-            "dibujo": "Escribe esto en los espacios de la portada y dibuja la bandera de Panamá."
+            "titulo": "Hoja 1 – Portada",
+            "texto": "Saint George International\nSchool of Panama\nInvestigación Formal de Historia\nTrimestre I\nTema: Los símbolos patrios de Panamá\nNombre: Killian ______________________\nProfesora: Yessi Pedroza\nGrado: 3.° Euclides\nAño lectivo: 2026",
+            "dibujo": "Llena la portada: escribe tu apellido después de Killian."
           },
           {
-            "titulo": "1. Resumen",
-            "texto": "En esta investigación aprendí sobre los símbolos patrios de Panamá: la Bandera, el Escudo de Armas y el Himno Nacional. También conocí otros símbolos de identidad nacional: la flor del Espíritu Santo, el balboa, la pollera y el águila harpía. Leí mi libro de texto y busqué información en internet con ayuda de mi mamá. Descubrí que cada color, dibujo y palabra de nuestros símbolos tiene un significado especial. Los símbolos nos unen a todos los panameños y por eso debemos respetarlos."
+            "titulo": "Hoja 2 – Índice",
+            "texto": "INDICE\nContenido\n1. Resumen\n2. Introducción\n3. Problema\n4. Hipótesis de Trabajo\n5. Objetivos\n5.1 Objetivos Generales\n5.2 Objetivos Específicos\n6. Técnica Analítica\n7. Recopilación de Datos\n8. Conclusiones\n9. Referencias\n10. Hoja de evaluación (Método Científico)"
           },
           {
-            "titulo": "2. Introducción",
-            "texto": "Los símbolos de identidad nacional son representaciones que distinguen a un país y representan su nacionalidad. En Panamá, los símbolos patrios son la Bandera, el Escudo de Armas y el Himno Nacional. La Ley 34 de 1949 los estableció como símbolos de la Nación.\nEscogí este tema porque en noviembre celebramos las fiestas patrias. El 3 de noviembre recordamos la separación de Panamá de Colombia en 1903, y el 4 de noviembre es el Día de los Símbolos Patrios. En este trabajo explico qué son nuestros símbolos, quién los creó y qué significan."
+            "titulo": "Hoja 3 – 1. Resumen",
+            "texto": "1. Resumen\nEn esta investigación aprendí sobre los símbolos patrios de Panamá: la Bandera, el Escudo de Armas y el Himno Nacional. También conocí otros símbolos de identidad nacional: la flor del Espíritu Santo, el balboa, la pollera y el águila harpía.\nLeí mi libro de texto y busqué información en internet con ayuda de mi mamá. Descubrí que cada color, dibujo y palabra de nuestros símbolos tiene un significado especial. Los símbolos nos unen a todos los panameños y por eso debemos respetarlos."
           },
           {
-            "titulo": "3. Problema",
-            "texto": "¿Cuáles son los símbolos patrios y los otros símbolos de identidad de Panamá, y qué significan?\nMuchos niños cantan el Himno y saludan la Bandera todos los lunes, pero no siempre saben qué significan sus colores, sus estrellas o los dibujos del Escudo. Si no conocemos su significado, es más difícil valorarlos."
+            "titulo": "Hoja 4 – 2. Introducción",
+            "texto": "2. Introducción\nLos símbolos de identidad nacional son representaciones que distinguen a un país y representan su nacionalidad. En Panamá, los símbolos patrios son la Bandera, el Escudo de Armas y el Himno Nacional. La Ley 34 de 1949 los estableció como símbolos de la Nación.\nEscogí este tema porque en noviembre celebramos las fiestas patrias. El 3 de noviembre recordamos la separación de Panamá de Colombia en 1903, y el 4 de noviembre es el Día de los Símbolos Patrios. En este trabajo explico qué son nuestros símbolos, quién los creó y qué significan."
           },
           {
-            "titulo": "4. Hipótesis de trabajo",
-            "texto": "Si los niños conocen la historia y el significado de los símbolos patrios, entonces los van a respetar y a valorar más como parte de su identidad panameña."
+            "titulo": "Hoja 5 – 3. Problema",
+            "texto": "3. Problema\n¿Cuáles son los símbolos patrios y los otros símbolos de identidad de Panamá, y qué significan?\nMuchos niños cantan el Himno y saludan la Bandera todos los lunes, pero no siempre saben qué significan sus colores, sus estrellas o los dibujos del Escudo. Si no conocemos su significado, es más difícil valorarlos."
           },
           {
-            "titulo": "5. Objetivos",
-            "texto": "5.1 Objetivo general\nConocer los símbolos patrios y los otros símbolos de identidad nacional de Panamá, su historia y su significado.\n5.2 Objetivos específicos\n1. Identificar los tres símbolos patrios: la Bandera, el Escudo y el Himno Nacional.\n2. Explicar el significado de los colores y las estrellas de la Bandera.\n3. Describir las partes del Escudo de Armas y lo que representa cada una.\n4. Nombrar a las personas que crearon nuestros símbolos patrios.\n5. Reconocer otros símbolos de identidad: la flor del Espíritu Santo, el balboa, la pollera y el águila harpía."
+            "titulo": "Hoja 6 – 4. Hipótesis de Trabajo",
+            "texto": "4. Hipótesis de Trabajo\nSi los niños conocen la historia y el significado de los símbolos patrios, entonces los van a respetar y a valorar más como parte de su identidad panameña."
           },
           {
-            "titulo": "6. Técnica analítica",
-            "texto": "Usé la investigación documental. Estos fueron mis pasos:\n1. Lectura: leí la Lección 21 de mi libro de Ciencias Sociales, «Manifestaciones culturales panameñas».\n2. Búsqueda en internet: con ayuda de mi mamá, busqué datos nuevos en páginas de periódicos y de la Embajada de Panamá.\n3. Fichas: anoté en una ficha cada símbolo, quién lo creó y qué significa.\n4. Tabla y línea de tiempo: ordené la información por fechas para entenderla mejor.\n5. Dibujos: dibujé la Bandera, el Escudo y los otros símbolos para explicarlos mejor.\n6. Comparación: comparé lo que aprendí con mi hipótesis para escribir las conclusiones."
+            "titulo": "Hoja 7 – 5. Objetivos",
+            "texto": "5. Objetivos\n5.1 Objetivo General\nConocer los símbolos patrios y los otros símbolos de identidad nacional de Panamá, su historia y su significado.\n5.2 Objetivos Específicos\n1. Identificar los tres símbolos patrios: la Bandera, el Escudo y el Himno Nacional.\n2. Explicar el significado de los colores y las estrellas de la Bandera.\n3. Describir las partes del Escudo de Armas y lo que representa cada una.\n4. Nombrar a las personas que crearon nuestros símbolos patrios.\n5. Reconocer otros símbolos de identidad: la flor del Espíritu Santo, el balboa, la pollera y el águila harpía."
           },
           {
-            "titulo": "7. Recopilación de datos – La Bandera",
-            "texto": "La Bandera fue el primer símbolo patrio. La diseñó Don Manuel E. Amador T., y la confeccionaron María de la Ossa de Amador y Angélica Bergamota de De la Ossa. Es un rectángulo dividido en cuatro cuarteles con dos estrellas. Se izó por primera vez en 1903, después de la separación de Colombia.",
+            "titulo": "Hoja 8 – 6. Técnica Analítica",
+            "texto": "6. Técnica Analítica\nUsé la investigación documental. Estos fueron mis pasos:\n1. Lectura: leí la Lección 21 de mi libro de Ciencias Sociales, «Manifestaciones culturales panameñas».\n2. Búsqueda en internet: con ayuda de mi mamá, busqué datos nuevos en páginas de periódicos y de la Embajada de Panamá.\n3. Fichas: anoté en una ficha cada símbolo, quién lo creó y qué significa.\n4. Tabla y línea de tiempo: ordené la información por fechas para entenderla mejor.\n5. Dibujos: dibujé la Bandera, el Escudo y los otros símbolos para explicarlos mejor.\n6. Comparación: comparé lo que aprendí con mi hipótesis para escribir las conclusiones."
+          },
+          {
+            "titulo": "Hoja 9 – 7. Recopilación de Datos · La Bandera Nacional",
+            "texto": "7. Recopilación de Datos\nLa Bandera Nacional\nLa Bandera fue el primer símbolo patrio. La diseñó Don Manuel E. Amador T., y la confeccionaron María de la Ossa de Amador y Angélica Bergamota de De la Ossa. Es un rectángulo dividido en cuatro cuarteles con dos estrellas. Se izó por primera vez en 1903, después de la separación de Colombia.\nJuramento a la Bandera (de Ernestina Sucre): «Bandera panameña: juro a Dios y a la Patria, amarte, respetarte y defenderte como símbolo sagrado de nuestra Nación».",
             "tabla": [
               [
                 "Parte de la Bandera",
@@ -824,15 +828,11 @@
                 "La autoridad y la ley"
               ]
             ],
-            "dibujo": "Dibuja la Bandera al lado de la tabla."
+            "dibujo": "Dibuja la Bandera de Panamá."
           },
           {
-            "titulo": "7. Juramento a la Bandera",
-            "texto": "El Juramento a la Bandera fue escrito por Ernestina Sucre: «Bandera panameña: juro a Dios y a la Patria, amarte, respetarte y defenderte como símbolo sagrado de nuestra Nación»."
-          },
-          {
-            "titulo": "7. El Escudo de Armas",
-            "texto": "El Escudo lo ideó Don Nicanor Villalaz y lo dibujó artísticamente Don Max Lemm.\nDato de internet: el Escudo ahora tiene 10 estrellas y antes tenía 9. Se agregó una estrella porque en 2014 se creó la décima provincia, Panamá Oeste (Ley 119 de 2013).",
+            "titulo": "Hoja 9 – 7. Recopilación de Datos · El Escudo de Armas",
+            "texto": "El Escudo de Armas\nEl Escudo lo ideó Don Nicanor Villalaz y lo dibujó artísticamente Don Max Lemm. Ahora tiene 10 estrellas; antes tenía 9. Se agregó una estrella porque en 2014 se creó la décima provincia, Panamá Oeste (Ley 119 de 2013).",
             "tabla": [
               [
                 "Parte del Escudo",
@@ -874,11 +874,12 @@
             "dibujo": "Dibuja el Escudo con colores."
           },
           {
-            "titulo": "7. El Himno Nacional",
-            "texto": "El Himno habla de las luchas de los panameños para alcanzar la libertad. La letra la escribió Jerónimo de la Ossa y la música la compuso Santos Jorge. Su coro empieza: «Alcanzamos por fin la victoria, en el campo feliz de la unión»."
+            "titulo": "Hoja 9 – 7. Recopilación de Datos · El Himno Nacional",
+            "texto": "El Himno Nacional\nEl Himno habla de las luchas de los panameños para alcanzar la libertad. La letra la escribió Jerónimo de la Ossa y la música la compuso Santos Jorge. Su coro empieza: «Alcanzamos por fin la victoria, en el campo feliz de la unión»."
           },
           {
-            "titulo": "7. Otros símbolos de identidad nacional",
+            "titulo": "Hoja 9 – 7. Recopilación de Datos · Otros símbolos de identidad nacional",
+            "texto": "Otros símbolos de identidad nacional",
             "tabla": [
               [
                 "Símbolo",
@@ -905,11 +906,11 @@
                 "El Ave Nacional (Ley 18 de 2002)",
                 "Vive en Darién, Chagres y Bocas del Toro; está en peligro de extinción"
               ]
-            ],
-            "dibujo": "Dibuja la flor y el águila harpía pequeñitas."
+            ]
           },
           {
-            "titulo": "7. Línea de tiempo",
+            "titulo": "Hoja 9 – 7. Recopilación de Datos · Línea de tiempo",
+            "texto": "Línea de tiempo",
             "tabla": [
               [
                 "Año",
@@ -939,21 +940,20 @@
                 "2014",
                 "El Escudo pasa a tener 10 estrellas por la provincia de Panamá Oeste"
               ]
-            ],
-            "dibujo": "Hazla como una línea con flechas y un dibujito en cada año."
+            ]
           },
           {
-            "titulo": "8. Conclusiones",
-            "texto": "1. Los símbolos patrios de Panamá son la Bandera, el Escudo de Armas y el Himno Nacional.\n2. Cada color, estrella y dibujo tiene un significado: la Bandera habla de paz entre los partidos, y el Escudo habla de trabajo, riqueza y progreso.\n3. También tenemos otros símbolos de identidad, como la flor del Espíritu Santo, el balboa, la pollera y el águila harpía. Dos de ellos están en peligro de extinción y debemos cuidarlos.\n4. Mi hipótesis se cumplió: ahora que conozco su historia, respeto más nuestros símbolos y me siento orgulloso de ser panameño."
+            "titulo": "Hoja 10 – 8. Conclusiones",
+            "texto": "8. Conclusiones\n1. Los símbolos patrios de Panamá son la Bandera, el Escudo de Armas y el Himno Nacional.\n2. Cada color, estrella y dibujo tiene un significado: la Bandera habla de paz entre los partidos, y el Escudo habla de trabajo, riqueza y progreso.\n3. También tenemos otros símbolos de identidad, como la flor del Espíritu Santo, el balboa, la pollera y el águila harpía. Dos de ellos están en peligro de extinción y debemos cuidarlos.\n4. Mi hipótesis se cumplió: ahora que conozco su historia, respeto más nuestros símbolos y me siento orgulloso de ser panameño."
           },
           {
-            "titulo": "9. Referencias",
-            "texto": "Libro de Ciencias Sociales, 3.er grado, Editorial Susaeta. Área 4, Lección 21: «Manifestaciones culturales panameñas».\nEmbajada de Panamá. Símbolos patrios. embassyofpanama.org\nLa Estrella de Panamá. ¿Por qué el 4 de noviembre se celebra el Día de los Símbolos Patrios? laestrella.com.pa\nLa Estrella de Panamá. Ologwagdi y la crónica del escudo de las diez estrellas. laestrella.com.pa\nWikipedia. Peristeria elata (flor del Espíritu Santo). wikipedia.org"
+            "titulo": "Hoja 11 – 9. Referencias",
+            "texto": "9. Referencias\nLibro de Ciencias Sociales, 3.er grado, Editorial Susaeta. Área 4, Lección 21: «Manifestaciones culturales panameñas».\nEmbajada de Panamá. Símbolos patrios. embassyofpanama.org/patriotic-symbols\nLa Estrella de Panamá. ¿Por qué el 4 de noviembre se celebra el Día de los Símbolos Patrios? laestrella.com.pa\nLa Estrella de Panamá. Ologwagdi y la crónica del escudo de las diez estrellas. laestrella.com.pa\nWikipedia. Peristeria elata (flor del Espíritu Santo). wikipedia.org"
           },
           {
-            "titulo": "10. Hoja de evaluación",
-            "texto": "Hoja de evaluación (Método Científico)",
-            "dibujo": "No se copia: pon la hoja de evaluación del colegio al final del folder."
+            "titulo": "Hoja 12 – 10. Hoja de evaluación (Método Científico)",
+            "texto": "10. Hoja de evaluación (Método Científico)",
+            "dibujo": "Aquí va la hoja de evaluación del colegio (sin llenar)."
           }
         ]
       }
@@ -1046,6 +1046,6 @@
     "23/10 Sumativa: Culture and Value – trabajo escrito a mano (2 párrafos de 5 líneas) sobre líderes tradicionales y presidentes + una imagen mediana.",
     "23/10 Sumativa: Math – sustentación del formal (Math + Science): sumas y restas de 2 y 3 cifras.",
     "Todos los días: libro, cuaderno, cartuchera, dispositivo cargado y cargador.",
-    "23/10 Formal de Historia (símbolos patrios): copiarlo hoy en «Para copiar». Falta saber la fecha de entrega y sustentación."
+    "23/10 Formal de Historia (símbolos patrios): copiarlo hoy en «Para copiar», una hoja por parte. Falta saber la fecha de entrega y sustentación."
   ]
 }
