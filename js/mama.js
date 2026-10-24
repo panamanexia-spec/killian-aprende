@@ -211,7 +211,9 @@ function pinGo(){
     else { pinTries++; if(pinTries >= 5){ pinLock = Date.now() + 30000; pinTries = 0; pinMsg = "Demasiados intentos. Espera 30 segundos."; } else pinMsg = "PIN incorrecto."; render(); }
   });
 }
+var MAS_VIEWS = {colegio:1, charlas:1, temas:1, weeks:1, import:1, voces:1};   /* pantallas que viven dentro de «Más opciones» */
 function momHeader(title, backAct, backTxt){
+  if(backAct === "mom-go" && MAS_VIEWS[momView]) return '<header class="top"><button class="link-btn" data-act="mom-go" data-v="mas" type="button">← Más opciones</button><b class="sec-title">'+esc(title)+'</b><span></span></header>';
   if(MAMA && (!backAct || backAct === "home")) return '<header class="top"><span></span><b class="sec-title">'+esc(title)+'</b><span></span></header>';
   return '<header class="top"><button class="link-btn" data-act="'+(backAct||"home")+'" type="button">'+(backTxt||"← Inicio")+'</button><b class="sec-title">'+esc(title)+'</b><span></span></header>';
 }
@@ -251,6 +253,7 @@ function renderMom(){
     case "colegio": return renderColegio();
     case "salud": return renderSalud();
     case "estrellas": return renderEstrellasMom();
+    case "mas": return renderMas();
     default: return renderMomMenu();
   }
 }
@@ -357,9 +360,10 @@ function renderParaCopiar(){
 /* ---- Ajustar estrellas: mamá puede quitarle estrellas (y devolverlas si fue un error) ---- */
 var qf = {n:"", why:""};
 function renderEstrellasMom(){
-  var h = momHeader("Ajustar estrellas", "mom-go", "← Zona de mamá"), L = quitList();
+  var h = momHeader("Estrellas y premios", "mom-go", "← Zona de mamá"), L = quitList();
   h += (momNote ? '<p class="good-note">' + esc(momNote) + '</p>' : '') +
     '<section class="card mom"><div class="score" style="text-align:center">⭐ ' + starsAvail() + '</div><p class="small" style="text-align:center">Estrellas que tiene ahora. Ganó ' + starCount() + ' en total' + (spentStars() ? ', canjeó ' + spentStars() : '') + (quitStars() ? ' y le quitaste ' + quitStars() : '') + '.</p></section>' +
+    '<button class="btn btn-sun" type="button" data-act="mom-go" data-v="prizes">🎁 Premios que puede canjear</button>' +
     '<section class="card mom"><h2 class="sec-title">Quitar estrellas</h2><p class="small">Para que sus estrellas reflejen cómo le va en los exámenes del colegio. Killian no ve ningún mensaje feo: solo ve su total.</p>' +
     '<div class="stack"><button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="1">− 1 ⭐</button><button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="3">− 3 ⭐</button>' +
     '<button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="5">− 5 ⭐</button><button class="btn btn-ghost" type="button" data-act="qs-quick" data-n="10">− 10 ⭐</button></div>' +
@@ -498,25 +502,26 @@ function renderMomMenu(){
   var notas = (S.agenda && S.agenda.notas) || [], nal = computeReport().alertas.filter(function(a){ return a.n === "warn"; }).length;
   var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
     '<section class="momgrid">' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Progreso y análisis' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Cómo va Killian' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="notas"><span class="big">📌</span>Notas' + (notas.length ? '<span class="small">' + (notasPend() ? notasPend() + ' sin marcar' : 'todo marcado') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="tareas"><span class="big">📖</span>Detalle de tareas</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="estrellas"><span class="big">⭐</span>Ajustar estrellas</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="salud"><span class="big">🩺</span>Salud de la página</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="colegio"><span class="big">🏫</span>Notas del colegio</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="registro"><span class="big">✅</span>Registro de estudio</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="paracopiar"><span class="big">📝</span>Para copiar</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio ('+S.temas.length+')</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="prizes"><span class="big">🎁</span>Premios</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="registro"><span class="big">✅</span>Registro de estudio</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="estrellas"><span class="big">⭐</span>Estrellas y premios</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="asks"><span class="big">❓</span>Preguntas de Killian (' + askList().length + ')</button>' +
-    '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button>' +
-    '<button class="tile" type="button" data-act="go-screen" data-s="games"><span class="big">🎮</span>Probar los juegos</button></section>';
-  h += '<p class="small" style="text-align:center">El panel de progreso y análisis llega en una próxima etapa.</p>';
+    '<button class="tile" type="button" data-act="mom-go" data-v="mas"><span class="big">⚙️</span>Más opciones</button></section>';
   return h + footer();
+}
+function renderMas(){
+  var h = momHeader("Más opciones", "mom-go", "← Zona de mamá");
+  return h + '<section class="momgrid">' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="colegio"><span class="big">🏫</span>Notas del colegio</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="charlas"><span class="big">🎤</span>Charlas (' + S.charlas.length + ')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="temas"><span class="big">📚</span>Temas de estudio (' + S.temas.length + ')</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="weeks"><span class="big">📋</span>Agenda y materiales</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="import"><span class="big">📥</span>Importar agenda o tema</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="voces"><span class="big">🔊</span>Voces del aparato</button>' +
+    '<button class="tile" type="button" data-act="mom-go" data-v="pin"><span class="big">🔑</span>Cambiar PIN</button></section>' + footer();
 }
 function renderImport(){
   var h = momHeader("Importar", "mom-go", "← Zona de mamá") + (S.agenda === null ? '' : '');

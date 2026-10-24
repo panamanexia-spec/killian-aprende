@@ -194,12 +194,53 @@ function vbars(cols, unit){
 function stat(n, label, cls){ return '<div class="stat ' + (cls || "") + '"><b>' + n + '</b><span>' + label + '</span></div>'; }
 
 /* ---------------------------------------------------------------- pantalla */
+function levelOf(x){
+  var real = bestReal(x.id), any = x.mejor;
+  if(real >= 80 || aprTs(x.id)) return {e:"🟢", t:"¡Listo! Ya sacó 80 o más en el Examen real."};
+  if(real >= 0) return real >= 60 ? {e:"🟡", t:"Va mejorando. Con un poco más de práctica llega a 80."} : {e:"🔴", t:"Necesita practicar más antes del examen."};
+  if(any >= 80) return {e:"🟡", t:"Va bien entrenando. Falta que haga el 📝 Examen real."};
+  return any >= 60 ? {e:"🟡", t:"Va mejorando. Sigue entrenando."} : {e:"🔴", t:"Necesita practicar más."};
+}
+/* Pantalla de progreso en palabras sencillas: lo importante arriba; las gráficas y porcentajes quedan en «Ver más detalles». */
 function renderProgress(){
-  var R = computeReport(), h = momHeader("Progreso y análisis", "mom-go", "← Zona de mamá");
-  var al = R.alertas.length ? '<ul class="alerts">' + R.alertas.map(function(a){ return '<li class="al ' + a.n + '"><span aria-hidden="true">' + (a.n === "warn" ? "⚠️" : a.n === "good" ? "🌟" : "ℹ️") + '</span><span>' + esc(a.t) + '</span></li>'; }).join("") + '</ul>' : '<p class="note">Todo tranquilo por ahora. 😊</p>';
-  h += '<section class="card mom"><h2 class="sec-title">🔔 Alertas</h2>' + al + '</section>';
+  var R = computeReport(), h = momHeader("Cómo va Killian", "mom-go", "← Zona de mamá"), w = R.semana;
+  /* 1. En pocas palabras */
+  h += '<section class="card mom"><h2 class="sec-title">👋 En pocas palabras</h2>';
+  if(w){
+    var pct = w.total ? Math.round(w.hechas / w.total * 100) : 0;
+    h += '<p class="big-line">Esta semana hizo <b>' + w.hechas + ' de ' + w.total + '</b> tareas.</p><div class="bar"><i style="width:' + pct + '%"></i></div>' +
+      '<p>' + (w.vencidas_pendientes ? '⏰ Le ' + (w.vencidas_pendientes === 1 ? 'falta <b>1</b> de hoy o de días anteriores.' : 'faltan <b>' + w.vencidas_pendientes + '</b> de hoy o de días anteriores.') : '✅ Está al día con lo de hoy.') + '</p>';
+  } else h += '<p class="note">Todavía no hay una agenda cargada.</p>';
+  h += '<p>📆 Practicó <b>' + R.dias_estudiados + ' de los últimos 7 días</b>.</p><p>⭐ Tiene <b>' + starsAvail() + '</b> estrellas.</p></section>';
+  /* 2. Alertas */
+  if(R.alertas.length) h += '<section class="card mom"><h2 class="sec-title">🔔 Para tu atención</h2><ul class="alerts">' + R.alertas.slice(0, 6).map(function(a){ return '<li class="al ' + a.n + '"><span aria-hidden="true">' + (a.n === "warn" ? "⚠️" : a.n === "good" ? "🌟" : "ℹ️") + '</span><span>' + esc(a.t) + '</span></li>'; }).join("") + '</ul></section>';
   var np = notasPend();
   if(((S.agenda && S.agenda.notas) || []).length) h += '<button class="btn btn-ghost" type="button" data-act="mom-go" data-v="notas">📌 Notas para mamá' + (np ? ' (' + np + ' sin marcar)' : ' ✓') + '</button>';
+  /* 3. Cómo va en cada tema */
+  h += '<section class="card mom"><h2 class="sec-title">📚 Cómo va en cada tema</h2>';
+  if(!R.temas.length) h += '<p class="note">Todavía no ha hecho ningún examen ni práctica.</p>';
+  else {
+    h += '<p class="small">🟢 listo · 🟡 va mejorando · 🔴 necesita práctica. Las notas son sobre 100.</p>' + R.temas.map(function(x){
+      var lv = levelOf(x), nr = realCount(x.id);
+      return '<div class="tevo"><div class="thead"><b>' + lv.e + ' ' + esc(x.tema) + '</b></div><p class="small" style="color:var(--ink)">' + lv.t + '<br>Mejor nota: <b>' + x.mejor + ' de 100</b> · Último intento: <b>' + x.ultima + '</b> · ' + (nr ? nr + (nr === 1 ? ' examen real' : ' exámenes reales') : 'sin examen real todavía') + (x.fecha_examen ? '<br>🗓️ Examen del colegio: ' + esc(capFirst(dayLabel(x.fecha_examen))) : '') + '</p></div>';
+    }).join("");
+  }
+  h += '</section>';
+  /* 4. Colegio vs examen real */
+  var sl = schList();
+  h += '<section class="card mom"><h2 class="sec-title">🏫 Nota del colegio y 📝 Examen real</h2>' + (sl.length ? sl.map(function(x){
+    var br = x.tid ? bestReal(x.tid) : -1, n = x.tid ? realCount(x.tid) : 0;
+    return '<p class="wordrow"><span><b>' + esc(schTitle(x)) + '</b><br><span class="small">' + esc(capFirst(dayLabel(x.fecha))) + '</span></span><span>🏫 colegio <b>' + x.nota + '</b><br>📝 en la página ' + (br >= 0 ? '<b>' + br + '</b>' : 'aún sin examen real') + '</span></p>';
+  }).join("") + '<p class="small">Si en la página saca más que en el colegio, hay que practicar más el Examen real.</p>' : '<p class="small">Anota las notas del colegio en Zona de mamá → Más opciones → Notas del colegio.</p>') + '</section>';
+  /* 5. Lo que más le cuesta */
+  var subFail = R.subtemas.filter(function(s){ return s.falladas > 0; }).slice(0, 3);
+  h += '<section class="card mom"><h2 class="sec-title">🎯 Lo que más le cuesta</h2>' +
+    (subFail.length ? subFail.map(function(s){ return '<p>• En <b>«' + esc(s.nombre) + '»</b> (' + esc(s.tema) + ') se equivocó en <b>' + s.falladas + ' de ' + s.vistas + '</b> preguntas.</p>'; }).join("") : (R.subtemas.length ? '<p class="goodline">🌟 No se ha equivocado en ningún subtema. ¡Muy bien!</p>' : '<p class="note">Aparecerá cuando haga más intentos.</p>')) +
+    (R.palabras_falladas.length ? '<p>🔤 Palabras que más falla: ' + R.palabras_falladas.slice(0, 5).map(function(w){ return '<b lang="en">' + esc(w.en) + '</b> (' + esc(w.es) + ')'; }).join(", ") + '</p>' : '') + '</section>';
+  /* 6. Qué hacer ahora */
+  h += '<section class="card mom"><h2 class="sec-title">💡 Qué hacer ahora</h2><ul class="recs">' + R.recomendaciones.slice(0, 3).map(function(x){ return '<li>' + esc(x) + '</li>'; }).join("") + '</ul></section>';
+  /* 7. Más detalles (gráficas y porcentajes) */
+  h += '<details class="card mom"><summary><b>📊 Ver más detalles (gráficas)</b></summary>';
   /* resumen de la semana */
   var w = R.semana;
   h += '<section class="card mom"><h2 class="sec-title">📅 Resumen de la semana</h2>';
@@ -223,12 +264,6 @@ function renderProgress(){
       }).join("");
   }
   h += '</section>';
-  /* notas del colegio vs examen real */
-  var sl = schList();
-  h += '<section class="card mom"><h2 class="sec-title">🏫 Colegio vs 📝 Examen real</h2>' + (sl.length ? sl.map(function(x){
-    var br = x.tid ? bestReal(x.tid) : -1, n = x.tid ? realCount(x.tid) : 0;
-    return '<p class="wordrow"><span><b>' + esc(schTitle(x)) + '</b><br><span class="small">' + esc(capFirst(dayLabel(x.fecha))) + '</span></span><span>🏫 <b>' + x.nota + '</b> · 📝 ' + (br >= 0 ? '<b>' + br + '</b> (' + n + (n === 1 ? ' examen' : ' exámenes') + ')' : 'sin examen real') + '</span></p>';
-  }).join("") : '<p class="small">Anota las notas del colegio en Zona de mamá → Notas del colegio.</p>') + '</section>';
   /* deficiencias */
   h += '<section class="card mom"><h2 class="sec-title">🎯 Dónde le cuesta más</h2>';
   var subFail = R.subtemas.filter(function(s){ return s.falladas > 0; });
@@ -240,11 +275,11 @@ function renderProgress(){
     '<h3 class="sec-title">Palabras que más busca con el búho</h3>' + (R.palabras_buscadas.length ? '<ul class="wlist">' + R.palabras_buscadas.map(function(w){ return '<li><b lang="en">' + esc(w.en) + '</b> ' + esc(w.es) + ' <span class="small">· ' + plural(w.veces, "vez", "veces") + '</span></li>'; }).join("") + '</ul>' : '<p class="small">Todavía no ha buscado palabras.</p>') +
     '<p class="small">🧠 Palabras aprendidas: <b>' + R.palabras_aprendidas + '</b> · Por practicar: <b>' + R.palabras_por_practicar + '</b></p></section>';
   /* recomendaciones y exportar */
-  h += '<section class="card mom"><h2 class="sec-title">💡 Qué repasar</h2><ul class="recs">' + R.recomendaciones.map(function(x){ return '<li>' + esc(x) + '</li>'; }).join("") + '</ul></section>';
   h += '<section class="card mom"><h2 class="sec-title">📤 Exportar reporte</h2><p>Copia el reporte y pégalo en el chat con Claude para un análisis más profundo y para que te prepare repasos enfocados en lo que le cuesta.</p>' +
     '<div class="stack"><button class="btn btn-sun btn-big" type="button" data-act="rep-copy">📋 Copiar reporte</button><button class="btn btn-ghost" type="button" data-act="rep-download">⬇️ Descargar (.json)</button></div>' +
     (progMsg ? '<p class="good-note" role="status">' + esc(progMsg) + '</p>' : '') +
     '<details><summary>Ver el reporte</summary><textarea id="reptxt" class="repbox" readonly rows="10" spellcheck="false">' + esc(reportText(R)) + '</textarea></details></section>';
+  h += '</details>';
   return h + footer();
 }
 var progMsg = "";
