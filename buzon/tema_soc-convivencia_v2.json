@@ -1,0 +1,964 @@
+{
+  "tipo": "tema",
+  "id": "soc-convivencia",
+  "titulo": "La sociedad y las normas de convivencia",
+  "titulo_es": "La sociedad y las normas de convivencia",
+  "materia": "Ciencias Sociales",
+  "idioma": "es",
+  "fecha_examen": "2026-10-29",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "sociedad",
+    "normas",
+    "tipos",
+    "ejemplos",
+    "cinta",
+    "vias",
+    "conflictos",
+    "acrostico"
+  ],
+  "vocabulario_pregunta_es": "¿Qué tipo de norma es?",
+  "resumen": [
+    {
+      "en": "PARTE 1: La sociedad",
+      "es": "Lee despacito 👇",
+      "emoji": "🟦"
+    },
+    {
+      "en": "Una sociedad es un grupo de personas que se unen para compartir intereses y convivir en armonía.",
+      "es": "Sociedad = agrupación de personas que comparten intereses.",
+      "emoji": "👨‍👩‍👧‍👦"
+    },
+    {
+      "en": "La convivencia es la base de toda sociedad.",
+      "es": "La convivencia se basa en la cooperación, la participación y la solidaridad.",
+      "emoji": "🏘️"
+    },
+    {
+      "en": "PARTE 2: Las normas de convivencia",
+      "es": "Lee despacito 👇",
+      "emoji": "🟩"
+    },
+    {
+      "en": "Las normas de convivencia sirven para respetar los derechos y las libertades de todos.",
+      "es": "Ordenan cómo nos portamos.",
+      "emoji": "📜"
+    },
+    {
+      "en": "Las normas se aprenden primero en el hogar, con papá y mamá.",
+      "es": "Ellos nos enseñan a portarnos bien dentro y fuera de casa.",
+      "emoji": "🏠"
+    },
+    {
+      "en": "Quien no cumple las normas puede ser sancionado.",
+      "es": "Sancionado = recibe un castigo o una multa.",
+      "emoji": "⚠️"
+    },
+    {
+      "en": "PARTE 3: Los 3 tipos de normas",
+      "es": "Truco C-M-J: Cortesía, Mi conciencia, Jueces",
+      "emoji": "🟨"
+    },
+    {
+      "en": "Convencionales: son las reglas de cortesía y urbanidad.",
+      "es": "NO son obligatorias.",
+      "emoji": "👋"
+    },
+    {
+      "en": "Morales: definen lo bueno y lo malo según valores y principios.",
+      "es": "Se respetan por convicción y conciencia (nadie te vigila).",
+      "emoji": "💛"
+    },
+    {
+      "en": "Jurídicas: son las leyes. Las crean las autoridades por medio del poder legislativo.",
+      "es": "Son obligatorias para todos y hay instituciones que aplican sanciones.",
+      "emoji": "⚖️"
+    },
+    {
+      "en": "PARTE 4: Ejemplos de cada tipo",
+      "es": "Lee despacito 👇",
+      "emoji": "🟧"
+    },
+    {
+      "en": "Convencional: saludar con cortesía, dar las gracias.",
+      "es": "Es educación y buenos modales.",
+      "emoji": "👋"
+    },
+    {
+      "en": "Moral: no decir mentiras, no hacer trampa, dar el asiento a los ancianos.",
+      "es": "Es lo que está bien, aunque nadie mire.",
+      "emoji": "💛"
+    },
+    {
+      "en": "Moral: respetar a las personas con capacidades especiales.",
+      "es": "Ojo: esta NO es convencional, es moral.",
+      "emoji": "💛"
+    },
+    {
+      "en": "Jurídica: respetar las señales de tránsito, tener licencia para conducir, respetar el límite de velocidad.",
+      "es": "Son leyes: si no las cumples, hay multa.",
+      "emoji": "⚖️"
+    },
+    {
+      "en": "Jurídica: no pescar camarones en tiempo de veda.",
+      "es": "Veda = tiempo en que la ley prohíbe pescar.",
+      "emoji": "🦐"
+    },
+    {
+      "en": "PARTE 5: La Cinta Costera",
+      "es": "Lee despacito 👇",
+      "emoji": "🟥"
+    },
+    {
+      "en": "La Cinta Costera es una avenida junto al mar en la ciudad de Panamá.",
+      "es": "Es un lugar para convivir.",
+      "emoji": "🌊"
+    },
+    {
+      "en": "En la Cinta Costera las familias caminan, corren, patinan y pasean en bicicleta.",
+      "es": "Hay ciclovías para andar en bicicleta.",
+      "emoji": "🚲"
+    },
+    {
+      "en": "Para las personas con capacidades especiales hay pasos peatonales con rampa.",
+      "es": "Así todos pueden pasear.",
+      "emoji": "♿"
+    },
+    {
+      "en": "PARTE 6: Normas en las vías (tránsito)",
+      "es": "Lee despacito 👇",
+      "emoji": "🟪"
+    },
+    {
+      "en": "La edad mínima para conducir en Panamá es 18 años.",
+      "es": "Y hay que tener licencia.",
+      "emoji": "🚗"
+    },
+    {
+      "en": "Los niños menores de cinco años van en un asiento especial en la parte trasera.",
+      "es": "Nunca adelante.",
+      "emoji": "🧒"
+    },
+    {
+      "en": "El conductor y el pasajero de adelante deben usar el cinturón de seguridad.",
+      "es": "¡Clic! 🔒",
+      "emoji": "🔒"
+    },
+    {
+      "en": "No se puede usar el celular mientras se conduce.",
+      "es": "Es peligroso y está prohibido.",
+      "emoji": "📵"
+    },
+    {
+      "en": "En Panamá se conduce por el lado derecho de la carretera.",
+      "es": "Derecha ➡️",
+      "emoji": "➡️"
+    },
+    {
+      "en": "PARTE 7: Cómo resolver un conflicto",
+      "es": "5 pasos 👇",
+      "emoji": "🟫"
+    },
+    {
+      "en": "Primero identifico el problema.",
+      "es": "¿Qué pasó?",
+      "emoji": "1️⃣"
+    },
+    {
+      "en": "Digo cómo me siento.",
+      "es": "Hablo con calma.",
+      "emoji": "2️⃣"
+    },
+    {
+      "en": "Dejo que los otros expresen lo que necesitan.",
+      "es": "Escucho.",
+      "emoji": "3️⃣"
+    },
+    {
+      "en": "Hacemos una lluvia de ideas y elegimos la mejor.",
+      "es": "Lluvia de ideas = decir muchas soluciones.",
+      "emoji": "4️⃣"
+    },
+    {
+      "en": "Hacemos la solución y vemos cómo salió.",
+      "es": "¿Funcionó?",
+      "emoji": "5️⃣"
+    },
+    {
+      "en": "Cuento: Juan José le quitó la pelota a David y David desordenó el cuarto.",
+      "es": "Les faltó el respeto. Se resolvía hablando: David espera y luego juegan juntos.",
+      "emoji": "⚽"
+    },
+    {
+      "en": "PARTE 8: El acróstico",
+      "es": "Lee despacito 👇",
+      "emoji": "🔤"
+    },
+    {
+      "en": "Un acróstico es un texto donde las primeras letras forman una palabra en vertical.",
+      "es": "Ejemplo: P de Paciencia, A de Amistad, Z de Zapato amigo → PAZ.",
+      "emoji": "✍️"
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "tipos",
+      "emoji": "🚦",
+      "titulo": "Los 3 tipos de normas",
+      "pasos": [
+        "Convencionales = cortesía (saludar). No son obligatorias.",
+        "Morales = conciencia (no mentir). Nadie te vigila.",
+        "Jurídicas = leyes (señales de tránsito). Obligatorias y con sanción."
+      ],
+      "truco": "C-M-J: «Cortesía, Mi conciencia, Jueces»."
+    },
+    {
+      "subtema": "conflictos",
+      "emoji": "🤝",
+      "titulo": "Cómo resolver un problema con un compañero",
+      "pasos": [
+        "¿Cuál es el problema?",
+        "Digo cómo me siento.",
+        "Escucho al otro.",
+        "Lluvia de ideas y elegimos la mejor.",
+        "La hacemos y vemos cómo salió."
+      ]
+    },
+    {
+      "subtema": "ejemplos",
+      "emoji": "🔍",
+      "titulo": "¿Qué tipo de norma es?",
+      "pasos": [
+        "¿Es una ley, con multa o castigo? → jurídica ⚖️",
+        "¿Es de buenos modales (saludar, gracias)? → convencional 👋",
+        "¿Es ser bueno, aunque nadie mire (no mentir, ayudar)? → moral 💛"
+      ],
+      "ejemplo": "«Tener licencia para conducir» → es ley → jurídica.",
+      "truco": "Ley = jurídica · Modales = convencional · Conciencia = moral."
+    },
+    {
+      "subtema": "vias",
+      "emoji": "🚗",
+      "titulo": "Seguridad en el carro",
+      "pasos": [
+        "Para manejar: 18 años y licencia.",
+        "Niños menores de 5: asiento especial atrás.",
+        "Cinturón: conductor y pasajero de adelante.",
+        "Nada de celular al manejar.",
+        "En Panamá se maneja por la derecha."
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco",
+      "pasos": [
+        "Lee la pregunta dos veces.",
+        "Si no sabes, escribe tu mejor idea.",
+        "Al final revisa que todas tengan respuesta."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "s1",
+      "subtema": "sociedad",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué es una sociedad?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Un grupo de personas que se unen para compartir intereses y convivir en armonía",
+        "Un solo niño jugando",
+        "Un edificio grande",
+        "Un juego de mesa"
+      ],
+      "correcta": "Un grupo de personas que se unen para compartir intereses y convivir en armonía",
+      "explicacion_es": "La sociedad es una agrupación de personas que comparten intereses y viven juntas en armonía."
+    },
+    {
+      "id": "s2",
+      "subtema": "sociedad",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la base de toda sociedad?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "La convivencia",
+        "El dinero",
+        "Los carros",
+        "La televisión"
+      ],
+      "correcta": "La convivencia",
+      "explicacion_es": "El libro dice que la convivencia es la base de toda sociedad."
+    },
+    {
+      "id": "s3",
+      "subtema": "sociedad",
+      "tipo": "completar",
+      "pregunta_en": "La convivencia se basa en la cooperación, la participación y la ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "solidaridad",
+      "aceptadas": [],
+      "explicacion_es": "Cooperación, participación y solidaridad: así se vive bien en sociedad.",
+      "pista_es": "Empieza con s… y es ayudar a los demás"
+    },
+    {
+      "id": "s4",
+      "subtema": "normas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Para qué sirven las normas de convivencia?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Para respetar los derechos y las libertades de todos",
+        "Para que nadie juegue",
+        "Para pelear",
+        "Para no ir a la escuela"
+      ],
+      "correcta": "Para respetar los derechos y las libertades de todos",
+      "explicacion_es": "Ordenan la conducta de las personas para respetar los derechos de todos."
+    },
+    {
+      "id": "s5",
+      "subtema": "normas",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Si una persona no cumple las normas de convivencia, puede ser sancionada.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: las normas son un deber, y quien no las cumple puede recibir una sanción."
+    },
+    {
+      "id": "s6",
+      "subtema": "normas",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Dónde se aprenden primero las normas de convivencia?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "En el hogar, con papá y mamá",
+        "En el cine",
+        "En la calle solos",
+        "En los videojuegos"
+      ],
+      "correcta": "En el hogar, con papá y mamá",
+      "explicacion_es": "Las normas se aprenden en casa: los padres enseñan cómo comportarse dentro y fuera de casa."
+    },
+    {
+      "id": "s7",
+      "subtema": "normas",
+      "tipo": "completar",
+      "pregunta_en": "Las normas de convivencia se aprenden en el ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "hogar",
+      "aceptadas": [
+        "casa",
+        "la casa",
+        "el hogar"
+      ],
+      "explicacion_es": "Papá y mamá nos enseñan a comportarnos.",
+      "pista_es": "Donde vives con tu familia 🏠"
+    },
+    {
+      "id": "s8",
+      "subtema": "tipos",
+      "tipo": "unir",
+      "pregunta_en": "Une cada tipo de norma con lo que es.",
+      "instruccion_es": "Une cada norma con su descripción.",
+      "pares": [
+        {
+          "izquierda": "Convencionales",
+          "derecha": "Cortesía y urbanidad, no obligatorias"
+        },
+        {
+          "izquierda": "Morales",
+          "derecha": "Lo bueno y lo malo, por conciencia"
+        },
+        {
+          "izquierda": "Jurídicas",
+          "derecha": "Leyes obligatorias con sanciones"
+        }
+      ],
+      "explicacion_es": "Convencionales = cortesía · Morales = conciencia · Jurídicas = leyes."
+    },
+    {
+      "id": "s9",
+      "subtema": "tipos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué normas NO son obligatorias?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Las convencionales",
+        "Las jurídicas",
+        "Las de tránsito",
+        "Las leyes"
+      ],
+      "correcta": "Las convencionales",
+      "explicacion_es": "Las convencionales (cortesía y urbanidad) no son obligatorias: no hay autoridades que las hagan cumplir."
+    },
+    {
+      "id": "s10",
+      "subtema": "tipos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué normas son obligatorias para todos?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Las jurídicas",
+        "Las convencionales",
+        "Las morales",
+        "Ninguna"
+      ],
+      "correcta": "Las jurídicas",
+      "explicacion_es": "Las jurídicas las hacen las autoridades (poder legislativo) y todos deben cumplirlas."
+    },
+    {
+      "id": "s11",
+      "subtema": "tipos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Las normas morales se respetan por…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "convicción y conciencia",
+        "miedo a la policía",
+        "dinero",
+        "obligación de la ley"
+      ],
+      "correcta": "convicción y conciencia",
+      "explicacion_es": "Las morales no están escritas: las cumplimos porque sabemos que es lo correcto."
+    },
+    {
+      "id": "s12",
+      "subtema": "tipos",
+      "tipo": "completar",
+      "pregunta_en": "Las normas ______ definen lo bueno y lo malo según valores y principios.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "morales",
+      "aceptadas": [
+        "moral"
+      ],
+      "explicacion_es": "Normas morales = valores y principios.",
+      "pista_es": "Empieza con m…"
+    },
+    {
+      "id": "s13",
+      "subtema": "tipos",
+      "tipo": "completar",
+      "pregunta_en": "Las normas ______ las crean las autoridades por medio del poder legislativo.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "jurídicas",
+      "aceptadas": [
+        "juridicas",
+        "jurídica"
+      ],
+      "explicacion_es": "Normas jurídicas = leyes.",
+      "pista_es": "Empieza con j…"
+    },
+    {
+      "id": "s14",
+      "subtema": "tipos",
+      "tipo": "completar",
+      "pregunta_en": "Las reglas de cortesía y urbanidad son normas ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "convencionales",
+      "aceptadas": [
+        "convencional"
+      ],
+      "explicacion_es": "Convencionales: por acuerdo, no obligatorias.",
+      "pista_es": "Empieza con c…"
+    },
+    {
+      "id": "s15",
+      "subtema": "ejemplos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«Respetar las señales de tránsito» es una norma…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "jurídica",
+        "convencional",
+        "moral",
+        "de juego"
+      ],
+      "correcta": "jurídica",
+      "explicacion_es": "Es una ley: si no la cumples hay sanción. 🚦"
+    },
+    {
+      "id": "s16",
+      "subtema": "ejemplos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«Evitar decir mentiras» es una norma…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "moral",
+        "jurídica",
+        "convencional",
+        "de tránsito"
+      ],
+      "correcta": "moral",
+      "explicacion_es": "Es un valor: decir la verdad por conciencia."
+    },
+    {
+      "id": "s17",
+      "subtema": "ejemplos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«Saludar con cortesía» es una norma…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "convencional",
+        "jurídica",
+        "moral",
+        "de tránsito"
+      ],
+      "correcta": "convencional",
+      "explicacion_es": "La cortesía y la urbanidad son normas convencionales. 👋"
+    },
+    {
+      "id": "s18",
+      "subtema": "ejemplos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«Tener licencia para conducir» es una norma…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "jurídica",
+        "moral",
+        "convencional",
+        "de cortesía"
+      ],
+      "correcta": "jurídica",
+      "explicacion_es": "Manejar solo con licencia es una ley obligatoria. 🚗"
+    },
+    {
+      "id": "s19",
+      "subtema": "ejemplos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«Dar el asiento a los ancianos» es una norma…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "moral",
+        "jurídica",
+        "convencional",
+        "de tránsito"
+      ],
+      "correcta": "moral",
+      "explicacion_es": "El libro lo pone como ejemplo de norma moral. 👴"
+    },
+    {
+      "id": "s20",
+      "subtema": "ejemplos",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Evitar la pesca de camarones en tiempo de veda es una norma jurídica.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: es una ley y quien no la cumple recibe sanción. 🦐"
+    },
+    {
+      "id": "s21",
+      "subtema": "ejemplos",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Respetar a las personas con capacidades especiales es una norma convencional.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso: el libro la pone como norma moral."
+    },
+    {
+      "id": "s22",
+      "subtema": "tipos",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En las normas jurídicas existen instituciones que aplican sanciones.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: hay personas e instituciones que sancionan a quien no las cumple."
+    },
+    {
+      "id": "s23",
+      "subtema": "cinta",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué es la Cinta Costera?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Una avenida junto al mar en la ciudad de Panamá",
+        "Un río de Chiriquí",
+        "Una montaña",
+        "Una escuela"
+      ],
+      "correcta": "Una avenida junto al mar en la ciudad de Panamá",
+      "explicacion_es": "Es una avenida que colinda con la playa, con áreas verdes para las familias. 🌊"
+    },
+    {
+      "id": "s24",
+      "subtema": "cinta",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En la Cinta Costera las familias pueden caminar, correr, patinar y pasear en bicicleta.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: tiene ciclovías, áreas verdes y parques. 🚴"
+    },
+    {
+      "id": "s25",
+      "subtema": "cinta",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué tiene la Cinta Costera para las personas con capacidades especiales?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Pasos peatonales con rampa",
+        "Escaleras altas",
+        "Nada",
+        "Piscinas"
+      ],
+      "correcta": "Pasos peatonales con rampa",
+      "explicacion_es": "Tiene pasos peatonales con rampa para que todos puedan pasear."
+    },
+    {
+      "id": "s26",
+      "subtema": "cinta",
+      "tipo": "completar",
+      "pregunta_en": "En la Cinta Costera hay ______ para andar en bicicleta.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "ciclovías",
+      "aceptadas": [
+        "ciclovias",
+        "ciclovía",
+        "ciclovia"
+      ],
+      "explicacion_es": "Ciclovía = carril solo para bicicletas.",
+      "pista_es": "ciclo + vía"
+    },
+    {
+      "id": "s27",
+      "subtema": "vias",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la edad mínima para conducir en Panamá?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "18 años",
+        "10 años",
+        "12 años",
+        "15 años"
+      ],
+      "correcta": "18 años",
+      "explicacion_es": "Según el libro, se puede conducir desde los 18 años."
+    },
+    {
+      "id": "s28",
+      "subtema": "vias",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Dónde deben ir sentados los niños menores de cinco años en el carro?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "En un asiento especial en la parte trasera",
+        "Adelante con el conductor",
+        "Parados",
+        "En el baúl"
+      ],
+      "correcta": "En un asiento especial en la parte trasera",
+      "explicacion_es": "Los niños pequeños van atrás en su asiento especial. 🚸"
+    },
+    {
+      "id": "s29",
+      "subtema": "vias",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Se puede usar el celular mientras se conduce.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso: la regla dice que no se usa el celular al conducir. 📵"
+    },
+    {
+      "id": "s30",
+      "subtema": "vias",
+      "tipo": "completar",
+      "pregunta_en": "El conductor y el pasajero de adelante deben usar el ______ de seguridad.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "cinturón",
+      "aceptadas": [
+        "cinturon",
+        "cinturones"
+      ],
+      "explicacion_es": "Cinturón de seguridad, siempre. 🚗",
+      "pista_es": "Lo que te abrochas en el carro"
+    },
+    {
+      "id": "s31",
+      "subtema": "vias",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En Panamá se conduce por el lado derecho de la carretera.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: el libro dice conducir del lado derecho."
+    },
+    {
+      "id": "s32",
+      "subtema": "conflictos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Cuando hay un problema con un compañero, ¿qué hacemos primero?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Identificar el problema",
+        "Gritar",
+        "Irnos sin hablar",
+        "Empujar"
+      ],
+      "correcta": "Identificar el problema",
+      "explicacion_es": "El primer paso es saber cuál es el problema."
+    },
+    {
+      "id": "s33",
+      "subtema": "conflictos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Después de decir cómo me siento, ¿qué hago?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Dejo que los otros expresen lo que necesitan",
+        "Me burlo",
+        "No escucho",
+        "Me enojo más"
+      ],
+      "correcta": "Dejo que los otros expresen lo que necesitan",
+      "explicacion_es": "Hay que dar oportunidad a que los demás hablen y luego buscar ideas juntos."
+    },
+    {
+      "id": "s34",
+      "subtema": "conflictos",
+      "tipo": "completar",
+      "pregunta_en": "Para solucionar un conflicto hacemos una lluvia de ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "ideas",
+      "aceptadas": [
+        "idea"
+      ],
+      "explicacion_es": "Lluvia de ideas = pensar muchas soluciones juntos. 💡",
+      "pista_es": "Lo que piensas 💭"
+    },
+    {
+      "id": "s35",
+      "subtema": "conflictos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "En el cuento, Juan José le quitó la pelota a David y él desordenó el cuarto. ¿Qué valor les faltó?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "El respeto",
+        "La velocidad",
+        "El dinero",
+        "La fuerza"
+      ],
+      "correcta": "El respeto",
+      "explicacion_es": "Les faltó respetar al otro y hablar. Con respeto y diálogo se resuelve el conflicto."
+    },
+    {
+      "id": "s36",
+      "subtema": "conflictos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo se podía resolver el conflicto de Juan José y David?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Hablando: David espera y luego juegan juntos",
+        "Escondiendo la pelota para siempre",
+        "Peleando",
+        "Llorando"
+      ],
+      "correcta": "Hablando: David espera y luego juegan juntos",
+      "explicacion_es": "Hablar, escuchar y llegar a un acuerdo resuelve los conflictos."
+    },
+    {
+      "id": "s37",
+      "subtema": "acrostico",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué es un acróstico?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Un texto donde las primeras letras forman una palabra en vertical",
+        "Un dibujo de animales",
+        "Un número grande",
+        "Una canción en inglés"
+      ],
+      "correcta": "Un texto donde las primeras letras forman una palabra en vertical",
+      "explicacion_es": "Ejemplo: RESPETO, cada línea empieza con una letra de la palabra."
+    },
+    {
+      "id": "s38",
+      "subtema": "sociedad",
+      "tipo": "completar",
+      "pregunta_en": "Una ______ es una agrupación de personas que comparten intereses.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "sociedad",
+      "aceptadas": [],
+      "explicacion_es": "Sociedad = grupo de personas que conviven.",
+      "pista_es": "s…"
+    },
+    {
+      "id": "s39",
+      "subtema": "sociedad",
+      "tipo": "completar",
+      "pregunta_en": "La ______ es la base de toda sociedad.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "convivencia",
+      "aceptadas": [],
+      "explicacion_es": "Convivir = vivir juntos en armonía.",
+      "pista_es": "con…"
+    },
+    {
+      "id": "s40",
+      "subtema": "normas",
+      "tipo": "completar",
+      "pregunta_en": "Quien no cumple las normas puede ser ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "sancionado",
+      "aceptadas": [
+        "sancionada",
+        "castigado"
+      ],
+      "explicacion_es": "Sancionado = recibe una sanción.",
+      "pista_es": "san…"
+    },
+    {
+      "id": "s41",
+      "subtema": "ejemplos",
+      "tipo": "completar",
+      "pregunta_en": "«No decir mentiras» es una norma ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "moral",
+      "aceptadas": [
+        "morales"
+      ],
+      "explicacion_es": "Por conciencia = moral.",
+      "pista_es": "m…"
+    },
+    {
+      "id": "s42",
+      "subtema": "ejemplos",
+      "tipo": "completar",
+      "pregunta_en": "«Respetar el límite de velocidad» es una norma ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "jurídica",
+      "aceptadas": [
+        "juridica"
+      ],
+      "explicacion_es": "Ley = jurídica.",
+      "pista_es": "j…"
+    },
+    {
+      "id": "s43",
+      "subtema": "vias",
+      "tipo": "completar",
+      "pregunta_en": "La edad mínima para conducir en Panamá es ______ años.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "18",
+      "aceptadas": [
+        "dieciocho"
+      ],
+      "explicacion_es": "Desde los 18 años.",
+      "pista_es": "Más de 15"
+    },
+    {
+      "id": "s44",
+      "subtema": "conflictos",
+      "tipo": "completar",
+      "pregunta_en": "Para resolver un conflicto primero hay que identificar el ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "problema",
+      "aceptadas": [
+        "conflicto"
+      ],
+      "explicacion_es": "Primer paso: ¿cuál es el problema?",
+      "pista_es": "pro…"
+    },
+    {
+      "id": "s45",
+      "subtema": "cinta",
+      "tipo": "completar",
+      "pregunta_en": "La ______ Costera es una avenida junto al mar.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "Cinta",
+      "aceptadas": [
+        "cinta"
+      ],
+      "explicacion_es": "Cinta Costera, en la ciudad de Panamá.",
+      "pista_es": "c…"
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "saludar con cortesía",
+      "es": "convencional",
+      "aceptadas": [
+        "convencionales"
+      ],
+      "ejemplo_en": "Buenos días, maestra.",
+      "ejemplo_es": "Cortesía = convencional."
+    },
+    {
+      "en": "dar las gracias",
+      "es": "convencional",
+      "aceptadas": [
+        "convencionales"
+      ],
+      "ejemplo_en": "Gracias por la ayuda.",
+      "ejemplo_es": "Urbanidad = convencional."
+    },
+    {
+      "en": "no decir mentiras",
+      "es": "moral",
+      "aceptadas": [
+        "morales"
+      ],
+      "ejemplo_en": "Siempre digo la verdad.",
+      "ejemplo_es": "Conciencia = moral."
+    },
+    {
+      "en": "no hacer trampa",
+      "es": "moral",
+      "aceptadas": [
+        "morales"
+      ],
+      "ejemplo_en": "Juego limpio.",
+      "ejemplo_es": "Conciencia = moral."
+    },
+    {
+      "en": "dar el asiento a un anciano",
+      "es": "moral",
+      "aceptadas": [
+        "morales"
+      ],
+      "ejemplo_en": "Siéntese, señor.",
+      "ejemplo_es": "Valores = moral."
+    },
+    {
+      "en": "respetar las señales de tránsito",
+      "es": "jurídica",
+      "aceptadas": [
+        "juridica",
+        "jurídicas",
+        "juridicas"
+      ],
+      "ejemplo_en": "Paro en el semáforo rojo.",
+      "ejemplo_es": "Ley = jurídica."
+    },
+    {
+      "en": "tener licencia para conducir",
+      "es": "jurídica",
+      "aceptadas": [
+        "juridica",
+        "jurídicas",
+        "juridicas"
+      ],
+      "ejemplo_en": "Solo maneja quien tiene licencia.",
+      "ejemplo_es": "Ley = jurídica."
+    },
+    {
+      "en": "respetar el límite de velocidad",
+      "es": "jurídica",
+      "aceptadas": [
+        "juridica",
+        "jurídicas",
+        "juridicas"
+      ],
+      "ejemplo_en": "No ir muy rápido.",
+      "ejemplo_es": "Ley = jurídica."
+    },
+    {
+      "en": "no pescar camarones en veda",
+      "es": "jurídica",
+      "aceptadas": [
+        "juridica",
+        "jurídicas",
+        "juridicas"
+      ],
+      "ejemplo_en": "Se cuida el mar.",
+      "ejemplo_es": "Ley = jurídica."
+    }
+  ]
+}

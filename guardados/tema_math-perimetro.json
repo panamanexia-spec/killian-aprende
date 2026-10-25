@@ -1,1037 +1,1102 @@
 {
- "tipo": "tema",
- "id": "math-perimetro",
- "materia": "Math",
- "titulo": "Perimeter (school test level)",
- "titulo_es": "Perímetro (nivel del examen del colegio)",
- "idioma": "en",
- "preguntas_por_ronda": 20,
- "subtemas": [
-  "rectangulos",
-  "lados-que-faltan",
-  "figuras",
-  "regulares",
-  "problemas",
-  "sumar-varios",
-  "concepto",
-  "unidad"
- ],
- "resumen": [
-  {
-   "en": "Perimeter = the distance around a figure.",
-   "es": "Perímetro = la distancia alrededor de la figura. Sumas TODOS los lados.",
-   "emoji": "📏"
-  },
-  {
-   "en": "1. Complete: write a number on EVERY side.",
-   "es": "Paso 1 – Completa: escribe un número en CADA lado, aunque no venga escrito.",
-   "emoji": "✏️"
-  },
-  {
-   "en": "Rectangle: opposite sides are equal.",
-   "es": "Rectángulo: el lado de enfrente mide igual (arriba = abajo, izquierda = derecha).",
-   "emoji": "▭"
-  },
-  {
-   "en": "Square and regular shapes: all sides are equal.",
-   "es": "Cuadrado y figuras regulares: todos los lados miden igual. Cuenta cuántos lados tiene.",
-   "emoji": "⬡"
-  },
-  {
-   "en": "2. Count: how many numbers? = how many sides?",
-   "es": "Paso 2 – Cuenta: ¿escribiste tantos números como lados? Rectángulo 4, triángulo 3, pentágono 5, hexágono 6, octágono 8.",
-   "emoji": "🔢"
-  },
-  {
-   "en": "3. Add two at a time and cross out.",
-   "es": "Paso 3 – Suma de dos en dos y tacha cada número que ya sumaste.",
-   "emoji": "➕"
-  },
-  {
-   "en": "4. Write the unit: cm, in, m.",
-   "es": "Paso 4 – Escribe la unidad: 22 cm. ¡Sin unidad te quitan puntos!",
-   "emoji": "🏷️"
-  },
-  {
-   "en": "around, fence, border, edge, ribbon → perimeter",
-   "es": "Si el problema dice around, fence, border, edge o ribbon → es perímetro.",
-   "emoji": "🧵"
-  }
- ],
- "lecciones": [
-  {
-   "subtema": "lados-que-faltan",
-   "emoji": "✏️",
-   "titulo": "Los lados escondidos",
-   "pasos": [
-    "Mira la figura: ¿cuántos lados tiene? Cuéntalos con el dedo.",
-    "Si un lado no tiene número, escribe tú el número: en el rectángulo es igual al de enfrente.",
-    "Ahora todos los lados tienen número. Recién ahí empiezas a sumar."
-   ],
-   "ejemplo": "Rectángulo con 8 cm arriba y 5 cm al lado → escribe 8 abajo y 5 del otro lado → 8 + 5 + 8 + 5 = 26 cm.",
-   "truco": "Rectángulo: largo + ancho, y luego el doble. 8 + 5 = 13 → 13 + 13 = 26."
-  },
-  {
-   "subtema": "sumar-varios",
-   "emoji": "➕",
-   "titulo": "Sumar muchos números sin perderse",
-   "pasos": [
-    "Escribe todos los números en una lista.",
-    "Suma los dos primeros y escribe el resultado.",
-    "A ese resultado súmale el siguiente número. Tacha cada número usado.",
-    "Sigue hasta que no quede ninguno sin tachar."
-   ],
-   "ejemplo": "8 + 5 + 8 + 5 → 8 + 5 = 13 → 13 + 8 = 21 → 21 + 5 = 26.",
-   "truco": "Si el número se repite, júntalos: 8 + 8 = 16 y 5 + 5 = 10 → 16 + 10 = 26."
-  },
-  {
-   "subtema": "regulares",
-   "emoji": "🛑",
-   "titulo": "Figuras regulares",
-   "pasos": [
-    "«Regular» o «all sides are equal» = todos los lados miden lo mismo.",
-    "Cuenta los lados: pentágono 5, hexágono 6, octágono 8.",
-    "Suma ese número tantas veces como lados (o multiplica)."
-   ],
-   "ejemplo": "Octágono de 4 cm → 4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = 32 cm (4 × 8).",
-   "truco": "Octágono = 8 como el pulpo 🐙; hexágono = 6 como el panal de abejas 🐝."
-  },
-  {
-   "emoji": "🛡️",
-   "titulo": "Revisa antes de entregar",
-   "pasos": [
-    "¿Tiene número cada lado?",
-    "¿Sumé todos? Cuenta los números de tu suma.",
-    "¿Puse la unidad (cm, in, m)?",
-    "¿Respondí TODAS las preguntas? Ninguna en blanco."
-   ],
-   "truco": "En el examen, casi todos los errores fueron por saltarse un lado o equivocarse sumando. ¡Revisar te da puntos!"
-  }
- ],
- "preguntas": [
-  {
-   "id": "r1",
-   "subtema": "rectangulos",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 7 cm, 4 cm, 7 cm, 4 cm.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo: 7 cm, 4 cm, 7 cm, 4 cm. ¿Cuál es el perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_r1.png",
-   "respuesta": "22 cm",
-   "aceptadas": [
-    "22cm",
-    "22 centimeters",
-    "22 centimetros",
-    "22 centímetros"
-   ],
-   "explicacion_es": "7 + 4 = 11, 11 + 7 = 18, 18 + 4 = 22 cm. Son 4 lados: suma los 4. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "Suma de dos en dos: 7 + 4, y otra vez 7 + 4."
-  },
-  {
-   "id": "r2",
-   "subtema": "rectangulos",
-   "tipo": "completar",
-   "pregunta_en": "Square: 6 cm on each side.\nPerimeter = ______",
-   "pregunta_es": "Cuadrado de 6 cm en cada lado. ¿Cuál es el perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_r2.png",
-   "respuesta": "24 cm",
-   "aceptadas": [
-    "24cm",
-    "24 centimeters",
-    "24 centimetros",
-    "24 centímetros"
-   ],
-   "explicacion_es": "6 + 6 + 6 + 6 = 24 cm (o 4 × 6 = 24). ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "r3",
-   "subtema": "rectangulos",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 9 in, 5 in, 9 in, 5 in.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo: 9 in, 5 in, 9 in, 5 in. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_r3.png",
-   "respuesta": "28 in",
-   "aceptadas": [
-    "28in",
-    "28 inches",
-    "28 pulgadas",
-    "28 inch"
-   ],
-   "explicacion_es": "9 + 5 = 14 y 14 + 14 = 28 in. (En el examen salió 18 + 10… ¡había que sumarlos: 28!) ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "r4",
-   "subtema": "rectangulos",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 12 m, 8 m, 12 m, 8 m.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo: 12 m, 8 m, 12 m, 8 m. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_r4.png",
-   "respuesta": "40 m",
-   "aceptadas": [
-    "40m",
-    "40 meters",
-    "40 metros",
-    "40 meter"
-   ],
-   "explicacion_es": "12 + 8 = 20 y 20 + 20 = 40 m. Truco: largo + ancho, y luego el doble. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "r5",
-   "subtema": "rectangulos",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 13 cm, 6 cm, 13 cm, 6 cm.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo: 13 cm, 6 cm, 13 cm, 6 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_r5.png",
-   "respuesta": "38 cm",
-   "aceptadas": [
-    "38cm",
-    "38 centimeters",
-    "38 centimetros",
-    "38 centímetros"
-   ],
-   "explicacion_es": "13 + 6 = 19 y 19 + 19 = 38 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "l1",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: only two sides are written: 8 cm and 5 cm.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo: solo dicen dos lados, 8 cm y 5 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l1.png",
-   "respuesta": "26 cm",
-   "aceptadas": [
-    "26cm",
-    "26 centimeters",
-    "26 centimetros",
-    "26 centímetros"
-   ],
-   "explicacion_es": "El lado de enfrente mide IGUAL: escribe 8 abajo y 5 a la izquierda. 8 + 5 + 8 + 5 = 26 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "Un rectángulo tiene 4 lados. ¿Cuánto mide el lado de enfrente?"
-  },
-  {
-   "id": "l2",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 10 cm long and 6 cm wide.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo de 10 cm de largo y 6 cm de ancho. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l2.png",
-   "respuesta": "32 cm",
-   "aceptadas": [
-    "32cm",
-    "32 centimeters",
-    "32 centimetros",
-    "32 centímetros"
-   ],
-   "explicacion_es": "10 + 6 + 10 + 6 = 32 cm. Escribe primero los lados que faltan. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "Son 4 lados: 10, 6, 10 y 6."
-  },
-  {
-   "id": "l3",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 11 in long and 4 in wide.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo de 11 in de largo y 4 in de ancho. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l3.png",
-   "respuesta": "30 in",
-   "aceptadas": [
-    "30in",
-    "30 inches",
-    "30 pulgadas",
-    "30 inch"
-   ],
-   "explicacion_es": "11 + 4 + 11 + 4 = 30 in. En el examen solo sumaste 3 lados (19). ¡Cuenta: deben ser 4 números! ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "l4",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Square: one side is 9 cm.\nPerimeter = ______",
-   "pregunta_es": "Cuadrado: un lado mide 9 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l4.png",
-   "respuesta": "36 cm",
-   "aceptadas": [
-    "36cm",
-    "36 centimeters",
-    "36 centimetros",
-    "36 centímetros"
-   ],
-   "explicacion_es": "En un cuadrado los 4 lados son iguales: 9 + 9 + 9 + 9 = 36 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "¿Cuántos lados tiene un cuadrado? ¿Cuánto mide cada uno?"
-  },
-  {
-   "id": "l5",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 15 m long and 6 m wide.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo de 15 m de largo y 6 m de ancho. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l5.png",
-   "respuesta": "42 m",
-   "aceptadas": [
-    "42m",
-    "42 meters",
-    "42 metros",
-    "42 meter"
-   ],
-   "explicacion_es": "15 + 6 = 21 y 21 + 21 = 42 m. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "l6",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Square: one side is 7 in.\nPerimeter = ______",
-   "pregunta_es": "Cuadrado: un lado mide 7 in. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l6.png",
-   "respuesta": "28 in",
-   "aceptadas": [
-    "28in",
-    "28 inches",
-    "28 pulgadas",
-    "28 inch"
-   ],
-   "explicacion_es": "7 + 7 + 7 + 7 = 28 in (4 × 7 = 28). ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "l7",
-   "subtema": "lados-que-faltan",
-   "tipo": "completar",
-   "pregunta_en": "Rectangle: 20 cm long and 5 cm wide.\nPerimeter = ______",
-   "pregunta_es": "Rectángulo de 20 cm de largo y 5 cm de ancho. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_l7.png",
-   "respuesta": "50 cm",
-   "aceptadas": [
-    "50cm",
-    "50 centimeters",
-    "50 centimetros",
-    "50 centímetros"
-   ],
-   "explicacion_es": "20 + 5 = 25 y 25 + 25 = 50 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f1",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Triangle: 5 cm, 6 cm, 7 cm.\nPerimeter = ______",
-   "pregunta_es": "Triángulo: 5 cm, 6 cm, 7 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f1.png",
-   "respuesta": "18 cm",
-   "aceptadas": [
-    "18cm",
-    "18 centimeters",
-    "18 centimetros",
-    "18 centímetros"
-   ],
-   "explicacion_es": "Un triángulo tiene 3 lados: 5 + 6 + 7 = 18 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f2",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Triangle: 9 cm, 9 cm, 6 cm.\nPerimeter = ______",
-   "pregunta_es": "Triángulo: 9 cm, 9 cm, 6 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f2.png",
-   "respuesta": "24 cm",
-   "aceptadas": [
-    "24cm",
-    "24 centimeters",
-    "24 centimetros",
-    "24 centímetros"
-   ],
-   "explicacion_es": "9 + 9 = 18 y 18 + 6 = 24 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f3",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Shape with 5 sides: 8 cm, 5 cm, 6 cm, 6 cm, 5 cm.\nPerimeter = ______",
-   "pregunta_es": "Figura de 5 lados: 8, 5, 6, 6 y 5 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f3.png",
-   "respuesta": "30 cm",
-   "aceptadas": [
-    "30cm",
-    "30 centimeters",
-    "30 centimetros",
-    "30 centímetros"
-   ],
-   "explicacion_es": "5 + 6 + 6 + 5 + 8 = 30 cm. Tacha cada lado cuando lo sumes para no saltarte ninguno. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "Cuenta los lados: son 5 números."
-  },
-  {
-   "id": "f4",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Parallelogram: 10 cm, 4 cm, 10 cm, 4 cm.\nPerimeter = ______",
-   "pregunta_es": "Paralelogramo: 10, 4, 10 y 4 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f4.png",
-   "respuesta": "28 cm",
-   "aceptadas": [
-    "28cm",
-    "28 centimeters",
-    "28 centimetros",
-    "28 centímetros"
-   ],
-   "explicacion_es": "10 + 4 + 10 + 4 = 28 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f5",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Trapezoid: top 6 cm, sides 4 cm and 4 cm, bottom 10 cm.\nPerimeter = ______",
-   "pregunta_es": "Trapecio: arriba 6 cm, lados 4 y 4 cm, abajo 10 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f5.png",
-   "respuesta": "24 cm",
-   "aceptadas": [
-    "24cm",
-    "24 centimeters",
-    "24 centimetros",
-    "24 centímetros"
-   ],
-   "explicacion_es": "6 + 4 + 10 + 4 = 24 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f6",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Kite: 5 cm, 5 cm, 8 cm, 8 cm.\nPerimeter = ______",
-   "pregunta_es": "Cometa: 5, 5, 8 y 8 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f6.png",
-   "respuesta": "26 cm",
-   "aceptadas": [
-    "26cm",
-    "26 centimeters",
-    "26 centimetros",
-    "26 centímetros"
-   ],
-   "explicacion_es": "5 + 5 = 10, 8 + 8 = 16, 10 + 16 = 26 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f7",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Kite: 6 cm, 6 cm, 9 cm, 9 cm.\nPerimeter = ______",
-   "pregunta_es": "Cometa: 6, 6, 9 y 9 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f7.png",
-   "respuesta": "30 cm",
-   "aceptadas": [
-    "30cm",
-    "30 centimeters",
-    "30 centimetros",
-    "30 centímetros"
-   ],
-   "explicacion_es": "6 + 6 = 12, 9 + 9 = 18, 12 + 18 = 30 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f8",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Triangle: 12 cm, 10 cm, 8 cm.\nPerimeter = ______",
-   "pregunta_es": "Triángulo: 12, 10 y 8 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f8.png",
-   "respuesta": "30 cm",
-   "aceptadas": [
-    "30cm",
-    "30 centimeters",
-    "30 centimetros",
-    "30 centímetros"
-   ],
-   "explicacion_es": "12 + 10 = 22 y 22 + 8 = 30 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "f9",
-   "subtema": "figuras",
-   "tipo": "completar",
-   "pregunta_en": "Shape with 6 sides: 3 m, 5 m, 4 m, 2 m, 7 m, 7 m.\nPerimeter = ______",
-   "pregunta_es": "Figura de 6 lados: 3, 5, 4, 2, 7 y 7 m. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_f9.png",
-   "respuesta": "28 m",
-   "aceptadas": [
-    "28m",
-    "28 meters",
-    "28 metros",
-    "28 meter"
-   ],
-   "explicacion_es": "7 + 3 + 4 + 4 + 3 + 7 = 28 m. Ve lado por lado y táchalo. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "g1",
-   "subtema": "regulares",
-   "tipo": "completar",
-   "pregunta_en": "Regular pentagon (all sides are equal): 5 in each side.\nPerimeter = ______",
-   "pregunta_es": "Pentágono regular (todos los lados iguales): 5 in cada lado. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_g1.png",
-   "respuesta": "25 in",
-   "aceptadas": [
-    "25in",
-    "25 inches",
-    "25 pulgadas",
-    "25 inch"
-   ],
-   "explicacion_es": "Pentágono = 5 lados. 5 + 5 + 5 + 5 + 5 = 25 in (5 × 5). ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "g2",
-   "subtema": "regulares",
-   "tipo": "completar",
-   "pregunta_en": "Regular hexagon (all sides are equal): 4 cm each side.\nPerimeter = ______",
-   "pregunta_es": "Hexágono regular: 4 cm cada lado. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_g2.png",
-   "respuesta": "24 cm",
-   "aceptadas": [
-    "24cm",
-    "24 centimeters",
-    "24 centimetros",
-    "24 centímetros"
-   ],
-   "explicacion_es": "Hexágono = 6 lados. 4 × 6 = 24 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "g3",
-   "subtema": "regulares",
-   "tipo": "completar",
-   "pregunta_en": "Regular octagon (all sides are equal): 4 cm each side.\nPerimeter = ______",
-   "pregunta_es": "Octágono regular: 4 cm cada lado. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_g3.png",
-   "respuesta": "32 cm",
-   "aceptadas": [
-    "32cm",
-    "32 centimeters",
-    "32 centimetros",
-    "32 centímetros"
-   ],
-   "explicacion_es": "Octágono = 8 lados (como la señal de PARE 🛑). 4 × 8 = 32 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "g4",
-   "subtema": "regulares",
-   "tipo": "completar",
-   "pregunta_en": "Regular hexagon (all sides are equal). One side is 3 m.\nPerimeter = ______",
-   "pregunta_es": "Hexágono regular. Un lado mide 3 m. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_g4.png",
-   "respuesta": "18 m",
-   "aceptadas": [
-    "18m",
-    "18 meters",
-    "18 metros",
-    "18 meter"
-   ],
-   "explicacion_es": "6 lados de 3 m: 3 × 6 = 18 m. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "Hexágono = 6 lados iguales."
-  },
-  {
-   "id": "g5",
-   "subtema": "regulares",
-   "tipo": "completar",
-   "pregunta_en": "Triangle with all sides equal. One side is 7 cm.\nPerimeter = ______",
-   "pregunta_es": "Triángulo con los 3 lados iguales. Un lado mide 7 cm. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_g5.png",
-   "respuesta": "21 cm",
-   "aceptadas": [
-    "21cm",
-    "21 centimeters",
-    "21 centimetros",
-    "21 centímetros"
-   ],
-   "explicacion_es": "3 lados de 7: 7 + 7 + 7 = 21 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "g6",
-   "subtema": "regulares",
-   "tipo": "completar",
-   "pregunta_en": "Regular octagon (all sides are equal). One side is 5 in.\nPerimeter = ______",
-   "pregunta_es": "Octágono regular. Un lado mide 5 in. ¿Perímetro?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_g6.png",
-   "respuesta": "40 in",
-   "aceptadas": [
-    "40in",
-    "40 inches",
-    "40 pulgadas",
-    "40 inch"
-   ],
-   "explicacion_es": "8 lados de 5: 5 × 8 = 40 in. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
-   "pista_es": "Octágono = 8 lados. Cuenta de 5 en 5 ocho veces."
-  },
-  {
-   "id": "p1",
-   "subtema": "problemas",
-   "tipo": "completar",
-   "pregunta_en": "Maria's garden is a rectangle 12 m long and 7 m wide. She wants a fence around the whole garden. How many meters of fence does she need?\nPerimeter = ______",
-   "pregunta_es": "El jardín de María mide 12 m de largo y 7 m de ancho. Quiere una cerca alrededor. ¿Cuántos metros de cerca necesita?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_p1.png",
-   "respuesta": "38 m",
-   "aceptadas": [
-    "38m",
-    "38 meters",
-    "38 metros",
-    "38 meter"
-   ],
-   "explicacion_es": "«Around» (alrededor) = perímetro. 12 + 7 + 12 + 7 = 38 m. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "p2",
-   "subtema": "problemas",
-   "tipo": "completar",
-   "pregunta_en": "Tom's poster is 14 inches long and 9 inches wide. He glues ribbon around the whole edge. How many inches of ribbon does he need?\nPerimeter = ______",
-   "pregunta_es": "El póster de Tom mide 14 in de largo y 9 in de ancho. Pega una cinta por todo el borde. ¿Cuántas pulgadas de cinta necesita?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_p2.png",
-   "respuesta": "46 in",
-   "aceptadas": [
-    "46in",
-    "46 inches",
-    "46 pulgadas",
-    "46 inch"
-   ],
-   "explicacion_es": "14 + 9 = 23 y 23 + 23 = 46 in. ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "p3",
-   "subtema": "problemas",
-   "tipo": "completar",
-   "pregunta_en": "Killian's LEGO board is a square. Each side is 10 cm. He puts tape around it. How much tape does he need?\nPerimeter = ______",
-   "pregunta_es": "La base de LEGO de Killian es un cuadrado de 10 cm por lado. Pone cinta alrededor. ¿Cuánta cinta necesita?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_p3.png",
-   "respuesta": "40 cm",
-   "aceptadas": [
-    "40cm",
-    "40 centimeters",
-    "40 centimetros",
-    "40 centímetros"
-   ],
-   "explicacion_es": "Cuadrado = 4 lados de 10. 10 + 10 + 10 + 10 = 40 cm. 🧱 ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "p4",
-   "subtema": "problemas",
-   "tipo": "completar",
-   "pregunta_en": "A soccer field drawing is 20 m long and 10 m wide. Killian runs around it one time. How many meters does he run?\nPerimeter = ______",
-   "pregunta_es": "Un campo de fútbol mide 20 m de largo y 10 m de ancho. Killian le da una vuelta corriendo. ¿Cuántos metros corre?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_p4.png",
-   "respuesta": "60 m",
-   "aceptadas": [
-    "60m",
-    "60 meters",
-    "60 metros",
-    "60 meter"
-   ],
-   "explicacion_es": "Una vuelta = perímetro. 20 + 10 + 20 + 10 = 60 m. ⚽ ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "p5",
-   "subtema": "problemas",
-   "tipo": "completar",
-   "pregunta_en": "A photo frame is 8 in long and 6 in wide. How long is the border of the frame?\nPerimeter = ______",
-   "pregunta_es": "Un marco de foto mide 8 in de largo y 6 in de ancho. ¿Cuánto mide el borde del marco?",
-   "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
-   "imagen": "per_p5.png",
-   "respuesta": "28 in",
-   "aceptadas": [
-    "28in",
-    "28 inches",
-    "28 pulgadas",
-    "28 inch"
-   ],
-   "explicacion_es": "8 + 6 + 8 + 6 = 28 in. 🖼️ ¡Y no olvides la unidad! La maestra quita puntos si falta."
-  },
-  {
-   "id": "s1",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "4 + 4 + 7 + 7 = ______",
-   "pregunta_es": "4 + 4 + 7 + 7 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "22",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 4 + 4 = 8; 8 + 7 = 15; 15 + 7 = 22. ✅",
-   "pista_es": "Empieza: 4 + 4 = 8. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s2",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "9 + 9 + 5 + 5 = ______",
-   "pregunta_es": "9 + 9 + 5 + 5 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "28",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 9 + 9 = 18; 18 + 5 = 23; 23 + 5 = 28. ✅",
-   "pista_es": "Empieza: 9 + 9 = 18. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s3",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "12 + 12 + 8 + 8 = ______",
-   "pregunta_es": "12 + 12 + 8 + 8 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "40",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 12 + 12 = 24; 24 + 8 = 32; 32 + 8 = 40. ✅",
-   "pista_es": "Empieza: 12 + 12 = 24. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s4",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "8 + 5 + 8 + 5 = ______",
-   "pregunta_es": "8 + 5 + 8 + 5 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "26",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 8 + 5 = 13; 13 + 8 = 21; 21 + 5 = 26. ✅",
-   "pista_es": "Empieza: 8 + 5 = 13. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s5",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "10 + 6 + 10 + 6 = ______",
-   "pregunta_es": "10 + 6 + 10 + 6 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "32",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 10 + 6 = 16; 16 + 10 = 26; 26 + 6 = 32. ✅",
-   "pista_es": "Empieza: 10 + 6 = 16. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s6",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "11 + 4 + 11 + 4 = ______",
-   "pregunta_es": "11 + 4 + 11 + 4 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "30",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 11 + 4 = 15; 15 + 11 = 26; 26 + 4 = 30. ✅",
-   "pista_es": "Empieza: 11 + 4 = 15. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s7",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "9 + 9 + 9 + 9 = ______",
-   "pregunta_es": "9 + 9 + 9 + 9 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "36",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 9 + 9 = 18; 18 + 9 = 27; 27 + 9 = 36. ✅",
-   "pista_es": "Empieza: 9 + 9 = 18. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s8",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "5 + 5 + 8 + 6 + 6 = ______",
-   "pregunta_es": "5 + 5 + 8 + 6 + 6 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "30",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 5 + 5 = 10; 10 + 8 = 18; 18 + 6 = 24; 24 + 6 = 30. ✅",
-   "pista_es": "Empieza: 5 + 5 = 10. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s9",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = ______",
-   "pregunta_es": "4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "32",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 4 + 4 = 8; 8 + 4 = 12; 12 + 4 = 16; 16 + 4 = 20; 20 + 4 = 24; 24 + 4 = 28; 28 + 4 = 32. ✅",
-   "pista_es": "Empieza: 4 + 4 = 8. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s10",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "14 + 9 + 14 + 9 = ______",
-   "pregunta_es": "14 + 9 + 14 + 9 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "46",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 14 + 9 = 23; 23 + 14 = 37; 37 + 9 = 46. ✅",
-   "pista_es": "Empieza: 14 + 9 = 23. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s11",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "18 + 14 = ______",
-   "pregunta_es": "18 + 14 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "32",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 18 + 14 = 32. ✅",
-   "pista_es": "Empieza: 18 + 14 = 32. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s12",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "27 + 15 = ______",
-   "pregunta_es": "27 + 15 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "42",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 27 + 15 = 42. ✅",
-   "pista_es": "Empieza: 27 + 15 = 42. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s13",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "16 + 24 = ______",
-   "pregunta_es": "16 + 24 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "40",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 16 + 24 = 40. ✅",
-   "pista_es": "Empieza: 16 + 24 = 40. Sigue sumando el siguiente."
-  },
-  {
-   "id": "s14",
-   "subtema": "sumar-varios",
-   "tipo": "completar",
-   "pregunta_en": "6 + 6 + 9 + 9 = ______",
-   "pregunta_es": "6 + 6 + 9 + 9 = ______",
-   "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
-   "respuesta": "30",
-   "aceptadas": [],
-   "explicacion_es": "Paso a paso: 6 + 6 = 12; 12 + 9 = 21; 21 + 9 = 30. ✅",
-   "pista_es": "Empieza: 6 + 6 = 12. Sigue sumando el siguiente."
-  },
-  {
-   "id": "k1",
-   "subtema": "concepto",
-   "tipo": "verdadero_falso",
-   "pregunta_en": "Perimeter is the distance around a figure.",
-   "pregunta_es": "El perímetro es la distancia alrededor de una figura.",
-   "correcta": true,
-   "explicacion_es": "¡Sí! Es como caminar por todo el borde. 🚶"
-  },
-  {
-   "id": "k2",
-   "subtema": "lados-que-faltan",
-   "tipo": "verdadero_falso",
-   "pregunta_en": "To find the perimeter, you add only the sides that have numbers.",
-   "pregunta_es": "Para el perímetro solo sumas los lados que tienen número.",
-   "correcta": false,
-   "explicacion_es": "¡Falso! Sumas TODOS los lados. Si un lado no tiene número, búscalo: en el rectángulo el lado de enfrente mide igual."
-  },
-  {
-   "id": "k3",
-   "subtema": "lados-que-faltan",
-   "tipo": "verdadero_falso",
-   "pregunta_en": "A rectangle 8 cm long and 5 cm wide has a perimeter of 13 cm.",
-   "pregunta_es": "Un rectángulo de 8 cm por 5 cm tiene 13 cm de perímetro.",
-   "correcta": false,
-   "explicacion_es": "¡Falso! 13 es solo 2 lados. Son 4: 8 + 5 + 8 + 5 = 26 cm."
-  },
-  {
-   "id": "k4",
-   "subtema": "unidad",
-   "tipo": "opcion_multiple",
-   "pregunta_en": "The sides are in inches. Which answer is complete?",
-   "pregunta_es": "Los lados están en pulgadas. ¿Cuál respuesta está completa?",
-   "opciones": [
-    "30 in",
-    "30",
-    "30 cm"
-   ],
-   "correcta": "30 in",
-   "explicacion_es": "Número + unidad: 30 in. Sin la unidad la maestra quita puntos."
-  },
-  {
-   "id": "k5",
-   "subtema": "regulares",
-   "tipo": "unir",
-   "pregunta_en": "Match the shape with its number of sides.",
-   "pregunta_es": "Une la figura con su número de lados.",
-   "pares": [
+  "tipo": "tema",
+  "id": "math-perimetro",
+  "materia": "Math",
+  "titulo": "Perimeter (school test level)",
+  "titulo_es": "Perímetro (nivel del examen del colegio)",
+  "idioma": "en",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "rectangulos",
+    "lados-que-faltan",
+    "figuras",
+    "regulares",
+    "problemas",
+    "sumar-varios",
+    "concepto",
+    "unidad"
+  ],
+  "resumen": [
     {
-     "izquierda": "triangle 🔺",
-     "derecha": "3"
+      "en": "PART 1: What is perimeter?",
+      "es": "PARTE 1: ¿Qué es el perímetro?",
+      "emoji": "🟦"
     },
     {
-     "izquierda": "square ⬜",
-     "derecha": "4"
+      "en": "Perimeter = the distance around a figure.",
+      "es": "Perímetro (pe-RÍ-me-ter) = la distancia alrededor de la figura. Sumas TODOS los lados, no solo los que tienen número.",
+      "emoji": "📏"
     },
     {
-     "izquierda": "pentagon ⬠",
-     "derecha": "5"
+      "en": "around · fence · border · edge · ribbon → perimeter",
+      "es": "Si el problema dice alrededor, cerca, borde o cinta → es perímetro.",
+      "emoji": "🧵"
     },
     {
-     "izquierda": "hexagon ⬡",
-     "derecha": "6"
+      "en": "PART 2: The 4 steps",
+      "es": "PARTE 2: Los 4 pasos",
+      "emoji": "🟩"
     },
     {
-     "izquierda": "octagon 🛑",
-     "derecha": "8"
+      "en": "1. Complete: write a number on EVERY side.",
+      "es": "Paso 1 – Completa: escribe un número en CADA lado, aunque no venga escrito.",
+      "emoji": "✏️"
+    },
+    {
+      "en": "2. Count: how many numbers? = how many sides?",
+      "es": "Paso 2 – Cuenta: ¿escribiste tantos números como lados tiene?",
+      "emoji": "🔢"
+    },
+    {
+      "en": "3. Add two at a time and cross out.",
+      "es": "Paso 3 – Suma de dos en dos y tacha cada número que ya sumaste.",
+      "emoji": "➕"
+    },
+    {
+      "en": "4. Write the unit: cm, in, m.",
+      "es": "Paso 4 – Escribe la unidad: 22 cm, 30 in, 40 m. ¡Sin unidad te quitan puntos!",
+      "emoji": "🏷️"
+    },
+    {
+      "en": "PART 3: Shapes and their sides",
+      "es": "PARTE 3: Las figuras y cuántos lados tienen",
+      "emoji": "🟨"
+    },
+    {
+      "en": "triangle 3 · square 4 · rectangle 4",
+      "es": "triángulo 3 · cuadrado 4 · rectángulo 4",
+      "emoji": "🔺"
+    },
+    {
+      "en": "pentagon 5 · hexagon 6 · octagon 8",
+      "es": "pentágono 5 · hexágono 6 (panal 🐝) · octágono 8 (pulpo 🐙)",
+      "emoji": "⬡"
+    },
+    {
+      "en": "Rectangle and parallelogram: opposite sides are equal.",
+      "es": "Rectángulo y paralelogramo: el lado de enfrente mide igual.",
+      "emoji": "▭"
+    },
+    {
+      "en": "Kite: two pairs of equal sides, like 5, 5, 8, 8.",
+      "es": "Cometa: dos lados cortos iguales y dos largos iguales.",
+      "emoji": "🪁"
+    },
+    {
+      "en": "Trapezoid: top, bottom and 2 sides → add all 4.",
+      "es": "Trapecio: arriba + abajo + los 2 lados.",
+      "emoji": "⏢"
+    },
+    {
+      "en": "PART 4: Shortcuts",
+      "es": "PARTE 4: Trucos",
+      "emoji": "🟧"
+    },
+    {
+      "en": "Square or regular shape: all sides are equal.",
+      "es": "Regular = todos los lados iguales. Hexágono de 4 cm → 4 × 6 = 24 cm.",
+      "emoji": "⬜"
+    },
+    {
+      "en": "Rectangle 8 cm long and 5 cm wide: 8 + 5 = 13 → 13 + 13 = 26 cm.",
+      "es": "Largo + ancho, y luego el doble. ¡13 cm NO es la respuesta: solo sumaste 2 lados!",
+      "emoji": "📐"
+    },
+    {
+      "en": "8 + 5 + 8 + 5 → 8 + 8 = 16, 5 + 5 = 10 → 16 + 10 = 26",
+      "es": "Si un número se repite, júntalos primero.",
+      "emoji": "🧮"
+    },
+    {
+      "en": "PART 5: Word problems",
+      "es": "PARTE 5: Problemas",
+      "emoji": "🟥"
+    },
+    {
+      "en": "Garden 12 m long and 7 m wide, fence around: 12 + 7 + 12 + 7 = 38 m.",
+      "es": "Cerca alrededor del jardín = perímetro.",
+      "emoji": "🌳"
+    },
+    {
+      "en": "Poster 14 in by 9 in, ribbon around the edge: 14 + 9 + 14 + 9 = 46 in.",
+      "es": "Cinta alrededor del borde = perímetro.",
+      "emoji": "🎀"
     }
-   ],
-   "explicacion_es": "Tri = 3, penta = 5, hexa = 6, octo = 8 (como el pulpo 🐙 que tiene 8 brazos)."
-  },
-  {
-   "id": "k6",
-   "subtema": "regulares",
-   "tipo": "opcion_multiple",
-   "pregunta_en": "A regular hexagon has sides of 5 cm. Which is the right work?",
-   "pregunta_es": "Un hexágono regular tiene lados de 5 cm. ¿Cuál es la operación correcta?",
-   "opciones": [
-    "5 + 5 + 5 + 5 + 5 + 5 = 30 cm",
-    "5 + 5 = 10 cm",
-    "5 + 6 = 11 cm"
-   ],
-   "correcta": "5 + 5 + 5 + 5 + 5 + 5 = 30 cm",
-   "explicacion_es": "Hexágono = 6 lados, así que sumas el 5 seis veces: 30 cm."
-  },
-  {
-   "id": "k7",
-   "subtema": "concepto",
-   "tipo": "opcion_multiple",
-   "pregunta_en": "«How much ribbon AROUND the poster?» What do you find?",
-   "pregunta_es": "«¿Cuánta cinta ALREDEDOR del póster?» ¿Qué tienes que buscar?",
-   "opciones": [
-    "the perimeter (add all sides)",
-    "only the long side",
-    "only 2 sides"
-   ],
-   "correcta": "the perimeter (add all sides)",
-   "explicacion_es": "around / fence / border / edge = perímetro = sumar todos los lados."
-  }
- ],
- "vocabulario": [
-  {
-   "en": "perimeter",
-   "es": "perímetro",
-   "aceptadas": [],
-   "ejemplo_en": "Find the perimeter.",
-   "ejemplo_es": "Encuentra el perímetro."
-  },
-  {
-   "en": "side",
-   "es": "lado",
-   "aceptadas": [
-    "lados"
-   ],
-   "ejemplo_en": "A square has 4 sides.",
-   "ejemplo_es": "Un cuadrado tiene 4 lados."
-  },
-  {
-   "en": "around",
-   "es": "alrededor",
-   "aceptadas": [],
-   "ejemplo_en": "a fence around the garden",
-   "ejemplo_es": "una cerca alrededor del jardín"
-  },
-  {
-   "en": "length",
-   "es": "largo",
-   "aceptadas": [
-    "longitud"
-   ],
-   "ejemplo_en": "The length is 12 m.",
-   "ejemplo_es": "El largo es 12 m."
-  },
-  {
-   "en": "width",
-   "es": "ancho",
-   "aceptadas": [],
-   "ejemplo_en": "The width is 7 m.",
-   "ejemplo_es": "El ancho es 7 m."
-  },
-  {
-   "en": "equal",
-   "es": "igual",
-   "aceptadas": [
-    "iguales"
-   ],
-   "ejemplo_en": "All sides are equal.",
-   "ejemplo_es": "Todos los lados son iguales."
-  },
-  {
-   "en": "fence",
-   "es": "cerca",
-   "aceptadas": [
-    "cerco",
-    "valla"
-   ],
-   "ejemplo_en": "She needs a fence.",
-   "ejemplo_es": "Ella necesita una cerca."
-  },
-  {
-   "en": "ribbon",
-   "es": "cinta",
-   "aceptadas": [
-    "liston",
-    "listón"
-   ],
-   "ejemplo_en": "He glues ribbon.",
-   "ejemplo_es": "Él pega cinta."
-  },
-  {
-   "en": "edge",
-   "es": "borde",
-   "aceptadas": [
-    "orilla"
-   ],
-   "ejemplo_en": "the edge of the poster",
-   "ejemplo_es": "el borde del póster"
-  },
-  {
-   "en": "hexagon",
-   "es": "hexágono",
-   "aceptadas": [
-    "hexagono"
-   ],
-   "ejemplo_en": "A hexagon has 6 sides.",
-   "ejemplo_es": "Un hexágono tiene 6 lados."
-  },
-  {
-   "en": "octagon",
-   "es": "octágono",
-   "aceptadas": [
-    "octagono"
-   ],
-   "ejemplo_en": "An octagon has 8 sides.",
-   "ejemplo_es": "Un octágono tiene 8 lados."
-  },
-  {
-   "en": "pentagon",
-   "es": "pentágono",
-   "aceptadas": [
-    "pentagono"
-   ],
-   "ejemplo_en": "A pentagon has 5 sides.",
-   "ejemplo_es": "Un pentágono tiene 5 lados."
-  }
- ]
+  ],
+  "lecciones": [
+    {
+      "subtema": "lados-que-faltan",
+      "emoji": "✏️",
+      "titulo": "Los lados escondidos",
+      "pasos": [
+        "Mira la figura: ¿cuántos lados tiene? Cuéntalos con el dedo.",
+        "Si un lado no tiene número, escribe tú el número: en el rectángulo es igual al de enfrente.",
+        "Ahora todos los lados tienen número. Recién ahí empiezas a sumar."
+      ],
+      "ejemplo": "Rectángulo con 8 cm arriba y 5 cm al lado → escribe 8 abajo y 5 del otro lado → 8 + 5 + 8 + 5 = 26 cm.",
+      "truco": "Rectángulo: largo + ancho, y luego el doble. 8 + 5 = 13 → 13 + 13 = 26."
+    },
+    {
+      "subtema": "sumar-varios",
+      "emoji": "➕",
+      "titulo": "Sumar muchos números sin perderse",
+      "pasos": [
+        "Escribe todos los números en una lista.",
+        "Suma los dos primeros y escribe el resultado.",
+        "A ese resultado súmale el siguiente número. Tacha cada número usado.",
+        "Sigue hasta que no quede ninguno sin tachar."
+      ],
+      "ejemplo": "8 + 5 + 8 + 5 → 8 + 5 = 13 → 13 + 8 = 21 → 21 + 5 = 26.",
+      "truco": "Si el número se repite, júntalos: 8 + 8 = 16 y 5 + 5 = 10 → 16 + 10 = 26."
+    },
+    {
+      "subtema": "regulares",
+      "emoji": "🛑",
+      "titulo": "Figuras regulares",
+      "pasos": [
+        "«Regular» o «all sides are equal» = todos los lados miden lo mismo.",
+        "Cuenta los lados: pentágono 5, hexágono 6, octágono 8.",
+        "Suma ese número tantas veces como lados (o multiplica)."
+      ],
+      "ejemplo": "Octágono de 4 cm → 4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = 32 cm (4 × 8).",
+      "truco": "Octágono = 8 como el pulpo 🐙; hexágono = 6 como el panal de abejas 🐝."
+    },
+    {
+      "emoji": "🛡️",
+      "titulo": "Revisa antes de entregar",
+      "pasos": [
+        "¿Tiene número cada lado?",
+        "¿Sumé todos? Cuenta los números de tu suma.",
+        "¿Puse la unidad (cm, in, m)?",
+        "¿Respondí TODAS las preguntas? Ninguna en blanco."
+      ],
+      "truco": "En el examen, casi todos los errores fueron por saltarse un lado o equivocarse sumando. ¡Revisar te da puntos!"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "r1",
+      "subtema": "rectangulos",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 7 cm, 4 cm, 7 cm, 4 cm.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo: 7 cm, 4 cm, 7 cm, 4 cm. ¿Cuál es el perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_r1.png",
+      "respuesta": "22 cm",
+      "aceptadas": [
+        "22cm",
+        "22 centimeters",
+        "22 centimetros",
+        "22 centímetros"
+      ],
+      "explicacion_es": "7 + 4 = 11, 11 + 7 = 18, 18 + 4 = 22 cm. Son 4 lados: suma los 4. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "Suma de dos en dos: 7 + 4, y otra vez 7 + 4."
+    },
+    {
+      "id": "r2",
+      "subtema": "rectangulos",
+      "tipo": "completar",
+      "pregunta_en": "Square: 6 cm on each side.\nPerimeter = ______",
+      "pregunta_es": "Cuadrado de 6 cm en cada lado. ¿Cuál es el perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_r2.png",
+      "respuesta": "24 cm",
+      "aceptadas": [
+        "24cm",
+        "24 centimeters",
+        "24 centimetros",
+        "24 centímetros"
+      ],
+      "explicacion_es": "6 + 6 + 6 + 6 = 24 cm (o 4 × 6 = 24). ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "r3",
+      "subtema": "rectangulos",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 9 in, 5 in, 9 in, 5 in.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo: 9 in, 5 in, 9 in, 5 in. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_r3.png",
+      "respuesta": "28 in",
+      "aceptadas": [
+        "28in",
+        "28 inches",
+        "28 pulgadas",
+        "28 inch"
+      ],
+      "explicacion_es": "9 + 5 = 14 y 14 + 14 = 28 in. (En el examen salió 18 + 10… ¡había que sumarlos: 28!) ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "r4",
+      "subtema": "rectangulos",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 12 m, 8 m, 12 m, 8 m.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo: 12 m, 8 m, 12 m, 8 m. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_r4.png",
+      "respuesta": "40 m",
+      "aceptadas": [
+        "40m",
+        "40 meters",
+        "40 metros",
+        "40 meter"
+      ],
+      "explicacion_es": "12 + 8 = 20 y 20 + 20 = 40 m. Truco: largo + ancho, y luego el doble. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "r5",
+      "subtema": "rectangulos",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 13 cm, 6 cm, 13 cm, 6 cm.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo: 13 cm, 6 cm, 13 cm, 6 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_r5.png",
+      "respuesta": "38 cm",
+      "aceptadas": [
+        "38cm",
+        "38 centimeters",
+        "38 centimetros",
+        "38 centímetros"
+      ],
+      "explicacion_es": "13 + 6 = 19 y 19 + 19 = 38 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "l1",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: only two sides are written: 8 cm and 5 cm.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo: solo dicen dos lados, 8 cm y 5 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l1.png",
+      "respuesta": "26 cm",
+      "aceptadas": [
+        "26cm",
+        "26 centimeters",
+        "26 centimetros",
+        "26 centímetros"
+      ],
+      "explicacion_es": "El lado de enfrente mide IGUAL: escribe 8 abajo y 5 a la izquierda. 8 + 5 + 8 + 5 = 26 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "Un rectángulo tiene 4 lados. ¿Cuánto mide el lado de enfrente?"
+    },
+    {
+      "id": "l2",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 10 cm long and 6 cm wide.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo de 10 cm de largo y 6 cm de ancho. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l2.png",
+      "respuesta": "32 cm",
+      "aceptadas": [
+        "32cm",
+        "32 centimeters",
+        "32 centimetros",
+        "32 centímetros"
+      ],
+      "explicacion_es": "10 + 6 + 10 + 6 = 32 cm. Escribe primero los lados que faltan. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "Son 4 lados: 10, 6, 10 y 6."
+    },
+    {
+      "id": "l3",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 11 in long and 4 in wide.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo de 11 in de largo y 4 in de ancho. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l3.png",
+      "respuesta": "30 in",
+      "aceptadas": [
+        "30in",
+        "30 inches",
+        "30 pulgadas",
+        "30 inch"
+      ],
+      "explicacion_es": "11 + 4 + 11 + 4 = 30 in. En el examen solo sumaste 3 lados (19). ¡Cuenta: deben ser 4 números! ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "l4",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Square: one side is 9 cm.\nPerimeter = ______",
+      "pregunta_es": "Cuadrado: un lado mide 9 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l4.png",
+      "respuesta": "36 cm",
+      "aceptadas": [
+        "36cm",
+        "36 centimeters",
+        "36 centimetros",
+        "36 centímetros"
+      ],
+      "explicacion_es": "En un cuadrado los 4 lados son iguales: 9 + 9 + 9 + 9 = 36 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "¿Cuántos lados tiene un cuadrado? ¿Cuánto mide cada uno?"
+    },
+    {
+      "id": "l5",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 15 m long and 6 m wide.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo de 15 m de largo y 6 m de ancho. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l5.png",
+      "respuesta": "42 m",
+      "aceptadas": [
+        "42m",
+        "42 meters",
+        "42 metros",
+        "42 meter"
+      ],
+      "explicacion_es": "15 + 6 = 21 y 21 + 21 = 42 m. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "l6",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Square: one side is 7 in.\nPerimeter = ______",
+      "pregunta_es": "Cuadrado: un lado mide 7 in. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l6.png",
+      "respuesta": "28 in",
+      "aceptadas": [
+        "28in",
+        "28 inches",
+        "28 pulgadas",
+        "28 inch"
+      ],
+      "explicacion_es": "7 + 7 + 7 + 7 = 28 in (4 × 7 = 28). ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "l7",
+      "subtema": "lados-que-faltan",
+      "tipo": "completar",
+      "pregunta_en": "Rectangle: 20 cm long and 5 cm wide.\nPerimeter = ______",
+      "pregunta_es": "Rectángulo de 20 cm de largo y 5 cm de ancho. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_l7.png",
+      "respuesta": "50 cm",
+      "aceptadas": [
+        "50cm",
+        "50 centimeters",
+        "50 centimetros",
+        "50 centímetros"
+      ],
+      "explicacion_es": "20 + 5 = 25 y 25 + 25 = 50 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f1",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Triangle: 5 cm, 6 cm, 7 cm.\nPerimeter = ______",
+      "pregunta_es": "Triángulo: 5 cm, 6 cm, 7 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f1.png",
+      "respuesta": "18 cm",
+      "aceptadas": [
+        "18cm",
+        "18 centimeters",
+        "18 centimetros",
+        "18 centímetros"
+      ],
+      "explicacion_es": "Un triángulo tiene 3 lados: 5 + 6 + 7 = 18 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f2",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Triangle: 9 cm, 9 cm, 6 cm.\nPerimeter = ______",
+      "pregunta_es": "Triángulo: 9 cm, 9 cm, 6 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f2.png",
+      "respuesta": "24 cm",
+      "aceptadas": [
+        "24cm",
+        "24 centimeters",
+        "24 centimetros",
+        "24 centímetros"
+      ],
+      "explicacion_es": "9 + 9 = 18 y 18 + 6 = 24 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f3",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Shape with 5 sides: 8 cm, 5 cm, 6 cm, 6 cm, 5 cm.\nPerimeter = ______",
+      "pregunta_es": "Figura de 5 lados: 8, 5, 6, 6 y 5 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f3.png",
+      "respuesta": "30 cm",
+      "aceptadas": [
+        "30cm",
+        "30 centimeters",
+        "30 centimetros",
+        "30 centímetros"
+      ],
+      "explicacion_es": "5 + 6 + 6 + 5 + 8 = 30 cm. Tacha cada lado cuando lo sumes para no saltarte ninguno. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "Cuenta los lados: son 5 números."
+    },
+    {
+      "id": "f4",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Parallelogram: 10 cm, 4 cm, 10 cm, 4 cm.\nPerimeter = ______",
+      "pregunta_es": "Paralelogramo: 10, 4, 10 y 4 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f4.png",
+      "respuesta": "28 cm",
+      "aceptadas": [
+        "28cm",
+        "28 centimeters",
+        "28 centimetros",
+        "28 centímetros"
+      ],
+      "explicacion_es": "10 + 4 + 10 + 4 = 28 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f5",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Trapezoid: top 6 cm, sides 4 cm and 4 cm, bottom 10 cm.\nPerimeter = ______",
+      "pregunta_es": "Trapecio: arriba 6 cm, lados 4 y 4 cm, abajo 10 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f5.png",
+      "respuesta": "24 cm",
+      "aceptadas": [
+        "24cm",
+        "24 centimeters",
+        "24 centimetros",
+        "24 centímetros"
+      ],
+      "explicacion_es": "6 + 4 + 10 + 4 = 24 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f6",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Kite: 5 cm, 5 cm, 8 cm, 8 cm.\nPerimeter = ______",
+      "pregunta_es": "Cometa: 5, 5, 8 y 8 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f6.png",
+      "respuesta": "26 cm",
+      "aceptadas": [
+        "26cm",
+        "26 centimeters",
+        "26 centimetros",
+        "26 centímetros"
+      ],
+      "explicacion_es": "5 + 5 = 10, 8 + 8 = 16, 10 + 16 = 26 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f7",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Kite: 6 cm, 6 cm, 9 cm, 9 cm.\nPerimeter = ______",
+      "pregunta_es": "Cometa: 6, 6, 9 y 9 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f7.png",
+      "respuesta": "30 cm",
+      "aceptadas": [
+        "30cm",
+        "30 centimeters",
+        "30 centimetros",
+        "30 centímetros"
+      ],
+      "explicacion_es": "6 + 6 = 12, 9 + 9 = 18, 12 + 18 = 30 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f8",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Triangle: 12 cm, 10 cm, 8 cm.\nPerimeter = ______",
+      "pregunta_es": "Triángulo: 12, 10 y 8 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f8.png",
+      "respuesta": "30 cm",
+      "aceptadas": [
+        "30cm",
+        "30 centimeters",
+        "30 centimetros",
+        "30 centímetros"
+      ],
+      "explicacion_es": "12 + 10 = 22 y 22 + 8 = 30 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "f9",
+      "subtema": "figuras",
+      "tipo": "completar",
+      "pregunta_en": "Shape with 6 sides: 3 m, 5 m, 4 m, 2 m, 7 m, 7 m.\nPerimeter = ______",
+      "pregunta_es": "Figura de 6 lados: 3, 5, 4, 2, 7 y 7 m. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_f9.png",
+      "respuesta": "28 m",
+      "aceptadas": [
+        "28m",
+        "28 meters",
+        "28 metros",
+        "28 meter"
+      ],
+      "explicacion_es": "7 + 3 + 4 + 4 + 3 + 7 = 28 m. Ve lado por lado y táchalo. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "g1",
+      "subtema": "regulares",
+      "tipo": "completar",
+      "pregunta_en": "Regular pentagon (all sides are equal): 5 in each side.\nPerimeter = ______",
+      "pregunta_es": "Pentágono regular (todos los lados iguales): 5 in cada lado. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_g1.png",
+      "respuesta": "25 in",
+      "aceptadas": [
+        "25in",
+        "25 inches",
+        "25 pulgadas",
+        "25 inch"
+      ],
+      "explicacion_es": "Pentágono = 5 lados. 5 + 5 + 5 + 5 + 5 = 25 in (5 × 5). ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "g2",
+      "subtema": "regulares",
+      "tipo": "completar",
+      "pregunta_en": "Regular hexagon (all sides are equal): 4 cm each side.\nPerimeter = ______",
+      "pregunta_es": "Hexágono regular: 4 cm cada lado. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_g2.png",
+      "respuesta": "24 cm",
+      "aceptadas": [
+        "24cm",
+        "24 centimeters",
+        "24 centimetros",
+        "24 centímetros"
+      ],
+      "explicacion_es": "Hexágono = 6 lados. 4 × 6 = 24 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "g3",
+      "subtema": "regulares",
+      "tipo": "completar",
+      "pregunta_en": "Regular octagon (all sides are equal): 4 cm each side.\nPerimeter = ______",
+      "pregunta_es": "Octágono regular: 4 cm cada lado. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_g3.png",
+      "respuesta": "32 cm",
+      "aceptadas": [
+        "32cm",
+        "32 centimeters",
+        "32 centimetros",
+        "32 centímetros"
+      ],
+      "explicacion_es": "Octágono = 8 lados (como la señal de PARE 🛑). 4 × 8 = 32 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "g4",
+      "subtema": "regulares",
+      "tipo": "completar",
+      "pregunta_en": "Regular hexagon (all sides are equal). One side is 3 m.\nPerimeter = ______",
+      "pregunta_es": "Hexágono regular. Un lado mide 3 m. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_g4.png",
+      "respuesta": "18 m",
+      "aceptadas": [
+        "18m",
+        "18 meters",
+        "18 metros",
+        "18 meter"
+      ],
+      "explicacion_es": "6 lados de 3 m: 3 × 6 = 18 m. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "Hexágono = 6 lados iguales."
+    },
+    {
+      "id": "g5",
+      "subtema": "regulares",
+      "tipo": "completar",
+      "pregunta_en": "Triangle with all sides equal. One side is 7 cm.\nPerimeter = ______",
+      "pregunta_es": "Triángulo con los 3 lados iguales. Un lado mide 7 cm. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_g5.png",
+      "respuesta": "21 cm",
+      "aceptadas": [
+        "21cm",
+        "21 centimeters",
+        "21 centimetros",
+        "21 centímetros"
+      ],
+      "explicacion_es": "3 lados de 7: 7 + 7 + 7 = 21 cm. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "g6",
+      "subtema": "regulares",
+      "tipo": "completar",
+      "pregunta_en": "Regular octagon (all sides are equal). One side is 5 in.\nPerimeter = ______",
+      "pregunta_es": "Octágono regular. Un lado mide 5 in. ¿Perímetro?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_g6.png",
+      "respuesta": "40 in",
+      "aceptadas": [
+        "40in",
+        "40 inches",
+        "40 pulgadas",
+        "40 inch"
+      ],
+      "explicacion_es": "8 lados de 5: 5 × 8 = 40 in. ¡Y no olvides la unidad! La maestra quita puntos si falta.",
+      "pista_es": "Octágono = 8 lados. Cuenta de 5 en 5 ocho veces."
+    },
+    {
+      "id": "p1",
+      "subtema": "problemas",
+      "tipo": "completar",
+      "pregunta_en": "Maria's garden is a rectangle 12 m long and 7 m wide. She wants a fence around the whole garden. How many meters of fence does she need?\nPerimeter = ______",
+      "pregunta_es": "El jardín de María mide 12 m de largo y 7 m de ancho. Quiere una cerca alrededor. ¿Cuántos metros de cerca necesita?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_p1.png",
+      "respuesta": "38 m",
+      "aceptadas": [
+        "38m",
+        "38 meters",
+        "38 metros",
+        "38 meter"
+      ],
+      "explicacion_es": "«Around» (alrededor) = perímetro. 12 + 7 + 12 + 7 = 38 m. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "p2",
+      "subtema": "problemas",
+      "tipo": "completar",
+      "pregunta_en": "Tom's poster is 14 inches long and 9 inches wide. He glues ribbon around the whole edge. How many inches of ribbon does he need?\nPerimeter = ______",
+      "pregunta_es": "El póster de Tom mide 14 in de largo y 9 in de ancho. Pega una cinta por todo el borde. ¿Cuántas pulgadas de cinta necesita?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_p2.png",
+      "respuesta": "46 in",
+      "aceptadas": [
+        "46in",
+        "46 inches",
+        "46 pulgadas",
+        "46 inch"
+      ],
+      "explicacion_es": "14 + 9 = 23 y 23 + 23 = 46 in. ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "p3",
+      "subtema": "problemas",
+      "tipo": "completar",
+      "pregunta_en": "Killian's LEGO board is a square. Each side is 10 cm. He puts tape around it. How much tape does he need?\nPerimeter = ______",
+      "pregunta_es": "La base de LEGO de Killian es un cuadrado de 10 cm por lado. Pone cinta alrededor. ¿Cuánta cinta necesita?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_p3.png",
+      "respuesta": "40 cm",
+      "aceptadas": [
+        "40cm",
+        "40 centimeters",
+        "40 centimetros",
+        "40 centímetros"
+      ],
+      "explicacion_es": "Cuadrado = 4 lados de 10. 10 + 10 + 10 + 10 = 40 cm. 🧱 ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "p4",
+      "subtema": "problemas",
+      "tipo": "completar",
+      "pregunta_en": "A soccer field drawing is 20 m long and 10 m wide. Killian runs around it one time. How many meters does he run?\nPerimeter = ______",
+      "pregunta_es": "Un campo de fútbol mide 20 m de largo y 10 m de ancho. Killian le da una vuelta corriendo. ¿Cuántos metros corre?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_p4.png",
+      "respuesta": "60 m",
+      "aceptadas": [
+        "60m",
+        "60 meters",
+        "60 metros",
+        "60 meter"
+      ],
+      "explicacion_es": "Una vuelta = perímetro. 20 + 10 + 20 + 10 = 60 m. ⚽ ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "p5",
+      "subtema": "problemas",
+      "tipo": "completar",
+      "pregunta_en": "A photo frame is 8 in long and 6 in wide. How long is the border of the frame?\nPerimeter = ______",
+      "pregunta_es": "Un marco de foto mide 8 in de largo y 6 in de ancho. ¿Cuánto mide el borde del marco?",
+      "instruccion_es": "Escribe el número y la unidad (cm, in o m). Ej.: 22 cm",
+      "imagen": "per_p5.png",
+      "respuesta": "28 in",
+      "aceptadas": [
+        "28in",
+        "28 inches",
+        "28 pulgadas",
+        "28 inch"
+      ],
+      "explicacion_es": "8 + 6 + 8 + 6 = 28 in. 🖼️ ¡Y no olvides la unidad! La maestra quita puntos si falta."
+    },
+    {
+      "id": "s1",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "4 + 4 + 7 + 7 = ______",
+      "pregunta_es": "4 + 4 + 7 + 7 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "22",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 4 + 4 = 8; 8 + 7 = 15; 15 + 7 = 22. ✅",
+      "pista_es": "Empieza: 4 + 4 = 8. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s2",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "9 + 9 + 5 + 5 = ______",
+      "pregunta_es": "9 + 9 + 5 + 5 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "28",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 9 + 9 = 18; 18 + 5 = 23; 23 + 5 = 28. ✅",
+      "pista_es": "Empieza: 9 + 9 = 18. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s3",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "12 + 12 + 8 + 8 = ______",
+      "pregunta_es": "12 + 12 + 8 + 8 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "40",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 12 + 12 = 24; 24 + 8 = 32; 32 + 8 = 40. ✅",
+      "pista_es": "Empieza: 12 + 12 = 24. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s4",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "8 + 5 + 8 + 5 = ______",
+      "pregunta_es": "8 + 5 + 8 + 5 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "26",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 8 + 5 = 13; 13 + 8 = 21; 21 + 5 = 26. ✅",
+      "pista_es": "Empieza: 8 + 5 = 13. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s5",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "10 + 6 + 10 + 6 = ______",
+      "pregunta_es": "10 + 6 + 10 + 6 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "32",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 10 + 6 = 16; 16 + 10 = 26; 26 + 6 = 32. ✅",
+      "pista_es": "Empieza: 10 + 6 = 16. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s6",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "11 + 4 + 11 + 4 = ______",
+      "pregunta_es": "11 + 4 + 11 + 4 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "30",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 11 + 4 = 15; 15 + 11 = 26; 26 + 4 = 30. ✅",
+      "pista_es": "Empieza: 11 + 4 = 15. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s7",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "9 + 9 + 9 + 9 = ______",
+      "pregunta_es": "9 + 9 + 9 + 9 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "36",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 9 + 9 = 18; 18 + 9 = 27; 27 + 9 = 36. ✅",
+      "pista_es": "Empieza: 9 + 9 = 18. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s8",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "5 + 5 + 8 + 6 + 6 = ______",
+      "pregunta_es": "5 + 5 + 8 + 6 + 6 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "30",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 5 + 5 = 10; 10 + 8 = 18; 18 + 6 = 24; 24 + 6 = 30. ✅",
+      "pista_es": "Empieza: 5 + 5 = 10. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s9",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = ______",
+      "pregunta_es": "4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "32",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 4 + 4 = 8; 8 + 4 = 12; 12 + 4 = 16; 16 + 4 = 20; 20 + 4 = 24; 24 + 4 = 28; 28 + 4 = 32. ✅",
+      "pista_es": "Empieza: 4 + 4 = 8. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s10",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "14 + 9 + 14 + 9 = ______",
+      "pregunta_es": "14 + 9 + 14 + 9 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "46",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 14 + 9 = 23; 23 + 14 = 37; 37 + 9 = 46. ✅",
+      "pista_es": "Empieza: 14 + 9 = 23. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s11",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "18 + 14 = ______",
+      "pregunta_es": "18 + 14 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "32",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 18 + 14 = 32. ✅",
+      "pista_es": "Empieza: 18 + 14 = 32. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s12",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "27 + 15 = ______",
+      "pregunta_es": "27 + 15 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "42",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 27 + 15 = 42. ✅",
+      "pista_es": "Empieza: 27 + 15 = 42. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s13",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "16 + 24 = ______",
+      "pregunta_es": "16 + 24 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "40",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 16 + 24 = 40. ✅",
+      "pista_es": "Empieza: 16 + 24 = 40. Sigue sumando el siguiente."
+    },
+    {
+      "id": "s14",
+      "subtema": "sumar-varios",
+      "tipo": "completar",
+      "pregunta_en": "6 + 6 + 9 + 9 = ______",
+      "pregunta_es": "6 + 6 + 9 + 9 = ______",
+      "instruccion_es": "Suma de dos en dos. Escribe solo el número.",
+      "respuesta": "30",
+      "aceptadas": [],
+      "explicacion_es": "Paso a paso: 6 + 6 = 12; 12 + 9 = 21; 21 + 9 = 30. ✅",
+      "pista_es": "Empieza: 6 + 6 = 12. Sigue sumando el siguiente."
+    },
+    {
+      "id": "k1",
+      "subtema": "concepto",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Perimeter is the distance around a figure.",
+      "pregunta_es": "El perímetro es la distancia alrededor de una figura.",
+      "correcta": true,
+      "explicacion_es": "¡Sí! Es como caminar por todo el borde. 🚶"
+    },
+    {
+      "id": "k2",
+      "subtema": "lados-que-faltan",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "To find the perimeter, you add only the sides that have numbers.",
+      "pregunta_es": "Para el perímetro solo sumas los lados que tienen número.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! Sumas TODOS los lados. Si un lado no tiene número, búscalo: en el rectángulo el lado de enfrente mide igual."
+    },
+    {
+      "id": "k3",
+      "subtema": "lados-que-faltan",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "A rectangle 8 cm long and 5 cm wide has a perimeter of 13 cm.",
+      "pregunta_es": "Un rectángulo de 8 cm por 5 cm tiene 13 cm de perímetro.",
+      "correcta": false,
+      "explicacion_es": "¡Falso! 13 es solo 2 lados. Son 4: 8 + 5 + 8 + 5 = 26 cm."
+    },
+    {
+      "id": "k4",
+      "subtema": "unidad",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "The sides are in inches. Which answer is complete?",
+      "pregunta_es": "Los lados están en pulgadas. ¿Cuál respuesta está completa?",
+      "opciones": [
+        "30 in",
+        "30",
+        "30 cm"
+      ],
+      "correcta": "30 in",
+      "explicacion_es": "Número + unidad: 30 in. Sin la unidad la maestra quita puntos."
+    },
+    {
+      "id": "k5",
+      "subtema": "regulares",
+      "tipo": "unir",
+      "pregunta_en": "Match the shape with its number of sides.",
+      "pregunta_es": "Une la figura con su número de lados.",
+      "pares": [
+        {
+          "izquierda": "triangle 🔺",
+          "derecha": "3"
+        },
+        {
+          "izquierda": "square ⬜",
+          "derecha": "4"
+        },
+        {
+          "izquierda": "pentagon ⬠",
+          "derecha": "5"
+        },
+        {
+          "izquierda": "hexagon ⬡",
+          "derecha": "6"
+        },
+        {
+          "izquierda": "octagon 🛑",
+          "derecha": "8"
+        }
+      ],
+      "explicacion_es": "Tri = 3, penta = 5, hexa = 6, octo = 8 (como el pulpo 🐙 que tiene 8 brazos)."
+    },
+    {
+      "id": "k6",
+      "subtema": "regulares",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "A regular hexagon has sides of 5 cm. Which is the right work?",
+      "pregunta_es": "Un hexágono regular tiene lados de 5 cm. ¿Cuál es la operación correcta?",
+      "opciones": [
+        "5 + 5 + 5 + 5 + 5 + 5 = 30 cm",
+        "5 + 5 = 10 cm",
+        "5 + 6 = 11 cm"
+      ],
+      "correcta": "5 + 5 + 5 + 5 + 5 + 5 = 30 cm",
+      "explicacion_es": "Hexágono = 6 lados, así que sumas el 5 seis veces: 30 cm."
+    },
+    {
+      "id": "k7",
+      "subtema": "concepto",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«How much ribbon AROUND the poster?» What do you find?",
+      "pregunta_es": "«¿Cuánta cinta ALREDEDOR del póster?» ¿Qué tienes que buscar?",
+      "opciones": [
+        "the perimeter (add all sides)",
+        "only the long side",
+        "only 2 sides"
+      ],
+      "correcta": "the perimeter (add all sides)",
+      "explicacion_es": "around / fence / border / edge = perímetro = sumar todos los lados."
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "perimeter",
+      "es": "perímetro",
+      "aceptadas": [],
+      "ejemplo_en": "Find the perimeter.",
+      "ejemplo_es": "Encuentra el perímetro."
+    },
+    {
+      "en": "side",
+      "es": "lado",
+      "aceptadas": [
+        "lados"
+      ],
+      "ejemplo_en": "A square has 4 sides.",
+      "ejemplo_es": "Un cuadrado tiene 4 lados."
+    },
+    {
+      "en": "around",
+      "es": "alrededor",
+      "aceptadas": [],
+      "ejemplo_en": "a fence around the garden",
+      "ejemplo_es": "una cerca alrededor del jardín"
+    },
+    {
+      "en": "length",
+      "es": "largo",
+      "aceptadas": [
+        "longitud"
+      ],
+      "ejemplo_en": "The length is 12 m.",
+      "ejemplo_es": "El largo es 12 m."
+    },
+    {
+      "en": "width",
+      "es": "ancho",
+      "aceptadas": [],
+      "ejemplo_en": "The width is 7 m.",
+      "ejemplo_es": "El ancho es 7 m."
+    },
+    {
+      "en": "equal",
+      "es": "igual",
+      "aceptadas": [
+        "iguales"
+      ],
+      "ejemplo_en": "All sides are equal.",
+      "ejemplo_es": "Todos los lados son iguales."
+    },
+    {
+      "en": "fence",
+      "es": "cerca",
+      "aceptadas": [
+        "cerco",
+        "valla"
+      ],
+      "ejemplo_en": "She needs a fence.",
+      "ejemplo_es": "Ella necesita una cerca."
+    },
+    {
+      "en": "ribbon",
+      "es": "cinta",
+      "aceptadas": [
+        "liston",
+        "listón"
+      ],
+      "ejemplo_en": "He glues ribbon.",
+      "ejemplo_es": "Él pega cinta."
+    },
+    {
+      "en": "edge",
+      "es": "borde",
+      "aceptadas": [
+        "orilla"
+      ],
+      "ejemplo_en": "the edge of the poster",
+      "ejemplo_es": "el borde del póster"
+    },
+    {
+      "en": "hexagon",
+      "es": "hexágono",
+      "aceptadas": [
+        "hexagono"
+      ],
+      "ejemplo_en": "A hexagon has 6 sides.",
+      "ejemplo_es": "Un hexágono tiene 6 lados."
+    },
+    {
+      "en": "octagon",
+      "es": "octágono",
+      "aceptadas": [
+        "octagono"
+      ],
+      "ejemplo_en": "An octagon has 8 sides.",
+      "ejemplo_es": "Un octágono tiene 8 lados."
+    },
+    {
+      "en": "pentagon",
+      "es": "pentágono",
+      "aceptadas": [
+        "pentagono"
+      ],
+      "ejemplo_en": "A pentagon has 5 sides.",
+      "ejemplo_es": "Un pentágono tiene 5 lados."
+    }
+  ]
 }

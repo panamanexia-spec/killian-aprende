@@ -1,0 +1,742 @@
+{
+  "tipo": "tema",
+  "id": "ef-voleibol-dorso",
+  "titulo": "Voleibol y estilo dorso",
+  "titulo_es": "Voleibol y estilo dorso",
+  "materia": "Educación Física",
+  "idioma": "es",
+  "fecha_examen": "2026-10-27",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "voleibol",
+    "fundamentos",
+    "dorso"
+  ],
+  "vocabulario_pregunta_es": "¿Qué es?",
+  "resumen": [
+    {
+      "en": "PARTE 1: Reglas del voleibol",
+      "es": "Lee despacito 👇",
+      "emoji": "🟦"
+    },
+    {
+      "en": "Cada equipo de voleibol tiene 6 jugadores en la cancha.",
+      "es": "Son 2 equipos, separados por una red.",
+      "emoji": "🏐"
+    },
+    {
+      "en": "Un equipo puede dar máximo 3 toques antes de pasar el balón.",
+      "es": "Un mismo jugador NO puede tocar el balón dos veces seguidas.",
+      "emoji": "3️⃣"
+    },
+    {
+      "en": "Se gana un punto cuando el balón toca el piso en la cancha del otro equipo.",
+      "es": "Si el balón cae fuera de la cancha, el punto es para el otro equipo.",
+      "emoji": "⬇️"
+    },
+    {
+      "en": "Se gana un set al llegar a 25 puntos, con 2 de diferencia.",
+      "es": "Set = una parte del partido.",
+      "emoji": "🏆"
+    },
+    {
+      "en": "Cuando un equipo recupera el saque, sus jugadores cambian de posición.",
+      "es": "Eso se llama rotación.",
+      "emoji": "🔄"
+    },
+    {
+      "en": "PARTE 2: Los 5 fundamentos",
+      "es": "Truco: «San Valentín Ama Regalar Besos»",
+      "emoji": "🟩"
+    },
+    {
+      "en": "Saque: es el fundamento que empieza cada jugada.",
+      "es": "S de San",
+      "emoji": "🚀"
+    },
+    {
+      "en": "Voleo (toque de dedos): pase con los dedos, con las manos arriba de la frente.",
+      "es": "V de Valentín",
+      "emoji": "👐"
+    },
+    {
+      "en": "Antebrazo: pase con los brazos juntos y estirados, abajo.",
+      "es": "A de Ama. Sirve para recibir.",
+      "emoji": "🙏"
+    },
+    {
+      "en": "Remate: saltar y golpear fuerte el balón hacia la cancha rival.",
+      "es": "R de Regalar. Es el ataque.",
+      "emoji": "💥"
+    },
+    {
+      "en": "Bloqueo: saltar junto a la red con los brazos arriba para parar el ataque del rival.",
+      "es": "B de Besos. Es un muro.",
+      "emoji": "🧱"
+    },
+    {
+      "en": "PARTE 3: El estilo dorso",
+      "es": "Lee despacito 👇",
+      "emoji": "🟨"
+    },
+    {
+      "en": "El estilo dorso también se llama estilo espalda.",
+      "es": "Se nada de espalda.",
+      "emoji": "🏊"
+    },
+    {
+      "en": "El cuerpo va boca arriba, estirado sobre el agua.",
+      "es": "Como acostado en la cama.",
+      "emoji": "🛌"
+    },
+    {
+      "en": "La cara queda fuera del agua. La cabeza va quieta, mirando hacia arriba.",
+      "es": "Mira el techo o el cielo.",
+      "emoji": "😊"
+    },
+    {
+      "en": "Los brazos se mueven de forma alternada: uno entra mientras el otro sale.",
+      "es": "Como un molino.",
+      "emoji": "🌀"
+    },
+    {
+      "en": "Al sacar el brazo del agua, la mano roza el muslo.",
+      "es": "Muslo = la parte de arriba de la pierna.",
+      "emoji": "🦵"
+    },
+    {
+      "en": "Los hombros giran suavemente: uno sale y luego el otro.",
+      "es": "Sin brusquedad.",
+      "emoji": "🤸"
+    },
+    {
+      "en": "La patada es alternada, con las piernas casi estiradas.",
+      "es": "Las rodillas NO salen del agua. Pies relajados.",
+      "emoji": "🐸"
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "fundamentos",
+      "emoji": "🏐",
+      "titulo": "Los 5 fundamentos",
+      "pasos": [
+        "Saque: empieza la jugada.",
+        "Voleo: toque con los dedos arriba de la frente.",
+        "Antebrazo: brazos juntos y estirados, para recibir.",
+        "Remate: salto y golpe fuerte.",
+        "Bloqueo: muro de brazos en la red."
+      ],
+      "truco": "«San Valentín Ama Regalar Besos»: Saque, Voleo, Antebrazo, Remate, Bloqueo."
+    },
+    {
+      "subtema": "dorso",
+      "emoji": "🏊",
+      "titulo": "El dorso paso a paso",
+      "pasos": [
+        "Acuéstate boca arriba, estirado.",
+        "Cabeza quieta mirando arriba.",
+        "Brazos alternados como molino.",
+        "Patada alternada, rodillas en el agua."
+      ]
+    },
+    {
+      "subtema": "voleibol",
+      "emoji": "🏐",
+      "titulo": "Los números del voleibol",
+      "pasos": [
+        "6 jugadores por equipo en la cancha.",
+        "3 toques como máximo.",
+        "25 puntos para ganar un set (con 2 de diferencia).",
+        "1 red separa a los equipos."
+      ],
+      "truco": "6 jugadores · 3 toques · 25 puntos."
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco",
+      "pasos": [
+        "Lee la pregunta dos veces.",
+        "Si no sabes, escribe tu mejor idea.",
+        "Al final revisa que todas tengan respuesta."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "v1",
+      "subtema": "voleibol",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuántos jugadores tiene un equipo de voleibol en la cancha?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "6",
+        "5",
+        "11",
+        "4"
+      ],
+      "correcta": "6",
+      "explicacion_es": "En el voleibol hay 6 jugadores de cada lado de la red."
+    },
+    {
+      "id": "v2",
+      "subtema": "voleibol",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuántos toques puede dar un equipo antes de pasar el balón?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "3",
+        "1",
+        "5",
+        "Los que quiera"
+      ],
+      "correcta": "3",
+      "explicacion_es": "Cada equipo tiene máximo 3 toques para pasar el balón al otro lado."
+    },
+    {
+      "id": "v3",
+      "subtema": "voleibol",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Un mismo jugador puede tocar el balón dos veces seguidas.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso: un jugador no puede tocar el balón dos veces seguidas (salvo después del bloqueo)."
+    },
+    {
+      "id": "v4",
+      "subtema": "voleibol",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué separa a los dos equipos en voleibol?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "La red",
+        "Una pared",
+        "Una línea pintada",
+        "Un aro"
+      ],
+      "correcta": "La red",
+      "explicacion_es": "La cancha está dividida por una red. 🏐"
+    },
+    {
+      "id": "v5",
+      "subtema": "voleibol",
+      "tipo": "completar",
+      "pregunta_en": "Se gana un set al llegar a ______ puntos (con 2 de diferencia).",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "25",
+      "aceptadas": [
+        "veinticinco"
+      ],
+      "explicacion_es": "Un set se gana con 25 puntos y 2 de ventaja.",
+      "pista_es": "Dos números: 2 y 5"
+    },
+    {
+      "id": "v6",
+      "subtema": "voleibol",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuándo se gana un punto?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Cuando el balón toca el piso en la cancha del otro equipo",
+        "Cuando el balón toca la red y sigue",
+        "Cuando pasas el balón a tu compañero",
+        "Cuando sacas"
+      ],
+      "correcta": "Cuando el balón toca el piso en la cancha del otro equipo",
+      "explicacion_es": "Si el balón cae en la cancha rival, ganas el punto."
+    },
+    {
+      "id": "v7",
+      "subtema": "voleibol",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Si el balón cae fuera de la cancha, el punto es para el otro equipo.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: el que lo mandó afuera pierde el punto."
+    },
+    {
+      "id": "v8",
+      "subtema": "voleibol",
+      "tipo": "completar",
+      "pregunta_en": "Cuando un equipo recupera el saque, sus jugadores cambian de posición. Esto se llama ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "rotación",
+      "aceptadas": [
+        "rotacion",
+        "rotar"
+      ],
+      "explicacion_es": "Rotación: los jugadores giran una posición en el sentido de las agujas del reloj. 🔄",
+      "pista_es": "rot…"
+    },
+    {
+      "id": "v9",
+      "subtema": "fundamentos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Con qué fundamento empieza cada jugada?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "El saque",
+        "El remate",
+        "El bloqueo",
+        "El voleo"
+      ],
+      "correcta": "El saque",
+      "explicacion_es": "El saque pone el balón en juego."
+    },
+    {
+      "id": "v10",
+      "subtema": "fundamentos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "El pase con las manos arriba de la cabeza se llama…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "voleo (toque de dedos)",
+        "antebrazo",
+        "saque",
+        "bloqueo"
+      ],
+      "correcta": "voleo (toque de dedos)",
+      "explicacion_es": "Voleo = toque con los dedos arriba de la frente. 🙌"
+    },
+    {
+      "id": "v11",
+      "subtema": "fundamentos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "El pase con los brazos juntos y estirados, abajo, se llama…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "antebrazo",
+        "voleo",
+        "remate",
+        "saque"
+      ],
+      "correcta": "antebrazo",
+      "explicacion_es": "Antebrazo: brazos juntos y estirados, golpeas con los antebrazos. Sirve para recibir."
+    },
+    {
+      "id": "v12",
+      "subtema": "fundamentos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Saltar y golpear fuerte el balón hacia la cancha rival es el…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "remate",
+        "saque",
+        "voleo",
+        "antebrazo"
+      ],
+      "correcta": "remate",
+      "explicacion_es": "El remate es el ataque: carrera, salto y golpe. 💥"
+    },
+    {
+      "id": "v13",
+      "subtema": "fundamentos",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Saltar junto a la red con los brazos arriba para parar el ataque es el…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "bloqueo",
+        "remate",
+        "saque",
+        "voleo"
+      ],
+      "correcta": "bloqueo",
+      "explicacion_es": "Bloqueo = muro de brazos junto a la red. 🧱"
+    },
+    {
+      "id": "v14",
+      "subtema": "fundamentos",
+      "tipo": "completar",
+      "pregunta_en": "El fundamento que inicia la jugada se llama ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "saque",
+      "aceptadas": [
+        "el saque"
+      ],
+      "explicacion_es": "El saque empieza cada punto.",
+      "pista_es": "s…"
+    },
+    {
+      "id": "v15",
+      "subtema": "fundamentos",
+      "tipo": "completar",
+      "pregunta_en": "El ataque con salto y golpe fuerte se llama ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "remate",
+      "aceptadas": [
+        "el remate"
+      ],
+      "explicacion_es": "Remate = ataque.",
+      "pista_es": "r…"
+    },
+    {
+      "id": "v16",
+      "subtema": "fundamentos",
+      "tipo": "completar",
+      "pregunta_en": "Parar el ataque del rival saltando junto a la red es el ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "bloqueo",
+      "aceptadas": [
+        "el bloqueo"
+      ],
+      "explicacion_es": "Bloqueo = muro.",
+      "pista_es": "b…"
+    },
+    {
+      "id": "v17",
+      "subtema": "fundamentos",
+      "tipo": "unir",
+      "pregunta_en": "Une cada fundamento con lo que es.",
+      "instruccion_es": "Une cada fundamento con su descripción.",
+      "pares": [
+        {
+          "izquierda": "Saque",
+          "derecha": "Empieza la jugada"
+        },
+        {
+          "izquierda": "Voleo",
+          "derecha": "Toque con los dedos arriba"
+        },
+        {
+          "izquierda": "Antebrazo",
+          "derecha": "Brazos juntos abajo"
+        },
+        {
+          "izquierda": "Remate",
+          "derecha": "Salto y golpe fuerte"
+        }
+      ],
+      "explicacion_es": "Saque, voleo, antebrazo y remate: los fundamentos del voleibol."
+    },
+    {
+      "id": "d1",
+      "subtema": "dorso",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "En el estilo dorso (espalda), ¿cómo va el cuerpo?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Boca arriba, estirado sobre el agua",
+        "Boca abajo",
+        "Parado",
+        "Sentado"
+      ],
+      "correcta": "Boca arriba, estirado sobre el agua",
+      "explicacion_es": "El dorso se nada acostado de espalda, mirando hacia arriba. 🏊"
+    },
+    {
+      "id": "d2",
+      "subtema": "dorso",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En el estilo dorso la cara queda fuera del agua.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: por eso es fácil respirar."
+    },
+    {
+      "id": "d3",
+      "subtema": "dorso",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo son los brazos en el dorso?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Alternados: uno entra mientras el otro sale",
+        "Los dos juntos a la vez",
+        "Quietos",
+        "Solo uno"
+      ],
+      "correcta": "Alternados: uno entra mientras el otro sale",
+      "explicacion_es": "Los brazos se mueven alternados, como un molino. 🔄"
+    },
+    {
+      "id": "d4",
+      "subtema": "dorso",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo es la patada en el dorso?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Alternada, con las piernas casi estiradas",
+        "Como rana",
+        "Las dos piernas juntas como delfín",
+        "No se patea"
+      ],
+      "correcta": "Alternada, con las piernas casi estiradas",
+      "explicacion_es": "Patada alternada: una pierna sube y la otra baja, rodillas casi estiradas y pies relajados."
+    },
+    {
+      "id": "d5",
+      "subtema": "dorso",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En el dorso las rodillas deben salir del agua al patear.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": false,
+      "explicacion_es": "Falso: las rodillas se quedan dentro del agua; solo los pies rompen un poquito la superficie."
+    },
+    {
+      "id": "d6",
+      "subtema": "dorso",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Al sacar el brazo del agua, ¿qué roza la mano?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "El muslo",
+        "La cabeza",
+        "El pecho",
+        "La rodilla"
+      ],
+      "correcta": "El muslo",
+      "explicacion_es": "La mano sale del agua pasando junto al muslo, con el brazo estirado."
+    },
+    {
+      "id": "d7",
+      "subtema": "dorso",
+      "tipo": "completar",
+      "pregunta_en": "En el dorso los brazos se mueven de forma ______ (uno y luego el otro).",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "alternada",
+      "aceptadas": [
+        "alterna",
+        "alternados",
+        "alternado"
+      ],
+      "explicacion_es": "Alternada = uno y después el otro.",
+      "pista_es": "alter…"
+    },
+    {
+      "id": "d8",
+      "subtema": "dorso",
+      "tipo": "completar",
+      "pregunta_en": "Al nadar de espalda, el cuerpo va boca ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "arriba",
+      "aceptadas": [],
+      "explicacion_es": "Boca arriba, mirando al techo o al cielo. ☁️",
+      "pista_es": "Lo contrario de abajo"
+    },
+    {
+      "id": "d9",
+      "subtema": "dorso",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El estilo dorso también se llama estilo espalda.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "correcta": true,
+      "explicacion_es": "Verdadero: dorso = espalda."
+    },
+    {
+      "id": "d10",
+      "subtema": "dorso",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "En el dorso, ¿cómo va la cabeza?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "Quieta, mirando hacia arriba",
+        "Moviéndose de lado a lado",
+        "Dentro del agua",
+        "Mirando los pies todo el tiempo"
+      ],
+      "correcta": "Quieta, mirando hacia arriba",
+      "explicacion_es": "La cabeza quieta ayuda a nadar derecho."
+    },
+    {
+      "id": "d11",
+      "subtema": "dorso",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Los hombros en el dorso…",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "opciones": [
+        "giran suavemente, uno sale y luego el otro",
+        "no se mueven nunca",
+        "van debajo del agua siempre",
+        "se cruzan"
+      ],
+      "correcta": "giran suavemente, uno sale y luego el otro",
+      "explicacion_es": "Ese giro suave de hombros ayuda al brazo que va a salir."
+    },
+    {
+      "id": "v18",
+      "subtema": "voleibol",
+      "tipo": "completar",
+      "pregunta_en": "Cada equipo de voleibol tiene ______ jugadores en la cancha.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "6",
+      "aceptadas": [
+        "seis"
+      ],
+      "explicacion_es": "6 de cada lado.",
+      "pista_es": "Más que 5"
+    },
+    {
+      "id": "v19",
+      "subtema": "voleibol",
+      "tipo": "completar",
+      "pregunta_en": "Un equipo puede dar máximo ______ toques.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "3",
+      "aceptadas": [
+        "tres"
+      ],
+      "explicacion_es": "3 toques y pasa.",
+      "pista_es": "1, 2, …"
+    },
+    {
+      "id": "v20",
+      "subtema": "voleibol",
+      "tipo": "completar",
+      "pregunta_en": "Los dos equipos están separados por una ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "red",
+      "aceptadas": [
+        "la red"
+      ],
+      "explicacion_es": "La red divide la cancha.",
+      "pista_es": "3 letras"
+    },
+    {
+      "id": "v21",
+      "subtema": "fundamentos",
+      "tipo": "completar",
+      "pregunta_en": "El toque con los dedos arriba de la frente se llama ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "voleo",
+      "aceptadas": [
+        "el voleo"
+      ],
+      "explicacion_es": "Voleo = dedos arriba.",
+      "pista_es": "v…"
+    },
+    {
+      "id": "v22",
+      "subtema": "fundamentos",
+      "tipo": "completar",
+      "pregunta_en": "El pase con los brazos juntos y estirados se llama ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "antebrazo",
+      "aceptadas": [
+        "el antebrazo"
+      ],
+      "explicacion_es": "Antebrazo = brazos juntos abajo.",
+      "pista_es": "ante…"
+    },
+    {
+      "id": "d12",
+      "subtema": "dorso",
+      "tipo": "completar",
+      "pregunta_en": "En el dorso la patada es ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "alternada",
+      "aceptadas": [
+        "alterna",
+        "alternado"
+      ],
+      "explicacion_es": "Una pierna sube y la otra baja.",
+      "pista_es": "alter…"
+    },
+    {
+      "id": "d13",
+      "subtema": "dorso",
+      "tipo": "completar",
+      "pregunta_en": "El estilo dorso también se llama estilo ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "espalda",
+      "aceptadas": [
+        "de espalda"
+      ],
+      "explicacion_es": "Dorso = espalda.",
+      "pista_es": "Parte de atrás del cuerpo"
+    },
+    {
+      "id": "d14",
+      "subtema": "dorso",
+      "tipo": "completar",
+      "pregunta_en": "Al sacar el brazo, la mano roza el ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "respuesta": "muslo",
+      "aceptadas": [
+        "el muslo"
+      ],
+      "explicacion_es": "La mano pasa junto al muslo.",
+      "pista_es": "Parte de arriba de la pierna"
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "saque",
+      "es": "empieza la jugada",
+      "aceptadas": [
+        "inicia la jugada",
+        "empezar"
+      ],
+      "ejemplo_en": "Saque de abajo.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "voleo",
+      "es": "toque con los dedos",
+      "aceptadas": [
+        "dedos",
+        "toque de dedos"
+      ],
+      "ejemplo_en": "Voleo arriba de la frente.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "antebrazo",
+      "es": "brazos juntos abajo",
+      "aceptadas": [
+        "recibir",
+        "recepción"
+      ],
+      "ejemplo_en": "Recibo con antebrazo.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "remate",
+      "es": "ataque con salto",
+      "aceptadas": [
+        "ataque",
+        "atacar"
+      ],
+      "ejemplo_en": "Un remate fuerte.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "bloqueo",
+      "es": "muro en la red",
+      "aceptadas": [
+        "parar el ataque",
+        "bloquear"
+      ],
+      "ejemplo_en": "Saltan al bloqueo.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "rotación",
+      "es": "cambiar de posición",
+      "aceptadas": [
+        "rotar",
+        "girar"
+      ],
+      "ejemplo_en": "Rotamos al ganar el saque.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "set",
+      "es": "parte del partido",
+      "aceptadas": [
+        "25 puntos"
+      ],
+      "ejemplo_en": "Ganamos el set.",
+      "ejemplo_es": ""
+    },
+    {
+      "en": "dorso",
+      "es": "nadar de espalda",
+      "aceptadas": [
+        "espalda",
+        "estilo espalda"
+      ],
+      "ejemplo_en": "Nado dorso.",
+      "ejemplo_es": ""
+    }
+  ]
+}
