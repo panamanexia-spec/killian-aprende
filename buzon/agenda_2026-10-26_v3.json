@@ -558,17 +558,24 @@
     {
       "id": "w44-t26",
       "materia": "Math",
-      "titulo": "✏️ Math págs. 187–189: picture graphs with a scale",
+      "titulo": "✏️ Math págs. 186–189: picture graphs with a scale",
       "fecha": "2026-10-25",
       "entrega": "2026-10-26",
       "evaluacion": "formativa",
       "en_casa": [
-        "Terminar las preguntas 2 a 6 de la Lesson 6-1 (págs. 187, 188 y 189) en el libro"
+        "Terminar las preguntas 1 a 6 de la Lesson 6-1 (págs. 186 a 189) en el libro"
       ],
-      "detalle": "Lesson 6-1 Picture Graphs with a Scale, págs. 187–189 (fotos de mamá del 25/10). Entrega supuesta: lunes 26/10 (no venía en la agenda; confirmar). La pregunta 1 está en la pág. 186 (no llegó la foto): la 3 depende de ella.",
+      "detalle": "Lesson 6-1 Picture Graphs with a Scale, págs. 186–189 (fotos de mamá del 25/10). Entrega supuesta: lunes 26/10 (no venía en la agenda; confirmar).",
       "copiar": {
-        "instrucciones_mama": "Escala = cuánto vale cada dibujito. Para saber cuántos dibujitos van: número ÷ escala (30 ÷ 5 = 6). Siempre poner la Key (llave). Pregunta 5: está bien (B, 4). Pregunta 6: Killian encerró B y C; la correcta es solo C (4). Que borre la B. La 16 es lo de un solo día (el martes: 4 × 4 = 16), no la diferencia. Pregunta 3: sin la pág. 186 no sé los nombres de la Pregunta 1; que use esos mismos nombres con los números nuevos 3, 7, 5 y 2. Pregunta 4: lo más fácil es escala 5; también vale escala 2 si lo explica.",
+        "instrucciones_mama": "Escala = cuánto vale cada dibujito. Para saber cuántos dibujitos van: número ÷ escala (12 ÷ 2 = 6). Siempre poner la Key (llave). Pregunta 1: Killian sacó bien las cuentas (6, 2, 3½, 7) pero hizo una tabla con números; una picture graph lleva DIBUJITOS y la Key. Si quiere, que la pase a dibujitos como en el dibujo. Pregunta 5: está bien (B, 4). Pregunta 6: encerró B y C; la correcta es solo C (4). Que borre la B. La 16 es lo de un solo día (el martes: 4 × 4 = 16), no la diferencia. Pregunta 4: lo más fácil es escala 5; también vale escala 2 si lo explica.",
         "partes": [
+          {
+            "titulo": "Pregunta 1 (pág. 186) ✅",
+            "texto": "Favorite Pizza Toppings\nKey: ■ = 2 votes\nPepperoni: 6 ■\nMushrooms: 2 ■\nTomatoes: 3 ■ and a half ■\nCheese: 7 ■",
+            "traduccion_es": "Ingredientes favoritos de pizza\nLlave: cada ■ vale 2 votos\nPepperoni: 12 ÷ 2 = 6\nHongos: 4 ÷ 2 = 2\nTomates: 7 ÷ 2 = 3 y medio\nQueso: 14 ÷ 2 = 7",
+            "dibujo": "¡Tus cuentas están bien! Ahora dibuja cuadritos en vez de números, con la Key.",
+            "imagen": "dibujo_math_186_p1.png"
+          },
           {
             "titulo": "Pregunta 2 (pág. 187)",
             "texto": "Minutes of Piano Practice Per Day\nKey: ● = 5 minutes\nEve: 6 ●\nMicah: 9 ●\nSophie: 4 ●",
@@ -578,9 +585,9 @@
           },
           {
             "titulo": "Pregunta 3 (pág. 187)",
-            "texto": "I changed the data to small numbers: 3, 7, 5 and 2.\nI would use a scale of 1 because the numbers are small and some are odd.\nWith a scale of 2 or 5 I would need to draw half symbols or parts of symbols.",
-            "traduccion_es": "Cambié los datos por números pequeños: 3, 7, 5 y 2.\nUsaría escala de 1 porque los números son pequeños y algunos son impares.\nCon escala de 2 o de 5 tendría que dibujar medios dibujitos o pedazos.",
-            "dibujo": "Dibuja la gráfica con los nombres de la Pregunta 1 (pág. 186).",
+            "texto": "Pepperoni: 3 votes\nMushrooms: 1 vote\nTomatoes: 5 votes\nCheese: 7 votes\nI would use a scale of 1 because the numbers are small and odd.\nWith a scale of 2 I would need to draw half symbols.",
+            "traduccion_es": "Pepperoni: 3 votos\nHongos: 1 voto\nTomates: 5 votos\nQueso: 7 votos\nUsaría escala de 1 porque los números son pequeños e impares.\nCon escala de 2 tendría que dibujar medios dibujitos.",
+            "dibujo": "Cambia los números de la tabla de pizzas y dibuja la gráfica con la Key.",
             "imagen": "dibujo_math_187_p3.png"
           },
           {
