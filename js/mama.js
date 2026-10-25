@@ -110,7 +110,7 @@ function validateTema(o){
   if(Array.isArray(o.subtemas)) o.subtemas.forEach(function(x){ if(str(x)) t.subtemas.push(str(x)); });
   (Array.isArray(o.resumen) ? o.resumen : []).forEach(function(r, i){
     if(!r || !str(r.en) || !str(r.es)){ E.push("Resumen " + (i + 1) + ": necesita «en» y «es»."); return; }
-    t.resumen.push({en:str(r.en), es:str(r.es), emoji:str(r.emoji)});
+    t.resumen.push({en:str(r.en), es:str(r.es), emoji:str(r.emoji), subtema:str(r.subtema)});
   });
   (Array.isArray(o.lecciones) ? o.lecciones : []).forEach(function(l, i){
     if(!l || !str(l.titulo) || !strList(l.pasos).length){ E.push("Lección " + (i + 1) + ": necesita «titulo» y «pasos» (lista de textos)."); return; }
@@ -797,7 +797,9 @@ function extraClick(act, el, ev){
       var id = el.getAttribute("data-id");
       S.home.have[id] = S.home.have[id] > 0 ? -Date.now() : Date.now();   /* negativo = quitado; gana el más reciente */
       saveHome(); render(); return true;
-    case "study": studyId = el.getAttribute("data-id"); S.screen = "study"; writeLocal(); render({top:true}); return true;
+    case "st-next": stPart++; render({top:true}); return true;
+    case "st-prev": stPart = Math.max(0, stPart - 1); render({top:true}); return true;
+    case "study": studyId = el.getAttribute("data-id"); stPart = 0; S.screen = "study"; writeLocal(); render({top:true}); return true;
     /* diccionario */
     case "dict-open": dict.topic = el.getAttribute("data-id"); dict.flip = {}; dict.quiz = null; S.screen = "dict"; writeLocal(); render({top:true}); return true;
     case "dict-back": dict.topic = null; dict.quiz = null; render({top:true}); return true;

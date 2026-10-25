@@ -34,6 +34,16 @@ for(const file of process.argv.slice(2)){
     if(q && q.imagen && !fs.existsSync(path.join(root, "img/temas", q.imagen)) && !fs.existsSync(path.join(path.dirname(path.resolve(file)), q.imagen)))
       warnings.push("La imagen «" + q.imagen + "» (pregunta " + q.id + ") no está en img/temas/ ni en el buzón.");
   }));
+  /* la respuesta de cada pregunta debería estar en el resumen (menos en Matemáticas, donde se calcula) */
+  const nz = t => String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+  list.forEach(x => {
+    if(x.tipo !== "tema" || /math/i.test(x.materia || "") || !(x.resumen || []).length) return;
+    const txt = " " + nz((x.resumen || []).map(r => (r.en || "") + " " + (r.es || "")).join(" ")) + " ";
+    (x.preguntas || []).forEach(q => {
+      const ans = q.tipo === "completar" ? q.respuesta : q.tipo === "opcion_multiple" ? q.correcta : null;
+      if(ans && !txt.includes(" " + nz(ans) + " ") && !txt.includes(nz(ans))) warnings.push("⚠️ La respuesta de " + q.id + " («" + ans + "») no está en el resumen.");
+    });
+  });
   console.log(errors.length ? "✗" : "✓", file, "(" + (o.tipo || (o.agendas ? "agendas" : "?")) + ")");
   errors.forEach(e => console.log("    ERROR:", e)); warnings.forEach(w => console.log("    aviso:", w));
   if(errors.length) bad++;

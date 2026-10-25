@@ -20,44 +20,184 @@
   "vocabulario_pregunta_es": "¿Qué tipo de norma es?",
   "resumen": [
     {
-      "en": "Sociedad = personas que viven juntas y comparten intereses.",
-      "es": "La convivencia es la base de toda sociedad.",
+      "en": "PARTE 1: La sociedad",
+      "es": "Lee despacito 👇",
+      "emoji": "🟦"
+    },
+    {
+      "en": "Una sociedad es un grupo de personas que se unen para compartir intereses y convivir en armonía.",
+      "es": "Sociedad = agrupación de personas que comparten intereses.",
       "emoji": "👨‍👩‍👧‍👦"
     },
     {
-      "en": "Las normas de convivencia ordenan cómo nos comportamos.",
-      "es": "Sirven para respetar los derechos de todos. Quien no las cumple puede ser sancionado.",
+      "en": "La convivencia es la base de toda sociedad.",
+      "es": "La convivencia se basa en la cooperación, la participación y la solidaridad.",
+      "emoji": "🏘️"
+    },
+    {
+      "en": "PARTE 2: Las normas de convivencia",
+      "es": "Lee despacito 👇",
+      "emoji": "🟩"
+    },
+    {
+      "en": "Las normas de convivencia sirven para respetar los derechos y las libertades de todos.",
+      "es": "Ordenan cómo nos portamos.",
       "emoji": "📜"
     },
     {
-      "en": "Se aprenden en el hogar.",
-      "es": "Papá y mamá nos enseñan a portarnos bien dentro y fuera de casa.",
+      "en": "Las normas se aprenden primero en el hogar, con papá y mamá.",
+      "es": "Ellos nos enseñan a portarnos bien dentro y fuera de casa.",
       "emoji": "🏠"
     },
     {
-      "en": "Normas convencionales: cortesía y urbanidad.",
-      "es": "No son obligatorias. Ejemplo: saludar, dar las gracias.",
+      "en": "Quien no cumple las normas puede ser sancionado.",
+      "es": "Sancionado = recibe un castigo o una multa.",
+      "emoji": "⚠️"
+    },
+    {
+      "en": "PARTE 3: Los 3 tipos de normas",
+      "es": "Truco C-M-J: Cortesía, Mi conciencia, Jueces",
+      "emoji": "🟨"
+    },
+    {
+      "en": "Convencionales: son las reglas de cortesía y urbanidad.",
+      "es": "NO son obligatorias.",
       "emoji": "👋"
     },
     {
-      "en": "Normas morales: lo bueno y lo malo.",
-      "es": "Se cumplen por conciencia. Ejemplo: no decir mentiras, dar el asiento a los ancianos.",
+      "en": "Morales: definen lo bueno y lo malo según valores y principios.",
+      "es": "Se respetan por convicción y conciencia (nadie te vigila).",
       "emoji": "💛"
     },
     {
-      "en": "Normas jurídicas: las leyes.",
-      "es": "Son obligatorias y tienen sanciones. Ejemplo: respetar las señales de tránsito.",
+      "en": "Jurídicas: son las leyes. Las crean las autoridades por medio del poder legislativo.",
+      "es": "Son obligatorias para todos y hay instituciones que aplican sanciones.",
       "emoji": "⚖️"
     },
     {
-      "en": "La Cinta Costera es una avenida junto al mar.",
-      "es": "Las familias caminan, corren, patinan y andan en bicicleta.",
+      "en": "PARTE 4: Ejemplos de cada tipo",
+      "es": "Lee despacito 👇",
+      "emoji": "🟧"
+    },
+    {
+      "en": "Convencional: saludar con cortesía, dar las gracias.",
+      "es": "Es educación y buenos modales.",
+      "emoji": "👋"
+    },
+    {
+      "en": "Moral: no decir mentiras, no hacer trampa, dar el asiento a los ancianos.",
+      "es": "Es lo que está bien, aunque nadie mire.",
+      "emoji": "💛"
+    },
+    {
+      "en": "Moral: respetar a las personas con capacidades especiales.",
+      "es": "Ojo: esta NO es convencional, es moral.",
+      "emoji": "💛"
+    },
+    {
+      "en": "Jurídica: respetar las señales de tránsito, tener licencia para conducir, respetar el límite de velocidad.",
+      "es": "Son leyes: si no las cumples, hay multa.",
+      "emoji": "⚖️"
+    },
+    {
+      "en": "Jurídica: no pescar camarones en tiempo de veda.",
+      "es": "Veda = tiempo en que la ley prohíbe pescar.",
+      "emoji": "🦐"
+    },
+    {
+      "en": "PARTE 5: La Cinta Costera",
+      "es": "Lee despacito 👇",
+      "emoji": "🟥"
+    },
+    {
+      "en": "La Cinta Costera es una avenida junto al mar en la ciudad de Panamá.",
+      "es": "Es un lugar para convivir.",
       "emoji": "🌊"
     },
     {
-      "en": "Para resolver un conflicto: hablar y escuchar.",
-      "es": "Identifico el problema, digo cómo me siento, escucho, buscamos ideas y elegimos la mejor.",
-      "emoji": "🤝"
+      "en": "En la Cinta Costera las familias caminan, corren, patinan y pasean en bicicleta.",
+      "es": "Hay ciclovías para andar en bicicleta.",
+      "emoji": "🚲"
+    },
+    {
+      "en": "Para las personas con capacidades especiales hay pasos peatonales con rampa.",
+      "es": "Así todos pueden pasear.",
+      "emoji": "♿"
+    },
+    {
+      "en": "PARTE 6: Normas en las vías (tránsito)",
+      "es": "Lee despacito 👇",
+      "emoji": "🟪"
+    },
+    {
+      "en": "La edad mínima para conducir en Panamá es 18 años.",
+      "es": "Y hay que tener licencia.",
+      "emoji": "🚗"
+    },
+    {
+      "en": "Los niños menores de cinco años van en un asiento especial en la parte trasera.",
+      "es": "Nunca adelante.",
+      "emoji": "🧒"
+    },
+    {
+      "en": "El conductor y el pasajero de adelante deben usar el cinturón de seguridad.",
+      "es": "¡Clic! 🔒",
+      "emoji": "🔒"
+    },
+    {
+      "en": "No se puede usar el celular mientras se conduce.",
+      "es": "Es peligroso y está prohibido.",
+      "emoji": "📵"
+    },
+    {
+      "en": "En Panamá se conduce por el lado derecho de la carretera.",
+      "es": "Derecha ➡️",
+      "emoji": "➡️"
+    },
+    {
+      "en": "PARTE 7: Cómo resolver un conflicto",
+      "es": "5 pasos 👇",
+      "emoji": "🟫"
+    },
+    {
+      "en": "Primero identifico el problema.",
+      "es": "¿Qué pasó?",
+      "emoji": "1️⃣"
+    },
+    {
+      "en": "Digo cómo me siento.",
+      "es": "Hablo con calma.",
+      "emoji": "2️⃣"
+    },
+    {
+      "en": "Dejo que los otros expresen lo que necesitan.",
+      "es": "Escucho.",
+      "emoji": "3️⃣"
+    },
+    {
+      "en": "Hacemos una lluvia de ideas y elegimos la mejor.",
+      "es": "Lluvia de ideas = decir muchas soluciones.",
+      "emoji": "4️⃣"
+    },
+    {
+      "en": "Hacemos la solución y vemos cómo salió.",
+      "es": "¿Funcionó?",
+      "emoji": "5️⃣"
+    },
+    {
+      "en": "Cuento: Juan José le quitó la pelota a David y David desordenó el cuarto.",
+      "es": "Les faltó el respeto. Se resolvía hablando: David espera y luego juegan juntos.",
+      "emoji": "⚽"
+    },
+    {
+      "en": "PARTE 8: El acróstico",
+      "es": "Lee despacito 👇",
+      "emoji": "🔤"
+    },
+    {
+      "en": "Un acróstico es un texto donde las primeras letras forman una palabra en vertical.",
+      "es": "Ejemplo: P de Paciencia, A de Amistad, Z de Zapato amigo → PAZ.",
+      "emoji": "✍️"
     }
   ],
   "lecciones": [
@@ -82,6 +222,30 @@
         "Escucho al otro.",
         "Lluvia de ideas y elegimos la mejor.",
         "La hacemos y vemos cómo salió."
+      ]
+    },
+    {
+      "subtema": "ejemplos",
+      "emoji": "🔍",
+      "titulo": "¿Qué tipo de norma es?",
+      "pasos": [
+        "¿Es una ley, con multa o castigo? → jurídica ⚖️",
+        "¿Es de buenos modales (saludar, gracias)? → convencional 👋",
+        "¿Es ser bueno, aunque nadie mire (no mentir, ayudar)? → moral 💛"
+      ],
+      "ejemplo": "«Tener licencia para conducir» → es ley → jurídica.",
+      "truco": "Ley = jurídica · Modales = convencional · Conciencia = moral."
+    },
+    {
+      "subtema": "vias",
+      "emoji": "🚗",
+      "titulo": "Seguridad en el carro",
+      "pasos": [
+        "Para manejar: 18 años y licencia.",
+        "Niños menores de 5: asiento especial atrás.",
+        "Cinturón: conductor y pasajero de adelante.",
+        "Nada de celular al manejar.",
+        "En Panamá se maneja por la derecha."
       ]
     },
     {

@@ -15,38 +15,123 @@
   ],
   "resumen": [
     {
+      "en": "PART 1: The SUBJECT",
+      "es": "PARTE 1: El sujeto (SÁB-yect)",
+      "emoji": "🟦"
+    },
+    {
       "en": "The subject tells us who or what the sentence is about.",
-      "es": "El sujeto (SÁB-yect) nos dice QUIÉN o QUÉ es el tema de la oración.",
+      "es": "El sujeto dice QUIÉN o QUÉ. Pregunta: ¿quién hace la acción?",
       "emoji": "🙋"
     },
     {
-      "en": "The predicate tells us what the subject does or is.",
-      "es": "El predicado (PRÉ-di-quet) nos dice qué HACE o qué ES el sujeto.",
-      "emoji": "🏃"
+      "en": "Rose · She · The doctor · Her ma and pa · The baby",
+      "es": "El sujeto puede ser 1 palabra o varias. «She» (ella) también es sujeto.",
+      "emoji": "👥"
     },
     {
-      "en": "The dog / runs in the park.",
-      "es": "El perro (sujeto) / corre en el parque (predicado).",
+      "en": "The strong girl / rolled the lightning.",
+      "es": "Si hay un adjetivo antes, va DENTRO del sujeto: el sujeto es «The strong girl» (las 3 palabras).",
+      "emoji": "💪"
+    },
+    {
+      "en": "The dog · Maria · The birds · The thunder · The small town",
+      "es": "Más sujetos: el perro, María, los pájaros, el trueno, el pueblo pequeño.",
       "emoji": "🐶"
     },
     {
-      "en": "Maria / reads a book.",
-      "es": "María (sujeto) / lee un libro (predicado).",
-      "emoji": "📖"
+      "en": "PART 2: The PREDICATE",
+      "es": "PARTE 2: El predicado (PRÉ-di-quet)",
+      "emoji": "🟩"
     },
     {
-      "en": "An adjective is a word that describes a person, animal, place, or thing.",
-      "es": "Un adjetivo (Á-yec-tiv) describe a una persona, animal, lugar o cosa.",
+      "en": "The predicate tells us what the subject does or is.",
+      "es": "El predicado dice qué HACE o qué ES el sujeto.",
+      "emoji": "🏃"
+    },
+    {
+      "en": "Rose | lived in a small town.",
+      "es": "Haz una raya | después del sujeto. TODO lo de la derecha es el predicado, no solo una palabra.",
+      "emoji": "✂️"
+    },
+    {
+      "en": "The predicate always has a verb (an action word): rolled, lived, smiled, talked.",
+      "es": "Siempre tiene un verbo (acción). En «Rose rolled the lightning into a ball», el verbo es rolled.",
+      "emoji": "⚡"
+    },
+    {
+      "en": "Rose | sat up and talked. · The doctor | smiled at the baby.",
+      "es": "Predicados: «sat up and talked», «smiled at the baby».",
+      "emoji": "🗣️"
+    },
+    {
+      "en": "Her ma and pa | sang her a lullaby.",
+      "es": "Predicado: «sang her a lullaby» (le cantaron una canción de cuna).",
+      "emoji": "🎶"
+    },
+    {
+      "en": "The baby | did not cry. · Rose | was born with superpowers.",
+      "es": "«did not cry» y «was born with superpowers» también son predicados. «Rose» NO es predicado: es el sujeto.",
+      "emoji": "🚫"
+    },
+    {
+      "en": "My brother | plays soccer. · The teacher | writes on the board.",
+      "es": "Predicados: «plays soccer», «writes on the board».",
+      "emoji": "⚽"
+    },
+    {
+      "en": "PART 3: The ADJECTIVE",
+      "es": "PARTE 3: El adjetivo (Á-yec-tiv)",
+      "emoji": "🟨"
+    },
+    {
+      "en": "An adjective describes a person, animal, place, or thing (a noun).",
+      "es": "Dice CÓMO ES: cómo se ve, cómo se siente, qué tan grande es.",
       "emoji": "🎨"
     },
     {
-      "en": "The big dog runs. I have a red ball.",
-      "es": "«big» (grande) y «red» (rojo) son adjetivos.",
+      "en": "small · big · huge · strong",
+      "es": "pequeño · grande · enorme · fuerte",
+      "emoji": "📏"
+    },
+    {
+      "en": "stormy · dark · happy",
+      "es": "tormentosa (STÓR-mi) · oscura · feliz",
+      "emoji": "⛈️"
+    },
+    {
+      "en": "red · blue",
+      "es": "rojo · azul (los colores son adjetivos)",
       "emoji": "🔴"
     },
     {
-      "en": "Rose / lived in a small town.",
-      "es": "Thunder Rose: Rose = sujeto · lived in a small town = predicado · small = adjetivo.",
+      "en": "a small town · a stormy night · a big smile · a red ball · a blue backpack",
+      "es": "Casi siempre va justo ANTES de la cosa.",
+      "emoji": "📍"
+    },
+    {
+      "en": "Lightning is NOT an adjective. It is a thing (a noun).",
+      "es": "«lightning» (LÁIT-ning) = relámpago: es una cosa, no dice cómo es algo.",
+      "emoji": "❌"
+    },
+    {
+      "en": "PART 4: A COMPLETE SENTENCE",
+      "es": "PARTE 4: La oración completa",
+      "emoji": "🟥"
+    },
+    {
+      "en": "A complete sentence = subject + predicate. «Rose talked.»",
+      "es": "Oración (SÉN-tens) completa = sujeto + predicado.",
+      "emoji": "✅"
+    },
+    {
+      "en": "«Sang a lullaby.» is NOT a complete sentence.",
+      "es": "No dice QUIÉN cantó: le falta el sujeto.",
+      "emoji": "❌"
+    },
+    {
+      "en": "The strong girl | rolled the lightning.",
+      "es": "Sujeto: The strong girl · Predicado: rolled the lightning · Adjetivo: strong · Verbo: rolled",
       "emoji": "🌹"
     }
   ],
@@ -86,6 +171,18 @@
       ],
       "ejemplo": "a small town → ¿cómo es el pueblo? small.",
       "truco": "Casi siempre va justo antes de la cosa: small town, stormy night."
+    },
+    {
+      "subtema": "mix",
+      "emoji": "🧩",
+      "titulo": "¿Es una oración completa?",
+      "pasos": [
+        "Busca el sujeto: ¿QUIÉN?",
+        "Busca el predicado: ¿QUÉ HACE?",
+        "Si tiene los dos, es completa ✅. Si falta uno, no ❌."
+      ],
+      "ejemplo": "«Rose talked.» → ¿Quién? Rose. ¿Qué hace? talked → ✅. «Sang a lullaby.» → ¿Quién? No dice → ❌.",
+      "truco": "Sujeto + predicado = oración completa."
     },
     {
       "emoji": "🍀",

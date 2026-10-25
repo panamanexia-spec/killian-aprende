@@ -18,44 +18,169 @@
   ],
   "resumen": [
     {
+      "en": "PART 1: Key words",
+      "es": "PARTE 1: Palabras clave",
+      "emoji": "🟦"
+    },
+    {
       "en": "An organism is a living thing.",
-      "es": "Un organismo es un ser vivo: plantas, animales, personas.",
+      "es": "Organismo (ÓR-ga-nism) = ser vivo: plantas, animales, personas.",
       "emoji": "🐾"
     },
     {
       "en": "A life cycle is a series of stages an organism goes through during its life.",
-      "es": "Ciclo de vida = las etapas por las que pasa un ser vivo.",
+      "es": "Ciclo de vida (LÁIF SÁI-col) = las etapas de la vida de un ser vivo.",
       "emoji": "🔄"
     },
     {
-      "en": "All organisms: birth → growth → reproduction → death.",
-      "es": "Todos: nacen, crecen (se hacen más grandes), se reproducen (hacen uno nuevo de su tipo) y mueren.",
+      "en": "Growth is a period of getting larger.",
+      "es": "Growth (GROUZ) = crecimiento: hacerse más grande.",
+      "emoji": "📏"
+    },
+    {
+      "en": "Reproduction is to make a new organism of the same kind.",
+      "es": "Reproducción = hacer uno nuevo de su mismo tipo.",
+      "emoji": "👶"
+    },
+    {
+      "en": "PART 2: The 4 stages",
+      "es": "PARTE 2: Las 4 etapas",
+      "emoji": "🟩"
+    },
+    {
+      "en": "All living things have birth → growth → reproduction → death.",
+      "es": "Nacer (BERZ) → crecer → reproducirse → morir (DEZ). La PRIMERA etapa es birth.",
       "emoji": "🐣"
     },
     {
-      "en": "Plant: seed → young sprout → seedling → adult plant.",
-      "es": "Planta: semilla → brote → plantita joven (SÍD-ling) → planta adulta. Agua, tierra y sol la ayudan a germinar.",
+      "en": "A new organism starts the cycle again.",
+      "es": "Y vuelve a empezar, como un círculo.",
+      "emoji": "♻️"
+    },
+    {
+      "en": "PART 3: Plants (pumpkin)",
+      "es": "PARTE 3: Las plantas (pumpkin = calabaza)",
+      "emoji": "🟨"
+    },
+    {
+      "en": "Many plant life cycles begin with a seed.",
+      "es": "Muchas plantas empiezan con una semilla (SÍID).",
+      "emoji": "🌰"
+    },
+    {
+      "en": "Germination is the growth of a seed into a young plant.",
+      "es": "Germinación (yer-mi-NÉI-shon) = la semilla se vuelve plantita. Solo las plantas germinan (germinate).",
       "emoji": "🌱"
     },
     {
-      "en": "Flowers make fruits with seeds. No seeds = no new plants.",
-      "es": "Las flores dan frutos con semillas. Sin semillas no hay plantas nuevas.",
+      "en": "Pumpkin: seed → young sprout → seedling → adult plant.",
+      "es": "Calabaza: semilla → brote → plantita joven (SÍID-ling) → planta adulta.",
       "emoji": "🎃"
     },
     {
-      "en": "Beetle: egg → larva → pupa → adult. Cricket: egg → nymph → adult.",
-      "es": "Escarabajo: 4 etapas. Grillo: 3 etapas (la ninfa es un adulto chiquito).",
+      "en": "A pumpkin plant needs flowers to make seeds.",
+      "es": "Sin flores, no hay semillas.",
+      "emoji": "🌼"
+    },
+    {
+      "en": "The seed grows into a new plant and starts the life cycle again.",
+      "es": "Ese es el papel (role) de la semilla.",
+      "emoji": "🔁"
+    },
+    {
+      "en": "The plant looks different at different times because it is growing through its life cycle.",
+      "es": "Se ve distinta porque va pasando por las etapas.",
+      "emoji": "👀"
+    },
+    {
+      "en": "PART 4: Insects",
+      "es": "PARTE 4: Los insectos",
+      "emoji": "🟧"
+    },
+    {
+      "en": "Beetle: egg → larva → pupa → adult. A beetle has 4 stages.",
+      "es": "Escarabajo (BÍI-tol): 4 etapas. Larva (LÁR-va), pupa (PIÚ-pa).",
       "emoji": "🪲"
     },
     {
-      "en": "Frog eggs are small; sea turtle eggs are large. Both hatch and grow into adults.",
-      "es": "Rana: huevo pequeño → renacuajo. Tortuga: huevo grande → tortuguita (hatchling). Las dos crecen hasta ser adultas.",
+      "en": "Cricket: egg → nymph → adult. A cricket has 3 stages.",
+      "es": "Grillo: 3 etapas. Nymph (NIMF) = ninfa, un adulto chiquito. No tiene pupa.",
+      "emoji": "🦗"
+    },
+    {
+      "en": "PART 5: Frog and sea turtle",
+      "es": "PARTE 5: La rana y la tortuga marina",
+      "emoji": "🟥"
+    },
+    {
+      "en": "A frog starts as an egg: egg → tadpole → young frog → adult.",
+      "es": "Rana: huevo → renacuajo (TÁD-poul) → ranita → adulta.",
       "emoji": "🐸"
     },
     {
-      "en": "Egg = animal. Seed = plant. Both start a new life.",
-      "es": "Huevo = animal. Semilla = planta. Los dos empiezan una vida nueva.",
+      "en": "Frog eggs are very small. Sea turtle eggs are large.",
+      "es": "Huevos de rana: muy pequeños. Huevos de tortuga: grandes.",
       "emoji": "🥚"
+    },
+    {
+      "en": "A baby sea turtle that comes out of the egg is a hatchling.",
+      "es": "La tortuguita que sale del huevo = hatchling (JÁCH-ling).",
+      "emoji": "🐢"
+    },
+    {
+      "en": "Both hatch from eggs and grow into adults.",
+      "es": "En qué se parecen: las dos salen del huevo y crecen hasta ser adultas.",
+      "emoji": "🤝"
+    },
+    {
+      "en": "PART 6: Plants, animals or both?",
+      "es": "PARTE 6: ¿Plantas, animales o los dos?",
+      "emoji": "🟪"
+    },
+    {
+      "en": "Plants come from seeds. Many animals come from eggs.",
+      "es": "Semilla y germinar = plantas · huevo = animales.",
+      "emoji": "🌱"
+    },
+    {
+      "en": "Both: reproduction. An egg and a seed are alike: both start a new life.",
+      "es": "Los dos se reproducen. Huevo y semilla se parecen: los dos empiezan una vida nueva.",
+      "emoji": "🤝"
+    },
+    {
+      "en": "PART 7: Predict",
+      "es": "PARTE 7: Predecir (¿qué pasará?)",
+      "emoji": "🔮"
+    },
+    {
+      "en": "If a plant cannot make seeds, no new plants will grow.",
+      "es": "Sin semillas → no crecen plantas nuevas.",
+      "emoji": "🚫"
+    },
+    {
+      "en": "If a bird cannot lay eggs, there will be no baby birds. That bird could disappear.",
+      "es": "Sin huevos → no hay pajaritos y ese pájaro podría desaparecer.",
+      "emoji": "🐦"
+    },
+    {
+      "en": "PART 8: Traits",
+      "es": "PARTE 8: Las características (TRÉITS)",
+      "emoji": "🧬"
+    },
+    {
+      "en": "A trait is a feature, like fur color.",
+      "es": "Trait = una característica, como el color del pelaje.",
+      "emoji": "🐕"
+    },
+    {
+      "en": "Young animals look a lot like their parents, but not exactly the same.",
+      "es": "Se parecen mucho a sus padres, pero no son iguales.",
+      "emoji": "👨‍👩‍👦"
+    },
+    {
+      "en": "Two dogs of the same kind can look different because their environment was different.",
+      "es": "El ambiente (en-VÁI-ron-ment) y el cuidado (comida, ejercicio) también cambian cómo se ven.",
+      "emoji": "🍖"
     }
   ],
   "preguntas": [
@@ -1012,6 +1137,38 @@
         "Frog (rana): egg → tadpole → young frog → adult."
       ],
       "truco": "El grillo se salta la pupa: por eso tiene 3."
+    },
+    {
+      "subtema": "plantas",
+      "emoji": "🎃",
+      "titulo": "La calabaza en 4 pasos",
+      "pasos": [
+        "seed 🌰 = semilla",
+        "young sprout 🌱 = brote",
+        "seedling 🌿 = plantita joven",
+        "adult plant 🎃 = planta adulta, con flores que hacen semillas"
+      ],
+      "truco": "Semilla → Brote → Plantita → Planta: ¡cada vez más grande!"
+    },
+    {
+      "subtema": "traits",
+      "emoji": "🐕",
+      "titulo": "Traits = cómo eres",
+      "pasos": [
+        "Un trait es una característica: color de pelo, tamaño, forma.",
+        "Los hijos se parecen a sus padres, pero no son iguales.",
+        "El ambiente (comida, ejercicio, cuidado) también los cambia."
+      ]
+    },
+    {
+      "subtema": "predecir",
+      "emoji": "🔮",
+      "titulo": "¿Qué pasará?",
+      "pasos": [
+        "Si NO hay semillas → no hay plantas nuevas.",
+        "Si NO hay huevos → no hay crías, y ese animal podría desaparecer."
+      ],
+      "truco": "Sin semilla o sin huevo, el ciclo se rompe."
     },
     {
       "emoji": "🍀",

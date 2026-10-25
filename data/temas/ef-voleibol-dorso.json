@@ -15,39 +15,104 @@
   "vocabulario_pregunta_es": "¿Qué es?",
   "resumen": [
     {
-      "en": "Voleibol: 2 equipos de 6 jugadores separados por una red.",
-      "es": "Gana el punto quien hace caer el balón en la cancha del otro.",
+      "en": "PARTE 1: Reglas del voleibol",
+      "es": "Lee despacito 👇",
+      "emoji": "🟦"
+    },
+    {
+      "en": "Cada equipo de voleibol tiene 6 jugadores en la cancha.",
+      "es": "Son 2 equipos, separados por una red.",
       "emoji": "🏐"
     },
     {
-      "en": "Máximo 3 toques por equipo.",
-      "es": "Un jugador no puede tocar el balón dos veces seguidas.",
+      "en": "Un equipo puede dar máximo 3 toques antes de pasar el balón.",
+      "es": "Un mismo jugador NO puede tocar el balón dos veces seguidas.",
       "emoji": "3️⃣"
     },
     {
-      "en": "Un set se gana con 25 puntos (2 de ventaja).",
-      "es": "Al recuperar el saque, el equipo hace la rotación.",
+      "en": "Se gana un punto cuando el balón toca el piso en la cancha del otro equipo.",
+      "es": "Si el balón cae fuera de la cancha, el punto es para el otro equipo.",
+      "emoji": "⬇️"
+    },
+    {
+      "en": "Se gana un set al llegar a 25 puntos, con 2 de diferencia.",
+      "es": "Set = una parte del partido.",
+      "emoji": "🏆"
+    },
+    {
+      "en": "Cuando un equipo recupera el saque, sus jugadores cambian de posición.",
+      "es": "Eso se llama rotación.",
       "emoji": "🔄"
     },
     {
-      "en": "Fundamentos: saque, voleo, antebrazo, remate y bloqueo.",
-      "es": "Saque empieza · voleo con dedos · antebrazo abajo · remate ataca · bloqueo para.",
-      "emoji": "🙌"
+      "en": "PARTE 2: Los 5 fundamentos",
+      "es": "Truco: «San Valentín Ama Regalar Besos»",
+      "emoji": "🟩"
     },
     {
-      "en": "Dorso (espalda): boca arriba y estirado.",
-      "es": "La cara queda fuera del agua y la cabeza quieta.",
+      "en": "Saque: es el fundamento que empieza cada jugada.",
+      "es": "S de San",
+      "emoji": "🚀"
+    },
+    {
+      "en": "Voleo (toque de dedos): pase con los dedos, con las manos arriba de la frente.",
+      "es": "V de Valentín",
+      "emoji": "👐"
+    },
+    {
+      "en": "Antebrazo: pase con los brazos juntos y estirados, abajo.",
+      "es": "A de Ama. Sirve para recibir.",
+      "emoji": "🙏"
+    },
+    {
+      "en": "Remate: saltar y golpear fuerte el balón hacia la cancha rival.",
+      "es": "R de Regalar. Es el ataque.",
+      "emoji": "💥"
+    },
+    {
+      "en": "Bloqueo: saltar junto a la red con los brazos arriba para parar el ataque del rival.",
+      "es": "B de Besos. Es un muro.",
+      "emoji": "🧱"
+    },
+    {
+      "en": "PARTE 3: El estilo dorso",
+      "es": "Lee despacito 👇",
+      "emoji": "🟨"
+    },
+    {
+      "en": "El estilo dorso también se llama estilo espalda.",
+      "es": "Se nada de espalda.",
       "emoji": "🏊"
     },
     {
-      "en": "Brazos alternados como un molino.",
-      "es": "La mano sale rozando el muslo con el brazo estirado.",
-      "emoji": "💪"
+      "en": "El cuerpo va boca arriba, estirado sobre el agua.",
+      "es": "Como acostado en la cama.",
+      "emoji": "🛌"
     },
     {
-      "en": "Patada alternada.",
-      "es": "Rodillas dentro del agua y pies relajados.",
+      "en": "La cara queda fuera del agua. La cabeza va quieta, mirando hacia arriba.",
+      "es": "Mira el techo o el cielo.",
+      "emoji": "😊"
+    },
+    {
+      "en": "Los brazos se mueven de forma alternada: uno entra mientras el otro sale.",
+      "es": "Como un molino.",
+      "emoji": "🌀"
+    },
+    {
+      "en": "Al sacar el brazo del agua, la mano roza el muslo.",
+      "es": "Muslo = la parte de arriba de la pierna.",
       "emoji": "🦵"
+    },
+    {
+      "en": "Los hombros giran suavemente: uno sale y luego el otro.",
+      "es": "Sin brusquedad.",
+      "emoji": "🤸"
+    },
+    {
+      "en": "La patada es alternada, con las piernas casi estiradas.",
+      "es": "Las rodillas NO salen del agua. Pies relajados.",
+      "emoji": "🐸"
     }
   ],
   "lecciones": [
@@ -74,6 +139,18 @@
         "Brazos alternados como molino.",
         "Patada alternada, rodillas en el agua."
       ]
+    },
+    {
+      "subtema": "voleibol",
+      "emoji": "🏐",
+      "titulo": "Los números del voleibol",
+      "pasos": [
+        "6 jugadores por equipo en la cancha.",
+        "3 toques como máximo.",
+        "25 puntos para ganar un set (con 2 de diferencia).",
+        "1 red separa a los equipos."
+      ],
+      "truco": "6 jugadores · 3 toques · 25 puntos."
     },
     {
       "emoji": "🍀",

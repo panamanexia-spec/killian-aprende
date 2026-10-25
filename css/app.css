@@ -528,3 +528,5 @@ a.btn{text-decoration:none}
 .realbar .chip{background:#c23d3d}
 .clock{font-family:var(--font-display); font-weight:800; font-size:1.3rem; color:var(--blue-d); background:#fff; border-radius:999px; padding:2px 14px; box-shadow:0 3px 0 var(--sky-2)}
 .blankwarn{background:#fff7d6; border:3px solid #ffc928; border-radius:16px; padding:10px 14px; margin:0 0 8px; font-weight:800; color:#7a5200}
+.parttitle{font-family:var(--font-display); font-size:1.8rem; color:var(--blue-d); margin:10px 0 2px}
+.inres{background:#eef7ff; border-radius:14px; padding:8px 12px; margin-top:8px}

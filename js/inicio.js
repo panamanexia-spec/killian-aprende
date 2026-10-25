@@ -432,15 +432,42 @@ function renderHome(){
 
 /* ------------------------------------------------------------------ TEMAS */
 var studyId = null;
+/* Resumen por partes: las frases «título» empiezan con PART / PARTE. Si no hay títulos, se ve todo junto como siempre. */
+var stPart = 0;
+function isPartTitle(r){ return /^\s*PART(E)?\s/i.test(r.en || "") || /^\s*PART(E)?\s/i.test(r.es || ""); }
+function summaryParts(t){
+  var parts = [], cur = null;
+  t.resumen.forEach(function(r){
+    if(isPartTitle(r)){ cur = {title:r, rows:[]}; parts.push(cur); }
+    else { if(!cur){ cur = {title:null, rows:[]}; parts.push(cur); } cur.rows.push(r); }
+  });
+  return parts;
+}
+function srow(t, r){
+  return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="'+tlang(t.id)+'">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en, tlang(t.id))+'</div>';
+}
 function renderStudy(){
   var t = temaById(studyId);
   if(!t) return subHeader("Estudiar", "go-screen", "← Mis temas") + '<p class="note">No encuentro ese tema.</p>' + footer();
+  var parts = t.resumen.some(isPartTitle) ? summaryParts(t) : null;
+  if(parts){
+    stPart = Math.min(Math.max(0, stPart), parts.length - 1);
+    var pt = parts[stPart], last = stPart === parts.length - 1, n = parts.length;
+    return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
+      '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="'+tlang(t.id)+'">'+esc(t.titulo)+'</h2>' +
+      '<div class="progress-day"><div class="prog-row"><span>Parte '+(stPart + 1)+' de '+n+'</span></div><div class="bar"><i style="width:'+Math.round((stPart + 1) / n * 100)+'%"></i></div></div>' +
+      (pt.title ? '<h2 class="parttitle" lang="'+tlang(t.id)+'">'+esc(pt.title.emoji || "📘")+' '+esc(pt.title.en)+'</h2><p class="trad">'+esc(pt.title.es)+'</p>' : '') +
+      pt.rows.map(function(r){ return srow(t, r); }).join("") + '</section>' +
+      (last ? lessonsHtml(t.id, null) + '<section class="card alldone"><h2>🎉 ¡Leíste todo el resumen!</h2><p>¡Muy bien, Killian!</p></section>' : "") +
+      '<div class="stack">' + (stPart > 0 ? '<button class="btn btn-ghost" type="button" data-act="st-prev">⬅️ Anterior</button>' : '') +
+      (last ? (t.vocabulario.length && t.idioma !== "es" ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") +
+        '<button class="btn btn-sun btn-big" type="button" data-act="open-tema" data-id="'+esc(t.id)+'">📝 Ir al examen</button>' :
+        '<button class="btn btn-sun btn-big" type="button" data-act="st-next">➡️ Siguiente parte</button>') + '</div>' + footer();
+  }
   return subHeader(t.titulo_es || t.titulo, "go-screen", "← Mis temas") +
     '<section class="card"><span class="chip">'+esc(t.materia||"")+'</span><h2 class="sec-title" lang="'+tlang(t.id)+'">'+esc(t.titulo)+'</h2>' +
     lessonsHtml(t.id, null).replace('<section class="card lessons">', '<section class="lessons-in">').replace('</section>', '</section>') +
-    t.resumen.map(function(r){
-      return '<div class="srow"><span class="semo" aria-hidden="true">'+esc(r.emoji||"📌")+'</span><div style="flex:1"><b lang="'+tlang(t.id)+'">'+esc(r.en)+'</b><p>'+esc(r.es)+'</p></div>'+spk(r.en, tlang(t.id))+'</div>';
-    }).join("") + '</section>' +
+    t.resumen.map(function(r){ return srow(t, r); }).join("") + '</section>' +
     (t.vocabulario.length && t.idioma !== "es" ? '<button class="btn btn-blue btn-big" type="button" data-act="dict-open" data-id="'+esc(t.id)+'">🔤 Practicar sus palabras</button>' : "") +
     '<button class="btn btn-sun btn-big" type="button" data-act="open-tema" data-id="'+esc(t.id)+'">📝 Ir al examen</button>' + footer();
 }

@@ -402,6 +402,12 @@ function reviewItem(g, i, c){
   if(!g.ok){
     if(g.answered && q.tipo === "opcion_multiple" && a !== q.correcta){ var m = meaningOf(a, c); if(m) h += '<p class="line">Tú elegiste <b lang="' + XL() + '">' + esc(a) + '</b>, que significa «' + esc(m) + '».</p>'; }
     if(g.answered && q.tipo === "completar" && C[q.subtema] && C[q.subtema].parts) h += '<p class="line">Fíjate cómo se escribe: <b lang="' + XL() + '">' + esc(C[q.subtema].parts) + '</b> = <b lang="' + XL() + '">' + esc(q.respuesta.toUpperCase()) + '</b>.</p>';
+    var tm0 = temaById(c.tema.id), rs = tm0 && q.subtema ? tm0.resumen.filter(function(r){ return r.subtema === q.subtema && !isPartTitle(r); }).slice(0, 4) : [];
+    if(!rs.length && tm0){   /* si el resumen no trae «subtema», se buscan las frases que contienen la respuesta correcta */
+      var ans = q.tipo === "completar" ? q.respuesta : q.tipo === "opcion_multiple" ? q.correcta : "", na = norm(ans);
+      if(na.length >= 3) rs = tm0.resumen.filter(function(r){ return !isPartTitle(r) && (norm(r.en).indexOf(na) >= 0 || norm(r.es).indexOf(na) >= 0); }).slice(0, 3);
+    }
+    if(rs.length) h += '<div class="inres"><p class="lbl">📖 Esto estaba en tu resumen</p>' + rs.map(function(r){ return '<p class="line"><b lang="' + XL() + '">' + esc(r.en) + '</b><br>' + esc(r.es) + '</p>'; }).join("") + '</div>';
     if(q.ejemplo_en) h += '<p class="exa line"><span class="lbl">Otro ejemplo</span><br><span lang="' + XL() + '">' + esc(q.ejemplo_en) + '</span><br>' + esc(q.ejemplo_es || "") + '</p>';
   }
   return h + '</div></article>';

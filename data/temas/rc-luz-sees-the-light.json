@@ -16,44 +16,174 @@
   ],
   "resumen": [
     {
-      "en": "Luz lives in a city neighborhood.",
-      "es": "Luz vive en un barrio de una ciudad. Ahí hay apagones (blackouts).",
-      "emoji": "🏙️"
+      "en": "PART 1: Characters",
+      "es": "PARTE 1: Los personajes (CÁ-rac-ters)",
+      "emoji": "🟦"
     },
     {
-      "en": "Characters: Luz, Robert, Anika and Gord.",
-      "es": "Personajes: Luz, su amigo nuevo Robert, su amiga Anika y el vecino Gord.",
+      "en": "Luz is the main character. She wants to make a park.",
+      "es": "Luz es el personaje principal (main character).",
       "emoji": "👧🏽"
     },
     {
-      "en": "There is an old lot full of garbage.",
-      "es": "Hay un terreno abandonado lleno de basura.",
+      "en": "Robert is Luz's new friend. He is new in the city.",
+      "es": "Robert: el amigo nuevo; acaba de llegar a la ciudad.",
+      "emoji": "👦🏾"
+    },
+    {
+      "en": "At the end, Robert gives Luz shoes he designed.",
+      "es": "Al final Robert le regala unos zapatos que él diseñó.",
+      "emoji": "👟"
+    },
+    {
+      "en": "Anika is Luz's friend who helps her.",
+      "es": "Anika: su amiga que la ayuda.",
+      "emoji": "👧"
+    },
+    {
+      "en": "At first, Anika thinks a farm in the city is a funny idea.",
+      "es": "Al principio a Anika le parece chistosa la idea de una granja en la ciudad.",
+      "emoji": "😂"
+    },
+    {
+      "en": "Gord is Luz's neighbor. His idea was car-free Sundays.",
+      "es": "Gord: el vecino. Su idea: domingos sin carros.",
+      "emoji": "👴"
+    },
+    {
+      "en": "PART 2: Setting",
+      "es": "PARTE 2: El lugar (setting)",
+      "emoji": "🟩"
+    },
+    {
+      "en": "The story happens in a city neighborhood.",
+      "es": "Pasa en un barrio (NÉI-bor-jud) de una ciudad.",
+      "emoji": "🏙️"
+    },
+    {
+      "en": "The neighborhood has frequent blackouts. The story starts with a blackout.",
+      "es": "Hay apagones (BLÁK-auts) seguidos. Lo PRIMERO que pasa en el cuento es un apagón.",
+      "emoji": "💡"
+    },
+    {
+      "en": "At the beginning, the empty lot is full of garbage.",
+      "es": "Al principio, el terreno vacío está lleno de basura (GÁR-bich).",
       "emoji": "🗑️"
     },
     {
+      "en": "The lot was abandoned: nobody took care of it.",
+      "es": "Estaba abandonado: nadie lo cuidaba.",
+      "emoji": "🏚️"
+    },
+    {
+      "en": "PART 3: The problem",
+      "es": "PARTE 3: El problema",
+      "emoji": "🟨"
+    },
+    {
       "en": "Luz wants to turn the lot into a park and a garden.",
-      "es": "Luz quiere convertir el terreno en un parque con huerto para sembrar comida.",
+      "es": "Luz quiere convertir el terreno en un parque y un huerto.",
       "emoji": "🌱"
     },
     {
-      "en": "Problem: nobody helps her and her friends laugh.",
-      "es": "Problema: nadie la ayuda, sus amigos se ríen y ella no puede sola. Se siente triste.",
+      "en": "Luz needs permission from the city to use the lot.",
+      "es": "Necesita permiso (per-MÍ-shon) de la ciudad.",
+      "emoji": "📝"
+    },
+    {
+      "en": "Luz feels sad because nobody helps her and her friends laugh at her idea.",
+      "es": "Está triste: nadie la ayuda y sus amigos se ríen (laugh = LAF).",
       "emoji": "😞"
     },
     {
-      "en": "Solution: her friends and neighbors help her.",
-      "es": "Solución: Robert y Anika deciden ayudar, hacen carteles y todo el barrio trabaja junto.",
+      "en": "Luz cannot clean the lot all by herself.",
+      "es": "Sola no puede limpiar el terreno.",
+      "emoji": "🙅"
+    },
+    {
+      "en": "PART 4: The solution",
+      "es": "PARTE 4: La solución",
+      "emoji": "🟧"
+    },
+    {
+      "en": "Friends and neighbors work together.",
+      "es": "Los amigos y los vecinos trabajan juntos.",
       "emoji": "🤝"
     },
     {
-      "en": "The lot becomes Friendship Park.",
-      "es": "El terreno se convierte en Friendship Park (Parque de la Amistad).",
+      "en": "The friends make posters to tell the neighbors.",
+      "es": "Hacen carteles (PÓUS-ters) para avisar a los vecinos.",
+      "emoji": "📢"
+    },
+    {
+      "en": "The people use old tires to make planter boxes.",
+      "es": "Usan llantas viejas (TÁI-ers) para hacer maceteros.",
+      "emoji": "🛞"
+    },
+    {
+      "en": "They install park benches. Installing means putting them in place, ready to use.",
+      "es": "Instalar = ponerlas en su lugar, listas para usar.",
+      "emoji": "🪑"
+    },
+    {
+      "en": "It was a lot of work, but everyone did a part.",
+      "es": "Fue mucho trabajo, pero cada uno hizo su parte.",
+      "emoji": "💪"
+    },
+    {
+      "en": "The new park is called Friendship Park.",
+      "es": "El parque nuevo se llama Friendship Park (Parque de la Amistad).",
       "emoji": "🌻"
     },
     {
-      "en": "Message: when we work together, we can do big things.",
-      "es": "Mensaje: cuando trabajamos juntos podemos lograr cosas grandes y ayudar al planeta.",
+      "en": "PART 5: The message",
+      "es": "PARTE 5: El mensaje",
+      "emoji": "🟥"
+    },
+    {
+      "en": "When we work together, we can do big things.",
+      "es": "Cuando trabajamos juntos, podemos lograr cosas grandes.",
       "emoji": "🌎"
+    },
+    {
+      "en": "The garden helps the planet because they grow food close to home.",
+      "es": "El huerto ayuda al planeta: siembran comida cerca de casa.",
+      "emoji": "🥕"
+    },
+    {
+      "en": "The park gives the community a place to play and grow food.",
+      "es": "El parque le da a la comunidad un lugar para jugar y sembrar comida.",
+      "emoji": "🏞️"
+    },
+    {
+      "en": "PART 6: New words",
+      "es": "PARTE 6: Palabras nuevas",
+      "emoji": "🟪"
+    },
+    {
+      "en": "oasis = a peaceful place in an ugly area",
+      "es": "oasis (o-ÉI-sis) = un lugar tranquilo en una zona fea. El parque es un oasis.",
+      "emoji": "🌴"
+    },
+    {
+      "en": "frequent = it happens often",
+      "es": "frecuente = pasa seguido (los apagones)",
+      "emoji": "🔁"
+    },
+    {
+      "en": "sufficient = just what you need",
+      "es": "suficiente = lo justo que se necesita",
+      "emoji": "⚖️"
+    },
+    {
+      "en": "abandoned = nobody takes care of it",
+      "es": "abandonado = nadie lo cuida",
+      "emoji": "🏚️"
+    },
+    {
+      "en": "permission = when someone says «yes, you can»",
+      "es": "permiso",
+      "emoji": "📝"
     }
   ],
   "preguntas": [
@@ -875,6 +1005,31 @@
     }
   ],
   "lecciones": [
+    {
+      "subtema": "solucion",
+      "emoji": "🤝",
+      "titulo": "Quién hizo qué",
+      "pasos": [
+        "Los amigos → carteles (posters).",
+        "Los vecinos → maceteros con llantas viejas (tires).",
+        "Gord → domingos sin carros (car-free Sundays).",
+        "Robert → zapatos que él diseñó (shoes).",
+        "Todos → Friendship Park."
+      ]
+    },
+    {
+      "subtema": "vocabulario",
+      "emoji": "📚",
+      "titulo": "5 palabras difíciles",
+      "pasos": [
+        "oasis = lugar tranquilo en una zona fea 🌴",
+        "frequent = que pasa seguido 🔁",
+        "sufficient = lo justo ⚖️",
+        "abandoned = que nadie cuida 🏚️",
+        "permission = permiso 📝"
+      ],
+      "truco": "Dibuja un emoji al lado de cada palabra."
+    },
     {
       "emoji": "🗂️",
       "titulo": "Los 5 elementos del cuento",
