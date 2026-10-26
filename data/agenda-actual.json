@@ -1935,6 +1935,59 @@
        }
       ]
      }
+    },
+    {
+     "id": "w44-t27",
+     "materia": "Reading and Composition",
+     "titulo": "📘 Libro pág. 110: Critical Vocabulary",
+     "fecha": "2026-10-25",
+     "entrega": "2026-10-26",
+     "evaluacion": "formativa",
+     "en_casa": [
+      "Responder las preguntas 1 a 5 y escribir la oración con dos palabras del vocabulario (pág. 110, Module 9)"
+     ],
+     "detalle": "Libro de Reading and Composition, pág. 110 (Module 9, Week 1) – Critical Vocabulary: oasis, permission, installing, abandoned, frequent, sufficient. La pág. 112 (Research Report Rubric) es solo una guía para revisar un reporte: no se responde. Fotos de mamá del 25/10; entrega supuesta 26/10 (confirmar).",
+     "copiar": {
+      "instrucciones_mama": "Son preguntas de opinión: cualquier respuesta con sentido vale, siempre que use la palabra en negrita. Estas son respuestas cortas a nivel de 3.°. La pág. 112 es una tabla (rúbrica) para revisar un reporte: no hay nada que escribir ahí.",
+      "partes": [
+       {
+        "titulo": "1. oasis (ÓU-ei-sis)",
+        "texto": "An oasis and a park are both green and peaceful places in the middle of a hard place. An oasis has water in the dry desert, and a park has trees and grass in the busy city.",
+        "traduccion_es": "Un oasis y un parque son lugares verdes y tranquilos en medio de un lugar difícil. El oasis tiene agua en el desierto seco, y el parque tiene árboles y grama en la ciudad llena de fábricas.",
+        "dibujo": "🏜️💧 = 🏙️🌳"
+       },
+       {
+        "titulo": "2. permission (per-MÍ-shon)",
+        "texto": "I would need permission from the principal to plant a garden at school.",
+        "traduccion_es": "Necesitaría permiso de la directora para sembrar un huerto en la escuela.",
+        "dibujo": "✅🌱"
+       },
+       {
+        "titulo": "3. installing (ins-TÓ-ling) · abandoned (a-BÁN-dond)",
+        "texto": "Someone might be installing new doors and windows in an abandoned house because they want to fix it and live there.",
+        "traduccion_es": "Alguien podría estar instalando puertas y ventanas nuevas en una casa abandonada porque quiere arreglarla y vivir ahí.",
+        "dibujo": "🏚️🔧➡️🏠"
+       },
+       {
+        "titulo": "4. frequent (FRÍ-kuent)",
+        "texto": "I would choose swimming as a frequent activity because it is fun and it keeps me healthy.",
+        "traduccion_es": "Escogería nadar como actividad frecuente porque es divertido y me mantiene sano.",
+        "dibujo": "🏊‍♂️"
+       },
+       {
+        "titulo": "5. sufficient (su-FÍ-shent)",
+        "texto": "I think one hour of exercise every day is sufficient for someone my age.",
+        "traduccion_es": "Creo que una hora de ejercicio cada día es suficiente para alguien de mi edad.",
+        "dibujo": "⏰ 1 hora 🏃"
+       },
+       {
+        "titulo": "Oración con dos palabras",
+        "texto": "I go swimming on a frequent basis, so I get sufficient exercise. Frequent is the opposite of rare.",
+        "traduccion_es": "Voy a nadar con frecuencia, así que hago suficiente ejercicio. Frecuente es lo contrario de raro (rare = antónimo).",
+        "dibujo": "Usa frequent + sufficient. El antónimo es rare (RÉR)."
+       }
+      ]
+     }
     }
    ],
    "materiales": [
