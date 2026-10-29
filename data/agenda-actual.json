@@ -1988,6 +1988,210 @@
        }
       ]
      }
+    },
+    {
+     "id": "w44-t28",
+     "materia": "Chino Mandarín",
+     "titulo": "✍️ Copiar el formal de Chino (1/2): hojas 1 a 5",
+     "fecha": "2026-10-28",
+     "entrega": "2026-10-30",
+     "evaluacion": "sumativa",
+     "en_casa": [
+      "Copiar a mano las hojas 1 a 5 del formal «中秋节吃月饼», una parte por hoja",
+      "Pegar el logo y la foto del pastel de luna (hoja de recortes)"
+     ],
+     "detalle": "Formal de Chino Mandarín (Teacher Yang) – Trimestre III 2026 – «中秋节吃月饼 Zhōngqiū Jié chī yuèbǐng» (Comer pasteles de luna durante el Festival del Medio Otoño). Plantilla del profesor: portada, portada del colegio, índice, Introduction, Análisis de la obra, Elementos de la obra, Bibliografía y Anexo. El texto es EXACTAMENTE el del profesor, sin cambios; solo se ordenó por hojas. PDF para imprimir: Formal_Mandarin_Killian.pdf. Entrega: viernes 30/10.",
+     "copiar": {
+      "instrucciones_mama": "Es el mismo texto que mandó el profesor, sin cambiar nada. Cada «Hoja» va en su propia hoja, en este orden. El PDF «Formal_Mandarin_Killian.pdf» tiene todo en letra grande y una última hoja con logos y fotos para recortar y pegar. En «Your name» escribe el apellido de Killian. Si hoy es tarde, que copie solo hasta la hoja 3 y siga mañana.",
+      "partes": [
+       {
+        "titulo": "Hoja 1 – Portada",
+        "texto": "中秋节吃月饼\nZhōngqiū Jié chī yuèbǐng\nComer pasteles de luna durante el Festival del Medio Otoño\nEating Mooncakes during the Mid-Autumn Festival",
+        "dibujo": "Arriba del título dibuja el pastel de luna (o pega la foto de la hoja de recortes).",
+        "imagen": "dibujo_chino_pastel_luna.png"
+       },
+       {
+        "titulo": "Hoja 2 – Portada del colegio",
+        "texto": "Chino Mandarin 中文\n中秋节吃月饼\nZhōngqiū Jié chī yuèbǐng\nYour name: Killian ____________\nGrade and class: 3° Euclides\nTeacher Yang\nPanama 2026",
+        "dibujo": "Arriba pega el logo del colegio (hoja de recortes). Todo centrado."
+       },
+       {
+        "titulo": "Hoja 3 – Índice",
+        "texto": "INDICE\nIntroducción ............................ 1\nAnálisis de la obra ..................... 2\nElementos de la obra .................... 3\nBibliografía ............................ 5\nAnexo ................................... 6",
+        "dibujo": "Usa regla para los puntitos."
+       },
+       {
+        "titulo": "Hoja 4 – Introduction (1/2: chino y pinyin)",
+        "texto": "Introduction\n中秋节吃月饼\nZhōngqiū Jié chī yuèbǐng\n中秋节是中国重要的传统节日之一。中秋节的时候，\n人们常常和家人一起赏月、吃月饼，\n表达对家人的思念和对团圆的祝福。\nZhōngqiū Jié shì Zhōngguó zhòngyào de chuántǒng jiérì zhī yī.\nZhōngqiū Jié de shíhou, rénmen chángcháng hé jiārén yìqǐ shǎngyuè,\nchī yuèbǐng, biǎodá duì jiārén de sīniàn hé duì tuányuán de zhùfú.",
+        "dibujo": "Arriba pega el título «Introduction» con el logo (hoja de recortes)."
+       },
+       {
+        "titulo": "Hoja 4 – Introduction (2/2: español e inglés)",
+        "texto": "El Festival del Medio Otoño es una de las fiestas tradicionales importantes de China. Durante esta celebración, las personas suelen contemplar la luna y comer pasteles de luna con sus familias, expresando el cariño hacia sus familiares y los deseos de reunión familiar.\nThe Mid-Autumn Festival is one of China's important traditional festivals. During the festival, people often admire the moon and eat mooncakes with their families, expressing love for their families and wishes for reunion."
+       },
+       {
+        "titulo": "Hoja 5 – Análisis de la obra (1/2: título y autor)",
+        "texto": "ANÁLISIS DE LA OBRA\n标题 / Título / Title:\n中秋节吃月饼\nZhōngqiū Jié chī yuèbǐng\nComer pasteles de luna durante el Festival del Medio Otoño\nEating Mooncakes during the Mid-Autumn Festival\n作者 / Autor / Author:\n中华民族传统 / Tradición del pueblo chino / Traditional Chinese folk culture",
+        "dibujo": "Arriba pega el título «Análisis de la obra» con el logo (hoja de recortes)."
+       },
+       {
+        "titulo": "Hoja 5 – Análisis de la obra (2/2: la tradición)",
+        "texto": "中秋节和吃月饼是中国传统文化和节日习俗的一部分。\nZhōngqiū Jié hé chī yuèbǐng shì Zhōngguó chuántǒng wénhuà hé jiérì xísú de yí bùfen.\nEl Festival del Medio Otoño y la costumbre de comer pasteles de luna forman parte de la cultura tradicional y las costumbres festivas de China.\nThe Mid-Autumn Festival and the tradition of eating mooncakes are part of traditional Chinese culture and festival customs."
+       }
+      ]
+     }
+    },
+    {
+     "id": "w44-t29",
+     "materia": "Chino Mandarín",
+     "titulo": "✍️ Copiar el formal de Chino (2/2): hojas 6 a 10",
+     "fecha": "2026-10-29",
+     "entrega": "2026-10-30",
+     "evaluacion": "sumativa",
+     "en_casa": [
+      "Copiar a mano las hojas 6 a 10",
+      "Pegar los títulos, el poema y las imágenes del anexo",
+      "Poner todas las hojas en orden (1 a 10) y guardarlas en el bulto"
+     ],
+     "detalle": "Formal de Chino Mandarín (Teacher Yang) – Trimestre III 2026 – «中秋节吃月饼 Zhōngqiū Jié chī yuèbǐng» (Comer pasteles de luna durante el Festival del Medio Otoño). Plantilla del profesor: portada, portada del colegio, índice, Introduction, Análisis de la obra, Elementos de la obra, Bibliografía y Anexo. El texto es EXACTAMENTE el del profesor, sin cambios; solo se ordenó por hojas. PDF para imprimir: Formal_Mandarin_Killian.pdf. Entrega: viernes 30/10.",
+     "copiar": {
+      "instrucciones_mama": "Es el mismo texto que mandó el profesor, sin cambiar nada. Cada «Hoja» va en su propia hoja, en este orden. El PDF «Formal_Mandarin_Killian.pdf» tiene todo en letra grande y una última hoja con logos y fotos para recortar y pegar. En «Your name» escribe el apellido de Killian. Las hojas 7 y 8 son las más largas: se puede hacer en dos ratos con descanso.",
+      "partes": [
+       {
+        "titulo": "Hoja 6 – Análisis de la obra (sigue) (1/2: la obra y el poema)",
+        "texto": "• 文学作品 / Obra literaria / Literary work:\n• 《留别廉守》 改编 Gǎibiān adaptation arranged\n• Liú Bié Lián Shǒu\n• Su Shi / 苏轼\n• 诗中有著名的诗句：\n• 小饼如嚼月，\n• 中有酥和饴。\n• 默品其滋味，\n• 相思泪沾巾。\n• Xiǎo bǐng rú jiáo yuè,\n• zhōng yǒu sū hé yí.\n• Mò pǐn qí zīwèi,\n• xiāngsī lèi zhān jīn."
+       },
+       {
+        "titulo": "Hoja 6 – Análisis de la obra (sigue) (2/2: narrador)",
+        "texto": "• 其中“小饼如嚼月”把小饼和月亮联系起来，可以作为介绍传统月饼文化的文学材料。\n• 叙述者 / Narrador / Narrator: Su Shi / 苏轼\n• 个人诗歌叙述 / Narración poética personal / Personal poetic narration",
+        "dibujo": "Abajo pega la imagen del poema escrito en pincel (hoja de recortes)."
+       },
+       {
+        "titulo": "Hoja 7 – Elementos de la obra (1/3: espacio y tiempo)",
+        "texto": "ELEMENTOS DE LA OBRA\n空间 / Espacio / Setting:\n家中 / En casa / At home\n庭院 / Patio / Courtyard\n户外赏月的地方 / Lugares al aire libre para contemplar la luna / Outdoor places for moon viewing\n时间 / Tiempo / Time:\n中秋节 / Festival del Medio Otoño / Mid-Autumn Festival\n农历八月十五 / Decimoquinto día del octavo mes lunar / 15th day of the eighth lunar month\n晚上赏月、吃月饼 / Por la noche se contempla la luna y se comen pasteles de luna / People admire the moon and eat mooncakes at night",
+        "dibujo": "Arriba pega el título «Elementos de la obra» con el logo (hoja de recortes)."
+       },
+       {
+        "titulo": "Hoja 7 – Elementos de la obra (2/3: recursos literarios)",
+        "texto": "文学手法 / Recursos literarios / Literary Devices:",
+        "tabla": [
+         [
+          "中文",
+          "Español",
+          "English"
+         ],
+         [
+          "比喻",
+          "Metáfora / Símil",
+          "Simile"
+         ],
+         [
+          "象征",
+          "Simbolismo",
+          "Symbolism"
+         ],
+         [
+          "抒情",
+          "Expresión lírica",
+          "Lyricism"
+         ],
+         [
+          "联想",
+          "Asociación",
+          "Association"
+         ],
+         [
+          "对仗",
+          "Antítesis",
+          "Antithesis"
+         ]
+        ]
+       },
+       {
+        "titulo": "Hoja 7 – Elementos de la obra (3/3: imágenes y mensaje)",
+        "texto": "文学意象 / Imágenes literarias / Literary Images:\n月亮 → 团圆\nYuèliang → Tuányuán\nLuna → Reunión familiar\nMoon → Family reunion\n寓意 / Mensaje / Message:\n1. 家庭团圆\nJiātíng tuányuán\nReunión familiar\nFamily reunion\n2. 思念家人\nSīniàn jiārén\nExtrañar a la familia\nLonging for family"
+       },
+       {
+        "titulo": "Hoja 8 – Elementos de la obra (sigue) (1/3: elementos principales)",
+        "texto": "主要元素 / Elementos principales / Main Elements",
+        "tabla": [
+         [
+          "中文",
+          "拼音",
+          "Español",
+          "English"
+         ],
+         [
+          "月饼",
+          "Yuèbǐng",
+          "Pastel de luna",
+          "Mooncake"
+         ],
+         [
+          "月亮",
+          "Yuèliang",
+          "Luna",
+          "Moon"
+         ],
+         [
+          "中秋节",
+          "Zhōngqiū Jié",
+          "Festival del Medio Otoño",
+          "Mid-Autumn Festival"
+         ],
+         [
+          "家人",
+          "Jiārén",
+          "Familia",
+          "Family"
+         ],
+         [
+          "团圆",
+          "Tuányuán",
+          "Reunión familiar",
+          "Family reunion"
+         ],
+         [
+          "思念",
+          "Sīniàn",
+          "Añoranza",
+          "Longing"
+         ],
+         [
+          "小饼",
+          "Xiǎo bǐng",
+          "Pequeño pastel",
+          "Small cake"
+         ],
+         [
+          "滋味",
+          "Zīwèi",
+          "Sabor",
+          "Flavor"
+         ]
+        ]
+       },
+       {
+        "titulo": "Hoja 8 – Elementos de la obra (sigue) (2/3: tema principal)",
+        "texto": "• 主题 / Tema principal / Main Themes:\n• 1. 团圆 Tuányuán\n• 家庭团聚\n• Reunión familiar\n• Family reunion\n• 2. 思念 Sīniàn\n• 思念家人\n• Añoranza por la familia\n• Longing for family\n• 3. 月亮 Yuèliang\n• 中秋节赏月\n• Contemplar la luna durante el Festival del Medio Otoño\n• Admiring the moon during the Mid-Autumn Festival\n• 4. 月饼 Yuèbǐng\n• 传统节日食品\n• Comida tradicional del festival\n• Traditional festival food"
+       },
+       {
+        "titulo": "Hoja 8 – Elementos de la obra (sigue) (3/3: versos importantes)",
+        "texto": "• 诗句 / Versos importantes / Important Verses\n• 小饼如嚼月\n• Xiǎo bǐng rú jiáo yuè\n• El pequeño pastel parece como si se masticara la luna.\n• The small cake is like chewing the moon.\n• 相思泪沾巾\n• Xiāngsī lèi zhān jīn\n• Las lágrimas de añoranza mojan el pañuelo.\n• Tears of longing wet the cloth."
+       },
+       {
+        "titulo": "Hoja 9 – Bibliografía",
+        "texto": "参考书目 / Bibliografía / Bibliography\n1. 《留别廉守》——苏轼\nLiú Bié Lián Shǒu — Sū Shì\nPoema de Su Shi relacionado con el tema de los pequeños pasteles y la añoranza.\n2. 中国传统节日文化\nZhōngguó chuántǒng jiérì wénhuà\nCultura de los festivales tradicionales chinos\nTraditional Chinese Festival Culture\n3. 中秋节与月饼文化\nZhōngqiū Jié yǔ yuèbǐng wénhuà\nCultura del Festival del Medio Otoño y los pasteles de luna\nMid-Autumn Festival and Mooncake Culture",
+        "dibujo": "Arriba pega el título «Bibliografía» con el logo (hoja de recortes)."
+       },
+       {
+        "titulo": "Hoja 10 – Anexo",
+        "texto": "Anexo",
+        "dibujo": "Pega las 2 imágenes del anexo (hoja de recortes) o dibuja el conejito sobre el pastel de luna y coloréalo.",
+        "imagen": "dibujo_chino_conejo_luna.png"
+       }
+      ]
+     }
     }
    ],
    "materiales": [
@@ -2025,6 +2229,12 @@
      "id": "w44-m08",
      "materia": "Culture and Value",
      "material": "Cuaderno de Culture and Values (presentación del presidente)",
+     "llevar_el": "2026-10-30"
+    },
+    {
+     "id": "w44-m09",
+     "materia": "Chino Mandarín",
+     "material": "Formal de Chino «中秋节吃月饼» copiado a mano (hojas 1 a 10 en orden)",
      "llevar_el": "2026-10-30"
     }
    ],
@@ -2079,7 +2289,8 @@
     "27/10 Educación Física: el tema de voleibol y dorso está hecho con información general de internet. Si la profesora entregó una hoja, mandar foto para ajustarlo.",
     "29/10 Reading and Conversation: no hay word bank en el cuaderno; se hizo uno con las páginas del cuento (PDF «Luz_word_bank_y_examen_Killian.pdf», con examen de práctica y clave).",
     "30/10 Culture and Value: el presidente del equipo es José Raúl Mulino. La charla está en «Mis charlas».",
-    "26/10 y 30/10 Chino (Lesson 9 «Where is the toy»): el libro B1 no está en casa y el enlace de la agenda abre un mensaje de Teams del colegio. Pedir a la maestra por Teams fotos del workbook B1 págs. 39–42 y el texto de la presentación oral del 30/10 (sumativa)."
+    "26/10 y 30/10 Chino (Lesson 9 «Where is the toy»): el libro B1 no está en casa y el enlace de la agenda abre un mensaje de Teams del colegio. Pedir a la maestra por Teams fotos del workbook B1 págs. 39–42 y el texto de la presentación oral del 30/10 (sumativa).",
+    "30/10 Sumativa: Chino Mandarín – entregar el formal «中秋节吃月饼» (Comer pasteles de luna). Copiar hojas 1–5 el 28/10 y 6–10 el 29/10. Imprimir Formal_Mandarin_Killian.pdf (incluye hoja de recortes)."
    ]
   }
  ]
