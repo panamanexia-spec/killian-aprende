@@ -2482,6 +2482,361 @@
     "06/11 Science: la agenda viene vacía. Preguntar a la maestra si hay algo pendiente.",
     "06/11 Todos los días: dispositivo, cargador, cuaderno, libros y útiles."
    ]
+  },
+  {
+   "tipo": "agenda",
+   "semana": "2026-11-09",
+   "tareas": [
+    {
+     "id": "w46-t01",
+     "materia": "Español",
+     "titulo": "📖 Leer la novela «Los enigmas del inspector Ramírez»",
+     "fecha": "2026-11-08",
+     "entrega": "2026-11-09",
+     "evaluacion": "sumativa",
+     "tema": "es-inspector-ramirez",
+     "en_casa": [
+      "Lee en casa la novela: \"Los enigmas del inspector Ramirez\" para terminar el formal escrito en clase.",
+      "Meter la novela en la mochila (la necesita en clase el lunes y el miércoles)"
+     ],
+     "detalle": "Unidad 4 – Tema: Canadá – Sub-tema: Literatura. Conocimientos: Elabora formal novela «Los enigmas del inspector Ramírez». Actividades externas: Lee en casa la novela para terminar el formal escrito en clase. Internas: Inicio: participa de lluvia de ideas sobre lo leído en la novela. Nudo: termina de elaborar el formal escrito aplicando pasos del análisis literario. Cierre: revisa y entrega, para su evaluación sumativa. Observaciones: los estudiantes deben tener a mano la novela para realizar el formal. (Maestra Doris Mosquera)"
+    },
+    {
+     "id": "w46-t02",
+     "materia": "Ciencias Sociales",
+     "titulo": "📁 Organizar el folder del formal de Ciencias Sociales",
+     "fecha": "2026-11-08",
+     "entrega": "2026-11-09",
+     "en_casa": [
+      "Estimado estudiante recuerde la organización de su folder para el formal de ciencias sociales. Culminación de formal de Ciencias Sociales.",
+      "Folder con las hojas en orden + libro + cartuchera en la mochila"
+     ],
+     "detalle": "Unidad 1 – Investigación formal. Conocimientos: identifica pasos del método científico. Externas: recuerde la organización de su folder para el formal de ciencias sociales; culminación del formal. Internas: I: escucha instrucciones. D: comprende pasos del método científico y copia su formal. C: verifica correcciones. Observaciones: recuerde llevar su libro, cartuchera y folder con sus hojas organizadas para copiar su formal. (Maestra Yessi Pedroza). La agenda no deja ver si es sumativa o formativa."
+    },
+    {
+     "id": "w46-t03",
+     "materia": "Science",
+     "titulo": "🌱 Video: plantas con sol y sin sol",
+     "fecha": "2026-11-08",
+     "entrega": "2026-11-09",
+     "videos": [
+      "w46-v01"
+     ],
+     "tema": "sci-life-cycle-traits",
+     "en_casa": [
+      "Watch the video to see differences in the growth of the plant in sunny area and dark area. (Mira el video: cómo crece una planta con sol ☀️ y en la oscuridad 🌑)"
+     ],
+     "detalle": "Unit 4 – Life cycle and traits – Hands on station Activity. Knowledge to be learned: different characteristics of the plant. External: watch the video to see differences in the growth of the plant in sunny area and dark area. Internal: Beg: predicts how the amount of light affects the traits of the plants. Mid: plans and investigates which same type of plants are going to plant to observe how amount of light affects its growth. End: draws the two plants, one in sunny and one in dark area. Observations: bring the pencil, eraser, sharpener, student book. (Teacher Theeksha Shetty)"
+    },
+    {
+     "id": "w46-t04",
+     "materia": "Chino Mandarín",
+     "titulo": "🀄 Repasar Lesson 9: Where is the toy",
+     "fecha": "2026-11-08",
+     "entrega": "2026-11-09",
+     "videos": [
+      "w46-v02"
+     ],
+     "en_casa": [
+      "Ver el enlace de repaso de la Lesson 9 (B1L9): orientation in Mandarin"
+     ],
+     "detalle": "Unidad 1 Lesson 9 – Where is the toy. Sub-tema: orientation in Mandarin. Conocimientos: review for B1L9. Internas: Beginning: icebreaker activity – orientation in Mandarin. Teaching: 1. oral presentation 2. review for B1L9. Se repite el viernes 13/11. (Maestra Ting-Yang)"
+    },
+    {
+     "id": "w46-e01",
+     "materia": "Español",
+     "titulo": "📝 Examen real: la novela del inspector Ramírez",
+     "fecha": "2026-11-09",
+     "entrega": "2026-11-11",
+     "evaluacion": "sumativa",
+     "tema": "es-inspector-ramirez",
+     "en_casa": [
+      "Contar a mamá de qué trata la novela: personajes, lugar, problema y solución"
+     ],
+     "detalle": "Plan de estudio para la sustentación escrita del miércoles 11/11."
+    },
+    {
+     "id": "w46-e02",
+     "materia": "Español",
+     "titulo": "🔁 Repasar mis errores: la novela",
+     "fecha": "2026-11-10",
+     "entrega": "2026-11-11",
+     "evaluacion": "sumativa",
+     "tema": "es-inspector-ramirez",
+     "detalle": "Martes 10/11 es feriado: un bloque de 15 minutos, solo las preguntas que falló."
+    },
+    {
+     "id": "w46-e03",
+     "materia": "Ciencias Sociales",
+     "titulo": "📚 Estudiar: los símbolos patrios",
+     "fecha": "2026-11-10",
+     "entrega": "2026-11-12",
+     "tema": "soc-simbolos-patrios",
+     "videos": [
+      "w46-v03"
+     ],
+     "en_casa": [
+      "Observe el siguiente video sobre los símbolos patrios."
+     ],
+     "detalle": "Repaso para el taller del jueves 12/11 (el tema ya está en la plataforma, del formal de octubre)."
+    },
+    {
+     "id": "w46-t05",
+     "materia": "Español",
+     "titulo": "✍️ Sustentación escrita de la novela",
+     "fecha": "2026-11-10",
+     "entrega": "2026-11-11",
+     "evaluacion": "sumativa",
+     "tema": "es-inspector-ramirez",
+     "en_casa": [
+      "Lee en casa la novela: \"Los enigmas del inspector Ramirez\" para terminar el formal escrito en clase.",
+      "La novela otra vez en la mochila"
+     ],
+     "detalle": "Unidad 6 – Canadá – Literatura. Externas: lee en casa la novela para terminar el formal escrito en clase. Internas: Inicio: lluvia de ideas sobre lo leído. Nudo: termina de elaborar el formal escrito aplicando pasos del análisis literario. Cierre: revisa y entrega, para su evaluación sumativa y su sustentación escrita. Observaciones: deben tener a mano la novela. (Maestra Doris Mosquera)"
+    },
+    {
+     "id": "w46-t06",
+     "materia": "Math",
+     "titulo": "🎒 Math págs. 497–500 (ya resueltas) + págs. 188–189",
+     "fecha": "2026-11-10",
+     "entrega": "2026-11-11",
+     "en_casa": [
+      "Continue to apply your knowledge by working from the pages 497 to 500. Volume 2. Remember to bring only your missing pages from Volume 1 pages 188-189."
+     ],
+     "detalle": "Unit 16 Multiplying by tens – Topic 1 y 2 (11/11 y 13/11) – Action Task. Knowledge: learn how multiplying by tens. Internal: Beginning: teacher will explain the importance of multiplying by tens. Middle: students will work in their textbooks. End: students will be applying what is learned. Observations: bring your textbook, device, charger, school supplies, notebook. Son las mismas páginas de la semana pasada: se dejan resueltas otra vez por si falta algo.",
+     "copiar": {
+      "instrucciones_mama": "Truco: cuenta en DECENAS. $50 = 5 decenas (5 tens). 3 grupos de 5 decenas = 15 decenas = 150. Multiplica sin el cero (3 × 5 = 15) y al final pon el cero (150). El libro deja que Killian ELIJA los números (1, 2 o 3 billetes; grupos de 2 a 9): aquí están resueltos con números fáciles. Si él quiere otros, usen el mismo truco. Que dibuje los billetes en la cuadrícula como en el dibujo.",
+      "partes": [
+       {
+        "titulo": "Pregunta 1 (pág. 497)",
+        "texto": "a. 2 bills of $20\nb. 1 bill of $10\nc. $20 + $20 + $10 = $50",
+        "traduccion_es": "a. 2 billetes de $20\nb. 1 billete de $10\nc. En total tengo $50 (5 decenas)",
+        "dibujo": "Dibuja los 3 billetes en la cuadrícula.",
+        "imagen": "dibujo_math_497_p1.png"
+       },
+       {
+        "titulo": "Pregunta 2 (pág. 498)",
+        "texto": "I choose 3.\n3 groups of $50\n3 × 5 tens = 15 tens\n3 × $50 = $150",
+        "traduccion_es": "Elijo el 3.\n3 grupos de $50\n3 × 5 decenas = 15 decenas\n3 × $50 = $150",
+        "dibujo": "Dibuja 3 grupos de billetes, como en el dibujo.",
+        "imagen": "dibujo_math_498_p2.png"
+       },
+       {
+        "titulo": "Pregunta 3 (pág. 498)",
+        "texto": "I choose 4.\n4 groups of $50\n4 × 5 tens = 20 tens\n4 × $50 = $200",
+        "traduccion_es": "Elijo el 4.\n4 grupos de $50\n4 × 5 decenas = 20 decenas\n4 × $50 = $200",
+        "dibujo": "Dibuja 4 grupos de billetes.",
+        "imagen": "dibujo_math_498_p3.png"
+       },
+       {
+        "titulo": "Pregunta 4 (pág. 499)",
+        "texto": "1 bill of $20\n1 bill of $10\n$20 + $10 = $30",
+        "traduccion_es": "1 billete de $20\n1 billete de $10\nTengo $30 (3 decenas)",
+        "dibujo": "Dibuja los 2 billetes.",
+        "imagen": "dibujo_math_499_p4.png"
+       },
+       {
+        "titulo": "Pregunta 5 (pág. 499)",
+        "texto": "I choose 2.\n2 groups of $30\n2 × 3 tens = 6 tens\n2 × $30 = $60",
+        "traduccion_es": "Elijo el 2.\n2 grupos de $30\n2 × 3 decenas = 6 decenas\n2 × $30 = $60",
+        "dibujo": "Dibuja 2 grupos de billetes.",
+        "imagen": "dibujo_math_499_p5.png"
+       },
+       {
+        "titulo": "Pregunta 6 (pág. 500)",
+        "texto": "I choose 4 groups.\n4 groups of $30\n4 × 3 tens = 12 tens\n4 × $30 = $120",
+        "traduccion_es": "Elijo 4 grupos.\n4 grupos de $30\n4 × 3 decenas = 12 decenas\n4 × $30 = $120",
+        "dibujo": "Dibuja 4 grupos de billetes.",
+        "imagen": "dibujo_math_500_p6.png"
+       },
+       {
+        "titulo": "Pregunta 7 (pág. 500)",
+        "texto": "All my totals end in 0.\nI multiply the groups by the tens.\nThen I write a 0 at the end.\n4 × 3 tens = 12 tens = 120",
+        "traduccion_es": "Todos mis totales terminan en 0.\nMultiplico los grupos por las decenas.\nDespués pongo un 0 al final.\n4 × 3 decenas = 12 decenas = 120"
+       }
+      ]
+     }
+    },
+    {
+     "id": "w46-t07",
+     "materia": "Folklore",
+     "titulo": "🤠 Sombrero para el ensayo de la Feria",
+     "fecha": "2026-11-10",
+     "entrega": "2026-11-11",
+     "en_casa": [
+      "Se recomienda traer sombrero los niños y faldón las niñas."
+     ],
+     "detalle": "Unidad 3 – Baile de La Feria Folklórica – Bailes panameños. Conocimientos: aprende los pasos básicos siguiendo instrucciones. Internas: ensayaremos, preparando el baile de la Feria en el gimnasio. (Maestro Carlos Barrios)"
+    },
+    {
+     "id": "w46-t08",
+     "materia": "Español",
+     "titulo": "📺 Pensar en un anuncio que recuerdo",
+     "fecha": "2026-11-11",
+     "entrega": "2026-11-12",
+     "evaluacion": "sumativa",
+     "tema": "es-anuncios",
+     "en_casa": [
+      "Menciona un anuncio que recuerdes (TV, redes sociales o radio)",
+      "Señala: ¿Qué producto promocionaba?",
+      "Pensar qué producto inventará para su propio anuncio",
+      "Materiales en la mochila: cartulina, marcadores, papel construcción, revista, goma, tijera, adornos"
+     ],
+     "detalle": "Unidad 6 – Canadá – Gramática: Los anuncios publicitarios. Conocimientos: elabora un anuncio publicitario original. Inicio: lluvia de ideas sobre lo investigado. Desarrollo: elabora un anuncio publicitario creativo y original (sumativo). Cierre: presenta ante sus compañeros su anuncio. Traer: cartulina, marcadores, papel construcción, revista, goma, tijera, adornos para decorar su lámina. (Maestra Doris Mosquera)"
+    },
+    {
+     "id": "w46-t09",
+     "materia": "Ciencias Sociales",
+     "titulo": "🇵🇦 Video: los símbolos patrios",
+     "fecha": "2026-11-11",
+     "entrega": "2026-11-12",
+     "videos": [
+      "w46-v03"
+     ],
+     "tema": "soc-simbolos-patrios",
+     "en_casa": [
+      "Observe el siguiente video sobre los símbolos patrios.",
+      "Lápices de colores en la cartuchera"
+     ],
+     "detalle": "Unidad 3 – Convivencia armónica natural y social – Símbolos Patrios. Conocimientos: reconoce los símbolos patrios de Panamá. Internas: I: escucha instrucciones. D: realiza taller sobre los símbolos patrios de Panamá. C: entrega su taller. Observaciones: lleve a clase su libro, cuaderno y cartuchera con lápices de colores y de escribir. (Maestra Yessi Pedroza)"
+    },
+    {
+     "id": "w46-t10",
+     "materia": "Science",
+     "titulo": "🌦️ Video: qué hace crecer distinto a las plantas",
+     "fecha": "2026-11-11",
+     "entrega": "2026-11-12",
+     "videos": [
+      "w46-v04"
+     ],
+     "tema": "sci-life-cycle-traits",
+     "en_casa": [
+      "Watch the video to understand how environmental factors affect the growth of the organisms. (Mira el video: el sol, el agua y el lugar cambian cómo crece un ser vivo)"
+     ],
+     "detalle": "Unit 4 – Life cycle and traits – Phenomenon activity. Knowledge: identify the different environmental factors. Internal: Beg: watches the phenomenon photo and compares the size of the plants. Mid: investigates why the same type of plants are in different size and what environmental factors affect their growth. End: concludes and feedbacks on the topic. Observations: bring the pencil, eraser, sharpener, student book. (Teacher Theeksha Shetty)"
+    },
+    {
+     "id": "w46-t11",
+     "materia": "Culture and Value",
+     "titulo": "🖼️ Imagen de Panamá + practicar decir un poema",
+     "fecha": "2026-11-12",
+     "entrega": "2026-11-13",
+     "en_casa": [
+      "Bring a medium printout (Black and White or color) about Panama (culture, folklore, or typical food). (Imprimir una imagen mediana de Panamá: cultura, folklore o comida típica)",
+      "Elegir su tradición favorita para decir por qué le gusta",
+      "Cuaderno de Culture and Values en la mochila"
+     ],
+     "detalle": "Unit 4 – Patriotic Month Poem and Values – Poem and Culture – Patriotic Month Poem Practice. Knowledge: recites a Panamanian poem and identifies values. Internal: B: reads a short poem about Panama and reviews proper voice rhythm. M: practices the poem, decorates their Panama image in the notebook, and highlights values/traditions. E: recites two lines of the poem highlighting a favorite tradition. Observations: brings culture and values notebook. (Teacher Casimira Rodriguez)"
+    },
+    {
+     "id": "w46-t12",
+     "materia": "Chino Mandarín",
+     "titulo": "🀄 Repasar otra vez Lesson 9",
+     "fecha": "2026-11-12",
+     "entrega": "2026-11-13",
+     "videos": [
+      "w46-v02"
+     ],
+     "en_casa": [
+      "Ver el enlace de repaso de la Lesson 9 (B1L9)"
+     ],
+     "detalle": "Mismo contenido del lunes 09/11: icebreaker de orientación en mandarín, presentación oral y repaso de B1L9."
+    }
+   ],
+   "materiales": [
+    {
+     "id": "w46-m01",
+     "materia": "Español",
+     "material": "Novela «Los enigmas del inspector Ramírez»",
+     "llevar_el": "2026-11-09"
+    },
+    {
+     "id": "w46-m02",
+     "materia": "Ciencias Sociales",
+     "material": "Folder del formal con las hojas organizadas",
+     "llevar_el": "2026-11-09"
+    },
+    {
+     "id": "w46-m03",
+     "materia": "Español",
+     "material": "Novela «Los enigmas del inspector Ramírez» (otra vez)",
+     "llevar_el": "2026-11-11"
+    },
+    {
+     "id": "w46-m04",
+     "materia": "Folklore",
+     "material": "Sombrero para el ensayo del baile de la Feria",
+     "llevar_el": "2026-11-11"
+    },
+    {
+     "id": "w46-m05",
+     "materia": "Math",
+     "material": "Solo las hojas que faltan del libro de Math vol. 1: págs. 188–189",
+     "llevar_el": "2026-11-11"
+    },
+    {
+     "id": "w46-m06",
+     "materia": "Español",
+     "material": "Anuncio: cartulina, marcadores, papel construcción, revista, goma, tijera y adornos",
+     "llevar_el": "2026-11-12"
+    },
+    {
+     "id": "w46-m07",
+     "materia": "Ciencias Sociales",
+     "material": "Lápices de colores (taller de símbolos patrios)",
+     "llevar_el": "2026-11-12"
+    },
+    {
+     "id": "w46-m08",
+     "materia": "Culture and Value",
+     "material": "Imagen impresa mediana de Panamá (cultura, folklore o comida típica)",
+     "llevar_el": "2026-11-13"
+    }
+   ],
+   "videos": [
+    {
+     "id": "w46-v01",
+     "materia": "Science",
+     "titulo": "Plantas con sol y en la oscuridad",
+     "url": "https://www.youtube.com/shorts/J3SA8ZNA1iQ?feature=share",
+     "fecha": "2026-11-08"
+    },
+    {
+     "id": "w46-v02",
+     "materia": "Chino Mandarín",
+     "titulo": "Lesson 9: Where is the toy (repaso B1L9)",
+     "url": "https://reurl.cc/YmKMVx",
+     "fecha": "2026-11-08"
+    },
+    {
+     "id": "w46-v03",
+     "materia": "Ciencias Sociales",
+     "titulo": "Los símbolos patrios de Panamá",
+     "url": "https://www.youtube.com/watch?v=5Wc-tTdQtiY",
+     "fecha": "2026-11-10"
+    },
+    {
+     "id": "w46-v04",
+     "materia": "Science",
+     "titulo": "Factores del ambiente y el crecimiento",
+     "url": "https://youtu.be/hb_NNs6Dum4",
+     "fecha": "2026-11-11"
+    }
+   ],
+   "notas_para_mama": [
+    "08/11 Este fin de semana: que Killian lea la novela «Los enigmas del inspector Ramírez» (el lunes termina el formal escrito en clase). Hacen falta fotos para preparar el repaso (ver lista de fotos).",
+    "09/11 Sumativa: Español – formal escrito de la novela «Los enigmas del inspector Ramírez». Llevar la novela.",
+    "09/11 Ciencias Sociales: culminación del formal (método científico). Llevar folder organizado, libro y cartuchera. La agenda no deja ver si es sumativa: preguntar a la maestra.",
+    "10/11 Martes feriado (Primer Grito de Independencia): no hay clases. Buen día para 2 bloques cortos de repaso.",
+    "11/11 Sumativa: Español – sustentación escrita de la novela. Llevar la novela otra vez.",
+    "11/11 Folklore: ensayo del baile de la Feria en el gimnasio. Llevar sombrero.",
+    "11/11 y 13/11 Math: piden otra vez las págs. 497–500 del vol. 2, que ya se resolvieron la semana pasada (están de nuevo en «Para copiar»). Llevar las págs. 188–189 del vol. 1. Preguntar a la maestra si quedó algo pendiente o si es un error de la agenda.",
+    "12/11 Sumativa: Español – anuncio publicitario creativo (lo hace y lo presenta en clase). Llevar cartulina, marcadores, papel construcción, revista, goma, tijera y adornos.",
+    "12/11 Ciencias Sociales: taller de símbolos patrios. La agenda no dice si es sumativa: preguntar.",
+    "13/11 Culture and Value: llevar una imagen impresa mediana sobre Panamá (cultura, folklore o comida típica). En clase recita dos líneas de un poema sobre Panamá.",
+    "13/11 Science: la agenda viene vacía. Preguntar a la maestra si hay algo pendiente.",
+    "09/11 Todos los días: dispositivo, cargador, cuaderno, libros (Reading and Composition vol. 2, Math, Science) y útiles. Reading and Composition (sufijos) trabaja en clase el 09, 11 y 13/11: no hay tarea en casa."
+   ]
   }
  ]
 }
