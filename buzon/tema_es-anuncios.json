@@ -1,0 +1,767 @@
+{
+  "tipo": "tema",
+  "id": "es-anuncios",
+  "idioma": "es",
+  "materia": "Español",
+  "titulo": "Los anuncios publicitarios",
+  "titulo_es": "Los anuncios publicitarios",
+  "fecha_examen": "2026-11-12",
+  "preguntas_por_ronda": 15,
+  "vocabulario_pregunta_es": "¿Qué es o qué significa?",
+  "subtemas": [
+    "que-es",
+    "partes",
+    "donde",
+    "hacer"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PARTE 1: ¿Qué es un anuncio publicitario?",
+      "es": "PARTE 1: ¿Qué es un anuncio publicitario?"
+    },
+    {
+      "emoji": "📣",
+      "en": "Un anuncio publicitario es un mensaje que quiere convencer a las personas de comprar o usar algo.",
+      "es": "Un anuncio publicitario es un mensaje que quiere convencer a las personas de comprar o usar algo."
+    },
+    {
+      "emoji": "🎯",
+      "en": "Su objetivo es CONVENCER: que la gente quiera el producto.",
+      "es": "Su objetivo es CONVENCER: que la gente quiera el producto."
+    },
+    {
+      "emoji": "🧃",
+      "en": "Un anuncio puede ofrecer un producto (algo que se compra, como un jugo o un juguete).",
+      "es": "Un anuncio puede ofrecer un producto (algo que se compra, como un jugo o un juguete)."
+    },
+    {
+      "emoji": "✂️",
+      "en": "También puede ofrecer un servicio (algo que alguien hace por ti, como un corte de pelo o un taxi).",
+      "es": "También puede ofrecer un servicio (algo que alguien hace por ti, como un corte de pelo o un taxi)."
+    },
+    {
+      "emoji": "👀",
+      "en": "Las personas que ven o escuchan el anuncio son el público.",
+      "es": "Las personas que ven o escuchan el anuncio son el público."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PARTE 2: Las partes del anuncio",
+      "es": "PARTE 2: Las partes del anuncio"
+    },
+    {
+      "emoji": "🍫",
+      "en": "Producto: lo que se anuncia.",
+      "es": "Producto: lo que se anuncia."
+    },
+    {
+      "emoji": "🏷️",
+      "en": "Marca: el nombre del producto. Ejemplo: «Súper Choco».",
+      "es": "Marca: el nombre del producto. Ejemplo: «Súper Choco»."
+    },
+    {
+      "emoji": "⭐",
+      "en": "Logotipo (logo): el dibujo o símbolo de la marca.",
+      "es": "Logotipo (logo): el dibujo o símbolo de la marca."
+    },
+    {
+      "emoji": "💬",
+      "en": "Eslogan: frase corta que se repite y es fácil de recordar. Ejemplo: «¡Súper Choco, súper energía!».",
+      "es": "Eslogan: frase corta que se repite y es fácil de recordar. Ejemplo: «¡Súper Choco, súper energía!»."
+    },
+    {
+      "emoji": "🖼️",
+      "en": "Imagen: el dibujo o la foto que llama la atención.",
+      "es": "Imagen: el dibujo o la foto que llama la atención."
+    },
+    {
+      "emoji": "📝",
+      "en": "Texto o mensaje: dice por qué el producto es bueno.",
+      "es": "Texto o mensaje: dice por qué el producto es bueno."
+    },
+    {
+      "emoji": "💲",
+      "en": "Datos: el precio, dónde comprarlo o un teléfono.",
+      "es": "Datos: el precio, dónde comprarlo o un teléfono."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PARTE 3: ¿Dónde vemos o escuchamos anuncios?",
+      "es": "PARTE 3: ¿Dónde vemos o escuchamos anuncios?"
+    },
+    {
+      "emoji": "📺",
+      "en": "En la televisión: tienen imagen y sonido.",
+      "es": "En la televisión: tienen imagen y sonido."
+    },
+    {
+      "emoji": "📻",
+      "en": "En la radio: solo se escuchan, no tienen imagen.",
+      "es": "En la radio: solo se escuchan, no tienen imagen."
+    },
+    {
+      "emoji": "📱",
+      "en": "En las redes sociales e internet: en el celular, la tablet o la computadora.",
+      "es": "En las redes sociales e internet: en el celular, la tablet o la computadora."
+    },
+    {
+      "emoji": "📰",
+      "en": "En revistas y periódicos: se leen.",
+      "es": "En revistas y periódicos: se leen."
+    },
+    {
+      "emoji": "🪧",
+      "en": "En la calle: en una valla, que es un cartel muy grande.",
+      "es": "En la calle: en una valla, que es un cartel muy grande."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PARTE 4: ¡Hago mi propio anuncio!",
+      "es": "PARTE 4: ¡Hago mi propio anuncio!"
+    },
+    {
+      "emoji": "1️⃣",
+      "en": "Paso 1: invento un producto. Paso 2: le pongo una marca (un nombre).",
+      "es": "Paso 1: invento un producto. Paso 2: le pongo una marca (un nombre)."
+    },
+    {
+      "emoji": "2️⃣",
+      "en": "Paso 3: invento un eslogan corto, ¡mejor si rima!",
+      "es": "Paso 3: invento un eslogan corto, ¡mejor si rima!"
+    },
+    {
+      "emoji": "3️⃣",
+      "en": "Paso 4: dibujo una imagen grande y con colores. Paso 5: escribo por qué es bueno. Paso 6: pongo el precio o dónde comprarlo.",
+      "es": "Paso 4: dibujo una imagen grande y con colores. Paso 5: escribo por qué es bueno. Paso 6: pongo el precio o dónde comprarlo."
+    },
+    {
+      "emoji": "🌈",
+      "en": "Un buen anuncio tiene letras grandes · colores llamativos · pocas palabras.",
+      "es": "Un buen anuncio tiene letras grandes · colores llamativos · pocas palabras."
+    },
+    {
+      "emoji": "💡",
+      "en": "Debe ser original: inventado por mí, no copiado.",
+      "es": "Debe ser original: inventado por mí, no copiado."
+    },
+    {
+      "emoji": "🎤",
+      "en": "Para presentarlo: hablo fuerte, miro a mis compañeros, muestro la lámina y digo el eslogan con alegría.",
+      "es": "Para presentarlo: hablo fuerte, miro a mis compañeros, muestro la lámina y digo el eslogan con alegría."
+    },
+    {
+      "emoji": "🤔",
+      "en": "Algunos anuncios exageran: hay que pensar antes de creer todo lo que dicen.",
+      "es": "Algunos anuncios exageran: hay que pensar antes de creer todo lo que dicen."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "partes",
+      "emoji": "🧩",
+      "titulo": "Las partes del anuncio",
+      "pasos": [
+        "Producto: lo que vendes 🍫",
+        "Marca: su nombre 🏷️",
+        "Eslogan: frase corta que se repite 💬",
+        "Imagen y logo: lo que se ve 🖼️⭐",
+        "Texto y datos: por qué es bueno y el precio 📝💲"
+      ],
+      "ejemplo": "Producto: galleta. Marca: «Galletón». Eslogan: «¡Galletón, de corazón!». Datos: $1.",
+      "truco": "Mira cualquier caja de cereal: ¡tiene todas las partes!"
+    },
+    {
+      "subtema": "hacer",
+      "emoji": "🎨",
+      "titulo": "Mi anuncio en 6 pasos",
+      "pasos": [
+        "Invento un producto.",
+        "Le pongo una marca.",
+        "Invento un eslogan que rime.",
+        "Dibujo una imagen grande con colores.",
+        "Escribo por qué es bueno.",
+        "Pongo el precio."
+      ],
+      "truco": "Letras grandes, pocas palabras, ¡y que sea mío!"
+    },
+    {
+      "subtema": "donde",
+      "emoji": "📺",
+      "titulo": "¿Se ve, se escucha o se lee?",
+      "pasos": [
+        "Televisión: se ve y se escucha.",
+        "Radio: solo se escucha.",
+        "Revista o periódico: se lee.",
+        "Valla: cartel gigante en la calle."
+      ]
+    },
+    {
+      "emoji": "✅",
+      "titulo": "Nunca en blanco",
+      "pasos": [
+        "Lee la pregunta dos veces.",
+        "Si no sabes, piensa en un anuncio que hayas visto.",
+        "Escribe algo: ¡siempre se puede intentar!",
+        "Revisa que escribiste todas antes de entregar."
+      ]
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "an1",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "Un anuncio publicitario quiere ______ a las personas de comprar o usar algo.",
+      "respuesta": "convencer",
+      "aceptadas": [
+        "convencer"
+      ],
+      "explicacion_es": "El objetivo del anuncio es CONVENCER 🎯.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "pista_es": "Empieza con «con…»."
+    },
+    {
+      "id": "an2",
+      "subtema": "que-es",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es el objetivo de un anuncio publicitario?",
+      "opciones": [
+        "Convencer: que la gente quiera el producto",
+        "Contar un cuento de miedo",
+        "Explicar una tarea de Math",
+        "Dar las noticias del día"
+      ],
+      "correcta": "Convencer: que la gente quiera el producto",
+      "explicacion_es": "El anuncio quiere que tú quieras el producto 🎯.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an3",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "Un jugo o un juguete es un ______ (algo que se compra).",
+      "respuesta": "producto",
+      "aceptadas": [
+        "producto"
+      ],
+      "explicacion_es": "Lo que se compra es un PRODUCTO 🧃.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an4",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "Un corte de pelo o un taxi es un ______ (algo que alguien hace por ti).",
+      "respuesta": "servicio",
+      "aceptadas": [
+        "servicio"
+      ],
+      "explicacion_es": "Algo que alguien hace por ti es un SERVICIO ✂️.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "pista_es": "Empieza con «ser…»."
+    },
+    {
+      "id": "an5",
+      "subtema": "que-es",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estos es un SERVICIO?",
+      "opciones": [
+        "Un corte de pelo",
+        "Un chocolate",
+        "Una pelota",
+        "Unos zapatos"
+      ],
+      "correcta": "Un corte de pelo",
+      "explicacion_es": "El corte de pelo lo hace alguien por ti. Los otros son productos.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an6",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "Las personas que ven o escuchan el anuncio son el ______.",
+      "respuesta": "público",
+      "aceptadas": [
+        "público",
+        "publico",
+        "el público"
+      ],
+      "explicacion_es": "El PÚBLICO 👀 es quien ve o escucha el anuncio.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an7",
+      "subtema": "que-es",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Un anuncio publicitario solo sirve para contar chistes.",
+      "correcta": false,
+      "explicacion_es": "Falso. El anuncio sirve para CONVENCER a la gente.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an8",
+      "subtema": "partes",
+      "tipo": "completar",
+      "pregunta_en": "El nombre del producto es la ______.",
+      "respuesta": "marca",
+      "aceptadas": [
+        "marca"
+      ],
+      "explicacion_es": "Ejemplo: «Súper Choco» es la MARCA 🏷️.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an9",
+      "subtema": "partes",
+      "tipo": "completar",
+      "pregunta_en": "La frase corta y fácil de recordar que se repite es el ______.",
+      "respuesta": "eslogan",
+      "aceptadas": [
+        "eslogan",
+        "slogan",
+        "el eslogan"
+      ],
+      "explicacion_es": "«¡Súper Choco, súper energía!» es un ESLOGAN 💬.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "pista_es": "Empieza con «es…»."
+    },
+    {
+      "id": "an10",
+      "subtema": "partes",
+      "tipo": "completar",
+      "pregunta_en": "El dibujo o símbolo de la marca es el ______.",
+      "respuesta": "logotipo",
+      "aceptadas": [
+        "logotipo",
+        "logo"
+      ],
+      "explicacion_es": "El LOGOTIPO o logo ⭐ es el dibujo de la marca.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an11",
+      "subtema": "partes",
+      "tipo": "completar",
+      "pregunta_en": "El dibujo o la foto que llama la atención es la ______.",
+      "respuesta": "imagen",
+      "aceptadas": [
+        "imagen"
+      ],
+      "explicacion_es": "La IMAGEN 🖼️ hace que mires el anuncio.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an12",
+      "subtema": "partes",
+      "tipo": "completar",
+      "pregunta_en": "El precio, dónde comprarlo o un teléfono son los ______.",
+      "respuesta": "datos",
+      "aceptadas": [
+        "datos",
+        "los datos"
+      ],
+      "explicacion_es": "Los DATOS 💲 dicen cuánto cuesta y dónde se compra.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an13",
+      "subtema": "partes",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«¡Súper Choco, súper energía!» es…",
+      "opciones": [
+        "el eslogan",
+        "la marca",
+        "el precio",
+        "el público"
+      ],
+      "correcta": "el eslogan",
+      "explicacion_es": "Es una frase corta que se repite: un ESLOGAN 💬.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an14",
+      "subtema": "partes",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "En el anuncio, «Súper Choco» es…",
+      "opciones": [
+        "la marca",
+        "el eslogan",
+        "el servicio",
+        "la valla"
+      ],
+      "correcta": "la marca",
+      "explicacion_es": "Súper Choco es el NOMBRE del producto: la MARCA 🏷️.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an15",
+      "subtema": "partes",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué parte dice por qué el producto es bueno?",
+      "opciones": [
+        "Texto o mensaje",
+        "El logotipo",
+        "El precio",
+        "La valla"
+      ],
+      "correcta": "Texto o mensaje",
+      "explicacion_es": "El TEXTO o mensaje 📝 explica por qué es bueno.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an16",
+      "subtema": "partes",
+      "tipo": "unir",
+      "pregunta_en": "Une cada parte con lo que es.",
+      "pares": [
+        {
+          "izquierda": "Marca",
+          "derecha": "El nombre del producto"
+        },
+        {
+          "izquierda": "Eslogan",
+          "derecha": "Frase corta que se repite"
+        },
+        {
+          "izquierda": "Logotipo",
+          "derecha": "Dibujo o símbolo de la marca"
+        },
+        {
+          "izquierda": "Datos",
+          "derecha": "Precio o dónde comprarlo"
+        }
+      ],
+      "explicacion_es": "¡Así se arma un anuncio! 🏷️💬⭐💲",
+      "instruccion_es": "Une cada parte con lo que es."
+    },
+    {
+      "id": "an17",
+      "subtema": "partes",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El producto es lo que se anuncia.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! El PRODUCTO es lo que se anuncia 🍫.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an18",
+      "subtema": "partes",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El eslogan es una frase muy larga y difícil de recordar.",
+      "correcta": false,
+      "explicacion_es": "Falso. El eslogan es CORTO y FÁCIL de recordar.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an19",
+      "subtema": "donde",
+      "tipo": "completar",
+      "pregunta_en": "En la ______ los anuncios solo se escuchan, no tienen imagen.",
+      "respuesta": "radio",
+      "aceptadas": [
+        "radio",
+        "la radio"
+      ],
+      "explicacion_es": "En la RADIO 📻 solo hay sonido.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an20",
+      "subtema": "donde",
+      "tipo": "completar",
+      "pregunta_en": "Un cartel muy grande en la calle se llama ______.",
+      "respuesta": "valla",
+      "aceptadas": [
+        "valla",
+        "una valla"
+      ],
+      "explicacion_es": "La VALLA 🪧 es un cartel gigante.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an21",
+      "subtema": "donde",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Dónde los anuncios tienen imagen y sonido?",
+      "opciones": [
+        "En la televisión",
+        "En la radio",
+        "En el periódico",
+        "En una revista"
+      ],
+      "correcta": "En la televisión",
+      "explicacion_es": "La TELEVISIÓN 📺 tiene imagen y sonido.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an22",
+      "subtema": "donde",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Dónde los anuncios se LEEN?",
+      "opciones": [
+        "En revistas y periódicos",
+        "En la radio",
+        "En una canción",
+        "En una llamada"
+      ],
+      "correcta": "En revistas y periódicos",
+      "explicacion_es": "En revistas y periódicos 📰 los anuncios se leen.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an23",
+      "subtema": "donde",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En las redes sociales también hay anuncios.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! En redes e internet 📱 hay muchos anuncios.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an24",
+      "subtema": "donde",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los anuncios de radio tienen dibujos.",
+      "correcta": false,
+      "explicacion_es": "Falso. En la radio 📻 solo se escucha.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an25",
+      "subtema": "donde",
+      "tipo": "unir",
+      "pregunta_en": "Une cada lugar con cómo es su anuncio.",
+      "pares": [
+        {
+          "izquierda": "Televisión",
+          "derecha": "Imagen y sonido"
+        },
+        {
+          "izquierda": "Radio",
+          "derecha": "Solo se escucha"
+        },
+        {
+          "izquierda": "Periódico",
+          "derecha": "Se lee"
+        },
+        {
+          "izquierda": "Valla",
+          "derecha": "Un cartel muy grande"
+        }
+      ],
+      "explicacion_es": "📺📻📰🪧 ¡Muy bien!",
+      "instruccion_es": "Une cada lugar con cómo es su anuncio."
+    },
+    {
+      "id": "an26",
+      "subtema": "hacer",
+      "tipo": "completar",
+      "pregunta_en": "Un buen anuncio debe ser ______: inventado por mí, no copiado.",
+      "respuesta": "original",
+      "aceptadas": [
+        "original"
+      ],
+      "explicacion_es": "ORIGINAL 💡 = inventado por mí.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an27",
+      "subtema": "hacer",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué es lo PRIMERO para hacer mi anuncio?",
+      "opciones": [
+        "Invento un producto",
+        "Presento ante la clase",
+        "Pongo el precio",
+        "Decoro con adornos"
+      ],
+      "correcta": "Invento un producto",
+      "explicacion_es": "Paso 1: invento un producto 1️⃣.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an28",
+      "subtema": "hacer",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo deben ser las letras de un buen anuncio?",
+      "opciones": [
+        "Grandes",
+        "Muy pequeñas",
+        "Sin color",
+        "Escondidas"
+      ],
+      "correcta": "Grandes",
+      "explicacion_es": "Letras GRANDES para que se lean de lejos 🌈.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an29",
+      "subtema": "hacer",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Un buen anuncio tiene…",
+      "opciones": [
+        "pocas palabras",
+        "muchísimas palabras",
+        "solo números",
+        "nada de colores"
+      ],
+      "correcta": "pocas palabras",
+      "explicacion_es": "Pocas palabras y colores llamativos 🌈.",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+    },
+    {
+      "id": "an30",
+      "subtema": "hacer",
+      "tipo": "completar",
+      "pregunta_en": "El eslogan es mejor si ______ (suena igual al final).",
+      "respuesta": "rima",
+      "aceptadas": [
+        "rima"
+      ],
+      "explicacion_es": "Ejemplo: «Súper Choco… ¡te gusta un poco!» Las rimas se recuerdan fácil 2️⃣.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an31",
+      "subtema": "hacer",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Para presentar mi anuncio hablo fuerte y miro a mis compañeros.",
+      "correcta": true,
+      "explicacion_es": "¡Verdadero! Hablo fuerte, miro al público y digo el eslogan con alegría 🎤.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an32",
+      "subtema": "hacer",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Hay que creer todo lo que dicen los anuncios.",
+      "correcta": false,
+      "explicacion_es": "Falso. Algunos anuncios exageran: hay que pensar 🤔.",
+      "instruccion_es": "¿Es verdadero o falso?"
+    },
+    {
+      "id": "an33",
+      "subtema": "hacer",
+      "tipo": "completar",
+      "pregunta_en": "Para presentar, muestro la ______ y digo el eslogan con alegría.",
+      "respuesta": "lámina",
+      "aceptadas": [
+        "lámina",
+        "lamina",
+        "cartulina"
+      ],
+      "explicacion_es": "Muestro mi LÁMINA 🎤.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an34",
+      "subtema": "donde",
+      "tipo": "completar",
+      "pregunta_en": "En la televisión los anuncios tienen imagen y ______.",
+      "respuesta": "sonido",
+      "aceptadas": [
+        "sonido"
+      ],
+      "explicacion_es": "TV 📺 = imagen + sonido.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an35",
+      "subtema": "hacer",
+      "tipo": "completar",
+      "pregunta_en": "Las letras de un buen anuncio deben ser ______.",
+      "respuesta": "grandes",
+      "aceptadas": [
+        "grandes"
+      ],
+      "explicacion_es": "Letras GRANDES 🌈 para leer de lejos.",
+      "instruccion_es": "Escribe la palabra que falta."
+    },
+    {
+      "id": "an36",
+      "subtema": "hacer",
+      "tipo": "completar",
+      "pregunta_en": "Algunos anuncios ______: hay que pensar antes de creer todo.",
+      "respuesta": "exageran",
+      "aceptadas": [
+        "exageran"
+      ],
+      "explicacion_es": "Los anuncios a veces EXAGERAN 🤔.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "pista_es": "Empieza con «exa…»."
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "eslogan",
+      "es": "frase corta que se repite",
+      "aceptadas": [
+        "frase corta que se repite"
+      ]
+    },
+    {
+      "en": "marca",
+      "es": "nombre del producto",
+      "aceptadas": [
+        "nombre del producto"
+      ]
+    },
+    {
+      "en": "logotipo",
+      "es": "dibujo o símbolo de la marca",
+      "aceptadas": [
+        "dibujo o símbolo de la marca"
+      ]
+    },
+    {
+      "en": "producto",
+      "es": "algo que se compra",
+      "aceptadas": [
+        "algo que se compra"
+      ]
+    },
+    {
+      "en": "servicio",
+      "es": "algo que alguien hace por ti",
+      "aceptadas": [
+        "algo que alguien hace por ti"
+      ]
+    },
+    {
+      "en": "público",
+      "es": "quien ve o escucha el anuncio",
+      "aceptadas": [
+        "quien ve o escucha el anuncio"
+      ]
+    },
+    {
+      "en": "valla",
+      "es": "cartel grande en la calle",
+      "aceptadas": [
+        "cartel grande en la calle"
+      ]
+    },
+    {
+      "en": "original",
+      "es": "inventado por mí",
+      "aceptadas": [
+        "inventado por mí"
+      ]
+    },
+    {
+      "en": "radio",
+      "es": "solo se escucha",
+      "aceptadas": [
+        "solo se escucha"
+      ]
+    },
+    {
+      "en": "televisión",
+      "es": "imagen y sonido",
+      "aceptadas": [
+        "imagen y sonido"
+      ]
+    }
+  ]
+}
