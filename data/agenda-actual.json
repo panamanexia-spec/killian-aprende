@@ -2741,6 +2741,120 @@
       "Ver el enlace de repaso de la Lesson 9 (B1L9)"
      ],
      "detalle": "Mismo contenido del lunes 09/11: icebreaker de orientación en mandarín, presentación oral y repaso de B1L9."
+    },
+    {
+     "id": "w46-t16",
+     "materia": "Science",
+     "titulo": "🧪 Copiar el formal de Science: Finding Starch in Food",
+     "fecha": "2026-11-11",
+     "detalle": "Registro formal de Science and Math «Finding Starch in Food: A Science and Math Discovery» (prueba del yodo para encontrar almidón + sumas y restas de 2 y 3 cifras). Adela mandó las fotos del cuaderno modelo el 11/11 para que Killian lo copie hoy. Índice de 10 partes, cada parte en su hoja.",
+     "copiar": {
+      "instrucciones_mama": "Son 12 hojas: cada parte del índice va en una hoja nueva del cuaderno, en este orden. Si se cansa, que copie hoy de la Hoja 1 a la 6 y mañana de la 7 a la 12. Faltan dos datos que debe completar a mano: su apellido y el nombre de la maestra de Math (en el cuaderno modelo dice algo como «Samidé»). En la resta, el cuaderno modelo decía 262 − 198 = 76, que está mal: aquí va 262 − 186 = 76 (se comprueba: 186 + 76 = 262). La tabla se hace con regla.",
+      "partes": [
+       {
+        "titulo": "Hoja 1 – Portada",
+        "texto": "Saint George International School of Panama\nScience and Math Formal\n\nFinding Starch in Food:\nA Science and Math Discovery\n\nStudent Name: Killian ____________\nTeachers: Theeksha Shetty and ____________\nGrade: 3rd Euclides\nDate: 29 September",
+        "traduccion_es": "Colegio Internacional Saint George de Panamá\nFormal de Ciencias y Matemáticas\n\nEncontrar almidón en la comida:\nun descubrimiento de ciencias y matemáticas\n\nNombre: Killian + tu apellido\nMaestras: Theeksha Shetty y la maestra de Math\nGrado: 3.° Euclides\nFecha: 29 de septiembre",
+        "dibujo": "Escribe todo centrado, como una portada."
+       },
+       {
+        "titulo": "Hoja 2 – Index",
+        "texto": "Index\n\n1. Introduction\n2. Investigation and Problem\n3. Objectives\n4. Materials and Procedure\n5. Observations and Math Application\n6. Results\n7. Conclusion\n8. Recommendations\n9. References\n10. Annexes",
+        "traduccion_es": "1. Introducción\n2. Investigación y problema\n3. Objetivos\n4. Materiales y procedimiento\n5. Observaciones y aplicación de matemáticas\n6. Resultados\n7. Conclusión\n8. Recomendaciones\n9. Referencias\n10. Anexos"
+       },
+       {
+        "titulo": "Hoja 3 – 1. Introduction",
+        "texto": "Introduction\n\nFinding Starch is a fun experiment. Starch is the main way plants store energy, and it is a major source of fuel for our body. In this project, you will use iodine solution to investigate which foods contain starch. You will observe and record color changes, and use addition and subtraction with 2-digit and 3-digit whole numbers to organize and compare your results.",
+        "traduccion_es": "Encontrar almidón es un experimento divertido. El almidón es la forma principal en que las plantas guardan energía, y es una gran fuente de combustible para nuestro cuerpo. En este proyecto vas a usar solución de yodo para investigar qué alimentos tienen almidón. Vas a observar y anotar los cambios de color, y usar sumas y restas con números de 2 y 3 cifras para organizar y comparar tus resultados."
+       },
+       {
+        "titulo": "Hoja 4 – 2. Investigation and Problem",
+        "texto": "Investigation Areas\n\nScience: Finding starch in food.\nMath: Adding and subtracting 2-digit and 3-digit whole numbers.\n\nProblem Statement\nThe problem is to find out which foods contain starch and how iodine solution can be used to detect starch.\nStudents will also use mathematical operations to record and compare information from the experiment.",
+        "traduccion_es": "Ciencias: encontrar almidón en la comida.\nMatemáticas: sumar y restar números de 2 y 3 cifras.\n\nEl problema\nEl problema es descubrir qué alimentos tienen almidón y cómo se usa la solución de yodo para detectarlo.\nLos estudiantes también usarán operaciones de matemáticas para anotar y comparar la información del experimento."
+       },
+       {
+        "titulo": "Hoja 5 – 3. Objectives",
+        "texto": "Objectives\n\nGeneral Objective\nTo identify starch in different foods and apply addition and subtraction to organize and compare the results.\n\nSpecific Objectives\n• Observe how iodine reacts with different foods.\n• Identify color changes that show the presence of starch.\n• Record observations accurately.\n• Add 2-digit and 3-digit whole numbers.\n• Subtract 2-digit and 3-digit whole numbers.\n• Compare the results using mathematical operations.",
+        "traduccion_es": "Objetivo general\nIdentificar el almidón en distintos alimentos y usar sumas y restas para organizar y comparar los resultados.\n\nObjetivos específicos\n• Observar cómo reacciona el yodo con distintos alimentos.\n• Identificar los cambios de color que muestran que hay almidón.\n• Anotar las observaciones con cuidado.\n• Sumar números de 2 y 3 cifras.\n• Restar números de 2 y 3 cifras.\n• Comparar los resultados con operaciones de matemáticas."
+       },
+       {
+        "titulo": "Hoja 6 – 4. Materials and Procedure",
+        "texto": "Materials and Procedure\n\nMaterials\n- Iodine solution\n- Apple\n- Tomato\n- Potato\n- Bread\n- Grain-free bread\n- Separate clean plates\n\nProcedure\n1. Place the food samples on separate clean plates.\n2. Put 2 drops of iodine solution on each sample.\n3. Wait a few seconds for the liquid to react.\n4. Observe and record the color changes.",
+        "traduccion_es": "Materiales\n- Solución de yodo\n- Manzana\n- Tomate\n- Papa\n- Pan\n- Pan sin granos\n- Platos limpios separados\n\nProcedimiento\n1. Pon cada alimento en un plato limpio.\n2. Echa 2 gotas de yodo en cada alimento.\n3. Espera unos segundos a que el líquido reaccione.\n4. Mira y anota los cambios de color."
+       },
+       {
+        "titulo": "Hoja 7 – 5. Observations (tabla)",
+        "texto": "Observations and Math Application\n\nStudents will record the results of the experiment.",
+        "traduccion_es": "Los estudiantes anotan los resultados del experimento.",
+        "dibujo": "Haz la tabla con regla: 3 columnas y 6 filas.",
+        "tabla": [
+         [
+          "Food Sample",
+          "Color Change",
+          "Starch Detected"
+         ],
+         [
+          "Apple",
+          "Yellowish-brown",
+          "No"
+         ],
+         [
+          "Tomato",
+          "Yellowish-brown",
+          "No"
+         ],
+         [
+          "Potato",
+          "Deep blue-black",
+          "Yes"
+         ],
+         [
+          "Bread",
+          "Deep blue-black",
+          "Yes"
+         ],
+         [
+          "Grain-free bread",
+          "Yellowish-brown",
+          "No"
+         ]
+        ]
+       },
+       {
+        "titulo": "Hoja 7 (sigue) – 5. Observations",
+        "texto": "Science Observation\nThe bread and the potato turned deep blue-black.\nThe apple, the tomato and the grain-free bread did not change and stayed yellowish-brown.\n\nMath Application\nStudents will use the information collected during the experiment to solve addition and subtraction.\n\nAddition Example\nA student records 125 observations in one activity and 137 observations in another.\n  125\n+ 137\n= 262\n\nSubtraction Example\n262 - 186 = 76",
+        "traduccion_es": "Observación de ciencias\nEl pan y la papa se pusieron azul oscuro, casi negro.\nLa manzana, el tomate y el pan sin granos no cambiaron: se quedaron café amarillento.\n\nAplicación de matemáticas\nUsamos los datos del experimento para sumar y restar.\n\nEjemplo de suma\nUn estudiante anota 125 observaciones en una actividad y 137 en otra: 125 + 137 = 262.\n\nEjemplo de resta\n262 − 186 = 76",
+        "dibujo": "Escribe la suma en columna, un número debajo del otro."
+       },
+       {
+        "titulo": "Hoja 8 – 6. Results",
+        "texto": "Results\n\nScience Result\nFoods that turned deep blue-black showed the presence of starch.\nFoods that stayed yellowish-brown did not show a starch reaction.\n\nMath Result\nStudents used addition and subtraction to calculate and compare the numbers collected during the activity.",
+        "traduccion_es": "Resultado de ciencias\nLos alimentos que se pusieron azul oscuro tienen almidón.\nLos que se quedaron café amarillento no mostraron almidón.\n\nResultado de matemáticas\nUsamos sumas y restas para calcular y comparar los números de la actividad."
+       },
+       {
+        "titulo": "Hoja 9 – 7. Conclusion",
+        "texto": "Conclusion\n\nThrough this experiment, we learned that iodine changes color when starch is present in food.\nWe also used addition and subtraction with 2-digit and 3-digit whole numbers to organize information from the investigation.\nThis activity showed how science and math work together to understand and analyze real-world information.",
+        "traduccion_es": "Con este experimento aprendimos que el yodo cambia de color cuando la comida tiene almidón.\nTambién usamos sumas y restas con números de 2 y 3 cifras para organizar la información.\nEsta actividad mostró cómo las ciencias y las matemáticas trabajan juntas para entender la vida real."
+       },
+       {
+        "titulo": "Hoja 10 – 8. Recommendations",
+        "texto": "Recommendations\n\nTo explore further, students could test other foods such as milk, rice or crackers to observe possible color changes with iodine solution.\nThey could also collect more numbers and practice addition and subtraction problems using their results.",
+        "traduccion_es": "Para seguir investigando, se pueden probar otros alimentos como leche, arroz o galletas de soda y ver si cambian de color con el yodo.\nTambién se pueden juntar más números y practicar sumas y restas con los resultados."
+       },
+       {
+        "titulo": "Hoja 11 – 9. References",
+        "texto": "References\n\nScience: Finding Starch in Food - Classroom experiment.\nMath: Experience Savvas Math 3, Grade 3.",
+        "traduccion_es": "Ciencias: «Encontrar almidón en la comida», experimento en clase.\nMatemáticas: libro de Math de Savvas, 3.er grado (Experience Savvas Math 3)."
+       },
+       {
+        "titulo": "Hoja 12 – 10. Annexes",
+        "texto": "Annexes\n\nIodine test: foods with starch turn deep blue-black.",
+        "traduccion_es": "Prueba del yodo: los alimentos con almidón se ponen azul oscuro.",
+        "dibujo": "Dibuja los 5 platos con su comida y colorea la gota: azul oscuro en la papa y el pan; café en los demás.",
+        "imagen": "dibujo_sci_starch.png"
+       }
+      ]
+     }
     }
    ],
    "materiales": [
