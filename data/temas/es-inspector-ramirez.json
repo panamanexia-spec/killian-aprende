@@ -1,0 +1,534 @@
+{
+ "tipo": "tema",
+ "id": "es-inspector-ramirez",
+ "materia": "Español",
+ "idioma": "es",
+ "titulo": "Los enigmas del inspector Ramírez",
+ "titulo_es": "La novela del inspector Ramírez (datos del libro)",
+ "fecha_examen": "2026-11-16",
+ "preguntas_por_ronda": 12,
+ "subtemas": [
+  "datos",
+  "personajes",
+  "enigmas",
+  "analisis"
+ ],
+ "vocabulario_pregunta_es": "¿Qué significa?",
+ "resumen": [
+  {
+   "emoji": "🟦",
+   "en": "PARTE 1: Datos del libro",
+   "es": "PARTE 1: Datos del libro"
+  },
+  {
+   "emoji": "📖",
+   "en": "El libro se llama «Los enigmas del inspector Ramírez».",
+   "es": "El libro se llama «Los enigmas del inspector Ramírez»."
+  },
+  {
+   "emoji": "✍️",
+   "en": "La autora es María Brandán Aráoz. El ilustrador es Ricardo Fernández.",
+   "es": "La autora es María Brandán Aráoz. El ilustrador es Ricardo Fernández."
+  },
+  {
+   "emoji": "🏢",
+   "en": "La editorial es Del Naranjo. Es de la colección Sub 20.",
+   "es": "La editorial es Del Naranjo. Es de la colección Sub 20."
+  },
+  {
+   "emoji": "📄",
+   "en": "Tiene 64 páginas y es para chicos desde los 9 años.",
+   "es": "Tiene 64 páginas y es para chicos desde los 9 años."
+  },
+  {
+   "emoji": "🎭",
+   "en": "Es un libro policial con humor: tiene misterio y también cosas graciosas.",
+   "es": "Es un libro policial con humor: tiene misterio y también cosas graciosas."
+  },
+  {
+   "emoji": "🟩",
+   "en": "PARTE 2: Los personajes",
+   "es": "PARTE 2: Los personajes"
+  },
+  {
+   "emoji": "🕵️",
+   "en": "El personaje principal es el inspector Ramírez. Es un detective muy astuto.",
+   "es": "El personaje principal es el inspector Ramírez. Es un detective muy astuto."
+  },
+  {
+   "emoji": "🤝",
+   "en": "Su ayudante se llama Inocentti. Siempre lo acompaña.",
+   "es": "Su ayudante se llama Inocentti. Siempre lo acompaña."
+  },
+  {
+   "emoji": "✅",
+   "en": "El inspector Ramírez jamás deja un caso sin resolver.",
+   "es": "El inspector Ramírez jamás deja un caso sin resolver."
+  },
+  {
+   "emoji": "🟨",
+   "en": "PARTE 3: Los cuatro enigmas",
+   "es": "PARTE 3: Los cuatro enigmas"
+  },
+  {
+   "emoji": "4️⃣",
+   "en": "El libro tiene cuatro enigmas policiales.",
+   "es": "El libro tiene cuatro enigmas policiales."
+  },
+  {
+   "emoji": "🔢",
+   "en": "Sus títulos son: Un enigma imposible · El enigma del Rosedal · El enigma de la caja fuerte · El enigma del secuestro.",
+   "es": "Sus títulos son: Un enigma imposible · El enigma del Rosedal · El enigma de la caja fuerte · El enigma del secuestro."
+  },
+  {
+   "emoji": "🧩",
+   "en": "Un enigma es un misterio o problema que hay que resolver con pistas.",
+   "es": "Un enigma es un misterio o problema que hay que resolver con pistas."
+  },
+  {
+   "emoji": "🟧",
+   "en": "PARTE 4: Cómo se analiza una novela",
+   "es": "PARTE 4: Cómo se analiza una novela"
+  },
+  {
+   "emoji": "👥",
+   "en": "Personajes: las personas o animales que hacen las acciones.",
+   "es": "Personajes: las personas o animales que hacen las acciones."
+  },
+  {
+   "emoji": "📍",
+   "en": "Lugar (ambiente): dónde pasa la historia.",
+   "es": "Lugar (ambiente): dónde pasa la historia."
+  },
+  {
+   "emoji": "❓",
+   "en": "Problema: lo que hay que resolver. En este libro, el enigma.",
+   "es": "Problema: lo que hay que resolver. En este libro, el enigma."
+  },
+  {
+   "emoji": "💡",
+   "en": "La solución (desenlace) es cómo se resuelve el misterio.",
+   "es": "La solución (desenlace) es cómo se resuelve el misterio."
+  },
+  {
+   "emoji": "🔎",
+   "en": "Una pista es una señal que ayuda al detective a descubrir la verdad.",
+   "es": "Una pista es una señal que ayuda al detective a descubrir la verdad."
+  }
+ ],
+ "preguntas": [
+  {
+   "id": "ir1",
+   "subtema": "datos",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Quién es el personaje principal del libro?",
+   "opciones": [
+    "El inspector Ramírez",
+    "Inocentti",
+    "El ilustrador",
+    "El editor"
+   ],
+   "correcta": "El inspector Ramírez",
+   "explicacion_es": "El personaje principal es el inspector Ramírez, el detective.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir2",
+   "subtema": "personajes",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Cómo se llama el ayudante del inspector?",
+   "opciones": [
+    "Inocentti",
+    "Ramírez",
+    "Del Naranjo",
+    "Rosedal"
+   ],
+   "correcta": "Inocentti",
+   "explicacion_es": "Su fiel ayudante se llama Inocentti.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir3",
+   "subtema": "personajes",
+   "tipo": "completar",
+   "pregunta_en": "El ayudante del inspector Ramírez se llama ______.",
+   "respuesta": "Inocentti",
+   "aceptadas": [
+    "inocentti",
+    "inocenti"
+   ],
+   "explicacion_es": "Se llama Inocentti.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir4",
+   "subtema": "datos",
+   "tipo": "completar",
+   "pregunta_en": "La autora del libro es María ______ Aráoz.",
+   "respuesta": "Brandán",
+   "aceptadas": [
+    "brandan",
+    "brandán"
+   ],
+   "explicacion_es": "María Brandán Aráoz.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir5",
+   "subtema": "enigmas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Qué es un enigma?",
+   "opciones": [
+    "Un misterio o problema que hay que resolver",
+    "Un lugar muy lejano",
+    "Un tipo de comida",
+    "Un dibujo"
+   ],
+   "correcta": "Un misterio o problema que hay que resolver",
+   "explicacion_es": "Un enigma es un misterio que se resuelve con pistas.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir6",
+   "subtema": "personajes",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "El inspector Ramírez deja casos sin resolver.",
+   "correcta": false,
+   "explicacion_es": "Falso: el inspector jamás deja un caso sin resolver. 🕵️",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "ir7",
+   "subtema": "enigmas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Cuántos enigmas policiales tiene el libro?",
+   "opciones": [
+    "4",
+    "2",
+    "10",
+    "1"
+   ],
+   "correcta": "4",
+   "explicacion_es": "Tiene cuatro enigmas.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir8",
+   "subtema": "enigmas",
+   "tipo": "completar",
+   "pregunta_en": "El libro tiene ______ enigmas policiales (escribe el número).",
+   "respuesta": "4",
+   "aceptadas": [
+    "4",
+    "cuatro"
+   ],
+   "explicacion_es": "Son 4 enigmas.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir9",
+   "subtema": "enigmas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Cuál es el título de uno de los enigmas del libro?",
+   "opciones": [
+    "El enigma del Rosedal",
+    "El enigma del castillo",
+    "El enigma de la luna",
+    "El enigma del tren"
+   ],
+   "correcta": "El enigma del Rosedal",
+   "explicacion_es": "Uno de los cuatro enigmas es «El enigma del Rosedal».",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir10",
+   "subtema": "enigmas",
+   "tipo": "completar",
+   "pregunta_en": "Uno de los enigmas se llama «El enigma de la caja ______».",
+   "respuesta": "fuerte",
+   "aceptadas": [
+    "fuerte"
+   ],
+   "explicacion_es": "«El enigma de la caja fuerte».",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir11",
+   "subtema": "enigmas",
+   "tipo": "completar",
+   "pregunta_en": "Uno de los enigmas se llama «El enigma del ______».",
+   "respuesta": "secuestro",
+   "aceptadas": [
+    "secuestro"
+   ],
+   "explicacion_es": "«El enigma del secuestro».",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir12",
+   "subtema": "enigmas",
+   "tipo": "completar",
+   "pregunta_en": "Uno de los enigmas se llama «Un enigma ______».",
+   "respuesta": "imposible",
+   "aceptadas": [
+    "imposible"
+   ],
+   "explicacion_es": "«Un enigma imposible».",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir13",
+   "subtema": "datos",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Qué tipo de libro es?",
+   "opciones": [
+    "Policial con humor",
+    "De terror",
+    "De ciencia ficción",
+    "De cocina"
+   ],
+   "correcta": "Policial con humor",
+   "explicacion_es": "Es un libro policial y de humor.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir14",
+   "subtema": "datos",
+   "tipo": "completar",
+   "pregunta_en": "La editorial del libro es Del ______.",
+   "respuesta": "Naranjo",
+   "aceptadas": [
+    "naranjo"
+   ],
+   "explicacion_es": "Editorial Del Naranjo.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir15",
+   "subtema": "datos",
+   "tipo": "completar",
+   "pregunta_en": "El ilustrador del libro se llama Ricardo ______.",
+   "respuesta": "Fernández",
+   "aceptadas": [
+    "fernandez",
+    "fernández"
+   ],
+   "explicacion_es": "Ricardo Fernández hizo las ilustraciones.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir16",
+   "subtema": "datos",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "El libro tiene 64 páginas.",
+   "correcta": true,
+   "explicacion_es": "Verdadero: son 64 páginas.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "ir17",
+   "subtema": "datos",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Desde qué edad se recomienda el libro?",
+   "opciones": [
+    "Desde los 9 años",
+    "Desde los 3 años",
+    "Desde los 18 años",
+    "Desde los 60 años"
+   ],
+   "correcta": "Desde los 9 años",
+   "explicacion_es": "Se recomienda desde los 9 años.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir18",
+   "subtema": "analisis",
+   "tipo": "completar",
+   "pregunta_en": "Una pista es una señal que ayuda al detective a ______ el misterio.",
+   "respuesta": "descubrir",
+   "aceptadas": [
+    "descubrir",
+    "resolver",
+    "encontrar"
+   ],
+   "explicacion_es": "Las pistas ayudan a descubrir la verdad.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir19",
+   "subtema": "analisis",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "En un cuento policial el detective usa pistas para resolver el misterio.",
+   "correcta": true,
+   "explicacion_es": "Verdadero: el detective investiga con pistas.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "ir20",
+   "subtema": "analisis",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "¿Cómo se llama la parte donde se resuelve el misterio?",
+   "opciones": [
+    "La solución (desenlace)",
+    "El título",
+    "La portada",
+    "El autor"
+   ],
+   "correcta": "La solución (desenlace)",
+   "explicacion_es": "La solución o desenlace cuenta cómo se resuelve el problema.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "ir21",
+   "subtema": "analisis",
+   "tipo": "unir",
+   "pregunta_en": "Une cada elemento del análisis con su significado.",
+   "pares": [
+    {
+     "izquierda": "Personajes",
+     "derecha": "Quienes hacen las acciones"
+    },
+    {
+     "izquierda": "Lugar",
+     "derecha": "Dónde pasa la historia"
+    },
+    {
+     "izquierda": "Problema",
+     "derecha": "Lo que hay que resolver"
+    },
+    {
+     "izquierda": "Solución",
+     "derecha": "Cómo se arregla el problema"
+    }
+   ],
+   "explicacion_es": "Personajes, lugar, problema y solución son las partes que se cuentan en el análisis.",
+   "instruccion_es": "Une cada elemento con su significado."
+  },
+  {
+   "id": "ir22",
+   "subtema": "analisis",
+   "tipo": "completar",
+   "pregunta_en": "El ______ es el lugar donde pasa la historia (ambiente).",
+   "respuesta": "lugar",
+   "aceptadas": [
+    "lugar",
+    "ambiente"
+   ],
+   "explicacion_es": "Lugar o ambiente: dónde ocurre la historia.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir23",
+   "subtema": "personajes",
+   "tipo": "completar",
+   "pregunta_en": "El inspector Ramírez es un ______ (usa pistas para resolver casos).",
+   "respuesta": "detective",
+   "aceptadas": [
+    "detective",
+    "inspector"
+   ],
+   "explicacion_es": "Un detective o inspector investiga los misterios.",
+   "instruccion_es": "Escribe la palabra que falta."
+  },
+  {
+   "id": "ir24",
+   "subtema": "datos",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "«Los enigmas del inspector Ramírez» es de la colección Sub 20.",
+   "correcta": true,
+   "explicacion_es": "Verdadero: es de la colección Sub 20 de la editorial Del Naranjo.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  }
+ ],
+ "vocabulario": [
+  {
+   "en": "enigma",
+   "es": "misterio que se resuelve",
+   "aceptadas": [
+    "misterio",
+    "problema",
+    "acertijo"
+   ]
+  },
+  {
+   "en": "inspector",
+   "es": "detective",
+   "aceptadas": [
+    "detective",
+    "policia",
+    "policía"
+   ]
+  },
+  {
+   "en": "pista",
+   "es": "señal para descubrir algo",
+   "aceptadas": [
+    "señal",
+    "indicio"
+   ]
+  },
+  {
+   "en": "personaje principal",
+   "es": "el más importante de la historia",
+   "aceptadas": [
+    "protagonista"
+   ]
+  },
+  {
+   "en": "solución",
+   "es": "cómo se resuelve el problema",
+   "aceptadas": [
+    "desenlace",
+    "final"
+   ]
+  },
+  {
+   "en": "ayudante",
+   "es": "persona que ayuda",
+   "aceptadas": [
+    "asistente"
+   ]
+  },
+  {
+   "en": "policial",
+   "es": "historia de misterio y detectives",
+   "aceptadas": [
+    "misterio"
+   ]
+  },
+  {
+   "en": "ilustrador",
+   "es": "el que hace los dibujos",
+   "aceptadas": [
+    "dibujante"
+   ]
+  }
+ ],
+ "lecciones": [
+  {
+   "subtema": "analisis",
+   "emoji": "🕵️",
+   "titulo": "Cómo contar una novela en 4 pistas",
+   "pasos": [
+    "1. ¿QUIÉN? Los personajes: el inspector Ramírez y su ayudante Inocentti.",
+    "2. ¿DÓNDE? El lugar donde pasa cada enigma.",
+    "3. ¿QUÉ PROBLEMA? El enigma que hay que resolver.",
+    "4. ¿CÓMO SE RESOLVIÓ? La solución: lo que descubre el inspector."
+   ],
+   "ejemplo": "Inspector Ramírez + Inocentti → enigma → pistas → solución",
+   "truco": "Cuatro pistas: ¿quién?, ¿dónde?, ¿qué problema?, ¿cómo se resolvió?"
+  },
+  {
+   "subtema": "datos",
+   "emoji": "🧠",
+   "titulo": "Nunca en blanco / revisa antes de entregar",
+   "pasos": [
+    "Escribe SIEMPRE algo, aunque no estés seguro.",
+    "Lee la pregunta dos veces antes de contestar.",
+    "Usa mayúscula en los nombres: Ramírez, Inocentti, Brandán."
+   ],
+   "ejemplo": "Aunque dudes, escribe tu mejor idea.",
+   "truco": "Un intento vale más que un espacio vacío."
+  }
+ ]
+}
