@@ -1,0 +1,908 @@
+{
+ "tipo": "tema",
+ "id": "math-propiedades-mult",
+ "materia": "Math",
+ "titulo": "Using Properties to Multiply",
+ "titulo_es": "Propiedades de la multiplicación (Unit 12, Topic 2)",
+ "fecha_examen": "2026-11-18",
+ "preguntas_por_ronda": 20,
+ "subtemas": [
+  "commutative",
+  "associative",
+  "zero_identity",
+  "distributive",
+  "tables"
+ ],
+ "resumen": [
+  {
+   "emoji": "🟦",
+   "en": "PART 1: Commutative Property (change the order)",
+   "es": "PARTE 1: Propiedad conmutativa = cambiar el ORDEN (co-MIÚ-ta-tiv)"
+  },
+  {
+   "emoji": "🔄",
+   "en": "Commutative Property: you can change the order of the factors and the product stays the same.",
+   "es": "Si cambias el orden de los números, el resultado es igual. Factor = número que se multiplica; product = resultado."
+  },
+  {
+   "emoji": "🔢",
+   "en": "4 × 6 = 6 × 4 (both are 24). 5 × 3 = 3 × 5 = 15. 7 × 8 = 8 × 7 = 56.",
+   "es": "4 × 6 = 6 × 4 = 24 · 5 × 3 = 3 × 5 = 15 · 7 × 8 = 8 × 7 = 56"
+  },
+  {
+   "emoji": "🔢",
+   "en": "9 × 4 = 4 × 9 = 36. 6 × 2 = 2 × 6 = 12. 5 × 7 = 7 × 5 = 35. 3 × 7 = 7 × 3 = 21. 8 × 6 = 6 × 8 = 48.",
+   "es": "9 × 4 = 4 × 9 = 36 · 6 × 2 = 2 × 6 = 12 · 5 × 7 = 7 × 5 = 35 · 3 × 7 = 7 × 3 = 21 · 8 × 6 = 6 × 8 = 48"
+  },
+  {
+   "emoji": "🔗",
+   "en": "Pairs: 4 × 6 and 6 × 4. 3 × 9 and 9 × 3. 7 × 2 and 2 × 7. 5 × 8 and 8 × 5.",
+   "es": "Parejas: 4 × 6 y 6 × 4 · 3 × 9 y 9 × 3 · 7 × 2 y 2 × 7 · 5 × 8 y 8 × 5"
+  },
+  {
+   "emoji": "📘",
+   "en": "Book page 381: 5 × ☐ = ☐ × 5. Put the same number in both boxes. With 4: 5 × 4 = 20 and 4 × 5 = 20.",
+   "es": "Libro pág. 381: 5 × ☐ = ☐ × 5. Con cualquier número en las dos cajas se cumple. Con 4: 5 × 4 = 20."
+  },
+  {
+   "emoji": "🟩",
+   "en": "PART 2: Associative Property (change the groups)",
+   "es": "PARTE 2: Propiedad asociativa = cambiar los GRUPOS (a-SÓ-shia-tiv)"
+  },
+  {
+   "emoji": "🧺",
+   "en": "Associative Property: you can change how you group the factors with parentheses. The product stays the same.",
+   "es": "Cambias cuáles números van juntos entre paréntesis (parentheses = pa-RÉN-ze-sis). El resultado es igual."
+  },
+  {
+   "emoji": "🧮",
+   "en": "(2 × 3) × 4 = 6 × 4 = 24 and 2 × (3 × 4) = 2 × 12 = 24.",
+   "es": "(2 × 3) × 4 = 6 × 4 = 24 · 2 × (3 × 4) = 2 × 12 = 24"
+  },
+  {
+   "emoji": "🧮",
+   "en": "(3 × 2) × 5 = 3 × (2 × 5) = 30. (4 × 2) × 3 = 4 × (2 × 3) = 24. (5 × 2) × 4 = 10 × 4 = 40.",
+   "es": "(3 × 2) × 5 = 3 × (2 × 5) = 30 · (4 × 2) × 3 = 4 × (2 × 3) = 24 · (5 × 2) × 4 = 10 × 4 = 40"
+  },
+  {
+   "emoji": "💡",
+   "en": "Trick: group the easy friends first. 2 × 5 × 7: (2 × 5) × 7 = 10 × 7 = 70.",
+   "es": "Truco: junta primero los números fáciles. 2 × 5 × 7 = (2 × 5) × 7 = 10 × 7 = 70"
+  },
+  {
+   "emoji": "🟨",
+   "en": "PART 3: Zero and Identity Properties",
+   "es": "PARTE 3: Propiedad del cero y de identidad (ai-DÉN-ti-ti)"
+  },
+  {
+   "emoji": "0️⃣",
+   "en": "Zero Property: any number × 0 = 0. 9 × 0 = 0.",
+   "es": "Cualquier número × 0 = 0 (cero). 9 × 0 = 0"
+  },
+  {
+   "emoji": "1️⃣",
+   "en": "Identity Property: any number × 1 = the same number. 12 × 1 = 12. 25 × 1 = 25.",
+   "es": "Cualquier número × 1 = ese mismo número. 12 × 1 = 12 · 25 × 1 = 25"
+  },
+  {
+   "emoji": "🚫",
+   "en": "8 × 0 is not 8. It is 0.",
+   "es": "8 × 0 NO es 8: es 0."
+  },
+  {
+   "emoji": "🟧",
+   "en": "PART 4: Distributive Property (break apart)",
+   "es": "PARTE 4: Propiedad distributiva = PARTIR un número (dis-TRÍ-biu-tiv)"
+  },
+  {
+   "emoji": "✂️",
+   "en": "Distributive Property: break apart one factor into easy parts, multiply each part, then add.",
+   "es": "Partes un número en dos fáciles, multiplicas cada parte y SUMAS."
+  },
+  {
+   "emoji": "📘",
+   "en": "Book page 381: 6 × 3 = (4 × 3) + (2 × 3). 4 × 3 = 12, 2 × 3 = 6, and 12 + 6 = 18.",
+   "es": "Libro pág. 381: 6 × 3 = (4 × 3) + (2 × 3) = 12 + 6 = 18"
+  },
+  {
+   "emoji": "✂️",
+   "en": "7 × 4 = (5 × 4) + (2 × 4) = 20 + 8 = 28. 8 × 3 = (5 × 3) + (3 × 3) = 15 + 9 = 24.",
+   "es": "7 × 4 = (5 × 4) + (2 × 4) = 20 + 8 = 28 · 8 × 3 = (5 × 3) + (3 × 3) = 15 + 9 = 24"
+  },
+  {
+   "emoji": "✂️",
+   "en": "9 × 5 = (4 × 5) + (5 × 5) = 20 + 25 = 45. 4 × 6 = (4 × 5) + (4 × 1) = 20 + 4 = 24.",
+   "es": "9 × 5 = (4 × 5) + (5 × 5) = 20 + 25 = 45 · 4 × 6 = (4 × 5) + (4 × 1) = 20 + 4 = 24"
+  },
+  {
+   "emoji": "✂️",
+   "en": "8 × 6 = (8 × 5) + (8 × 1) = 40 + 8 = 48. If 5 × 8 = 40, then 6 × 8 = 40 + 8 = 48.",
+   "es": "8 × 6 = (8 × 5) + (8 × 1) = 40 + 8 = 48 · Si 5 × 8 = 40, entonces 6 × 8 = 40 + 8 = 48"
+  },
+  {
+   "emoji": "✂️",
+   "en": "6 × 7: break 6 into 5 and 1: (5 × 7) + (1 × 7) = 35 + 7 = 42. Never multiply the parts: add them.",
+   "es": "6 × 7 = (5 × 7) + (1 × 7) = 35 + 7 = 42. Las partes se SUMAN, no se multiplican."
+  },
+  {
+   "emoji": "🟪",
+   "en": "PART 5: Times tables to remember",
+   "es": "PARTE 5: Tablas para recordar"
+  },
+  {
+   "emoji": "🍎",
+   "en": "6 × 7 = 42 · 8 × 4 = 32 · 9 × 6 = 54 · 7 × 7 = 49 · 8 × 8 = 64 · 9 × 3 = 27",
+   "es": "6 × 7 = 42 · 8 × 4 = 32 · 9 × 6 = 54 · 7 × 7 = 49 · 8 × 8 = 64 · 9 × 3 = 27"
+  },
+  {
+   "emoji": "🛒",
+   "en": "Story: 4 bags with 6 apples and 2 more bags with 6 apples: 4 × 6 = 24, 2 × 6 = 12, and 24 + 12 = 36 apples.",
+   "es": "Problema: 4 bolsas con 6 manzanas y 2 bolsas más: 4 × 6 = 24 · 2 × 6 = 12 · 24 + 12 = 36 manzanas"
+  },
+  {
+   "emoji": "🖍️",
+   "en": "Story: 3 boxes with 4 crayons each: 3 × 4 = 12 crayons. 4 boxes with 3 crayons each: 4 × 3 = 12 too (commutative!).",
+   "es": "3 cajas con 4 crayones: 3 × 4 = 12 · 4 cajas con 3: 4 × 3 = 12 también"
+  }
+ ],
+ "preguntas": [
+  {
+   "id": "mp1",
+   "subtema": "commutative",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Which equation shows the Commutative Property?",
+   "pregunta_es": "¿Cuál ecuación muestra la propiedad conmutativa?",
+   "explicacion_es": "Conmutativa = cambias el ORDEN: 4 × 6 = 6 × 4 = 24.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "4 × 6 = 6 × 4",
+    "4 × 6 = 4 + 6",
+    "4 × 6 = 6 + 4",
+    "4 × 6 = 4 × 4 × 6"
+   ],
+   "correcta": "4 × 6 = 6 × 4"
+  },
+  {
+   "id": "mp2",
+   "subtema": "commutative",
+   "tipo": "completar",
+   "pregunta_en": "5 × 3 = ______ × 5",
+   "pregunta_es": "5 × 3 = ______ × 5",
+   "explicacion_es": "Cambias el orden: 5 × 3 = 3 × 5 = 15.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "3",
+   "aceptadas": [
+    "3"
+   ]
+  },
+  {
+   "id": "mp3",
+   "subtema": "commutative",
+   "tipo": "completar",
+   "pregunta_en": "7 × 8 = 8 × ______",
+   "pregunta_es": "7 × 8 = 8 × ______",
+   "explicacion_es": "7 × 8 = 8 × 7 = 56.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "7",
+   "aceptadas": [
+    "7"
+   ]
+  },
+  {
+   "id": "mp4",
+   "subtema": "commutative",
+   "tipo": "completar",
+   "pregunta_en": "9 × 4 = 4 × ______",
+   "pregunta_es": "9 × 4 = 4 × ______",
+   "explicacion_es": "9 × 4 = 4 × 9 = 36.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "9",
+   "aceptadas": [
+    "9"
+   ]
+  },
+  {
+   "id": "mp5",
+   "subtema": "commutative",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "6 × 2 = 2 × 6",
+   "pregunta_es": "6 × 2 = 2 × 6",
+   "explicacion_es": "Verdadero: 6 × 2 = 2 × 6 = 12. El orden no cambia el resultado.",
+   "instruccion_es": "¿Es verdadero o falso?",
+   "correcta": true
+  },
+  {
+   "id": "mp6",
+   "subtema": "commutative",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "If 5 × 7 = 35, then 7 × 5 = 35.",
+   "pregunta_es": "Si 5 × 7 = 35, entonces 7 × 5 = 35.",
+   "explicacion_es": "Verdadero: 5 × 7 = 7 × 5 = 35 (conmutativa).",
+   "instruccion_es": "¿Es verdadero o falso?",
+   "correcta": true
+  },
+  {
+   "id": "mp7",
+   "subtema": "commutative",
+   "tipo": "completar",
+   "pregunta_en": "In 5 × ☐ = ☐ × 5, put 4 in both boxes. Then 5 × 4 = ______",
+   "pregunta_es": "En 5 × ☐ = ☐ × 5, pon 4 en las dos cajas. Entonces 5 × 4 = ______",
+   "explicacion_es": "5 × 4 = 20 y 4 × 5 = 20. Con cualquier número en las dos cajas se cumple (libro pág. 381).",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "20",
+   "aceptadas": [
+    "20"
+   ]
+  },
+  {
+   "id": "mp8",
+   "subtema": "commutative",
+   "tipo": "unir",
+   "pregunta_en": "Match the equal pairs.",
+   "pregunta_es": "Une las parejas iguales.",
+   "explicacion_es": "Las parejas tienen los mismos números en otro orden.",
+   "instruccion_es": "Une cada multiplicación con su pareja.",
+   "pares": [
+    {
+     "izquierda": "4 × 6",
+     "derecha": "6 × 4"
+    },
+    {
+     "izquierda": "3 × 9",
+     "derecha": "9 × 3"
+    },
+    {
+     "izquierda": "7 × 2",
+     "derecha": "2 × 7"
+    },
+    {
+     "izquierda": "5 × 8",
+     "derecha": "8 × 5"
+    }
+   ]
+  },
+  {
+   "id": "mp9",
+   "subtema": "commutative",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Which number makes it true? 8 × ☐ = 6 × 8",
+   "pregunta_es": "¿Qué número hace que sea verdad? 8 × ☐ = 6 × 8",
+   "explicacion_es": "Cambias el orden: 6 × 8 = 8 × 6. Va el 6.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "6",
+    "8",
+    "48",
+    "14"
+   ],
+   "correcta": "6"
+  },
+  {
+   "id": "mp10",
+   "subtema": "commutative",
+   "tipo": "completar",
+   "pregunta_en": "3 × 7 = 7 × 3 = ______",
+   "pregunta_es": "3 × 7 = 7 × 3 = ______",
+   "explicacion_es": "3 × 7 = 21 y 7 × 3 = 21.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "21",
+   "aceptadas": [
+    "21"
+   ]
+  },
+  {
+   "id": "ma1",
+   "subtema": "associative",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Which equation shows the Associative Property?",
+   "pregunta_es": "¿Cuál ecuación muestra la propiedad asociativa?",
+   "explicacion_es": "Asociativa = cambias los GRUPOS (paréntesis).",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "(2 × 3) × 4 = 2 × (3 × 4)",
+    "2 × 3 = 3 × 2",
+    "2 × 0 = 0",
+    "2 × 1 = 2"
+   ],
+   "correcta": "(2 × 3) × 4 = 2 × (3 × 4)"
+  },
+  {
+   "id": "ma2",
+   "subtema": "associative",
+   "tipo": "completar",
+   "pregunta_en": "(2 × 3) × 4: 2 × 3 = 6, and 6 × 4 = ______",
+   "pregunta_es": "(2 × 3) × 4: 2 × 3 = 6 y 6 × 4 = ______",
+   "explicacion_es": "6 × 4 = 24.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "24",
+   "aceptadas": [
+    "24"
+   ]
+  },
+  {
+   "id": "ma3",
+   "subtema": "associative",
+   "tipo": "completar",
+   "pregunta_en": "2 × (3 × 4): 3 × 4 = 12, and 2 × 12 = ______",
+   "pregunta_es": "2 × (3 × 4): 3 × 4 = 12 y 2 × 12 = ______",
+   "explicacion_es": "2 × 12 = 24. ¡Igual que con el otro grupo!",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "24",
+   "aceptadas": [
+    "24"
+   ]
+  },
+  {
+   "id": "ma4",
+   "subtema": "associative",
+   "tipo": "completar",
+   "pregunta_en": "(3 × 2) × 5 = 3 × (2 × ______)",
+   "pregunta_es": "(3 × 2) × 5 = 3 × (2 × ______)",
+   "explicacion_es": "Los mismos números (3, 2 y 5), en el mismo orden, con otro grupo: 3 × (2 × 5) = 30.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "5",
+   "aceptadas": [
+    "5"
+   ]
+  },
+  {
+   "id": "ma5",
+   "subtema": "associative",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "(4 × 2) × 3 = 4 × (2 × 3)",
+   "pregunta_es": "(4 × 2) × 3 = 4 × (2 × 3)",
+   "explicacion_es": "Verdadero: los dos dan 24.",
+   "instruccion_es": "¿Es verdadero o falso?",
+   "correcta": true
+  },
+  {
+   "id": "ma6",
+   "subtema": "associative",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What does the Associative Property let you change?",
+   "pregunta_es": "¿Qué te deja cambiar la propiedad asociativa?",
+   "explicacion_es": "Cambia cómo agrupas los factores con paréntesis.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "How you group the factors with parentheses",
+    "The order of the factors",
+    "The product to zero",
+    "Multiplication to addition"
+   ],
+   "correcta": "How you group the factors with parentheses"
+  },
+  {
+   "id": "ma7",
+   "subtema": "associative",
+   "tipo": "completar",
+   "pregunta_en": "(5 × 2) × 4: 5 × 2 = 10, and 10 × 4 = ______",
+   "pregunta_es": "(5 × 2) × 4: 5 × 2 = 10 y 10 × 4 = ______",
+   "explicacion_es": "10 × 4 = 40.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "40",
+   "aceptadas": [
+    "40"
+   ]
+  },
+  {
+   "id": "ma8",
+   "subtema": "associative",
+   "tipo": "completar",
+   "pregunta_en": "2 × 5 × 7: (2 × 5) × 7 = 10 × 7 = ______",
+   "pregunta_es": "2 × 5 × 7: (2 × 5) × 7 = 10 × 7 = ______",
+   "explicacion_es": "Junta primero 2 × 5 = 10 (es fácil) y luego 10 × 7 = 70.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "70",
+   "aceptadas": [
+    "70"
+   ]
+  },
+  {
+   "id": "mz1",
+   "subtema": "zero_identity",
+   "tipo": "completar",
+   "pregunta_en": "9 × 0 = ______",
+   "pregunta_es": "9 × 0 = ______",
+   "explicacion_es": "Cualquier número × 0 = 0.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "0",
+   "aceptadas": [
+    "0"
+   ]
+  },
+  {
+   "id": "mz2",
+   "subtema": "zero_identity",
+   "tipo": "completar",
+   "pregunta_en": "12 × 1 = ______",
+   "pregunta_es": "12 × 1 = ______",
+   "explicacion_es": "Cualquier número × 1 es el mismo número: 12.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "12",
+   "aceptadas": [
+    "12"
+   ]
+  },
+  {
+   "id": "mz3",
+   "subtema": "zero_identity",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "8 × 0 = 8",
+   "pregunta_es": "8 × 0 = 8",
+   "explicacion_es": "Falso: 8 × 0 = 0. 8 grupos de nada es nada.",
+   "instruccion_es": "¿Es verdadero o falso?",
+   "correcta": false
+  },
+  {
+   "id": "mz4",
+   "subtema": "zero_identity",
+   "tipo": "completar",
+   "pregunta_en": "______ × 1 = 25",
+   "pregunta_es": "______ × 1 = 25",
+   "explicacion_es": "Por 1 queda el mismo número: 25 × 1 = 25.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "25",
+   "aceptadas": [
+    "25"
+   ]
+  },
+  {
+   "id": "mz5",
+   "subtema": "zero_identity",
+   "tipo": "unir",
+   "pregunta_en": "Match the property with what it says.",
+   "pregunta_es": "Une cada propiedad con lo que dice.",
+   "explicacion_es": "Cada propiedad tiene su regla.",
+   "instruccion_es": "Une cada propiedad con su regla.",
+   "pares": [
+    {
+     "izquierda": "Zero Property",
+     "derecha": "any number × 0 = 0"
+    },
+    {
+     "izquierda": "Identity Property",
+     "derecha": "any number × 1 = the same number"
+    },
+    {
+     "izquierda": "Commutative Property",
+     "derecha": "change the order, same product"
+    },
+    {
+     "izquierda": "Associative Property",
+     "derecha": "change the groups, same product"
+    }
+   ]
+  },
+  {
+   "id": "mz6",
+   "subtema": "zero_identity",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Which one shows the Identity Property?",
+   "pregunta_es": "¿Cuál muestra la propiedad de identidad?",
+   "explicacion_es": "Identidad = × 1 y queda igual.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "12 × 1 = 12",
+    "12 × 0 = 0",
+    "12 × 2 = 2 × 12",
+    "(12 × 1) × 2 = 12 × (1 × 2)"
+   ],
+   "correcta": "12 × 1 = 12"
+  },
+  {
+   "id": "md1",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "6 × 3 = 4 × 3 + 2 × 3. 4 × 3 = 12, 2 × 3 = 6. Then 12 + 6 = ______",
+   "pregunta_es": "6 × 3 = 4 × 3 + 2 × 3. 4 × 3 = 12 y 2 × 3 = 6. Entonces 12 + 6 = ______",
+   "explicacion_es": "12 + 6 = 18, y 6 × 3 = 18 (libro pág. 381).",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "18",
+   "aceptadas": [
+    "18"
+   ]
+  },
+  {
+   "id": "md2",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "7 × 4 = (5 × 4) + (2 × 4) = 20 + ______ = 28",
+   "pregunta_es": "7 × 4 = (5 × 4) + (2 × 4) = 20 + ______ = 28",
+   "explicacion_es": "2 × 4 = 8, y 20 + 8 = 28.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "8",
+   "aceptadas": [
+    "8"
+   ]
+  },
+  {
+   "id": "md3",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "8 × 3 = (5 × 3) + (3 × 3) = 15 + ______ = 24",
+   "pregunta_es": "8 × 3 = (5 × 3) + (3 × 3) = 15 + ______ = 24",
+   "explicacion_es": "3 × 3 = 9, y 15 + 9 = 24.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "9",
+   "aceptadas": [
+    "9"
+   ]
+  },
+  {
+   "id": "md4",
+   "subtema": "distributive",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Which shows how to break apart 6 × 7?",
+   "pregunta_es": "¿Cuál muestra cómo partir 6 × 7?",
+   "explicacion_es": "Partes el 6 en 5 y 1, multiplicas cada parte por 7 y SUMAS: 35 + 7 = 42.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "(5 × 7) + (1 × 7)",
+    "(5 × 7) × (1 × 7)",
+    "5 + 7 + 1 + 7",
+    "6 + 7"
+   ],
+   "correcta": "(5 × 7) + (1 × 7)"
+  },
+  {
+   "id": "md5",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "9 × 5 = (4 × 5) + (______ × 5)",
+   "pregunta_es": "9 × 5 = (4 × 5) + (______ × 5)",
+   "explicacion_es": "9 = 4 + 5. Entonces 9 × 5 = (4 × 5) + (5 × 5) = 20 + 25 = 45.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "5",
+   "aceptadas": [
+    "5"
+   ]
+  },
+  {
+   "id": "md6",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "4 × 6 = (4 × 5) + (4 × 1) = 20 + ______ = 24",
+   "pregunta_es": "4 × 6 = (4 × 5) + (4 × 1) = 20 + ______ = 24",
+   "explicacion_es": "4 × 1 = 4, y 20 + 4 = 24.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "4",
+   "aceptadas": [
+    "4"
+   ]
+  },
+  {
+   "id": "md7",
+   "subtema": "distributive",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "6 × 3 = (4 × 3) + (2 × 3)",
+   "pregunta_es": "6 × 3 = (4 × 3) + (2 × 3)",
+   "explicacion_es": "Verdadero: 12 + 6 = 18 y 6 × 3 = 18.",
+   "instruccion_es": "¿Es verdadero o falso?",
+   "correcta": true
+  },
+  {
+   "id": "md8",
+   "subtema": "distributive",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "6 × 3 = (4 × 3) × (2 × 3)",
+   "pregunta_es": "6 × 3 = (4 × 3) × (2 × 3)",
+   "explicacion_es": "Falso: las partes se SUMAN, no se multiplican. 12 × 6 = 72, no 18.",
+   "instruccion_es": "¿Es verdadero o falso?",
+   "correcta": false
+  },
+  {
+   "id": "md9",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "8 × 6 = (8 × 5) + (8 × 1) = 40 + ______ = 48",
+   "pregunta_es": "8 × 6 = (8 × 5) + (8 × 1) = 40 + ______ = 48",
+   "explicacion_es": "8 × 1 = 8, y 40 + 8 = 48.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "8",
+   "aceptadas": [
+    "8"
+   ]
+  },
+  {
+   "id": "md10",
+   "subtema": "distributive",
+   "tipo": "completar",
+   "pregunta_en": "If 5 × 8 = 40, then 6 × 8 = 40 + ______ = 48",
+   "pregunta_es": "Si 5 × 8 = 40, entonces 6 × 8 = 40 + ______ = 48",
+   "explicacion_es": "Un grupo más de 8: 40 + 8 = 48.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "8",
+   "aceptadas": [
+    "8"
+   ]
+  },
+  {
+   "id": "mt1",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "6 × 7 = ______",
+   "pregunta_es": "6 × 7 = ______",
+   "explicacion_es": "6 × 7 = 42.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "42",
+   "aceptadas": [
+    "42"
+   ]
+  },
+  {
+   "id": "mt2",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "8 × 4 = ______",
+   "pregunta_es": "8 × 4 = ______",
+   "explicacion_es": "8 × 4 = 32.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "32",
+   "aceptadas": [
+    "32"
+   ]
+  },
+  {
+   "id": "mt3",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "9 × 6 = ______",
+   "pregunta_es": "9 × 6 = ______",
+   "explicacion_es": "9 × 6 = 54.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "54",
+   "aceptadas": [
+    "54"
+   ]
+  },
+  {
+   "id": "mt4",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "7 × 7 = ______",
+   "pregunta_es": "7 × 7 = ______",
+   "explicacion_es": "7 × 7 = 49.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "49",
+   "aceptadas": [
+    "49"
+   ]
+  },
+  {
+   "id": "mt5",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "8 × 8 = ______",
+   "pregunta_es": "8 × 8 = ______",
+   "explicacion_es": "8 × 8 = 64.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "64",
+   "aceptadas": [
+    "64"
+   ]
+  },
+  {
+   "id": "mt6",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "9 × 3 = ______",
+   "pregunta_es": "9 × 3 = ______",
+   "explicacion_es": "9 × 3 = 27.",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "27",
+   "aceptadas": [
+    "27"
+   ]
+  },
+  {
+   "id": "mt7",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "4 bags have 6 apples each and 2 more bags have 6 apples each. 4 × 6 = 24, 2 × 6 = 12. How many apples in all? ______",
+   "pregunta_es": "4 bolsas tienen 6 manzanas cada una y 2 bolsas más tienen 6 cada una. 4 × 6 = 24 y 2 × 6 = 12. ¿Cuántas manzanas hay en total? ______",
+   "explicacion_es": "24 + 12 = 36 manzanas. (También 6 bolsas × 6 = 36).",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "36",
+   "aceptadas": [
+    "36"
+   ]
+  },
+  {
+   "id": "mt8",
+   "subtema": "tables",
+   "tipo": "completar",
+   "pregunta_en": "3 boxes have 4 crayons each. How many crayons? 3 × 4 = ______",
+   "pregunta_es": "3 cajas tienen 4 crayones cada una. ¿Cuántos crayones hay? 3 × 4 = ______",
+   "explicacion_es": "3 × 4 = 12. Y 4 cajas con 3 crayones también son 12 (conmutativa).",
+   "instruccion_es": "Escribe el número que falta.",
+   "respuesta": "12",
+   "aceptadas": [
+    "12"
+   ]
+  },
+  {
+   "id": "mt9",
+   "subtema": "tables",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "A group of 3 friends each has 5 stickers. Which equation finds all the stickers?",
+   "pregunta_es": "3 amigos tienen 5 stickers cada uno. ¿Cuál ecuación encuentra todos los stickers?",
+   "explicacion_es": "Grupos iguales = multiplicar: 3 × 5 = 15 stickers.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+   "opciones": [
+    "3 × 5",
+    "3 + 5",
+    "5 − 3",
+    "3 × 3"
+   ],
+   "correcta": "3 × 5"
+  }
+ ],
+ "vocabulario": [
+  {
+   "en": "commutative property",
+   "es": "propiedad conmutativa (cambia el orden)",
+   "aceptadas": [
+    "conmutativa",
+    "cambia el orden",
+    "propiedad conmutativa"
+   ],
+   "ejemplo_en": "4 × 6 = 6 × 4",
+   "ejemplo_es": "Cambio el orden y da igual."
+  },
+  {
+   "en": "associative property",
+   "es": "propiedad asociativa (cambia los grupos)",
+   "aceptadas": [
+    "asociativa",
+    "cambia los grupos",
+    "propiedad asociativa"
+   ],
+   "ejemplo_en": "(2 × 3) × 4 = 2 × (3 × 4)",
+   "ejemplo_es": "Cambio los paréntesis y da igual."
+  },
+  {
+   "en": "identity property",
+   "es": "propiedad de identidad (× 1)",
+   "aceptadas": [
+    "identidad",
+    "por 1",
+    "propiedad de identidad"
+   ],
+   "ejemplo_en": "12 × 1 = 12",
+   "ejemplo_es": "Por 1 queda igual."
+  },
+  {
+   "en": "zero property",
+   "es": "propiedad del cero (× 0)",
+   "aceptadas": [
+    "cero",
+    "por 0",
+    "propiedad del cero"
+   ],
+   "ejemplo_en": "9 × 0 = 0",
+   "ejemplo_es": "Por 0 da 0."
+  },
+  {
+   "en": "distributive property",
+   "es": "propiedad distributiva (partir)",
+   "aceptadas": [
+    "distributiva",
+    "partir",
+    "propiedad distributiva"
+   ],
+   "ejemplo_en": "6 × 3 = (4 × 3) + (2 × 3)",
+   "ejemplo_es": "Parto el 6 en 4 y 2."
+  },
+  {
+   "en": "product",
+   "es": "producto (el resultado)",
+   "aceptadas": [
+    "producto",
+    "resultado"
+   ],
+   "ejemplo_en": "The product of 3 and 4 is 12.",
+   "ejemplo_es": "El producto de 3 y 4 es 12."
+  },
+  {
+   "en": "factor",
+   "es": "factor (número que se multiplica)",
+   "aceptadas": [
+    "factor",
+    "número que se multiplica"
+   ],
+   "ejemplo_en": "3 and 4 are factors.",
+   "ejemplo_es": "3 y 4 son factores."
+  },
+  {
+   "en": "equation",
+   "es": "ecuación",
+   "aceptadas": [
+    "ecuacion",
+    "ecuación"
+   ],
+   "ejemplo_en": "6 × 3 = 18 is an equation.",
+   "ejemplo_es": "6 × 3 = 18 es una ecuación."
+  },
+  {
+   "en": "parentheses",
+   "es": "paréntesis",
+   "aceptadas": [
+    "parentesis",
+    "paréntesis"
+   ],
+   "ejemplo_en": "(2 × 3) × 4",
+   "ejemplo_es": "Lo de adentro se hace primero."
+  },
+  {
+   "en": "break apart",
+   "es": "partir, separar",
+   "aceptadas": [
+    "partir",
+    "separar"
+   ],
+   "ejemplo_en": "Break apart 6 into 4 and 2.",
+   "ejemplo_es": "Parto el 6 en 4 y 2."
+  }
+ ],
+ "lecciones": [
+  {
+   "subtema": "commutative",
+   "emoji": "🔄",
+   "titulo": "Conmutativa: cambio el orden",
+   "pasos": [
+    "Conmutativa suena a «conmutar» = cambiar de lugar.",
+    "Si cambias de lugar los dos números, el resultado no cambia: 4 × 6 = 6 × 4.",
+    "Dibújalo: 4 filas de 6 puntos son lo mismo que 6 filas de 4 puntos."
+   ],
+   "ejemplo": "5 × 3 = 3 × 5 = 15",
+   "truco": "Conmutativa = cambio de ORDEN."
+  },
+  {
+   "subtema": "associative",
+   "emoji": "🧺",
+   "titulo": "Asociativa: cambio los grupos",
+   "pasos": [
+    "Con 3 números, tú escoges cuáles van juntos en el paréntesis.",
+    "Los números siguen en el mismo orden; solo cambia el paréntesis.",
+    "Junta primero los fáciles: 2 × 5 = 10."
+   ],
+   "ejemplo": "(2 × 3) × 4 = 2 × (3 × 4) = 24",
+   "truco": "Asociativa = cambio de GRUPO (asocio amigos)."
+  },
+  {
+   "subtema": "zero_identity",
+   "emoji": "0️⃣",
+   "titulo": "Por 0 y por 1",
+   "pasos": [
+    "× 0: tienes grupos de nada. Siempre da 0.",
+    "× 1: tienes un solo grupo. Queda el mismo número."
+   ],
+   "ejemplo": "9 × 0 = 0 y 12 × 1 = 12",
+   "truco": "Con el 0 desaparece; con el 1 se queda igual."
+  },
+  {
+   "subtema": "distributive",
+   "emoji": "✂️",
+   "titulo": "Distributiva: parto y sumo",
+   "pasos": [
+    "Parte un número difícil en dos fáciles (6 = 4 + 2).",
+    "Multiplica cada parte por el otro número: 4 × 3 = 12 y 2 × 3 = 6.",
+    "SUMA los resultados: 12 + 6 = 18."
+   ],
+   "ejemplo": "6 × 3 = (4 × 3) + (2 × 3) = 12 + 6 = 18",
+   "truco": "Parto, multiplico, SUMO. Nunca multiplico las partes."
+  },
+  {
+   "subtema": "tables",
+   "emoji": "🧠",
+   "titulo": "Nunca en blanco / revisa antes de entregar",
+   "pasos": [
+    "Si no sabes la tabla, usa lo que sí sabes: 5 × 8 = 40, entonces 6 × 8 = 40 + 8.",
+    "Escribe SIEMPRE algo: un intento vale más que un espacio vacío.",
+    "Revisa con la propiedad conmutativa: ¿7 × 8 da lo mismo que 8 × 7?"
+   ],
+   "ejemplo": "6 × 8 = 40 + 8 = 48",
+   "truco": "Un espacio en blanco siempre es 0; un intento puede ser un acierto."
+  }
+ ]
+}

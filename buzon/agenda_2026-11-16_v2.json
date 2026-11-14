@@ -1,0 +1,752 @@
+{
+ "tipo": "agenda",
+ "semana": "2026-11-16",
+ "tareas": [
+  {
+   "id": "w47-e01",
+   "materia": "Reading and Conversation",
+   "titulo": "🏋️ Entrenar: Luz Sees the Light",
+   "fecha": "2026-11-14",
+   "entrega": "2026-11-17",
+   "evaluacion": "sumativa y formativa",
+   "tema": "rc-luz-sees-the-light",
+   "en_casa": [
+    "🏋️ Entrenar: leer el resumen con mamá en voz alta y hacer una ronda con ayudas (10 min).",
+    "Estudiar el word bank del cuaderno y los elementos del cuento (personajes, lugar, problema, solución, mensaje)"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Estudio 1 de 3 para el test del martes 17/11 (Unit 1 – Test: Luz Sees the Light). External: Studies the story elements of «Luz Sees the Light» from the notebook and reviews the word bank. Story from pages 82 to 96 from the conversation book #2."
+  },
+  {
+   "id": "w47-e02",
+   "materia": "Español",
+   "titulo": "🏋️ Entrenar + 📝 examen real: la novela del inspector Ramírez",
+   "fecha": "2026-11-14",
+   "entrega": "2026-11-16",
+   "evaluacion": "sumativa",
+   "tema": "es-inspector-ramirez",
+   "en_casa": [
+    "Contarle a mamá la novela en 4 pistas: ¿quién?, ¿dónde?, ¿qué problema hubo?, ¿cómo se resolvió?",
+    "Cuando esté el tema: 🏋️ Entrenar: leer el resumen con mamá en voz alta y hacer una ronda con ayudas (10 min).",
+    "Después 📝 Examen real: ronda completa de 20 preguntas, escribiendo él solo, sin «Ver en español» ni pistas. ¡Nunca dejar una en blanco! 🍀"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Estudio 1 de 2 para la sustentación escrita del lunes 16/11. El tema se activa cuando lleguen las fotos de la novela (ver lista de fotos). Ojo: el tema solo tiene los datos públicos del libro; falta el contenido de la historia (ver lista de fotos)."
+  },
+  {
+   "id": "w47-t01",
+   "materia": "Ciencias Sociales",
+   "titulo": "🗺️ Mi región: Chame (Panamá Oeste) – datos para la Feria",
+   "fecha": "2026-11-14",
+   "entrega": "2026-11-16",
+   "evaluacion": "sumativa",
+   "charla": "soc-feria-region",
+   "en_casa": [
+    "Al salón le tocó Panamá Oeste. Killian expone sobre el distrito de Chame",
+    "Copiar en el cuaderno los datos de «Para copiar» (3 partes cortas)",
+    "Leer en voz alta con mamá. No hace falta material didáctico"
+   ],
+   "detalle": "Unidad 1 – Feria Folclórica. Conocimientos: identifica datos relevantes de la región asignada. Externas: busque información sobre la región asignada para su salón en la feria folclórica y prepare una breve exposición, no es necesario material didáctico. Asignación individual. Internas: I. Recibe instrucciones. D: Realiza presentación. C: Retroalimentación. Observaciones: recuerde llevar su libro, cuaderno y todos sus útiles. (Maestra Yessi Pedroza). Región del salón: Panamá Oeste. Killian prepara el distrito de Chame.",
+   "copiar": {
+    "instrucciones_mama": "Son datos sencillos para que Killian los copie y los diga con sus palabras. Verifiquen con el libro de Sociales o la maestra si ella pidió otro distrito de Panamá Oeste (Arraiján, La Chorrera, Capira, San Carlos). Si es otro, avíseme y lo cambio.",
+    "partes": [
+     {
+      "titulo": "Parte 1: ¿Dónde queda Chame?",
+      "texto": "Chame es un distrito de la provincia de Panamá Oeste.\nQueda cerca de la ciudad de Panamá, con playas y montañas.\nSe fundó el 18 de septiembre de 1855.",
+      "traduccion_es": "Dibuja el mapa de Panamá y marca Panamá Oeste con un círculo.",
+      "dibujo": "Mapa pequeño de Panamá con un círculo en Panamá Oeste"
+     },
+     {
+      "titulo": "Parte 2: Nombre y corregimientos",
+      "texto": "El nombre viene del cacique Chamé.\nCorregimientos: Punta Chame, Nueva Gorgona, Chicá y Sorá.",
+      "traduccion_es": "Cacique = jefe indígena. Corregimiento = parte de un distrito.",
+      "dibujo": "Una corona de cacique"
+     },
+     {
+      "titulo": "Parte 3: Trabajo, fiestas y comida",
+      "texto": "Trabajan en turismo, pesca y agricultura (coco, plátano y piña).\nEn Chicá hay una Feria de las Flores en abril.\nBailan cumbia y tambor. Comen bollos y tamales, y toman chicheme.",
+      "traduccion_es": "Chicheme = bebida de maíz.",
+      "dibujo": "Una flor y una piña"
+     }
+    ]
+   }
+  },
+  {
+   "id": "w47-t02",
+   "materia": "Science",
+   "titulo": "🌦️ Video: qué hace crecer distinto a las plantas (otra vez)",
+   "fecha": "2026-11-14",
+   "entrega": "2026-11-16",
+   "evaluacion": "formativa",
+   "videos": [
+    "w47-v01"
+   ],
+   "tema": "sci-life-cycle-traits",
+   "en_casa": [
+    "Watch the video to understand how environmental factors affect the growth of the organisms. (Mira el video: el sol, el agua y el lugar cambian cómo crece un ser vivo)"
+   ],
+   "detalle": "Unit 4 – Life cycle and traits – Phenomenon activity. Knowledge: identify the different environmental factors. Internal: Beg: watches the phenomenon photo and compares the size of the plants. Mid: investigates why the same type of plants are in different size and what environmental factors affect their growth. End: concludes and feedbacks on the topic. Observations: bring the pencil, eraser, sharpener, student book. (Teacher Theeksha Shetty). Es el mismo video del 11/11."
+  },
+  {
+   "id": "w47-t03",
+   "materia": "Chino Mandarín",
+   "titulo": "🀄 Repasar Lesson 9: Where is the toy",
+   "fecha": "2026-11-14",
+   "entrega": "2026-11-16",
+   "videos": [
+    "w47-v02"
+   ],
+   "en_casa": [
+    "Ver el enlace de repaso de la Lesson 9 (B1L9): orientation in Mandarin"
+   ],
+   "detalle": "Unidad 1 Lesson 9 – Where is the toy. Sub-tema: orientation in Mandarin. Conocimientos: review for B1L9. Internas: Beginning: icebreaker activity – orientation in Mandarin. Teaching: 1. oral presentation 2. review for B1L9. Se repite el viernes 20/11. (Maestra Ting-Yang). Es el mismo enlace de las semanas anteriores."
+  },
+  {
+   "id": "w47-t04",
+   "materia": "Español",
+   "titulo": "📖 Leer la novela «Los enigmas del inspector Ramírez» y llevarla",
+   "fecha": "2026-11-15",
+   "entrega": "2026-11-16",
+   "evaluacion": "sumativa",
+   "tema": "es-inspector-ramirez",
+   "en_casa": [
+    "Lee en casa la novela: «Los enigmas del inspector Ramírez» para realizar la sustentación escrita en clase.",
+    "Meter la novela en la mochila: la necesita en clase"
+   ],
+   "detalle": "Unidad 4 – Canadá – Literatura – Novela «Los enigmas del inspector Ramírez». Conocimientos: realiza sustentación escrita del formal. Externas: lee en casa la novela para realizar sustentación escrita en clase. Internas: Inicio: participa de lluvia de ideas sobre lo leído en la novela. Nudo: desarrolla cada uno de los ítems de la sustentación. Cierre: revisa y entrega la sustentación, para su evaluación sumativa. Observaciones: los estudiantes deben tener a mano la novela. (Maestra Doris Mosquera) Ojo: el tema solo tiene los datos públicos del libro; falta el contenido de la historia (ver lista de fotos)."
+  },
+  {
+   "id": "w47-e03",
+   "materia": "Español",
+   "titulo": "🔁 Repasar mis errores + 📝 examen real: la novela",
+   "fecha": "2026-11-15",
+   "entrega": "2026-11-16",
+   "evaluacion": "sumativa",
+   "tema": "es-inspector-ramirez",
+   "en_casa": [
+    "Corregir las preguntas que falló",
+    "Otra ronda de examen real, escribiendo él solo. ¡Nunca dejar una en blanco! 🍀",
+    "Novela en la mochila"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Día antes de la sustentación escrita del lunes 16/11: repasar solo los errores. Ojo: el tema solo tiene los datos públicos del libro; falta el contenido de la historia (ver lista de fotos)."
+  },
+  {
+   "id": "w47-t05",
+   "materia": "Ciencias Sociales",
+   "titulo": "🎤 Practicar mi exposición de la región",
+   "fecha": "2026-11-15",
+   "entrega": "2026-11-16",
+   "evaluacion": "sumativa",
+   "charla": "soc-feria-region",
+   "en_casa": [
+    "Practicar la exposición en 3 rondas: leyendo, con las pistas de emoji y de memoria",
+    "Exponerle a mamá (¡con voz fuerte y mirando a mamá!)",
+    "Llevar libro, cuaderno y útiles"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Exposición breve e individual de la región asignada (sumativa 16/11). La charla se activa cuando sepamos qué región le tocó."
+  },
+  {
+   "id": "w47-e04",
+   "materia": "Reading and Conversation",
+   "titulo": "📝 Examen real: Luz Sees the Light",
+   "fecha": "2026-11-15",
+   "entrega": "2026-11-17",
+   "evaluacion": "sumativa y formativa",
+   "tema": "rc-luz-sees-the-light",
+   "en_casa": [
+    "📝 Examen real: ronda completa de 20 preguntas, escribiendo él solo, sin «Ver en español» ni pistas. ¡Nunca dejar una en blanco! 🍀"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Estudio 2 de 3 para el test del martes 17/11 (Unit 1 – Test: Luz Sees the Light)."
+  },
+  {
+   "id": "w47-t06",
+   "materia": "Artistic Expressions",
+   "titulo": "🎨 Repasar págs. 37, 61, 65 y 67 + lápices de colores",
+   "fecha": "2026-11-15",
+   "entrega": "2026-11-16",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Review pages 37, 61, 65, 67. (Repasar esas páginas del libro de Artes)",
+    "Lápices de colores en la mochila"
+   ],
+   "detalle": "Unit 3 – Boost up your Knowledge – Topic 3.0 painting technique – Color pencil. Knowledge: to learn about the different arts. External: review pages 37, 61, 65, 67. Internal: Beginning: color the given drawing. Middle: add shading to the drawing. End: explain the figures. Observations: bring color pencil. (Teacher Filomena De Benitez)"
+  },
+  {
+   "id": "w47-e05",
+   "materia": "Reading and Conversation",
+   "titulo": "🔁 Repasar mis errores + 📝 examen real: Luz Sees the Light",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-17",
+   "evaluacion": "sumativa y formativa",
+   "tema": "rc-luz-sees-the-light",
+   "en_casa": [
+    "Corregir las preguntas que falló",
+    "Otra ronda de examen real, escribiendo él solo. ¡Nunca dejar una en blanco! 🍀",
+    "Guardar en la mochila: libro de conversación #2, laptop y útiles"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Día antes del test. Unit 1 Test: Luz Sees the Light. Knowledge: shows understanding of «Luz Sees the Light». Internal: Beg.: reviews the main characters, events, and message. Mid.: completes the test independently. End.: submits the test to the teacher. Observations: textbook, laptop, book #2 and school supplies. (Teacher Meylin Ruíz)"
+  },
+  {
+   "id": "w47-e06",
+   "materia": "Math",
+   "titulo": "🏋️ Entrenar + 📝 examen real: Using Properties to Multiply",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-18",
+   "evaluacion": "sumativa y formativa",
+   "tema": "math-propiedades-mult",
+   "en_casa": [
+    "Cuando esté el tema: 🏋️ Entrenar: leer el resumen con mamá en voz alta y hacer una ronda con ayudas (10 min).",
+    "Después 📝 Examen real: ronda completa de 20 preguntas, escribiendo él solo, sin «Ver en español» ni pistas. ¡Nunca dejar una en blanco! 🍀",
+    "Practicar las tablas de multiplicar 5 minutos (ver tarea del martes)"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Estudio 1 de 2 para el TEST del miércoles 18/11 (Unit 12 – Topic 2: Using Properties to Multiply). El tema se activa cuando lleguen las fotos de la pág. 381 (ver lista de fotos)."
+  },
+  {
+   "id": "w47-t07",
+   "materia": "Math",
+   "titulo": "🎒 Math págs. 497–500 (ya resueltas) + págs. 188–189",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-17",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Continue to apply your knowledge by working from the pages 497 to 500. Volume 2. Remember to bring only your missing pages from Volume 1 pages 188-189."
+   ],
+   "detalle": "Unit 16 Multiplying by tens – Topic 2 – Action Task. Knowledge: learn how multiplying by tens. Internal: Beginning: teacher will explain the importance of multiplying by tens. Middle: students will work in their textbooks. End: students will be applying what is learned. Observations: bring your textbook, device, charger, school supplies, notebook. (Teacher Samedi De Gracia). Son las mismas páginas de las dos semanas anteriores: se dejan resueltas otra vez por si falta algo.",
+   "copiar": {
+    "instrucciones_mama": "Truco: cuenta en DECENAS. $50 = 5 decenas (5 tens). 3 grupos de 5 decenas = 15 decenas = 150. Multiplica sin el cero (3 × 5 = 15) y al final pon el cero (150). El libro deja que Killian ELIJA los números (1, 2 o 3 billetes; grupos de 2 a 9): aquí están resueltos con números fáciles. Si él quiere otros, usen el mismo truco. Que dibuje los billetes en la cuadrícula como en el dibujo.",
+    "partes": [
+     {
+      "titulo": "Pregunta 1 (pág. 497)",
+      "texto": "a. 2 bills of $20\nb. 1 bill of $10\nc. $20 + $20 + $10 = $50",
+      "traduccion_es": "a. 2 billetes de $20\nb. 1 billete de $10\nc. En total tengo $50 (5 decenas)",
+      "dibujo": "Dibuja los 3 billetes en la cuadrícula.",
+      "imagen": "dibujo_math_497_p1.png"
+     },
+     {
+      "titulo": "Pregunta 2 (pág. 498)",
+      "texto": "I choose 3.\n3 groups of $50\n3 × 5 tens = 15 tens\n3 × $50 = $150",
+      "traduccion_es": "Elijo el 3.\n3 grupos de $50\n3 × 5 decenas = 15 decenas\n3 × $50 = $150",
+      "dibujo": "Dibuja 3 grupos de billetes, como en el dibujo.",
+      "imagen": "dibujo_math_498_p2.png"
+     },
+     {
+      "titulo": "Pregunta 3 (pág. 498)",
+      "texto": "I choose 4.\n4 groups of $50\n4 × 5 tens = 20 tens\n4 × $50 = $200",
+      "traduccion_es": "Elijo el 4.\n4 grupos de $50\n4 × 5 decenas = 20 decenas\n4 × $50 = $200",
+      "dibujo": "Dibuja 4 grupos de billetes.",
+      "imagen": "dibujo_math_498_p3.png"
+     },
+     {
+      "titulo": "Pregunta 4 (pág. 499)",
+      "texto": "1 bill of $20\n1 bill of $10\n$20 + $10 = $30",
+      "traduccion_es": "1 billete de $20\n1 billete de $10\nTengo $30 (3 decenas)",
+      "dibujo": "Dibuja los 2 billetes.",
+      "imagen": "dibujo_math_499_p4.png"
+     },
+     {
+      "titulo": "Pregunta 5 (pág. 499)",
+      "texto": "I choose 2.\n2 groups of $30\n2 × 3 tens = 6 tens\n2 × $30 = $60",
+      "traduccion_es": "Elijo el 2.\n2 grupos de $30\n2 × 3 decenas = 6 decenas\n2 × $30 = $60",
+      "dibujo": "Dibuja 2 grupos de billetes.",
+      "imagen": "dibujo_math_499_p5.png"
+     },
+     {
+      "titulo": "Pregunta 6 (pág. 500)",
+      "texto": "I choose 4 groups.\n4 groups of $30\n4 × 3 tens = 12 tens\n4 × $30 = $120",
+      "traduccion_es": "Elijo 4 grupos.\n4 grupos de $30\n4 × 3 decenas = 12 decenas\n4 × $30 = $120",
+      "dibujo": "Dibuja 4 grupos de billetes.",
+      "imagen": "dibujo_math_500_p6.png"
+     },
+     {
+      "titulo": "Pregunta 7 (pág. 500)",
+      "texto": "All my totals end in 0.\nI multiply the groups by the tens.\nThen I write a 0 at the end.\n4 × 3 tens = 12 tens = 120",
+      "traduccion_es": "Todos mis totales terminan en 0.\nMultiplico los grupos por las decenas.\nDespués pongo un 0 al final.\n4 × 3 decenas = 12 decenas = 120"
+     }
+    ]
+   }
+  },
+  {
+   "id": "w47-t08",
+   "materia": "Educación Musical",
+   "titulo": "🎵 Repasar mi presentación de la partitura (si aún no la dio)",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-17",
+   "charla": "mus-plica",
+   "en_casa": [
+    "Students who have not yet given their presentation on the musical score must review the presentation. (Si todavía no ha dado su presentación, repasarla)"
+   ],
+   "detalle": "Unit 7 – Stem Rule – Correct use of the stem in music. Knowledge: identify the correct position of the musical figure. Internal: continue with the oral presentation. (Teacher Paola Ferri). Preguntar si Killian ya dio su presentación; si ya la dio, no hace falta."
+  },
+  {
+   "id": "w47-t09",
+   "materia": "Educación Física",
+   "titulo": "🏊 Preparar el bolso de natación (estilo dorso)",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-17",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Traer implementos de natación: vestido de baño, gorro de piscina y toalla",
+    "Obligatorio cumplir con el uniforme: si no tiene el vestido de baño del colegio, puede usar uno rojo o negro"
+   ],
+   "detalle": "Unidad III – Respiro y mantengo mi dirección – Natación – Dorso – Respiración y orientación. Conocimientos: controla la respiración y la orientación mientras mantiene el cuerpo en posición dorsal. Internas: Inicio: practica flotación dorsal y respiración controlada. Intermedio: realiza recorridos manteniendo dirección, ritmo y respiración. Término: relaja el cuerpo apoyándote en el borde. (Maestra Marisol Plato)"
+  },
+  {
+   "id": "w47-t10",
+   "materia": "Basic Computer Skills",
+   "titulo": "🤖 Seguir con el material de GoSteam (Kubo)",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-17",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Students will continue working on the theoretical material assigned on the GoSteam platform. (Seguir con el material de la plataforma GoSteam)",
+    "Dispositivo bien cargado para mañana 🔋"
+   ],
+   "detalle": "Unit 1 – Kubo the Forest Ranger – Robotic. Knowledge: building and programming. Internal: students will continue to work on building and programming robots during class time. Observations: please bring your devices fully charged. (Teacher Diego Boniche)"
+  },
+  {
+   "id": "w47-t11",
+   "materia": "Math",
+   "titulo": "✖️ Math pág. 381 (revisar) y practicar las tablas",
+   "fecha": "2026-11-17",
+   "entrega": "2026-11-18",
+   "evaluacion": "sumativa y formativa",
+   "tema": "math-propiedades-mult",
+   "en_casa": [
+    "Killian ya hizo la pág. 381 del vol. 2: ¡muy bien! Comparar con «Para copiar»",
+    "PRACTICAR LAS TABLAS de multiplicar (10 minutos): 6, 7, 8 y 9",
+    "Hacer el entrenamiento «Using Properties to Multiply» en la plataforma"
+   ],
+   "detalle": "Unit 12 – Using Properties to Multiply – Topic 2 – TEST. Knowledge: learn the importance of properties in multiplication. Internal: Beginning: teacher will explain the process of the test. Middle: students will work in their assessment. End: students will be submitting their test to the teacher. Observations: bring your textbook, device, charger, school supplies, notebook. (Teacher Samedi De Gracia). Foto de la pág. 381 recibida: ya está hecha (5 × 5 = 5 × 5 y 6 × 3 = 4 × 3 + 2 × 3). La agenda marcó Sumativa y Formativa.",
+   "copiar": {
+    "instrucciones_mama": "Killian ya hizo esta página. Solo comparen. En la pregunta 1, cualquier número en la casilla sirve: la conmutativa dice que cambiar el orden no cambia el resultado. En la 2, 6 × 3 se parte en 4 × 3 + 2 × 3 (propiedad distributiva): 12 + 6 = 18.",
+    "partes": [
+     {
+      "titulo": "Pregunta 1 (pág. 381)",
+      "texto": "5 × 5 = 5 × 5 → 25 = 25\n5 × 4 = 4 × 5 → 20 = 20\nNo importa el número: si cambio el orden, el resultado es igual.",
+      "traduccion_es": "Propiedad conmutativa: cambiar el orden no cambia el resultado.",
+      "imagen": "dibujo_math_381_p1.png"
+     },
+     {
+      "titulo": "Pregunta 2 (pág. 381)",
+      "texto": "6 × 3 = 4 × 3 + 2 × 3\n18 = 12 + 6\n18 = 18",
+      "traduccion_es": "Propiedad distributiva: parto el 6 en 4 y 2.",
+      "imagen": "dibujo_math_381_p2.png"
+     }
+    ]
+   }
+  },
+  {
+   "id": "w47-e07",
+   "materia": "Math",
+   "titulo": "🔁 Repasar mis errores + 📝 examen real: Using Properties to Multiply",
+   "fecha": "2026-11-17",
+   "entrega": "2026-11-18",
+   "evaluacion": "sumativa y formativa",
+   "tema": "math-propiedades-mult",
+   "en_casa": [
+    "Corregir las preguntas que falló",
+    "Otra ronda de examen real, escribiendo él solo. ¡Nunca dejar una en blanco! 🍀",
+    "Guardar en la mochila libro, dispositivo, cargador y útiles"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Día antes del TEST del miércoles 18/11: repasar solo los errores."
+  },
+  {
+   "id": "w47-t12",
+   "materia": "Español",
+   "titulo": "🎤 Practicar la presentación de mi anuncio",
+   "fecha": "2026-11-16",
+   "entrega": "2026-11-18",
+   "evaluacion": "sumativa",
+   "charla": "es-mi-anuncio",
+   "en_casa": [
+    "Practicar en 3 rondas: leyendo, con las pistas de emoji y de memoria",
+    "Presentarle su anuncio a mamá (¡voz fuerte y mirando a mamá!)",
+    "Seguir trabajando la plataforma Progrentis hasta la unidad 20"
+   ],
+   "detalle": "Unidad 6 – Canadá – Gramática – Los anuncios publicitarios. Conocimientos: elabora un anuncio publicitario original. Internas: Inicio: participa de una lluvia de ideas sobre el anuncio publicitario y su importancia. Desarrollo: realiza presentación de su anuncio publicitario realizado en clase. Cierre: realiza actividades en el libro de caligrafía. Observaciones: el anuncio ya fue elaborado en clase el jueves 12 de noviembre. (Maestra Doris Mosquera). Charla pendiente: falta ver su anuncio (ver lista de fotos)."
+  },
+  {
+   "id": "w47-t13",
+   "materia": "Español",
+   "titulo": "🧠 Progrentis: seguir hasta la unidad 20",
+   "fecha": "2026-11-17",
+   "entrega": "2026-11-18",
+   "en_casa": [
+    "RECUERDA SEGUIR TRABAJANDO LA PLATAFORMA DE PROGRENTIS HASTA LA UNIDAD 20.",
+    "Libro de caligrafía en la mochila"
+   ],
+   "detalle": "Unidad 6 – Canadá – Gramática – Los anuncios publicitarios. Externas: recuerda seguir trabajando la plataforma de Progrentis hasta la unidad 20. (Maestra Doris Mosquera). También se repite el jueves 19/11."
+  },
+  {
+   "id": "w47-t14",
+   "materia": "Reading and Composition",
+   "titulo": "✍️ Investigar y copiar 3 palabras con il-, -able e -ible",
+   "fecha": "2026-11-17",
+   "entrega": "2026-11-18",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Investigate affixes words il, able, ible and write 3 words for each affix. (Investigar y escribir 3 palabras con cada afijo)",
+    "Device, charger, notebook, textbook y útiles en la mochila"
+   ],
+   "detalle": "Unit 2 – Affixes – Topic 6: Affixes il, able, ible – Class Activity. Knowledge: to improve how affixes are important when writing. External: investigate affixes words il, able, ible and write 3 words for each affix, some example words (illegal, comfortable, visible). Internal: Beg: teacher will explain the importance of the affixes. Mid: students will focus on applying their knowledge for assigned activity. End: students will be writing their words by applying into the board. Observations: bring your device, charger, notebook, textbook, school supplies. (Teacher Samedi De Gracia)",
+   "copiar": {
+    "instrucciones_mama": "Regla: il- significa «no» (legal → illegal = no legal). -able y -ible significan «que se puede» (wash → washable = que se puede lavar; see → visible = que se puede ver). Las 3 palabras de ejemplo que dio la maestra van primero en cada columna (illegal, comfortable, visible). Pronunciación: illegal = i-LÍ-gal, illogical = i-LÓ-yi-cal, illiterate = i-LÍ-te-rat, comfortable = CÓM-for-ta-bol, washable = GUÓ-sha-bol, readable = RÍ-da-bol, visible = VÍ-si-bol, possible = PÓ-si-bol, flexible = FLÉK-si-bol. Que la tabla la haga con regla.",
+    "partes": [
+     {
+      "titulo": "Palabras con il-, -able e -ible",
+      "texto": "il- (not)\nillegal\nillogical\nilliterate\n\n-able (can be)\ncomfortable\nwashable\nreadable\n\n-ible (can be)\nvisible\npossible\nflexible",
+      "traduccion_es": "il- (no)\nilegal\nilógico\nque no sabe leer\n\n-able (que se puede)\ncómodo\nlavable\nlegible (se puede leer)\n\n-ible (que se puede)\nvisible (se puede ver)\nposible\nflexible (se puede doblar)",
+      "dibujo": "Haz una tabla con regla: 3 columnas (il-, -able, -ible) y 3 filas de palabras."
+     },
+     {
+      "titulo": "Tabla para copiar",
+      "tabla": [
+       [
+        "il-",
+        "-able",
+        "-ible"
+       ],
+       [
+        "illegal",
+        "comfortable",
+        "visible"
+       ],
+       [
+        "illogical",
+        "washable",
+        "possible"
+       ],
+       [
+        "illiterate",
+        "readable",
+        "flexible"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "w47-t15",
+   "materia": "Folklore",
+   "titulo": "🤠 Sombrero para el ensayo de la Feria",
+   "fecha": "2026-11-17",
+   "entrega": "2026-11-18",
+   "en_casa": [
+    "Se recomienda traer sombrero los niños y faldón las niñas."
+   ],
+   "detalle": "Unidad 3 – Baile de La Feria Folklórica – Bailes panameños – Bailes tradicionales. Conocimientos: aprende los pasos básicos siguiendo instrucciones. Internas: ensayaremos, preparando el baile de la Feria en el gimnasio. (Maestro Carlos Barrios)"
+  },
+  {
+   "id": "w47-c01",
+   "materia": "Culture and Value",
+   "titulo": "🎤 Poema de Panamá: leerlo 3 veces y entenderlo",
+   "fecha": "2026-11-17",
+   "entrega": "2026-11-20",
+   "evaluacion": "sumativa",
+   "en_casa": [
+    "Studies the poem about Panama. (Estudiar el poema sobre Panamá)",
+    "Nivel 1: entender cada línea (traducción, emoji y gesto)"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Estudio 1 de 3 para la recitación del viernes 20/11. Se estudia con la hoja de papel del colegio (el texto del poema NO va en la plataforma). En la plataforma practica fechas y palabras del tema «Mes de la Patria».",
+   "tema": "cv-poema-panama"
+  },
+  {
+   "id": "w47-t16",
+   "materia": "Español",
+   "titulo": "🔎 Investigar las clases de palabras según su significado",
+   "fecha": "2026-11-18",
+   "entrega": "2026-11-19",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Investiga las diferentes clases de palabras según su significado. Copia la tarea en el cuaderno de Español, para tu participación en clase.",
+    "Recuerda seguir trabajando Progrentis.",
+    "Libro de texto y cuaderno de Español en la mochila"
+   ],
+   "detalle": "Unidad 6 – Canadá – Gramática – Clases de palabras. Conocimientos: reconoce las clases de palabras según su significado. Internas: Inicio: participa de una lluvia de ideas sobre lo investigado. Desarrollo: elabora mapa conceptual sobre las clases de palabras. Cierre: desarrolla taller formativo (FORMATIVA #2 PARA LA LIBRETA DE CALIFICACIONES). Observaciones: traer libro de texto y cuaderno de español. (Maestra Doris Mosquera)",
+   "copiar": {
+    "instrucciones_mama": "Para 3.er grado se trabajan tres clases según el significado: sinónimas, antónimas y homónimas. Si la maestra o el libro tienen otras (por ejemplo parónimas), mándenme la foto de la página y lo ajusto. En la tabla final: una columna por cada dato. Juego sin pantalla: mamá dice una palabra y Killian dice su sinónimo y su antónimo.",
+    "partes": [
+     {
+      "titulo": "1. Palabras sinónimas",
+      "texto": "Las palabras sinónimas son las que tienen un significado igual o parecido.\n\nEjemplos:\nbonito – hermoso\ngrande – enorme\nrápido – veloz\nfeliz – contento",
+      "dibujo": "🎨 Dibuja al lado dos cosas que sean parecidas: una casa grande y una casa enorme."
+     },
+     {
+      "titulo": "2. Palabras antónimas",
+      "texto": "Las palabras antónimas son las que tienen un significado contrario.\n\nEjemplos:\ngrande – pequeño\ndía – noche\nalegre – triste\nsubir – bajar"
+     },
+     {
+      "titulo": "3. Palabras homónimas",
+      "texto": "Las palabras homónimas se escriben o suenan igual, pero significan cosas distintas.\n\nEjemplos:\nbanco: asiento / lugar donde se guarda el dinero\ncola: parte de un animal / fila de personas\nsierra: herramienta para cortar / cadena de montañas"
+     },
+     {
+      "titulo": "4. Resumen: mapa de las clases de palabras",
+      "tabla": [
+       [
+        "Clase",
+        "¿Qué significa?",
+        "Ejemplo"
+       ],
+       [
+        "Sinónimas",
+        "significado igual o parecido",
+        "bonito – hermoso"
+       ],
+       [
+        "Antónimas",
+        "significado contrario",
+        "día – noche"
+       ],
+       [
+        "Homónimas",
+        "se escriben igual y significan cosas distintas",
+        "banco (asiento) – banco (dinero)"
+       ]
+      ],
+      "dibujo": "Hazla con regla: 3 columnas y 4 filas."
+     }
+    ]
+   }
+  },
+  {
+   "id": "w47-t17",
+   "materia": "Ciencias Sociales",
+   "titulo": "🎤 Repasar mi exposición de la región",
+   "fecha": "2026-11-18",
+   "entrega": "2026-11-19",
+   "evaluacion": "formativa",
+   "charla": "soc-feria-region",
+   "en_casa": [
+    "Busque información sobre la región asignada para su salón en la feria folclórica y prepare una breve exposición. Asignación individual.",
+    "Libro, cuaderno y útiles en la mochila"
+   ],
+   "detalle": "Unidad 1 – Feria Folclórica. Conocimientos: identifica datos relevantes de la región asignada. Internas: I. Recibe instrucciones. D: Realiza presentación. C: Retroalimentación. Observaciones: recuerde llevar su libro, cuaderno y todos sus útiles. (Maestra Yessi Pedroza). Es la misma exposición del lunes 16/11, esta vez formativa."
+  },
+  {
+   "id": "w47-t18",
+   "materia": "Science",
+   "titulo": "🌱 Video: factores del ambiente que afectan a las plantas",
+   "fecha": "2026-11-18",
+   "entrega": "2026-11-19",
+   "evaluacion": "formativa",
+   "videos": [
+    "w47-v03"
+   ],
+   "tema": "sci-life-cycle-traits",
+   "en_casa": [
+    "Watch the video to understand how environmental factors affects the growth of the organisms. (Mira el video: qué cosas del ambiente cambian cómo crece una planta)",
+    "Lápiz, borrador, sacapuntas y libro de Science"
+   ],
+   "detalle": "Unit 4 – Life cycle and traits – Read about it. Knowledge: identify the different environmental factors. Internal: Beg: starts reading the read about it and finds the important vocabularies. Mid: investigates each vocabulary's meaning and helps them describe it. End: concludes and feedbacks on the topic. (Teacher Theeksha Shetty). El mismo video se pide otra vez el 20/11."
+  },
+  {
+   "id": "w47-c02",
+   "materia": "Culture and Value",
+   "titulo": "🎤 Poema de Panamá: decirlo con pistas y con tono",
+   "fecha": "2026-11-18",
+   "entrega": "2026-11-20",
+   "evaluacion": "sumativa",
+   "en_casa": [
+    "Practicar el poema con las pistas de emoji: ritmo, tono de voz y postura"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Estudio 2 de 3 para la recitación del viernes 20/11.",
+   "tema": "cv-poema-panama"
+  },
+  {
+   "id": "w47-t19",
+   "materia": "Math",
+   "titulo": "✏️ Math págs. 502–503: Multiplying by tens (Your Turn)",
+   "fecha": "2026-11-19",
+   "entrega": "2026-11-20",
+   "evaluacion": "formativa",
+   "en_casa": [
+    "Continue to apply your knowledge by working from the pages 502-503. Volume 2."
+   ],
+   "detalle": "Unit 16 Multiplying by tens – Topic 3 – Your Turn. Knowledge: learn how multiplying by tens. Internal: Beginning: teacher will explain the importance of multiplying by tens. Middle: students will work in their textbooks. End: students will be applying what is learned. Observations: bring your textbook, device, charger, school supplies, notebook. (Teacher Samedi De Gracia). Páginas 502–503 resueltas en «Para copiar».",
+   "copiar": {
+    "instrucciones_mama": "Truco: multiplicar por decenas = multiplicar sin el cero y poner el cero al final. 8 × 60 → 8 × 6 = 48 → 480. En la 4, 5 y 6 el libro pide explicar: aquí hay respuestas cortas para copiar o decirlas con sus palabras. En la 5 puede inventar otra situación.",
+    "partes": [
+     {
+      "titulo": "Pág. 502 – Pregunta 1",
+      "texto": "8 × 60 = 480 → respuesta A\n8 × 6 = 48 y le pongo un cero: 480",
+      "traduccion_es": "¿Cuánto es 8 × 60? Respuesta: 480 (A)."
+     },
+     {
+      "titulo": "Pág. 502 – Pregunta 2",
+      "texto": "2 × 90 = 180\n8 × 30 = 240\n9 × 30 = 270\n5 × 70 = 350 → es mayor que 300 → respuesta D",
+      "traduccion_es": "¿Cuál es mayor que 300? Solo 5 × 70 = 350 (D)."
+     },
+     {
+      "titulo": "Pág. 502 – Pregunta 3",
+      "texto": "3 × 80 = 3 grupos de 8 decenas\n8 decenas + 8 decenas + 8 decenas = 24 decenas\n24 decenas = 240\n3 × 80 = 240",
+      "traduccion_es": "Modelar 3 × 80 con barras de decenas.",
+      "imagen": "dibujo_math_502_p3.png",
+      "dibujo": "Dibuja 3 grupos de 8 barras de 10"
+     },
+     {
+      "titulo": "Pág. 503 – Pregunta 4",
+      "texto": "Sí, es posible.\nEjemplo: 20 × 5 = 100.\nOtro: 30 × 4 = 120.",
+      "traduccion_es": "¿Se puede multiplicar un número de decenas por un número y obtener centenas? Sí."
+     },
+     {
+      "titulo": "Pág. 503 – Pregunta 5",
+      "texto": "4 × 90 = 360\nEjemplo: 4 cajas con 90 crayones cada una. En total hay 360 crayones.",
+      "traduccion_es": "Una situación real para 4 × 90."
+     },
+     {
+      "titulo": "Pág. 503 – Pregunta 6",
+      "texto": "Un número × 30 siempre termina en 0, porque 30 son 3 decenas.\nPor eso no puede terminar en 2.",
+      "traduccion_es": "¿Por qué □ × 30 no puede ser □□2? Porque termina en 0."
+     }
+    ]
+   }
+  },
+  {
+   "id": "w47-c03",
+   "materia": "Culture and Value",
+   "titulo": "🔁 Ensayo final del poema: de memoria",
+   "fecha": "2026-11-19",
+   "entrega": "2026-11-20",
+   "evaluacion": "sumativa",
+   "en_casa": [
+    "Decir el poema de memoria, parado derecho, con voz clara y mirando a mamá",
+    "Cuaderno de Culture and Values en la mochila"
+   ],
+   "detalle": "Plan de estudio «como en el colegio». Día antes de la recitación (20/11). Unit 4 – Patriotic Poem Oral Presentation. Knowledge: recites the poem using proper rhythm, tone, and posture. Internal: Beginning: listens to grading criteria and instructions. Middle: recites the poem in front of the class. Closing: comments on the poem and receives teacher feedback. Observations: brings culture and values notebook. (Teacher Casimira Rodriguez)",
+   "tema": "cv-poema-panama"
+  },
+  {
+   "id": "w47-t20",
+   "materia": "Chino Mandarín",
+   "titulo": "🀄 Repasar otra vez Lesson 9",
+   "fecha": "2026-11-19",
+   "entrega": "2026-11-20",
+   "videos": [
+    "w47-v02"
+   ],
+   "en_casa": [
+    "Ver el enlace de repaso de la Lesson 9 (B1L9)"
+   ],
+   "detalle": "Mismo contenido del lunes 16/11: icebreaker de orientación en mandarín, presentación oral y repaso de B1L9. (Maestra Ting-Yang)"
+  },
+  {
+   "id": "w47-t21",
+   "materia": "Science",
+   "titulo": "🌱 Video otra vez + Literacy station",
+   "fecha": "2026-11-19",
+   "entrega": "2026-11-20",
+   "evaluacion": "formativa",
+   "videos": [
+    "w47-v03"
+   ],
+   "tema": "sci-life-cycle-traits",
+   "en_casa": [
+    "Watch the video to know different environmental factors affects the growth of the plant. (Mira otra vez el video de los factores del ambiente)",
+    "Lápiz, borrador, sacapuntas y libro de Science"
+   ],
+   "detalle": "Unit 4 – Life cycle and traits – Literacy station activity. Knowledge: identify the different environmental factors. Internal: Beg: explains and completes the literacy station activity. Mid: investigates each question given in the text and finds suitable answers. End: checks and makes corrections and writes the conclusions. (Teacher Theeksha Shetty)"
+  }
+ ],
+ "materiales": [
+  {
+   "id": "w47-m01",
+   "materia": "Español",
+   "material": "Novela «Los enigmas del inspector Ramírez» (para la sustentación escrita)",
+   "llevar_el": "2026-11-16"
+  },
+  {
+   "id": "w47-m02",
+   "materia": "Artistic Expressions",
+   "material": "Lápices de colores",
+   "llevar_el": "2026-11-16"
+  },
+  {
+   "id": "w47-m03",
+   "materia": "Educación Física",
+   "material": "Implementos de natación: vestido de baño (el del colegio, o uno rojo o negro), gorro de piscina y toalla",
+   "llevar_el": "2026-11-17"
+  },
+  {
+   "id": "w47-m04",
+   "materia": "Reading and Conversation",
+   "material": "Libro de conversación #2 y laptop para el test «Luz Sees the Light»",
+   "llevar_el": "2026-11-17"
+  },
+  {
+   "id": "w47-m05",
+   "materia": "Math",
+   "material": "Solo las hojas que faltan del libro de Math vol. 1: págs. 188–189",
+   "llevar_el": "2026-11-17"
+  },
+  {
+   "id": "w47-m06",
+   "materia": "Folklore",
+   "material": "Sombrero para el ensayo del baile de la Feria (las niñas, faldón)",
+   "llevar_el": "2026-11-18"
+  },
+  {
+   "id": "w47-m07",
+   "materia": "Español",
+   "material": "Libro de caligrafía",
+   "llevar_el": "2026-11-18"
+  },
+  {
+   "id": "w47-m08",
+   "materia": "Reading and Conversation",
+   "material": "Cuaderno de conversation y útiles",
+   "llevar_el": "2026-11-18"
+  },
+  {
+   "id": "w47-m09",
+   "materia": "Reading and Conversation",
+   "material": "Libro de conversación #2 y laptop",
+   "llevar_el": "2026-11-19"
+  },
+  {
+   "id": "w47-m10",
+   "materia": "Culture and Value",
+   "material": "Cuaderno de Culture and Values (recita el poema)",
+   "llevar_el": "2026-11-20"
+  }
+ ],
+ "videos": [
+  {
+   "id": "w47-v01",
+   "materia": "Science",
+   "titulo": "Factores del ambiente y el crecimiento (el mismo del 11/11)",
+   "url": "https://youtu.be/hb_NNs6Dum4",
+   "fecha": "2026-11-14"
+  },
+  {
+   "id": "w47-v02",
+   "materia": "Chino Mandarín",
+   "titulo": "Lesson 9: Where is the toy (repaso B1L9)",
+   "url": "https://reurl.cc/YmKMVx",
+   "fecha": "2026-11-14"
+  },
+  {
+   "id": "w47-v03",
+   "materia": "Science",
+   "titulo": "Factores del ambiente que afectan el crecimiento de las plantas",
+   "url": "https://youtu.be/rEl9RWk5Pys",
+   "fecha": "2026-11-18"
+  }
+ ],
+ "notas_para_mama": [
+  "14/11 Recibido: región (Panamá Oeste → Chame), pág. 381, págs. 502–503, hoja del poema y organizador de Luz (100/100 ¡felicitaciones!). Faltan: la novela de Español y el producto/eslogan del anuncio.",
+  "16/11 Sumativa: Español – sustentación escrita del formal de la novela «Los enigmas del inspector Ramírez». Llevar la novela. La semana pasada también aparecía una sustentación el 11/11: preguntar a la maestra si esta es la misma que se movió.",
+  "16/11 Sumativa: Ciencias Sociales – exposición individual y breve de la región del salón (Panamá Oeste). Killian prepara Chame. El 19/11 se repite como formativa. Sin material didáctico.",
+  "16/11 Formativas: Science (video, el mismo del 11/11), Artistic Expressions (repasar págs. 37, 61, 65 y 67 y llevar lápices de colores) y Reading and Composition (trabajo en clase de il, able, ible: no hay tarea en casa ese día). Chino sin evaluación.",
+  "17/11 Reading and Conversation: test «Luz Sees the Light» (libro de conversación #2, págs. 82 a 96, elementos del cuento y word bank). La agenda marcó Sumativa y Formativa. Llevar libro #2 y laptop. Este test ya estaba en la agenda del 29/10: preguntar a la maestra si es repetición y pedir foto del examen anterior corregido.",
+  "17/11 Educación Física (formativa): natación, estilo dorso. Llevar vestido de baño (si no tiene el del colegio, rojo o negro), gorro de piscina y toalla. Uniforme obligatorio.",
+  "17/11 Basic Computer Skills (formativa): dispositivo bien cargado; sigue con el material de GoSteam. Educación Musical: si todavía no dio su presentación de la partitura (plica), que la repase; preguntar a la maestra si ya la dio.",
+  "17/11 Math (formativa): piden otra vez las págs. 497–500 del vol. 2 (es la 3.ª semana seguida) y las págs. 188–189 del vol. 1 que falten. Están resueltas en «Para copiar». Preguntar a la maestra si falta algo o es error de la agenda.",
+  "18/11 Sumativa y formativa (la agenda marcó las dos): Math – TEST «Using Properties to Multiply» (Unit 12, Topic 2). Estudiar el vol. 2, pág. 381, y PRACTICAR LAS TABLAS de multiplicar. Hacen falta fotos para armar el repaso.",
+  "18/11 Sumativa: Español – presenta ante sus compañeros el anuncio que hizo en clase el 12/11 y luego trabaja en el libro de caligrafía (llevarlo). Seguir con Progrentis hasta la unidad 20.",
+  "18/11 Folklore: ensayo del baile de la Feria en el gimnasio. Llevar sombrero (niñas, faldón). Reading and Conversation (formativa): pone al día actividades pendientes; llevar el cuaderno de conversation. Reading and Composition (formativa): investigar 3 palabras con il-, -able e -ible (en «Para copiar»).",
+  "19/11 Español (formativa #2 de la libreta de calificaciones): investigar las clases de palabras según su significado y copiarlas en el cuaderno de Español (están en «Para copiar»); en clase hacen un mapa conceptual y un taller. Seguir con Progrentis.",
+  "19/11 Formativas: Reading and Conversation (review: identificar elementos del cuento; libro #2 y laptop), Ciencias Sociales (otra vez la exposición de la región) y Science (video nuevo y «Read about it»: busca el vocabulario importante).",
+  "20/11 Sumativa: Culture and Value – recita el poema patriótico sobre Panamá con buen ritmo, tono y postura, y luego comenta el poema. Llevar el cuaderno de Culture and Values. Hace falta el texto del poema.",
+  "20/11 Formativas: Math págs. 502–503 del vol. 2 (Your Turn; hacen falta fotos), Science (video y literacy station), Reading and Composition (trabajo en clase). Chino: repasar otra vez la Lesson 9 (mismo enlace).",
+  "16/11 Todos los días: dispositivo, cargador, cuaderno, libros (Reading and Composition vol. 2, Math, Science) y útiles. En Reading and Composition (il, able, ible) el 16 y el 20/11 se trabaja en clase."
+ ]
+}

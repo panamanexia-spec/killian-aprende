@@ -1,0 +1,95 @@
+{
+ "tipo": "charla",
+ "id": "soc-feria-region",
+ "titulo": "Mi exposición: Chame, Panamá Oeste",
+ "materia": "Ciencias Sociales",
+ "idioma": "es",
+ "fecha_entrega": "2026-11-16",
+ "version": 1,
+ "frases": [
+  {
+   "texto": "Buenos días. Me llamo Killian.",
+   "es": "👋 Buenos días. Me llamo Killian.",
+   "pista": "👋",
+   "gesto": "Saluda con la mano"
+  },
+  {
+   "texto": "A nuestro salón le tocó la región de Panamá Oeste.",
+   "es": "🗺️ A nuestro salón le tocó Panamá Oeste.",
+   "pista": "🗺️",
+   "gesto": "Señala el mapa, al oeste de la capital"
+  },
+  {
+   "texto": "Yo les voy a hablar del distrito de Chame.",
+   "es": "📍 Les voy a hablar de Chame.",
+   "pista": "📍",
+   "gesto": "Pon el dedo en el mapa"
+  },
+  {
+   "texto": "Chame se fundó el 18 de septiembre de 1855.",
+   "es": "📅 Se fundó el 18 de septiembre de 1855.",
+   "pista": "📅",
+   "gesto": "Levanta 1 dedo: ¡fecha importante!"
+  },
+  {
+   "texto": "Su nombre viene de un cacique llamado Chamé, jefe de un pueblo indígena.",
+   "es": "👑 Su nombre viene de un cacique (jefe indígena) llamado Chamé.",
+   "pista": "👑",
+   "gesto": "Pon las manos como una corona"
+  },
+  {
+   "texto": "La capital del distrito es la ciudad de Chame.",
+   "es": "🏛️ La capital es la ciudad de Chame.",
+   "pista": "🏛️",
+   "gesto": "Dibuja un techo con las manos"
+  },
+  {
+   "texto": "Chame tiene playas y montañas, y queda a menos de una hora de la ciudad de Panamá.",
+   "es": "🏖️⛰️ Tiene playas y montañas y queda cerca de la capital.",
+   "pista": "🏖️",
+   "gesto": "Mueve la mano como una ola"
+  },
+  {
+   "texto": "Algunos de sus corregimientos son Punta Chame, Nueva Gorgona, Chicá y Sorá.",
+   "es": "🧭 Corregimientos: Punta Chame, Nueva Gorgona, Chicá y Sorá.",
+   "pista": "🧭",
+   "gesto": "Cuenta con los dedos: 4"
+  },
+  {
+   "texto": "La gente trabaja en el turismo, la pesca y la agricultura, con coco, plátano y piña.",
+   "es": "🥥🍍 Trabajan en turismo, pesca y agricultura.",
+   "pista": "🍍",
+   "gesto": "Haz como que pescas"
+  },
+  {
+   "texto": "En Chicá se celebra la Feria de las Flores en abril.",
+   "es": "🌸 En Chicá hacen la Feria de las Flores en abril.",
+   "pista": "🌸",
+   "gesto": "Huele una flor"
+  },
+  {
+   "texto": "En Chame y San Carlos queman muñecos de Año Viejo para recibir el año nuevo.",
+   "es": "🔥 Queman muñecos de Año Viejo para recibir el año nuevo.",
+   "pista": "🔥",
+   "gesto": "Abre los brazos: ¡año nuevo!"
+  },
+  {
+   "texto": "En Panamá Oeste se bailan la cumbia, el tambor, el gran diablo y el torito galán.",
+   "es": "💃 Bailan la cumbia, el tambor, el gran diablo y el torito.",
+   "pista": "💃",
+   "gesto": "Mueve los pies como bailando"
+  },
+  {
+   "texto": "Algunas comidas típicas son los bollos, los tamales y el chicheme, una bebida de maíz.",
+   "es": "🌽 Comen bollos y tamales, y toman chicheme.",
+   "pista": "🌽",
+   "gesto": "Frota la barriga: ¡rico!"
+  },
+  {
+   "texto": "Gracias por escucharme.",
+   "es": "🙏 ¡Gracias por escucharme!",
+   "pista": "🙏",
+   "gesto": "Haz una reverencia"
+  }
+ ]
+}

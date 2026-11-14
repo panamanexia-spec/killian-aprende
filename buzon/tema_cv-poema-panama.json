@@ -1,0 +1,535 @@
+{
+ "tipo": "tema",
+ "id": "cv-poema-panama",
+ "materia": "Culture and Value",
+ "titulo": "Patriotic Month: dates and words",
+ "titulo_es": "Mes de la Patria: fechas y palabras del poema",
+ "fecha_examen": "2026-11-20",
+ "preguntas_por_ronda": 10,
+ "subtemas": [
+  "fechas",
+  "palabras",
+  "voz"
+ ],
+ "resumen": [
+  {
+   "emoji": "🟦",
+   "en": "PART 1: Dates of Patriotic Month",
+   "es": "PARTE 1: Las fechas del Mes de la Patria 🇵🇦"
+  },
+  {
+   "emoji": "📅",
+   "en": "November 3: Separation from Colombia.",
+   "es": "3 de noviembre: la Separación de Colombia (sé-pa-RÉI-shon)."
+  },
+  {
+   "emoji": "🏳️",
+   "en": "November 4: Flag Day.",
+   "es": "4 de noviembre: el Día de la Bandera (FLAG dei)."
+  },
+  {
+   "emoji": "🦸",
+   "en": "November 5: Colón.",
+   "es": "5 de noviembre: Colón (los héroes de Colón)."
+  },
+  {
+   "emoji": "🗣️",
+   "en": "November 10: First Cry of Independence, in Los Santos.",
+   "es": "10 de noviembre: el Primer Grito de Independencia, en Los Santos (FERST CRÁI of in-di-PÉN-dens)."
+  },
+  {
+   "emoji": "🎉",
+   "en": "November 28: Independence from Spain.",
+   "es": "28 de noviembre: la Independencia de España (in-di-PÉN-dens from SPEIN)."
+  },
+  {
+   "emoji": "🟩",
+   "en": "PART 2: Words and colors",
+   "es": "PARTE 2: Palabras y colores"
+  },
+  {
+   "emoji": "🔴",
+   "en": "The colors of Panama are red, blue and white.",
+   "es": "Los colores de Panamá: rojo (red), azul (blue) y blanco (wáit)."
+  },
+  {
+   "emoji": "💃",
+   "en": "The pollera is a traditional dress.",
+   "es": "La pollera (po-YÉ-ra) es el vestido típico."
+  },
+  {
+   "emoji": "🍲",
+   "en": "Sancocho is a warm soup.",
+   "es": "El sancocho (san-CÓ-cho) es una sopa caliente."
+  },
+  {
+   "emoji": "🕊️",
+   "en": "Freedom means being free.",
+   "es": "Freedom (FRÍ-dom) = libertad."
+  },
+  {
+   "emoji": "😊",
+   "en": "Proud means very happy about something good.",
+   "es": "Proud (PRÁUD) = orgulloso."
+  },
+  {
+   "emoji": "🟨",
+   "en": "PART 3: How to say it",
+   "es": "PARTE 3: Cómo decir el poema"
+  },
+  {
+   "emoji": "🎤",
+   "en": "Say the poem with a clear voice, a happy tone and a straight back.",
+   "es": "Voz clara, tono alegre y espalda derecha."
+  },
+  {
+   "emoji": "👀",
+   "en": "The teacher checks rhythm, tone and posture.",
+   "es": "La maestra mira el ritmo (rhythm), el tono (tone) y la postura (posture): Rhythm, tone and posture."
+  },
+  {
+   "emoji": "⏸️",
+   "en": "Pause at the end of each line and breathe.",
+   "es": "Haz una pausa al final de cada verso y respira."
+  }
+ ],
+ "preguntas": [
+  {
+   "id": "cp1",
+   "subtema": "fechas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What do we remember on November 3?",
+   "pregunta_es": "¿Qué recordamos el 3 de noviembre?",
+   "opciones": [
+    "Separation from Colombia",
+    "Flag Day",
+    "Independence from Spain",
+    "First Cry of Independence"
+   ],
+   "correcta": "Separation from Colombia",
+   "explicacion_es": "El 3 de noviembre de 1903 Panamá se separó de Colombia.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp2",
+   "subtema": "fechas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Flag Day is on November...",
+   "pregunta_es": "El Día de la Bandera es el...",
+   "opciones": [
+    "4",
+    "3",
+    "10",
+    "28"
+   ],
+   "correcta": "4",
+   "explicacion_es": "El 4 de noviembre es el Día de la Bandera.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp3",
+   "subtema": "fechas",
+   "tipo": "completar",
+   "pregunta_en": "November 4 is ______ Day.",
+   "pregunta_es": "El 4 de noviembre es el Día de la ______.",
+   "respuesta": "Flag",
+   "aceptadas": [
+    "flag"
+   ],
+   "explicacion_es": "Flag Day = Día de la Bandera.",
+   "instruccion_es": "Escribe en inglés la palabra que falta."
+  },
+  {
+   "id": "cp4",
+   "subtema": "fechas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "The First Cry of Independence happened in...",
+   "pregunta_es": "El Primer Grito de Independencia fue en...",
+   "opciones": [
+    "Los Santos",
+    "Colón",
+    "Panama City",
+    "David"
+   ],
+   "correcta": "Los Santos",
+   "explicacion_es": "El Primer Grito de Independencia fue en La Villa de Los Santos el 10 de noviembre.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp5",
+   "subtema": "fechas",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Panama became independent from Spain on November...",
+   "pregunta_es": "Panamá se independizó de España el ... de noviembre",
+   "opciones": [
+    "28",
+    "3",
+    "4",
+    "5"
+   ],
+   "correcta": "28",
+   "explicacion_es": "El 28 de noviembre de 1821 Panamá se independizó de España.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp6",
+   "subtema": "fechas",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "Separation from Colombia is on November 28.",
+   "pregunta_es": "La Separación de Colombia es el 28 de noviembre.",
+   "correcta": false,
+   "explicacion_es": "Falso: la Separación de Colombia es el 3 de noviembre. El 28 es la Independencia de España.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "cp7",
+   "subtema": "fechas",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "Colón is remembered on November 5.",
+   "pregunta_es": "A Colón se le recuerda el 5 de noviembre.",
+   "correcta": true,
+   "explicacion_es": "Verdadero: el 5 de noviembre es el día de Colón.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "cp8",
+   "subtema": "fechas",
+   "tipo": "completar",
+   "pregunta_en": "On November 10 we remember the First ______ of Independence.",
+   "pregunta_es": "El 10 de noviembre recordamos el Primer ______ de Independencia.",
+   "respuesta": "Cry",
+   "aceptadas": [
+    "cry"
+   ],
+   "explicacion_es": "First Cry of Independence = Primer Grito de Independencia.",
+   "instruccion_es": "Escribe en inglés la palabra que falta."
+  },
+  {
+   "id": "cp9",
+   "subtema": "fechas",
+   "tipo": "unir",
+   "pregunta_en": "Match the date with what we celebrate.",
+   "pregunta_es": "Une la fecha con lo que celebramos.",
+   "pares": [
+    {
+     "izquierda": "November 3",
+     "derecha": "Separation from Colombia"
+    },
+    {
+     "izquierda": "November 4",
+     "derecha": "Flag Day"
+    },
+    {
+     "izquierda": "November 10",
+     "derecha": "First Cry of Independence"
+    },
+    {
+     "izquierda": "November 28",
+     "derecha": "Independence from Spain"
+    }
+   ],
+   "explicacion_es": "Las cuatro fechas más importantes del Mes de la Patria.",
+   "instruccion_es": "Une cada fecha con su celebración."
+  },
+  {
+   "id": "cp10",
+   "subtema": "palabras",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What are the colors of Panama?",
+   "pregunta_es": "¿Cuáles son los colores de Panamá?",
+   "opciones": [
+    "Red, blue and white",
+    "Green, yellow and black",
+    "Pink, orange and purple",
+    "Gold and silver"
+   ],
+   "correcta": "Red, blue and white",
+   "explicacion_es": "Rojo, azul y blanco, como la bandera.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp11",
+   "subtema": "palabras",
+   "tipo": "completar",
+   "pregunta_en": "Red, ______ and white.",
+   "pregunta_es": "Rojo, ______ y blanco.",
+   "respuesta": "blue",
+   "aceptadas": [
+    "blue"
+   ],
+   "explicacion_es": "Blue = azul.",
+   "instruccion_es": "Escribe en inglés la palabra que falta."
+  },
+  {
+   "id": "cp12",
+   "subtema": "palabras",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What is a pollera?",
+   "pregunta_es": "¿Qué es una pollera?",
+   "opciones": [
+    "A traditional dress",
+    "A soup",
+    "A flag",
+    "A hat"
+   ],
+   "correcta": "A traditional dress",
+   "explicacion_es": "La pollera es el vestido típico de Panamá.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp13",
+   "subtema": "palabras",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What is sancocho?",
+   "pregunta_es": "¿Qué es el sancocho?",
+   "opciones": [
+    "A warm soup",
+    "A dress",
+    "A song",
+    "A dance"
+   ],
+   "correcta": "A warm soup",
+   "explicacion_es": "El sancocho es una sopa caliente típica.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp14",
+   "subtema": "palabras",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What does «proud» mean?",
+   "pregunta_es": "¿Qué significa «proud»?",
+   "opciones": [
+    "Orgulloso",
+    "Triste",
+    "Cansado",
+    "Enojado"
+   ],
+   "correcta": "Orgulloso",
+   "explicacion_es": "Proud = orgulloso: te sientes muy feliz por algo bueno.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp15",
+   "subtema": "palabras",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What does «freedom» mean?",
+   "pregunta_es": "¿Qué significa «freedom»?",
+   "opciones": [
+    "Libertad",
+    "Bandera",
+    "Historia",
+    "Héroe"
+   ],
+   "correcta": "Libertad",
+   "explicacion_es": "Freedom = libertad.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp16",
+   "subtema": "palabras",
+   "tipo": "completar",
+   "pregunta_en": "I feel ______ of my country. (orgulloso)",
+   "pregunta_es": "Me siento ______ de mi país. (orgulloso)",
+   "respuesta": "proud",
+   "aceptadas": [
+    "proud"
+   ],
+   "explicacion_es": "Proud = orgulloso.",
+   "instruccion_es": "Escribe en inglés la palabra que falta."
+  },
+  {
+   "id": "cp17",
+   "subtema": "palabras",
+   "tipo": "completar",
+   "pregunta_en": "______ means libertad.",
+   "pregunta_es": "______ significa libertad.",
+   "respuesta": "Freedom",
+   "aceptadas": [
+    "freedom"
+   ],
+   "explicacion_es": "Freedom = libertad.",
+   "instruccion_es": "Escribe en inglés la palabra que falta."
+  },
+  {
+   "id": "cp18",
+   "subtema": "palabras",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "«Separation» means separarse.",
+   "pregunta_es": "«Separation» significa separación.",
+   "correcta": true,
+   "explicacion_es": "Separation = separación: Panamá se separó de Colombia.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "cp19",
+   "subtema": "palabras",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "Which word means «bandera»?",
+   "pregunta_es": "¿Cuál palabra significa «bandera»?",
+   "opciones": [
+    "Flag",
+    "Freedom",
+    "Proud",
+    "Heroes"
+   ],
+   "correcta": "Flag",
+   "explicacion_es": "Flag = bandera.",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  },
+  {
+   "id": "cp20",
+   "subtema": "voz",
+   "tipo": "verdadero_falso",
+   "pregunta_en": "When we recite, we speak with a clear voice and a straight back.",
+   "pregunta_es": "Al recitar hablamos con voz clara y la espalda derecha.",
+   "correcta": true,
+   "explicacion_es": "Voz clara, tono alegre y postura derecha: lo que mira la maestra.",
+   "instruccion_es": "¿Es verdadero o falso?"
+  },
+  {
+   "id": "cp21",
+   "subtema": "voz",
+   "tipo": "completar",
+   "pregunta_en": "We make a ______ at the end of each line and breathe.",
+   "pregunta_es": "Hacemos una ______ al final de cada verso y respiramos.",
+   "respuesta": "pause",
+   "aceptadas": [
+    "pause"
+   ],
+   "explicacion_es": "Pause = pausa.",
+   "instruccion_es": "Escribe en inglés la palabra que falta."
+  },
+  {
+   "id": "cp22",
+   "subtema": "voz",
+   "tipo": "opcion_multiple",
+   "pregunta_en": "What does the teacher check when you recite?",
+   "pregunta_es": "¿Qué mira la maestra cuando recitas?",
+   "opciones": [
+    "Rhythm, tone and posture",
+    "Your shoes",
+    "Your pencil",
+    "Your backpack"
+   ],
+   "correcta": "Rhythm, tone and posture",
+   "explicacion_es": "Ritmo (rhythm), tono (tone) y postura (posture).",
+   "instruccion_es": "Lee la pregunta y elige la respuesta correcta."
+  }
+ ],
+ "vocabulario": [
+  {
+   "en": "separation",
+   "es": "separación",
+   "aceptadas": [
+    "separacion",
+    "separación"
+   ],
+   "ejemplo_en": "Separation from Colombia",
+   "ejemplo_es": "Separación de Colombia"
+  },
+  {
+   "en": "flag",
+   "es": "bandera",
+   "aceptadas": [
+    "bandera"
+   ],
+   "ejemplo_en": "The flag is red, blue and white.",
+   "ejemplo_es": "La bandera es roja, azul y blanca."
+  },
+  {
+   "en": "freedom",
+   "es": "libertad",
+   "aceptadas": [
+    "libertad"
+   ],
+   "ejemplo_en": "Freedom is important.",
+   "ejemplo_es": "La libertad es importante."
+  },
+  {
+   "en": "proud",
+   "es": "orgulloso",
+   "aceptadas": [
+    "orgulloso",
+    "orgullosa"
+   ],
+   "ejemplo_en": "I am proud of Panama.",
+   "ejemplo_es": "Estoy orgulloso de Panamá."
+  },
+  {
+   "en": "first cry of independence",
+   "es": "primer grito de independencia",
+   "aceptadas": [
+    "primer grito de independencia",
+    "primer grito"
+   ],
+   "ejemplo_en": "It happened in Los Santos.",
+   "ejemplo_es": "Pasó en Los Santos."
+  },
+  {
+   "en": "independence",
+   "es": "independencia",
+   "aceptadas": [
+    "independencia"
+   ],
+   "ejemplo_en": "Independence from Spain",
+   "ejemplo_es": "Independencia de España"
+  },
+  {
+   "en": "pollera",
+   "es": "vestido típico de Panamá",
+   "aceptadas": [
+    "pollera",
+    "vestido"
+   ],
+   "ejemplo_en": "The pollera is beautiful.",
+   "ejemplo_es": "La pollera es hermosa."
+  },
+  {
+   "en": "sancocho",
+   "es": "sopa típica",
+   "aceptadas": [
+    "sopa",
+    "sancocho"
+   ],
+   "ejemplo_en": "Sancocho is warm.",
+   "ejemplo_es": "El sancocho es caliente."
+  },
+  {
+   "en": "heroes",
+   "es": "héroes",
+   "aceptadas": [
+    "heroes",
+    "héroes"
+   ],
+   "ejemplo_en": "We love our heroes.",
+   "ejemplo_es": "Amamos a nuestros héroes."
+  }
+ ],
+ "lecciones": [
+  {
+   "subtema": "fechas",
+   "emoji": "📅",
+   "titulo": "Las 4 fechas del Mes de la Patria",
+   "pasos": [
+    "3 → Separación de Colombia.",
+    "4 → Día de la Bandera.",
+    "10 → Primer Grito de Independencia (Los Santos).",
+    "28 → Independencia de España."
+   ],
+   "ejemplo": "3, 4, 10 y 28 de noviembre",
+   "truco": "3 se separa · 4 bandera · 10 grito · 28 independencia."
+  },
+  {
+   "subtema": "voz",
+   "emoji": "🎤",
+   "titulo": "Cómo recitar bien",
+   "pasos": [
+    "Párate derecho y mira al frente.",
+    "Habla despacio, con voz clara y alegre.",
+    "Haz una pausa y respira al final de cada verso."
+   ],
+   "ejemplo": "Ritmo, tono y postura",
+   "truco": "Sonríe: ¡estás orgulloso de Panamá!"
+  }
+ ]
+}
