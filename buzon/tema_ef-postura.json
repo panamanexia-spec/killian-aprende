@@ -1,0 +1,879 @@
+{
+  "tipo": "tema",
+  "id": "ef-postura",
+  "materia": "Educación Física",
+  "titulo": "La postura correcta",
+  "titulo_es": "La postura correcta",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "que-es",
+    "sentado",
+    "de-pie",
+    "caminar",
+    "mochila",
+    "importancia",
+    "respuesta"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PARTE 1: ¿Qué es la postura?",
+      "es": "Lee despacito 👇"
+    },
+    {
+      "emoji": "🧍",
+      "en": "La postura es la posición de tu cuerpo.",
+      "es": "Cuando estás sentado, de pie o caminando."
+    },
+    {
+      "emoji": "✅",
+      "en": "Tener una postura correcta es mantener el cuerpo recto y relajado.",
+      "es": "Así no te duelen los músculos."
+    },
+    {
+      "emoji": "❌",
+      "en": "Una mala postura es estar encorvado.",
+      "es": "Encorvado = con la espalda doblada hacia adelante, como una joroba."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PARTE 2: Sentado",
+      "es": "La espalda recta"
+    },
+    {
+      "emoji": "🪑",
+      "en": "Sentado, la espalda va recta y pegada al respaldo de la silla.",
+      "es": "Respaldo = la parte de atrás de la silla."
+    },
+    {
+      "emoji": "🦶",
+      "en": "Los pies van planos en el piso y los hombros relajados.",
+      "es": "No cruces las piernas ni te dejes caer."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Cuando estoy sentado debo tener la espalda recta y pegada al respaldo. Así no me duele y respiro mejor. Por ejemplo, pongo los pies planos en el piso.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PARTE 3: De pie",
+      "es": "El cuerpo derechito"
+    },
+    {
+      "emoji": "🧍",
+      "en": "De pie, el cuerpo va recto y la cabeza arriba, mirando al frente.",
+      "es": "Como si un hilo te jalara la cabeza hacia el techo."
+    },
+    {
+      "emoji": "⚖️",
+      "en": "El peso se reparte en los dos pies y los hombros van relajados.",
+      "es": "No te apoyes solo en una pierna."
+    },
+    {
+      "emoji": "🧍",
+      "en": "Recto, con la cabeza arriba y el peso en los dos pies",
+      "es": "Así se describe el cuerpo de pie."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PARTE 4: Caminando",
+      "es": "Paso a paso"
+    },
+    {
+      "emoji": "🚶",
+      "en": "Al caminar, la espalda va recta, la cabeza arriba y la mirada al frente.",
+      "es": "No mires el piso todo el tiempo."
+    },
+    {
+      "emoji": "💪",
+      "en": "Los brazos se mueven suave y das pasos normales.",
+      "es": "No arrastres los pies."
+    },
+    {
+      "emoji": "🚶",
+      "en": "Con la espalda recta, la cabeza arriba y la mirada al frente",
+      "es": "Así se camina con buena postura."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Debo caminar con la espalda recta, la cabeza arriba y la mirada al frente. Así mi cuerpo no se cansa ni me duele. Por ejemplo, camino con pasos normales sin arrastrar los pies.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PARTE 5: La mochila",
+      "es": "Dos tirantes siempre"
+    },
+    {
+      "emoji": "🎒",
+      "en": "Debes usar los dos tirantes de la mochila.",
+      "es": "Tirantes = las dos correas que van en los hombros."
+    },
+    {
+      "emoji": "⚖️",
+      "en": "Así el peso se reparte igual y no te inclinas hacia un solo lado.",
+      "es": "Con un solo tirante el cuerpo se inclina y te duele la espalda."
+    },
+    {
+      "emoji": "📚",
+      "en": "La mochila va pegada a la espalda y no debe pesar demasiado.",
+      "es": "Lleva solo lo que necesitas."
+    },
+    {
+      "emoji": "🎒",
+      "en": "Para repartir el peso igual y no inclinarme hacia un lado",
+      "es": "Esa es la razón de usar los dos tirantes."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Debo usar los dos tirantes para que el peso se reparta igual. Así no me inclino hacia un solo lado. Por ejemplo, si uso uno solo, me puede doler la espalda.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟪",
+      "en": "PARTE 6: ¿Por qué es importante?",
+      "es": "Cuidar tu cuerpo"
+    },
+    {
+      "emoji": "🏃",
+      "en": "En Educación Física, la buena postura evita lesiones y dolores de músculos.",
+      "es": "Lesión = cuando te lastimas el cuerpo."
+    },
+    {
+      "emoji": "😣",
+      "en": "Si mantienes una mala postura por mucho tiempo, te duelen la espalda y el cuello.",
+      "es": "El cuerpo puede quedar torcido y te cansas más."
+    },
+    {
+      "emoji": "🌟",
+      "en": "Beneficios de la buena postura todos los días: menos dolores, más fuerza y mejor respiración.",
+      "es": "También tienes más energía y te sientes seguro."
+    },
+    {
+      "emoji": "😣",
+      "en": "Te duelen la espalda y el cuello, y el cuerpo puede quedar torcido",
+      "es": "Eso pasa con la mala postura por mucho tiempo."
+    },
+    {
+      "emoji": "🌟",
+      "en": "Menos dolores y mejor respiración",
+      "es": "Beneficios de la buena postura."
+    },
+    {
+      "emoji": "🌬️",
+      "en": "Con buena postura puedes respirar mejor.",
+      "es": "El aire entra más fácil."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Si mantengo una mala postura por mucho tiempo, me puede doler la espalda y el cuello. Mi cuerpo también puede quedar torcido. Por eso debo sentarme y pararme derechito.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Una buena postura me ayuda a no tener dolores de espalda ni de cuello. También me da más fuerza y me ayuda a respirar mejor. Por eso la practico todos los días.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟫",
+      "en": "PARTE 7: Cómo contestar el examen",
+      "es": "Una respuesta completa"
+    },
+    {
+      "emoji": "✍️",
+      "en": "Escribe 3 oraciones: 1) responde, 2) explica por qué, 3) da un ejemplo.",
+      "es": "Una sola palabra, como «recto», no alcanza."
+    },
+    {
+      "emoji": "📝",
+      "en": "Respuesta, explicación y ejemplo",
+      "es": "Eso lleva una respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🌟",
+      "en": "Modelo: «Sentado debo tener la espalda recta. Así no me duele y respiro mejor. Por ejemplo, me pego al respaldo y pongo los pies en el piso.»",
+      "es": "Así se ve una respuesta excelente."
+    },
+    {
+      "emoji": "🚫",
+      "en": "No borres, no taches y no uses corrector.",
+      "es": "Si te equivocas, haz una raya y escribe al lado."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "efpo1",
+      "subtema": "que-es",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué es la postura?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "La postura es cómo tienes colocado el cuerpo: sentado, de pie o caminando. 🧍",
+      "opciones": [
+        "La posición de tu cuerpo",
+        "Un deporte",
+        "Un tipo de mochila",
+        "Un ejercicio de calentamiento"
+      ],
+      "correcta": "La posición de tu cuerpo"
+    },
+    {
+      "id": "efpo2",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "La postura es la ______ de tu cuerpo.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Postura = posición del cuerpo.",
+      "pista_es": "po…",
+      "respuesta": "posición",
+      "aceptadas": [
+        "posicion"
+      ]
+    },
+    {
+      "id": "efpo3",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "Una postura correcta es mantener el cuerpo ______ y relajado.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Recto = derechito, sin doblarse.",
+      "pista_es": "r _ c _ o",
+      "respuesta": "recto",
+      "aceptadas": [
+        "derecho",
+        "derechito",
+        "recta"
+      ]
+    },
+    {
+      "id": "efpo4",
+      "subtema": "que-es",
+      "tipo": "completar",
+      "pregunta_en": "Cuando estás ______ , tienes una mala postura (la espalda doblada hacia adelante).",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Encorvado = con la espalda doblada, como una joroba.",
+      "pista_es": "en-cor-…",
+      "respuesta": "encorvado",
+      "aceptadas": [
+        "encorvada"
+      ]
+    },
+    {
+      "id": "efpo5",
+      "subtema": "que-es",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Tener buena postura es mantener el cuerpo recto y relajado.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Así no te duelen los músculos. ✅",
+      "correcta": true
+    },
+    {
+      "id": "efpo6",
+      "subtema": "que-es",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Una mala postura es tener la espalda recta.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! Mala postura es estar encorvado. La espalda recta es buena postura.",
+      "correcta": false
+    },
+    {
+      "id": "efpo7",
+      "subtema": "sentado",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo debes colocar la espalda cuando estás sentado?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Sentado, la espalda va recta y pegada al respaldo de la silla. 🪑",
+      "opciones": [
+        "Recta y pegada al respaldo",
+        "Doblada hacia adelante",
+        "Torcida hacia un lado",
+        "Acostada sobre el pupitre"
+      ],
+      "correcta": "Recta y pegada al respaldo"
+    },
+    {
+      "id": "efpo8",
+      "subtema": "sentado",
+      "tipo": "completar",
+      "pregunta_en": "Sentado, la espalda va recta y pegada al ______ de la silla.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Respaldo = la parte de atrás de la silla.",
+      "pista_es": "res…",
+      "respuesta": "respaldo"
+    },
+    {
+      "id": "efpo9",
+      "subtema": "sentado",
+      "tipo": "completar",
+      "pregunta_en": "Sentado, los pies van planos en el ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Los pies descansan planos en el piso.",
+      "pista_es": "4 letras",
+      "respuesta": "piso",
+      "aceptadas": [
+        "suelo"
+      ]
+    },
+    {
+      "id": "efpo10",
+      "subtema": "sentado",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Sentado, los hombros deben ir relajados.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Hombros relajados y espalda recta.",
+      "correcta": true
+    },
+    {
+      "id": "efpo11",
+      "subtema": "sentado",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Describe cómo debes colocar la espalda cuando estás sentado.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Una respuesta excelente tiene 3 oraciones: responde, explica por qué y da un ejemplo. «Recto» solo no alcanza. ✍️",
+      "peso": 2,
+      "opciones": [
+        "Recto.",
+        "Cuando estoy sentado debo tener la espalda recta y pegada al respaldo. Así no me duele y respiro mejor. Por ejemplo, pongo los pies planos en el piso.",
+        "Sentado.",
+        "Me siento en la silla."
+      ],
+      "correcta": "Cuando estoy sentado debo tener la espalda recta y pegada al respaldo. Así no me duele y respiro mejor. Por ejemplo, pongo los pies planos en el piso."
+    },
+    {
+      "id": "efpo12",
+      "subtema": "de-pie",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo debes colocar tu cuerpo cuando estás de pie?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "De pie: cuerpo recto, cabeza arriba mirando al frente y peso repartido en los dos pies.",
+      "opciones": [
+        "Recto, con la cabeza arriba y el peso en los dos pies",
+        "Apoyado solo en una pierna",
+        "Encorvado y mirando el piso",
+        "Inclinado hacia un lado"
+      ],
+      "correcta": "Recto, con la cabeza arriba y el peso en los dos pies"
+    },
+    {
+      "id": "efpo13",
+      "subtema": "de-pie",
+      "tipo": "completar",
+      "pregunta_en": "De pie, la cabeza va arriba, mirando al ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Cabeza arriba y mirada al frente.",
+      "pista_es": "f _ e n t e",
+      "respuesta": "frente",
+      "aceptadas": [
+        "al frente"
+      ]
+    },
+    {
+      "id": "efpo14",
+      "subtema": "de-pie",
+      "tipo": "completar",
+      "pregunta_en": "De pie, el peso se reparte en los dos ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Los dos pies sostienen el cuerpo por igual. 🦶",
+      "pista_es": "4 letras",
+      "respuesta": "pies"
+    },
+    {
+      "id": "efpo15",
+      "subtema": "de-pie",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "De pie, debes apoyarte solo en una pierna.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! El peso se reparte en los dos pies.",
+      "correcta": false
+    },
+    {
+      "id": "efpo16",
+      "subtema": "caminar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo debes caminar para mantener una buena postura?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Al caminar: espalda recta, cabeza arriba, mirada al frente y pasos normales. 🚶",
+      "opciones": [
+        "Con la espalda recta, la cabeza arriba y la mirada al frente",
+        "Mirando el piso todo el tiempo",
+        "Arrastrando los pies",
+        "Con los hombros caídos"
+      ],
+      "correcta": "Con la espalda recta, la cabeza arriba y la mirada al frente"
+    },
+    {
+      "id": "efpo17",
+      "subtema": "caminar",
+      "tipo": "completar",
+      "pregunta_en": "Al caminar, los brazos se mueven ______ y das pasos normales.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Brazos suaves, sin arrastrar los pies.",
+      "pista_es": "su…",
+      "respuesta": "suave",
+      "aceptadas": [
+        "suavemente"
+      ]
+    },
+    {
+      "id": "efpo18",
+      "subtema": "caminar",
+      "tipo": "completar",
+      "pregunta_en": "Al caminar, la espalda va ______ y la cabeza arriba.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Espalda recta al caminar.",
+      "pista_es": "r _ c _ a",
+      "respuesta": "recta",
+      "aceptadas": [
+        "recto",
+        "derecha"
+      ]
+    },
+    {
+      "id": "efpo19",
+      "subtema": "caminar",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Al caminar debes arrastrar los pies.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! Das pasos normales y no arrastras los pies.",
+      "correcta": false
+    },
+    {
+      "id": "efpo20",
+      "subtema": "caminar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Explica cómo debes caminar para mantener una buena postura.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Responde (cómo), explica (por qué) y da un ejemplo: ¡3 oraciones! «Normal» solo vale muy pocos puntos.",
+      "peso": 2,
+      "opciones": [
+        "Normal.",
+        "Debo caminar con la espalda recta, la cabeza arriba y la mirada al frente. Así mi cuerpo no se cansa ni me duele. Por ejemplo, camino con pasos normales sin arrastrar los pies.",
+        "Caminar.",
+        "Con los pies."
+      ],
+      "correcta": "Debo caminar con la espalda recta, la cabeza arriba y la mirada al frente. Así mi cuerpo no se cansa ni me duele. Por ejemplo, camino con pasos normales sin arrastrar los pies."
+    },
+    {
+      "id": "efpo21",
+      "subtema": "mochila",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Por qué debes usar los dos tirantes de la mochila?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Con los dos tirantes el peso se reparte igual. Con uno solo el cuerpo se inclina y te duele la espalda. 🎒",
+      "opciones": [
+        "Para repartir el peso igual y no inclinarme hacia un lado",
+        "Para que la mochila se vea bonita",
+        "Para cargar más cosas",
+        "Para correr más rápido"
+      ],
+      "correcta": "Para repartir el peso igual y no inclinarme hacia un lado"
+    },
+    {
+      "id": "efpo22",
+      "subtema": "mochila",
+      "tipo": "completar",
+      "pregunta_en": "Para la mochila debes usar los dos ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Tirantes = las dos correas de los hombros.",
+      "pista_es": "ti-ran-…",
+      "respuesta": "tirantes",
+      "aceptadas": [
+        "tirante"
+      ]
+    },
+    {
+      "id": "efpo23",
+      "subtema": "mochila",
+      "tipo": "completar",
+      "pregunta_en": "Con un solo tirante te ______ hacia un lado.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "El peso jala hacia un lado y el cuerpo se inclina.",
+      "pista_es": "in-cli-…",
+      "respuesta": "inclinas",
+      "aceptadas": [
+        "inclinas",
+        "inclinarte",
+        "inclinas el cuerpo"
+      ]
+    },
+    {
+      "id": "efpo24",
+      "subtema": "mochila",
+      "tipo": "completar",
+      "pregunta_en": "La mochila va pegada a la ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Pegada a la espalda, no colgando abajo.",
+      "pista_es": "es…",
+      "respuesta": "espalda"
+    },
+    {
+      "id": "efpo25",
+      "subtema": "mochila",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Es mejor cargar la mochila en un solo hombro.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! Siempre los dos tirantes.",
+      "correcta": false
+    },
+    {
+      "id": "efpo26",
+      "subtema": "mochila",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Explica por qué debes usar los dos tirantes de la mochila.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "La respuesta completa explica el PORQUÉ con 3 oraciones. 🎒",
+      "peso": 2,
+      "opciones": [
+        "Para que no me duela.",
+        "Debo usar los dos tirantes para que el peso se reparta igual. Así no me inclino hacia un solo lado. Por ejemplo, si uso uno solo, me puede doler la espalda.",
+        "Porque sí.",
+        "Tirantes."
+      ],
+      "correcta": "Debo usar los dos tirantes para que el peso se reparta igual. Así no me inclino hacia un solo lado. Por ejemplo, si uso uno solo, me puede doler la espalda."
+    },
+    {
+      "id": "efpo27",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué puede pasar si mantienes una mala postura durante mucho tiempo?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "La mala postura por mucho tiempo causa dolor de espalda y cuello y el cuerpo puede quedar torcido. 😣",
+      "opciones": [
+        "Te duelen la espalda y el cuello, y el cuerpo puede quedar torcido",
+        "Creces más rápido",
+        "Se te quita el cansancio",
+        "Nada, no pasa nada"
+      ],
+      "correcta": "Te duelen la espalda y el cuello, y el cuerpo puede quedar torcido"
+    },
+    {
+      "id": "efpo28",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Una mala postura por mucho tiempo causa dolor de espalda y ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Espalda y cuello son los que más sufren.",
+      "pista_es": "cue…",
+      "respuesta": "cuello"
+    },
+    {
+      "id": "efpo29",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Si mantienes una mala postura mucho tiempo, el cuerpo puede quedar ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Torcido = no recto.",
+      "pista_es": "tor…",
+      "respuesta": "torcido",
+      "aceptadas": [
+        "torcida"
+      ]
+    },
+    {
+      "id": "efpo30",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "En Educación Física, la buena postura evita ______ y dolores de músculos.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Lesión = cuando te lastimas el cuerpo.",
+      "pista_es": "le-sio-…",
+      "respuesta": "lesiones",
+      "aceptadas": [
+        "lesión",
+        "lesion"
+      ]
+    },
+    {
+      "id": "efpo31",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Un beneficio de la buena postura es tener mejor ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Con el cuerpo recto el aire entra mejor a los pulmones. 🌬️",
+      "pista_es": "res-pi-…",
+      "respuesta": "respiración",
+      "aceptadas": [
+        "respiracion",
+        "respirar"
+      ]
+    },
+    {
+      "id": "efpo32",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "La buena postura todos los días nos da menos dolores y más ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Más fuerza y más energía. 💪",
+      "pista_es": "fue…",
+      "respuesta": "fuerza",
+      "aceptadas": [
+        "energía",
+        "energia"
+      ]
+    },
+    {
+      "id": "efpo33",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es un beneficio de mantener una buena postura todos los días?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Beneficios: menos dolores, más fuerza y mejor respiración. 🌟",
+      "opciones": [
+        "Menos dolores y mejor respiración",
+        "Más dolor de espalda",
+        "Más cansancio",
+        "Se tuerce el cuerpo"
+      ],
+      "correcta": "Menos dolores y mejor respiración"
+    },
+    {
+      "id": "efpo34",
+      "subtema": "importancia",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "La buena postura evita lesiones en Educación Física.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Te cuida el cuerpo cuando haces deporte. 🏃",
+      "correcta": true
+    },
+    {
+      "id": "efpo35",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Menciona qué puede pasar si mantienes una mala postura durante mucho tiempo.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Menciona 2 cosas que pasan y cierra con un consejo. ¡3 oraciones! ✍️",
+      "peso": 2,
+      "opciones": [
+        "Se pueden quedar así.",
+        "Si mantengo una mala postura por mucho tiempo, me puede doler la espalda y el cuello. Mi cuerpo también puede quedar torcido. Por eso debo sentarme y pararme derechito.",
+        "Mala postura.",
+        "Me duele."
+      ],
+      "correcta": "Si mantengo una mala postura por mucho tiempo, me puede doler la espalda y el cuello. Mi cuerpo también puede quedar torcido. Por eso debo sentarme y pararme derechito."
+    },
+    {
+      "id": "efpo36",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Menciona beneficios de mantener una buena postura todos los días.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Menciona VARIOS beneficios (dolores, fuerza, respiración) en 3 oraciones. 🌟",
+      "peso": 2,
+      "opciones": [
+        "Para que no me duelan los músculos.",
+        "Una buena postura me ayuda a no tener dolores de espalda ni de cuello. También me da más fuerza y me ayuda a respirar mejor. Por eso la practico todos los días.",
+        "Beneficios.",
+        "Postura."
+      ],
+      "correcta": "Una buena postura me ayuda a no tener dolores de espalda ni de cuello. También me da más fuerza y me ayuda a respirar mejor. Por eso la practico todos los días."
+    },
+    {
+      "id": "efpo37",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Una buena postura todos los días nos da menos dolores y también ayuda a ______ mejor.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Respirar mejor 🌬️.",
+      "pista_es": "res-pi-…",
+      "respuesta": "respirar",
+      "aceptadas": [
+        "respiración"
+      ]
+    },
+    {
+      "id": "efpo38",
+      "subtema": "respuesta",
+      "tipo": "completar",
+      "pregunta_en": "En el examen debes escribir ______ oraciones en cada respuesta.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "3 oraciones: respondes, explicas y das un ejemplo.",
+      "pista_es": "Más que 2",
+      "respuesta": "3",
+      "aceptadas": [
+        "tres"
+      ]
+    },
+    {
+      "id": "efpo39",
+      "subtema": "respuesta",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué debe tener una respuesta de 3 oraciones?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "1) responde, 2) explica por qué, 3) da un ejemplo.",
+      "opciones": [
+        "Respuesta, explicación y ejemplo",
+        "Solo una palabra",
+        "Un dibujo",
+        "Solo la pregunta copiada"
+      ],
+      "correcta": "Respuesta, explicación y ejemplo"
+    },
+    {
+      "id": "efpo40",
+      "subtema": "respuesta",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En el examen de Educación Física puedes borrar con corrector.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! No se borra, no se tacha y no se usa corrector. Haz una raya y escribe al lado.",
+      "correcta": false
+    },
+    {
+      "id": "efpo41",
+      "subtema": "que-es",
+      "tipo": "unir",
+      "pregunta_en": "Une cada situación con su buena postura.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "Sentado: respaldo. De pie: dos pies. Caminando: mirada al frente. Mochila: dos tirantes.",
+      "pares": [
+        {
+          "izquierda": "Sentado",
+          "derecha": "Espalda recta y pegada al respaldo"
+        },
+        {
+          "izquierda": "De pie",
+          "derecha": "Cuerpo recto y peso en los dos pies"
+        },
+        {
+          "izquierda": "Caminando",
+          "derecha": "Cabeza arriba y mirada al frente"
+        },
+        {
+          "izquierda": "Con la mochila",
+          "derecha": "Los dos tirantes"
+        }
+      ]
+    },
+    {
+      "id": "efpo42",
+      "subtema": "importancia",
+      "tipo": "unir",
+      "pregunta_en": "Une cada postura con lo que pasa.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "La buena postura cuida el cuerpo; la mala lo lastima.",
+      "pares": [
+        {
+          "izquierda": "Espalda recta",
+          "derecha": "Menos dolores"
+        },
+        {
+          "izquierda": "Encorvado mucho tiempo",
+          "derecha": "Dolor de espalda y cuello"
+        },
+        {
+          "izquierda": "Un solo tirante",
+          "derecha": "El cuerpo se inclina"
+        },
+        {
+          "izquierda": "Buena postura en deporte",
+          "derecha": "Evita lesiones"
+        }
+      ]
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "postura",
+      "es": "posición del cuerpo",
+      "aceptadas": [
+        "posicion del cuerpo",
+        "como tienes el cuerpo"
+      ]
+    },
+    {
+      "en": "encorvado",
+      "es": "espalda doblada",
+      "aceptadas": [
+        "mala postura",
+        "joroba"
+      ]
+    },
+    {
+      "en": "respaldo",
+      "es": "parte de atrás de la silla",
+      "aceptadas": [
+        "atrás de la silla",
+        "parte de atras de la silla"
+      ]
+    },
+    {
+      "en": "tirantes",
+      "es": "correas de la mochila",
+      "aceptadas": [
+        "correas",
+        "las correas"
+      ]
+    },
+    {
+      "en": "lesión",
+      "es": "lastimarse el cuerpo",
+      "aceptadas": [
+        "lastimarse",
+        "herida",
+        "lesion"
+      ]
+    },
+    {
+      "en": "músculos",
+      "es": "partes del cuerpo que se mueven",
+      "aceptadas": [
+        "musculos",
+        "se mueven"
+      ]
+    },
+    {
+      "en": "relajado",
+      "es": "sin tensión",
+      "aceptadas": [
+        "tranquilo",
+        "sin tension"
+      ]
+    },
+    {
+      "en": "recto",
+      "es": "derechito",
+      "aceptadas": [
+        "derecho",
+        "sin doblar"
+      ]
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "sentado",
+      "emoji": "🪑",
+      "titulo": "La postura en 4 lugares",
+      "pasos": [
+        "Sentado: espalda recta y pegada al respaldo, pies en el piso.",
+        "De pie: cuerpo recto, cabeza arriba, peso en los dos pies.",
+        "Caminando: mirada al frente, pasos normales, brazos suaves.",
+        "Mochila: los DOS tirantes, pegada a la espalda."
+      ],
+      "truco": "«Recto, arriba, al frente, dos tirantes»."
+    },
+    {
+      "subtema": "respuesta",
+      "emoji": "✍️",
+      "titulo": "La respuesta de 3 oraciones",
+      "pasos": [
+        "1ª oración: contesta lo que preguntan.",
+        "2ª oración: explica por qué (usa «así», «porque»).",
+        "3ª oración: da un ejemplo (usa «por ejemplo»)."
+      ],
+      "ejemplo": "Sentado debo tener la espalda recta. Así no me duele y respiro mejor. Por ejemplo, me pego al respaldo.",
+      "truco": "Una palabra sola = pocos puntos. Tres oraciones = ¡excelente! 🌟"
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ],
+  "idioma": "es",
+  "vocabulario_pregunta_es": "¿Qué significa?"
+}

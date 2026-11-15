@@ -1,0 +1,934 @@
+{
+  "tipo": "tema",
+  "id": "sci-plant-life-cycle",
+  "materia": "Science",
+  "titulo": "Plant Life Cycle and Word Bank",
+  "titulo_es": "Ciclo de vida de las plantas y banco de palabras",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "word-bank",
+    "stages",
+    "seed",
+    "venn",
+    "compare"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PART 1: Four key words",
+      "es": "PARTE 1: Cuatro palabras clave (Word Bank)"
+    },
+    {
+      "emoji": "🐾",
+      "en": "An organism is a living thing.",
+      "es": "Organism = ÓR-ga-nism = ser vivo (planta, animal, persona)."
+    },
+    {
+      "emoji": "🔄",
+      "en": "A life cycle is a series of stages an organism goes through during its life.",
+      "es": "Life cycle = LÁIF SÁI-col = las etapas de la vida de un ser vivo."
+    },
+    {
+      "emoji": "📏",
+      "en": "Growth is a period of getting larger.",
+      "es": "Growth = GROUZ = crecimiento: hacerse más grande."
+    },
+    {
+      "emoji": "👶",
+      "en": "Reproduction is to make a new organism of the same kind.",
+      "es": "Reproduction = ri-pro-DÁK-shon = hacer uno nuevo de su misma clase."
+    },
+    {
+      "emoji": "🧠",
+      "en": "Growth = getting larger. Reproduction = making a new one. Life cycle = the stages. Organism = a living thing.",
+      "es": "Truco para el Word Bank: lee cada definición y busca su palabra."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PART 2: The 5 stages of a plant",
+      "es": "PARTE 2: Las 5 etapas de una planta (en orden)"
+    },
+    {
+      "emoji": "1️⃣",
+      "en": "Stage 1: seed.",
+      "es": "Seed = SÍID = semilla. Tiene una plantita bebé adentro."
+    },
+    {
+      "emoji": "2️⃣",
+      "en": "Stage 2: germination.",
+      "es": "Germination = yer-mi-NÉI-shon. La semilla empieza a crecer y sale la raíz."
+    },
+    {
+      "emoji": "3️⃣",
+      "en": "Stage 3: seedling.",
+      "es": "Seedling = SÍID-ling. Plantita pequeña con sus primeras hojas."
+    },
+    {
+      "emoji": "4️⃣",
+      "en": "Stage 4: young plant.",
+      "es": "Young plant = YONG PLANT. Planta más grande con más hojas."
+    },
+    {
+      "emoji": "5️⃣",
+      "en": "Stage 5: mature plant.",
+      "es": "Mature plant = ma-CHÚR PLANT. Planta adulta: tiene flores que hacen semillas."
+    },
+    {
+      "emoji": "🧠",
+      "en": "Order: seed, germination, seedling, young plant, mature plant.",
+      "es": "Truco: «Se Germina, Siembra, Joven, Madura»."
+    },
+    {
+      "emoji": "✏️",
+      "en": "Draw seed → seedling → young plant → mature plant, with arrows and a label under each.",
+      "es": "Si te piden dibujar las etapas: en orden, con flechas y con el nombre debajo."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PART 3: The role of the seed",
+      "es": "PARTE 3: Para qué sirve la semilla"
+    },
+    {
+      "emoji": "🌱",
+      "en": "The seed grows into a new plant and starts the life cycle again.",
+      "es": "Ese es el papel (role) de la semilla. No basta decir «crece»: hay que decir que empieza el ciclo otra vez."
+    },
+    {
+      "emoji": "✍️",
+      "en": "The role of a seed is to grow into a new plant. Then the plant makes flowers and new seeds. So the life cycle starts again.",
+      "es": "Modelo de respuesta de 2 o 3 oraciones."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PART 4: Plants, animals or both?",
+      "es": "PARTE 4: ¿Plantas, animales o los dos? (Venn)"
+    },
+    {
+      "emoji": "🌿",
+      "en": "Plants only: seed and germinate.",
+      "es": "Solo las plantas tienen semilla y germinan."
+    },
+    {
+      "emoji": "🥚",
+      "en": "Animals only: egg and birth.",
+      "es": "Solo los animales salen de un huevo (egg) o nacen (birth)."
+    },
+    {
+      "emoji": "🤝",
+      "en": "Both: growth, reproduction and death.",
+      "es": "Los dos crecen, se reproducen y mueren. Esas palabras van en el centro del diagrama."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PART 5: Compare and explain",
+      "es": "PARTE 5: Comparar y explicar"
+    },
+    {
+      "emoji": "🐸",
+      "en": "Frog and sea turtle are alike because both hatch from eggs and grow into adults.",
+      "es": "En qué se PARECEN (alike): las dos salen de huevos y crecen hasta ser adultas."
+    },
+    {
+      "emoji": "🐢",
+      "en": "Frog and sea turtle are different because frog eggs are small and sea turtle eggs are large.",
+      "es": "En qué se DIFERENCIAN (different): el tamaño del huevo. Hatch = JÁCH = salir del huevo."
+    },
+    {
+      "emoji": "🐕",
+      "en": "Two dogs of the same kind can look different because their environment and care were different.",
+      "es": "El ambiente (comida, ejercicio, cuidado) cambia cómo se ve un animal."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Frogs and sea turtles are alike because both hatch from eggs and grow into adults. They are different because frog eggs are small and sea turtle eggs are large.",
+      "es": "Modelo para «compara: cómo son iguales y diferentes». ¡Pon las DOS partes!"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "sccy1",
+      "subtema": "word-bank",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Word Bank: «A period of getting larger» is…",
+      "pregunta_es": "Banco de palabras: «Un período de hacerse más grande» es…",
+      "explicacion_es": "Growth = crecimiento. 📏",
+      "opciones": [
+        "growth",
+        "reproduction",
+        "organism",
+        "life cycle"
+      ],
+      "correcta": "growth"
+    },
+    {
+      "id": "sccy2",
+      "subtema": "word-bank",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Word Bank: «A living thing» is…",
+      "pregunta_es": "Banco de palabras: «Un ser vivo» es…",
+      "explicacion_es": "Organism = ser vivo. 🐾",
+      "opciones": [
+        "organism",
+        "growth",
+        "reproduction",
+        "life cycle"
+      ],
+      "correcta": "organism"
+    },
+    {
+      "id": "sccy3",
+      "subtema": "word-bank",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Word Bank: «A series of stages an organism goes through during its life» is…",
+      "pregunta_es": "Banco de palabras: «Una serie de etapas por las que pasa un ser vivo durante su vida» es…",
+      "explicacion_es": "Life cycle = ciclo de vida. 🔄",
+      "opciones": [
+        "life cycle",
+        "growth",
+        "organism",
+        "reproduction"
+      ],
+      "correcta": "life cycle"
+    },
+    {
+      "id": "sccy4",
+      "subtema": "word-bank",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Word Bank: «Make a new organism of the same kind» is…",
+      "pregunta_es": "Banco de palabras: «Hacer un ser vivo nuevo de la misma clase» es…",
+      "explicacion_es": "Reproduction = reproducción. 👶",
+      "opciones": [
+        "reproduction",
+        "growth",
+        "organism",
+        "life cycle"
+      ],
+      "correcta": "reproduction"
+    },
+    {
+      "id": "sccy5",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Period of getting larger: ______.",
+      "pregunta_es": "Período de hacerse más grande: ______.",
+      "explicacion_es": "Growth = crecimiento (GROUZ). No es reproduction.",
+      "pista_es": "gr…",
+      "respuesta": "growth"
+    },
+    {
+      "id": "sccy6",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "A living thing: ______.",
+      "pregunta_es": "Un ser vivo: ______.",
+      "explicacion_es": "Organism = ser vivo (ÓR-ga-nism).",
+      "pista_es": "or…",
+      "respuesta": "organism",
+      "aceptadas": [
+        "organisms"
+      ]
+    },
+    {
+      "id": "sccy7",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "A series of stages an organism goes through during its ______ cycle.",
+      "pregunta_es": "Una serie de etapas por las que pasa un ser vivo en su ______ (cycle).",
+      "explicacion_es": "Life cycle = ciclo de vida.",
+      "pista_es": "l _ f e",
+      "respuesta": "life"
+    },
+    {
+      "id": "sccy8",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Make a new organism of the same kind: ______.",
+      "pregunta_es": "Hacer un ser vivo nuevo de la misma clase: ______.",
+      "explicacion_es": "Reproduction = reproducción (ri-pro-DÁK-shon).",
+      "pista_es": "re-pro-…",
+      "respuesta": "reproduction",
+      "aceptadas": [
+        "reproduce"
+      ]
+    },
+    {
+      "id": "sccy9",
+      "subtema": "word-bank",
+      "tipo": "unir",
+      "pregunta_en": "Match each word with its meaning.",
+      "pregunta_es": "Une cada palabra con su significado.",
+      "explicacion_es": "Growth = crecimiento, organism = ser vivo, life cycle = ciclo de vida, reproduction = reproducción.",
+      "pares": [
+        {
+          "izquierda": "growth",
+          "derecha": "crecimiento"
+        },
+        {
+          "izquierda": "organism",
+          "derecha": "ser vivo"
+        },
+        {
+          "izquierda": "life cycle",
+          "derecha": "ciclo de vida"
+        },
+        {
+          "izquierda": "reproduction",
+          "derecha": "reproducción"
+        }
+      ]
+    },
+    {
+      "id": "sccy10",
+      "subtema": "stages",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. Stage 1 is the ______.",
+      "pregunta_es": "Mira el dibujo. La etapa 1 es la ______.",
+      "explicacion_es": "La etapa 1 es la semilla (seed). 🌰",
+      "pista_es": "s _ _ d",
+      "respuesta": "seed",
+      "aceptadas": [
+        "seeds"
+      ],
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy11",
+      "subtema": "stages",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. Stage 2 is ______.",
+      "pregunta_es": "Mira el dibujo. La etapa 2 es la ______.",
+      "explicacion_es": "La etapa 2 es germination: sale la raíz. 🌱",
+      "pista_es": "ger-mi-…",
+      "respuesta": "germination",
+      "aceptadas": [
+        "germinate"
+      ],
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy12",
+      "subtema": "stages",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. Stage 3 is the ______.",
+      "pregunta_es": "Mira el dibujo. La etapa 3 es la ______.",
+      "explicacion_es": "La etapa 3 es seedling: plantita con las primeras hojas. 🌿",
+      "pista_es": "seed + ling",
+      "respuesta": "seedling",
+      "aceptadas": [
+        "seedlings"
+      ],
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy13",
+      "subtema": "stages",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. Stage 4 is the young ______.",
+      "pregunta_es": "Mira el dibujo. La etapa 4 es la planta ______ (young …).",
+      "explicacion_es": "La etapa 4 es young plant.",
+      "pista_es": "p _ a n t",
+      "respuesta": "plant",
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy14",
+      "subtema": "stages",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. Stage 5 is the ______ plant.",
+      "pregunta_es": "Mira el dibujo. La etapa 5 es la planta ______ (… plant).",
+      "explicacion_es": "La etapa 5 es mature plant: planta adulta con flor. 🌼",
+      "pista_es": "ma-CHÚR",
+      "respuesta": "mature",
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy15",
+      "subtema": "stages",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What is stage 2?",
+      "pregunta_es": "Mira el dibujo. ¿Qué es la etapa 2?",
+      "explicacion_es": "Etapa 2 = germination.",
+      "opciones": [
+        "germination",
+        "seedling",
+        "young plant",
+        "seed",
+        "mature plant"
+      ],
+      "correcta": "germination",
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy16",
+      "subtema": "stages",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What is stage 3?",
+      "pregunta_es": "Mira el dibujo. ¿Qué es la etapa 3?",
+      "explicacion_es": "Etapa 3 = seedling.",
+      "opciones": [
+        "seedling",
+        "germination",
+        "young plant",
+        "seed",
+        "mature plant"
+      ],
+      "correcta": "seedling",
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy17",
+      "subtema": "stages",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What is stage 4?",
+      "pregunta_es": "Mira el dibujo. ¿Qué es la etapa 4?",
+      "explicacion_es": "Etapa 4 = young plant.",
+      "opciones": [
+        "young plant",
+        "seedling",
+        "germination",
+        "seed",
+        "mature plant"
+      ],
+      "correcta": "young plant",
+      "imagen": "plant_cycle5.png"
+    },
+    {
+      "id": "sccy18",
+      "subtema": "stages",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the correct order of the plant life cycle?",
+      "pregunta_es": "¿Cuál es el orden correcto del ciclo de vida de la planta?",
+      "explicacion_es": "Orden: seed → germination → seedling → young plant → mature plant.",
+      "peso": 2,
+      "opciones": [
+        "seed, germination, seedling, young plant, mature plant",
+        "seed, seedling, germination, young plant, mature plant",
+        "germination, seed, seedling, mature plant, young plant",
+        "mature plant, young plant, seedling, germination, seed"
+      ],
+      "correcta": "seed, germination, seedling, young plant, mature plant"
+    },
+    {
+      "id": "sccy19",
+      "subtema": "stages",
+      "tipo": "unir",
+      "pregunta_en": "Match each stage with its meaning.",
+      "pregunta_es": "Une cada etapa con su significado.",
+      "explicacion_es": "Seed = semilla. Germination = empieza a crecer. Seedling = plantita. Mature plant = adulta.",
+      "pares": [
+        {
+          "izquierda": "seed",
+          "derecha": "semilla"
+        },
+        {
+          "izquierda": "germination",
+          "derecha": "la semilla empieza a crecer"
+        },
+        {
+          "izquierda": "seedling",
+          "derecha": "plantita con primeras hojas"
+        },
+        {
+          "izquierda": "mature plant",
+          "derecha": "planta adulta"
+        }
+      ]
+    },
+    {
+      "id": "sccy20",
+      "subtema": "stages",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "A mature plant has flowers that make new seeds.",
+      "pregunta_es": "Una planta adulta tiene flores que hacen semillas nuevas.",
+      "explicacion_es": "¡Verdadero! Así empieza el ciclo otra vez. 🌼",
+      "correcta": true
+    },
+    {
+      "id": "sccy21",
+      "subtema": "stages",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The seedling is stage 5.",
+      "pregunta_es": "El seedling es la etapa 5.",
+      "explicacion_es": "¡Falso! Seedling es la etapa 3. La etapa 5 es mature plant.",
+      "correcta": false
+    },
+    {
+      "id": "sccy22",
+      "subtema": "stages",
+      "tipo": "completar",
+      "pregunta_en": "The correct order is seed, germination, seedling, young plant, ______ plant.",
+      "pregunta_es": "El orden correcto es seed, germination, seedling, young plant, ______ plant.",
+      "explicacion_es": "La última etapa es mature plant.",
+      "pista_es": "ma-CHÚR",
+      "respuesta": "mature"
+    },
+    {
+      "id": "sccy23",
+      "subtema": "stages",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the BEST way to label the 4 stages if the teacher asks you to draw them with arrows?",
+      "pregunta_es": "¿Cuál es la MEJOR forma de dibujar las etapas con flechas?",
+      "explicacion_es": "Dibuja las etapas en orden, con flechas y con el nombre debajo. ¡Sin rótulos pierdes puntos!",
+      "opciones": [
+        "Draw seed → seedling → young plant → mature plant, with arrows and a label under each",
+        "Draw only one plant",
+        "Draw the stages without labels",
+        "Draw the stages without arrows"
+      ],
+      "correcta": "Draw seed → seedling → young plant → mature plant, with arrows and a label under each"
+    },
+    {
+      "id": "sccy24",
+      "subtema": "seed",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the role of a seed in a life cycle?",
+      "pregunta_es": "¿Cuál es el papel de la semilla en el ciclo de vida?",
+      "explicacion_es": "Una semilla se vuelve planta y empieza el ciclo otra vez. 🔄",
+      "peso": 2,
+      "opciones": [
+        "The seed grows into a new plant and starts the life cycle again",
+        "The seed is only food",
+        "The seed makes the plant die",
+        "The seed is a kind of animal"
+      ],
+      "correcta": "The seed grows into a new plant and starts the life cycle again"
+    },
+    {
+      "id": "sccy25",
+      "subtema": "seed",
+      "tipo": "completar",
+      "pregunta_en": "The seed grows into a new plant and starts the life cycle ______.",
+      "pregunta_es": "La semilla crece en una planta nueva y empieza el ciclo de vida otra ______.",
+      "explicacion_es": "Again = otra vez (a-GUÉN). 🔁",
+      "pista_es": "a-guén",
+      "respuesta": "again"
+    },
+    {
+      "id": "sccy26",
+      "subtema": "seed",
+      "tipo": "completar",
+      "pregunta_en": "The mature plant makes flowers and new ______.",
+      "pregunta_es": "La planta adulta hace flores y ______ nuevas.",
+      "explicacion_es": "Las flores hacen semillas nuevas.",
+      "pista_es": "s _ _ d s",
+      "respuesta": "seeds",
+      "aceptadas": [
+        "seed"
+      ]
+    },
+    {
+      "id": "sccy27",
+      "subtema": "seed",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the BEST answer? «What is the role of a seed in a life cycle?»",
+      "pregunta_es": "¿Cuál es la MEJOR respuesta? «¿Cuál es el papel de la semilla en el ciclo de vida?»",
+      "explicacion_es": "Killian escribió «the seed growth in young plant» y perdió 2 puntos: falta decir que empieza el ciclo otra vez.",
+      "peso": 3,
+      "opciones": [
+        "The role of a seed is to grow into a new plant. Then the plant makes flowers and new seeds. So the life cycle starts again.",
+        "The seed grows.",
+        "Plant.",
+        "It is small."
+      ],
+      "correcta": "The role of a seed is to grow into a new plant. Then the plant makes flowers and new seeds. So the life cycle starts again."
+    },
+    {
+      "id": "sccy28",
+      "subtema": "venn",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Plants, animals or both? → seed",
+      "pregunta_es": "¿Plantas, animales o los dos? → seed (semilla)",
+      "explicacion_es": "La semilla es solo de las plantas.",
+      "opciones": [
+        "Plants",
+        "Animals",
+        "Both"
+      ],
+      "correcta": "Plants"
+    },
+    {
+      "id": "sccy29",
+      "subtema": "venn",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Plants, animals or both? → egg",
+      "pregunta_es": "¿Plantas, animales o los dos? → egg (huevo)",
+      "explicacion_es": "El huevo es de los animales.",
+      "opciones": [
+        "Animals",
+        "Plants",
+        "Both"
+      ],
+      "correcta": "Animals"
+    },
+    {
+      "id": "sccy30",
+      "subtema": "venn",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Plants, animals or both? → growth",
+      "pregunta_es": "¿Plantas, animales o los dos? → growth (crecer)",
+      "explicacion_es": "Todos los seres vivos crecen: va en el centro.",
+      "opciones": [
+        "Both",
+        "Plants",
+        "Animals"
+      ],
+      "correcta": "Both"
+    },
+    {
+      "id": "sccy31",
+      "subtema": "venn",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Plants, animals or both? → germinate",
+      "pregunta_es": "¿Plantas, animales o los dos? → germinate (germinar)",
+      "explicacion_es": "Solo las semillas germinan.",
+      "opciones": [
+        "Plants",
+        "Animals",
+        "Both"
+      ],
+      "correcta": "Plants"
+    },
+    {
+      "id": "sccy32",
+      "subtema": "venn",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Plants, animals or both? → death",
+      "pregunta_es": "¿Plantas, animales o los dos? → death (morir)",
+      "explicacion_es": "Todos los seres vivos mueren.",
+      "opciones": [
+        "Both",
+        "Plants",
+        "Animals"
+      ],
+      "correcta": "Both"
+    },
+    {
+      "id": "sccy33",
+      "subtema": "venn",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Plants, animals or both? → reproduction",
+      "pregunta_es": "¿Plantas, animales o los dos? → reproduction",
+      "explicacion_es": "Todos se reproducen.",
+      "opciones": [
+        "Both",
+        "Plants",
+        "Animals"
+      ],
+      "correcta": "Both"
+    },
+    {
+      "id": "sccy34",
+      "subtema": "venn",
+      "tipo": "completar",
+      "pregunta_en": "Plants only: seed and ______.",
+      "pregunta_es": "Solo plantas: semilla y ______.",
+      "explicacion_es": "Solo las plantas germinan.",
+      "pista_es": "ger-mi-…",
+      "respuesta": "germinate",
+      "aceptadas": [
+        "germination",
+        "germinates"
+      ]
+    },
+    {
+      "id": "sccy35",
+      "subtema": "venn",
+      "tipo": "completar",
+      "pregunta_en": "Animals only: ______ and birth.",
+      "pregunta_es": "Solo animales: ______ y nacimiento (birth).",
+      "explicacion_es": "Solo los animales salen de un huevo.",
+      "pista_es": "e _ g",
+      "respuesta": "egg",
+      "aceptadas": [
+        "eggs"
+      ]
+    },
+    {
+      "id": "sccy36",
+      "subtema": "venn",
+      "tipo": "completar",
+      "pregunta_en": "Both: growth, reproduction and ______.",
+      "pregunta_es": "Los dos: crecimiento, reproducción y ______.",
+      "explicacion_es": "Los dos mueren: death (DEZ).",
+      "pista_es": "d _ a t h",
+      "respuesta": "death"
+    },
+    {
+      "id": "sccy37",
+      "subtema": "venn",
+      "tipo": "unir",
+      "pregunta_en": "Put each word in its place in the Venn diagram.",
+      "pregunta_es": "Pon cada palabra en su lugar del diagrama de Venn.",
+      "explicacion_es": "Seed = plants. Egg = animals. Growth y death = both.",
+      "pares": [
+        {
+          "izquierda": "seed",
+          "derecha": "Plants"
+        },
+        {
+          "izquierda": "egg",
+          "derecha": "Animals"
+        },
+        {
+          "izquierda": "growth",
+          "derecha": "Both: grow"
+        },
+        {
+          "izquierda": "death",
+          "derecha": "Both: die"
+        }
+      ]
+    },
+    {
+      "id": "sccy38",
+      "subtema": "compare",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How are a frog and a sea turtle ALIKE?",
+      "pregunta_es": "¿En qué se PARECEN una rana y una tortuga marina?",
+      "explicacion_es": "Se parecen: las dos salen de huevos y crecen hasta ser adultas.",
+      "opciones": [
+        "Both hatch from eggs and grow into adults",
+        "Both have large eggs",
+        "Both live only on land",
+        "Both are plants"
+      ],
+      "correcta": "Both hatch from eggs and grow into adults"
+    },
+    {
+      "id": "sccy39",
+      "subtema": "compare",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How are a frog and a sea turtle DIFFERENT?",
+      "pregunta_es": "¿En qué se DIFERENCIAN una rana y una tortuga marina?",
+      "explicacion_es": "Se diferencian: el tamaño de los huevos.",
+      "opciones": [
+        "Frog eggs are small and sea turtle eggs are large",
+        "Both have the same egg size",
+        "The frog is a plant",
+        "The turtle has a seed"
+      ],
+      "correcta": "Frog eggs are small and sea turtle eggs are large"
+    },
+    {
+      "id": "sccy40",
+      "subtema": "compare",
+      "tipo": "completar",
+      "pregunta_en": "Frog and sea turtle are ______ because both hatch from eggs.",
+      "pregunta_es": "La rana y la tortuga marina son ______ porque las dos salen de huevos.",
+      "explicacion_es": "Alike = parecidas (a-LÁIK).",
+      "pista_es": "a-láik",
+      "respuesta": "alike",
+      "aceptadas": [
+        "similar",
+        "the same"
+      ]
+    },
+    {
+      "id": "sccy41",
+      "subtema": "compare",
+      "tipo": "completar",
+      "pregunta_en": "Frog eggs are small and sea turtle eggs are ______.",
+      "pregunta_es": "Los huevos de rana son pequeños y los de tortuga marina son ______.",
+      "explicacion_es": "Large = grandes (LARY).",
+      "pista_es": "l _ r g e",
+      "respuesta": "large",
+      "aceptadas": [
+        "big"
+      ]
+    },
+    {
+      "id": "sccy42",
+      "subtema": "compare",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the BEST answer? «Compare the life cycle of a frog and a sea turtle: how are they different and similar?»",
+      "pregunta_es": "¿Cuál es la MEJOR respuesta? «Compara el ciclo de vida de la rana y la tortuga: ¿en qué se diferencian y se parecen?»",
+      "explicacion_es": "Killian solo escribió una diferencia y perdió 3 puntos: faltó lo que es IGUAL. ¡Pon las dos partes!",
+      "peso": 3,
+      "opciones": [
+        "Frogs and sea turtles are alike because both hatch from eggs and grow into adults. They are different because frog eggs are small and sea turtle eggs are large.",
+        "The egg of the sea turtle is large and the egg is small.",
+        "They are different.",
+        "Both."
+      ],
+      "correcta": "Frogs and sea turtles are alike because both hatch from eggs and grow into adults. They are different because frog eggs are small and sea turtle eggs are large."
+    },
+    {
+      "id": "sccy43",
+      "subtema": "compare",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Two dogs of the same kind look different after living with different people. Why?",
+      "pregunta_es": "Dos perros de la misma raza se ven distintos después de vivir con familias diferentes. ¿Por qué?",
+      "explicacion_es": "Comida, ejercicio y cuidado cambian cómo se ve un animal. 🐕",
+      "opciones": [
+        "Their environment and care were different",
+        "They are different animals",
+        "They hatched from eggs",
+        "They are plants"
+      ],
+      "correcta": "Their environment and care were different"
+    },
+    {
+      "id": "sccy44",
+      "subtema": "compare",
+      "tipo": "completar",
+      "pregunta_en": "Two dogs can look different because their ______ was different.",
+      "pregunta_es": "Dos perros pueden verse distintos porque su ______ fue distinto.",
+      "explicacion_es": "Environment = ambiente (en-VÁI-ron-ment).",
+      "pista_es": "en-VÁI-ron-ment",
+      "respuesta": "environment",
+      "aceptadas": [
+        "environments"
+      ]
+    },
+    {
+      "id": "sccy45",
+      "subtema": "compare",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Frog eggs and sea turtle eggs are the same size.",
+      "pregunta_es": "Los huevos de rana y de tortuga marina son del mismo tamaño.",
+      "explicacion_es": "¡Falso! Los de rana son pequeños y los de tortuga son grandes.",
+      "correcta": false
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "organism",
+      "es": "ser vivo",
+      "aceptadas": [
+        "organismo"
+      ],
+      "ejemplo_en": "A plant is an organism.",
+      "ejemplo_es": "Una planta es un ser vivo."
+    },
+    {
+      "en": "life cycle",
+      "es": "ciclo de vida",
+      "aceptadas": [
+        "ciclo"
+      ],
+      "ejemplo_en": "A plant has a life cycle.",
+      "ejemplo_es": "Una planta tiene un ciclo de vida."
+    },
+    {
+      "en": "growth",
+      "es": "crecimiento",
+      "aceptadas": [
+        "crecer"
+      ],
+      "ejemplo_en": "Growth means getting larger.",
+      "ejemplo_es": "Crecimiento es hacerse más grande."
+    },
+    {
+      "en": "reproduction",
+      "es": "reproducción",
+      "aceptadas": [
+        "reproduccion"
+      ],
+      "ejemplo_en": "Reproduction makes new plants.",
+      "ejemplo_es": "La reproducción hace plantas nuevas."
+    },
+    {
+      "en": "seed",
+      "es": "semilla",
+      "aceptadas": [
+        "semillas"
+      ],
+      "ejemplo_en": "I plant a seed.",
+      "ejemplo_es": "Siembro una semilla."
+    },
+    {
+      "en": "germination",
+      "es": "germinación",
+      "aceptadas": [
+        "germinacion",
+        "germinar"
+      ],
+      "ejemplo_en": "Germination is stage 2.",
+      "ejemplo_es": "La germinación es la etapa 2."
+    },
+    {
+      "en": "seedling",
+      "es": "plántula",
+      "aceptadas": [
+        "plantula",
+        "plantita"
+      ],
+      "ejemplo_en": "The seedling has two leaves.",
+      "ejemplo_es": "La plántula tiene dos hojas."
+    },
+    {
+      "en": "mature plant",
+      "es": "planta adulta",
+      "aceptadas": [
+        "planta madura"
+      ],
+      "ejemplo_en": "The mature plant has flowers.",
+      "ejemplo_es": "La planta adulta tiene flores."
+    },
+    {
+      "en": "alike",
+      "es": "parecido",
+      "aceptadas": [
+        "iguales",
+        "igual"
+      ],
+      "ejemplo_en": "The eggs are alike.",
+      "ejemplo_es": "Los huevos son parecidos."
+    },
+    {
+      "en": "environment",
+      "es": "ambiente",
+      "aceptadas": [
+        "entorno"
+      ],
+      "ejemplo_en": "The environment changes a dog.",
+      "ejemplo_es": "El ambiente cambia a un perro."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "word-bank",
+      "emoji": "📚",
+      "titulo": "Word Bank: lee la definición y busca la palabra",
+      "pasos": [
+        "«Period of getting larger» → growth 📏",
+        "«A living thing» → organism 🐾",
+        "«Stages an organism goes through» → life cycle 🔄",
+        "«Make a new organism of the same kind» → reproduction 👶",
+        "Tacha cada palabra que uses: no se repite ninguna."
+      ],
+      "truco": "Killian cambió growth, life cycle y reproduction de lugar: ¡lee la definición completa!"
+    },
+    {
+      "subtema": "stages",
+      "emoji": "🌱",
+      "titulo": "Las 5 etapas en orden",
+      "pasos": [
+        "1 seed 🌰 → 2 germination 🌱 → 3 seedling 🌿 → 4 young plant → 5 mature plant 🌼",
+        "Dibuja flechas entre las etapas y escribe el nombre debajo de cada dibujo."
+      ],
+      "truco": "Siempre empieza con la semilla y termina con la planta adulta."
+    },
+    {
+      "subtema": "compare",
+      "emoji": "🐸",
+      "titulo": "Comparar: iguales y diferentes",
+      "pasos": [
+        "1. «Are alike because…» (en qué se parecen).",
+        "2. «They are different because…» (en qué se diferencian).",
+        "Las DOS partes valen puntos."
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ]
+}

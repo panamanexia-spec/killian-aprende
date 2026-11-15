@@ -1,0 +1,930 @@
+{
+  "tipo": "tema",
+  "id": "sci-magnets-maze",
+  "materia": "Science",
+  "titulo": "Magnets and the Magnetic Maze",
+  "titulo_es": "Los imanes y el laberinto magnético",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "poles",
+    "pares",
+    "distance",
+    "maze",
+    "real-life"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PART 1: Magnets and poles",
+      "es": "PARTE 1: Imanes y polos"
+    },
+    {
+      "emoji": "🧲",
+      "en": "A magnet has two poles: north (N) and south (S).",
+      "es": "Imán = MÁG-net. Polos = PÓULS. Un imán tiene dos polos: norte (N) y sur (S)."
+    },
+    {
+      "emoji": "🤝",
+      "en": "Opposite poles attract.",
+      "es": "Polos distintos se ATRAEN (a-TRÁKT): se pegan. N con S."
+    },
+    {
+      "emoji": "↔️",
+      "en": "Same poles repel.",
+      "es": "Polos iguales se RECHAZAN (ri-PÉL): se empujan. N con N, o S con S."
+    },
+    {
+      "emoji": "🧠",
+      "en": "N and S attract. N and N repel. S and S repel.",
+      "es": "Truco: «distintos se atraen, iguales se rechazan»."
+    },
+    {
+      "emoji": "🤝",
+      "en": "They attract.",
+      "es": "Cuando se miran polos distintos, los imanes se atraen: «They attract»."
+    },
+    {
+      "emoji": "↔️",
+      "en": "They repel.",
+      "es": "Cuando se miran polos iguales, los imanes se rechazan: «They repel»."
+    },
+    {
+      "emoji": "✍️",
+      "en": "The magnets repel because the same poles repel.",
+      "es": "Modelo de respuesta para polos iguales (S y S, o N y N)."
+    },
+    {
+      "emoji": "💪",
+      "en": "Magnetic force is a push or a pull.",
+      "es": "Fuerza magnética (FORS) = un empujón o un jalón."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PART 2: Force without touching",
+      "es": "PARTE 2: Fuerza sin tocar"
+    },
+    {
+      "emoji": "📎",
+      "en": "A magnet can move a paper clip without touching it.",
+      "es": "Paper clip = PÉI-per CLIP (un clip). El imán mueve el clip sin tocarlo."
+    },
+    {
+      "emoji": "📄",
+      "en": "The magnetic force goes through paper.",
+      "es": "La fuerza magnética atraviesa el papel. Por eso el imán mueve el clip desde abajo."
+    },
+    {
+      "emoji": "👻",
+      "en": "Magnetic force is invisible.",
+      "es": "Invisible = no se ve, pero está ahí."
+    },
+    {
+      "emoji": "✍️",
+      "en": "The magnet moved the paper clip without touching it because the magnetic force goes through the paper.",
+      "es": "Modelo de respuesta: «Explica cómo el imán movió el clip sin tocarlo»."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PART 3: Distance and strength",
+      "es": "PARTE 3: Distancia y fuerza"
+    },
+    {
+      "emoji": "📏",
+      "en": "Distance means how far something is.",
+      "es": "Distance = DÍS-tans = qué tan lejos está algo."
+    },
+    {
+      "emoji": "💥",
+      "en": "The closer the magnet is, the stronger the magnetic force.",
+      "es": "Más cerca = más FUERTE (strong = STRONG)."
+    },
+    {
+      "emoji": "🪶",
+      "en": "The farther the magnet is, the weaker the magnetic force.",
+      "es": "Más lejos = más DÉBIL (weak = UIIK)."
+    },
+    {
+      "emoji": "📎",
+      "en": "A (1 cm) is the closest and feels the strongest force. C (10 cm) is the farthest and feels the weakest force.",
+      "es": "En el dibujo: A está a 1 cm, B a 5 cm y C a 10 cm."
+    },
+    {
+      "emoji": "✏️",
+      "en": "Diagram: draw the magnet and the paper clip near, medium and far, and label them strong, medium and weak.",
+      "es": "Dibuja 3 casos con la distancia escrita y rotula strong, medium y weak."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PART 4: The magnetic maze game",
+      "es": "PARTE 4: El laberinto magnético"
+    },
+    {
+      "emoji": "🌀",
+      "en": "A maze is a path with walls, a start and a finish.",
+      "es": "Maze = MÉIS = laberinto. Start = empezar, finish = terminar."
+    },
+    {
+      "emoji": "1️⃣",
+      "en": "Rule 1: Move the paper clip with the magnet from under the paper.",
+      "es": "Regla 1: mueve el clip con el imán por debajo del papel."
+    },
+    {
+      "emoji": "2️⃣",
+      "en": "Rule 2: Do not touch the paper clip with your hand.",
+      "es": "Regla 2: no toques el clip con la mano."
+    },
+    {
+      "emoji": "3️⃣",
+      "en": "Rule 3: Follow the path from start to finish without crossing the walls.",
+      "es": "Regla 3: sigue el camino de la salida a la meta sin cruzar las paredes."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PART 5: Mazes and real life",
+      "es": "PARTE 5: El laberinto y la vida real"
+    },
+    {
+      "emoji": "🛠️",
+      "en": "Maze design helps us solve real problems because we plan, test and fix our ideas.",
+      "es": "Plan = planear, test = probar, fix = arreglar."
+    },
+    {
+      "emoji": "👷",
+      "en": "Engineers plan a path, test it and fix the mistakes.",
+      "es": "Engineers = en-yi-NÍRS = ingenieros."
+    },
+    {
+      "emoji": "🧲",
+      "en": "Magnets are used in real life: fridge doors, compasses, toys and trains.",
+      "es": "Compass = CÓM-pas = brújula."
+    },
+    {
+      "emoji": "✏️",
+      "en": "Model of the maze: draw the start, the finish, the walls and the path.",
+      "es": "Model = MÓ-del = maqueta o dibujo del diseño."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Maze design helps us solve real problems because we plan a path, test it and fix our mistakes. Engineers do the same when they build things. For example, a magnet can open a fridge door.",
+      "es": "Modelo de respuesta para la pregunta 7."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "scma1",
+      "subtema": "poles",
+      "tipo": "completar",
+      "pregunta_en": "A magnet has two ______: north and south.",
+      "pregunta_es": "Un imán tiene dos ______: norte y sur.",
+      "explicacion_es": "Poles = polos. Se dice PÓULS. 🧲",
+      "pista_es": "Empieza con p…",
+      "respuesta": "poles",
+      "aceptadas": [
+        "pole"
+      ]
+    },
+    {
+      "id": "scma2",
+      "subtema": "poles",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which letters are the poles of a magnet?",
+      "pregunta_es": "¿Qué letras son los polos de un imán?",
+      "explicacion_es": "N = norte (north), S = sur (south). 🧲",
+      "opciones": [
+        "N and S",
+        "A and B",
+        "X and Y",
+        "P and M"
+      ],
+      "correcta": "N and S"
+    },
+    {
+      "id": "scma3",
+      "subtema": "poles",
+      "tipo": "completar",
+      "pregunta_en": "Opposite poles ______.",
+      "pregunta_es": "Polos distintos se ______.",
+      "explicacion_es": "Attract = atraerse (a-TRÁKT): N y S se pegan. 🤝",
+      "pista_es": "a-t-t-r-a-c-t",
+      "respuesta": "attract",
+      "aceptadas": [
+        "attracts"
+      ]
+    },
+    {
+      "id": "scma4",
+      "subtema": "poles",
+      "tipo": "completar",
+      "pregunta_en": "Same poles ______.",
+      "pregunta_es": "Polos iguales se ______.",
+      "explicacion_es": "Repel = rechazarse (ri-PÉL): N con N se empujan. ↔️",
+      "pista_es": "re-pel",
+      "respuesta": "repel",
+      "aceptadas": [
+        "repels"
+      ]
+    },
+    {
+      "id": "scma5",
+      "subtema": "poles",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What happens when N meets S?",
+      "pregunta_es": "¿Qué pasa cuando N se encuentra con S?",
+      "explicacion_es": "Polos distintos (N y S) se atraen.",
+      "opciones": [
+        "They attract",
+        "They repel",
+        "Nothing happens",
+        "They break"
+      ],
+      "correcta": "They attract"
+    },
+    {
+      "id": "scma6",
+      "subtema": "poles",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What happens when S meets S?",
+      "pregunta_es": "¿Qué pasa cuando S se encuentra con S?",
+      "explicacion_es": "Polos iguales se rechazan.",
+      "opciones": [
+        "They repel",
+        "They attract",
+        "They stick together",
+        "They disappear"
+      ],
+      "correcta": "They repel"
+    },
+    {
+      "id": "scma7",
+      "subtema": "poles",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Same poles attract.",
+      "pregunta_es": "Polos iguales se atraen.",
+      "explicacion_es": "¡Falso! Polos IGUALES se rechazan (repel).",
+      "correcta": false
+    },
+    {
+      "id": "scma8",
+      "subtema": "poles",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Opposite poles attract.",
+      "pregunta_es": "Polos distintos se atraen.",
+      "explicacion_es": "¡Verdadero! Distintos se atraen.",
+      "correcta": true
+    },
+    {
+      "id": "scma9",
+      "subtema": "poles",
+      "tipo": "completar",
+      "pregunta_en": "Magnetic force is a push or a ______.",
+      "pregunta_es": "La fuerza magnética es un empujón o un ______.",
+      "explicacion_es": "Pull = jalar (PUL). Push = empujar. 💪",
+      "pista_es": "p _ l l",
+      "respuesta": "pull"
+    },
+    {
+      "id": "scma10",
+      "subtema": "poles",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is magnetic force?",
+      "pregunta_es": "¿Qué es la fuerza magnética?",
+      "explicacion_es": "Fuerza magnética = un empujón o un jalón.",
+      "opciones": [
+        "Magnetic force is a push or a pull",
+        "Magnetic force is a kind of food",
+        "Magnetic force is a color",
+        "Magnetic force is a sound"
+      ],
+      "correcta": "Magnetic force is a push or a pull"
+    },
+    {
+      "id": "scma11",
+      "subtema": "poles",
+      "tipo": "unir",
+      "pregunta_en": "Match the words.",
+      "pregunta_es": "Une cada palabra con su significado.",
+      "explicacion_es": "Attract = atraerse. Repel = rechazarse. Pole = polo. Magnet = imán.",
+      "pares": [
+        {
+          "izquierda": "attract",
+          "derecha": "atraerse"
+        },
+        {
+          "izquierda": "repel",
+          "derecha": "rechazarse"
+        },
+        {
+          "izquierda": "pole",
+          "derecha": "polo"
+        },
+        {
+          "izquierda": "magnet",
+          "derecha": "imán"
+        }
+      ]
+    },
+    {
+      "id": "scma12",
+      "subtema": "pares",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What will happen between the two magnets?",
+      "pregunta_es": "Mira el dibujo. ¿Qué pasará entre los dos imanes?",
+      "explicacion_es": "En el centro se miran S y N: polos distintos, ¡se atraen! 🤝",
+      "opciones": [
+        "They attract",
+        "They repel"
+      ],
+      "correcta": "They attract",
+      "imagen": "mag_a.png"
+    },
+    {
+      "id": "scma13",
+      "subtema": "pares",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What will happen between the two magnets?",
+      "pregunta_es": "Mira el dibujo. ¿Qué pasará entre los dos imanes?",
+      "explicacion_es": "En el centro se miran S y S: polos iguales, ¡se rechazan! ↔️",
+      "opciones": [
+        "They repel",
+        "They attract"
+      ],
+      "correcta": "They repel",
+      "imagen": "mag_b.png"
+    },
+    {
+      "id": "scma14",
+      "subtema": "pares",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What will happen between the two magnets?",
+      "pregunta_es": "Mira el dibujo. ¿Qué pasará entre los dos imanes?",
+      "explicacion_es": "En el centro se miran N y N: polos iguales, ¡se rechazan!",
+      "opciones": [
+        "They repel",
+        "They attract"
+      ],
+      "correcta": "They repel",
+      "imagen": "mag_c.png"
+    },
+    {
+      "id": "scma15",
+      "subtema": "pares",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Look at the picture. What will happen between the two magnets?",
+      "pregunta_es": "Mira el dibujo. ¿Qué pasará entre los dos imanes?",
+      "explicacion_es": "En el centro se miran N y S: polos distintos, ¡se atraen!",
+      "opciones": [
+        "They attract",
+        "They repel"
+      ],
+      "correcta": "They attract",
+      "imagen": "mag_d.png"
+    },
+    {
+      "id": "scma16",
+      "subtema": "pares",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. The magnets will ______.",
+      "pregunta_es": "Mira el dibujo. Los imanes se van a ______. (attract o repel)",
+      "explicacion_es": "En el centro se miran S y N: ¡se atraen!",
+      "pista_es": "Distintos…",
+      "respuesta": "attract",
+      "aceptadas": [
+        "attracts"
+      ],
+      "imagen": "mag_a.png"
+    },
+    {
+      "id": "scma17",
+      "subtema": "pares",
+      "tipo": "completar",
+      "pregunta_en": "Look at the picture. The magnets will ______.",
+      "pregunta_es": "Mira el dibujo. Los imanes se van a ______. (attract o repel)",
+      "explicacion_es": "En el centro se miran S y S: ¡se rechazan!",
+      "pista_es": "Iguales…",
+      "respuesta": "repel",
+      "aceptadas": [
+        "repels"
+      ],
+      "imagen": "mag_b.png"
+    },
+    {
+      "id": "scma18",
+      "subtema": "pares",
+      "tipo": "completar",
+      "pregunta_en": "The magnets repel because the ______ poles repel.",
+      "pregunta_es": "Los imanes se rechazan porque los polos ______ se rechazan.",
+      "explicacion_es": "Same = iguales (SÉIM). Frase modelo: «The magnets repel because the same poles repel.»",
+      "pista_es": "s _ m _",
+      "respuesta": "same"
+    },
+    {
+      "id": "scma19",
+      "subtema": "pares",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which sentence is the BEST answer for the picture with S and S?",
+      "pregunta_es": "¿Cuál es la MEJOR respuesta para el dibujo con S y S?",
+      "explicacion_es": "Una buena respuesta es una oración completa con «because». ✍️",
+      "peso": 2,
+      "opciones": [
+        "The magnets repel because the same poles repel.",
+        "Repel.",
+        "The magnets are the same.",
+        "They stick because they are different."
+      ],
+      "correcta": "The magnets repel because the same poles repel.",
+      "imagen": "mag_b.png"
+    },
+    {
+      "id": "scma20",
+      "subtema": "distance",
+      "tipo": "completar",
+      "pregunta_en": "The closer the magnet is, the ______ the magnetic force.",
+      "pregunta_es": "Mientras más cerca está el imán, ______ es la fuerza magnética.",
+      "explicacion_es": "Stronger = más fuerte (STRÓN-ger). Más cerca = más fuerza. 💥",
+      "pista_es": "str…",
+      "respuesta": "stronger",
+      "aceptadas": [
+        "strong"
+      ]
+    },
+    {
+      "id": "scma21",
+      "subtema": "distance",
+      "tipo": "completar",
+      "pregunta_en": "The farther the magnet is, the ______ the magnetic force.",
+      "pregunta_es": "Mientras más lejos está el imán, ______ es la fuerza magnética.",
+      "explicacion_es": "Weaker = más débil (UÍI-ker). Más lejos = menos fuerza. 🪶",
+      "pista_es": "we…",
+      "respuesta": "weaker",
+      "aceptadas": [
+        "weak"
+      ]
+    },
+    {
+      "id": "scma22",
+      "subtema": "distance",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which paper clip feels the STRONGEST magnetic force?",
+      "pregunta_es": "¿Cuál clip siente la fuerza magnética MÁS fuerte?",
+      "explicacion_es": "El clip A está más cerca: ¡más fuerza!",
+      "opciones": [
+        "A (1 cm)",
+        "B (5 cm)",
+        "C (10 cm)"
+      ],
+      "correcta": "A (1 cm)",
+      "imagen": "mag_distancia.png"
+    },
+    {
+      "id": "scma23",
+      "subtema": "distance",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which paper clip feels the WEAKEST magnetic force?",
+      "pregunta_es": "¿Cuál clip siente la fuerza magnética MÁS débil?",
+      "explicacion_es": "El clip C está más lejos: ¡menos fuerza!",
+      "opciones": [
+        "C (10 cm)",
+        "A (1 cm)",
+        "B (5 cm)"
+      ],
+      "correcta": "C (10 cm)",
+      "imagen": "mag_distancia.png"
+    },
+    {
+      "id": "scma24",
+      "subtema": "distance",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What does distance mean?",
+      "pregunta_es": "¿Qué significa distance?",
+      "explicacion_es": "Distance = qué tan lejos está algo. 📏",
+      "opciones": [
+        "Distance means how far something is",
+        "Distance means how heavy something is",
+        "Distance means the color of something",
+        "Distance means how old something is"
+      ],
+      "correcta": "Distance means how far something is"
+    },
+    {
+      "id": "scma25",
+      "subtema": "distance",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The farther the magnet is, the stronger the force.",
+      "pregunta_es": "Mientras más lejos está el imán, más fuerte es la fuerza.",
+      "explicacion_es": "¡Falso! Más lejos = más DÉBIL.",
+      "correcta": false
+    },
+    {
+      "id": "scma26",
+      "subtema": "distance",
+      "tipo": "completar",
+      "pregunta_en": "In the diagram, we label the near magnet ______.",
+      "pregunta_es": "En el diagrama, rotulamos el imán cercano como ______.",
+      "explicacion_es": "Cerca = strong (fuerte).",
+      "pista_es": "s _ r o n g",
+      "respuesta": "strong",
+      "aceptadas": [
+        "strongest"
+      ]
+    },
+    {
+      "id": "scma27",
+      "subtema": "distance",
+      "tipo": "completar",
+      "pregunta_en": "In the diagram, we label the far magnet ______.",
+      "pregunta_es": "En el diagrama, rotulamos el imán lejano como ______.",
+      "explicacion_es": "Lejos = weak (débil).",
+      "pista_es": "w _ a k",
+      "respuesta": "weak",
+      "aceptadas": [
+        "weakest"
+      ]
+    },
+    {
+      "id": "scma28",
+      "subtema": "distance",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What do we draw in a diagram about distance and magnetic force?",
+      "pregunta_es": "¿Qué dibujamos en un diagrama de distancia y fuerza magnética?",
+      "explicacion_es": "Dibuja 3 casos con distancia y rotula la fuerza.",
+      "opciones": [
+        "Draw the magnet and the paper clip near, medium and far, and label them strong, medium and weak",
+        "Only a big magnet",
+        "Only the paper clip",
+        "A picture of a house"
+      ],
+      "correcta": "Draw the magnet and the paper clip near, medium and far, and label them strong, medium and weak"
+    },
+    {
+      "id": "scma29",
+      "subtema": "distance",
+      "tipo": "completar",
+      "pregunta_en": "______ means how far something is.",
+      "pregunta_es": "______ significa qué tan lejos está algo.",
+      "explicacion_es": "Distance = distancia (DÍS-tans).",
+      "pista_es": "d-i-s…",
+      "respuesta": "distance"
+    },
+    {
+      "id": "scma30",
+      "subtema": "distance",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "A diagram needs labels.",
+      "pregunta_es": "Un diagrama necesita rótulos.",
+      "explicacion_es": "¡Verdadero! Sin rótulos (labels) pierdes puntos: ¡escribe strong, medium y weak!",
+      "correcta": true
+    },
+    {
+      "id": "scma31",
+      "subtema": "maze",
+      "tipo": "completar",
+      "pregunta_en": "A ______ is a path with walls, a start and a finish.",
+      "pregunta_es": "Un ______ es un camino con paredes, una salida y una meta.",
+      "explicacion_es": "Maze = laberinto (MÉIS). 🌀",
+      "pista_es": "m _ z e",
+      "respuesta": "maze"
+    },
+    {
+      "id": "scma32",
+      "subtema": "maze",
+      "tipo": "completar",
+      "pregunta_en": "A magnet can move a paper ______ without touching it.",
+      "pregunta_es": "Un imán puede mover un ______ de papel sin tocarlo.",
+      "explicacion_es": "Paper clip = clip (PÉI-per CLIP). 📎",
+      "pista_es": "c _ i p",
+      "respuesta": "clip",
+      "aceptadas": [
+        "paper clip",
+        "paperclip"
+      ]
+    },
+    {
+      "id": "scma33",
+      "subtema": "maze",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Why can the magnet move the paper clip without touching it?",
+      "pregunta_es": "¿Por qué el imán puede mover el clip sin tocarlo?",
+      "explicacion_es": "La fuerza magnética atraviesa el papel y mueve el clip. 📄",
+      "opciones": [
+        "The magnetic force goes through the paper",
+        "The paper clip is alive",
+        "The wind pushes it",
+        "The paper is sticky"
+      ],
+      "correcta": "The magnetic force goes through the paper"
+    },
+    {
+      "id": "scma34",
+      "subtema": "maze",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is a rule of the magnetic maze game?",
+      "pregunta_es": "¿Cuál es una regla del juego del laberinto magnético?",
+      "explicacion_es": "Regla: no toques el clip con la mano. ✋",
+      "opciones": [
+        "Do not touch the paper clip with your hand",
+        "Throw the magnet on the floor",
+        "Draw on the walls",
+        "Eat the paper clip"
+      ],
+      "correcta": "Do not touch the paper clip with your hand"
+    },
+    {
+      "id": "scma35",
+      "subtema": "maze",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is another rule of the magnetic maze game?",
+      "pregunta_es": "¿Cuál es otra regla del juego?",
+      "explicacion_es": "Regla: sigue el camino sin cruzar las paredes.",
+      "opciones": [
+        "Follow the path from start to finish without crossing the walls",
+        "Jump over the walls",
+        "Break the paper",
+        "Skip the path"
+      ],
+      "correcta": "Follow the path from start to finish without crossing the walls"
+    },
+    {
+      "id": "scma36",
+      "subtema": "maze",
+      "tipo": "completar",
+      "pregunta_en": "Rule 1: Move the paper clip with the ______ from under the paper.",
+      "pregunta_es": "Regla 1: mueve el clip con el ______ por debajo del papel.",
+      "explicacion_es": "Magnet = imán (MÁG-net).",
+      "pista_es": "m _ g n _ t",
+      "respuesta": "magnet",
+      "aceptadas": [
+        "magnets"
+      ]
+    },
+    {
+      "id": "scma37",
+      "subtema": "maze",
+      "tipo": "completar",
+      "pregunta_en": "Rule 2: Do not ______ the paper clip with your hand.",
+      "pregunta_es": "Regla 2: no ______ el clip con la mano.",
+      "explicacion_es": "Touch = tocar (TÁCH).",
+      "pista_es": "t _ u c h",
+      "respuesta": "touch"
+    },
+    {
+      "id": "scma38",
+      "subtema": "maze",
+      "tipo": "completar",
+      "pregunta_en": "Rule 3: Follow the ______ from start to finish without crossing the walls.",
+      "pregunta_es": "Regla 3: sigue el ______ de la salida a la meta sin cruzar las paredes.",
+      "explicacion_es": "Path = camino (PAZ).",
+      "pista_es": "p _ t h",
+      "respuesta": "path",
+      "aceptadas": [
+        "way"
+      ]
+    },
+    {
+      "id": "scma39",
+      "subtema": "maze",
+      "tipo": "unir",
+      "pregunta_en": "Match the maze words.",
+      "pregunta_es": "Une cada palabra con su significado.",
+      "explicacion_es": "Start = salida, finish = meta, wall = pared, path = camino.",
+      "pares": [
+        {
+          "izquierda": "start",
+          "derecha": "salida"
+        },
+        {
+          "izquierda": "finish",
+          "derecha": "meta"
+        },
+        {
+          "izquierda": "wall",
+          "derecha": "pared"
+        },
+        {
+          "izquierda": "path",
+          "derecha": "camino"
+        }
+      ]
+    },
+    {
+      "id": "scma40",
+      "subtema": "real-life",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "How does maze design help us solve real problems?",
+      "pregunta_es": "¿Cómo nos ayuda el diseño de laberintos a resolver problemas reales?",
+      "explicacion_es": "Planear, probar y arreglar: ¡así resuelven problemas los ingenieros! 🛠️",
+      "peso": 2,
+      "opciones": [
+        "We plan, test and fix our ideas",
+        "We forget our ideas",
+        "We never try again",
+        "We only play"
+      ],
+      "correcta": "We plan, test and fix our ideas"
+    },
+    {
+      "id": "scma41",
+      "subtema": "real-life",
+      "tipo": "completar",
+      "pregunta_en": "Maze design helps us solve real problems because we plan, ______ and fix our ideas.",
+      "pregunta_es": "Diseñar laberintos nos ayuda porque planeamos, ______ y arreglamos nuestras ideas.",
+      "explicacion_es": "Test = probar (TEST).",
+      "pista_es": "t _ s t",
+      "respuesta": "test",
+      "aceptadas": [
+        "try"
+      ]
+    },
+    {
+      "id": "scma42",
+      "subtema": "real-life",
+      "tipo": "completar",
+      "pregunta_en": "Engineers plan a path, test it and ______ the mistakes.",
+      "pregunta_es": "Los ingenieros planean un camino, lo prueban y ______ los errores.",
+      "explicacion_es": "Fix = arreglar (FIKS).",
+      "pista_es": "f _ x",
+      "respuesta": "fix"
+    },
+    {
+      "id": "scma43",
+      "subtema": "real-life",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Magnets are used in real life: fridge doors, compasses, toys and trains.",
+      "pregunta_es": "Los imanes se usan en la vida real: puertas de refrigerador, brújulas, juguetes y trenes.",
+      "explicacion_es": "¡Verdadero! Los imanes están por todas partes. 🧲",
+      "correcta": true
+    },
+    {
+      "id": "scma44",
+      "subtema": "real-life",
+      "tipo": "completar",
+      "pregunta_en": "Model of the maze: draw the start, the finish, the walls and the ______.",
+      "pregunta_es": "Maqueta del laberinto: dibuja la salida, la meta, las paredes y el ______.",
+      "explicacion_es": "En el dibujo del diseño marca salida, meta, paredes y camino.",
+      "pista_es": "p _ t h",
+      "respuesta": "path"
+    },
+    {
+      "id": "scma45",
+      "subtema": "real-life",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the BEST answer? «How does magnetic maze design help us solve real-life problems?»",
+      "pregunta_es": "¿Cuál es la MEJOR respuesta? «¿Cómo nos ayuda el diseño del laberinto magnético a resolver problemas de la vida real?»",
+      "explicacion_es": "La respuesta de 3 oraciones: respuesta + explicación + ejemplo. ¡No la dejes en blanco! 🍀",
+      "peso": 3,
+      "opciones": [
+        "Maze design helps us solve real problems because we plan a path, test it and fix our mistakes. Engineers do the same when they build things. For example, a magnet can open a fridge door.",
+        "It helps.",
+        "Because it is fun.",
+        "Maze."
+      ],
+      "correcta": "Maze design helps us solve real problems because we plan a path, test it and fix our mistakes. Engineers do the same when they build things. For example, a magnet can open a fridge door."
+    },
+    {
+      "id": "scma46",
+      "subtema": "maze",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the BEST answer? «Explain how the magnet made the paper clip move without touching it.»",
+      "pregunta_es": "¿Cuál es la MEJOR respuesta? «Explica cómo el imán movió el clip sin tocarlo.»",
+      "explicacion_es": "Una oración completa con «because» (porque). ✍️",
+      "peso": 3,
+      "opciones": [
+        "The magnet moved the paper clip without touching it because the magnetic force goes through the paper.",
+        "It moved.",
+        "Magnet.",
+        "Because I moved it."
+      ],
+      "correcta": "The magnet moved the paper clip without touching it because the magnetic force goes through the paper."
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "magnet",
+      "es": "imán",
+      "aceptadas": [
+        "iman"
+      ],
+      "ejemplo_en": "A magnet attracts a paper clip.",
+      "ejemplo_es": "Un imán atrae un clip."
+    },
+    {
+      "en": "pole",
+      "es": "polo",
+      "aceptadas": [
+        "polos"
+      ],
+      "ejemplo_en": "A magnet has two poles.",
+      "ejemplo_es": "Un imán tiene dos polos."
+    },
+    {
+      "en": "attract",
+      "es": "atraer",
+      "aceptadas": [
+        "atraerse",
+        "atrae"
+      ],
+      "ejemplo_en": "Opposite poles attract.",
+      "ejemplo_es": "Polos distintos se atraen."
+    },
+    {
+      "en": "repel",
+      "es": "rechazar",
+      "aceptadas": [
+        "rechazarse",
+        "empujar",
+        "rechaza"
+      ],
+      "ejemplo_en": "Same poles repel.",
+      "ejemplo_es": "Polos iguales se rechazan."
+    },
+    {
+      "en": "force",
+      "es": "fuerza",
+      "ejemplo_en": "Magnetic force is a push or a pull.",
+      "ejemplo_es": "La fuerza magnética es un empujón o un jalón."
+    },
+    {
+      "en": "distance",
+      "es": "distancia",
+      "ejemplo_en": "Distance means how far.",
+      "ejemplo_es": "Distancia significa qué tan lejos."
+    },
+    {
+      "en": "maze",
+      "es": "laberinto",
+      "ejemplo_en": "The maze has a start and a finish.",
+      "ejemplo_es": "El laberinto tiene salida y meta."
+    },
+    {
+      "en": "paper clip",
+      "es": "clip",
+      "aceptadas": [
+        "sujetapapeles",
+        "clip de papel"
+      ],
+      "ejemplo_en": "The paper clip moves.",
+      "ejemplo_es": "El clip se mueve."
+    },
+    {
+      "en": "strong",
+      "es": "fuerte",
+      "ejemplo_en": "A close magnet is strong.",
+      "ejemplo_es": "Un imán cerca es fuerte."
+    },
+    {
+      "en": "weak",
+      "es": "débil",
+      "aceptadas": [
+        "debil"
+      ],
+      "ejemplo_en": "A far magnet is weak.",
+      "ejemplo_es": "Un imán lejos es débil."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "poles",
+      "emoji": "🧲",
+      "titulo": "Distintos se atraen, iguales se rechazan",
+      "pasos": [
+        "N con S → se atraen 🤝 (attract).",
+        "N con N → se rechazan ↔️ (repel).",
+        "S con S → se rechazan ↔️ (repel).",
+        "Mira las dos letras que quedan frente a frente."
+      ],
+      "truco": "«Different attract, same repel»."
+    },
+    {
+      "subtema": "pares",
+      "emoji": "✍️",
+      "titulo": "Cómo contestar «What will happen?»",
+      "pasos": [
+        "Mira qué letras quedan en el centro.",
+        "Escribe: «The magnets ______ because the ______ poles ______».",
+        "Ejemplo: The magnets repel because the same poles repel."
+      ],
+      "truco": "Escribe una oración completa, en inglés, con «because»."
+    },
+    {
+      "subtema": "distance",
+      "emoji": "📏",
+      "titulo": "Distancia y fuerza",
+      "pasos": [
+        "Cerca = fuerza fuerte (strong).",
+        "Lejos = fuerza débil (weak).",
+        "En tu dibujo escribe la distancia (1 cm, 5 cm, 10 cm) y rotula con strong, medium y weak."
+      ],
+      "truco": "Un diagrama sin rótulos pierde puntos."
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ]
+}
