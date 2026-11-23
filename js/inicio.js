@@ -376,6 +376,14 @@ function retroMark(){
   });
   if(ch) saveHome();
 }
+/* Cuando no hay pendientes: los 3 temas más nuevos que todavía no tienen su ✅, para que siempre haya algo bueno que practicar. */
+function pracSuggest(){
+  var L = allTemas().filter(function(t){ return !t.builtin && !aprTs(t.id) && t.preguntas && t.preguntas.length; }).slice(-3).reverse();
+  if(!L.length) return "";
+  return '<div class="stack">' + L.map(function(t){
+    return '<button class="btn btn-blue" type="button" data-act="open-tema" data-id="' + esc(t.id) + '">' + esc(subjEmo(t.materia)) + ' ' + esc(t.titulo_es || t.titulo) + '</button>';
+  }).join("") + '</div>';
+}
 function renderHome(){
   retroMark();
   var now = new Date(), hr = now.getHours(), t = todayKey(), ag = agendaData();
@@ -412,7 +420,7 @@ function renderHome(){
       '<button class="btn btn-blue" type="button" data-act="go-screen" data-s="stars">Ver mis estrellas</button></div>';
   } else {
     h += '<div class="card alldone"><svg class="owl" aria-hidden="true"><use href="#owl"/></svg><h2>No tienes pendientes por ahora 😊</h2>' +
-      '<p>Puedes practicar inglés con tus temas.</p><button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
+      '<p>Puedes practicar con tus temas.</p>' + pracSuggest() + '<button class="btn btn-sun" type="button" data-act="go-screen" data-s="topics">📚 Ir a mis temas</button></div>';
   }
   if(!open && !later && advItems().length) h += '<div class="card alldone"><h2>🎉 ¡Terminaste todo lo de mañana!</h2><p>Si quieres, puedes adelantar tareas de otros días. ¡Es opcional!</p>' +
     '<button class="btn btn-sun btn-big" type="button" data-act="go-screen" data-s="adelantar">🚀 Adelantar tareas</button></div>';
