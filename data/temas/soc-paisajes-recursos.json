@@ -1,0 +1,848 @@
+{
+  "tipo": "tema",
+  "id": "soc-paisajes-recursos",
+  "materia": "Ciencias Sociales",
+  "titulo": "Paisajes, alcalde y recursos naturales",
+  "titulo_es": "Paisajes, alcalde y recursos naturales",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "natural",
+    "cultural",
+    "alcalde",
+    "renovables",
+    "no-renovables"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PARTE 1: El paisaje natural",
+      "es": "Lo hizo la naturaleza"
+    },
+    {
+      "emoji": "🌳",
+      "en": "El paisaje natural es el que hizo la naturaleza, sin la intervención del ser humano.",
+      "es": "Natural = de la naturaleza."
+    },
+    {
+      "emoji": "🏞️",
+      "en": "Un paisaje natural no tiene construcciones: solo montañas, ríos, bosques, mares y playas.",
+      "es": "No hay casas ni calles."
+    },
+    {
+      "emoji": "✏️",
+      "en": "Dibujo del paisaje natural: un árbol, un río y una montaña.",
+      "es": "Dibújalo pequeñito y con color."
+    },
+    {
+      "emoji": "🌲",
+      "en": "Un bosque con un río es un paisaje natural.",
+      "es": "Ejemplo para recordar."
+    },
+    {
+      "emoji": "✍️",
+      "en": "El paisaje natural es el que hizo la naturaleza, sin las personas. Tiene montañas, ríos, bosques, mares y playas. Por ejemplo, una selva con un río es un paisaje natural.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PARTE 2: El paisaje cultural",
+      "es": "Lo hicieron las personas"
+    },
+    {
+      "emoji": "🏙️",
+      "en": "El paisaje cultural es el que fue hecho o cambiado por las personas.",
+      "es": "Cultural = hecho por las personas."
+    },
+    {
+      "emoji": "🏢",
+      "en": "Ejemplos de paisaje cultural: edificios, casas, calles, puentes y cultivos.",
+      "es": "Todo lo que construyen las personas."
+    },
+    {
+      "emoji": "✏️",
+      "en": "Dibujo del paisaje cultural: un edificio, unas casas y una calle.",
+      "es": "Dibújalo pequeñito y con color."
+    },
+    {
+      "emoji": "🧠",
+      "en": "Truco: natural lo hizo la naturaleza, cultural lo hicieron las personas.",
+      "es": "Si hay casas o calles, es cultural."
+    },
+    {
+      "emoji": "🏙️",
+      "en": "Una ciudad con edificios y calles es un paisaje cultural.",
+      "es": "Ejemplo para recordar."
+    },
+    {
+      "emoji": "✍️",
+      "en": "El paisaje cultural es el que fue hecho o cambiado por las personas. Tiene edificios, casas, calles y puentes. Por ejemplo, una ciudad es un paisaje cultural.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PARTE 3: El alcalde",
+      "es": "La autoridad del distrito"
+    },
+    {
+      "emoji": "🏛️",
+      "en": "El alcalde es la máxima autoridad del distrito.",
+      "es": "Distrito = una parte de la provincia donde viven muchas familias."
+    },
+    {
+      "emoji": "🧹",
+      "en": "Una función del alcalde es cuidar que las calles estén limpias, arreglar calles y parques, y recoger la basura.",
+      "es": "Eso es cuidar el bienestar de la comunidad."
+    },
+    {
+      "emoji": "🌟",
+      "en": "Es importante que el alcalde cumpla su función para que el distrito esté limpio, ordenado y seguro.",
+      "es": "Así vivimos mejor todos."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Una función del alcalde es mantener limpias las calles. Es importante porque así el distrito está limpio y las personas viven sanas. Por ejemplo, si recogen la basura, no hay mal olor ni enfermedades.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PARTE 4: Recursos renovables",
+      "es": "No se acaban si los cuidamos"
+    },
+    {
+      "emoji": "🌎",
+      "en": "Los recursos naturales son lo que nos da la naturaleza y usamos para vivir.",
+      "es": "Natural = viene de la naturaleza."
+    },
+    {
+      "emoji": "♻️",
+      "en": "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos.",
+      "es": "Renovable = se renueva."
+    },
+    {
+      "emoji": "💧",
+      "en": "Ejemplos de recursos renovables: agua, bosques, sol, viento, plantas y animales.",
+      "es": "Los animales y las plantas se reproducen."
+    },
+    {
+      "emoji": "🚰",
+      "en": "El agua sirve para beber, el bosque da frutos y madera, y el sol da luz y calor.",
+      "es": "Esos son usos de los recursos renovables."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos. Por ejemplo, el agua y los bosques. Usamos el agua para beber y el bosque nos da frutos y madera.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PARTE 5: Recursos no renovables",
+      "es": "Se acaban"
+    },
+    {
+      "emoji": "🛢️",
+      "en": "Los recursos no renovables se acaban porque tardan millones de años en formarse.",
+      "es": "No renovable = no se renueva."
+    },
+    {
+      "emoji": "⛽",
+      "en": "Ejemplos de recursos no renovables: petróleo, carbón y minerales.",
+      "es": "Son las 3 palabras para recordar."
+    },
+    {
+      "emoji": "🚗",
+      "en": "Del petróleo sale la gasolina, el carbón da energía y los minerales sirven para construir.",
+      "es": "Esos son usos de los recursos no renovables."
+    },
+    {
+      "emoji": "🌱",
+      "en": "Debemos cuidar los recursos: ahorrar agua y reciclar.",
+      "es": "Así duran más tiempo."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Los recursos no renovables se acaban porque tardan millones de años en formarse. Por ejemplo, el petróleo, el carbón y los minerales. Del petróleo sale la gasolina para los carros.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟪",
+      "en": "PARTE 6: Cómo contestar el examen",
+      "es": "Con 3 oraciones"
+    },
+    {
+      "emoji": "✍️",
+      "en": "Cada respuesta lleva 3 oraciones como mínimo: respuesta, explicación y ejemplo.",
+      "es": "Una línea sola no alcanza."
+    },
+    {
+      "emoji": "🧼",
+      "en": "No uses tachones ni borrones, cuida la letra y la ortografía.",
+      "es": "Si te equivocas, haz una raya y escribe al lado."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "sore1",
+      "subtema": "natural",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la característica de un paisaje natural?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Natural = lo formó la naturaleza sola. 🌳",
+      "opciones": [
+        "El paisaje natural es el que hizo la naturaleza, sin la intervención del ser humano.",
+        "El paisaje cultural es el que fue hecho o cambiado por las personas.",
+        "Tiene edificios y calles",
+        "Lo hicieron las personas"
+      ],
+      "correcta": "El paisaje natural es el que hizo la naturaleza, sin la intervención del ser humano."
+    },
+    {
+      "id": "sore2",
+      "subtema": "natural",
+      "tipo": "completar",
+      "pregunta_en": "El paisaje ______ es el que hizo la naturaleza.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Natural = de la naturaleza.",
+      "pista_es": "na-tu-…",
+      "respuesta": "natural"
+    },
+    {
+      "id": "sore3",
+      "subtema": "natural",
+      "tipo": "completar",
+      "pregunta_en": "Un paisaje natural no tiene ______ hechas por las personas.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Sin casas, edificios ni calles.",
+      "pista_es": "cons-…",
+      "respuesta": "construcciones",
+      "aceptadas": [
+        "construcción",
+        "construccion"
+      ]
+    },
+    {
+      "id": "sore4",
+      "subtema": "natural",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estos es un paisaje natural?",
+      "instruccion_es": "Elige el paisaje natural.",
+      "explicacion_es": "Bosque y río los hizo la naturaleza. 🌲",
+      "opciones": [
+        "Un bosque con un río",
+        "Un edificio alto",
+        "Una calle con casas",
+        "Un puente de cemento"
+      ],
+      "correcta": "Un bosque con un río"
+    },
+    {
+      "id": "sore5",
+      "subtema": "natural",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "En un paisaje natural hay casas y calles.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! Si hay casas y calles, es un paisaje cultural.",
+      "correcta": false
+    },
+    {
+      "id": "sore6",
+      "subtema": "natural",
+      "tipo": "completar",
+      "pregunta_en": "Un paisaje natural tiene montañas, ríos, bosques, mares y ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Playas, montañas, ríos… ¡todo natural! 🏖️",
+      "pista_es": "pla-…",
+      "respuesta": "playas",
+      "aceptadas": [
+        "playa"
+      ]
+    },
+    {
+      "id": "sore7",
+      "subtema": "cultural",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la característica de un paisaje cultural?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Cultural = lo hicieron o cambiaron las personas. 🏙️",
+      "opciones": [
+        "El paisaje cultural es el que fue hecho o cambiado por las personas.",
+        "El paisaje natural es el que hizo la naturaleza, sin la intervención del ser humano.",
+        "No tiene nada hecho por personas",
+        "Solo tiene montañas y ríos"
+      ],
+      "correcta": "El paisaje cultural es el que fue hecho o cambiado por las personas."
+    },
+    {
+      "id": "sore8",
+      "subtema": "cultural",
+      "tipo": "completar",
+      "pregunta_en": "El paisaje ______ es el que fue hecho o cambiado por las personas.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Cultural = hecho por las personas.",
+      "pista_es": "cul-tu-…",
+      "respuesta": "cultural"
+    },
+    {
+      "id": "sore9",
+      "subtema": "cultural",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estos es un paisaje cultural?",
+      "instruccion_es": "Elige el paisaje cultural.",
+      "explicacion_es": "Edificios y calles los hicieron las personas. 🏢",
+      "opciones": [
+        "Una ciudad con edificios y calles",
+        "Una montaña sola",
+        "Un río en la selva",
+        "Un mar sin barcos"
+      ],
+      "correcta": "Una ciudad con edificios y calles"
+    },
+    {
+      "id": "sore10",
+      "subtema": "cultural",
+      "tipo": "completar",
+      "pregunta_en": "Ejemplos de paisaje cultural: edificios, casas, calles, puentes y ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Los cultivos los siembran las personas. 🌽",
+      "pista_es": "cul-ti-…",
+      "respuesta": "cultivos",
+      "aceptadas": [
+        "cultivo"
+      ]
+    },
+    {
+      "id": "sore11",
+      "subtema": "cultural",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Un puente es parte de un paisaje cultural.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Lo construyeron las personas.",
+      "correcta": true
+    },
+    {
+      "id": "sore12",
+      "subtema": "cultural",
+      "tipo": "unir",
+      "pregunta_en": "Une cada elemento con su tipo de paisaje.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "Montaña y río: naturales. Edificio y calle: culturales.",
+      "pares": [
+        {
+          "izquierda": "Montaña",
+          "derecha": "Natural 🌳"
+        },
+        {
+          "izquierda": "Edificio",
+          "derecha": "Cultural 🏢"
+        },
+        {
+          "izquierda": "Río",
+          "derecha": "Natural 💧"
+        },
+        {
+          "izquierda": "Calle",
+          "derecha": "Cultural 🛣️"
+        }
+      ]
+    },
+    {
+      "id": "sore13",
+      "subtema": "cultural",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Explica las características del paisaje cultural.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Una respuesta excelente: define, da características y pone un ejemplo, en 3 oraciones. ✍️",
+      "peso": 2,
+      "opciones": [
+        "Es de casas.",
+        "El paisaje cultural es el que fue hecho o cambiado por las personas. Tiene edificios, casas, calles y puentes. Por ejemplo, una ciudad es un paisaje cultural.",
+        "Cultural.",
+        "Los edificios."
+      ],
+      "correcta": "El paisaje cultural es el que fue hecho o cambiado por las personas. Tiene edificios, casas, calles y puentes. Por ejemplo, una ciudad es un paisaje cultural."
+    },
+    {
+      "id": "sore14",
+      "subtema": "natural",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Explica las características del paisaje natural.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Define, da características y pon un ejemplo. ¡3 oraciones! ✍️",
+      "peso": 2,
+      "opciones": [
+        "Es de plantas.",
+        "El paisaje natural es el que hizo la naturaleza, sin las personas. Tiene montañas, ríos, bosques, mares y playas. Por ejemplo, una selva con un río es un paisaje natural.",
+        "Natural.",
+        "Los árboles."
+      ],
+      "correcta": "El paisaje natural es el que hizo la naturaleza, sin las personas. Tiene montañas, ríos, bosques, mares y playas. Por ejemplo, una selva con un río es un paisaje natural."
+    },
+    {
+      "id": "sore15",
+      "subtema": "alcalde",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién es la máxima autoridad del distrito?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "El alcalde es la máxima autoridad del distrito.",
+      "opciones": [
+        "El alcalde",
+        "El maestro",
+        "El policía",
+        "El presidente de la escuela"
+      ],
+      "correcta": "El alcalde"
+    },
+    {
+      "id": "sore16",
+      "subtema": "alcalde",
+      "tipo": "completar",
+      "pregunta_en": "El alcalde es la máxima ______ del distrito.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Autoridad = el que manda y cuida en el distrito.",
+      "pista_es": "au-to-…",
+      "respuesta": "autoridad"
+    },
+    {
+      "id": "sore17",
+      "subtema": "alcalde",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es una función del alcalde?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "El alcalde cuida el bienestar del distrito: limpieza, calles, parques y basura. 🧹",
+      "opciones": [
+        "cuidar que las calles estén limpias, arreglar calles y parques, y recoger la basura",
+        "Dar clases en la escuela",
+        "Curar a los enfermos",
+        "Apagar incendios"
+      ],
+      "correcta": "cuidar que las calles estén limpias, arreglar calles y parques, y recoger la basura"
+    },
+    {
+      "id": "sore18",
+      "subtema": "alcalde",
+      "tipo": "completar",
+      "pregunta_en": "Una función del alcalde es recoger la ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Recoger la basura mantiene limpio el distrito. 🗑️",
+      "pista_es": "ba-su-…",
+      "respuesta": "basura"
+    },
+    {
+      "id": "sore19",
+      "subtema": "alcalde",
+      "tipo": "completar",
+      "pregunta_en": "El alcalde debe cuidar que las ______ estén limpias.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Calles limpias = distrito sano.",
+      "pista_es": "ca-…",
+      "respuesta": "calles",
+      "aceptadas": [
+        "calle"
+      ]
+    },
+    {
+      "id": "sore20",
+      "subtema": "alcalde",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Es importante que el alcalde cumpla su función para que el distrito esté limpio, ordenado y seguro.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Así vivimos mejor todos.",
+      "correcta": true
+    },
+    {
+      "id": "sore21",
+      "subtema": "alcalde",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Por qué es importante que el alcalde cumpla su función?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Si el alcalde cumple, el distrito está limpio, ordenado y seguro. 🌟",
+      "opciones": [
+        "Es importante que el alcalde cumpla su función para que el distrito esté limpio, ordenado y seguro.",
+        "Para que haya más tarea",
+        "Para que no haya parques",
+        "Para que se acabe la basura sola"
+      ],
+      "correcta": "Es importante que el alcalde cumpla su función para que el distrito esté limpio, ordenado y seguro."
+    },
+    {
+      "id": "sore22",
+      "subtema": "alcalde",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Menciona 1 función del alcalde y explica la importancia de que cumpla con esa función.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Pide DOS cosas: la función y por qué es importante. Con 3 oraciones tienes todo. ✍️",
+      "peso": 2,
+      "opciones": [
+        "Limpiar las calles.",
+        "Una función del alcalde es mantener limpias las calles. Es importante porque así el distrito está limpio y las personas viven sanas. Por ejemplo, si recogen la basura, no hay mal olor ni enfermedades.",
+        "El alcalde.",
+        "Es la autoridad."
+      ],
+      "correcta": "Una función del alcalde es mantener limpias las calles. Es importante porque así el distrito está limpio y las personas viven sanas. Por ejemplo, si recogen la basura, no hay mal olor ni enfermedades."
+    },
+    {
+      "id": "sore23",
+      "subtema": "renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué son los recursos naturales?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Agua, bosques, sol, petróleo… vienen de la naturaleza. 🌎",
+      "opciones": [
+        "Lo que nos da la naturaleza y usamos para vivir",
+        "Cosas que se compran en la tienda",
+        "Juguetes de plástico",
+        "Los edificios de la ciudad"
+      ],
+      "correcta": "Lo que nos da la naturaleza y usamos para vivir"
+    },
+    {
+      "id": "sore24",
+      "subtema": "renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué característica tienen los recursos renovables?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Renovable = se renueva, se vuelve a formar. ♻️",
+      "opciones": [
+        "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos.",
+        "Los recursos no renovables se acaban porque tardan millones de años en formarse.",
+        "Se acaban muy rápido",
+        "No se pueden usar"
+      ],
+      "correcta": "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos."
+    },
+    {
+      "id": "sore25",
+      "subtema": "renovables",
+      "tipo": "completar",
+      "pregunta_en": "Los recursos ______ se vuelven a formar y no se acaban si los cuidamos.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Renovables = se renuevan.",
+      "pista_es": "re-no-…",
+      "respuesta": "renovables",
+      "aceptadas": [
+        "renovable"
+      ]
+    },
+    {
+      "id": "sore26",
+      "subtema": "renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estos es un recurso renovable?",
+      "instruccion_es": "Elige el recurso renovable.",
+      "explicacion_es": "El agua se renueva con el ciclo de la lluvia. 💧",
+      "opciones": [
+        "El agua",
+        "El petróleo",
+        "El carbón",
+        "Los minerales"
+      ],
+      "correcta": "El agua"
+    },
+    {
+      "id": "sore27",
+      "subtema": "renovables",
+      "tipo": "completar",
+      "pregunta_en": "Un recurso renovable es el ______ (da luz y calor).",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "El sol nunca se acaba. ☀️",
+      "pista_es": "3 letras",
+      "respuesta": "sol"
+    },
+    {
+      "id": "sore28",
+      "subtema": "renovables",
+      "tipo": "completar",
+      "pregunta_en": "El bosque nos da frutos y ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Del bosque sale madera para casas y muebles. 🪵",
+      "pista_es": "ma-de-…",
+      "respuesta": "madera"
+    },
+    {
+      "id": "sore29",
+      "subtema": "renovables",
+      "tipo": "completar",
+      "pregunta_en": "El agua sirve para ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Usamos el agua para beber, bañarnos y regar. 🚰",
+      "pista_es": "be-…",
+      "respuesta": "beber",
+      "aceptadas": [
+        "tomar"
+      ]
+    },
+    {
+      "id": "sore30",
+      "subtema": "renovables",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los animales y las plantas son recursos renovables si los cuidamos.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Se reproducen y nacen nuevos. 🌱",
+      "correcta": true
+    },
+    {
+      "id": "sore31",
+      "subtema": "renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Escribe las características de los recursos naturales renovables y explica un uso que le damos.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Pide DOS cosas: características y un uso. ¡Escríbelas las dos! ✍️",
+      "peso": 2,
+      "opciones": [
+        "El agua y los bosques.",
+        "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos. Por ejemplo, el agua y los bosques. Usamos el agua para beber y el bosque nos da frutos y madera.",
+        "Renovables.",
+        "Sirven para beber."
+      ],
+      "correcta": "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos. Por ejemplo, el agua y los bosques. Usamos el agua para beber y el bosque nos da frutos y madera."
+    },
+    {
+      "id": "sore32",
+      "subtema": "no-renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué característica tienen los recursos no renovables?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "No renovable = cuando se gasta, no vuelve. 🛢️",
+      "opciones": [
+        "Los recursos no renovables se acaban porque tardan millones de años en formarse.",
+        "Los recursos renovables se vuelven a formar y no se acaban si los cuidamos.",
+        "Nunca se acaban",
+        "Los fabrica el ser humano"
+      ],
+      "correcta": "Los recursos no renovables se acaban porque tardan millones de años en formarse."
+    },
+    {
+      "id": "sore33",
+      "subtema": "no-renovables",
+      "tipo": "completar",
+      "pregunta_en": "Los recursos no renovables se ______ porque tardan millones de años en formarse.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Se acaban: no se pueden volver a hacer.",
+      "pista_es": "a-ca-…",
+      "respuesta": "acaban",
+      "aceptadas": [
+        "agotan",
+        "terminan"
+      ]
+    },
+    {
+      "id": "sore34",
+      "subtema": "no-renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estos es un recurso NO renovable?",
+      "instruccion_es": "Elige el recurso no renovable.",
+      "explicacion_es": "El petróleo tarda millones de años en formarse. 🛢️",
+      "opciones": [
+        "El petróleo",
+        "El agua",
+        "El sol",
+        "El viento"
+      ],
+      "correcta": "El petróleo"
+    },
+    {
+      "id": "sore35",
+      "subtema": "no-renovables",
+      "tipo": "completar",
+      "pregunta_en": "Ejemplos de recursos no renovables: petróleo, ______ y minerales.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Petróleo, carbón y minerales.",
+      "pista_es": "car-…",
+      "respuesta": "carbón",
+      "aceptadas": [
+        "carbon"
+      ]
+    },
+    {
+      "id": "sore36",
+      "subtema": "no-renovables",
+      "tipo": "completar",
+      "pregunta_en": "Del petróleo sale la ______ para los carros.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Gasolina = combustible de los carros. ⛽",
+      "pista_es": "ga-so-…",
+      "respuesta": "gasolina"
+    },
+    {
+      "id": "sore37",
+      "subtema": "no-renovables",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El carbón es un recurso renovable.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! El carbón es NO renovable: se acaba.",
+      "correcta": false
+    },
+    {
+      "id": "sore38",
+      "subtema": "no-renovables",
+      "tipo": "unir",
+      "pregunta_en": "Une cada recurso con su tipo.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "Agua y sol: renovables. Petróleo y carbón: no renovables.",
+      "pares": [
+        {
+          "izquierda": "Agua",
+          "derecha": "Renovable ♻️"
+        },
+        {
+          "izquierda": "Petróleo",
+          "derecha": "No renovable 🛢️"
+        },
+        {
+          "izquierda": "Sol",
+          "derecha": "Renovable ☀️"
+        },
+        {
+          "izquierda": "Carbón",
+          "derecha": "No renovable ⚫"
+        }
+      ]
+    },
+    {
+      "id": "sore39",
+      "subtema": "no-renovables",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Menciona las características de los recursos naturales no renovables y explica un uso que le damos.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Características + ejemplo + uso = 3 oraciones. ✍️",
+      "peso": 2,
+      "opciones": [
+        "El petróleo.",
+        "Los recursos no renovables se acaban porque tardan millones de años en formarse. Por ejemplo, el petróleo, el carbón y los minerales. Del petróleo sale la gasolina para los carros.",
+        "Se acaban.",
+        "Sirven para los carros."
+      ],
+      "correcta": "Los recursos no renovables se acaban porque tardan millones de años en formarse. Por ejemplo, el petróleo, el carbón y los minerales. Del petróleo sale la gasolina para los carros."
+    },
+    {
+      "id": "sore40",
+      "subtema": "no-renovables",
+      "tipo": "completar",
+      "pregunta_en": "Debemos cuidar los recursos: ahorrar agua y ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Reciclar ayuda a que los recursos duren más. ♻️",
+      "pista_es": "re-ci-…",
+      "respuesta": "reciclar"
+    },
+    {
+      "id": "sore41",
+      "subtema": "renovables",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Cada respuesta del examen lleva 3 oraciones como mínimo.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Respuesta, explicación y ejemplo.",
+      "correcta": true
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "paisaje natural",
+      "es": "lo hizo la naturaleza",
+      "aceptadas": [
+        "sin personas",
+        "de la naturaleza"
+      ]
+    },
+    {
+      "en": "paisaje cultural",
+      "es": "lo hicieron las personas",
+      "aceptadas": [
+        "hecho por personas",
+        "hecho por el hombre"
+      ]
+    },
+    {
+      "en": "alcalde",
+      "es": "autoridad del distrito",
+      "aceptadas": [
+        "máxima autoridad",
+        "maxima autoridad"
+      ]
+    },
+    {
+      "en": "recurso renovable",
+      "es": "no se acaba",
+      "aceptadas": [
+        "se renueva",
+        "se vuelve a formar"
+      ]
+    },
+    {
+      "en": "recurso no renovable",
+      "es": "se acaba",
+      "aceptadas": [
+        "se agota",
+        "no se renueva"
+      ]
+    },
+    {
+      "en": "petróleo",
+      "es": "recurso no renovable",
+      "aceptadas": [
+        "no renovable",
+        "petroleo"
+      ]
+    },
+    {
+      "en": "distrito",
+      "es": "parte de la provincia",
+      "aceptadas": [
+        "una parte de la provincia"
+      ]
+    },
+    {
+      "en": "reciclar",
+      "es": "volver a usar",
+      "aceptadas": [
+        "usar de nuevo",
+        "reusar"
+      ]
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "natural",
+      "emoji": "🌳",
+      "titulo": "Natural o cultural: la pregunta mágica",
+      "pasos": [
+        "¿Lo hizo la naturaleza? → NATURAL 🌳",
+        "¿Lo hicieron las personas? → CULTURAL 🏢",
+        "Si ves casas, calles, puentes o edificios, ¡es cultural!"
+      ],
+      "truco": "Natural = naturaleza. Cultural = personas."
+    },
+    {
+      "subtema": "renovables",
+      "emoji": "♻️",
+      "titulo": "Renovables y no renovables",
+      "pasos": [
+        "Renovable: se vuelve a formar (agua, sol, viento, bosques).",
+        "No renovable: se acaba (petróleo, carbón, minerales).",
+        "Por eso hay que ahorrar agua y reciclar."
+      ],
+      "truco": "Re-novable = se renueva. No re-novable = se acaba."
+    },
+    {
+      "subtema": "alcalde",
+      "emoji": "🏛️",
+      "titulo": "El alcalde en 3 oraciones",
+      "pasos": [
+        "Función: mantener limpias las calles, arreglar parques, recoger la basura.",
+        "Importancia: así el distrito está limpio, ordenado y seguro.",
+        "Ejemplo: si recogen la basura, no hay enfermedades."
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ],
+  "idioma": "es",
+  "vocabulario_pregunta_es": "¿Qué significa?"
+}

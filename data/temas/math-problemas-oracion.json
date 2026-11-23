@@ -1,0 +1,958 @@
+{
+  "tipo": "tema",
+  "id": "math-problemas-oracion",
+  "materia": "Math",
+  "titulo": "Word Problems: Add and Subtract (3 digits)",
+  "titulo_es": "Problemas de suma y resta de 3 cifras con oración completa",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "sumar",
+    "restar",
+    "restar-cero",
+    "oracion",
+    "palabras-clave"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PART 1: The 6 steps",
+      "es": "PARTE 1: Los 6 pasos"
+    },
+    {
+      "emoji": "1️⃣",
+      "en": "Step 1: Read the problem carefully.",
+      "es": "Lee el problema con calma, dos veces. Read = RÍID."
+    },
+    {
+      "emoji": "2️⃣",
+      "en": "Step 2: Decide: add (+) or subtract (−)?",
+      "es": "Busca la palabra clave (mira la parte 2)."
+    },
+    {
+      "emoji": "3️⃣",
+      "en": "Step 3: Write the numbers vertically: ones under ones, tens under tens, hundreds under hundreds.",
+      "es": "Vertically = en vertical, uno debajo del otro."
+    },
+    {
+      "emoji": "4️⃣",
+      "en": "Step 4: Solve. Start with the ones. Carry when the column is 10 or more; borrow when the top number is smaller.",
+      "es": "Empieza por las unidades (la derecha)."
+    },
+    {
+      "emoji": "5️⃣",
+      "en": "Step 5: Check your answer. For a subtraction, add: answer + the small number = the big number.",
+      "es": "Ejemplo: 450 − 275 = 175, y 175 + 275 = 450 ✅."
+    },
+    {
+      "emoji": "6️⃣",
+      "en": "Step 6: Write a complete sentence with the number AND what you counted.",
+      "es": "Si no pones la oración completa, te quitan puntos."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PART 2: Key words",
+      "es": "PARTE 2: Palabras clave"
+    },
+    {
+      "emoji": "➕",
+      "en": "Add when you see: altogether, in all, both, total, how many in all.",
+      "es": "Altogether = ol-tu-GUÉ-der = en total."
+    },
+    {
+      "emoji": "➖",
+      "en": "Subtract when you see: left, not, used, how many more, how many were not.",
+      "es": "Left = LEFT = quedan. Used = YUSD = usaron."
+    },
+    {
+      "emoji": "🧠",
+      "en": "Altogether = add. Left = subtract.",
+      "es": "Truco para recordar."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PART 3: Carry and borrow",
+      "es": "PARTE 3: Llevar y pedir prestado"
+    },
+    {
+      "emoji": "🎒",
+      "en": "Carry: 7 + 5 = 12, write 2 and carry 1 to the next column.",
+      "es": "Llevar = escribe las unidades y lleva 1 a la columna de la izquierda."
+    },
+    {
+      "emoji": "🤝",
+      "en": "Borrow: if the top number is smaller, borrow 1 from the next column and the top number gets 10 more.",
+      "es": "Pedir prestado = el número de arriba se vuelve 10 más grande."
+    },
+    {
+      "emoji": "0️⃣",
+      "en": "With a zero on top, borrow from the next number: 400 − 235 → 3 hundreds, 9 tens, 10 ones → 165.",
+      "es": "Con ceros: 400 = 3 centenas, 9 decenas y 10 unidades. Así 10 − 5 = 5, 9 − 3 = 6, 3 − 2 = 1."
+    },
+    {
+      "emoji": "0️⃣",
+      "en": "450 − 275: borrow from the tens, then from the hundreds: 10 − 5 = 5, 14 − 7 = 7, 3 − 2 = 1 → 175.",
+      "es": "El 5 de las decenas pasa a 4 y las unidades quedan en 10. Luego el 4 de las centenas pasa a 3 y las decenas quedan en 14."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PART 4: The answer sentence",
+      "es": "PARTE 4: La oración de respuesta"
+    },
+    {
+      "emoji": "✅",
+      "en": "A good answer has the number, what you counted, and the end of the sentence.",
+      "es": "Ejemplo: There were 165 food samples left."
+    },
+    {
+      "emoji": "📝",
+      "en": "Examples: The groups tested 321 tomato samples. Both trays had 292 bread samples. There were 175 food samples not tested.",
+      "es": "Copia el inicio que ya viene escrito y completa."
+    },
+    {
+      "emoji": "❌",
+      "en": "Do not write only the number. Do not write only the words.",
+      "es": "Killian escribió «There are Food Samples» sin el número."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PART 5: Neat work",
+      "es": "PARTE 5: Trabajo limpio"
+    },
+    {
+      "emoji": "🧼",
+      "en": "Show all the work. Do not scratch out. If you make a mistake, draw one line and write the correct number beside it.",
+      "es": "Los tachones y borrones quitan puntos."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "maor1",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "Students tested 125 food samples in the morning and 137 food samples in the afternoon. How many food samples altogether? Answer: ______",
+      "pregunta_es": "Los estudiantes probaron 125 muestras de comida en la mañana y 137 en la tarde. ¿Cuántas muestras en total? Escribe solo el número.",
+      "explicacion_es": "125 + 137 = 262. Comprueba: 262 − 137 = 125.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "262"
+    },
+    {
+      "id": "maor2",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "The class had 285 food samples. They used 143 samples during the experiment. How many are left? Answer: ______",
+      "pregunta_es": "La clase tenía 285 muestras. Usaron 143. ¿Cuántas quedan? Escribe solo el número.",
+      "explicacion_es": "285 − 143 = 142. Comprueba: 142 + 143 = 285.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "142"
+    },
+    {
+      "id": "maor3",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "Students used 126 drops of iodine in the first group and 145 drops on the second group. How many drops in all? Answer: ______",
+      "pregunta_es": "Usaron 126 gotas de yodo en el primer grupo y 145 en el segundo. ¿Cuántas gotas en total? Escribe solo el número.",
+      "explicacion_es": "126 + 145 = 271. Comprueba: 271 − 145 = 126.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "271"
+    },
+    {
+      "id": "maor4",
+      "subtema": "restar-cero",
+      "tipo": "completar",
+      "pregunta_en": "The class had 350 drops of iodine. They used 178 drops. How many drops are left? Answer: ______",
+      "pregunta_es": "La clase tenía 350 gotas de yodo. Usaron 178. ¿Cuántas quedan? Escribe solo el número.",
+      "explicacion_es": "350 − 178 = 172. Comprueba: 172 + 178 = 350.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "172"
+    },
+    {
+      "id": "maor5",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "One group tested 148 food samples and another group tested 126 food samples. How many food samples did the two groups test altogether? Answer: ______",
+      "pregunta_es": "Un grupo probó 148 muestras y otro 126. ¿Cuántas probaron los dos grupos en total? Escribe solo el número.",
+      "explicacion_es": "148 + 126 = 274. Comprueba: 274 − 126 = 148.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "274"
+    },
+    {
+      "id": "maor6",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "Students recorded 325 food results. Of these, 187 results showed starch. How many results did not show starch? Answer: ______",
+      "pregunta_es": "Anotaron 325 resultados. En 187 se vio almidón. ¿En cuántos NO se vio almidón? Escribe solo el número.",
+      "explicacion_es": "325 − 187 = 138. Comprueba: 138 + 187 = 325.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "138"
+    },
+    {
+      "id": "maor7",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "During the experiment, students made 135 observations on the first day and 158 on the second day. How many observations did they make altogether? Answer: ______",
+      "pregunta_es": "Hicieron 135 observaciones el primer día y 158 el segundo. ¿Cuántas en total? Escribe solo el número.",
+      "explicacion_es": "135 + 158 = 293. Comprueba: 293 − 158 = 135.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "293"
+    },
+    {
+      "id": "maor8",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "The class recorded 296 observations. Another group recorded 174 observations. How many more observations did the first class record? Answer: ______",
+      "pregunta_es": "La clase anotó 296 observaciones. Otro grupo anotó 174. ¿Cuántas más anotó la primera clase? Escribe solo el número.",
+      "explicacion_es": "296 − 174 = 122. Comprueba: 122 + 174 = 296.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "122"
+    },
+    {
+      "id": "maor9",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "The first group used 115 food samples and the second group used 128 food samples. How many food samples were used by both groups? Answer: ______",
+      "pregunta_es": "El primer grupo usó 115 muestras y el segundo 128. ¿Cuántas usaron los dos grupos? Escribe solo el número.",
+      "explicacion_es": "115 + 128 = 243. Comprueba: 243 − 128 = 115.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "243"
+    },
+    {
+      "id": "maor10",
+      "subtema": "restar-cero",
+      "tipo": "completar",
+      "pregunta_en": "There were 400 food samples prepared. Students used 235 samples. How many food samples were left? Answer: ______",
+      "pregunta_es": "Había 400 muestras preparadas. Usaron 235. ¿Cuántas quedaron? Escribe solo el número.",
+      "explicacion_es": "400 − 235 = 165. Comprueba: 165 + 235 = 400.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "165"
+    },
+    {
+      "id": "maor11",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "Students used 137 drops on the tomatoes and potatoes and 186 drops on the bread and crackers. How many drops did they use? Answer: ______",
+      "pregunta_es": "Usaron 137 gotas en tomates y papas y 186 en pan y galletas. ¿Cuántas gotas usaron? Escribe solo el número.",
+      "explicacion_es": "137 + 186 = 323. Comprueba: 323 − 186 = 137.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "323"
+    },
+    {
+      "id": "maor12",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "Students recorded 365 observations. In 147 observations, the food changed to a dark color. How many observations did not change to a dark color? Answer: ______",
+      "pregunta_es": "Anotaron 365 observaciones. En 147 la comida cambió a un color oscuro. ¿En cuántas NO cambió? Escribe solo el número.",
+      "explicacion_es": "365 − 147 = 218. Comprueba: 218 + 147 = 365.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "218"
+    },
+    {
+      "id": "maor13",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "Students tested 134 tomato and potato samples in the morning and 158 bread and cracker samples in the afternoon. How many samples altogether? Answer: ______",
+      "pregunta_es": "Probaron 134 muestras de tomate y papa en la mañana y 158 de pan y galleta en la tarde. ¿Cuántas en total? Escribe solo el número.",
+      "explicacion_es": "134 + 158 = 292. Comprueba: 292 − 158 = 134.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "292"
+    },
+    {
+      "id": "maor14",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "The class had 425 drops of iodine solution. Students used 186 drops. How many drops were left? Answer: ______",
+      "pregunta_es": "La clase tenía 425 gotas de yodo. Usaron 186. ¿Cuántas quedaron? Escribe solo el número.",
+      "explicacion_es": "425 − 186 = 239. Comprueba: 239 + 186 = 425.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "239"
+    },
+    {
+      "id": "maor15",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "One group recorded 127 results and another group recorded 146 results. How many results did both groups record? Answer: ______",
+      "pregunta_es": "Un grupo anotó 127 resultados y otro 146. ¿Cuántos anotaron los dos grupos? Escribe solo el número.",
+      "explicacion_es": "127 + 146 = 273. Comprueba: 273 − 146 = 127.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "273"
+    },
+    {
+      "id": "maor16",
+      "subtema": "restar-cero",
+      "tipo": "completar",
+      "pregunta_en": "The class prepared 450 food samples. Students tested 275 samples. How many food samples were not tested? Answer: ______",
+      "pregunta_es": "La clase preparó 450 muestras. Probaron 275. ¿Cuántas NO se probaron? Escribe solo el número.",
+      "explicacion_es": "450 − 275 = 175. Comprueba: 175 + 275 = 450.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "175"
+    },
+    {
+      "id": "maor17",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "Group A tested 146 tomato samples and Group B tested 175 tomato samples. How many tomato samples altogether? Answer: ______",
+      "pregunta_es": "El grupo A probó 146 muestras de tomate y el B 175. ¿Cuántas en total? Escribe solo el número.",
+      "explicacion_es": "146 + 175 = 321. Comprueba: 321 − 175 = 146.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "321"
+    },
+    {
+      "id": "maor18",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "Students prepared 384 potato samples and used 159 samples. How many potato samples were left? Answer: ______",
+      "pregunta_es": "Prepararon 384 muestras de papa y usaron 159. ¿Cuántas quedaron? Escribe solo el número.",
+      "explicacion_es": "384 − 159 = 225. Comprueba: 225 + 159 = 384.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "225"
+    },
+    {
+      "id": "maor19",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "The first tray held 128 bread samples and the second tray held 164 bread samples. How many bread samples altogether? Answer: ______",
+      "pregunta_es": "La primera bandeja tenía 128 muestras de pan y la segunda 164. ¿Cuántas en total? Escribe solo el número.",
+      "explicacion_es": "128 + 164 = 292. Comprueba: 292 − 164 = 128.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "292"
+    },
+    {
+      "id": "maor20",
+      "subtema": "restar",
+      "tipo": "completar",
+      "pregunta_en": "The class observed 472 cracker samples. Of these, 238 samples changed color. How many samples did not change color? Answer: ______",
+      "pregunta_es": "Observaron 472 muestras de galleta. 238 cambiaron de color. ¿Cuántas NO cambiaron? Escribe solo el número.",
+      "explicacion_es": "472 − 238 = 234. Comprueba: 234 + 238 = 472.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "234"
+    },
+    {
+      "id": "maor21",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "Students found 213 seeds in the garden and 189 seeds in the field. How many seeds in all? Answer: ______",
+      "pregunta_es": "Encontraron 213 semillas en el jardín y 189 en el campo. ¿Cuántas semillas en total? Escribe solo el número.",
+      "explicacion_es": "213 + 189 = 402. Comprueba: 402 − 189 = 213.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "402"
+    },
+    {
+      "id": "maor22",
+      "subtema": "restar-cero",
+      "tipo": "completar",
+      "pregunta_en": "The class planted 500 seeds. Birds ate 237 seeds. How many seeds are left? Answer: ______",
+      "pregunta_es": "La clase sembró 500 semillas. Los pájaros se comieron 237. ¿Cuántas quedan? Escribe solo el número.",
+      "explicacion_es": "500 − 237 = 263. Comprueba: 263 + 237 = 500.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "263"
+    },
+    {
+      "id": "maor23",
+      "subtema": "sumar",
+      "tipo": "completar",
+      "pregunta_en": "A farm has 308 apples and 164 oranges. How many fruits altogether? Answer: ______",
+      "pregunta_es": "Una finca tiene 308 manzanas y 164 naranjas. ¿Cuántas frutas en total? Escribe solo el número.",
+      "explicacion_es": "308 + 164 = 472. Comprueba: 472 − 164 = 308.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "472"
+    },
+    {
+      "id": "maor24",
+      "subtema": "restar-cero",
+      "tipo": "completar",
+      "pregunta_en": "There were 603 stickers in the box. Killian gave away 258 stickers. How many stickers are left? Answer: ______",
+      "pregunta_es": "Había 603 calcomanías en la caja. Killian regaló 258. ¿Cuántas quedan? Escribe solo el número.",
+      "explicacion_es": "603 − 258 = 345. Comprueba: 345 + 258 = 603.",
+      "pista_es": "Empieza por las unidades (derecha).",
+      "respuesta": "345"
+    },
+    {
+      "id": "maor25",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Students tested 125 food samples in the morning and 137 food samples in the afternoon. How many food samples altogether? Complete the answer sentence: There are ______ food samples.",
+      "pregunta_es": "Los estudiantes probaron 125 muestras de comida en la mañana y 137 en la tarde. ¿Cuántas muestras en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 262. La oración completa es: «There are 262 food samples.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "262"
+    },
+    {
+      "id": "maor26",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Students used 126 drops of iodine in the first group and 145 drops on the second group. How many drops in all? Complete the answer sentence: Students used ______ drops of iodine.",
+      "pregunta_es": "Usaron 126 gotas de yodo en el primer grupo y 145 en el segundo. ¿Cuántas gotas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 271. La oración completa es: «Students used 271 drops of iodine.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "271"
+    },
+    {
+      "id": "maor27",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "One group tested 148 food samples and another group tested 126 food samples. How many food samples did the two groups test altogether? Complete the answer sentence: The two groups tested ______ food samples.",
+      "pregunta_es": "Un grupo probó 148 muestras y otro 126. ¿Cuántas probaron los dos grupos en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 274. La oración completa es: «The two groups tested 274 food samples.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "274"
+    },
+    {
+      "id": "maor28",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "During the experiment, students made 135 observations on the first day and 158 on the second day. How many observations did they make altogether? Complete the answer sentence: The students made ______ observations.",
+      "pregunta_es": "Hicieron 135 observaciones el primer día y 158 el segundo. ¿Cuántas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 293. La oración completa es: «The students made 293 observations.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "293"
+    },
+    {
+      "id": "maor29",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "The first group used 115 food samples and the second group used 128 food samples. How many food samples were used by both groups? Complete the answer sentence: Both groups used ______ food samples.",
+      "pregunta_es": "El primer grupo usó 115 muestras y el segundo 128. ¿Cuántas usaron los dos grupos? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 243. La oración completa es: «Both groups used 243 food samples.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "243"
+    },
+    {
+      "id": "maor30",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Students used 137 drops on the tomatoes and potatoes and 186 drops on the bread and crackers. How many drops did they use? Complete the answer sentence: Students used ______ iodine solution drops.",
+      "pregunta_es": "Usaron 137 gotas en tomates y papas y 186 en pan y galletas. ¿Cuántas gotas usaron? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 323. La oración completa es: «Students used 323 iodine solution drops.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "323"
+    },
+    {
+      "id": "maor31",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Students tested 134 tomato and potato samples in the morning and 158 bread and cracker samples in the afternoon. How many samples altogether? Complete the answer sentence: Students tested ______ food samples.",
+      "pregunta_es": "Probaron 134 muestras de tomate y papa en la mañana y 158 de pan y galleta en la tarde. ¿Cuántas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 292. La oración completa es: «Students tested 292 food samples.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "292"
+    },
+    {
+      "id": "maor32",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "One group recorded 127 results and another group recorded 146 results. How many results did both groups record? Complete the answer sentence: Both groups recorded ______ results.",
+      "pregunta_es": "Un grupo anotó 127 resultados y otro 146. ¿Cuántos anotaron los dos grupos? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 273. La oración completa es: «Both groups recorded 273 results.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "273"
+    },
+    {
+      "id": "maor33",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Group A tested 146 tomato samples and Group B tested 175 tomato samples. How many tomato samples altogether? Complete the answer sentence: The groups tested ______ tomato samples.",
+      "pregunta_es": "El grupo A probó 146 muestras de tomate y el B 175. ¿Cuántas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 321. La oración completa es: «The groups tested 321 tomato samples.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "321"
+    },
+    {
+      "id": "maor34",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "The first tray held 128 bread samples and the second tray held 164 bread samples. How many bread samples altogether? Complete the answer sentence: Both trays had ______ bread samples.",
+      "pregunta_es": "La primera bandeja tenía 128 muestras de pan y la segunda 164. ¿Cuántas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 292. La oración completa es: «Both trays had 292 bread samples.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "292"
+    },
+    {
+      "id": "maor35",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Students found 213 seeds in the garden and 189 seeds in the field. How many seeds in all? Complete the answer sentence: Students found ______ seeds.",
+      "pregunta_es": "Encontraron 213 semillas en el jardín y 189 en el campo. ¿Cuántas semillas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 402. La oración completa es: «Students found 402 seeds.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "402"
+    },
+    {
+      "id": "maor36",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "The class planted 500 seeds. Birds ate 237 seeds. How many seeds are left? Complete the answer sentence: There are ______ seeds left.",
+      "pregunta_es": "La clase sembró 500 semillas. Los pájaros se comieron 237. ¿Cuántas quedan? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 263. La oración completa es: «There are 263 seeds left.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "263"
+    },
+    {
+      "id": "maor37",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "A farm has 308 apples and 164 oranges. How many fruits altogether? Complete the answer sentence: The farm has ______ fruits.",
+      "pregunta_es": "Una finca tiene 308 manzanas y 164 naranjas. ¿Cuántas frutas en total? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 472. La oración completa es: «The farm has 472 fruits.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "472"
+    },
+    {
+      "id": "maor38",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "There were 603 stickers in the box. Killian gave away 258 stickers. How many stickers are left? Complete the answer sentence: There are ______ stickers left.",
+      "pregunta_es": "Había 603 calcomanías en la caja. Killian regaló 258. ¿Cuántas quedan? Completa la oración con el número.",
+      "explicacion_es": "Respuesta: 345. La oración completa es: «There are 345 stickers left.»",
+      "pista_es": "Primero haz la cuenta en vertical.",
+      "respuesta": "345"
+    },
+    {
+      "id": "maor39",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Students tested 125 food samples in the morning and 137 in the afternoon. How many altogether? Do you add or subtract?",
+      "pregunta_es": "Probaron 125 muestras en la mañana y 137 en la tarde. ¿Cuántas en total? ¿Sumas o restas?",
+      "explicacion_es": "Mira la palabra clave: «altogether / in all / both» = sumar; «left / not / how many more» = restar.",
+      "opciones": [
+        "Add (+)",
+        "Subtract (−)"
+      ],
+      "correcta": "Add (+)"
+    },
+    {
+      "id": "maor40",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "The class had 285 samples. They used 143. How many are left? Do you add or subtract?",
+      "pregunta_es": "La clase tenía 285 muestras. Usaron 143. ¿Cuántas quedan? ¿Sumas o restas?",
+      "explicacion_es": "Mira la palabra clave: «altogether / in all / both» = sumar; «left / not / how many more» = restar.",
+      "opciones": [
+        "Subtract (−)",
+        "Add (+)"
+      ],
+      "correcta": "Subtract (−)"
+    },
+    {
+      "id": "maor41",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "One group used 115 samples and the second group used 128. How many were used by both groups? Do you add or subtract?",
+      "pregunta_es": "Un grupo usó 115 y el otro 128. ¿Cuántas usaron los dos grupos? ¿Sumas o restas?",
+      "explicacion_es": "Mira la palabra clave: «altogether / in all / both» = sumar; «left / not / how many more» = restar.",
+      "opciones": [
+        "Add (+)",
+        "Subtract (−)"
+      ],
+      "correcta": "Add (+)"
+    },
+    {
+      "id": "maor42",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "There were 450 samples. Students tested 275. How many were not tested? Do you add or subtract?",
+      "pregunta_es": "Había 450 muestras. Probaron 275. ¿Cuántas NO se probaron? ¿Sumas o restas?",
+      "explicacion_es": "Mira la palabra clave: «altogether / in all / both» = sumar; «left / not / how many more» = restar.",
+      "opciones": [
+        "Subtract (−)",
+        "Add (+)"
+      ],
+      "correcta": "Subtract (−)"
+    },
+    {
+      "id": "maor43",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "The class recorded 296 observations. Another group recorded 174. How many more did the first class record? Do you add or subtract?",
+      "pregunta_es": "La clase anotó 296. Otro grupo anotó 174. ¿Cuántas más anotó la primera clase? ¿Sumas o restas?",
+      "explicacion_es": "Mira la palabra clave: «altogether / in all / both» = sumar; «left / not / how many more» = restar.",
+      "opciones": [
+        "Subtract (−)",
+        "Add (+)"
+      ],
+      "correcta": "Subtract (−)"
+    },
+    {
+      "id": "maor44",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Group A tested 146 samples and Group B tested 175 samples. How many samples in all? Do you add or subtract?",
+      "pregunta_es": "El grupo A probó 146 y el B 175. ¿Cuántas en total? ¿Sumas o restas?",
+      "explicacion_es": "Mira la palabra clave: «altogether / in all / both» = sumar; «left / not / how many more» = restar.",
+      "opciones": [
+        "Add (+)",
+        "Subtract (−)"
+      ],
+      "correcta": "Add (+)"
+    },
+    {
+      "id": "maor45",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "The word «altogether» tells you to…",
+      "pregunta_es": "La palabra «altogether» te dice que…",
+      "explicacion_es": "Altogether = en total = sumar. ➕",
+      "opciones": [
+        "add",
+        "subtract"
+      ],
+      "correcta": "add"
+    },
+    {
+      "id": "maor46",
+      "subtema": "palabras-clave",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "The word «left» (how many are left?) tells you to…",
+      "pregunta_es": "La palabra «left» (¿cuántas quedan?) te dice que…",
+      "explicacion_es": "Left = quedan = restar. ➖",
+      "opciones": [
+        "subtract",
+        "add"
+      ],
+      "correcta": "subtract"
+    },
+    {
+      "id": "maor47",
+      "subtema": "palabras-clave",
+      "tipo": "unir",
+      "pregunta_en": "Match each key word with what you do.",
+      "pregunta_es": "Une cada palabra clave con lo que haces.",
+      "explicacion_es": "Altogether y both = sumar. Left y not = restar.",
+      "pares": [
+        {
+          "izquierda": "altogether",
+          "derecha": "sumar"
+        },
+        {
+          "izquierda": "left",
+          "derecha": "restar"
+        },
+        {
+          "izquierda": "both",
+          "derecha": "sumar los dos grupos"
+        },
+        {
+          "izquierda": "not tested",
+          "derecha": "restar lo que no se probó"
+        }
+      ]
+    },
+    {
+      "id": "maor48",
+      "subtema": "oracion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "450 − 275 = 175. Which is the BEST answer sentence? «How many food samples were not tested?»",
+      "pregunta_es": "450 − 275 = 175. ¿Cuál es la MEJOR oración de respuesta?",
+      "explicacion_es": "Tiene el número correcto, qué contaste y termina la idea. ✅",
+      "peso": 2,
+      "opciones": [
+        "There were 175 food samples not tested.",
+        "There were food samples.",
+        "175.",
+        "There were 275 food samples not tested."
+      ],
+      "correcta": "There were 175 food samples not tested."
+    },
+    {
+      "id": "maor49",
+      "subtema": "oracion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "125 + 137 = 262. Which is the BEST answer sentence? «How many food samples altogether?»",
+      "pregunta_es": "125 + 137 = 262. ¿Cuál es la MEJOR oración de respuesta?",
+      "explicacion_es": "Número + qué contaste: «262 food samples». ✅",
+      "peso": 2,
+      "opciones": [
+        "There are 262 food samples.",
+        "There are food samples.",
+        "262.",
+        "There are 137 food samples."
+      ],
+      "correcta": "There are 262 food samples."
+    },
+    {
+      "id": "maor50",
+      "subtema": "oracion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "285 − 143 = 142. Which is the BEST answer sentence? «How many samples are left?»",
+      "pregunta_es": "285 − 143 = 142. ¿Cuál es la MEJOR oración de respuesta?",
+      "explicacion_es": "No dejes el número afuera: «There are 142 food samples left». ✅",
+      "peso": 2,
+      "opciones": [
+        "There are 142 food samples left.",
+        "There are Food Samples.",
+        "Left 142.",
+        "There are 428 food samples left."
+      ],
+      "correcta": "There are 142 food samples left."
+    },
+    {
+      "id": "maor51",
+      "subtema": "oracion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What must a complete answer sentence have?",
+      "pregunta_es": "¿Qué debe tener una oración de respuesta completa?",
+      "explicacion_es": "Número + qué contaste. 📝",
+      "opciones": [
+        "The number AND what you counted",
+        "Only the number",
+        "Only the words",
+        "A drawing"
+      ],
+      "correcta": "The number AND what you counted"
+    },
+    {
+      "id": "maor52",
+      "subtema": "oracion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "It is OK to write only the number as the answer.",
+      "pregunta_es": "Está bien escribir solo el número como respuesta.",
+      "explicacion_es": "¡Falso! Si no escribes la oración completa, te quitan puntos.",
+      "correcta": false
+    },
+    {
+      "id": "maor53",
+      "subtema": "oracion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Scratching out is OK if you write neatly.",
+      "pregunta_es": "Tachar está bien si escribes bonito.",
+      "explicacion_es": "¡Falso! Tachones y borrones quitan puntos. Haz una raya y escribe al lado.",
+      "correcta": false
+    },
+    {
+      "id": "maor54",
+      "subtema": "oracion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "To check a subtraction, you can add the answer and the small number.",
+      "pregunta_es": "Para comprobar una resta, puedes sumar la respuesta y el número pequeño.",
+      "explicacion_es": "¡Verdadero! Si da el número grande, está bien. ✅",
+      "correcta": true
+    },
+    {
+      "id": "maor55",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "To check 450 − 275 = 175, add: 175 + 275 = ______.",
+      "pregunta_es": "Para comprobar 450 − 275 = 175, suma: 175 + 275 = ______.",
+      "explicacion_es": "175 + 275 = 450. ¡Sí! ✅",
+      "pista_es": "Debe dar el número de arriba.",
+      "respuesta": "450"
+    },
+    {
+      "id": "maor56",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "Write the numbers ______: ones under ones, tens under tens, hundreds under hundreds.",
+      "pregunta_es": "Escribe los números en ______: unidades debajo de unidades, decenas debajo de decenas…",
+      "explicacion_es": "Vertically = en vertical (uno debajo del otro). 📏",
+      "pista_es": "ver-ti-…",
+      "respuesta": "vertically",
+      "aceptadas": [
+        "vertical"
+      ]
+    },
+    {
+      "id": "maor57",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "When the top number is smaller you ______.",
+      "pregunta_es": "Cuando el número de arriba es más pequeño, pides ______ (borrow).",
+      "explicacion_es": "Borrow = pedir prestado (BÓ-rou).",
+      "pista_es": "b _ r r _ w",
+      "respuesta": "borrow"
+    },
+    {
+      "id": "maor58",
+      "subtema": "oracion",
+      "tipo": "completar",
+      "pregunta_en": "When the column is 10 or more you ______.",
+      "pregunta_es": "Cuando la columna da 10 o más, ______ (carry) 1.",
+      "explicacion_es": "Carry = llevar (KÁ-ri).",
+      "pista_es": "c _ r r y",
+      "respuesta": "carry"
+    },
+    {
+      "id": "maor59",
+      "subtema": "restar-cero",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "400 − 235: how do you borrow when the top number has zeros?",
+      "pregunta_es": "400 − 235: ¿cómo pides prestado cuando arriba hay ceros?",
+      "explicacion_es": "Con ceros: pide prestado a la centena. 400 = 3 centenas, 9 decenas y 10 unidades. Así: 10 − 5 = 5, 9 − 3 = 6, 3 − 2 = 1 → 165.",
+      "peso": 2,
+      "opciones": [
+        "400 is 3 hundreds, 9 tens and 10 ones",
+        "400 is 4 hundreds, 0 tens and 0 ones, so just subtract",
+        "400 is 40 tens and 10 ones",
+        "You cannot subtract from 400"
+      ],
+      "correcta": "400 is 3 hundreds, 9 tens and 10 ones"
+    },
+    {
+      "id": "maor60",
+      "subtema": "restar",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "450 − 275: which number do you get?",
+      "pregunta_es": "450 − 275: ¿qué número obtienes?",
+      "explicacion_es": "Unidades: 0 − 5 no se puede, pides prestado: 10 − 5 = 5. Decenas: 4 − 7 no se puede, pides prestado: 14 − 7 = 7. Centenas: 3 − 2 = 1. Resultado 175. Comprueba: 175 + 275 = 450 ✅.",
+      "opciones": [
+        "175",
+        "225",
+        "235",
+        "285"
+      ],
+      "correcta": "175"
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "altogether",
+      "es": "en total",
+      "aceptadas": [
+        "total",
+        "en todo"
+      ],
+      "ejemplo_en": "How many altogether?",
+      "ejemplo_es": "¿Cuántos en total?"
+    },
+    {
+      "en": "left",
+      "es": "quedan",
+      "aceptadas": [
+        "queda",
+        "sobran"
+      ],
+      "ejemplo_en": "How many are left?",
+      "ejemplo_es": "¿Cuántos quedan?"
+    },
+    {
+      "en": "add",
+      "es": "sumar",
+      "aceptadas": [
+        "suma"
+      ],
+      "ejemplo_en": "Add 125 and 137.",
+      "ejemplo_es": "Suma 125 y 137."
+    },
+    {
+      "en": "subtract",
+      "es": "restar",
+      "aceptadas": [
+        "resta"
+      ],
+      "ejemplo_en": "Subtract 143 from 285.",
+      "ejemplo_es": "Resta 143 de 285."
+    },
+    {
+      "en": "borrow",
+      "es": "pedir prestado",
+      "aceptadas": [
+        "prestar",
+        "pedir prestada"
+      ],
+      "ejemplo_en": "I borrow from the tens.",
+      "ejemplo_es": "Pido prestado de las decenas."
+    },
+    {
+      "en": "carry",
+      "es": "llevar",
+      "aceptadas": [
+        "llevada"
+      ],
+      "ejemplo_en": "I carry 1.",
+      "ejemplo_es": "Llevo 1."
+    },
+    {
+      "en": "samples",
+      "es": "muestras",
+      "aceptadas": [
+        "muestra"
+      ],
+      "ejemplo_en": "Food samples.",
+      "ejemplo_es": "Muestras de comida."
+    },
+    {
+      "en": "drops",
+      "es": "gotas",
+      "aceptadas": [
+        "gota"
+      ],
+      "ejemplo_en": "Drops of iodine.",
+      "ejemplo_es": "Gotas de yodo."
+    },
+    {
+      "en": "observations",
+      "es": "observaciones",
+      "aceptadas": [
+        "observacion",
+        "observación"
+      ],
+      "ejemplo_en": "Students made observations.",
+      "ejemplo_es": "Los estudiantes hicieron observaciones."
+    },
+    {
+      "en": "results",
+      "es": "resultados",
+      "aceptadas": [
+        "resultado"
+      ],
+      "ejemplo_en": "Students recorded results.",
+      "ejemplo_es": "Los estudiantes anotaron resultados."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "sumar",
+      "emoji": "➕",
+      "titulo": "Sumar con llevada",
+      "pasos": [
+        "Escribe un número debajo del otro, bien alineados.",
+        "Suma de derecha a izquierda: unidades, decenas, centenas.",
+        "Si una columna da 10 o más, escribe las unidades y LLEVA 1."
+      ],
+      "ejemplo": "146 + 175: 6 + 5 = 11 (escribe 1, lleva 1); 4 + 7 + 1 = 12 (escribe 2, lleva 1); 1 + 1 + 1 = 3 → 321.",
+      "truco": "Revisa cada columna antes de escribir la oración."
+    },
+    {
+      "subtema": "restar",
+      "emoji": "➖",
+      "titulo": "Restar pidiendo prestado",
+      "pasos": [
+        "El número grande va arriba.",
+        "Si arriba hay un número más pequeño, pide prestado 1 a la columna de la izquierda: el de arriba se vuelve 10 más grande.",
+        "Comprueba: respuesta + número de abajo = número de arriba."
+      ],
+      "ejemplo": "472 − 238: 2 − 8 no se puede → 12 − 8 = 4. El 7 pasó a 6: 6 − 3 = 3. Luego 4 − 2 = 2. Resultado 234. Comprueba: 234 + 238 = 472 ✅",
+      "truco": "Siempre comprueba con una suma."
+    },
+    {
+      "subtema": "restar-cero",
+      "emoji": "0️⃣",
+      "titulo": "Restar con ceros",
+      "pasos": [
+        "400 = 3 centenas + 9 decenas + 10 unidades.",
+        "Resta columna por columna: 10 − 5 = 5, 9 − 3 = 6, 3 − 2 = 1.",
+        "Resultado: 165. Comprueba: 165 + 235 = 400 ✅"
+      ],
+      "truco": "Con un cero arriba, pide prestado de la izquierda en cadena."
+    },
+    {
+      "subtema": "oracion",
+      "emoji": "📝",
+      "titulo": "La oración que no puede faltar",
+      "pasos": [
+        "Copia el inicio que ya viene: «There were ___ food samples left.»",
+        "Escribe el NÚMERO y el nombre de lo que contaste.",
+        "Si pregunta «not tested», termina con «not tested»."
+      ],
+      "truco": "Número + qué contaste = 10 puntos."
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ]
+}

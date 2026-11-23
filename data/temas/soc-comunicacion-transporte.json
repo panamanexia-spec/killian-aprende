@@ -1,0 +1,773 @@
+{
+  "tipo": "tema",
+  "id": "soc-comunicacion-transporte",
+  "materia": "Ciencias Sociales",
+  "titulo": "Medios de comunicación, transporte y vías",
+  "titulo_es": "Medios de comunicación, transporte y vías",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "comunicacion",
+    "educacion",
+    "transporte",
+    "vias",
+    "economia"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PARTE 1: Medios de comunicación",
+      "es": "Enviar y recibir información"
+    },
+    {
+      "emoji": "📡",
+      "en": "Los medios de comunicación sirven para enviar y recibir información.",
+      "es": "Información = noticias, mensajes y datos."
+    },
+    {
+      "emoji": "📻",
+      "en": "Ejemplos de medios de comunicación: radio, televisión, periódico, teléfono e internet.",
+      "es": "Cinco para recordar."
+    },
+    {
+      "emoji": "📻",
+      "en": "La radio es un medio de comunicación.",
+      "es": "Se escucha."
+    },
+    {
+      "emoji": "🏠",
+      "en": "En la vida diaria nos informan, nos comunican con la familia y nos entretienen.",
+      "es": "Importancia de los medios."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Los medios de comunicación son importantes porque nos informan y nos comunican con personas lejanas. Por ejemplo, con el teléfono hablo con mi abuela. También nos entretienen con programas y música.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PARTE 2: Comunicación y educación",
+      "es": "Aprender con los medios"
+    },
+    {
+      "emoji": "🎓",
+      "en": "En la educación los medios ayudan a aprender con videos educativos, internet para investigar y clases virtuales.",
+      "es": "Ejemplos para el examen."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Los medios ayudan en la educación porque podemos aprender con videos educativos. También investigamos en internet y tomamos clases virtuales. Por ejemplo, veo un video para estudiar las plantas.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PARTE 3: Medios de transporte",
+      "es": "Llevan personas y cosas"
+    },
+    {
+      "emoji": "🚌",
+      "en": "Los medios de transporte sirven para llevar personas y cosas de un lugar a otro.",
+      "es": "Transporte = llevar de un sitio a otro."
+    },
+    {
+      "emoji": "🚗",
+      "en": "Medios de transporte terrestres: carro, bus, tren, metro, camión y bicicleta.",
+      "es": "Terrestre = por la tierra."
+    },
+    {
+      "emoji": "🚌",
+      "en": "El bus es un medio terrestre.",
+      "es": "Va por la calle."
+    },
+    {
+      "emoji": "🚢",
+      "en": "Medios de transporte acuáticos: barco, lancha y bote.",
+      "es": "Acuático = por el agua."
+    },
+    {
+      "emoji": "🚤",
+      "en": "La lancha es un medio acuático.",
+      "es": "Va por el agua."
+    },
+    {
+      "emoji": "✈️",
+      "en": "Medios de transporte aéreos: avión y helicóptero.",
+      "es": "Aéreo = por el aire."
+    },
+    {
+      "emoji": "🚁",
+      "en": "El helicóptero es un medio aéreo.",
+      "es": "Vuela por el aire."
+    },
+    {
+      "emoji": "🧠",
+      "en": "Se clasifican en tres: terrestres, acuáticos y aéreos.",
+      "es": "Tierra, agua y aire."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PARTE 4: Vías de comunicación",
+      "es": "Los caminos"
+    },
+    {
+      "emoji": "🛣️",
+      "en": "Las vías de comunicación son los caminos por donde se mueven los medios de transporte.",
+      "es": "Vía = camino."
+    },
+    {
+      "emoji": "🛣️",
+      "en": "Vías terrestres: calles, carreteras y puentes.",
+      "es": "Por ahí van los carros."
+    },
+    {
+      "emoji": "🌊",
+      "en": "Vías acuáticas: ríos, mares y el Canal de Panamá.",
+      "es": "Por ahí van los barcos."
+    },
+    {
+      "emoji": "☁️",
+      "en": "Vías aéreas: las rutas del aire y los aeropuertos.",
+      "es": "Por ahí vuelan los aviones."
+    },
+    {
+      "emoji": "🧠",
+      "en": "El medio es lo que se mueve; la vía es por donde va.",
+      "es": "Carro = medio. Carretera = vía."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Los medios de transporte se clasifican en terrestres, acuáticos y aéreos. Las vías de comunicación también: terrestres, acuáticas y aéreas. Por ejemplo, el carro es un medio terrestre y la carretera es su vía.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PARTE 5: El transporte y la economía",
+      "es": "Todo se mueve"
+    },
+    {
+      "emoji": "💰",
+      "en": "El transporte ayuda a la economía porque lleva los productos de un lugar a otro y la gente llega a su trabajo.",
+      "es": "Economía = cómo ganamos y gastamos dinero."
+    },
+    {
+      "emoji": "🛳️",
+      "en": "El Canal de Panamá es muy importante para la economía del país.",
+      "es": "Por él pasan barcos de todo el mundo."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Los medios de transporte son importantes para la economía porque llevan los productos de un lugar a otro. También ayudan a que las personas lleguen a su trabajo. Por ejemplo, los camiones llevan la comida a los supermercados.",
+      "es": "Modelo de respuesta de 3 oraciones."
+    },
+    {
+      "emoji": "🟪",
+      "en": "PARTE 6: Cómo contestar el examen",
+      "es": "Con 3 oraciones"
+    },
+    {
+      "emoji": "📝",
+      "en": "Cada respuesta lleva 3 oraciones como mínimo: respuesta, explicación y ejemplo.",
+      "es": "Una línea sola no alcanza."
+    },
+    {
+      "emoji": "⚠️",
+      "en": "Recuerda que los medios y las vías no son lo mismo.",
+      "es": "Medio = el vehículo. Vía = el camino."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "sotr1",
+      "subtema": "comunicacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Para qué sirven los medios de comunicación?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Los medios de comunicación sirven para enviar y recibir información.",
+      "opciones": [
+        "Para enviar y recibir información",
+        "Para llevar personas de un lugar a otro",
+        "Para sembrar plantas",
+        "Para cuidar las calles"
+      ],
+      "correcta": "Para enviar y recibir información"
+    },
+    {
+      "id": "sotr2",
+      "subtema": "comunicacion",
+      "tipo": "completar",
+      "pregunta_en": "Los medios de comunicación sirven para enviar y recibir ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Información = noticias y mensajes. 📰",
+      "pista_es": "in-for-…",
+      "respuesta": "información",
+      "aceptadas": [
+        "informacion",
+        "mensajes"
+      ]
+    },
+    {
+      "id": "sotr3",
+      "subtema": "comunicacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál de estos es un medio de comunicación?",
+      "instruccion_es": "Elige el medio de comunicación.",
+      "explicacion_es": "Radio, televisión, periódico, teléfono e internet son medios de comunicación. 📻",
+      "opciones": [
+        "La radio",
+        "El avión",
+        "La carretera",
+        "El barco"
+      ],
+      "correcta": "La radio"
+    },
+    {
+      "id": "sotr4",
+      "subtema": "comunicacion",
+      "tipo": "completar",
+      "pregunta_en": "Ejemplos de medios de comunicación: radio, televisión, periódico, ______ e internet.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Cinco medios: radio, tele, periódico, teléfono e internet.",
+      "pista_es": "te-lé-…",
+      "respuesta": "teléfono",
+      "aceptadas": [
+        "telefono",
+        "celular"
+      ]
+    },
+    {
+      "id": "sotr5",
+      "subtema": "comunicacion",
+      "tipo": "completar",
+      "pregunta_en": "En la vida diaria los medios de comunicación nos informan, nos comunican con la familia y nos ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Entretener = divertir. 🎮",
+      "pista_es": "en-tre-…",
+      "respuesta": "entretienen",
+      "aceptadas": [
+        "divierten",
+        "entretienen."
+      ]
+    },
+    {
+      "id": "sotr6",
+      "subtema": "comunicacion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El teléfono es un medio de comunicación.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Con él enviamos y recibimos mensajes. 📱",
+      "correcta": true
+    },
+    {
+      "id": "sotr7",
+      "subtema": "comunicacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Explica la importancia de los medios de comunicación en la vida diaria.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Explica el PORQUÉ y da un ejemplo. «Más rápido» o «nos ayudan» es muy corto. ✍️",
+      "peso": 2,
+      "opciones": [
+        "Nos ayudan.",
+        "Los medios de comunicación son importantes porque nos informan y nos comunican con personas lejanas. Por ejemplo, con el teléfono hablo con mi abuela. También nos entretienen con programas y música.",
+        "Medios.",
+        "Para jugar."
+      ],
+      "correcta": "Los medios de comunicación son importantes porque nos informan y nos comunican con personas lejanas. Por ejemplo, con el teléfono hablo con mi abuela. También nos entretienen con programas y música."
+    },
+    {
+      "id": "sotr8",
+      "subtema": "educacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cómo ayudan los medios de comunicación en la educación?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Aprendemos con videos, internet y clases virtuales. 🎓",
+      "opciones": [
+        "Con videos educativos, internet para investigar y clases virtuales",
+        "Con carros y buses",
+        "Con barcos y aviones",
+        "Con carreteras y puentes"
+      ],
+      "correcta": "Con videos educativos, internet para investigar y clases virtuales"
+    },
+    {
+      "id": "sotr9",
+      "subtema": "educacion",
+      "tipo": "completar",
+      "pregunta_en": "Con los ______ educativos aprendo viendo y escuchando.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Videos educativos = aprender con imágenes. 📺",
+      "pista_es": "vi-de-…",
+      "respuesta": "videos",
+      "aceptadas": [
+        "video",
+        "vídeos"
+      ]
+    },
+    {
+      "id": "sotr10",
+      "subtema": "educacion",
+      "tipo": "completar",
+      "pregunta_en": "En internet puedo ______ para mis tareas.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Investigar = buscar información. 🔍",
+      "pista_es": "in-ves-…",
+      "respuesta": "investigar",
+      "aceptadas": [
+        "buscar"
+      ]
+    },
+    {
+      "id": "sotr11",
+      "subtema": "educacion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Las clases virtuales son un ejemplo de medios de comunicación en la educación.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Con una pantalla puedes aprender desde casa.",
+      "correcta": true
+    },
+    {
+      "id": "sotr12",
+      "subtema": "educacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Explica cómo los medios de comunicación pueden ayudar en la educación.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Da 2 o 3 formas de aprender y un ejemplo. ✍️",
+      "peso": 2,
+      "opciones": [
+        "Con videojuegos educativos.",
+        "Los medios ayudan en la educación porque podemos aprender con videos educativos. También investigamos en internet y tomamos clases virtuales. Por ejemplo, veo un video para estudiar las plantas.",
+        "Con internet.",
+        "Ayudan a estudiar."
+      ],
+      "correcta": "Los medios ayudan en la educación porque podemos aprender con videos educativos. También investigamos en internet y tomamos clases virtuales. Por ejemplo, veo un video para estudiar las plantas."
+    },
+    {
+      "id": "sotr13",
+      "subtema": "transporte",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Para qué sirven los medios de transporte?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Los medios de transporte sirven para llevar personas y cosas de un lugar a otro.",
+      "opciones": [
+        "Para llevar personas y cosas de un lugar a otro",
+        "Para enviar mensajes",
+        "Para ver programas",
+        "Para escuchar música"
+      ],
+      "correcta": "Para llevar personas y cosas de un lugar a otro"
+    },
+    {
+      "id": "sotr14",
+      "subtema": "transporte",
+      "tipo": "completar",
+      "pregunta_en": "Los medios de transporte se clasifican en terrestres, ______ y aéreos.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Tres tipos: tierra, agua y aire.",
+      "pista_es": "a-cuá-…",
+      "respuesta": "acuáticos",
+      "aceptadas": [
+        "acuaticos",
+        "acuático",
+        "acuatico"
+      ]
+    },
+    {
+      "id": "sotr15",
+      "subtema": "transporte",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es un medio de transporte terrestre?",
+      "instruccion_es": "Elige el medio terrestre.",
+      "explicacion_es": "Terrestre = por la tierra: carro, bus, tren, metro, camión y bicicleta. 🚌",
+      "opciones": [
+        "El bus",
+        "El barco",
+        "El avión",
+        "La lancha"
+      ],
+      "correcta": "El bus"
+    },
+    {
+      "id": "sotr16",
+      "subtema": "transporte",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es un medio de transporte acuático?",
+      "instruccion_es": "Elige el medio acuático.",
+      "explicacion_es": "Acuático = por el agua: barco, lancha y bote. 🚤",
+      "opciones": [
+        "La lancha",
+        "El carro",
+        "El helicóptero",
+        "El tren"
+      ],
+      "correcta": "La lancha"
+    },
+    {
+      "id": "sotr17",
+      "subtema": "transporte",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es un medio de transporte aéreo?",
+      "instruccion_es": "Elige el medio aéreo.",
+      "explicacion_es": "Aéreo = por el aire: avión y helicóptero. 🚁",
+      "opciones": [
+        "El helicóptero",
+        "La bicicleta",
+        "El barco",
+        "El metro"
+      ],
+      "correcta": "El helicóptero"
+    },
+    {
+      "id": "sotr18",
+      "subtema": "transporte",
+      "tipo": "completar",
+      "pregunta_en": "El avión es un medio de transporte ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Aéreo = por el aire. ✈️",
+      "pista_es": "a-é-…",
+      "respuesta": "aéreo",
+      "aceptadas": [
+        "aereo"
+      ]
+    },
+    {
+      "id": "sotr19",
+      "subtema": "transporte",
+      "tipo": "completar",
+      "pregunta_en": "El barco es un medio de transporte ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Acuático = por el agua. 🚢",
+      "pista_es": "a-cuá-…",
+      "respuesta": "acuático",
+      "aceptadas": [
+        "acuatico"
+      ]
+    },
+    {
+      "id": "sotr20",
+      "subtema": "transporte",
+      "tipo": "completar",
+      "pregunta_en": "El carro es un medio de transporte ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Terrestre = por la tierra. 🚗",
+      "pista_es": "te-rres-…",
+      "respuesta": "terrestre"
+    },
+    {
+      "id": "sotr21",
+      "subtema": "transporte",
+      "tipo": "unir",
+      "pregunta_en": "Une cada medio con su tipo.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "Barco: agua. Avión y helicóptero: aire. Metro: tierra.",
+      "pares": [
+        {
+          "izquierda": "Barco",
+          "derecha": "Acuático 🌊"
+        },
+        {
+          "izquierda": "Avión",
+          "derecha": "Aéreo ☁️"
+        },
+        {
+          "izquierda": "Metro",
+          "derecha": "Terrestre 🚇"
+        },
+        {
+          "izquierda": "Helicóptero",
+          "derecha": "Aéreo 🚁"
+        }
+      ]
+    },
+    {
+      "id": "sotr22",
+      "subtema": "vias",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué son las vías de comunicación?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Vía = camino por donde van los medios de transporte. 🛣️",
+      "opciones": [
+        "Las vías de comunicación son los caminos por donde se mueven los medios de transporte.",
+        "Los medios de transporte sirven para llevar personas y cosas de un lugar a otro.",
+        "Los medios de comunicación sirven para enviar y recibir información.",
+        "Los carros y los buses"
+      ],
+      "correcta": "Las vías de comunicación son los caminos por donde se mueven los medios de transporte."
+    },
+    {
+      "id": "sotr23",
+      "subtema": "vias",
+      "tipo": "completar",
+      "pregunta_en": "Las vías de comunicación son los ______ por donde se mueven los medios de transporte.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Vía = camino.",
+      "pista_es": "ca-mi-…",
+      "respuesta": "caminos",
+      "aceptadas": [
+        "camino"
+      ]
+    },
+    {
+      "id": "sotr24",
+      "subtema": "vias",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es una vía terrestre?",
+      "instruccion_es": "Elige la vía terrestre.",
+      "explicacion_es": "Vías terrestres: calles, carreteras y puentes. 🛣️",
+      "opciones": [
+        "La carretera",
+        "El río",
+        "El carro",
+        "El avión"
+      ],
+      "correcta": "La carretera"
+    },
+    {
+      "id": "sotr25",
+      "subtema": "vias",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es una vía acuática?",
+      "instruccion_es": "Elige la vía acuática.",
+      "explicacion_es": "Vías acuáticas: ríos, mares y el Canal de Panamá. 🌊",
+      "opciones": [
+        "El Canal de Panamá",
+        "La calle",
+        "El aeropuerto",
+        "El puente"
+      ],
+      "correcta": "El Canal de Panamá"
+    },
+    {
+      "id": "sotr26",
+      "subtema": "vias",
+      "tipo": "completar",
+      "pregunta_en": "Las rutas del aire y los aeropuertos son vías ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Aéreas = del aire.",
+      "pista_es": "a-é-…",
+      "respuesta": "aéreas",
+      "aceptadas": [
+        "aereas",
+        "aérea",
+        "aerea"
+      ]
+    },
+    {
+      "id": "sotr27",
+      "subtema": "vias",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los medios y las vías de comunicación son lo mismo.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! Medio = el vehículo. Vía = el camino. «El medio es lo que se mueve; la vía es por donde va.»",
+      "correcta": false
+    },
+    {
+      "id": "sotr28",
+      "subtema": "vias",
+      "tipo": "unir",
+      "pregunta_en": "Une cada vehículo con su camino.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "Cada medio va por su vía.",
+      "pares": [
+        {
+          "izquierda": "Carro",
+          "derecha": "Carretera 🛣️"
+        },
+        {
+          "izquierda": "Barco",
+          "derecha": "Mar o río 🌊"
+        },
+        {
+          "izquierda": "Avión",
+          "derecha": "Ruta del aire ☁️"
+        }
+      ]
+    },
+    {
+      "id": "sotr29",
+      "subtema": "vias",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Menciona la clasificación de los medios de transporte y vías de comunicación.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Pide DOS listas: medios Y vías. ¡No te olvides de ninguna! ✍️",
+      "peso": 2,
+      "opciones": [
+        "Aéreos, acuáticos y terrestres.",
+        "Los medios de transporte se clasifican en terrestres, acuáticos y aéreos. Las vías de comunicación también: terrestres, acuáticas y aéreas. Por ejemplo, el carro es un medio terrestre y la carretera es su vía.",
+        "Medios.",
+        "Carro y barco."
+      ],
+      "correcta": "Los medios de transporte se clasifican en terrestres, acuáticos y aéreos. Las vías de comunicación también: terrestres, acuáticas y aéreas. Por ejemplo, el carro es un medio terrestre y la carretera es su vía."
+    },
+    {
+      "id": "sotr30",
+      "subtema": "economia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Por qué el transporte es importante para la economía?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "El transporte mueve productos y personas: sin él la economía se frena. 💰",
+      "opciones": [
+        "El transporte ayuda a la economía porque lleva los productos de un lugar a otro y la gente llega a su trabajo.",
+        "Porque hay más tráfico",
+        "Porque los carros son bonitos",
+        "Porque se pierde tiempo"
+      ],
+      "correcta": "El transporte ayuda a la economía porque lleva los productos de un lugar a otro y la gente llega a su trabajo."
+    },
+    {
+      "id": "sotr31",
+      "subtema": "economia",
+      "tipo": "completar",
+      "pregunta_en": "Los camiones llevan los ______ de un lugar a otro.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Productos = lo que se compra y se vende. 📦",
+      "pista_es": "pro-duc-…",
+      "respuesta": "productos",
+      "aceptadas": [
+        "producto",
+        "alimentos",
+        "alimento"
+      ]
+    },
+    {
+      "id": "sotr32",
+      "subtema": "economia",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El Canal de Panamá es muy importante para la economía del país.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Por el Canal pasan barcos de todo el mundo. 🛳️",
+      "correcta": true
+    },
+    {
+      "id": "sotr33",
+      "subtema": "economia",
+      "tipo": "completar",
+      "pregunta_en": "El transporte ayuda a que las personas lleguen a su ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Sin transporte no llegan a trabajar.",
+      "pista_es": "tra-ba-…",
+      "respuesta": "trabajo"
+    },
+    {
+      "id": "sotr34",
+      "subtema": "economia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Analiza la importancia de los medios de transporte para el desarrollo de la economía en el país.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "«Analiza» pide explicar el POR QUÉ con la economía: productos, trabajo y dinero. ✍️",
+      "peso": 2,
+      "opciones": [
+        "Para moverse de un lado a otro.",
+        "Los medios de transporte son importantes para la economía porque llevan los productos de un lugar a otro. También ayudan a que las personas lleguen a su trabajo. Por ejemplo, los camiones llevan la comida a los supermercados.",
+        "Si viajas en avión es más rápido.",
+        "Economía."
+      ],
+      "correcta": "Los medios de transporte son importantes para la economía porque llevan los productos de un lugar a otro. También ayudan a que las personas lleguen a su trabajo. Por ejemplo, los camiones llevan la comida a los supermercados."
+    },
+    {
+      "id": "sotr35",
+      "subtema": "economia",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Cada respuesta del examen lleva 3 oraciones como mínimo.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Respuesta, explicación y ejemplo.",
+      "correcta": true
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "medio de comunicación",
+      "es": "envía información",
+      "aceptadas": [
+        "enviar y recibir información",
+        "enviar información"
+      ]
+    },
+    {
+      "en": "medio de transporte",
+      "es": "lleva personas y cosas",
+      "aceptadas": [
+        "llevar personas y cosas"
+      ]
+    },
+    {
+      "en": "vía de comunicación",
+      "es": "camino",
+      "aceptadas": [
+        "el camino"
+      ]
+    },
+    {
+      "en": "terrestre",
+      "es": "por la tierra",
+      "aceptadas": [
+        "tierra"
+      ]
+    },
+    {
+      "en": "acuático",
+      "es": "por el agua",
+      "aceptadas": [
+        "agua",
+        "acuatico"
+      ]
+    },
+    {
+      "en": "aéreo",
+      "es": "por el aire",
+      "aceptadas": [
+        "aire",
+        "aereo"
+      ]
+    },
+    {
+      "en": "economía",
+      "es": "cómo ganamos y gastamos dinero",
+      "aceptadas": [
+        "dinero",
+        "economia"
+      ]
+    },
+    {
+      "en": "clasificación",
+      "es": "separar en grupos",
+      "aceptadas": [
+        "clasificacion",
+        "grupos"
+      ]
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "vias",
+      "emoji": "🛣️",
+      "titulo": "Medio o vía: ¿cuál es cuál?",
+      "pasos": [
+        "Medio de transporte = el vehículo (carro, barco, avión).",
+        "Vía de comunicación = el camino (carretera, río, ruta aérea).",
+        "Los dos se clasifican en terrestres 🌍, acuáticos 🌊 y aéreos ☁️."
+      ],
+      "truco": "El medio es lo que se mueve; la vía es por donde va."
+    },
+    {
+      "subtema": "economia",
+      "emoji": "💰",
+      "titulo": "El transporte y la economía en 3 oraciones",
+      "pasos": [
+        "Respuesta: llevan productos de un lugar a otro.",
+        "Explicación: así las personas llegan a su trabajo y se compra y se vende.",
+        "Ejemplo: los camiones llevan la comida a los supermercados."
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ],
+  "idioma": "es",
+  "vocabulario_pregunta_es": "¿Qué significa?"
+}

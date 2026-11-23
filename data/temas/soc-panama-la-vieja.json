@@ -1,0 +1,680 @@
+{
+  "tipo": "tema",
+  "id": "soc-panama-la-vieja",
+  "materia": "Ciencias Sociales",
+  "titulo": "Panamá la Vieja",
+  "titulo_es": "Panamá la Vieja",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "fundacion",
+    "ataque",
+    "torre",
+    "importancia"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PARTE 1: La fundación",
+      "es": "El comienzo"
+    },
+    {
+      "emoji": "📅",
+      "en": "Pedro Arias Dávila fundó Panamá la Vieja el 15 de agosto de 1519.",
+      "es": "Fecha para recordar: 15 de agosto de 1519."
+    },
+    {
+      "emoji": "🌊",
+      "en": "Fue la primera ciudad española en la costa del océano Pacífico.",
+      "es": "Pacífico = el océano de este lado de Panamá."
+    },
+    {
+      "emoji": "🗺️",
+      "en": "Desde allí salían los barcos y los caminos hacia el Perú, con oro y plata.",
+      "es": "Era una ciudad de mucho comercio."
+    },
+    {
+      "emoji": "🟩",
+      "en": "PARTE 2: El ataque de los piratas",
+      "es": "La destrucción"
+    },
+    {
+      "emoji": "🏴‍☠️",
+      "en": "En 1671 el pirata Henry Morgan atacó la ciudad.",
+      "es": "Pirata = ladrón que viaja en barco."
+    },
+    {
+      "emoji": "🏴‍☠️",
+      "en": "Un pirata atacó la ciudad.",
+      "es": "Fue Henry Morgan."
+    },
+    {
+      "emoji": "💥",
+      "en": "El gobernador mandó a explotar la pólvora para que los piratas no se la llevaran.",
+      "es": "Pólvora = polvo que explota."
+    },
+    {
+      "emoji": "🔥",
+      "en": "La ciudad se incendió y quedó en ruinas.",
+      "es": "Ruinas = lo que queda de un lugar destruido."
+    },
+    {
+      "emoji": "🏘️",
+      "en": "Después fundaron una ciudad nueva en otro lugar: el Casco Antiguo.",
+      "es": "La ciudad nueva se hizo en 1673."
+    },
+    {
+      "emoji": "🧠",
+      "en": "Fundación, ataque de piratas, ciudad nueva",
+      "es": "Ese es el orden de lo que pasó."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PARTE 3: La torre",
+      "es": "Lo que queda"
+    },
+    {
+      "emoji": "🗼",
+      "en": "Lo que más se ve hoy de Panamá la Vieja es la torre de la catedral.",
+      "es": "Torre = la parte alta de la iglesia, donde estaban las campanas."
+    },
+    {
+      "emoji": "✏️",
+      "en": "Dibujo de la torre: un rectángulo alto con tres arcos o ventanas y una cruz arriba.",
+      "es": "Dibújala con cuidado y con color."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PARTE 4: ¿Por qué es importante?",
+      "es": "Para nuestro país"
+    },
+    {
+      "emoji": "🏛️",
+      "en": "Panamá la Vieja es importante porque fue la primera ciudad española en el Pacífico y es parte de nuestra historia.",
+      "es": "Historia = lo que pasó hace mucho tiempo."
+    },
+    {
+      "emoji": "🌍",
+      "en": "Hoy es un sitio histórico que visitan turistas y estudiantes.",
+      "es": "La UNESCO lo protege como Patrimonio de la Humanidad."
+    },
+    {
+      "emoji": "✍️",
+      "en": "Panamá la Vieja fue fundada por Pedro Arias Dávila el 15 de agosto de 1519. Los piratas la atacaron en 1671 y el gobernador mandó a explotar la pólvora. Hoy su torre nos recuerda nuestra historia.",
+      "es": "Modelo de respuesta: «Escribe todo lo que sepas»."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "sovi1",
+      "subtema": "fundacion",
+      "tipo": "completar",
+      "pregunta_en": "Panamá la Vieja se fundó el 15 de agosto de ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Fundada el 15 de agosto de 1519. 📅",
+      "pista_es": "15…",
+      "respuesta": "1519"
+    },
+    {
+      "id": "sovi2",
+      "subtema": "fundacion",
+      "tipo": "completar",
+      "pregunta_en": "Panamá la Vieja la fundó Pedro Arias ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Pedro Arias Dávila, también llamado Pedrarias.",
+      "pista_es": "Dá-vi-…",
+      "respuesta": "Dávila",
+      "aceptadas": [
+        "davila"
+      ]
+    },
+    {
+      "id": "sovi3",
+      "subtema": "fundacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién fundó Panamá la Vieja y cuándo?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Pedro Arias Dávila, 15 de agosto de 1519.",
+      "opciones": [
+        "Pedro Arias Dávila fundó Panamá la Vieja el 15 de agosto de 1519.",
+        "En 1671 el pirata Henry Morgan atacó la ciudad.",
+        "El gobernador mandó a explotar la pólvora para que los piratas no se la llevaran.",
+        "Lo que más se ve hoy de Panamá la Vieja es la torre de la catedral."
+      ],
+      "correcta": "Pedro Arias Dávila fundó Panamá la Vieja el 15 de agosto de 1519."
+    },
+    {
+      "id": "sovi4",
+      "subtema": "fundacion",
+      "tipo": "completar",
+      "pregunta_en": "Panamá la Vieja fue la primera ciudad española en la costa del océano ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Pacífico = el océano de este lado de Panamá. 🌊",
+      "pista_es": "Pa-cí-…",
+      "respuesta": "Pacífico",
+      "aceptadas": [
+        "pacifico"
+      ]
+    },
+    {
+      "id": "sovi5",
+      "subtema": "fundacion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Panamá la Vieja se fundó el 15 de agosto de 1519.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! 📅",
+      "correcta": true
+    },
+    {
+      "id": "sovi6",
+      "subtema": "fundacion",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Pedro Arias Dávila fundó Panamá la Vieja en 1671.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! La fundó en 1519. En 1671 fue el ataque de los piratas.",
+      "correcta": false
+    },
+    {
+      "id": "sovi7",
+      "subtema": "fundacion",
+      "tipo": "completar",
+      "pregunta_en": "Desde Panamá la Vieja salían caminos hacia el Perú, con oro y ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Oro y plata viajaban desde allí. 🥇",
+      "pista_es": "pla-…",
+      "respuesta": "plata"
+    },
+    {
+      "id": "sovi8",
+      "subtema": "ataque",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué pasó en 1671?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "El pirata Henry Morgan atacó la ciudad. 🏴‍☠️",
+      "opciones": [
+        "En 1671 el pirata Henry Morgan atacó la ciudad.",
+        "Pedro Arias Dávila fundó Panamá la Vieja el 15 de agosto de 1519.",
+        "Lo que más se ve hoy de Panamá la Vieja es la torre de la catedral.",
+        "Panamá la Vieja es importante porque fue la primera ciudad española en el Pacífico y es parte de nuestra historia."
+      ],
+      "correcta": "En 1671 el pirata Henry Morgan atacó la ciudad."
+    },
+    {
+      "id": "sovi9",
+      "subtema": "ataque",
+      "tipo": "completar",
+      "pregunta_en": "En 1671 el pirata Henry ______ atacó la ciudad.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Henry Morgan era un pirata. 🏴‍☠️",
+      "pista_es": "Mor-…",
+      "respuesta": "Morgan",
+      "aceptadas": [
+        "morgan"
+      ]
+    },
+    {
+      "id": "sovi10",
+      "subtema": "ataque",
+      "tipo": "completar",
+      "pregunta_en": "El gobernador mandó a explotar la ______ para que los piratas no se la llevaran.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Pólvora = polvo que explota. 💥",
+      "pista_es": "pól-vo-…",
+      "respuesta": "pólvora",
+      "aceptadas": [
+        "polvora"
+      ]
+    },
+    {
+      "id": "sovi11",
+      "subtema": "ataque",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué mandó hacer el gobernador?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Explotó la pólvora y la ciudad se incendió. 🔥",
+      "opciones": [
+        "El gobernador mandó a explotar la pólvora para que los piratas no se la llevaran.",
+        "Pedro Arias Dávila fundó Panamá la Vieja el 15 de agosto de 1519.",
+        "Construir una torre",
+        "Regalar el oro a los piratas"
+      ],
+      "correcta": "El gobernador mandó a explotar la pólvora para que los piratas no se la llevaran."
+    },
+    {
+      "id": "sovi12",
+      "subtema": "ataque",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Los piratas atacaron Panamá la Vieja.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! En 1671. 🏴‍☠️",
+      "correcta": true
+    },
+    {
+      "id": "sovi13",
+      "subtema": "ataque",
+      "tipo": "completar",
+      "pregunta_en": "Después del ataque, la ciudad quedó en ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Ruinas = lo que queda de un lugar destruido.",
+      "pista_es": "rui-…",
+      "respuesta": "ruinas",
+      "aceptadas": [
+        "ruina"
+      ]
+    },
+    {
+      "id": "sovi14",
+      "subtema": "ataque",
+      "tipo": "completar",
+      "pregunta_en": "Después fundaron una ciudad nueva: el Casco ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "El Casco Antiguo, en otro lugar. 🏘️",
+      "pista_es": "An-ti-…",
+      "respuesta": "Antiguo",
+      "aceptadas": [
+        "antiguo",
+        "viejo"
+      ]
+    },
+    {
+      "id": "sovi15",
+      "subtema": "ataque",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Después del ataque reconstruyeron la ciudad en el mismo lugar.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! Fundaron una ciudad nueva en otro lugar: el Casco Antiguo.",
+      "correcta": false
+    },
+    {
+      "id": "sovi16",
+      "subtema": "torre",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué es lo que más se ve hoy de Panamá la Vieja?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "La torre de la catedral sigue en pie. 🗼",
+      "opciones": [
+        "Lo que más se ve hoy de Panamá la Vieja es la torre de la catedral.",
+        "Un castillo de piedra",
+        "El puerto de barcos",
+        "El Canal"
+      ],
+      "correcta": "Lo que más se ve hoy de Panamá la Vieja es la torre de la catedral."
+    },
+    {
+      "id": "sovi17",
+      "subtema": "torre",
+      "tipo": "completar",
+      "pregunta_en": "Lo que más se ve hoy de Panamá la Vieja es la ______ de la catedral.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "La torre era donde estaban las campanas. 🗼",
+      "pista_es": "to…",
+      "respuesta": "torre"
+    },
+    {
+      "id": "sovi18",
+      "subtema": "torre",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "La torre de la catedral todavía se puede ver hoy.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Es el símbolo de Panamá la Vieja.",
+      "correcta": true
+    },
+    {
+      "id": "sovi19",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Por qué es importante Panamá la Vieja para nuestro país?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Es parte de nuestra historia. 🏛️",
+      "opciones": [
+        "Panamá la Vieja es importante porque fue la primera ciudad española en el Pacífico y es parte de nuestra historia.",
+        "Porque es una ciudad moderna",
+        "Porque está en las montañas",
+        "Porque tiene muchos rascacielos"
+      ],
+      "correcta": "Panamá la Vieja es importante porque fue la primera ciudad española en el Pacífico y es parte de nuestra historia."
+    },
+    {
+      "id": "sovi20",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Panamá la Vieja es parte de nuestra ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Historia = lo que pasó hace mucho tiempo.",
+      "pista_es": "his-…",
+      "respuesta": "historia"
+    },
+    {
+      "id": "sovi21",
+      "subtema": "importancia",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Hoy Panamá la Vieja es un sitio histórico que visitan turistas y estudiantes.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! 🌍",
+      "correcta": true
+    },
+    {
+      "id": "sovi22",
+      "subtema": "importancia",
+      "tipo": "unir",
+      "pregunta_en": "Une cada dato con su respuesta.",
+      "instruccion_es": "Une cada palabra con su pareja.",
+      "explicacion_es": "Fundador: Pedro Arias Dávila (1519). Pirata: Henry Morgan (1671).",
+      "pares": [
+        {
+          "izquierda": "Fundador",
+          "derecha": "Pedro Arias Dávila"
+        },
+        {
+          "izquierda": "Año de la fundación",
+          "derecha": "1519"
+        },
+        {
+          "izquierda": "Pirata",
+          "derecha": "Henry Morgan"
+        },
+        {
+          "izquierda": "Año del ataque",
+          "derecha": "1671"
+        }
+      ]
+    },
+    {
+      "id": "sovi23",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es la respuesta más COMPLETA? «Escribe todo lo que sepas de Panamá la Vieja y menciona su importancia para nuestro país.»",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Fecha + fundador + ataque + torre + importancia: ¡cuantos más datos correctos, más puntos! ✍️",
+      "peso": 2,
+      "opciones": [
+        "La historia de la ciudad y que explotó la pólvora.",
+        "Panamá la Vieja fue fundada por Pedro Arias Dávila el 15 de agosto de 1519. Los piratas la atacaron en 1671 y el gobernador mandó a explotar la pólvora. Hoy su torre nos recuerda nuestra historia.",
+        "Es una torre vieja.",
+        "Los piratas."
+      ],
+      "correcta": "Panamá la Vieja fue fundada por Pedro Arias Dávila el 15 de agosto de 1519. Los piratas la atacaron en 1671 y el gobernador mandó a explotar la pólvora. Hoy su torre nos recuerda nuestra historia."
+    },
+    {
+      "id": "sovi24",
+      "subtema": "importancia",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Cada respuesta del examen lleva 3 oraciones como mínimo.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! Respuesta, explicación y ejemplo.",
+      "correcta": true
+    },
+    {
+      "id": "sovi25",
+      "subtema": "torre",
+      "tipo": "completar",
+      "pregunta_en": "En el examen debes dibujar la torre con cuidado y con ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "La torre se dibuja pequeña pero bonita, con color. 🎨",
+      "pista_es": "co…",
+      "respuesta": "color",
+      "aceptadas": [
+        "colores"
+      ]
+    },
+    {
+      "id": "sovi26",
+      "subtema": "fundacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿En qué océano está la costa donde se fundó Panamá la Vieja?",
+      "instruccion_es": "Elige la respuesta correcta.",
+      "explicacion_es": "La ciudad se fundó en la costa del Pacífico. 🌊",
+      "opciones": [
+        "Pacífico",
+        "Atlántico",
+        "Índico",
+        "Ártico"
+      ],
+      "correcta": "Pacífico"
+    },
+    {
+      "id": "sovi27",
+      "subtema": "fundacion",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué salía de Panamá la Vieja hacia el Perú?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Desde allí viajaban oro y plata. 🥇",
+      "opciones": [
+        "Oro y plata",
+        "Frutas y verduras",
+        "Carros y buses",
+        "Libros y cuadernos"
+      ],
+      "correcta": "Oro y plata"
+    },
+    {
+      "id": "sovi28",
+      "subtema": "ataque",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Quién atacó Panamá la Vieja?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "Un pirata: Henry Morgan. 🏴‍☠️",
+      "opciones": [
+        "Un pirata",
+        "Un maestro",
+        "Un alcalde",
+        "Un médico"
+      ],
+      "correcta": "Un pirata"
+    },
+    {
+      "id": "sovi29",
+      "subtema": "ataque",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué pasó con la ciudad después del ataque?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "La ciudad se incendió y quedó en ruinas. 🔥",
+      "opciones": [
+        "Se incendió y quedó en ruinas",
+        "Se hizo más grande",
+        "Se llenó de turistas ese mismo día",
+        "No le pasó nada"
+      ],
+      "correcta": "Se incendió y quedó en ruinas"
+    },
+    {
+      "id": "sovi30",
+      "subtema": "ataque",
+      "tipo": "completar",
+      "pregunta_en": "La ciudad se ______ y quedó en ruinas.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Incendiar = quemarse. 🔥",
+      "pista_es": "in-cen-…",
+      "respuesta": "incendió",
+      "aceptadas": [
+        "incendio"
+      ]
+    },
+    {
+      "id": "sovi31",
+      "subtema": "ataque",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El ataque de los piratas fue en 1519.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Falso! 1519 es la fundación. El ataque fue en 1671.",
+      "correcta": false
+    },
+    {
+      "id": "sovi32",
+      "subtema": "ataque",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "El gobernador mandó a explotar la pólvora.",
+      "instruccion_es": "¿Es verdadero o falso?",
+      "explicacion_es": "¡Verdadero! 💥",
+      "correcta": true
+    },
+    {
+      "id": "sovi33",
+      "subtema": "torre",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Qué parte de Panamá la Vieja dibujamos en el examen?",
+      "instruccion_es": "Lee la pregunta y elige la respuesta correcta.",
+      "explicacion_es": "La torre de la catedral. 🗼",
+      "opciones": [
+        "La torre",
+        "El puerto",
+        "El castillo",
+        "La plaza"
+      ],
+      "correcta": "La torre"
+    },
+    {
+      "id": "sovi34",
+      "subtema": "torre",
+      "tipo": "completar",
+      "pregunta_en": "La torre es la parte alta de la ______.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "La torre de la catedral. ⛪",
+      "pista_es": "ig-…",
+      "respuesta": "iglesia",
+      "aceptadas": [
+        "catedral"
+      ]
+    },
+    {
+      "id": "sovi35",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Panamá la Vieja fue la primera ciudad ______ en el Pacífico.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Primera ciudad española en el Pacífico. 🇪🇸",
+      "pista_es": "es-pa-…",
+      "respuesta": "española",
+      "aceptadas": [
+        "espanola"
+      ]
+    },
+    {
+      "id": "sovi36",
+      "subtema": "importancia",
+      "tipo": "completar",
+      "pregunta_en": "Hoy Panamá la Vieja es un sitio ______ que visitan turistas y estudiantes.",
+      "instruccion_es": "Escribe la palabra que falta.",
+      "explicacion_es": "Sitio histórico = lugar de la historia. 🏛️",
+      "pista_es": "his-tó-…",
+      "respuesta": "histórico",
+      "aceptadas": [
+        "historico"
+      ]
+    },
+    {
+      "id": "sovi37",
+      "subtema": "importancia",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "¿Cuál es el orden correcto?",
+      "instruccion_es": "Elige el orden correcto.",
+      "explicacion_es": "Primero 1519 (fundación), luego 1671 (ataque) y después la ciudad nueva.",
+      "opciones": [
+        "Fundación, ataque de piratas, ciudad nueva",
+        "Ataque de piratas, fundación, ciudad nueva",
+        "Ciudad nueva, ataque de piratas, fundación",
+        "Ciudad nueva, fundación, ataque de piratas"
+      ],
+      "correcta": "Fundación, ataque de piratas, ciudad nueva"
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "fundar",
+      "es": "crear una ciudad",
+      "aceptadas": [
+        "empezar una ciudad"
+      ]
+    },
+    {
+      "en": "pirata",
+      "es": "ladrón de barcos",
+      "aceptadas": [
+        "ladrón que viaja en barco",
+        "ladron de barcos"
+      ]
+    },
+    {
+      "en": "pólvora",
+      "es": "polvo que explota",
+      "aceptadas": [
+        "polvora",
+        "explosivo"
+      ]
+    },
+    {
+      "en": "ruinas",
+      "es": "lo que queda de un lugar destruido",
+      "aceptadas": [
+        "restos"
+      ]
+    },
+    {
+      "en": "gobernador",
+      "es": "jefe de la ciudad",
+      "aceptadas": [
+        "el que gobierna"
+      ]
+    },
+    {
+      "en": "torre",
+      "es": "parte alta de la iglesia",
+      "aceptadas": [
+        "campanario"
+      ]
+    },
+    {
+      "en": "historia",
+      "es": "lo que pasó hace mucho",
+      "aceptadas": [
+        "pasado",
+        "lo que paso hace mucho"
+      ]
+    },
+    {
+      "en": "Pacífico",
+      "es": "el océano",
+      "aceptadas": [
+        "oceano",
+        "pacifico"
+      ]
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "fundacion",
+      "emoji": "📅",
+      "titulo": "La línea de tiempo de Panamá la Vieja",
+      "pasos": [
+        "1519 → Pedro Arias Dávila la funda el 15 de agosto.",
+        "1671 → El pirata Henry Morgan la ataca.",
+        "El gobernador manda explotar la pólvora y la ciudad queda en ruinas.",
+        "Después → se funda el Casco Antiguo, en otro lugar."
+      ],
+      "truco": "1519 = nace. 1671 = la atacan."
+    },
+    {
+      "subtema": "torre",
+      "emoji": "🗼",
+      "titulo": "Cómo dibujar la torre",
+      "pasos": [
+        "Dibuja un rectángulo alto.",
+        "Haz tres arcos o ventanas, uno encima del otro.",
+        "Pon una cruz arriba.",
+        "Píntala de color gris o marrón."
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ],
+  "idioma": "es",
+  "vocabulario_pregunta_es": "¿Qué significa?"
+}

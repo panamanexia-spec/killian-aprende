@@ -1,0 +1,965 @@
+{
+  "tipo": "tema",
+  "id": "rc-story-detective",
+  "materia": "Reading and Composition",
+  "titulo": "Story Detective: My Reading Study Sheet",
+  "titulo_es": "Detective de cuentos: mi ficha de lectura",
+  "preguntas_por_ronda": 20,
+  "subtemas": [
+    "info",
+    "narrator",
+    "setting",
+    "characters",
+    "message",
+    "word-bank",
+    "scene"
+  ],
+  "resumen": [
+    {
+      "emoji": "🟦",
+      "en": "PART 1: Story information",
+      "es": "PARTE 1: Datos del cuento"
+    },
+    {
+      "emoji": "📖",
+      "en": "The title is the name of the story.",
+      "es": "Título = nombre del cuento. Title = TÁI-tol."
+    },
+    {
+      "emoji": "✍️",
+      "en": "The author is the person who wrote the story.",
+      "es": "Autor = quien lo escribió. Author = Ó-zor."
+    },
+    {
+      "emoji": "👩‍🏫",
+      "en": "The author of Thunder Rose is Jerdine Nolen.",
+      "es": "Autora de Thunder Rose: Jerdine Nolen (yer-DÍN NÓU-len)."
+    },
+    {
+      "emoji": "🏷️",
+      "en": "Genre means the kind of story.",
+      "es": "Genre = YÁN-ra = género, el tipo de cuento."
+    },
+    {
+      "emoji": "📝",
+      "en": "Fiction is a made-up story.",
+      "es": "Fiction = FIK-shon = ficción: inventado."
+    },
+    {
+      "emoji": "📚",
+      "en": "Non-fiction is a text with true facts.",
+      "es": "Non-fiction = non-FIK-shon = no ficción: datos reales."
+    },
+    {
+      "emoji": "✨",
+      "en": "Fantasy is a story with magic or impossible things.",
+      "es": "Fantasy = FÁN-ta-si = fantasía: magia o cosas imposibles."
+    },
+    {
+      "emoji": "⚡",
+      "en": "Thunder Rose is a fantasy because she has superpowers.",
+      "es": "Rose tiene superpoderes, ¡es fantasía!"
+    },
+    {
+      "emoji": "🟩",
+      "en": "PART 2: The narrator",
+      "es": "PARTE 2: El narrador"
+    },
+    {
+      "emoji": "🎙️",
+      "en": "The narrator is the voice that tells the story.",
+      "es": "Narrator = NÁ-rei-tor = el que cuenta el cuento."
+    },
+    {
+      "emoji": "👀",
+      "en": "An external narrator is outside the story and says he, she or they.",
+      "es": "External = ex-TÉR-nal = externo: cuenta «él, ella, ellos»."
+    },
+    {
+      "emoji": "🙋",
+      "en": "An internal narrator is a character and says I or we.",
+      "es": "Internal = in-TÉR-nal = interno: un personaje cuenta «yo, nosotros»."
+    },
+    {
+      "emoji": "⚡",
+      "en": "Thunder Rose has an external narrator.",
+      "es": "Rose no cuenta su propia historia: alguien de afuera la cuenta."
+    },
+    {
+      "emoji": "🟨",
+      "en": "PART 3: Setting, characters and message",
+      "es": "PARTE 3: Lugar, personajes y mensaje"
+    },
+    {
+      "emoji": "🏜️",
+      "en": "The setting is where and when the story happens.",
+      "es": "Setting = SÉ-ting = lugar y tiempo."
+    },
+    {
+      "emoji": "🐄",
+      "en": "The setting of Thunder Rose is a ranch in a small town, a long time ago.",
+      "es": "Ranch = RANCH = rancho. Town = TAUN = pueblo."
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "en": "Characters are the people or animals in the story.",
+      "es": "Characters = KÁ-rak-ters = personajes."
+    },
+    {
+      "emoji": "⚡",
+      "en": "Characters in Thunder Rose: Rose, her mom, her father and the doctor.",
+      "es": "Mom = mamá, father = papá, doctor = DÓK-tor."
+    },
+    {
+      "emoji": "🌟",
+      "en": "The main character is Thunder Rose.",
+      "es": "Main character = personaje principal."
+    },
+    {
+      "emoji": "💌",
+      "en": "The message is the lesson of the story.",
+      "es": "Message = MÉ-sich = mensaje, la enseñanza."
+    },
+    {
+      "emoji": "❤️",
+      "en": "It is not only important to be powerful. The most important thing is love.",
+      "es": "No solo importa ser poderoso: lo más importante es el amor."
+    },
+    {
+      "emoji": "🟧",
+      "en": "PART 4: Word Bank and Sketchbook",
+      "es": "PARTE 4: Banco de palabras y dibujos"
+    },
+    {
+      "emoji": "🔟",
+      "en": "Word Box: thunder, lightning, storm, powerful, superpowers, singing, lullaby, born, town, ranch.",
+      "es": "Son 10 palabras. ¡Cada una lleva su dibujo!"
+    },
+    {
+      "emoji": "🔊",
+      "en": "Thunder = THÓN-der (trueno). Lightning = LÁIT-ning (relámpago). Storm = STORM (tormenta).",
+      "es": "Pronunciación."
+    },
+    {
+      "emoji": "💪",
+      "en": "Powerful = PÁU-er-ful (poderoso). Superpowers = SÚ-per-pau-ers (superpoderes). Singing = SÍN-guin (cantando).",
+      "es": "Pronunciación."
+    },
+    {
+      "emoji": "🎶",
+      "en": "Lullaby = LÓ-la-bai (canción de cuna). Born = BORN (nació). Town = TAUN (pueblo). Ranch = RANCH (rancho).",
+      "es": "Pronunciación."
+    },
+    {
+      "emoji": "🎨",
+      "en": "Copy each word from the Word Box and draw a simple picture next to it.",
+      "es": "Nunca dejes un cuadro vacío: copia la palabra y haz un dibujito."
+    },
+    {
+      "emoji": "🟥",
+      "en": "PART 5: Favorite scene",
+      "es": "PARTE 5: Mi escena favorita"
+    },
+    {
+      "emoji": "🖼️",
+      "en": "Draw your favorite scene and write one sentence: I chose this scene because…",
+      "es": "Dibuja la escena y escribe una oración con «because» (porque)."
+    },
+    {
+      "emoji": "💬",
+      "en": "Use because to explain why.",
+      "es": "Because = bi-CÓS = porque. Ejemplo: I chose this scene because it was exciting."
+    },
+    {
+      "emoji": "🚫",
+      "en": "Do not leave empty boxes or blank lines.",
+      "es": "Killian dejó en blanco las palabras 6, 7 y 8: ¡perdió puntos!"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "rcde1",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the author of a story?",
+      "pregunta_es": "¿Qué es el autor de un cuento?",
+      "explicacion_es": "Author = autor, quien lo escribió. ✍️",
+      "opciones": [
+        "The person who wrote the story",
+        "The name of the story",
+        "The kind of story",
+        "The place of the story"
+      ],
+      "correcta": "The person who wrote the story"
+    },
+    {
+      "id": "rcde2",
+      "subtema": "info",
+      "tipo": "completar",
+      "pregunta_en": "The ______ is the name of the story.",
+      "pregunta_es": "El ______ es el nombre del cuento.",
+      "explicacion_es": "Title = título (TÁI-tol).",
+      "pista_es": "t _ t l e",
+      "respuesta": "title"
+    },
+    {
+      "id": "rcde3",
+      "subtema": "info",
+      "tipo": "completar",
+      "pregunta_en": "The ______ is the person who wrote the story.",
+      "pregunta_es": "El ______ es la persona que escribió el cuento.",
+      "explicacion_es": "Author = autor (Ó-zor).",
+      "pista_es": "a _ t h o r",
+      "respuesta": "author",
+      "aceptadas": [
+        "writer"
+      ]
+    },
+    {
+      "id": "rcde4",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Who is the author of Thunder Rose?",
+      "pregunta_es": "¿Quién es la autora de Thunder Rose?",
+      "explicacion_es": "La autora de Thunder Rose es Jerdine Nolen. 👩‍🏫",
+      "opciones": [
+        "Jerdine Nolen",
+        "Rose Thunder",
+        "Killian Herrera",
+        "Julia Hall"
+      ],
+      "correcta": "Jerdine Nolen"
+    },
+    {
+      "id": "rcde5",
+      "subtema": "info",
+      "tipo": "completar",
+      "pregunta_en": "Genre means the ______ of story.",
+      "pregunta_es": "Genre significa el ______ de cuento.",
+      "explicacion_es": "Genre = género = el tipo de cuento (kind = tipo).",
+      "pista_es": "k _ n d",
+      "respuesta": "kind",
+      "aceptadas": [
+        "type"
+      ]
+    },
+    {
+      "id": "rcde6",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is fiction?",
+      "pregunta_es": "¿Qué es ficción (fiction)?",
+      "explicacion_es": "Ficción = inventado. 📝",
+      "opciones": [
+        "Fiction is a made-up story",
+        "Fiction is a text with true facts",
+        "Fiction is a kind of poem",
+        "Fiction is a picture"
+      ],
+      "correcta": "Fiction is a made-up story"
+    },
+    {
+      "id": "rcde7",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is non-fiction?",
+      "pregunta_es": "¿Qué es no ficción (non-fiction)?",
+      "explicacion_es": "No ficción = datos reales. 📚",
+      "opciones": [
+        "Non-fiction is a text with true facts",
+        "Non-fiction is a made-up story",
+        "Non-fiction is a story with magic",
+        "Non-fiction is a song"
+      ],
+      "correcta": "Non-fiction is a text with true facts"
+    },
+    {
+      "id": "rcde8",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is fantasy?",
+      "pregunta_es": "¿Qué es fantasía (fantasy)?",
+      "explicacion_es": "Fantasía = magia o cosas imposibles. ✨",
+      "opciones": [
+        "Fantasy is a story with magic or impossible things",
+        "Fantasy is a text with true facts",
+        "Fantasy is a diary",
+        "Fantasy is a map"
+      ],
+      "correcta": "Fantasy is a story with magic or impossible things"
+    },
+    {
+      "id": "rcde9",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "A girl catches lightning with her hands. What is the genre?",
+      "pregunta_es": "Una niña atrapa un rayo con las manos. ¿Cuál es el género?",
+      "explicacion_es": "Atrapar un rayo es imposible: ¡fantasía! ⚡",
+      "opciones": [
+        "Fantasy",
+        "Non-fiction",
+        "A dictionary"
+      ],
+      "correcta": "Fantasy"
+    },
+    {
+      "id": "rcde10",
+      "subtema": "info",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "A book about real facts of volcanoes. What is the genre?",
+      "pregunta_es": "Un libro con datos reales de volcanes. ¿Cuál es el género?",
+      "explicacion_es": "Datos reales = no ficción. 🌋",
+      "opciones": [
+        "Non-fiction",
+        "Fantasy",
+        "Fiction"
+      ],
+      "correcta": "Non-fiction"
+    },
+    {
+      "id": "rcde11",
+      "subtema": "info",
+      "tipo": "completar",
+      "pregunta_en": "Thunder Rose is a ______ because she has superpowers.",
+      "pregunta_es": "Thunder Rose es una ______ porque tiene superpoderes.",
+      "explicacion_es": "Fantasy = fantasía (FÁN-ta-si). ✨",
+      "pista_es": "f _ n t a s y",
+      "respuesta": "fantasy"
+    },
+    {
+      "id": "rcde12",
+      "subtema": "info",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "Fiction means true facts.",
+      "pregunta_es": "Fiction significa datos reales.",
+      "explicacion_es": "¡Falso! Fiction es inventado. Los datos reales son non-fiction.",
+      "correcta": false
+    },
+    {
+      "id": "rcde13",
+      "subtema": "narrator",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is a narrator?",
+      "pregunta_es": "¿Qué es un narrador?",
+      "explicacion_es": "Narrador = quien cuenta el cuento. 🎙️",
+      "opciones": [
+        "The voice that tells the story",
+        "The author of the book",
+        "The title of the story",
+        "The place of the story"
+      ],
+      "correcta": "The voice that tells the story"
+    },
+    {
+      "id": "rcde14",
+      "subtema": "narrator",
+      "tipo": "completar",
+      "pregunta_en": "The ______ is the voice that tells the story.",
+      "pregunta_es": "El ______ es la voz que cuenta el cuento.",
+      "explicacion_es": "Narrator = narrador (NÁ-rei-tor).",
+      "pista_es": "na-rra-…",
+      "respuesta": "narrator"
+    },
+    {
+      "id": "rcde15",
+      "subtema": "narrator",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "An external narrator says…",
+      "pregunta_es": "Un narrador externo dice…",
+      "explicacion_es": "Externo: «él, ella, ellos». 👀",
+      "opciones": [
+        "he, she or they",
+        "I or we",
+        "you only",
+        "nothing"
+      ],
+      "correcta": "he, she or they"
+    },
+    {
+      "id": "rcde16",
+      "subtema": "narrator",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "An internal narrator says…",
+      "pregunta_es": "Un narrador interno dice…",
+      "explicacion_es": "Interno: «yo, nosotros». 🙋",
+      "opciones": [
+        "I or we",
+        "he, she or they",
+        "they only",
+        "nothing"
+      ],
+      "correcta": "I or we"
+    },
+    {
+      "id": "rcde17",
+      "subtema": "narrator",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«She lived on a ranch.» Is the narrator internal or external?",
+      "pregunta_es": "«She lived on a ranch.» ¿El narrador es interno o externo?",
+      "explicacion_es": "Dice «she» (ella): narrador externo.",
+      "opciones": [
+        "External",
+        "Internal"
+      ],
+      "correcta": "External"
+    },
+    {
+      "id": "rcde18",
+      "subtema": "narrator",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "«I lived on a ranch.» Is the narrator internal or external?",
+      "pregunta_es": "«I lived on a ranch.» ¿El narrador es interno o externo?",
+      "explicacion_es": "Dice «I» (yo): narrador interno.",
+      "opciones": [
+        "Internal",
+        "External"
+      ],
+      "correcta": "Internal"
+    },
+    {
+      "id": "rcde19",
+      "subtema": "narrator",
+      "tipo": "completar",
+      "pregunta_en": "Thunder Rose has an ______ narrator.",
+      "pregunta_es": "Thunder Rose tiene un narrador ______.",
+      "explicacion_es": "Externo: alguien de afuera cuenta la historia. (ex-TÉR-nal)",
+      "pista_es": "ex-TÉR-nal",
+      "respuesta": "external",
+      "aceptadas": [
+        "external narrator"
+      ]
+    },
+    {
+      "id": "rcde20",
+      "subtema": "narrator",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "An internal narrator is a character in the story.",
+      "pregunta_es": "Un narrador interno es un personaje del cuento.",
+      "explicacion_es": "¡Verdadero! El personaje cuenta con «yo». 🙋",
+      "correcta": true
+    },
+    {
+      "id": "rcde21",
+      "subtema": "setting",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the setting of a story?",
+      "pregunta_es": "¿Qué es el setting de un cuento?",
+      "explicacion_es": "Setting = lugar y tiempo. 🏜️",
+      "opciones": [
+        "Where and when the story happens",
+        "Who tells the story",
+        "The lesson of the story",
+        "The name of the author"
+      ],
+      "correcta": "Where and when the story happens"
+    },
+    {
+      "id": "rcde22",
+      "subtema": "setting",
+      "tipo": "completar",
+      "pregunta_en": "The ______ is where and when the story happens.",
+      "pregunta_es": "El ______ es dónde y cuándo pasa el cuento.",
+      "explicacion_es": "Setting = lugar y tiempo (SÉ-ting).",
+      "pista_es": "s _ t t i n g",
+      "respuesta": "setting"
+    },
+    {
+      "id": "rcde23",
+      "subtema": "setting",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the setting of Thunder Rose?",
+      "pregunta_es": "¿Cuál es el setting de Thunder Rose?",
+      "explicacion_es": "Rose vivía en un rancho de un pueblo pequeño, hace mucho tiempo. 🐄",
+      "opciones": [
+        "A ranch in a small town, a long time ago",
+        "A spaceship in the future",
+        "A school in a big city today",
+        "The ocean in summer"
+      ],
+      "correcta": "A ranch in a small town, a long time ago"
+    },
+    {
+      "id": "rcde24",
+      "subtema": "setting",
+      "tipo": "completar",
+      "pregunta_en": "Thunder Rose lived on a ______ in a small town.",
+      "pregunta_es": "Thunder Rose vivía en un ______ de un pueblo pequeño.",
+      "explicacion_es": "Ranch = rancho (RANCH). 🐄",
+      "pista_es": "r _ n c h",
+      "respuesta": "ranch"
+    },
+    {
+      "id": "rcde25",
+      "subtema": "setting",
+      "tipo": "completar",
+      "pregunta_en": "Thunder Rose lived in a small ______.",
+      "pregunta_es": "Thunder Rose vivía en un ______ pequeño.",
+      "explicacion_es": "Town = pueblo (TAUN).",
+      "pista_es": "t _ w n",
+      "respuesta": "town"
+    },
+    {
+      "id": "rcde26",
+      "subtema": "characters",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What are characters?",
+      "pregunta_es": "¿Qué son los characters?",
+      "explicacion_es": "Characters = personajes. 👨‍👩‍👧",
+      "opciones": [
+        "The people or animals in the story",
+        "The words of a song",
+        "The pages of the book",
+        "The pictures of the book"
+      ],
+      "correcta": "The people or animals in the story"
+    },
+    {
+      "id": "rcde27",
+      "subtema": "characters",
+      "tipo": "completar",
+      "pregunta_en": "The ______ are the people or animals in the story.",
+      "pregunta_es": "Los ______ son las personas o animales del cuento.",
+      "explicacion_es": "Characters = personajes (KÁ-rak-ters).",
+      "pista_es": "ch…",
+      "respuesta": "characters",
+      "aceptadas": [
+        "character"
+      ]
+    },
+    {
+      "id": "rcde28",
+      "subtema": "characters",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Who is the main character of Thunder Rose?",
+      "pregunta_es": "¿Quién es el personaje principal de Thunder Rose?",
+      "explicacion_es": "El personaje principal es Thunder Rose. ⚡",
+      "opciones": [
+        "Thunder Rose",
+        "The doctor",
+        "Her father",
+        "The storm"
+      ],
+      "correcta": "Thunder Rose"
+    },
+    {
+      "id": "rcde29",
+      "subtema": "characters",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which of these is a character in Thunder Rose?",
+      "pregunta_es": "¿Cuál de estos es un personaje de Thunder Rose?",
+      "explicacion_es": "Personajes: Rose, su mamá, su papá y el doctor.",
+      "opciones": [
+        "Her mom",
+        "A pirate",
+        "A robot",
+        "A teacher"
+      ],
+      "correcta": "Her mom"
+    },
+    {
+      "id": "rcde30",
+      "subtema": "characters",
+      "tipo": "completar",
+      "pregunta_en": "Characters in Thunder Rose: Rose, her mom, her ______ and the doctor.",
+      "pregunta_es": "Personajes de Thunder Rose: Rose, su mamá, su ______ y el doctor.",
+      "explicacion_es": "Father = papá (FÁ-der).",
+      "pista_es": "f _ t h e r",
+      "respuesta": "father",
+      "aceptadas": [
+        "dad"
+      ]
+    },
+    {
+      "id": "rcde31",
+      "subtema": "characters",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "The doctor is a character in Thunder Rose.",
+      "pregunta_es": "El doctor es un personaje de Thunder Rose.",
+      "explicacion_es": "¡Verdadero! 🩺",
+      "correcta": true
+    },
+    {
+      "id": "rcde32",
+      "subtema": "message",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "What is the message of a story?",
+      "pregunta_es": "¿Qué es el mensaje de un cuento?",
+      "explicacion_es": "Message = mensaje = la enseñanza. 💌",
+      "opciones": [
+        "The lesson of the story",
+        "The title of the story",
+        "The place of the story",
+        "The name of the author"
+      ],
+      "correcta": "The lesson of the story"
+    },
+    {
+      "id": "rcde33",
+      "subtema": "message",
+      "tipo": "completar",
+      "pregunta_en": "The ______ is the lesson of the story.",
+      "pregunta_es": "El ______ es la enseñanza del cuento.",
+      "explicacion_es": "Message = mensaje (MÉ-sich).",
+      "pista_es": "m _ s s a g e",
+      "respuesta": "message",
+      "aceptadas": [
+        "lesson"
+      ]
+    },
+    {
+      "id": "rcde34",
+      "subtema": "message",
+      "tipo": "completar",
+      "pregunta_en": "It is not only important to be ______. The most important thing is love.",
+      "pregunta_es": "No solo es importante ser ______. Lo más importante es el amor.",
+      "explicacion_es": "Powerful = poderoso (PÁU-er-ful). Este es el mensaje de Thunder Rose.",
+      "pista_es": "p _ w e r f u l",
+      "respuesta": "powerful"
+    },
+    {
+      "id": "rcde35",
+      "subtema": "message",
+      "tipo": "completar",
+      "pregunta_en": "It is not only important to be powerful. The most important thing is ______.",
+      "pregunta_es": "No solo es importante ser poderoso. Lo más importante es el ______.",
+      "explicacion_es": "Love = amor (LOV). ❤️",
+      "pista_es": "l _ v e",
+      "respuesta": "love"
+    },
+    {
+      "id": "rcde36",
+      "subtema": "message",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which is the BEST way to write the message of Thunder Rose?",
+      "pregunta_es": "¿Cuál es la MEJOR forma de escribir el mensaje de Thunder Rose?",
+      "explicacion_es": "Una oración completa y en orden. ✍️",
+      "peso": 2,
+      "opciones": [
+        "It is not only important to be powerful. The most important thing is love.",
+        "No only important powerful the most is the love.",
+        "Powerful love.",
+        "Thunder."
+      ],
+      "correcta": "It is not only important to be powerful. The most important thing is love."
+    },
+    {
+      "id": "rcde37",
+      "subtema": "word-bank",
+      "tipo": "unir",
+      "pregunta_en": "Match each word with its meaning.",
+      "pregunta_es": "Une cada palabra con su significado.",
+      "explicacion_es": "Thunder = trueno. Lightning = relámpago. Storm = tormenta. Powerful = poderoso.",
+      "pares": [
+        {
+          "izquierda": "thunder",
+          "derecha": "trueno"
+        },
+        {
+          "izquierda": "lightning",
+          "derecha": "relámpago"
+        },
+        {
+          "izquierda": "storm",
+          "derecha": "tormenta"
+        },
+        {
+          "izquierda": "powerful",
+          "derecha": "poderoso"
+        }
+      ]
+    },
+    {
+      "id": "rcde38",
+      "subtema": "word-bank",
+      "tipo": "unir",
+      "pregunta_en": "Match each word with its meaning.",
+      "pregunta_es": "Une cada palabra con su significado.",
+      "explicacion_es": "Lullaby = canción de cuna. Singing = cantando. Born = nació. Ranch = rancho.",
+      "pares": [
+        {
+          "izquierda": "lullaby",
+          "derecha": "canción de cuna"
+        },
+        {
+          "izquierda": "singing",
+          "derecha": "cantando"
+        },
+        {
+          "izquierda": "born",
+          "derecha": "nació"
+        },
+        {
+          "izquierda": "ranch",
+          "derecha": "rancho"
+        }
+      ]
+    },
+    {
+      "id": "rcde39",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Write the word in English: trueno = ______",
+      "pregunta_es": "Escribe la palabra en inglés: trueno = ______",
+      "explicacion_es": "Thunder = trueno (THÓN-der). ⚡",
+      "pista_es": "th…",
+      "respuesta": "thunder"
+    },
+    {
+      "id": "rcde40",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Write the word in English: relámpago = ______",
+      "pregunta_es": "Escribe la palabra en inglés: relámpago = ______",
+      "explicacion_es": "Lightning = relámpago (LÁIT-ning).",
+      "pista_es": "li…",
+      "respuesta": "lightning"
+    },
+    {
+      "id": "rcde41",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Write the word in English: tormenta = ______",
+      "pregunta_es": "Escribe la palabra en inglés: tormenta = ______",
+      "explicacion_es": "Storm = tormenta (STORM). ⛈️",
+      "pista_es": "st…",
+      "respuesta": "storm"
+    },
+    {
+      "id": "rcde42",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Write the word in English: poderoso = ______",
+      "pregunta_es": "Escribe la palabra en inglés: poderoso = ______",
+      "explicacion_es": "Powerful = poderoso (PÁU-er-ful).",
+      "pista_es": "po…",
+      "respuesta": "powerful"
+    },
+    {
+      "id": "rcde43",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Write the word in English: cantando = ______",
+      "pregunta_es": "Escribe la palabra en inglés: cantando = ______",
+      "explicacion_es": "Singing = cantando (SÍN-guin). 🎤",
+      "pista_es": "si…",
+      "respuesta": "singing"
+    },
+    {
+      "id": "rcde44",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Write the word in English: canción de cuna = ______",
+      "pregunta_es": "Escribe la palabra en inglés: canción de cuna = ______",
+      "explicacion_es": "Lullaby = canción de cuna (LÓ-la-bai). 🎶",
+      "pista_es": "lu…",
+      "respuesta": "lullaby"
+    },
+    {
+      "id": "rcde45",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Thunder Rose was ______ in a storm.",
+      "pregunta_es": "Thunder Rose ______ en una tormenta.",
+      "explicacion_es": "Born = nació. 👶",
+      "pista_es": "b _ r n",
+      "respuesta": "born"
+    },
+    {
+      "id": "rcde46",
+      "subtema": "word-bank",
+      "tipo": "completar",
+      "pregunta_en": "Thunder Rose has ______ (special powers).",
+      "pregunta_es": "Thunder Rose tiene ______ (poderes especiales).",
+      "explicacion_es": "Superpowers = superpoderes. 🦸",
+      "pista_es": "super…",
+      "respuesta": "superpowers",
+      "aceptadas": [
+        "superpower"
+      ]
+    },
+    {
+      "id": "rcde47",
+      "subtema": "word-bank",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "In the Word Bank, you can leave some boxes empty.",
+      "pregunta_es": "En el banco de palabras puedes dejar cuadros vacíos.",
+      "explicacion_es": "¡Falso! Copia la palabra del Word Box y haz un dibujito en cada cuadro. 🍀",
+      "correcta": false
+    },
+    {
+      "id": "rcde48",
+      "subtema": "scene",
+      "tipo": "completar",
+      "pregunta_en": "I chose this scene ______ it was exciting.",
+      "pregunta_es": "Elegí esta escena ______ fue emocionante.",
+      "explicacion_es": "Because = porque (bi-CÓS). Para explicar por qué. 💬",
+      "pista_es": "b _ c a u s e",
+      "respuesta": "because"
+    },
+    {
+      "id": "rcde49",
+      "subtema": "scene",
+      "tipo": "opcion_multiple",
+      "pregunta_en": "Which sentence is correct for «Why I chose this scene»?",
+      "pregunta_es": "¿Qué oración es correcta para «Por qué elegí esta escena»?",
+      "explicacion_es": "Una oración completa con «because». ✍️",
+      "opciones": [
+        "I chose this scene because it was exciting.",
+        "Scene exciting.",
+        "Because.",
+        "I chose."
+      ],
+      "correcta": "I chose this scene because it was exciting."
+    },
+    {
+      "id": "rcde50",
+      "subtema": "scene",
+      "tipo": "verdadero_falso",
+      "pregunta_en": "In the favorite scene box you only draw; you do not write.",
+      "pregunta_es": "En el cuadro de la escena favorita solo se dibuja; no se escribe.",
+      "explicacion_es": "¡Falso! Dibujas Y escribes una oración. ✍️🎨",
+      "correcta": false
+    }
+  ],
+  "vocabulario": [
+    {
+      "en": "author",
+      "es": "autor",
+      "aceptadas": [
+        "autora",
+        "escritor"
+      ],
+      "ejemplo_en": "The author wrote the story.",
+      "ejemplo_es": "La autora escribió el cuento."
+    },
+    {
+      "en": "genre",
+      "es": "género",
+      "aceptadas": [
+        "genero",
+        "tipo"
+      ],
+      "ejemplo_en": "The genre is fantasy.",
+      "ejemplo_es": "El género es fantasía."
+    },
+    {
+      "en": "narrator",
+      "es": "narrador",
+      "ejemplo_en": "The narrator tells the story.",
+      "ejemplo_es": "El narrador cuenta el cuento."
+    },
+    {
+      "en": "setting",
+      "es": "lugar y tiempo",
+      "aceptadas": [
+        "escenario",
+        "lugar"
+      ],
+      "ejemplo_en": "The setting is a ranch.",
+      "ejemplo_es": "El escenario es un rancho."
+    },
+    {
+      "en": "characters",
+      "es": "personajes",
+      "aceptadas": [
+        "personaje"
+      ],
+      "ejemplo_en": "Rose is a character.",
+      "ejemplo_es": "Rose es un personaje."
+    },
+    {
+      "en": "message",
+      "es": "mensaje",
+      "aceptadas": [
+        "enseñanza",
+        "ensenanza",
+        "lección"
+      ],
+      "ejemplo_en": "The message is about love.",
+      "ejemplo_es": "El mensaje es sobre el amor."
+    },
+    {
+      "en": "fantasy",
+      "es": "fantasía",
+      "aceptadas": [
+        "fantasia"
+      ],
+      "ejemplo_en": "A fantasy has magic.",
+      "ejemplo_es": "Una fantasía tiene magia."
+    },
+    {
+      "en": "powerful",
+      "es": "poderoso",
+      "aceptadas": [
+        "fuerte",
+        "poderosa"
+      ],
+      "ejemplo_en": "Rose is powerful.",
+      "ejemplo_es": "Rose es poderosa."
+    },
+    {
+      "en": "thunder",
+      "es": "trueno",
+      "aceptadas": [
+        "truenos"
+      ],
+      "ejemplo_en": "The thunder is loud.",
+      "ejemplo_es": "El trueno es fuerte."
+    },
+    {
+      "en": "lullaby",
+      "es": "canción de cuna",
+      "aceptadas": [
+        "cancion de cuna",
+        "nana"
+      ],
+      "ejemplo_en": "Mom sang a lullaby.",
+      "ejemplo_es": "Mamá cantó una canción de cuna."
+    }
+  ],
+  "lecciones": [
+    {
+      "subtema": "info",
+      "emoji": "🔍",
+      "titulo": "La ficha del detective",
+      "pasos": [
+        "Title = nombre. Author = quien lo escribió. Genre = tipo (fiction, non-fiction, fantasy).",
+        "Narrator: externo (he, she) o interno (I, we).",
+        "Setting = dónde y cuándo. Characters = quiénes. Message = la enseñanza."
+      ],
+      "truco": "Una ficha completa, ¡sin cuadros vacíos!"
+    },
+    {
+      "subtema": "word-bank",
+      "emoji": "🎨",
+      "titulo": "El banco de palabras: nada en blanco",
+      "pasos": [
+        "Copia la palabra del Word Box en cada número.",
+        "Haz un dibujito simple al lado.",
+        "Si no sabes cuál palabra, pregunta a tu maestra o usa las que no has usado."
+      ],
+      "truco": "Killian dejó 3 palabras en blanco y perdió puntos: ¡cada cuadro vale!"
+    },
+    {
+      "subtema": "message",
+      "emoji": "❤️",
+      "titulo": "El mensaje en una oración",
+      "pasos": [
+        "Piensa: ¿qué aprendió Rose?",
+        "Escribe: «It is not only important to be powerful. The most important thing is love.»",
+        "Revisa que cada palabra esté en orden y con mayúscula al inicio."
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "titulo": "Nunca en blanco y revisa antes de entregar",
+      "pasos": [
+        "Lee la pregunta dos veces, despacito.",
+        "Si no sabes, escribe tu mejor idea: una respuesta vale más que una línea vacía.",
+        "Al final, revisa que TODAS tengan respuesta.",
+        "No borres ni taches: si te equivocas, haz una raya y escribe al lado."
+      ],
+      "truco": "Línea vacía = cero. ¡Siempre escribe algo! ✍️"
+    }
+  ]
+}
