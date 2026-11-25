@@ -12,8 +12,23 @@ function fmtDay(k){ try{ return parseD(k).toLocaleDateString("es", {day:"numeric
 /* ---------------------------------------------------------------- uso (tiempo aproximado) */
 var DEV = (function(){ try{ var d = localStorage.getItem("kx-dev"); if(!d){ d = Math.random().toString(36).slice(2, 6); localStorage.setItem("kx-dev", d); } return d; }catch(e){ return "x"; } })();
 var useT = {last:0, pend:0};
+/* Última vez que Killian tocó la pantalla (no cuenta cuando mamá está en su zona). Se guarda junto con el resto del avance. */
+function kidBusy(){ return !(window.KX_MODE === "mama" || S.screen === "mom"); }
+function lastKidUse(){
+  var H = S.home, m = H.lastUse || 0;
+  ["tasks", "nchk", "known", "weak", "mats", "vids", "look", "apr", "chl"].forEach(function(k){ Object.keys(H[k] || {}).forEach(function(i){ var v = Math.abs(+H[k][i]) || 0; if(v > m && v < Date.now() + 864e5) m = v; }); });
+  return m;
+}
+function fmtLast(ms){
+  if(!ms) return "todavía no hay registro";
+  var d = new Date(ms), day = pkey(d), t = todayKey(), hm = "";
+  try{ hm = d.toLocaleTimeString("es", {hour:"numeric", minute:"2-digit", hour12:true, timeZone:"America/Panama"}); }catch(e){ hm = ""; }
+  var when = day === t ? "hoy" : day === addDays(t, -1) ? "ayer" : capFirst(dayLabel(day));
+  return when + " a las " + hm;
+}
 function useTick(){
   var n = Date.now();
+  if(kidBusy()) S.home.lastUse = n;
   if(useT.last && n - useT.last < 120000) useT.pend += (n - useT.last) / 1000;   /* solo cuenta si hubo actividad en los últimos 2 min */
   useT.last = n;
   if(useT.pend >= 45) useFlush();
@@ -211,7 +226,7 @@ function renderProgress(){
     h += '<p class="big-line">Esta semana hizo <b>' + w.hechas + ' de ' + w.total + '</b> tareas.</p><div class="bar"><i style="width:' + pct + '%"></i></div>' +
       '<p>' + (w.vencidas_pendientes ? '⏰ Le ' + (w.vencidas_pendientes === 1 ? 'falta <b>1</b> de hoy o de días anteriores.' : 'faltan <b>' + w.vencidas_pendientes + '</b> de hoy o de días anteriores.') : '✅ Está al día con lo de hoy.') + '</p>';
   } else h += '<p class="note">Todavía no hay una agenda cargada.</p>';
-  h += '<p>📆 Practicó <b>' + R.dias_estudiados + ' de los últimos 7 días</b>.</p><p>⭐ Tiene <b>' + starsAvail() + '</b> estrellas.</p></section>';
+  h += '<p>🕒 Última vez que usó la app: <b>' + esc(fmtLast(lastKidUse())) + '</b></p><p>📆 Practicó <b>' + R.dias_estudiados + ' de los últimos 7 días</b>.</p><p>⭐ Tiene <b>' + starsAvail() + '</b> estrellas.</p></section>';
   /* 2. Alertas */
   if(R.alertas.length) h += '<section class="card mom"><h2 class="sec-title">🔔 Para tu atención</h2><ul class="alerts">' + R.alertas.slice(0, 6).map(function(a){ return '<li class="al ' + a.n + '"><span aria-hidden="true">' + (a.n === "warn" ? "⚠️" : a.n === "good" ? "🌟" : "ℹ️") + '</span><span>' + esc(a.t) + '</span></li>'; }).join("") + '</ul></section>';
   var np = notasPend();

@@ -501,6 +501,7 @@ function renderCharlasMom(){
 function renderMomMenu(){
   var notas = (S.agenda && S.agenda.notas) || [], nal = computeReport().alertas.filter(function(a){ return a.n === "warn"; }).length;
   var h = momHeader("Zona de mamá") + (momNote ? '<p class="good-note">'+esc(momNote)+'</p>' : '') +
+    '<p class="small" style="text-align:center">🕒 Última vez que Killian usó la app: <b>' + esc(fmtLast(lastKidUse())) + '</b></p>' +
     '<section class="momgrid">' +
     '<button class="tile" type="button" data-act="mom-go" data-v="progreso"><span class="big">📊</span>Cómo va Killian' + (nal ? '<span class="small">' + nal + (nal === 1 ? ' alerta' : ' alertas') + '</span>' : '') + '</button>' +
     '<button class="tile" type="button" data-act="mom-go" data-v="notas"><span class="big">📌</span>Notas' + (notas.length ? '<span class="small">' + (notasPend() ? notasPend() + ' sin marcar' : 'todo marcado') + '</span>' : '') + '</button>' +

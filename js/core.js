@@ -8,9 +8,9 @@ var MAMA = window.KX_MODE === "mama";      /* versión para el celular de mamá:
 var LET = ["A","B","C","D","E","F"];
 
 /* ------------------------------------------------------------------ ESTADO */
-var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv","apr","pxd","adv","sch","quit"], HNUMS = ["best","tries","prac","games","speed","schSeed"];
+var HMAPS = ["tasks","mats","vids","days","have","known","gdays","weak","look","lookTr","ask","mins","wfail","redeem","nchk","chd","chl","chs","chr","chv","apr","pxd","adv","sch","quit"], HNUMS = ["best","tries","prac","games","speed","schSeed","lastUse"];
 var SIGNED = {have:1, weak:1, ask:1, nchk:1, sch:1, quit:1};   /* positivo = sí, negativo = quitado; gana el más reciente */
-function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, apr:{}, pxd:{}, adv:{}, sch:{}, quit:{}, best:0, tries:0, prac:0, games:0, speed:0, schSeed:0}; }
+function freshHome(){ return {tasks:{}, mats:{}, vids:{}, days:{}, have:{}, known:{}, gdays:{}, weak:{}, look:{}, lookTr:{}, ask:{}, mins:{}, wfail:{}, redeem:{}, nchk:{}, chd:{}, chl:{}, chs:{}, chr:{}, chv:{}, apr:{}, pxd:{}, adv:{}, sch:{}, quit:{}, best:0, tries:0, prac:0, games:0, speed:0, schSeed:0, lastUse:0}; }
 function freshEx(){ return {cur:null, hist:{}}; }
 function fresh(){ return {screen:"home", tid:"", home:freshHome(), ex:freshEx(), at:0, agenda:null, temas:[], charlas:[], custom:[], prizes:[], pinHash:"", pinSalt:"", cAt:0, fileSig:{agenda:"", temas:{}, charlas:{}}}; }
 function normHome(h){
