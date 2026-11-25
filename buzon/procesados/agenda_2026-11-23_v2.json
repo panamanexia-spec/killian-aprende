@@ -1,0 +1,294 @@
+{
+  "tipo": "agenda",
+  "semana": "2026-11-23",
+  "tareas": [
+    {
+      "id": "t-luz-vocab",
+      "titulo": "📖 Luz Sees the Light: vocabulario y dibujos",
+      "fecha": "2026-11-23",
+      "entrega": "2026-11-25",
+      "materia": "Reading and Composition",
+      "evaluacion": "formativa",
+      "tema": "rc-luz-sees-the-light",
+      "en_casa": [
+        "Buscar y escribir en el cuaderno el significado de 6 palabras nuevas del libro (páginas 205-234)."
+      ],
+      "detalle": "Research into your Reading Conversation textbook pages 205-234 from the story Luz Sees the Light the Vocabulary words frequent, sufficient, oasis, permission, installing, abandoned, write their meaning on your notebook and see the note below. Beg: Teacher will explain the new words. Mid: Students will focus on applying their knowledge for the assigned activity. End: Students will be writing their words by applying into the board. NOTE: In 2 white papers DRAW the page 205 and in other one scene story, for this Formative activity. (Misma actividad aparece también el 25/11.)",
+      "copiar": {
+        "instrucciones_mama": "Palabras nuevas de la historia 'Luz Sees the Light'. Léelas con Killian en voz alta, practiquen la pronunciación y que las copie con su significado. Las dos hojas blancas con los dibujos (página 205 y una escena de la historia) las pide el colegio aparte, no van en el cuaderno.",
+        "partes": [
+          {
+            "titulo": "1. Palabras nuevas (New words)",
+            "texto": "frequent (FRÍ-kuent) = frecuente\nsufficient (sa-FÍ-shent) = suficiente\noasis (oh-É-sis) = oasis\npermission (per-MÍ-shon) = permiso\ninstalling (ins-TÓ-ling) = instalando\nabandoned (a-BÁN-dond) = abandonado"
+          },
+          {
+            "titulo": "2. Dibujo: página 205",
+            "texto": "En una hoja blanca, dibuja lo que pasa en la página 205 del libro.",
+            "dibujo": "🎨 Mamá: si me mandas la foto de esa página, te preparo el dibujo exacto para copiar."
+          },
+          {
+            "titulo": "3. Dibujo: una escena de la historia",
+            "texto": "En otra hoja blanca, dibuja una escena de 'Luz Sees the Light': un oasis en el desierto, con palmeras y alguien instalando una tubería de agua.",
+            "dibujo": "🎨 Usa el dibujo de ejemplo para copiarlo.",
+            "imagen": "dibujo_luz_oasis.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-musica-repaso",
+      "titulo": "🎵 Repasar para el repaso de Música (silencios y plica)",
+      "fecha": "2026-11-23",
+      "entrega": "2026-11-24",
+      "materia": "Educación Musical",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Repasar en casa: Tema 1 - los silencios musicales (rests). Tema 2 - el uso correcto de la plica (stem)."
+      ],
+      "detalle": "Quarterly exam (review, not the exam yet). Review at home: Topic #1: Musical rests. Topic #2: The correct use of the stem. A quarterly review will be conducted, not the exam. Observations: Students who have pending assignments must catch up next week.",
+      "copiar": {
+        "partes": [
+          {
+            "titulo": "1. La plica (el palito de la nota)",
+            "texto": "La plica es la rayita vertical que sale de la cabeza de la nota.\nSi la nota está en la línea del medio para abajo: la plica sube, del lado derecho.\nSi la nota está en la línea del medio para arriba: la plica baja, del lado izquierdo."
+          },
+          {
+            "titulo": "2. Los silencios musicales",
+            "texto": "Silencio de redonda: dura 4 tiempos, se dibuja colgando de una línea.\nSilencio de blanca: dura 2 tiempos, se dibuja apoyado en una línea.\nSilencio de negra: dura 1 tiempo, parece una Z chiquita.\nUn silencio quiere decir: no tocar, pero sí contar los tiempos en silencio."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-cs-formal",
+      "titulo": "📚 Entrega final: Investigación formal (Ciencias Sociales)",
+      "fecha": "2026-11-25",
+      "entrega": "2026-11-26",
+      "materia": "Ciencias Sociales",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Revisar que el formal (método científico) esté completo, limpio y listo dentro del folder de formal."
+      ],
+      "detalle": "Último día de entrega del formal. No olvide su libro de texto. I: Escucha instrucciones. D: Realiza sustentación del formal. C: Verifica correcciones. Knowledge to be learned: Identifica pasos del método científico. Observations: Recuerde llevar su libro, cartuchera y folder de formal."
+    },
+    {
+      "id": "t-esp-chocolate",
+      "titulo": "📖 Español: Lectura \"Chocolate con leche\" (págs. 120-135)",
+      "fecha": "2026-11-24",
+      "entrega": "2026-11-26",
+      "materia": "Español",
+      "evaluacion": "sumativa",
+      "en_casa": [
+        "Repasar la lectura '¿Chocolate con leche?' páginas 120 a 123 del libro de texto antes de la clase del miércoles."
+      ],
+      "detalle": "25/11: Repasa la lectura: ¿Chocolate con leche? página 120 a la 123 del libro de texto, para desarrollar actividades del libro de texto. Inicio: lluvia de ideas sobre la lectura. Desarrollo: actividades del libro página 124 a la 135. Cierre: revisa y entrega para evaluación sumativa. 26/11: Inicio: lluvia de ideas. Desarrollo: termina de desarrollar las actividades del libro. Cierre: revisa y entrega, evaluación sumativa. Observaciones: traer libro de texto y cuaderno."
+    },
+    {
+      "id": "t-rc-rootwords",
+      "titulo": "📖 Reading and Composition: Root Words",
+      "fecha": "2026-11-26",
+      "entrega": "2026-11-27",
+      "materia": "Reading and Composition",
+      "evaluacion": "formativa",
+      "en_casa": [
+        "Si a Killian le faltan páginas de 'Root Words' en el libro de texto, completarlas antes del viernes."
+      ],
+      "detalle": "Students will be working in their textbooks Root Words. Any missing pages must be completed. Beg: Teacher will explain the importance of the Root Words. Mid: Students will focus on applying their knowledge for assigned activity. End: Students will be writing their words by applying into the board for new sentences. Knowledge to be learned: To improve how affixes are important when writing."
+    },
+    {
+      "id": "t-chino-b1l9",
+      "titulo": "🀄 Chino: repaso y examen B1 Lección 9 (Where is the toy)",
+      "fecha": "2026-11-26",
+      "entrega": "2026-11-27",
+      "materia": "Chino Mandarín",
+      "evaluacion": "sumativa",
+      "detalle": "Beginning: Icebreaker activity - orientation in Mandarin. Teaching: 1. oral presentation 2. review test for B1L9 summative evaluation. Recurso del colegio: https://reurl.cc/YmKMVx. Knowledge to be learned: review test for B1L9."
+    },
+    {
+      "id": "t-final-math-1",
+      "titulo": "📚 Estudiar para el examen final: Matemáticas (oración de respuesta)",
+      "fecha": "2026-11-25",
+      "entrega": "2026-11-25",
+      "materia": "Mathematics",
+      "evaluacion": "formativa",
+      "tema": "math-problemas-oracion",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'math-problemas-oracion'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (30/11). Se arma con los problemas de suma y resta con oración de respuesta completa, que fue justo donde Killian perdió puntos en el formal de Math del 23/10 (escribía el número pero no nombraba bien lo contado)."
+    },
+    {
+      "id": "t-final-sci-1",
+      "titulo": "📚 Estudiar para el examen final: Science (ciclo de vida)",
+      "fecha": "2026-11-25",
+      "entrega": "2026-11-25",
+      "materia": "Science",
+      "evaluacion": "formativa",
+      "tema": "sci-life-cycle-traits",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'sci-life-cycle-traits'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (2/12). Ciclo de vida y características de los animales."
+    },
+    {
+      "id": "t-final-conv-1",
+      "titulo": "📚 Estudiar para el examen final: Conversation (ficha de lectura)",
+      "fecha": "2026-11-26",
+      "entrega": "2026-11-26",
+      "materia": "Reading and Conversation",
+      "evaluacion": "formativa",
+      "tema": "rc-story-detective",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'rc-story-detective'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (1/12). Ficha de lectura (personajes, lugar, mensaje, Word Bank), que fue donde dejó cosas en blanco el 22/10."
+    },
+    {
+      "id": "t-final-math-2",
+      "titulo": "📚 Estudiar para el examen final: Matemáticas (suma y resta)",
+      "fecha": "2026-11-26",
+      "entrega": "2026-11-26",
+      "materia": "Mathematics",
+      "evaluacion": "formativa",
+      "tema": "math-sumas-restas",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'math-sumas-restas'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (30/11). Suma y resta de 2 y 3 cifras."
+    },
+    {
+      "id": "t-final-sci-2",
+      "titulo": "📚 Estudiar para el examen final: Science (ciclo de la planta)",
+      "fecha": "2026-11-27",
+      "entrega": "2026-11-27",
+      "materia": "Science",
+      "evaluacion": "formativa",
+      "tema": "sci-plant-life-cycle",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'sci-plant-life-cycle'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (2/12). Etapas de la planta y Word Bank, que fue donde se equivocó el 26/10."
+    },
+    {
+      "id": "t-final-conv-2",
+      "titulo": "📚 Estudiar para el examen final: Conversation (vocabulario Luz)",
+      "fecha": "2026-11-27",
+      "entrega": "2026-11-27",
+      "materia": "Reading and Conversation",
+      "evaluacion": "formativa",
+      "tema": "rc-luz-sees-the-light",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'rc-luz-sees-the-light'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (1/12), con el mismo vocabulario que está viendo esta semana en clase."
+    },
+    {
+      "id": "t-final-math-3",
+      "titulo": "📚 Estudiar para el examen final: Matemáticas (patrones y ecuaciones)",
+      "fecha": "2026-11-28",
+      "entrega": "2026-11-28",
+      "materia": "Mathematics",
+      "evaluacion": "formativa",
+      "tema": "math-patrones-ecuaciones",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'math-patrones-ecuaciones'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (30/11)."
+    },
+    {
+      "id": "t-final-sci-3",
+      "titulo": "📚 Estudiar para el examen final: Science (imanes)",
+      "fecha": "2026-11-28",
+      "entrega": "2026-11-28",
+      "materia": "Science",
+      "evaluacion": "formativa",
+      "tema": "sci-magnets-maze",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'sci-magnets-maze'."
+      ],
+      "detalle": "Repaso para el examen final del trimestre (2/12). Imanes, distancia y laberinto magnético, donde dejó varias reglas en blanco."
+    },
+    {
+      "id": "t-final-math-repaso",
+      "titulo": "🔁 Repasar mis errores: Matemáticas (mañana es el examen)",
+      "fecha": "2026-11-29",
+      "entrega": "2026-11-29",
+      "materia": "Mathematics",
+      "evaluacion": "formativa",
+      "tema": "math-problemas-oracion",
+      "en_casa": [
+        "15 minutos: repetir el tema que más le costó esta semana (el que tenga la nota más baja) y revisar con cariño los errores, sin tema nuevo."
+      ],
+      "detalle": "Último repaso antes del examen final de Matemáticas (30/11). Solo errores, nada nuevo."
+    },
+    {
+      "id": "t-final-conv-3",
+      "titulo": "📚 Estudiar para el examen final: Conversation (Thunder Rose)",
+      "fecha": "2026-11-29",
+      "entrega": "2026-11-29",
+      "materia": "Reading and Conversation",
+      "evaluacion": "formativa",
+      "tema": "thunder-rose",
+      "en_casa": [
+        "15 minutos en la plataforma, sección Mis temas: practicar 'thunder-rose'."
+      ],
+      "detalle": "Repaso ligero para el examen final del trimestre (1/12)."
+    }
+  ],
+  "materiales": [
+    {
+      "id": "m-ef-uniforme",
+      "material": "Uniforme completo de Educación Física (pantalón, suéter, zapatillas blancas), en una maleta aparte",
+      "llevar_el": "2026-11-24",
+      "materia": "Educación Física"
+    },
+    {
+      "id": "m-math-papeles-1",
+      "material": "3 papeles de colores (a su elección) y una regla",
+      "llevar_el": "2026-11-24",
+      "materia": "Mathematics"
+    },
+    {
+      "id": "m-math-papeles-2",
+      "material": "3 papeles de colores (a su elección) y una regla",
+      "llevar_el": "2026-11-25",
+      "materia": "Mathematics"
+    },
+    {
+      "id": "m-math-papeles-3",
+      "material": "3 papeles de colores (a su elección) y una regla",
+      "llevar_el": "2026-11-27",
+      "materia": "Mathematics"
+    },
+    {
+      "id": "m-cs-folder",
+      "material": "Cartuchera y folder del formal",
+      "llevar_el": "2026-11-26",
+      "materia": "Ciencias Sociales"
+    }
+  ],
+  "videos": [
+    {
+      "id": "sci-polilla-video",
+      "titulo": "🎥 Adaptaciones y supervivencia: la polilla",
+      "url": "https://youtu.be/iblveeTDkXQ",
+      "fecha": "2026-11-26",
+      "materia": "Science"
+    },
+    {
+      "id": "sci-escorpion-video",
+      "titulo": "🎥 Adaptaciones y supervivencia: el escorpión y el ratón",
+      "url": "https://youtu.be/mhCfeaA_JyM",
+      "fecha": "2026-11-27",
+      "materia": "Science"
+    }
+  ],
+  "notas_para_mama": [
+    "📌 Sumativas esta semana: 26/11 Español (Chocolate con leche) y Ciencias Sociales (entrega + sustentación del formal de método científico); 27/11 Chino Mandarín (examen B1 Lección 9).",
+    "❓ Duda para la maestra: la clase de Español del lunes 23/11 sale en la agenda como 'OBSERVACIÓN: EL COLEGIO PERMANECERÁ CERRADO', sin contenido. Vale la pena confirmar con la maestra Doris si ese día sí hubo clase.",
+    "📌 Ciencias Sociales: revisa que el formal sobre el método científico esté listo para el 26/11 (entrega y sustentación); ese día lleva libro, cartuchera y folder del formal.",
+    "📌 Chino: jueves 26/11 repaso y viernes 27/11 examen de la Lección 9 (B1L9, 'Where is the toy'). No tengo material de esa lección, así que no pude preparar una ficha de estudio; si me mandas fotos del libro de chino, te armo algo rápido.",
+    "📌 Martes 24/11: uniforme completo de Educación Física, en maleta aparte.",
+    "⭐ NUEVO: agregué tareas «📚 Estudiar para el examen final» del 25 al 29/11, con los temas de Matemáticas, Science y Conversation que ya están listos. Son 15 minutos, 2 materias por día, para que llegue a la semana de exámenes (30/11 en adelante) ya practicado. El 29/11 es solo repasar errores porque el 30/11 es el examen de Matemáticas."
+  ]
+}
